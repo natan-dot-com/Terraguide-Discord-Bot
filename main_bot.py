@@ -24,6 +24,8 @@ async def craft(ctx, arg):
     if ctx.author == bot.user or not arg:
         return
 
+    print('User requested a craft recipe for ' + arg + '.')
+
     message = ""
     itemList = LoadJSONFile(ITEM_FILE_PATH)
     recipeList = LoadJSONFile(RECIPE_FILE_PATH)
@@ -49,10 +51,12 @@ async def craft(ctx, arg):
 
         recipeInstance = searchByID(recipeList, 0, len(recipeList), int(itemInstance[recipeName]))
         if not recipeInstance:
+            print('(ERROR) recipeInstance is an empty variable.\n')
             return ERROR  
 
         tableInstance = searchByID(tableList, 0, len(tableList), int(recipeInstance['table']))
         if not tableInstance:
+            print('(ERROR) tableInstance is an empty variable.\n')
             return ERROR
 
         message += ":hammer_pick: Item " + itemInstance['name'] + " is made on :hammer_pick:\n" + tableInstance['name'] + "\n"
@@ -69,6 +73,7 @@ async def craft(ctx, arg):
 
             ingredientInstance = searchByID(itemList, 0, len(itemList), int(recipeInstance[ingredientName]))
             if not ingredientInstance:
+                print('(ERROR) ingredientInstance is an empty variable.\n')
                 return ERROR
 
             message += recipeInstance[amountName] + " " + ingredientInstance['name'] + "\n"
