@@ -1,5 +1,6 @@
 import discord
 import json
+import re
 from discord.ext import commands
 from tools import *
 from json_manager import *
@@ -18,6 +19,28 @@ async def help(ctx):
     
     await ctx.send('```Command List:\n$fr "ItemName" -> Search for the recipe of an item```')
 
+# Shows a list of  every item which starts with 'arg'
+@bot.command()
+async def list(ctx, arg):
+
+    if ctx.author == bot.user or not arg:
+        return
+
+    print('User requested a list of items for ' + arg + '.')
+
+    message = ""
+    matchCounter = 0
+    itemList = LoadJSONFile(ITEM_FILE_PATH)
+
+    #Regex usage to find every match of the input
+    for itemInstance in itemList:
+        if re.search("^" + arg + "*", itemInstance['name'], re.IGNORECASE): 
+            message += itemInstance['name'] + "\n"
+            matchCounter += 1
+    
+    await ctx.send(str(matchCounter) + " occurrencies found:\n" + message)
+
+# Shows crafting information about 'arg'
 @bot.command()
 async def craft(ctx, arg):
 
