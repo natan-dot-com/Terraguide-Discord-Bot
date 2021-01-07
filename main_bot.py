@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import json
 from tools import *
+import re
 
 bot = commands.Bot(command_prefix='$', description=description, help_command=None)
 
@@ -15,10 +16,28 @@ async def help(ctx):
     if ctx.author == bot.user:
         return
     
-    await ctx.send('```Command List:\n$fr "ItemName" -> Search for the recipe of an item```')
+    await ctx.send('```Command List:\n$craft "ItemName" -> Search for the recipe of an item```')
 
 @bot.command()
-async def fr(ctx, arg):
+async def find(ctx, arg):
+    if ctx.author == bot.user or not arg:
+        return
+    
+    with open('json/items.json') as items:
+        itemList = json.load(items)
+
+    message = ""
+    itemCount = 0
+
+    for itemInstance in itemList:
+        if re.search(arg + "*", itemInstance['name'], re.IGNORECASE):
+            itemCount += 1
+            message = message + itemInstance['name'] + "\n"
+    
+    await ctx.send(str(itemCount) + " Occurrences found:\n" + message)
+
+@bot.command()
+async def craft(ctx, arg):
 
     if ctx.author == bot.user or not arg:
         return
