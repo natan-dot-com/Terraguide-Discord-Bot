@@ -1,8 +1,9 @@
 import discord
-from discord.ext import commands
 import json
-from tools import *
 import re
+from discord.ext import commands
+from tools import *
+from json_manager import *
 
 bot = commands.Bot(command_prefix='$', description=description, help_command=None)
 
@@ -18,44 +19,47 @@ async def help(ctx):
     
     await ctx.send('```Command List:\n$craft "ItemName" -> Search for the recipe of an item```')
 
+# Shows a list of  every item which starts with 'arg'
 @bot.command()
-async def find(ctx, arg):
+async def list(ctx, arg):
+
     if ctx.author == bot.user or not arg:
         return
-    
-    with open('json/items.json') as items:
-        itemList = json.load(items)
+
+    print('User requested a list of items for ' + arg + '.')
 
     message = ""
-    itemCount = 0
+    matchCounter = 0
+    itemList = LoadJSONFile(ITEM_FILE_PATH)
 
+    #Regex usage to find every match of the input
     for itemInstance in itemList:
-        if re.search(arg + "*", itemInstance['name'], re.IGNORECASE):
-            itemCount += 1
-            message = message + itemInstance['name'] + "\n"
+        if re.search("^" + arg + "*", itemInstance['name'], re.IGNORECASE): 
+            message += itemInstance['name'] + "\n"
+            matchCounter += 1
     
-    await ctx.send(str(itemCount) + " Occurrences found:\n" + message)
+    await ctx.send(str(matchCounter) + " occurrencies found:\n" + message)
 
+# Shows crafting information about 'arg'
 @bot.command()
 async def craft(ctx, arg):
 
     if ctx.author == bot.user or not arg:
         return
 
-    message = ""
+    print('User requested a craft recipe for ' + arg + '.')
 
-    with open('json/items.json') as items:
-        itemList = json.load(items)        
+    message = ""
+    itemList = LoadJSONFile(ITEM_FILE_PATH)
+    recipeList = LoadJSONFile(RECIPE_FILE_PATH)
+    tableList = LoadJSONFile(TABLE_FILE_PATH)
 
     #Search for the given item name
-    itemInstance = search_by_name(itemList, arg)
+    itemInstance = searchByName(itemList, arg)
     if not itemInstance:
         await ctx.send('Item not found. Be sure to spell the item name correctly in quotes')
         return NOT_FOUND
     
-    with open('json/recipes.json') as recipes:
-        recipeList = json.load(recipes)
-
     #Check each of the recipes
     for recipeName in recipeNameList:
 
@@ -68,22 +72,20 @@ async def craft(ctx, arg):
         #reset the output variable for the next possible recipe
         message = ""
 
-        recipeInstance = search_by_id(recipeList, 0, len(recipeList), int(itemInstance[recipeName]))
-
+        recipeInstance = searchByID(recipeList, 0, len(recipeList), int(itemInstance[recipeName]))
         if not recipeInstance:
+            print('(ERROR) recipeInstance is an empty variable.\n')
             return ERROR  
 
-        with open('json/tables.json') as tables:
-            tableList = json.load(tables)
-            
-        tableInstance = search_by_id(tableList, 0, len(tableList), int(recipeInstance['table']))
+        tableInstance = searchByID(tableList, 0, len(tableList), int(recipeInstance['table']))
+        if not tableInstance:
+            print('(ERROR) tableInstance is an empty variable.\n')
+            return ERROR
 
-        message = message + ":hammer_pick: Item " + itemInstance['name'] + " is made on :hammer_pick:\n" + tableInstance['name'] + "\n"
-        
+        message += ":hammer_pick: Item " + itemInstance['name'] + " is made on :hammer_pick:\n" + tableInstance['name'] + "\n"
         if tableInstance['alternate_name']:
-            message = message + tableInstance['alternate_name'] + "\n"
-
-        message = message + ":gear: and uses the following ingredients :gear:\n"             
+            message += tableInstance['alternate_name'] + "\n"
+        message += ":gear: and uses the following ingredients :gear:\n"             
 
         #Search for each of the ingredients
         for ingredientName, amountName in zip(ingredientNameList, amountNameList):
@@ -92,14 +94,14 @@ async def craft(ctx, arg):
             if not recipeInstance[ingredientName]:
                 break
 
-            ingredientInstance = search_by_id(itemList, 0, len(itemList), int(recipeInstance[ingredientName]))
-            
+            ingredientInstance = searchByID(itemList, 0, len(itemList), int(recipeInstance[ingredientName]))
             if not ingredientInstance:
+                print('(ERROR) ingredientInstance is an empty variable.\n')
                 return ERROR
 
-            message = message + recipeInstance[amountName] + " " + ingredientInstance['name'] + "\n"
+            message += recipeInstance[amountName] + " " + ingredientInstance['name'] + "\n"
         
         #Send the message to UI discord after all the ingredients were put into the ouput message variable
         await ctx.send(message)               
 
-bot.run('MjQ2NTExOTcxMDY5ODUzNjk3.WCVcKQ.quxR1uO0TUb6UQPhvLYzqoApHBI')
+bot.run('Nzk2MDY1OTI0NzU1MDk1NTg0.X_SgKg.8UNAsVGPDnbS2nMc40LrpuoepTI')
