@@ -1,7 +1,8 @@
 import discord
-from discord.ext import commands
 import json
+from discord.ext import commands
 from tools import *
+from json_manager import *
 
 bot = commands.Bot(command_prefix='$', description=description, help_command=None)
 
@@ -18,25 +19,22 @@ async def help(ctx):
     await ctx.send('```Command List:\n$fr "ItemName" -> Search for the recipe of an item```')
 
 @bot.command()
-async def fr(ctx, arg):
+async def craft(ctx, arg):
 
     if ctx.author == bot.user or not arg:
         return
 
     message = ""
-
-    with open('json/items.json') as items:
-        itemList = json.load(items)        
+    itemList = LoadJSONFile(ITEM_FILE_PATH)
+    recipeList = LoadJSONFile(RECIPE_FILE_PATH)
+    tableList = LoadJSONFile(TABLE_FILE_PATH)
 
     #Search for the given item name
-    itemInstance = search_by_name(itemList, arg)
+    itemInstance = searchByName(itemList, arg)
     if not itemInstance:
         await ctx.send('Item not found. Be sure to spell the item name correctly in quotes')
         return NOT_FOUND
     
-    with open('json/recipes.json') as recipes:
-        recipeList = json.load(recipes)
-
     #Check each of the recipes
     for recipeName in recipeNameList:
 
@@ -49,22 +47,18 @@ async def fr(ctx, arg):
         #reset the output variable for the next possible recipe
         message = ""
 
-        recipeInstance = search_by_id(recipeList, 0, len(recipeList), int(itemInstance[recipeName]))
-
+        recipeInstance = searchByID(recipeList, 0, len(recipeList), int(itemInstance[recipeName]))
         if not recipeInstance:
             return ERROR  
 
-        with open('json/tables.json') as tables:
-            tableList = json.load(tables)
-            
-        tableInstance = search_by_id(tableList, 0, len(tableList), int(recipeInstance['table']))
+        tableInstance = searchByID(tableList, 0, len(tableList), int(recipeInstance['table']))
+        if not tableInstance:
+            return ERROR
 
-        message = message + ":hammer_pick: Item " + itemInstance['name'] + " is made on :hammer_pick:\n" + tableInstance['name'] + "\n"
-        
+        message += ":hammer_pick: Item " + itemInstance['name'] + " is made on :hammer_pick:\n" + tableInstance['name'] + "\n"
         if tableInstance['alternate_name']:
-            message = message + tableInstance['alternate_name'] + "\n"
-
-        message = message + ":gear: and uses the following ingredients :gear:\n"             
+            message += tableInstance['alternate_name'] + "\n"
+        message += ":gear: and uses the following ingredients :gear:\n"             
 
         #Search for each of the ingredients
         for ingredientName, amountName in zip(ingredientNameList, amountNameList):
@@ -73,12 +67,11 @@ async def fr(ctx, arg):
             if not recipeInstance[ingredientName]:
                 break
 
-            ingredientInstance = search_by_id(itemList, 0, len(itemList), int(recipeInstance[ingredientName]))
-            
+            ingredientInstance = searchByID(itemList, 0, len(itemList), int(recipeInstance[ingredientName]))
             if not ingredientInstance:
                 return ERROR
 
-            message = message + recipeInstance[amountName] + " " + ingredientInstance['name'] + "\n"
+            message += recipeInstance[amountName] + " " + ingredientInstance['name'] + "\n"
         
         #Send the message to UI discord after all the ingredients were put into the ouput message variable
         await ctx.send(message)               
