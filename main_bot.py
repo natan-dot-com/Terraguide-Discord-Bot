@@ -26,7 +26,7 @@ async def list(ctx, arg):
     if ctx.author == bot.user or not arg:
         return
 
-    print('User requested a list of items for ' + arg + '.')
+    print(str(ctx.author) + ' has requested a list of items for ' + arg + '.')
 
     message = ""
     matchCounter = 0
@@ -47,7 +47,7 @@ async def craft(ctx, arg):
     if ctx.author == bot.user or not arg:
         return
 
-    print(str(ctx.author) + ' requested a craft recipe for ' + arg + '.')
+    print(str(ctx.author) + ' has requested a craft recipe for ' + arg + '.')
 
     message = ""
     itemList = LoadJSONFile(ITEM_FILE_PATH)
