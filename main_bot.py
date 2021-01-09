@@ -94,7 +94,7 @@ async def craft(ctx, arg):
             if not recipeInstance[ingredientName]:
                 break
 
-            ingredientInstance = searchByID(itemList, 0, len(itemList), int(recipeInstance[ingredientName]))
+            ingredientInstance = itemList[int(recipeInstance[ingredientName]) - 1]
             if not ingredientInstance:
                 print('(ERROR) ingredientInstance is an empty variable.\n')
                 return ERROR
@@ -104,4 +104,4 @@ async def craft(ctx, arg):
         #Send the message to UI discord after all the ingredients were put into the ouput message variable
         await ctx.send(message)               
 
-bot.run('Nzk2MDY1OTI0NzU1MDk1NTg0.X_SgKg.8UNAsVGPDnbS2nMc40LrpuoepTI')
+bot.run('MjQ2NTExOTcxMDY5ODUzNjk3.WCVcKQ.quxR1uO0TUb6UQPhvLYzqoApHBI')
