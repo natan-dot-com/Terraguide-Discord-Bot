@@ -1,6 +1,6 @@
 import json
 
-ITEM_FILE_PATH = 'json/items.json' #only for this branch
+ITEM_FILE_PATH = 'json/items.json'
 RECIPE_FILE_PATH = 'json/recipes.json'
 TABLE_FILE_PATH = 'json/tables.json'
 
