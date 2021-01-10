@@ -104,4 +104,4 @@ async def craft(ctx, arg):
         #Send the message to UI discord after all the ingredients were put into the ouput message variable
         await ctx.send(message)               
 
-bot.run('MjQ2NTExOTcxMDY5ODUzNjk3.WCVcKQ.quxR1uO0TUb6UQPhvLYzqoApHBI')
+bot.run('Nzk2MDY1OTI0NzU1MDk1NTg0.X_SgKg.8UNAsVGPDnbS2nMc40LrpuoepTI')
