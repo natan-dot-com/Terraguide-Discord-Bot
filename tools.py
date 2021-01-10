@@ -7,19 +7,22 @@ amountNameList = ['amount1', 'amount2', 'amount3', 'amount4', 'amount5', 'amount
 NOT_FOUND = 0
 ERROR = -1
 
-description = 'A terraria bot.'
+botDescription = 'A terraria bot.'
 
-#Binary Search by ID
-def searchByID(JSONData, low, high, ID):
-    if high >= low:
-        mid = floor((high + low) // 2)
-        if int(JSONData[mid]['id']) == ID:
-            return JSONData[mid]
-        elif int(JSONData[mid]['id']) > ID:
-            return searchByID(JSONData, low, mid-1, ID)
-        elif int(JSONData[mid]['id']) < ID:
-            return searchByID(JSONData, mid+1, high, ID)
-    return
+#Thumbnail for UI output commands
+craftThumbNail = 'https://art.pixilart.com/7b7bd37bb742cd4.png'
+listThumbNail = 'https://cdn2.iconfinder.com/data/icons/font-awesome/1792/search-512.png'
+helpThumbNail = 'https://img2.gratispng.com/20180326/ytq/kisspng-question-mark-clip-art-competition-5ab8be3d0288c7.3002224515220567650104.jpg'
+
+#Color for UI output commands
+craftColor = 0x0a850e
+listColor = 0xe40101
+helpColor = 0x000000
+
+#Output for help command
+helpCommand = "Show this dialog"
+craftCommand = "Show all recipes for an item"
+listCommand  = "Find all items that contains the input word"
 
 #Linear Search by Name
 def searchByName(JSONData, name):
