@@ -5,7 +5,7 @@ from discord.ext import commands
 from tools import *
 from json_manager import *
 
-bot = commands.Bot(command_prefix='$', description=botDescription, help_command=None)
+bot = commands.Bot(command_prefix='.', description=botDescription, help_command=None)
 
 @bot.event
 async def on_ready():
@@ -51,6 +51,8 @@ async def list(ctx, arg):
         await ctx.send("No items were found containing " + arg)
         return NOT_FOUND
 
+    description = str(matchCounter) + " occurrencies found:\n"
+
     # Pages creation with 12 lines each
     pageList = []
     for matchInstance in matchList:
@@ -59,10 +61,11 @@ async def list(ctx, arg):
             message += subInstance + "\n"
             
         newPage = discord.Embed (
-            title = 'Page ' + str(matchList.index(matchInstance)+1) + '/' + str(len(matchList)),
-            description = message,
+            title = "Search Info about " + arg,
             colour = discord.Colour.green(),
         )
+        newPage.add_field(name=description, value=message, inline=False)
+        newPage.set_footer(text="page " + str(matchList.index(matchInstance) + 1) + "/" + str(len(matchList)))
         pageList.append(newPage)
 
     # Changing page system via Discord reactions
@@ -80,9 +83,15 @@ async def list(ctx, arg):
             if pageNumber > 0:
                 pageNumber -= 1
                 await botMessage.edit(embed = pageList[pageNumber])
+            elif pageNumber == 0:
+                pageNumber = len(pageList) - 1
+                await botMessage.edit(embed = pageList[pageNumber])
         elif str(reaction) == '▶':
-            if pageNumber < len(matchList):
+            if pageNumber < len(pageList) - 1:
                 pageNumber += 1
+                await botMessage.edit(embed = pageList[pageNumber])
+            elif pageNumber == len(pageList) - 1:
+                pageNumber = 0
                 await botMessage.edit(embed = pageList[pageNumber])
         try:
             reaction, user = await bot.wait_for('reaction_add', timeout = 30.0, check = check)
@@ -172,4 +181,5 @@ async def craft(ctx, arg):
         embed.add_field(name=descriptionCraft, value=messageCraft, inline=False)
         await ctx.send(embed=embed)               
 
+#bot.run('MjQ2NTExOTcxMDY5ODUzNjk3.WCVcKQ.quxR1uO0TUb6UQPhvLYzqoApHBI')
 bot.run('Nzk2MDY1OTI0NzU1MDk1NTg0.X_SgKg.8UNAsVGPDnbS2nMc40LrpuoepTI')
