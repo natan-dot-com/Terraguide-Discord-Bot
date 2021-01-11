@@ -5,7 +5,7 @@ from discord.ext import commands
 from tools import *
 from json_manager import *
 
-bot = commands.Bot(command_prefix='.', description=botDescription, help_command=None)
+bot = commands.Bot(command_prefix=botPrefix, description=botDescription, help_command=None)
 
 @bot.event
 async def on_ready():
@@ -19,9 +19,9 @@ async def help(ctx):
 
     embed = discord.Embed(color=helpColor, title="Command List")
     embed.set_thumbnail(url=helpThumbNail)
-    embed.add_field(name="$help", value=helpCommand, inline=False)
-    embed.add_field(name="$craft \"Item Name\"", value=craftCommand, inline=False)
-    embed.add_field(name="$list  \"Something to Search\"", value=listCommand, inline=False)
+    embed.add_field(name=botPrefix + "help", value=helpCommand, inline=False)
+    embed.add_field(name=botPrefix + "craft \"Item Name\"", value=craftCommand, inline=False)
+    embed.add_field(name=botPrefix + "list  \"Something to Search\"", value=listCommand, inline=False)
     
     await ctx.send(embed=embed)
 
@@ -41,7 +41,7 @@ async def list(ctx, arg):
     #Regex usage to find every match of the input
     for itemInstance in itemList:
         if re.search("^" + arg + "*", itemInstance['name'], re.IGNORECASE): 
-            if len(matchList[len(matchList)-1]) >= 12:
+            if len(matchList[len(matchList)-1]) >= pageSize:
                 matchList.append([])
             matchList[len(matchList)-1].append(itemInstance['name'])
     
@@ -65,7 +65,7 @@ async def list(ctx, arg):
             colour = discord.Colour.green(),
         )
         newPage.add_field(name=description, value=message, inline=False)
-        newPage.set_footer(text="page " + str(matchList.index(matchInstance) + 1) + "/" + str(len(matchList)))
+        newPage.set_footer(text="Page " + str(matchList.index(matchInstance) + 1) + "/" + str(len(matchList)))
         pageList.append(newPage)
 
     # Changing page system via Discord reactions
