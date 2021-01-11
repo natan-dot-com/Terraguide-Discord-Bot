@@ -10,6 +10,7 @@ bot = commands.Bot(command_prefix=botPrefix, description=botDescription, help_co
 @bot.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(bot))
+    await bot.change_presence(activity=discord.Game(name=botPrefix + "help"))
 
 @bot.command()
 async def help(ctx):
@@ -27,8 +28,9 @@ async def help(ctx):
 
 # Shows a list of  every item which starts with 'arg'
 @bot.command()
-async def list(ctx, arg):
+async def list(ctx, *args):
 
+    arg = " ".join(args)
     if ctx.author == bot.user or not arg:
         return
 
@@ -40,7 +42,8 @@ async def list(ctx, arg):
 
     #Regex usage to find every match of the input
     for itemInstance in itemList:
-        if re.search("^" + arg + "*", itemInstance['name'], re.IGNORECASE): 
+        if re.search("^" + arg + "+", itemInstance['name'], re.IGNORECASE): 
+            #print("^" + arg + "*\n" + itemInstance['name'] + "\n")
             if len(matchList[len(matchList)-1]) >= pageSize:
                 matchList.append([])
             matchList[len(matchList)-1].append(itemInstance['name'])
@@ -103,7 +106,9 @@ async def list(ctx, arg):
 
 # Shows crafting information about 'arg'
 @bot.command()
-async def craft(ctx, arg):
+async def craft(ctx, *args):
+
+    arg = " ".join(args)
 
     if ctx.author == bot.user or not arg:
         return

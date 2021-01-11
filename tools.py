@@ -8,7 +8,7 @@ NOT_FOUND = 0
 ERROR = -1
 
 botDescription = 'A terraria bot.'
-botPrefix = '.'
+botPrefix = 't.'
 
 #Thumbnail for UI output commands
 craftThumbNail = 'https://art.pixilart.com/7b7bd37bb742cd4.png'
