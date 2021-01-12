@@ -21,8 +21,8 @@ async def help(ctx):
     embed = discord.Embed(color=helpColor, title="Command List")
     embed.set_thumbnail(url=helpThumbNail)
     embed.add_field(name=botPrefix + "help", value=helpCommand, inline=False)
-    embed.add_field(name=botPrefix + "craft \"Item Name\"", value=craftCommand, inline=False)
-    embed.add_field(name=botPrefix + "list  \"Something to Search\"", value=listCommand, inline=False)
+    embed.add_field(name=botPrefix + "craft *Item Name*", value=craftCommand, inline=False)
+    embed.add_field(name=botPrefix + "list  *Something to Search*", value=listCommand, inline=False)
     
     await ctx.send(embed=embed)
 
@@ -122,7 +122,7 @@ async def craft(ctx, *args):
     #Search for the given item name
     itemInstance = searchByName(itemList, arg)
     if not itemInstance:
-        await ctx.send('Item not found. Be sure to spell the item name correctly in quotes')
+        await ctx.send('Item not found. Be sure to spell the item name correctly.')
         return NOT_FOUND
 
     title = "Craft info about " + itemInstance['name']
@@ -135,7 +135,7 @@ async def craft(ctx, *args):
         #If the JSON doesn't have any recipes left then break
         if not itemInstance[recipeName]:
             if recipeName == 'recipe1':
-                await ctx.send("item " + itemInstance['name'] + " doesn't have any recipe")
+                await ctx.send("Item " + itemInstance['name'] + " doesn't have any recipe")
             break
         
         #Clearing everything
