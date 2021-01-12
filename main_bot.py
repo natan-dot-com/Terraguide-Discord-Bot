@@ -78,7 +78,7 @@ async def list(ctx, *args):
     await botMessage.add_reaction('▶')
 
     def check(reaction, user):
-        return user == ctx.author
+        return user != botMessage.author and reaction.message.id == botMessage.id
 
     reaction = None
     while True:
