@@ -28,7 +28,6 @@ class myThread (threading.Thread):
       print ("Exiting Thread " + str(self.threadID))
 
 def img_search(item_list, init, fin):
-    print("entrou")
     for item in item_list[init:fin]:
 
         new_url = url + item['name'].replace(" ", "_")
