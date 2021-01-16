@@ -8,6 +8,7 @@ NOT_FOUND = 0
 ERROR = -1
 
 botDescription = 'A terraria bot.'
+botPrefix = 't.'
 
 #Thumbnail for UI output commands
 craftThumbNail = 'https://art.pixilart.com/7b7bd37bb742cd4.png'
@@ -23,6 +24,8 @@ helpColor = 0x000000
 helpCommand = "Show this dialog"
 craftCommand = "Show all recipes for an item"
 listCommand  = "Find all items that contains the input word"
+
+pageSize = 12
 
 #Linear Search by Name
 def searchByName(JSONData, name):

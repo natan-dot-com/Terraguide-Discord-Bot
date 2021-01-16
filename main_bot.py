@@ -5,11 +5,12 @@ from discord.ext import commands
 from tools import *
 from json_manager import *
 
-bot = commands.Bot(command_prefix='$', description=botDescription, help_command=None)
+bot = commands.Bot(command_prefix=botPrefix, description=botDescription, help_command=None)
 
 @bot.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(bot))
+    await bot.change_presence(activity=discord.Game(name=botPrefix + "help"))
 
 @bot.command()
 async def help(ctx):
@@ -19,16 +20,17 @@ async def help(ctx):
 
     embed = discord.Embed(color=helpColor, title="Command List")
     embed.set_thumbnail(url=helpThumbNail)
-    embed.add_field(name="$help", value=helpCommand, inline=False)
-    embed.add_field(name="$craft \"Item Name\"", value=craftCommand, inline=False)
-    embed.add_field(name="$list  \"Something to Search\"", value=listCommand, inline=False)
+    embed.add_field(name=botPrefix + "help", value=helpCommand, inline=False)
+    embed.add_field(name=botPrefix + "craft *Item Name*", value=craftCommand, inline=False)
+    embed.add_field(name=botPrefix + "list  *Something to Search*", value=listCommand, inline=False)
     
     await ctx.send(embed=embed)
 
 # Shows a list of  every item which starts with 'arg'
 @bot.command()
-async def list(ctx, arg):
+async def list(ctx, *args):
 
+    arg = " ".join(args)
     if ctx.author == bot.user or not arg:
         return
 
@@ -40,8 +42,9 @@ async def list(ctx, arg):
 
     #Regex usage to find every match of the input
     for itemInstance in itemList:
-        if re.search("^" + arg + "*", itemInstance['name'], re.IGNORECASE): 
-            if len(matchList[len(matchList)-1]) >= 12:
+        if re.search("^" + arg + "+", itemInstance['name'], re.IGNORECASE): 
+            #print("^" + arg + "*\n" + itemInstance['name'] + "\n")
+            if len(matchList[len(matchList)-1]) >= pageSize:
                 matchList.append([])
             matchList[len(matchList)-1].append(itemInstance['name'])
     
@@ -51,7 +54,9 @@ async def list(ctx, arg):
         await ctx.send("No items were found containing " + arg)
         return NOT_FOUND
 
-    # Pages creation with 12 lines of content each
+    description = str(matchCounter) + " occurrencies found:\n"
+
+    # Pages creation with 12 lines each
     pageList = []
     for matchInstance in matchList:
         message = ""
@@ -59,10 +64,11 @@ async def list(ctx, arg):
             message += subInstance + "\n"
             
         newPage = discord.Embed (
-            title = 'Page ' + str(matchList.index(matchInstance)+1) + '/' + str(len(matchList)),
-            description = message,
+            title = "Search Info about " + arg,
             colour = discord.Colour.green(),
         )
+        newPage.add_field(name=description, value=message, inline=False)
+        newPage.set_footer(text="Page " + str(matchList.index(matchInstance) + 1) + "/" + str(len(matchList)))
         pageList.append(newPage)
 
     # Changing page system via Discord reactions
@@ -72,7 +78,7 @@ async def list(ctx, arg):
     await botMessage.add_reaction('▶')
 
     def check(reaction, user):
-        return user == ctx.author
+        return user != botMessage.author and reaction.message.id == botMessage.id
 
     reaction = None
     while True:
@@ -80,9 +86,15 @@ async def list(ctx, arg):
             if pageNumber > 0:
                 pageNumber -= 1
                 await botMessage.edit(embed = pageList[pageNumber])
+            elif pageNumber == 0:
+                pageNumber = len(pageList) - 1
+                await botMessage.edit(embed = pageList[pageNumber])
         elif str(reaction) == '▶':
-            if pageNumber < len(matchList):
+            if pageNumber < len(pageList) - 1:
                 pageNumber += 1
+                await botMessage.edit(embed = pageList[pageNumber])
+            elif pageNumber == len(pageList) - 1:
+                pageNumber = 0
                 await botMessage.edit(embed = pageList[pageNumber])
         try:
             reaction, user = await bot.wait_for('reaction_add', timeout = 30.0, check = check)
@@ -94,7 +106,9 @@ async def list(ctx, arg):
 
 # Shows crafting information about 'arg'
 @bot.command()
-async def craft(ctx, arg):
+async def craft(ctx, *args):
+
+    arg = " ".join(args)
 
     if ctx.author == bot.user or not arg:
         return
@@ -108,7 +122,7 @@ async def craft(ctx, arg):
     #Search for the given item name
     itemInstance = searchByName(itemList, arg)
     if not itemInstance:
-        await ctx.send('Item not found. Be sure to spell the item name correctly in quotes')
+        await ctx.send('Item not found. Be sure to spell the item name correctly.')
         return NOT_FOUND
 
     title = "Craft info about " + itemInstance['name']
@@ -121,7 +135,7 @@ async def craft(ctx, arg):
         #If the JSON doesn't have any recipes left then break
         if not itemInstance[recipeName]:
             if recipeName == 'recipe1':
-                await ctx.send("item " + itemInstance['name'] + " doesn't have any recipe")
+                await ctx.send("Item " + itemInstance['name'] + " doesn't have any recipe")
             break
         
         #Clearing everything
