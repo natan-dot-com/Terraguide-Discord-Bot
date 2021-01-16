@@ -51,7 +51,7 @@ async def list(ctx, arg):
         await ctx.send("No items were found containing " + arg)
         return NOT_FOUND
 
-    # Pages creation with 12 lines each
+    # Pages creation with 12 lines of content each
     pageList = []
     for matchInstance in matchList:
         message = ""
