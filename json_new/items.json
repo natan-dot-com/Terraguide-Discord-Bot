@@ -8676,7 +8676,8 @@
     },
     {
         "id": "1736",
-        "name": "Nurse Hat"
+        "name": "Nurse Hat",
+        "type": "Vanity"
     },
     {
         "id": "1737",
@@ -18520,11 +18521,13 @@
     },
     {
         "id": "3705",
-        "name": "n/a (No official name)"
+        "name": "n/a (No official name)",
+        "type": ""
     },
     {
         "id": "3706",
-        "name": "n/a (No official name)"
+        "name": "n/a (No official name)",
+        "type": ""
     },
     {
         "id": "3707",
@@ -19228,23 +19231,28 @@
     },
     {
         "id": "3847",
-        "name": "n/a (No official name)"
+        "name": "n/a (No official name)",
+        "type": ""
     },
     {
         "id": "3848",
-        "name": "n/a (No official name)"
+        "name": "n/a (No official name)",
+        "type": ""
     },
     {
         "id": "3849",
-        "name": "n/a (No official name)"
+        "name": "n/a (No official name)",
+        "type": ""
     },
     {
         "id": "3850",
-        "name": "n/a (No official name)"
+        "name": "n/a (No official name)",
+        "type": ""
     },
     {
         "id": "3851",
-        "name": "n/a (No official name)"
+        "name": "n/a (No official name)",
+        "type": ""
     },
     {
         "id": "3852",
@@ -19253,7 +19261,8 @@
     },
     {
         "id": "3853",
-        "name": "n/a (No official name)"
+        "name": "n/a (No official name)",
+        "type": ""
     },
     {
         "id": "3854",
@@ -19292,11 +19301,13 @@
     },
     {
         "id": "3861",
-        "name": "n/a (No official name)"
+        "name": "n/a (No official name)",
+        "type": ""
     },
     {
         "id": "3862",
-        "name": "n/a (No official name)"
+        "name": "n/a (No official name)",
+        "type": ""
     },
     {
         "id": "3863",
@@ -19365,7 +19376,8 @@
     },
     {
         "id": "3876",
-        "name": "Dark Artist's Leggings"
+        "name": "Dark Artist's Leggings",
+        "type": "Armor"
     },
     {
         "id": "3877",
@@ -19874,7 +19886,8 @@
     },
     {
         "id": "3978",
-        "name": "n/a (No official name)"
+        "name": "n/a (No official name)",
+        "type": ""
     },
     {
         "id": "3979",
@@ -20698,7 +20711,8 @@
     },
     {
         "id": "4143",
-        "name": "n/a (No official name)"
+        "name": "n/a (No official name)",
+        "type": ""
     },
     {
         "id": "4144",
@@ -23592,7 +23606,8 @@
     },
     {
         "id": "4722",
-        "name": "n/a (No official name)"
+        "name": "n/a (No official name)",
+        "type": ""
     },
     {
         "id": "4723",
@@ -25046,7 +25061,8 @@
     },
     {
         "id": "5013",
-        "name": "n/a (No official name)"
+        "name": "n/a (No official name)",
+        "type": ""
     },
     {
         "id": "5014",
