@@ -25,6 +25,12 @@ helpCommand = "Show this dialog"
 craftCommand = "Show all recipes for an item"
 listCommand  = "Find all items that contains the input word"
 
+#Output Messages format
+tableMessage = ":hammer_pick: **{}** is made on the following tables :hammer_pick:" 
+craftMessage = ":gear: **{}** uses the following ingredients :gear:"
+notFoundMessage = "Item {} doesn't have any recipe"
+userRequestMessage = "User {} has requested a craft recipe for {}."
+
 pageSize = 12
 
 #Linear Search by Name

@@ -34,7 +34,7 @@ async def list(ctx, *args):
     if ctx.author == bot.user or not arg:
         return
 
-    print('User ' + str(ctx.author) + ' has requested a list of items for ' + arg + '.')
+    print(userRequestMessage.format(str(ctx.author), arg))
 
     matchCounter = 0
     matchList = [[]]
@@ -113,7 +113,7 @@ async def craft(ctx, *args):
     if ctx.author == bot.user or not arg:
         return
 
-    print('User ' + str(ctx.author) + ' has requested a craft recipe for ' + arg + '.')
+    print(userRequestMessage.format(str(ctx.author), arg))
 
     itemList = LoadJSONFile(ITEM_FILE_PATH)
     recipeList = LoadJSONFile(RECIPE_FILE_PATH)
@@ -125,7 +125,7 @@ async def craft(ctx, *args):
         await ctx.send('Item not found. Be sure to spell the item name correctly.')
         return NOT_FOUND
 
-    title = "Craft info about " + itemInstance['name']
+    title = "Craft info about {}".format(itemInstance['name'])
     embed = discord.Embed(color=craftColor, title=title)
     embed.set_thumbnail(url=craftThumbNail)
     
@@ -135,7 +135,7 @@ async def craft(ctx, *args):
         #If the JSON doesn't have any recipes left then break
         if not itemInstance[recipeName]:
             if recipeName == 'recipe1':
-                await ctx.send("Item " + itemInstance['name'] + " doesn't have any recipe")
+                await ctx.send(notFoundMessage.format(itemInstance['name']))
             break
         
         #Clearing everything
@@ -156,14 +156,14 @@ async def craft(ctx, *args):
             return ERROR
         
         #Get table infos
-        descriptionTable = ":hammer_pick: **" + itemInstance['name'] + "** is made on the following tables :hammer_pick:" 
+        descriptionTable = tableMessage.format(itemInstance['name'])
         if tableInstance['alternate_name']:
-            messageTable = tableInstance['name'] + ", " + tableInstance['alternate_name']
+            messageTable = "{}, {}".format(tableInstance['name'], tableInstance['alternate_name'])
         else:
             messageTable = tableInstance['name']
         
         embed.add_field(name=descriptionTable, value=messageTable, inline=False)
-        descriptionCraft += ":gear: **" + itemInstance['name'] + "** uses the following ingredients :gear:"             
+        descriptionCraft += craftMessage.format(itemInstance['name'])
         
         #Get the ingredients
         for ingredientName, amountName in zip(ingredientNameList, amountNameList):
@@ -177,7 +177,7 @@ async def craft(ctx, *args):
                 print('(ERROR) ingredientInstance is an empty variable.\n')
                 return ERROR
                 
-            messageCraft += recipeInstance[amountName] + " " + ingredientInstance['name'] + ", "
+            messageCraft += "{} {}, ".format(recipeInstance[amountName], ingredientInstance['name'])
             
         #remove the last comma
         messageCraft = messageCraft[:-2]
@@ -186,5 +186,5 @@ async def craft(ctx, *args):
         embed.add_field(name=descriptionCraft, value=messageCraft, inline=False)
         await ctx.send(embed=embed)               
 
-#bot.run('MjQ2NTExOTcxMDY5ODUzNjk3.WCVcKQ.quxR1uO0TUb6UQPhvLYzqoApHBI')
-bot.run('Nzk2MDY1OTI0NzU1MDk1NTg0.X_SgKg.8UNAsVGPDnbS2nMc40LrpuoepTI')
+bot.run('MjQ2NTExOTcxMDY5ODUzNjk3.WCVcKQ.quxR1uO0TUb6UQPhvLYzqoApHBI')
+#bot.run('Nzk2MDY1OTI0NzU1MDk1NTg0.X_SgKg.8UNAsVGPDnbS2nMc40LrpuoepTI')
