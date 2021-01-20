@@ -1,7 +1,12 @@
+import os,sys,inspect
+current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parent_dir = os.path.dirname(current_dir)
+parent_dir = os.path.dirname(parent_dir)
+sys.path.insert(0, parent_dir) 
+from json_manager import *
 from bs4 import BeautifulSoup
 import requests
 import json
-from json_manager import *
 
 ITEMS_BLOCK_PATH = 'json_new/items_blocks.json'
 URL = "https://terraria.gamepedia.com/"
