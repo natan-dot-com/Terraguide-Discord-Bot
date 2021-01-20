@@ -1,0 +1,1074 @@
+[
+  {
+    "id": "2",
+    "name": "Dirt Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3",
+    "name": "Stone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "9",
+    "name": "Wood",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "61",
+    "name": "Ebonstone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "133",
+    "name": "Clay Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "147",
+    "name": "Spike",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "150",
+    "name": "Cobweb",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "50 required",
+    "recipes": []
+  },
+  {
+    "id": "169",
+    "name": "Sand Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "170",
+    "name": "Glass",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "172",
+    "name": "Ash Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "176",
+    "name": "Mud Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "183",
+    "name": "Glowing Mushroom",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "370",
+    "name": "Ebonsand Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "408",
+    "name": "Pearlsand Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "409",
+    "name": "Pearlstone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "424",
+    "name": "Silt Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "200 required",
+    "recipes": []
+  },
+  {
+    "id": "511",
+    "name": "Active Stone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "512",
+    "name": "Inactive Stone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "539",
+    "name": "Dart Trap",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "5 required",
+    "recipes": []
+  },
+  {
+    "id": "540",
+    "name": "Boulder",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "5 required",
+    "recipes": []
+  },
+  {
+    "id": "586",
+    "name": "Candy Cane Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "591",
+    "name": "Green Candy Cane Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "593",
+    "name": "Snow Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "611",
+    "name": "Red Stucco",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "612",
+    "name": "Yellow Stucco",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "613",
+    "name": "Green Stucco",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "614",
+    "name": "Gray Stucco",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "619",
+    "name": "Ebonwood",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "620",
+    "name": "Rich Mahogany",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "621",
+    "name": "Pearlwood",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "664",
+    "name": "Ice Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "751",
+    "name": "Cloud",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "762",
+    "name": "Slime Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "763",
+    "name": "Flesh Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "765",
+    "name": "Rain Cloud",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "766",
+    "name": "Bone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "767",
+    "name": "Frozen Slime Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "775",
+    "name": "Asphalt Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "824",
+    "name": "Sunplate Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "833",
+    "name": "Purple Ice Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "834",
+    "name": "Pink Ice Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "835",
+    "name": "Red Ice Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "836",
+    "name": "Crimstone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "911",
+    "name": "Shadewood",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "1103",
+    "name": "Slush Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "200 required",
+    "recipes": []
+  },
+  {
+    "id": "1124",
+    "name": "Hive",
+    "Placeable": "",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "1125",
+    "name": "Honey Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "1127",
+    "name": "Crispy Honey Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "1146",
+    "name": "Super Dart Trap",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "5 required",
+    "recipes": []
+  },
+  {
+    "id": "1147",
+    "name": "Flame Trap",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "5 required",
+    "recipes": []
+  },
+  {
+    "id": "1148",
+    "name": "Spiky Ball Trap",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "5 required",
+    "recipes": []
+  },
+  {
+    "id": "1149",
+    "name": "Spear Trap",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "5 required",
+    "recipes": []
+  },
+  {
+    "id": "1150",
+    "name": "Wooden Spike",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "1246",
+    "name": "Crimsand Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "1344",
+    "name": "Cog",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "1591",
+    "name": "Bubblegum Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "1725",
+    "name": "Pumpkin",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "1727",
+    "name": "Hay",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "1729",
+    "name": "Spooky Wood",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "1872",
+    "name": "Pine Tree Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "1970",
+    "name": "Amethyst Gemspark Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "n/a",
+    "recipes": []
+  },
+  {
+    "id": "1971",
+    "name": "Topaz Gemspark Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "n/a",
+    "recipes": []
+  },
+  {
+    "id": "1972",
+    "name": "Sapphire Gemspark Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "n/a",
+    "recipes": []
+  },
+  {
+    "id": "1973",
+    "name": "Emerald Gemspark Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "n/a",
+    "recipes": []
+  },
+  {
+    "id": "1974",
+    "name": "Ruby Gemspark Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "n/a",
+    "recipes": []
+  },
+  {
+    "id": "1975",
+    "name": "Diamond Gemspark Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "n/a",
+    "recipes": []
+  },
+  {
+    "id": "1976",
+    "name": "Amber Gemspark Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "n/a",
+    "recipes": []
+  },
+  {
+    "id": "2119",
+    "name": "Stone Slab",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "2120",
+    "name": "Sandstone Slab",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "2173",
+    "name": "Copper Plating",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "2260",
+    "name": "Dynasty Wood",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "2261",
+    "name": "Red Dynasty Shingles",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "2262",
+    "name": "Blue Dynasty Shingles",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "2435",
+    "name": "Coralstone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "2503",
+    "name": "Boreal Wood",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "2504",
+    "name": "Palm Wood",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "2692",
+    "name": "Tin Plating",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "2693",
+    "name": "Waterfall Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "2694",
+    "name": "Lavafall Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "2695",
+    "name": "Confetti Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "2697",
+    "name": "Midnight Confetti Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "2787",
+    "name": "Honeyfall Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "2794",
+    "name": "Shroomite Plating",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "2860",
+    "name": "Martian Conduit Plating",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3066",
+    "name": "Smooth Marble Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3081",
+    "name": "Marble Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3086",
+    "name": "Granite Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3087",
+    "name": "Smooth Granite Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3113",
+    "name": "Pink Slime Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3234",
+    "name": "Crystal Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3271",
+    "name": "Sandstone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3272",
+    "name": "Hardened Sand Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3274",
+    "name": "Hardened Ebonsand Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3275",
+    "name": "Hardened Crimsand Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3276",
+    "name": "Ebonsandstone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3277",
+    "name": "Crimsandstone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3338",
+    "name": "Hardened Pearlsand Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3339",
+    "name": "Pearlsandstone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3347",
+    "name": "Desert Fossil",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "200 required",
+    "recipes": []
+  },
+  {
+    "id": "3380",
+    "name": "Sturdy Fossil",
+    "Placeable": "Yes",
+    "Rarity": "1",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3573",
+    "name": "Solar Fragment Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3574",
+    "name": "Vortex Fragment Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3575",
+    "name": "Nebula Fragment Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3576",
+    "name": "Stardust Fragment Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3621",
+    "name": "Red Team Block",
+    "Placeable": "Yes",
+    "Rarity": "1",
+    "Research": "n/a",
+    "recipes": []
+  },
+  {
+    "id": "3633",
+    "name": "Green Team Block",
+    "Placeable": "Yes",
+    "Rarity": "1",
+    "Research": "n/a",
+    "recipes": []
+  },
+  {
+    "id": "3634",
+    "name": "Blue Team Block",
+    "Placeable": "Yes",
+    "Rarity": "1",
+    "Research": "n/a",
+    "recipes": []
+  },
+  {
+    "id": "3635",
+    "name": "Yellow Team Block",
+    "Placeable": "Yes",
+    "Rarity": "1",
+    "Research": "n/a",
+    "recipes": []
+  },
+  {
+    "id": "3636",
+    "name": "Pink Team Block",
+    "Placeable": "Yes",
+    "Rarity": "1",
+    "Research": "n/a",
+    "recipes": []
+  },
+  {
+    "id": "3637",
+    "name": "White Team Block",
+    "Placeable": "Yes",
+    "Rarity": "1",
+    "Research": "n/a",
+    "recipes": []
+  },
+  {
+    "id": "3736",
+    "name": "Silly Pink Balloon",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3737",
+    "name": "Silly Purple Balloon",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3738",
+    "name": "Silly Green Balloon",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3754",
+    "name": "Sandfall Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3755",
+    "name": "Snowfall Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3756",
+    "name": "Snow Cloud",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "3955",
+    "name": "Lesion Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "4040",
+    "name": "Golf Cup",
+    "Placeable": "Yes",
+    "Rarity": "2",
+    "Research": "1 required",
+    "recipes": []
+  },
+  {
+    "id": "4090",
+    "name": "Shell Pile",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "4091",
+    "name": "Anti-Portal Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "4139",
+    "name": "Spider Nest Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "4277",
+    "name": "Gold Starry Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "4278",
+    "name": "Blue Starry Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "4391",
+    "name": "Thin Ice",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "4422",
+    "name": "Grate",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "4564",
+    "name": "Bamboo",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "4640",
+    "name": "Amethyst Stone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "4641",
+    "name": "Topaz Stone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "4642",
+    "name": "Sapphire Stone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "4643",
+    "name": "Emerald Stone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "4644",
+    "name": "Ruby Stone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "4645",
+    "name": "Diamond Stone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "4646",
+    "name": "Amber Stone Block",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  },
+  {
+    "id": "4962",
+    "name": "Stone Accent Slab",
+    "Placeable": "Yes",
+    "Rarity": "0",
+    "Research": "100 required",
+    "recipes": []
+  }
+]
