@@ -10,5 +10,5 @@ def LoadJSONFile(JSONPath):
         return JSONData
 
 def SaveJSONFile(JSONPath, Structure):
-    with open(JSONPath, "w+") as newJSONFile:
+    with open(JSONPath, "w") as newJSONFile:
         json.dump(Structure, newJSONFile, indent=2)
