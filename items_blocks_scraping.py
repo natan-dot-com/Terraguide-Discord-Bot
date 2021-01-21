@@ -15,8 +15,8 @@ for itemInstance in itemList:
         newURL = URL + itemInstance['name'].replace(" ", "_")
         page = requests.get(newURL)
         soup = BeautifulSoup(page.content, 'html.parser')
-        table = soup.find("table", class_="stat")
         
+        table = soup.find("table", class_="stat")
         if table:
             jsonDict = {
                 "id": "",
