@@ -9,7 +9,7 @@ import requests
 import json
 import re
 
-URL = "https://terraria.gamepedia.com/Lanterns"
+URL = "https://terraria.gamepedia.com/Hooks"
 page = requests.get(URL)
 soup = BeautifulSoup(page.content, 'html.parser')
 counter = 1
@@ -19,15 +19,22 @@ if craftingTable:
     rows = craftingTable.findAll("tr")
     for row in rows[1::]:
         mainDict = {
-            "id": "",
+            "craft_id": "",
+            "craft_qty": "",
             "table": [],
-            "recipe": [] 
+            "recipe": []
         }
-        mainDict["id"] = str(counter)
+        mainDict["craft_id"] = str(counter)
         
         # Finding which item it's being crafted
         if row.find("td", class_="result"):
-            result = row.find("td", class_="result").img['alt']
+            result_code = row.find("td", class_="result")
+            result = result_code.img['alt']
+            qty = result_code.find("span", class_="note-text")
+            if not qty:
+                mainDict["craft_qty"] = '1'
+            else:
+                mainDict["craft_qty"] = ' '.join(re.findall("\((\d+)\)", qty.text))
         
         # Finding all ingredients with its respective quantities relative to the recipe
         if row.find("td", class_="ingredients"):

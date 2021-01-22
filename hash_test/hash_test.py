@@ -1,4 +1,4 @@
-from item_hash import hashTable
+from item_hash import *
 from json_manager import *
 
 ITEMS_DICT_STRING_INDEX = 'name'
@@ -13,4 +13,7 @@ for itemInstance in itemList:
 while True:
     itemName = input('>>> Item name: ')
     respectiveID = hashMap.dehashString(itemName, ITEMS_DICT_INDEX_TO_RETURN)
-    print("Item ID: " + respectiveID)
+    if respectiveID != NOT_FOUND:
+        print("Item ID: " + respectiveID)
+    else:
+        print("Not found.")
