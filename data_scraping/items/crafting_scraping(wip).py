@@ -45,7 +45,7 @@ if craftingTable:
                     ingredientsDict["qty"] = '1'
                 mainDict["recipe"].append(ingredientsDict)
                 
-        # Finding all the crating stations in which recipe can be made
+        # Finding all the crating stations in which the recipe can be made
         if row.find("td", class_="station"):
             stationList = row.find("td", class_="station").findAll("span", class_="i")
             if not stationList:
