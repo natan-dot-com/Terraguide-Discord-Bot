@@ -9,7 +9,7 @@ import requests
 import json
 import re
 
-URL = "https://terraria.gamepedia.com/Iron_Pickaxe"
+URL = "https://terraria.gamepedia.com/Lanterns"
 page = requests.get(URL)
 soup = BeautifulSoup(page.content, 'html.parser')
 counter = 1
@@ -32,13 +32,13 @@ if craftingTable:
         # Finding all ingredients with its respective quantities relative to the recipe
         if row.find("td", class_="ingredients"):
             ingredientsList = row.find("td", class_="ingredients").findAll("li")
-            for ingredient in ingredientsList:
+            for ingredientInstance in ingredientsList:
                 ingredientsDict = {
                     "ingredient": "",
                     "qty": ""
                 }
-                ingredientsDict["ingredient"] = ingredient.img['alt']
-                qty = ingredient.find("span", class_="note-text")
+                ingredientsDict["ingredient"] = ingredientInstance.img['alt']
+                qty = ingredientInstance.find("span", class_="note-text")
                 if qty:
                     ingredientsDict["qty"] = ' '.join(re.findall("\((\d+)\)", qty.text))
                 else:
@@ -48,8 +48,13 @@ if craftingTable:
         # Finding all the crating stations in which recipe can be made
         if row.find("td", class_="station"):
             stationList = row.find("td", class_="station").findAll("span", class_="i")
-        for station in stationList:
-            mainDict["table"].append(station.span.span.a.text)
+            if not stationList:
+                stationList = ["By Hand"]
+        for stationInstance in stationList:
+            if not stationInstance == "By Hand":
+                mainDict["table"].append(stationInstance.span.span.a.text)
+            else:
+                mainDict["table"].append(stationInstance)
             
         print(json.dumps(mainDict, indent=4))
         counter += 1
