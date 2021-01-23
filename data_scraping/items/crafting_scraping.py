@@ -9,7 +9,7 @@ import requests
 import json
 import re
 
-URL = "https://terraria.gamepedia.com/Hooks"
+URL = "https://terraria.gamepedia.com/Iron_Hammer"
 page = requests.get(URL)
 soup = BeautifulSoup(page.content, 'html.parser')
 counter = 1
@@ -57,11 +57,11 @@ if craftingTable:
             stationList = row.find("td", class_="station").findAll("span", class_="i")
             if not stationList:
                 stationList = ["By Hand"]
-        for stationInstance in stationList:
-            if not stationInstance == "By Hand":
-                mainDict["table"].append(stationInstance.span.span.a.text)
-            else:
-                mainDict["table"].append(stationInstance)
+            for stationInstance in stationList:
+                if not stationInstance == "By Hand":
+                    mainDict["table"].append(stationInstance.span.span.a.text)
+                else:
+                    mainDict["table"].append(stationInstance)
             
         print(json.dumps(mainDict, indent=4))
         counter += 1
