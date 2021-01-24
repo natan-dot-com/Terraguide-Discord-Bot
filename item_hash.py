@@ -6,7 +6,8 @@ class hashTable:
         self.dictIndex = stringDictIndex
         self.data = [None] * self.size
         
-    def hashFunction(self, stringData):
+    # Private functions to hash/rehash (if needed) each string
+    def __hashFunction(self, stringData):
         hashValue = 0
         counter = 1
         for charInstance in stringData:
@@ -15,37 +16,39 @@ class hashTable:
             
         return hashValue % self.size
         
-    def rehashFunction(self, oldValue, rehashCounter):
+    def __rehashFunction(self, oldValue, rehashCounter):
         return (oldValue + rehashCounter ** 2) % self.size
         
-    def hashString(self, stringData, stringDict):
-        hashIndex = self.hashFunction(stringData)
+    # Public function to add a dictionary in data list
+    def add(self, stringData, stringDict):
+        hashIndex = self.__hashFunction(stringData)
         
         if self.data[hashIndex] == None:
             self.data[hashIndex] = stringDict
             return
         else:
             rehashCounter = 1
-            nextIndex = self.rehashFunction(hashIndex, rehashCounter)
+            nextIndex = self.__rehashFunction(hashIndex, rehashCounter)
             while self.data[nextIndex] != None:
                 rehashCounter += 1
-                nextIndex = self.rehashFunction(hashIndex, rehashCounter)
+                nextIndex = self.__rehashFunction(hashIndex, rehashCounter)
             if self.data[nextIndex] == None:
                 self.data[nextIndex] = stringDict
                 return
         
-    def dehashString(self, stringData, dictIndexToReturn):
-        hashIndex = self.hashFunction(stringData)
+    # Public function to search a dictionary from a string
+    def search(self, stringData, dictIndexToReturn):
+        hashIndex = self.__hashFunction(stringData)
         
         if (self.data[hashIndex] != None):
             if self.data[hashIndex][self.dictIndex] == stringData:
                 return self.data[hashIndex][dictIndexToReturn] 
             else:
                 rehashCounter = 1
-                nextIndex = self.rehashFunction(hashIndex, rehashCounter)
+                nextIndex = self.__rehashFunction(hashIndex, rehashCounter)
                 while (self.data[nextIndex] != None) and (self.data[nextIndex][self.dictIndex] != stringData):
                     rehashCounter += 1
-                    nextIndex = self.rehashFunction(hashIndex, rehashCounter)
+                    nextIndex = self.__rehashFunction(hashIndex, rehashCounter)
                 if self.data[nextIndex] == None:
                     return NOT_FOUND
                 elif self.data[nextIndex][self.dictIndex] == stringData:
