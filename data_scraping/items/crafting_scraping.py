@@ -10,22 +10,23 @@ import requests
 import json
 import re
 
-CRAFTINGS_PATH = 'json_new/craftings.json'
+CRAFTINGS_PATH = 'json/craftings.json'
+JSON_PATH = 'json/'
 CRAFTING_TABLE_SIZE = 64
 ITEM_TABLE_SIZE = 8192
 STRING_DICT_KEY = 'name'
 RETURN_DICT_KEY = 'id'
 
-itemList = LoadJSONFile('json_new/items.json')
-craftingTableList = LoadJSONFile('json_new/tables.json')
+itemList = LoadJSONFile(JSON_PATH + "items.json")
+craftingTableList = LoadJSONFile(JSON_PATH + "tables.json")
 
 itemHash = hashTable(ITEM_TABLE_SIZE, STRING_DICT_KEY)
 for itemInstance in itemList:
-    itemHash.hashString(itemInstance[STRING_DICT_KEY], itemInstance)
+    itemHash.add(itemInstance[STRING_DICT_KEY], itemInstance)
 
 craftingTableHash = hashTable(CRAFTING_TABLE_SIZE, STRING_DICT_KEY)
 for tableInstance in craftingTableList:
-    craftingTableHash.hashString(tableInstance[STRING_DICT_KEY], tableInstance)
+    craftingTableHash.add(tableInstance[STRING_DICT_KEY], tableInstance)
 
 def getCraftingRecipes(firstItemID, lastItemID):
     craftRecipeList = []
@@ -61,7 +62,7 @@ def getCraftingRecipes(firstItemID, lastItemID):
                     else:
                         qty = ' '.join(re.findall("\((\d+)\)", craft_qty.text))
                 # If nothing about it is defined on table line, will use the result obtained previously
-                itemID = itemHash.dehashString(result, RETURN_DICT_KEY)
+                itemID = itemHash.search(result, RETURN_DICT_KEY)
                 if itemID != NOT_FOUND:
                     craftDict["craft_result"] = itemID
                     
@@ -78,7 +79,7 @@ def getCraftingRecipes(firstItemID, lastItemID):
                         
                         ingredientName = ingredientInstance.img['alt']
                         if ingredientName:
-                            ingredientID = itemHash.dehashString(ingredientName, RETURN_DICT_KEY)
+                            ingredientID = itemHash.search(ingredientName, RETURN_DICT_KEY)
                             if ingredientID != NOT_FOUND:
                                 ingredientsDict["ingredient"] = ingredientID
                                 
@@ -103,7 +104,7 @@ def getCraftingRecipes(firstItemID, lastItemID):
                         craftingTable = stationInstance
                         
                     if craftingTable:
-                        tableID = craftingTableHash.dehashString(craftingTable, RETURN_DICT_KEY)
+                        tableID = craftingTableHash.search(craftingTable, RETURN_DICT_KEY)
                         if tableID != NOT_FOUND:
                             craftDict["table"].append(tableID)
                         
@@ -113,5 +114,5 @@ def getCraftingRecipes(firstItemID, lastItemID):
             print(item["name"] + " recipe not found")
     return craftRecipeList
 
-#testList = getCraftingRecipes(1, 10)
-SaveJSONFile(CRAFTINGS_PATH, craftsList)
+testList = getCraftingRecipes(1, 10)
+SaveJSONFile(CRAFTINGS_PATH, testList)
