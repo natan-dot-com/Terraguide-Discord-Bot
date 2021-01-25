@@ -47,17 +47,21 @@ for pageName in AMMOS_TYPES:
             id = item.find("div", class_="id")      
             ammoDict["id"] = (re.search("\d+", id.text)).group()
             ammoDict["name"] = item.img['alt']
-            ammoDict["Used in"] = pageName[0:-1]
+            if pageName == "Arrows":
+                ammoDict["Used in"] = "Any Bow or Repeater."
+            elif pageName == "Bullets":
+                ammoDict["Used in"] = "Any Gun"
+            elif pageName == "Darts":
+                ammoDict["Used in"] = "Blowgun, Blowpipe, Dart Pistol and Dart Rifle"
             ammoDict["Damage"] = tdTags[2].text.split(' ')[0].rstrip()
             if tdTags[3].text.split(' ')[0] != "???\n":
                 ammoDict["Velocity"] = tdTags[3].text.split(' ')[0].rstrip()
             ammoDict["Multiplier"] = tdTags[4].text.split(' ')[0].rstrip()
             if tdTags[5].text != "???\n":
-                ammoDict["Knockback"] = tdTags[5].text.rstrip()
+                ammoDict["Knockback"] = " (".join(tdTags[5].text.rstrip().split("("))
             ammoDict["Rarity"] = tdTags[7].a['title'].split(' ')[-1]
             #print(json.dumps(ammoDict, indent=2))
             ammoList.append(ammoDict)
-
 
     #for Rockets page
     elif pageName == "Rockets":
@@ -82,6 +86,7 @@ for pageName in AMMOS_TYPES:
             id = item.find("div", class_="id")      
             ammoDict["id"] = (re.search("\d+", id.text)).group()
             ammoDict["name"] = item.img['alt']
+            ammoDict['Used in'] = "Launcher"
             ammoDict["Damage"] = tdTags[1].text.split(' ')[0].rstrip()
             ammoDict["Availability"] = 'or '.join(tdTags[2].text.rstrip().split('or'))
             ammoDict["Rarity"] = tdTags[3].a['title'].split(' ')[-1]
