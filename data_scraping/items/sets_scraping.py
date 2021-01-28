@@ -44,6 +44,7 @@ for table in tables[0:2]:
             SCRAPING_DEFENSE: "",
             SCRAPING_RARITY: ""
         }
+        processedItems = []
         for tableBox in tableBoxes:
             tableTitle = tableBox.find("div", class_="title")
             if re.search("set|armor", tableTitle.text, re.IGNORECASE) and tableTitle.find("img", alt=OTHER_VERSIONS):
@@ -52,7 +53,6 @@ for table in tables[0:2]:
             
             if re.search("armor", tableTitle.text, re.IGNORECASE):
                 setDict[SCRAPING_ID] = str(setID)
-                print("ID {} settled to {}".format(setID, tableTitle.text))
                 setID += 1
                 setDict[SCRAPING_SET_NAME] = tableTitle.text.rstrip()
                 statistics = tableBox.find("div", class_="section statistics").find_all("tr")
@@ -64,7 +64,9 @@ for table in tables[0:2]:
                     elif statistic.th.text == SCRAPING_RARITY:
                         setDict[SCRAPING_RARITY] = statistic.td.span.a["title"][-1]
             else:
-                setDict[SCRAPING_SET_PIECES].append(tableTitle.text)
+                if not tableTitle.text in processedItems:
+                    setDict[SCRAPING_SET_PIECES].append(tableTitle.text)
+                    processedItems.append(tableTitle.text)
             
         setsList.append(setDict)
 
