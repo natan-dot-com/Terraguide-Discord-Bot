@@ -30,6 +30,6 @@ pageSize = 12
 #Linear Search by Name
 def searchByName(JSONData, name):
     for JSONInstance in JSONData:
-        if JSONInstance['name'].lower() == name.lower():
+        if JSONInstance["Name"].lower() == name.lower():
             return JSONInstance
-    return
+    return NOT_FOUND
