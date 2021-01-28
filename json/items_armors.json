@@ -264,28 +264,6 @@
     "Recipes": []
   },
   {
-    "Item ID": "1135",
-    "Set ID": "8",
-    "Name": "Rain Hat",
-    "Defense": "",
-    "Body Slot": "Social Helmet",
-    "Tooltip": "",
-    "Rarity": "1",
-    "Research": "",
-    "Recipes": []
-  },
-  {
-    "Item ID": "1136",
-    "Set ID": "8",
-    "Name": "Rain Coat",
-    "Defense": "",
-    "Body Slot": "Social Shirt",
-    "Tooltip": "",
-    "Rarity": "1",
-    "Research": "",
-    "Recipes": []
-  },
-  {
     "Item ID": "803",
     "Set ID": "9",
     "Name": "Snow Hood",
@@ -547,72 +525,6 @@
     "Tooltip": "3% increased critical strike chance",
     "Rarity": "1",
     "Research": "1 required",
-    "Recipes": []
-  },
-  {
-    "Item ID": "256",
-    "Set ID": "16",
-    "Name": "Ninja Hood",
-    "Defense": "2",
-    "Body Slot": "Helmet",
-    "Tooltip": "15% increased throwing velocity",
-    "Rarity": "0",
-    "Research": "",
-    "Recipes": []
-  },
-  {
-    "Item ID": "257",
-    "Set ID": "16",
-    "Name": "Ninja Shirt",
-    "Defense": "4",
-    "Body Slot": "Shirt",
-    "Tooltip": "15% increase throwing damage",
-    "Rarity": "0",
-    "Research": "",
-    "Recipes": []
-  },
-  {
-    "Item ID": "258",
-    "Set ID": "16",
-    "Name": "Ninja Pants",
-    "Defense": "3",
-    "Body Slot": "Pants",
-    "Tooltip": "10% increased throwing crit chance",
-    "Rarity": "0",
-    "Research": "",
-    "Recipes": []
-  },
-  {
-    "Item ID": "256",
-    "Set ID": "16",
-    "Name": "Ninja Hood",
-    "Defense": "",
-    "Body Slot": "Social Helmet",
-    "Tooltip": "",
-    "Rarity": "0",
-    "Research": "",
-    "Recipes": []
-  },
-  {
-    "Item ID": "257",
-    "Set ID": "16",
-    "Name": "Ninja Shirt",
-    "Defense": "",
-    "Body Slot": "Social Shirt",
-    "Tooltip": "",
-    "Rarity": "0",
-    "Research": "",
-    "Recipes": []
-  },
-  {
-    "Item ID": "258",
-    "Set ID": "16",
-    "Name": "Ninja Pants",
-    "Defense": "",
-    "Body Slot": "Social Pants",
-    "Tooltip": "",
-    "Rarity": "0",
-    "Research": "",
     "Recipes": []
   },
   {

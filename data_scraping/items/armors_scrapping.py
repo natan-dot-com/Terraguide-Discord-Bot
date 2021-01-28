@@ -35,9 +35,12 @@ for table in tables[0:2]:
         page2 = requests.get(newURL)
         soup2 = BeautifulSoup(page2.content, 'html.parser')
         tableBoxes = soup2.find_all("div", class_="infobox item")
+        processedItems = []
 
         for tableBox in tableBoxes:
             if re.search("armor|set", tableBox.find("div", class_="title").text, re.IGNORECASE):
+                continue
+            if tableBox.find("div", class_="title").text in processedItems:
                 continue
 
             armorDict = {
@@ -66,12 +69,13 @@ for table in tables[0:2]:
                     armorDict[SCRAPING_RARITY] = statistic.td.span.a["title"][-1]
                 elif statistic.th.text == SCRAPING_RESEARCH:
                     armorDict[SCRAPING_RESEARCH] = statistic.td.text
-            
+            processedItems.append(armorDict[SCRAPING_NAME])
             armorList.append(armorDict)
 
 #third and fourth tables
 for table in tables[2:-1]:
     trTags = table.find_all("tr")
+    processedItems = []
 
     for trTag in trTags[1:]:
         newURL = wikiURL + trTag.find_all("td")[1].a.text.replace(" ", "_")
@@ -79,6 +83,9 @@ for table in tables[2:-1]:
         page2 = requests.get(newURL)
         soup2 = BeautifulSoup(page2.content, 'html.parser')
         tableBox = soup2.find("div", class_="infobox item")
+
+        if tableBox.find("div", class_="title").text in processedItems:
+            continue
 
         armorDict = {
             SCRAPING_ITEM_ID: "",
@@ -106,19 +113,24 @@ for table in tables[2:-1]:
             elif statistic.th.text == SCRAPING_RESEARCH:
                 armorDict[SCRAPING_RESEARCH] = statistic.td.text
         
+        processedItems.append(armorDict[SCRAPING_NAME])
         armorList.append(armorDict)
 
 #last table
 trTags = tables[-1].find_all("tr")
-
+processedItems = []
 for trTag in trTags[1:]:
     if trTag.find_all("td")[1].a.text in REJECTED_ARMORS:
         continue
+    
     newURL = wikiURL + trTag.find_all("td")[1].a.text.replace(" ", "_")
     print("processing {}".format(newURL))
     page2 = requests.get(newURL)
     soup2 = BeautifulSoup(page2.content, 'html.parser')
     tableBox = soup2.find("div", class_="infobox item")
+
+    if tableBox.find("div", class_="title").text in processedItems:
+        continue
 
     armorDict = {
         SCRAPING_ITEM_ID: "",
@@ -146,6 +158,14 @@ for trTag in trTags[1:]:
         elif statistic.th.text == SCRAPING_RESEARCH:
             armorDict[SCRAPING_RESEARCH] = statistic.td.text
     
+    processedItems.append(armorDict[SCRAPING_NAME])
     armorList.append(armorDict)
+
+itemSets = LoadJSONFile(GLOBAL_JSON_PATH + "sets.json")
+for armor in armorList:
+    for set in itemSets:
+        if armor[SCRAPING_NAME] in set[SCRAPING_SET_PIECES]:
+            armor[SCRAPING_SET_ID] = str(set[SCRAPING_ID])
+            break
 
 SaveJSONFile(ARMOR_PATH_OUTPUT, armorList)
