@@ -11452,7 +11452,7 @@
     {
         "ID": "2291",
         "Name": "Reinforced Fishing Pole",
-        "Type": "Tools"
+        "Type": "Tool"
     },
     {
         "ID": "2292",
@@ -11597,7 +11597,7 @@
     {
         "ID": "2320",
         "Name": "Rockfish",
-        "Type": "Tools"
+        "Type": "Tool"
     },
     {
         "ID": "2321",

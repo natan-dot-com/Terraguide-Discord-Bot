@@ -1,4 +1,4 @@
-#Everything seems to work. No string format issues found.
+#Need to fix duplicates
 
 import os,sys,inspect
 import re

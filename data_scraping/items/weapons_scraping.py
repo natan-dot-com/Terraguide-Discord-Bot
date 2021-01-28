@@ -1,5 +1,5 @@
 
-#Flare and Blue Flare ARE being processed (they shouldn't)
+#Everything seems to work.
 
 import os,sys,inspect
 current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -11,21 +11,24 @@ import requests
 from bs4 import BeautifulSoup
 
 ITEM_PATH_OUTPUT = GLOBAL_JSON_PATH + "items_weapons.json"
+ITEM_URL = ["Enchanted Sword"]
 
-item_list = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(ITEM_FILE_PATH)
 url = "https://terraria.gamepedia.com/"
-json_list = []
+jsonList = []
 
-for item in item_list:
-    if item['type'] == "Weapon":
-        print(item['name'], item['id'])
-        new_url = url + item['name'].replace(" ", "_")
-        page = requests.get(new_url)
-        soup = BeautifulSoup(page.content, 'html.parser')
+for itemInstance in itemList:
+    if itemInstance["Type"] == "Weapon":
+        newURL = url + itemInstance["Name"].replace(" ", "_")
+        if itemInstance["Name"] in ITEM_URL:
+            newURL += "_(item)"
+        print("Processing " + newURL + " with ID " + itemInstance["ID"])
+        page = requests.get(newURL)
+        soup = BeautifulSoup(page.content, "html.parser")
         table = soup.find("div", class_="infobox item")
 
         if table:
-            json_dict = {
+            jsonDict = {
                 "Item ID": "",
                 "Name": "",
                 "Damage": "",
@@ -38,43 +41,43 @@ for item in item_list:
                 "Research": "",
                 "Recipes": [] 
             }
-            json_dict["Item ID"] = item["id"]
-            json_dict["Name"] = item["name"]
+            jsonDict["Item ID"] = itemInstance["ID"]
+            jsonDict["Name"] = itemInstance["Name"]
 
             damage = table.find("th", text="Damage")
             if damage:
-                json_dict['Damage'] = damage.parent.td.text.split(' ')[0]
+                jsonDict["Damage"] = damage.parent.td.text.split(" ")[0]
 
             knockback = table.find("span", class_="knockback")
             if knockback:
-                json_dict['Knockback'] = knockback.parent.text.split('/')[0].rstrip()
+                jsonDict["Knockback"] = knockback.parent.text.split("/")[0].rstrip()
 
             mana = table.find("a", title="Mana")
             if mana:
-                json_dict['Mana'] = mana.parent.parent.td.text.split(' ')[0]
+                jsonDict["Mana"] = mana.parent.parent.td.text.split(" ")[0]
 
             critical_chance = table.find("a", title="Critical hit")
             if critical_chance:
-                json_dict['Critical Chance'] = critical_chance.parent.parent.td.text.split(' ')[0]
+                jsonDict["Critical Chance"] = critical_chance.parent.parent.td.text.split(" ")[0]
 
             use_time = table.find("span", class_="usetime")
             if use_time:
                 use_time = use_time.parent
-                json_dict['Use Time'] = use_time.text.split('/')[0].encode("ascii", "ignore").decode().rstrip()
+                jsonDict["Use Time"] = use_time.text.split("/")[0].encode("ascii", "ignore").decode().rstrip()
 
             velocity = table.find("a", title="Velocity")
             if velocity:
-                json_dict['Velocity'] = velocity.parent.parent.td.text.split(' ')[0]
+                jsonDict["Velocity"] = velocity.parent.parent.td.text.split(" ")[0]
 
             rarity = table.find("span", class_="rarity")
             if rarity:
-                json_dict['Rarity'] = rarity.a['title'][-1]
+                jsonDict["Rarity"] = rarity.a["title"][-1]
 
             research = table.find("a", title="Journey mode")
             if research:
-                json_dict['Research'] = research.parent.parent.td.text
+                jsonDict["Research"] = research.parent.parent.td.text
 
-            json_dict["Recipes"] = []
-            json_list.append(json_dict)
+            jsonDict["Recipes"] = []
+            jsonList.append(jsonDict)
 
-SaveJSONFile(ITEM_PATH_OUTPUT, json_list)
+SaveJSONFile(ITEM_PATH_OUTPUT, jsonList)

@@ -1638,6 +1638,19 @@
     "Recipes": []
   },
   {
+    "Item ID": "989",
+    "Name": "Enchanted Sword",
+    "Damage": "23",
+    "Knockback": "4.25 (Average)",
+    "Mana": "",
+    "Critical Chance": "4%",
+    "Use Time": "21 (Fast)",
+    "Velocity": "9.5",
+    "Rarity": "2",
+    "Research": "1 required",
+    "Recipes": []
+  },
+  {
     "Item ID": "1121",
     "Name": "Bee Gun",
     "Damage": "9",

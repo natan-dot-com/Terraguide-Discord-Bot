@@ -1,4 +1,4 @@
-#fishing poles aren't being processed
+#Everything seems to work.
 
 import os,sys,inspect
 current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -9,60 +9,94 @@ from json_manager import *
 import requests
 from bs4 import BeautifulSoup
 
-item_path_output = GLOBAL_JSON_PATH + "items_tools.json"
+ITEM_PATH_OUTPUT = GLOBAL_JSON_PATH + "items_tools.json"
+FISHING_POLES = [
+    "Wood Fishing Pole", "Reinforced Fishing Pole", "Fisher of Souls", "Fleshcatcher",
+    "Scarab Fishing Rod", "Chum Caster", "Fiberglass Fishing Pole", "Mechanic's Rod",
+    "Sitting Duck's Fishing Pole", "Hotline Fishing Hook", "Golden Fishing Rod"
+]
 
-item_list = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(ITEM_FILE_PATH)
 url = "https://terraria.gamepedia.com/"
-json_list = []
+jsonList = []
 
-for item in item_list:
-    if item["type"] == "Tool":
-        new_url = url + item["name"].replace(" ", "_")
-        page = requests.get(new_url)
+for item in itemList:
+    if item["Type"] == "Tool":
+        newURL = url + item["Name"].replace(" ", "_")
+        print("Processing " + newURL + " with ID " + item["ID"])
+        page = requests.get(newURL)
         soup = BeautifulSoup(page.content, "html.parser")
-        table = soup.find("div", class_="infobox item")
 
-        if table:
-            json_dict = {
-                "Item ID": "",
-                "Name": "",
-                "Rarity": "",
-                "Use Time": "",
-                "Tool Speed": "",
-                "Pickaxe Power": "",
-                "Hammer Power": "",
-                "Axe Power": "",
-                "Recipes": [] 
-            }
-            json_dict["Item ID"] = item["id"]
-            json_dict["Name"] = item["name"]
+        if not item["Name"] in FISHING_POLES:
+            table = soup.find("div", class_="infobox item")
+            if table:
+                jsonDict = {
+                    "Item ID": "",
+                    "Name": "",
+                    "Rarity": "",
+                    "Use Time": "",
+                    "Velocity": "",
+                    "Tool Speed": "",
+                    "Pickaxe Power": "",
+                    "Hammer Power": "",
+                    "Axe Power": "",
+                    "Fishing Power": "",
+                    "Recipes": [] 
+                }
+                jsonDict["Item ID"] = item["ID"]
+                jsonDict["Name"] = item["Name"]
 
-            rarity = table.find("span", class_="rarity")
-            if rarity:
-                json_dict["Rarity"] = rarity.a["title"][-1]
+                rarity = table.find("span", class_="rarity")
+                if rarity:
+                    jsonDict["Rarity"] = rarity.a["title"][-1]
 
-            use_time = table.find("span", class_="usetime")
-            if use_time:
-                use_time = use_time.parent
-                json_dict["Use Time"] = use_time.text.split("/")[0].encode("ascii", "ignore").decode().rstrip()
+                use_time = table.find("span", class_="usetime")
+                if use_time:
+                    use_time = use_time.parent
+                    jsonDict["Use Time"] = use_time.text.split("/")[0].encode("ascii", "ignore").decode().rstrip()
 
-            tool_speed = table.find("a", title="Mining speed")
-            if tool_speed:
-                tool_speed = tool_speed.parent.parent.find("td")
-                json_dict["Tool Speed"] = tool_speed.text.split(" ", 1)[0]
+                tool_speed = table.find("a", title="Mining speed")
+                if tool_speed:
+                    tool_speed = tool_speed.parent.parent.find("td")
+                    jsonDict["Tool Speed"] = tool_speed.text.split(" ", 1)[0]
 
-            power = table.find("ul", class_="toolpower")
-            if power:
-                powerList = power.find_all("li")
-                for powerType in powerList:
-                    if(powerType["title"] == "Pickaxe power"):
-                        json_dict["Pickaxe Power"] = powerType.text[1:].split(" ", 1)[0]
-                    elif(powerType["title"] == "Hammer power"):
-                        json_dict["Hammer Power"] = powerType.text[1:].split(" ", 1)[0]
-                    elif(powerType["title"] == "Axe power"):
-                        json_dict["Axe Power"] = powerType.text[1:].split(" ", 1)[0]
+                power = table.find("ul", class_="toolpower")
+                if power:
+                    powerList = power.find_all("li")
+                    for powerType in powerList:
+                        if(powerType["title"] == "Pickaxe power"):
+                            jsonDict["Pickaxe Power"] = powerType.text[1:].split(" ", 1)[0]
+                        elif(powerType["title"] == "Hammer power"):
+                            jsonDict["Hammer Power"] = powerType.text[1:].split(" ", 1)[0]
+                        elif(powerType["title"] == "Axe power"):
+                            jsonDict["Axe Power"] = powerType.text[1:].split(" ", 1)[0]
 
-            json_dict["Recipes"] = []
-            json_list.append(json_dict)
+                jsonDict["Recipes"] = []
+                jsonList.append(jsonDict)
+        else:
+            trTags = soup.find("table", id="fishing-poles-table").find_all("tr")
+            for trTag in trTags[1:]:
+                tdTags = trTag.find_all("td")
+                if tdTags[1].span.span.span.text == item["Name"]:
+                    jsonDict = {
+                        "Item ID": "",
+                        "Name": "",
+                        "Rarity": "",
+                        "Use Time": "",
+                        "Velocity": "",
+                        "Tool Speed": "",
+                        "Pickaxe Power": "",
+                        "Hammer Power": "",
+                        "Axe Power": "",
+                        "Fishing Power": "",
+                        "Recipes": [] 
+                    }
+                    jsonDict["Item ID"] = item["ID"]
+                    jsonDict["Name"] = item["Name"]
+                    jsonDict["Fishing Power"] = tdTags[3].text.rstrip()
+                    jsonDict["Velocity"] = tdTags[4].text.rstrip()
+                    jsonDict["Rarity"] = tdTags[6].a["title"][-1]
+                    jsonList.append(jsonDict)
+                    break
 
-SaveJSONFile(item_path_output, json_list)
+SaveJSONFile(ITEM_PATH_OUTPUT, jsonList)
