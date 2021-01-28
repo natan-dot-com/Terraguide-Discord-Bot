@@ -1,4 +1,4 @@
-#There are small string format issues on output that needed to be solved by hand
+#Flare and Blue Flare aren't being processed
 
 import os,sys,inspect
 import re
@@ -7,14 +7,10 @@ parent_dir = os.path.dirname(current_dir)
 parent_dir = os.path.dirname(parent_dir)
 sys.path.insert(0, parent_dir) 
 from json_manager import *
-import json
-from tools import *
 import requests
 from bs4 import BeautifulSoup
 
-JSON_PATH = "json/"
-ITEMS_PATH = JSON_PATH + "items.json"
-AMMO_PATH_OUTPUT = JSON_PATH + "items_ammos.json"
+AMMO_PATH_OUTPUT = GLOBAL_JSON_PATH + "items_ammos.json"
 AMMOS_TYPES = ["Arrows", "Bullets", "Rockets", "Darts", "Solutions"]
 
 wikiURL = "https://terraria.gamepedia.com/"
@@ -32,21 +28,21 @@ for pageName in AMMOS_TYPES:
 
         for item in items[1:]:
             ammoDict = {
-                "id": "",
-                "name": "",
+                "Item ID": "",
+                "Name": "",
                 "Used in": "",
                 "Damage": "",
                 "Velocity": "",
                 "Multiplier": "",
                 "Knockback": "",
                 "Rarity": "",
-                "recipes": [] 
+                "Recipes": [] 
             }
             tdTags = item.find_all("td")
 
             id = item.find("div", class_="id")      
-            ammoDict["id"] = (re.search("\d+", id.text)).group()
-            ammoDict["name"] = item.img['alt']
+            ammoDict["Item ID"] = (re.search("\d+", id.text)).group()
+            ammoDict["Name"] = item.img['alt']
             if pageName == "Arrows":
                 ammoDict["Used in"] = "Any Bow or Repeater."
             elif pageName == "Bullets":
@@ -70,8 +66,8 @@ for pageName in AMMOS_TYPES:
 
         for item in items[1:]:
             ammoDict = {
-                "id": "",
-                "name": "",
+                "Item ID": "",
+                "Name": "",
                 "Used in": "",
                 "Damage": "",
                 "Availability": "",
@@ -84,17 +80,16 @@ for pageName in AMMOS_TYPES:
             tdTags = item.find_all("td")
 
             id = item.find("div", class_="id")      
-            ammoDict["id"] = (re.search("\d+", id.text)).group()
-            ammoDict["name"] = item.img['alt']
+            ammoDict["Item ID"] = (re.search("\d+", id.text)).group()
+            ammoDict["Name"] = item.img['alt']
             ammoDict['Used in'] = "Launcher"
             ammoDict["Damage"] = tdTags[1].text.split(' ')[0].rstrip()
-            ammoDict["Availability"] = 'or '.join(tdTags[2].text.rstrip().split('or'))
+            ammoDict["Availability"] = tdTags[2].text.rstrip().replace("or", "or ")
             ammoDict["Rarity"] = tdTags[3].a['title'].split(' ')[-1]
             if not tdTags[2].find("img"):
                 ammoDict["Source"] = tdTags[4].text.split('(')[0].rstrip()
             ammoDict["Radius"] = tdTags[5].text.rstrip()
             ammoDict["Destroy Tiles"] = tdTags[6].img['alt']
-            #print(json.dumps(ammoDict, indent=2))
             ammoList.append(ammoDict)
 
     #for Solutions page
@@ -104,7 +99,8 @@ for pageName in AMMOS_TYPES:
 
         for item in items[1:]:
             ammoDict = {
-                "id": "",
+                "Item ID": "",
+                "Name": "",
                 "Available": "",
                 "Effect": "",
                 "Rarity": "",
@@ -112,13 +108,12 @@ for pageName in AMMOS_TYPES:
             }
             tdTags = item.find_all("td")
             id = item.find("div", class_="id")      
-            ammoDict["id"] = (re.search("\d+", id.text)).group()
-            ammoDict["name"] = item.img['alt']
+            ammoDict["Item ID"] = (re.search("\d+", id.text)).group()
+            ammoDict["Name"] = item.img['alt']
             ammoDict["Available"] = " ".join((tdTags[1].text.rstrip()).split("  "))
-            ammoDict["Effect"] = tdTags[2].text.rstrip()
+            ammoDict["Effect"] = BeautifulSoup(str(tdTags[2]).replace("<br/>", ". "), 'html.parser').text.rstrip()
             ammoDict["Rarity"] = "3"
-            ammoDict["Tooltip"] = tdTags[3].text.rstrip()
-            #print(json.dumps(ammoDict, indent=2))
+            ammoDict["Tooltip"] = BeautifulSoup(str(tdTags[3]).replace("<br/>", ". "), 'html.parser').text.rstrip()
             ammoList.append(ammoDict)
 
 

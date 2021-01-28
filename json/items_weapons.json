@@ -1,7 +1,7 @@
 [
   {
-    "id": "4",
-    "name": "Iron Broadsword",
+    "Item ID": "4",
+    "Name": "Iron Broadsword",
     "Damage": "10",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -10,11 +10,11 @@
     "Velocity": "",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "6",
-    "name": "Iron Shortsword",
+    "Item ID": "6",
+    "Name": "Iron Shortsword",
     "Damage": "8",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -23,11 +23,11 @@
     "Velocity": "4.2",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "24",
-    "name": "Wooden Sword",
+    "Item ID": "24",
+    "Name": "Wooden Sword",
     "Damage": "7",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -36,11 +36,11 @@
     "Velocity": "",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "39",
-    "name": "Wooden Bow",
+    "Item ID": "39",
+    "Name": "Wooden Bow",
     "Damage": "4",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -49,11 +49,11 @@
     "Velocity": "6.1",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "42",
-    "name": "Shuriken",
+    "Item ID": "42",
+    "Name": "Shuriken",
     "Damage": "10",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -62,11 +62,11 @@
     "Velocity": "9",
     "Rarity": "0",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "44",
-    "name": "Demon Bow",
+    "Item ID": "44",
+    "Name": "Demon Bow",
     "Damage": "14",
     "Knockback": "1 (Extremely weak)",
     "Mana": "",
@@ -75,11 +75,11 @@
     "Velocity": "6.7",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "46",
-    "name": "Light's Bane",
+    "Item ID": "46",
+    "Name": "Light's Bane",
     "Damage": "18",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -88,11 +88,11 @@
     "Velocity": "",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "55",
-    "name": "Enchanted Boomerang",
+    "Item ID": "55",
+    "Name": "Enchanted Boomerang",
     "Damage": "13",
     "Knockback": "8 (Very strong)",
     "Mana": "",
@@ -101,11 +101,11 @@
     "Velocity": "10",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "64",
-    "name": "Vilethorn",
+    "Item ID": "64",
+    "Name": "Vilethorn",
     "Damage": "10",
     "Knockback": "1 (Extremely weak)",
     "Mana": "10",
@@ -114,11 +114,11 @@
     "Velocity": "32",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "65",
-    "name": "Starfury",
+    "Item ID": "65",
+    "Name": "Starfury",
     "Damage": "22",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -127,11 +127,11 @@
     "Velocity": "20",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "95",
-    "name": "Flintlock Pistol",
+    "Item ID": "95",
+    "Name": "Flintlock Pistol",
     "Damage": "10",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -140,11 +140,11 @@
     "Velocity": "5",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "96",
-    "name": "Musket",
+    "Item ID": "96",
+    "Name": "Musket",
     "Damage": "31",
     "Knockback": "5.25 (Average)",
     "Mana": "",
@@ -153,11 +153,11 @@
     "Velocity": "9",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "98",
-    "name": "Minishark",
+    "Item ID": "98",
+    "Name": "Minishark",
     "Damage": "6",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -166,11 +166,11 @@
     "Velocity": "7",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "99",
-    "name": "Iron Bow",
+    "Item ID": "99",
+    "Name": "Iron Bow",
     "Damage": "8",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -179,11 +179,11 @@
     "Velocity": "6.6",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "112",
-    "name": "Flower of Fire",
+    "Item ID": "112",
+    "Name": "Flower of Fire",
     "Damage": "48",
     "Knockback": "5.5 (Average)",
     "Mana": "12",
@@ -192,11 +192,11 @@
     "Velocity": "6",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "113",
-    "name": "Magic Missile",
+    "Item ID": "113",
+    "Name": "Magic Missile",
     "Damage": "27",
     "Knockback": "7.5 (Very strong)",
     "Mana": "14",
@@ -205,11 +205,11 @@
     "Velocity": "6",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "119",
-    "name": "Flamarang",
+    "Item ID": "119",
+    "Name": "Flamarang",
     "Damage": "32",
     "Knockback": "8 (Very strong)",
     "Mana": "",
@@ -218,11 +218,11 @@
     "Velocity": "14",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "120",
-    "name": "Molten Fury",
+    "Item ID": "120",
+    "Name": "Molten Fury",
     "Damage": "31",
     "Knockback": "2 (Very weak)",
     "Mana": "",
@@ -231,11 +231,11 @@
     "Velocity": "8",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "121",
-    "name": "Fiery Greatsword",
+    "Item ID": "121",
+    "Name": "Fiery Greatsword",
     "Damage": "40",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -244,11 +244,11 @@
     "Velocity": "",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "127",
-    "name": "Space Gun",
+    "Item ID": "127",
+    "Name": "Space Gun",
     "Damage": "17",
     "Knockback": "0.75 (Extremely weak)",
     "Mana": "6",
@@ -257,11 +257,11 @@
     "Velocity": "30",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "154",
-    "name": "Bone",
+    "Item ID": "154",
+    "Name": "Bone",
     "Damage": "20",
     "Knockback": "2.3 (Very weak)",
     "Mana": "",
@@ -270,11 +270,11 @@
     "Velocity": "8",
     "Rarity": "0",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "155",
-    "name": "Muramasa",
+    "Item ID": "155",
+    "Name": "Muramasa",
     "Damage": "26",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -283,11 +283,11 @@
     "Velocity": "",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "157",
-    "name": "Aqua Scepter",
+    "Item ID": "157",
+    "Name": "Aqua Scepter",
     "Damage": "16",
     "Knockback": "5 (Average)",
     "Mana": "6",
@@ -296,11 +296,11 @@
     "Velocity": "37.5",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "160",
-    "name": "Harpoon",
+    "Item ID": "160",
+    "Name": "Harpoon",
     "Damage": "25",
     "Knockback": "6 (Average)",
     "Mana": "",
@@ -309,11 +309,11 @@
     "Velocity": "11",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "161",
-    "name": "Spiky Ball",
+    "Item ID": "161",
+    "Name": "Spiky Ball",
     "Damage": "15",
     "Knockback": "1 (Extremely weak)",
     "Mana": "",
@@ -322,11 +322,11 @@
     "Velocity": "5",
     "Rarity": "0",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "162",
-    "name": "Ball O' Hurt",
+    "Item ID": "162",
+    "Name": "Ball O' Hurt",
     "Damage": "30",
     "Knockback": "5.5 (Average)",
     "Mana": "",
@@ -335,11 +335,11 @@
     "Velocity": "12",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "163",
-    "name": "Blue Moon",
+    "Item ID": "163",
+    "Name": "Blue Moon",
     "Damage": "54",
     "Knockback": "6 (Average)",
     "Mana": "",
@@ -348,11 +348,11 @@
     "Velocity": "12",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "164",
-    "name": "Handgun",
+    "Item ID": "164",
+    "Name": "Handgun",
     "Damage": "17",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -361,11 +361,11 @@
     "Velocity": "10",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "165",
-    "name": "Water Bolt",
+    "Item ID": "165",
+    "Name": "Water Bolt",
     "Damage": "19",
     "Knockback": "5 (Average)",
     "Mana": "10",
@@ -374,11 +374,11 @@
     "Velocity": "4.5",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "166",
-    "name": "Bomb",
+    "Item ID": "166",
+    "Name": "Bomb",
     "Damage": "100",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -387,11 +387,11 @@
     "Velocity": "5",
     "Rarity": "0",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "167",
-    "name": "Dynamite",
+    "Item ID": "167",
+    "Name": "Dynamite",
     "Damage": "250",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -400,11 +400,11 @@
     "Velocity": "4",
     "Rarity": "1",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "168",
-    "name": "Grenade",
+    "Item ID": "168",
+    "Name": "Grenade",
     "Damage": "60",
     "Knockback": "8 (Very strong)",
     "Mana": "",
@@ -413,11 +413,11 @@
     "Velocity": "5.5",
     "Rarity": "0",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "186",
-    "name": "Breathing Reed",
+    "Item ID": "186",
+    "Name": "Breathing Reed",
     "Damage": "10",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -426,11 +426,11 @@
     "Velocity": "",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "190",
-    "name": "Blade of Grass",
+    "Item ID": "190",
+    "Name": "Blade of Grass",
     "Damage": "28",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -439,11 +439,11 @@
     "Velocity": "",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "191",
-    "name": "Thorn Chakram",
+    "Item ID": "191",
+    "Name": "Thorn Chakram",
     "Damage": "25",
     "Knockback": "8 (Very strong)",
     "Mana": "",
@@ -452,11 +452,11 @@
     "Velocity": "14",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "197",
-    "name": "Star Cannon",
+    "Item ID": "197",
+    "Name": "Star Cannon",
     "Damage": "55",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -465,11 +465,11 @@
     "Velocity": "14",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "198",
-    "name": "Blue Phaseblade",
+    "Item ID": "198",
+    "Name": "Blue Phaseblade",
     "Damage": "25",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -478,11 +478,11 @@
     "Velocity": "",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "199",
-    "name": "Red Phaseblade",
+    "Item ID": "199",
+    "Name": "Red Phaseblade",
     "Damage": "25",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -491,11 +491,11 @@
     "Velocity": "",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "200",
-    "name": "Green Phaseblade",
+    "Item ID": "200",
+    "Name": "Green Phaseblade",
     "Damage": "25",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -504,11 +504,11 @@
     "Velocity": "",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "201",
-    "name": "Purple Phaseblade",
+    "Item ID": "201",
+    "Name": "Purple Phaseblade",
     "Damage": "25",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -517,11 +517,11 @@
     "Velocity": "",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "202",
-    "name": "White Phaseblade",
+    "Item ID": "202",
+    "Name": "White Phaseblade",
     "Damage": "25",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -530,11 +530,11 @@
     "Velocity": "",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "203",
-    "name": "Yellow Phaseblade",
+    "Item ID": "203",
+    "Name": "Yellow Phaseblade",
     "Damage": "25",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -543,11 +543,11 @@
     "Velocity": "",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "218",
-    "name": "Flamelash",
+    "Item ID": "218",
+    "Name": "Flamelash",
     "Damage": "32",
     "Knockback": "6.5 (Strong)",
     "Mana": "21",
@@ -556,11 +556,11 @@
     "Velocity": "6",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "219",
-    "name": "Phoenix Blaster",
+    "Item ID": "219",
+    "Name": "Phoenix Blaster",
     "Damage": "24",
     "Knockback": "2 (Very weak)",
     "Mana": "",
@@ -569,11 +569,11 @@
     "Velocity": "13",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "220",
-    "name": "Sunfury",
+    "Item ID": "220",
+    "Name": "Sunfury",
     "Damage": "64",
     "Knockback": "6.75 (Strong)",
     "Mana": "",
@@ -582,11 +582,11 @@
     "Velocity": "12",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "235",
-    "name": "Sticky Bomb",
+    "Item ID": "235",
+    "Name": "Sticky Bomb",
     "Damage": "100",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -595,11 +595,11 @@
     "Velocity": "5",
     "Rarity": "0",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "266",
-    "name": "Sandgun",
+    "Item ID": "266",
+    "Name": "Sandgun",
     "Damage": "30",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -608,11 +608,11 @@
     "Velocity": "12",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "272",
-    "name": "Demon Scythe",
+    "Item ID": "272",
+    "Name": "Demon Scythe",
     "Damage": "35",
     "Knockback": "5 (Average)",
     "Mana": "14",
@@ -621,11 +621,11 @@
     "Velocity": "0.2",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "273",
-    "name": "Night's Edge",
+    "Item ID": "273",
+    "Name": "Night's Edge",
     "Damage": "42",
     "Knockback": "4.5 (Average)",
     "Mana": "",
@@ -634,11 +634,11 @@
     "Velocity": "",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "274",
-    "name": "Dark Lance",
+    "Item ID": "274",
+    "Name": "Dark Lance",
     "Damage": "29",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -647,11 +647,11 @@
     "Velocity": "6",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "277",
-    "name": "Trident",
+    "Item ID": "277",
+    "Name": "Trident",
     "Damage": "14",
     "Knockback": "6 (Average)",
     "Mana": "",
@@ -660,11 +660,11 @@
     "Velocity": "4",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "279",
-    "name": "Throwing Knife",
+    "Item ID": "279",
+    "Name": "Throwing Knife",
     "Damage": "12",
     "Knockback": "2 (Very weak)",
     "Mana": "",
@@ -673,11 +673,11 @@
     "Velocity": "10",
     "Rarity": "0",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "280",
-    "name": "Spear",
+    "Item ID": "280",
+    "Name": "Spear",
     "Damage": "8",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -686,11 +686,11 @@
     "Velocity": "3.7",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "281",
-    "name": "Blowpipe",
+    "Item ID": "281",
+    "Name": "Blowpipe",
     "Damage": "9",
     "Knockback": "3.5 (Weak)",
     "Mana": "",
@@ -699,11 +699,11 @@
     "Velocity": "11",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "284",
-    "name": "Wooden Boomerang",
+    "Item ID": "284",
+    "Name": "Wooden Boomerang",
     "Damage": "8",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -712,11 +712,11 @@
     "Velocity": "6.5",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "287",
-    "name": "Poisoned Knife",
+    "Item ID": "287",
+    "Name": "Poisoned Knife",
     "Damage": "14",
     "Knockback": "2.4 (Very weak)",
     "Mana": "",
@@ -725,11 +725,11 @@
     "Velocity": "12",
     "Rarity": "0",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "368",
-    "name": "Excalibur",
+    "Item ID": "368",
+    "Name": "Excalibur",
     "Damage": "66",
     "Knockback": "4.5 (Average)",
     "Mana": "",
@@ -738,11 +738,11 @@
     "Velocity": "",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "389",
-    "name": "Dao of Pow",
+    "Item ID": "389",
+    "Name": "Dao of Pow",
     "Damage": "100",
     "Knockback": "6 (Average)",
     "Mana": "",
@@ -751,11 +751,11 @@
     "Velocity": "15",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "390",
-    "name": "Mythril Halberd",
+    "Item ID": "390",
+    "Name": "Mythril Halberd",
     "Damage": "35",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -764,11 +764,11 @@
     "Velocity": "4.5",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "406",
-    "name": "Adamantite Glaive",
+    "Item ID": "406",
+    "Name": "Adamantite Glaive",
     "Damage": "38",
     "Knockback": "6 (Average)",
     "Mana": "",
@@ -777,11 +777,11 @@
     "Velocity": "5",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "426",
-    "name": "Breaker Blade",
+    "Item ID": "426",
+    "Name": "Breaker Blade",
     "Damage": "43",
     "Knockback": "8 (Very strong)",
     "Mana": "",
@@ -790,11 +790,11 @@
     "Velocity": "",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "434",
-    "name": "Clockwork Assault Rifle",
+    "Item ID": "434",
+    "Name": "Clockwork Assault Rifle",
     "Damage": "17",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -803,11 +803,11 @@
     "Velocity": "7.75",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "435",
-    "name": "Cobalt Repeater",
+    "Item ID": "435",
+    "Name": "Cobalt Repeater",
     "Damage": "32",
     "Knockback": "1.5 (Extremely weak)",
     "Mana": "",
@@ -816,11 +816,11 @@
     "Velocity": "9",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "436",
-    "name": "Mythril Repeater",
+    "Item ID": "436",
+    "Name": "Mythril Repeater",
     "Damage": "36",
     "Knockback": "2 (Very weak)",
     "Mana": "",
@@ -829,11 +829,11 @@
     "Velocity": "9.5",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "481",
-    "name": "Adamantite Repeater",
+    "Item ID": "481",
+    "Name": "Adamantite Repeater",
     "Damage": "40",
     "Knockback": "2.5 (Very weak)",
     "Mana": "",
@@ -842,11 +842,11 @@
     "Velocity": "10",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "482",
-    "name": "Adamantite Sword",
+    "Item ID": "482",
+    "Name": "Adamantite Sword",
     "Damage": "56",
     "Knockback": "6 (Average)",
     "Mana": "",
@@ -855,11 +855,11 @@
     "Velocity": "",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "483",
-    "name": "Cobalt Sword",
+    "Item ID": "483",
+    "Name": "Cobalt Sword",
     "Damage": "39",
     "Knockback": "3.85 (Weak)",
     "Mana": "",
@@ -868,11 +868,11 @@
     "Velocity": "",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "484",
-    "name": "Mythril Sword",
+    "Item ID": "484",
+    "Name": "Mythril Sword",
     "Damage": "49",
     "Knockback": "6 (Average)",
     "Mana": "",
@@ -881,11 +881,11 @@
     "Velocity": "",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "486",
-    "name": "Ruler",
+    "Item ID": "486",
+    "Name": "Ruler",
     "Damage": "12",
     "Knockback": "0.5 (Extremely weak)",
     "Mana": "",
@@ -894,11 +894,11 @@
     "Velocity": "4.8",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "494",
-    "name": "Magical Harp",
+    "Item ID": "494",
+    "Name": "Magical Harp",
     "Damage": "42",
     "Knockback": "0.25 (Extremely weak)",
     "Mana": "5",
@@ -907,11 +907,11 @@
     "Velocity": "4.5",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "495",
-    "name": "Rainbow Rod",
+    "Item ID": "495",
+    "Name": "Rainbow Rod",
     "Damage": "50",
     "Knockback": "6 (Average)",
     "Mana": "21",
@@ -920,11 +920,11 @@
     "Velocity": "6",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "496",
-    "name": "Ice Rod",
+    "Item ID": "496",
+    "Name": "Ice Rod",
     "Damage": "28",
     "Knockback": "2 (Very weak)",
     "Mana": "6",
@@ -933,11 +933,11 @@
     "Velocity": "12",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "506",
-    "name": "Flamethrower",
+    "Item ID": "506",
+    "Name": "Flamethrower",
     "Damage": "35",
     "Knockback": "0.3 (Extremely weak)",
     "Mana": "",
@@ -946,11 +946,11 @@
     "Velocity": "21",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "514",
-    "name": "Laser Rifle",
+    "Item ID": "514",
+    "Name": "Laser Rifle",
     "Damage": "29",
     "Knockback": "2.5 (Very weak)",
     "Mana": "8",
@@ -959,11 +959,11 @@
     "Velocity": "85",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "517",
-    "name": "Magic Dagger",
+    "Item ID": "517",
+    "Name": "Magic Dagger",
     "Damage": "40",
     "Knockback": "3.75 (Weak)",
     "Mana": "6",
@@ -972,11 +972,11 @@
     "Velocity": "12",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "518",
-    "name": "Crystal Storm",
+    "Item ID": "518",
+    "Name": "Crystal Storm",
     "Damage": "32",
     "Knockback": "5 (Average)",
     "Mana": "5",
@@ -985,11 +985,11 @@
     "Velocity": "16",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "519",
-    "name": "Cursed Flames",
+    "Item ID": "519",
+    "Name": "Cursed Flames",
     "Damage": "50",
     "Knockback": "6.5 (Strong)",
     "Mana": "9",
@@ -998,11 +998,11 @@
     "Velocity": "10",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "533",
-    "name": "Megashark",
+    "Item ID": "533",
+    "Name": "Megashark",
     "Damage": "25",
     "Knockback": "1 (Extremely weak)",
     "Mana": "",
@@ -1011,11 +1011,11 @@
     "Velocity": "10",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "534",
-    "name": "Shotgun",
+    "Item ID": "534",
+    "Name": "Shotgun",
     "Damage": "24",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -1024,11 +1024,11 @@
     "Velocity": "7",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "537",
-    "name": "Cobalt Naginata",
+    "Item ID": "537",
+    "Name": "Cobalt Naginata",
     "Damage": "29",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -1037,11 +1037,11 @@
     "Velocity": "4.3",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "550",
-    "name": "Gungnir",
+    "Item ID": "550",
+    "Name": "Gungnir",
     "Damage": "42",
     "Knockback": "6.4 (Strong)",
     "Mana": "",
@@ -1050,11 +1050,11 @@
     "Velocity": "5.6",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "561",
-    "name": "Light Disc",
+    "Item ID": "561",
+    "Name": "Light Disc",
     "Damage": "57",
     "Knockback": "8 (Very strong)",
     "Mana": "",
@@ -1063,11 +1063,11 @@
     "Velocity": "13",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "578",
-    "name": "Hallowed Repeater",
+    "Item ID": "578",
+    "Name": "Hallowed Repeater",
     "Damage": "53",
     "Knockback": "2.5 (Very weak)",
     "Mana": "",
@@ -1076,11 +1076,11 @@
     "Velocity": "11",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "653",
-    "name": "Ebonwood Sword",
+    "Item ID": "653",
+    "Name": "Ebonwood Sword",
     "Damage": "10",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -1089,11 +1089,11 @@
     "Velocity": "",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "655",
-    "name": "Ebonwood Bow",
+    "Item ID": "655",
+    "Name": "Ebonwood Bow",
     "Damage": "8",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -1102,11 +1102,11 @@
     "Velocity": "6.6",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "656",
-    "name": "Rich Mahogany Sword",
+    "Item ID": "656",
+    "Name": "Rich Mahogany Sword",
     "Damage": "8",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -1115,11 +1115,11 @@
     "Velocity": "",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "658",
-    "name": "Rich Mahogany Bow",
+    "Item ID": "658",
+    "Name": "Rich Mahogany Bow",
     "Damage": "6",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -1128,11 +1128,11 @@
     "Velocity": "6.6",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "659",
-    "name": "Pearlwood Sword",
+    "Item ID": "659",
+    "Name": "Pearlwood Sword",
     "Damage": "11",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -1141,11 +1141,11 @@
     "Velocity": "",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "661",
-    "name": "Pearlwood Bow",
+    "Item ID": "661",
+    "Name": "Pearlwood Bow",
     "Damage": "9",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -1154,11 +1154,11 @@
     "Velocity": "6.6",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "670",
-    "name": "Ice Boomerang",
+    "Item ID": "670",
+    "Name": "Ice Boomerang",
     "Damage": "16",
     "Knockback": "8.5 (Very strong)",
     "Mana": "",
@@ -1167,11 +1167,11 @@
     "Velocity": "11.5",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "671",
-    "name": "Keybrand",
+    "Item ID": "671",
+    "Name": "Keybrand",
     "Damage": "85",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -1180,11 +1180,11 @@
     "Velocity": "",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "672",
-    "name": "Cutlass",
+    "Item ID": "672",
+    "Name": "Cutlass",
     "Damage": "49",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -1193,11 +1193,11 @@
     "Velocity": "",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "674",
-    "name": "True Excalibur",
+    "Item ID": "674",
+    "Name": "True Excalibur",
     "Damage": "70",
     "Knockback": "4.5 (Average)",
     "Mana": "",
@@ -1206,11 +1206,11 @@
     "Velocity": "11",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "675",
-    "name": "True Night's Edge",
+    "Item ID": "675",
+    "Name": "True Night's Edge",
     "Damage": "105",
     "Knockback": "4.75 (Average)",
     "Mana": "",
@@ -1219,11 +1219,11 @@
     "Velocity": "10",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "676",
-    "name": "Frostbrand",
+    "Item ID": "676",
+    "Name": "Frostbrand",
     "Damage": "49",
     "Knockback": "4.5 (Average)",
     "Mana": "",
@@ -1232,11 +1232,11 @@
     "Velocity": "12",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "679",
-    "name": "Tactical Shotgun",
+    "Item ID": "679",
+    "Name": "Tactical Shotgun",
     "Damage": "29",
     "Knockback": "7 (Strong)",
     "Mana": "",
@@ -1245,11 +1245,11 @@
     "Velocity": "6",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "682",
-    "name": "Marrow",
+    "Item ID": "682",
+    "Name": "Marrow",
     "Damage": "50",
     "Knockback": "4.7 (Average)",
     "Mana": "",
@@ -1258,11 +1258,11 @@
     "Velocity": "11",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "683",
-    "name": "Unholy Trident",
+    "Item ID": "683",
+    "Name": "Unholy Trident",
     "Damage": "88",
     "Knockback": "6.5 (Strong)",
     "Mana": "19",
@@ -1271,11 +1271,11 @@
     "Velocity": "13",
     "Rarity": "6",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "723",
-    "name": "Beam Sword",
+    "Item ID": "723",
+    "Name": "Beam Sword",
     "Damage": "52",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -1284,11 +1284,11 @@
     "Velocity": "11",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "724",
-    "name": "Ice Blade",
+    "Item ID": "724",
+    "Name": "Ice Blade",
     "Damage": "17",
     "Knockback": "4.75 (Average)",
     "Mana": "",
@@ -1297,11 +1297,11 @@
     "Velocity": "9.5",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "725",
-    "name": "Ice Bow",
+    "Item ID": "725",
+    "Name": "Ice Bow",
     "Damage": "39",
     "Knockback": "4.5 (Average)",
     "Mana": "",
@@ -1310,11 +1310,11 @@
     "Velocity": "10",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "726",
-    "name": "Frost Staff",
+    "Item ID": "726",
+    "Name": "Frost Staff",
     "Damage": "46",
     "Knockback": "5 (Average)",
     "Mana": "12",
@@ -1323,11 +1323,11 @@
     "Velocity": "16",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "739",
-    "name": "Amethyst Staff",
+    "Item ID": "739",
+    "Name": "Amethyst Staff",
     "Damage": "14",
     "Knockback": "3.25 (Weak)",
     "Mana": "3",
@@ -1336,11 +1336,11 @@
     "Velocity": "6",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "740",
-    "name": "Topaz Staff",
+    "Item ID": "740",
+    "Name": "Topaz Staff",
     "Damage": "15",
     "Knockback": "3.5 (Weak)",
     "Mana": "4",
@@ -1349,11 +1349,11 @@
     "Velocity": "6.5",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "741",
-    "name": "Sapphire Staff",
+    "Item ID": "741",
+    "Name": "Sapphire Staff",
     "Damage": "17",
     "Knockback": "4 (Weak)",
     "Mana": "5",
@@ -1362,11 +1362,11 @@
     "Velocity": "7.5",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "742",
-    "name": "Emerald Staff",
+    "Item ID": "742",
+    "Name": "Emerald Staff",
     "Damage": "19",
     "Knockback": "4.25 (Average)",
     "Mana": "6",
@@ -1375,11 +1375,11 @@
     "Velocity": "8",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "743",
-    "name": "Ruby Staff",
+    "Item ID": "743",
+    "Name": "Ruby Staff",
     "Damage": "21",
     "Knockback": "4.75 (Average)",
     "Mana": "7",
@@ -1388,11 +1388,11 @@
     "Velocity": "9",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "744",
-    "name": "Diamond Staff",
+    "Item ID": "744",
+    "Name": "Diamond Staff",
     "Damage": "23",
     "Knockback": "5.5 (Average)",
     "Mana": "8",
@@ -1401,11 +1401,11 @@
     "Velocity": "9.5",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "756",
-    "name": "Mushroom Spear",
+    "Item ID": "756",
+    "Name": "Mushroom Spear",
     "Damage": "60",
     "Knockback": "6.2 (Strong)",
     "Mana": "",
@@ -1414,11 +1414,11 @@
     "Velocity": "5.5",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "757",
-    "name": "Terra Blade",
+    "Item ID": "757",
+    "Name": "Terra Blade",
     "Damage": "115",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -1427,11 +1427,11 @@
     "Velocity": "12",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "758",
-    "name": "Grenade Launcher",
+    "Item ID": "758",
+    "Name": "Grenade Launcher",
     "Damage": "60",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -1440,11 +1440,11 @@
     "Velocity": "10",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "759",
-    "name": "Rocket Launcher",
+    "Item ID": "759",
+    "Name": "Rocket Launcher",
     "Damage": "45",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -1453,11 +1453,11 @@
     "Velocity": "5",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "760",
-    "name": "Proximity Mine Launcher",
+    "Item ID": "760",
+    "Name": "Proximity Mine Launcher",
     "Damage": "80",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -1466,11 +1466,11 @@
     "Velocity": "12",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "788",
-    "name": "Nettle Burst",
+    "Item ID": "788",
+    "Name": "Nettle Burst",
     "Damage": "35",
     "Knockback": "1 (Extremely weak)",
     "Mana": "12",
@@ -1479,11 +1479,11 @@
     "Velocity": "32",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "795",
-    "name": "Blood Butcherer",
+    "Item ID": "795",
+    "Name": "Blood Butcherer",
     "Damage": "22",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -1492,11 +1492,11 @@
     "Velocity": "",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "796",
-    "name": "Tendon Bow",
+    "Item ID": "796",
+    "Name": "Tendon Bow",
     "Damage": "19",
     "Knockback": "1 (Extremely weak)",
     "Mana": "",
@@ -1505,11 +1505,11 @@
     "Velocity": "6.7",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "800",
-    "name": "The Undertaker",
+    "Item ID": "800",
+    "Name": "The Undertaker",
     "Damage": "15",
     "Knockback": "1 (Extremely weak)",
     "Mana": "",
@@ -1518,11 +1518,11 @@
     "Velocity": "6",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "801",
-    "name": "The Meatball",
+    "Item ID": "801",
+    "Name": "The Meatball",
     "Damage": "34",
     "Knockback": "5.5 (Average)",
     "Mana": "",
@@ -1531,11 +1531,11 @@
     "Velocity": "12",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "802",
-    "name": "The Rotted Fork",
+    "Item ID": "802",
+    "Name": "The Rotted Fork",
     "Damage": "14",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -1544,11 +1544,11 @@
     "Velocity": "4",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "881",
-    "name": "Cactus Sword",
+    "Item ID": "881",
+    "Name": "Cactus Sword",
     "Damage": "8",
     "Knockback": "4.5 (Average)",
     "Mana": "",
@@ -1557,11 +1557,11 @@
     "Velocity": "",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "905",
-    "name": "Coin Gun",
+    "Item ID": "905",
+    "Name": "Coin Gun",
     "Damage": "0",
     "Knockback": "2 (Very weak)",
     "Mana": "",
@@ -1570,11 +1570,11 @@
     "Velocity": "10",
     "Rarity": "6",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "921",
-    "name": "Shadewood Sword",
+    "Item ID": "921",
+    "Name": "Shadewood Sword",
     "Damage": "10",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -1583,11 +1583,11 @@
     "Velocity": "",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "923",
-    "name": "Shadewood Bow",
+    "Item ID": "923",
+    "Name": "Shadewood Bow",
     "Damage": "8",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -1596,11 +1596,11 @@
     "Velocity": "6.6",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "930",
-    "name": "Flare Gun",
+    "Item ID": "930",
+    "Name": "Flare Gun",
     "Damage": "2",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -1609,24 +1609,11 @@
     "Velocity": "6",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "931",
-    "name": "Flare",
-    "Damage": "2",
-    "Knockback": "0 (No knockback)",
-    "Mana": "",
-    "Critical Chance": "",
-    "Use Time": "18 (Very fast)",
-    "Velocity": "6",
-    "Rarity": "1",
-    "Research": "1 required",
-    "recipes": []
-  },
-  {
-    "id": "964",
-    "name": "Boomstick",
+    "Item ID": "964",
+    "Name": "Boomstick",
     "Damage": "14",
     "Knockback": "5.75 (Average)",
     "Mana": "",
@@ -1635,11 +1622,11 @@
     "Velocity": "5.35",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "986",
-    "name": "Blowgun",
+    "Item ID": "986",
+    "Name": "Blowgun",
     "Damage": "27",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -1648,11 +1635,11 @@
     "Velocity": "13",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1121",
-    "name": "Bee Gun",
+    "Item ID": "1121",
+    "Name": "Bee Gun",
     "Damage": "9",
     "Knockback": "0 (No knockback)",
     "Mana": "5",
@@ -1661,11 +1648,11 @@
     "Velocity": "32",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1122",
-    "name": "Possessed Hatchet",
+    "Item ID": "1122",
+    "Name": "Possessed Hatchet",
     "Damage": "80",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -1674,11 +1661,11 @@
     "Velocity": "24",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1123",
-    "name": "Bee Keeper",
+    "Item ID": "1123",
+    "Name": "Bee Keeper",
     "Damage": "26",
     "Knockback": "5.3 (Average)",
     "Mana": "",
@@ -1687,11 +1674,11 @@
     "Velocity": "",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1130",
-    "name": "Beenade",
+    "Item ID": "1130",
+    "Name": "Beenade",
     "Damage": "12",
     "Knockback": "1 (Extremely weak)",
     "Mana": "",
@@ -1700,11 +1687,11 @@
     "Velocity": "6",
     "Rarity": "0",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1155",
-    "name": "Wasp Gun",
+    "Item ID": "1155",
+    "Name": "Wasp Gun",
     "Damage": "31",
     "Knockback": "0 (No knockback)",
     "Mana": "10",
@@ -1713,11 +1700,11 @@
     "Velocity": "36",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1156",
-    "name": "Piranha Gun",
+    "Item ID": "1156",
+    "Name": "Piranha Gun",
     "Damage": "38",
     "Knockback": "1 (Extremely weak)",
     "Mana": "",
@@ -1726,11 +1713,11 @@
     "Velocity": "14",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1157",
-    "name": "Pygmy Staff",
+    "Item ID": "1157",
+    "Name": "Pygmy Staff",
     "Damage": "34",
     "Knockback": "3 (Very weak)",
     "Mana": "10",
@@ -1739,11 +1726,11 @@
     "Velocity": "10",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1166",
-    "name": "Bone Sword",
+    "Item ID": "1166",
+    "Name": "Bone Sword",
     "Damage": "16",
     "Knockback": "4.5 (Average)",
     "Mana": "",
@@ -1752,11 +1739,11 @@
     "Velocity": "",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1178",
-    "name": "Leaf Blower",
+    "Item ID": "1178",
+    "Name": "Leaf Blower",
     "Damage": "48",
     "Knockback": "4 (Weak)",
     "Mana": "4",
@@ -1765,11 +1752,11 @@
     "Velocity": "11",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1185",
-    "name": "Palladium Sword",
+    "Item ID": "1185",
+    "Name": "Palladium Sword",
     "Damage": "45",
     "Knockback": "4.75 (Average)",
     "Mana": "",
@@ -1778,11 +1765,11 @@
     "Velocity": "",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1186",
-    "name": "Palladium Pike",
+    "Item ID": "1186",
+    "Name": "Palladium Pike",
     "Damage": "32",
     "Knockback": "4.5 (Average)",
     "Mana": "",
@@ -1791,11 +1778,11 @@
     "Velocity": "4.4",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1187",
-    "name": "Palladium Repeater",
+    "Item ID": "1187",
+    "Name": "Palladium Repeater",
     "Damage": "34",
     "Knockback": "1.75 (Very weak)",
     "Mana": "",
@@ -1804,11 +1791,11 @@
     "Velocity": "9.25",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1192",
-    "name": "Orichalcum Sword",
+    "Item ID": "1192",
+    "Name": "Orichalcum Sword",
     "Damage": "50",
     "Knockback": "6 (Average)",
     "Mana": "",
@@ -1817,11 +1804,11 @@
     "Velocity": "",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1193",
-    "name": "Orichalcum Halberd",
+    "Item ID": "1193",
+    "Name": "Orichalcum Halberd",
     "Damage": "36",
     "Knockback": "5.5 (Average)",
     "Mana": "",
@@ -1830,11 +1817,11 @@
     "Velocity": "4.5",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1194",
-    "name": "Orichalcum Repeater",
+    "Item ID": "1194",
+    "Name": "Orichalcum Repeater",
     "Damage": "38",
     "Knockback": "2 (Very weak)",
     "Mana": "",
@@ -1843,11 +1830,11 @@
     "Velocity": "9.75",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1199",
-    "name": "Titanium Sword",
+    "Item ID": "1199",
+    "Name": "Titanium Sword",
     "Damage": "58",
     "Knockback": "6 (Average)",
     "Mana": "",
@@ -1856,11 +1843,11 @@
     "Velocity": "",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1200",
-    "name": "Titanium Trident",
+    "Item ID": "1200",
+    "Name": "Titanium Trident",
     "Damage": "40",
     "Knockback": "6.2 (Strong)",
     "Mana": "",
@@ -1869,11 +1856,11 @@
     "Velocity": "5",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1201",
-    "name": "Titanium Repeater",
+    "Item ID": "1201",
+    "Name": "Titanium Repeater",
     "Damage": "41",
     "Knockback": "2.5 (Very weak)",
     "Mana": "",
@@ -1882,11 +1869,11 @@
     "Velocity": "10.5",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1226",
-    "name": "Chlorophyte Claymore",
+    "Item ID": "1226",
+    "Name": "Chlorophyte Claymore",
     "Damage": "95",
     "Knockback": "6 (Average)",
     "Mana": "",
@@ -1895,11 +1882,11 @@
     "Velocity": "8",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1227",
-    "name": "Chlorophyte Saber",
+    "Item ID": "1227",
+    "Name": "Chlorophyte Saber",
     "Damage": "57",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -1908,11 +1895,11 @@
     "Velocity": "8",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1228",
-    "name": "Chlorophyte Partisan",
+    "Item ID": "1228",
+    "Name": "Chlorophyte Partisan",
     "Damage": "49",
     "Knockback": "6.2 (Strong)",
     "Mana": "",
@@ -1921,11 +1908,11 @@
     "Velocity": "5",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1229",
-    "name": "Chlorophyte Shotbow",
+    "Item ID": "1229",
+    "Name": "Chlorophyte Shotbow",
     "Damage": "34",
     "Knockback": "2.75 (Very weak)",
     "Mana": "",
@@ -1934,11 +1921,11 @@
     "Velocity": "11.5",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1244",
-    "name": "Nimbus Rod",
+    "Item ID": "1244",
+    "Name": "Nimbus Rod",
     "Damage": "36",
     "Knockback": "0 (No knockback)",
     "Mana": "10",
@@ -1947,11 +1934,11 @@
     "Velocity": "16",
     "Rarity": "6",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1254",
-    "name": "Sniper Rifle",
+    "Item ID": "1254",
+    "Name": "Sniper Rifle",
     "Damage": "185",
     "Knockback": "8 (Very strong)",
     "Mana": "",
@@ -1960,11 +1947,11 @@
     "Velocity": "16",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1255",
-    "name": "Venus Magnum",
+    "Item ID": "1255",
+    "Name": "Venus Magnum",
     "Damage": "50",
     "Knockback": "5.5 (Average)",
     "Mana": "",
@@ -1973,11 +1960,11 @@
     "Velocity": "13.5",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1256",
-    "name": "Crimson Rod",
+    "Item ID": "1256",
+    "Name": "Crimson Rod",
     "Damage": "12",
     "Knockback": "0 (No knockback)",
     "Mana": "10",
@@ -1986,11 +1973,11 @@
     "Velocity": "12",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1258",
-    "name": "Stynger",
+    "Item ID": "1258",
+    "Name": "Stynger",
     "Damage": "45",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -1999,11 +1986,11 @@
     "Velocity": "9",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1259",
-    "name": "Flower Pow",
+    "Item ID": "1259",
+    "Name": "Flower Pow",
     "Damage": "130",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -2012,11 +1999,11 @@
     "Velocity": "15.9",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1260",
-    "name": "Rainbow Gun",
+    "Item ID": "1260",
+    "Name": "Rainbow Gun",
     "Damage": "45",
     "Knockback": "2.5 (Very weak)",
     "Mana": "20",
@@ -2025,11 +2012,11 @@
     "Velocity": "16",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1264",
-    "name": "Flower of Frost",
+    "Item ID": "1264",
+    "Name": "Flower of Frost",
     "Damage": "60",
     "Knockback": "6.5 (Strong)",
     "Mana": "11",
@@ -2038,11 +2025,11 @@
     "Velocity": "7",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1265",
-    "name": "Uzi",
+    "Item ID": "1265",
+    "Name": "Uzi",
     "Damage": "30",
     "Knockback": "3.5 (Weak)",
     "Mana": "",
@@ -2051,11 +2038,11 @@
     "Velocity": "13",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1266",
-    "name": "Magnet Sphere",
+    "Item ID": "1266",
+    "Name": "Magnet Sphere",
     "Damage": "48",
     "Knockback": "6 (Average)",
     "Mana": "14",
@@ -2064,11 +2051,11 @@
     "Velocity": "1.2",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1295",
-    "name": "Heat Ray",
+    "Item ID": "1295",
+    "Name": "Heat Ray",
     "Damage": "80",
     "Knockback": "3 (Very weak)",
     "Mana": "8",
@@ -2077,11 +2064,11 @@
     "Velocity": "1,515",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1296",
-    "name": "Staff of Earth",
+    "Item ID": "1296",
+    "Name": "Staff of Earth",
     "Damage": "125",
     "Knockback": "7.5 (Very strong)",
     "Mana": "18",
@@ -2090,11 +2077,11 @@
     "Velocity": "24",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1297",
-    "name": "Golem Fist",
+    "Item ID": "1297",
+    "Name": "Golem Fist",
     "Damage": "90",
     "Knockback": "12 (Insane)",
     "Mana": "",
@@ -2103,11 +2090,11 @@
     "Velocity": "28",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1304",
-    "name": "Zombie Arm",
+    "Item ID": "1304",
+    "Name": "Zombie Arm",
     "Damage": "12",
     "Knockback": "4.25 (Average)",
     "Mana": "",
@@ -2116,11 +2103,11 @@
     "Velocity": "",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1306",
-    "name": "Ice Sickle",
+    "Item ID": "1306",
+    "Name": "Ice Sickle",
     "Damage": "42",
     "Knockback": "5.5 (Average)",
     "Mana": "",
@@ -2129,11 +2116,11 @@
     "Velocity": "8",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1308",
-    "name": "Poison Staff",
+    "Item ID": "1308",
+    "Name": "Poison Staff",
     "Damage": "43",
     "Knockback": "5.6 (Average)",
     "Mana": "22",
@@ -2142,11 +2129,11 @@
     "Velocity": "13.5",
     "Rarity": "6",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1309",
-    "name": "Slime Staff",
+    "Item ID": "1309",
+    "Name": "Slime Staff",
     "Damage": "8",
     "Knockback": "2 (Very weak)",
     "Mana": "10",
@@ -2155,11 +2142,11 @@
     "Velocity": "10",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1313",
-    "name": "Book of Skulls",
+    "Item ID": "1313",
+    "Name": "Book of Skulls",
     "Damage": "29",
     "Knockback": "3.5 (Weak)",
     "Mana": "18",
@@ -2168,11 +2155,11 @@
     "Velocity": "3.5",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1314",
-    "name": "KO Cannon",
+    "Item ID": "1314",
+    "Name": "KO Cannon",
     "Damage": "40",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -2181,11 +2168,11 @@
     "Velocity": "15",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1319",
-    "name": "Snowball Cannon",
+    "Item ID": "1319",
+    "Name": "Snowball Cannon",
     "Damage": "10",
     "Knockback": "1 (Extremely weak)",
     "Mana": "",
@@ -2194,11 +2181,11 @@
     "Velocity": "11",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1324",
-    "name": "Bananarang",
+    "Item ID": "1324",
+    "Name": "Bananarang",
     "Damage": "55",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -2207,11 +2194,11 @@
     "Velocity": "16",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1325",
-    "name": "Chain Knife",
+    "Item ID": "1325",
+    "Name": "Chain Knife",
     "Damage": "12",
     "Knockback": "3.5 (Weak)",
     "Mana": "",
@@ -2220,11 +2207,11 @@
     "Velocity": "12",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1327",
-    "name": "Death Sickle",
+    "Item ID": "1327",
+    "Name": "Death Sickle",
     "Damage": "57",
     "Knockback": "7 (Strong)",
     "Mana": "",
@@ -2233,11 +2220,11 @@
     "Velocity": "9",
     "Rarity": "6",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1336",
-    "name": "Golden Shower",
+    "Item ID": "1336",
+    "Name": "Golden Shower",
     "Damage": "21",
     "Knockback": "4 (Weak)",
     "Mana": "7",
@@ -2246,11 +2233,11 @@
     "Velocity": "30",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1444",
-    "name": "Shadowbeam Staff",
+    "Item ID": "1444",
+    "Name": "Shadowbeam Staff",
     "Damage": "60",
     "Knockback": "3.25 (Weak)",
     "Mana": "7",
@@ -2259,11 +2246,11 @@
     "Velocity": "606",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1445",
-    "name": "Inferno Fork",
+    "Item ID": "1445",
+    "Name": "Inferno Fork",
     "Damage": "65",
     "Knockback": "8 (Very strong)",
     "Mana": "18",
@@ -2272,11 +2259,11 @@
     "Velocity": "8",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1446",
-    "name": "Spectre Staff",
+    "Item ID": "1446",
+    "Name": "Spectre Staff",
     "Damage": "65",
     "Knockback": "6 (Average)",
     "Mana": "15",
@@ -2285,11 +2272,11 @@
     "Velocity": "12",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1513",
-    "name": "Paladin's Hammer",
+    "Item ID": "1513",
+    "Name": "Paladin's Hammer",
     "Damage": "90",
     "Knockback": "9 (Very strong)",
     "Mana": "",
@@ -2298,11 +2285,11 @@
     "Velocity": "42",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1553",
-    "name": "S.D.M.G.",
+    "Item ID": "1553",
+    "Name": "S.D.M.G.",
     "Damage": "85",
     "Knockback": "2.5 (Very weak)",
     "Mana": "",
@@ -2311,11 +2298,11 @@
     "Velocity": "12",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1569",
-    "name": "Vampire Knives",
+    "Item ID": "1569",
+    "Name": "Vampire Knives",
     "Damage": "29",
     "Knockback": "2.75 (Very weak)",
     "Mana": "",
@@ -2324,11 +2311,11 @@
     "Velocity": "15",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1571",
-    "name": "Scourge of the Corruptor",
+    "Item ID": "1571",
+    "Name": "Scourge of the Corruptor",
     "Damage": "70",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -2337,11 +2324,11 @@
     "Velocity": "28",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1572",
-    "name": "Staff of the Frost Hydra",
+    "Item ID": "1572",
+    "Name": "Staff of the Frost Hydra",
     "Damage": "100",
     "Knockback": "7.5 (Very strong)",
     "Mana": "20",
@@ -2350,24 +2337,11 @@
     "Velocity": "14",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1614",
-    "name": "Blue Flare",
-    "Damage": "2",
-    "Knockback": "0 (No knockback)",
-    "Mana": "",
-    "Critical Chance": "",
-    "Use Time": "18 (Very fast)",
-    "Velocity": "6",
-    "Rarity": "1",
-    "Research": "1 required",
-    "recipes": []
-  },
-  {
-    "id": "1782",
-    "name": "Candy Corn Rifle",
+    "Item ID": "1782",
+    "Name": "Candy Corn Rifle",
     "Damage": "44",
     "Knockback": "2 (Very weak)",
     "Mana": "",
@@ -2376,11 +2350,11 @@
     "Velocity": "10",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1784",
-    "name": "Jack 'O Lantern Launcher",
+    "Item ID": "1784",
+    "Name": "Jack 'O Lantern Launcher",
     "Damage": "65",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -2389,11 +2363,11 @@
     "Velocity": "7",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1801",
-    "name": "Bat Scepter",
+    "Item ID": "1801",
+    "Name": "Bat Scepter",
     "Damage": "45",
     "Knockback": "3 (Very weak)",
     "Mana": "6",
@@ -2402,11 +2376,11 @@
     "Velocity": "10",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1802",
-    "name": "Raven Staff",
+    "Item ID": "1802",
+    "Name": "Raven Staff",
     "Damage": "55",
     "Knockback": "3 (Very weak)",
     "Mana": "10",
@@ -2415,11 +2389,11 @@
     "Velocity": "10",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1809",
-    "name": "Rotten Egg",
+    "Item ID": "1809",
+    "Name": "Rotten Egg",
     "Damage": "13",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -2428,11 +2402,11 @@
     "Velocity": "9",
     "Rarity": "0",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1825",
-    "name": "Bloody Machete",
+    "Item ID": "1825",
+    "Name": "Bloody Machete",
     "Damage": "15",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -2441,11 +2415,11 @@
     "Velocity": "15",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1826",
-    "name": "The Horseman's Blade",
+    "Item ID": "1826",
+    "Name": "The Horseman's Blade",
     "Damage": "75",
     "Knockback": "7.5 (Very strong)",
     "Mana": "",
@@ -2454,11 +2428,11 @@
     "Velocity": "",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1827",
-    "name": "Bladed Glove",
+    "Item ID": "1827",
+    "Name": "Bladed Glove",
     "Damage": "12",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -2467,11 +2441,11 @@
     "Velocity": "",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1835",
-    "name": "Stake Launcher",
+    "Item ID": "1835",
+    "Name": "Stake Launcher",
     "Damage": "75",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -2480,11 +2454,11 @@
     "Velocity": "9",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1870",
-    "name": "Red Ryder",
+    "Item ID": "1870",
+    "Name": "Red Ryder",
     "Damage": "20",
     "Knockback": "3.75 (Weak)",
     "Mana": "",
@@ -2493,11 +2467,11 @@
     "Velocity": "8",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1909",
-    "name": "Candy Cane Sword",
+    "Item ID": "1909",
+    "Name": "Candy Cane Sword",
     "Damage": "16",
     "Knockback": "5.3 (Average)",
     "Mana": "",
@@ -2506,11 +2480,11 @@
     "Velocity": "",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1910",
-    "name": "Elf Melter",
+    "Item ID": "1910",
+    "Name": "Elf Melter",
     "Damage": "60",
     "Knockback": "0.425 (Extremely weak)",
     "Mana": "",
@@ -2519,11 +2493,11 @@
     "Velocity": "25.5",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1913",
-    "name": "Star Anise",
+    "Item ID": "1913",
+    "Name": "Star Anise",
     "Damage": "14",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -2532,11 +2506,11 @@
     "Velocity": "12",
     "Rarity": "0",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1918",
-    "name": "Fruitcake Chakram",
+    "Item ID": "1918",
+    "Name": "Fruitcake Chakram",
     "Damage": "14",
     "Knockback": "8 (Very strong)",
     "Mana": "",
@@ -2545,11 +2519,11 @@
     "Velocity": "11",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1928",
-    "name": "Christmas Tree Sword",
+    "Item ID": "1928",
+    "Name": "Christmas Tree Sword",
     "Damage": "86",
     "Knockback": "7 (Strong)",
     "Mana": "",
@@ -2558,11 +2532,11 @@
     "Velocity": "5",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1929",
-    "name": "Chain Gun",
+    "Item ID": "1929",
+    "Name": "Chain Gun",
     "Damage": "31",
     "Knockback": "1.75 (Very weak)",
     "Mana": "",
@@ -2571,11 +2545,11 @@
     "Velocity": "14",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1930",
-    "name": "Razorpine",
+    "Item ID": "1930",
+    "Name": "Razorpine",
     "Damage": "48",
     "Knockback": "3.25 (Weak)",
     "Mana": "5",
@@ -2584,11 +2558,11 @@
     "Velocity": "24",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1931",
-    "name": "Blizzard Staff",
+    "Item ID": "1931",
+    "Name": "Blizzard Staff",
     "Damage": "58",
     "Knockback": "4.5 (Average)",
     "Mana": "9",
@@ -2597,11 +2571,11 @@
     "Velocity": "20",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1946",
-    "name": "Snowman Cannon",
+    "Item ID": "1946",
+    "Name": "Snowman Cannon",
     "Damage": "67",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -2610,11 +2584,11 @@
     "Velocity": "15",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1947",
-    "name": "North Pole",
+    "Item ID": "1947",
+    "Name": "North Pole",
     "Damage": "73",
     "Knockback": "6.7 (Strong)",
     "Mana": "",
@@ -2623,11 +2597,11 @@
     "Velocity": "4.75",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2188",
-    "name": "Venom Staff",
+    "Item ID": "2188",
+    "Name": "Venom Staff",
     "Damage": "44",
     "Knockback": "7 (Strong)",
     "Mana": "25",
@@ -2636,11 +2610,11 @@
     "Velocity": "14",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2223",
-    "name": "Pulse Bow",
+    "Item ID": "2223",
+    "Name": "Pulse Bow",
     "Damage": "85",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -2649,11 +2623,11 @@
     "Velocity": "23.25",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2269",
-    "name": "Revolver",
+    "Item ID": "2269",
+    "Name": "Revolver",
     "Damage": "20",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -2662,11 +2636,11 @@
     "Velocity": "16",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2270",
-    "name": "Gatligator",
+    "Item ID": "2270",
+    "Name": "Gatligator",
     "Damage": "21",
     "Knockback": "1.5 (Extremely weak)",
     "Mana": "",
@@ -2675,11 +2649,11 @@
     "Velocity": "8",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2273",
-    "name": "Katana",
+    "Item ID": "2273",
+    "Name": "Katana",
     "Damage": "16",
     "Knockback": "3.5 (Weak)",
     "Mana": "",
@@ -2688,11 +2662,11 @@
     "Velocity": "",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2330",
-    "name": "Purple Clubberfish",
+    "Item ID": "2330",
+    "Name": "Purple Clubberfish",
     "Damage": "24",
     "Knockback": "7 (Strong)",
     "Mana": "",
@@ -2701,11 +2675,11 @@
     "Velocity": "",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2331",
-    "name": "Obsidian Swordfish",
+    "Item ID": "2331",
+    "Name": "Obsidian Swordfish",
     "Damage": "70",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -2714,11 +2688,11 @@
     "Velocity": "4",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2332",
-    "name": "Swordfish",
+    "Item ID": "2332",
+    "Name": "Swordfish",
     "Damage": "19",
     "Knockback": "4.25 (Average)",
     "Mana": "",
@@ -2727,11 +2701,11 @@
     "Velocity": "4",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2364",
-    "name": "Hornet Staff",
+    "Item ID": "2364",
+    "Name": "Hornet Staff",
     "Damage": "12",
     "Knockback": "2 (Very weak)",
     "Mana": "10",
@@ -2740,11 +2714,11 @@
     "Velocity": "10",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2365",
-    "name": "Imp Staff",
+    "Item ID": "2365",
+    "Name": "Imp Staff",
     "Damage": "17",
     "Knockback": "2 (Very weak)",
     "Mana": "10",
@@ -2753,11 +2727,11 @@
     "Velocity": "10",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2366",
-    "name": "Queen Spider Staff",
+    "Item ID": "2366",
+    "Name": "Queen Spider Staff",
     "Damage": "26",
     "Knockback": "7.5 (Very strong)",
     "Mana": "10",
@@ -2766,11 +2740,11 @@
     "Velocity": "14",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2424",
-    "name": "Anchor",
+    "Item ID": "2424",
+    "Name": "Anchor",
     "Damage": "70",
     "Knockback": "8 (Very strong)",
     "Mana": "",
@@ -2779,11 +2753,11 @@
     "Velocity": "20",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2515",
-    "name": "Palm Wood Bow",
+    "Item ID": "2515",
+    "Name": "Palm Wood Bow",
     "Damage": "6",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -2792,11 +2766,11 @@
     "Velocity": "6.6",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2517",
-    "name": "Palm Wood Sword",
+    "Item ID": "2517",
+    "Name": "Palm Wood Sword",
     "Damage": "8",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -2805,11 +2779,11 @@
     "Velocity": "",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2535",
-    "name": "Optic Staff",
+    "Item ID": "2535",
+    "Name": "Optic Staff",
     "Damage": "30",
     "Knockback": "2 (Very weak)",
     "Mana": "10",
@@ -2818,11 +2792,11 @@
     "Velocity": "30",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2551",
-    "name": "Spider Staff",
+    "Item ID": "2551",
+    "Name": "Spider Staff",
     "Damage": "26",
     "Knockback": "3 (Very weak)",
     "Mana": "10",
@@ -2831,11 +2805,11 @@
     "Velocity": "10",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2584",
-    "name": "Pirate Staff",
+    "Item ID": "2584",
+    "Name": "Pirate Staff",
     "Damage": "40",
     "Knockback": "6 (Average)",
     "Mana": "10",
@@ -2844,11 +2818,11 @@
     "Velocity": "10",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2586",
-    "name": "Sticky Grenade",
+    "Item ID": "2586",
+    "Name": "Sticky Grenade",
     "Damage": "60",
     "Knockback": "8 (Very strong)",
     "Mana": "",
@@ -2857,11 +2831,11 @@
     "Velocity": "5.5",
     "Rarity": "0",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2590",
-    "name": "Molotov Cocktail",
+    "Item ID": "2590",
+    "Name": "Molotov Cocktail",
     "Damage": "23",
     "Knockback": "7 (Strong)",
     "Mana": "",
@@ -2870,11 +2844,11 @@
     "Velocity": "6.5",
     "Rarity": "1",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2608",
-    "name": "Falcon Blade",
+    "Item ID": "2608",
+    "Name": "Falcon Blade",
     "Damage": "25",
     "Knockback": "6 (Average)",
     "Mana": "",
@@ -2883,11 +2857,11 @@
     "Velocity": "",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2611",
-    "name": "Flairon",
+    "Item ID": "2611",
+    "Name": "Flairon",
     "Damage": "66",
     "Knockback": "4.5 (Average)",
     "Mana": "",
@@ -2896,11 +2870,11 @@
     "Velocity": "14",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2621",
-    "name": "Tempest Staff",
+    "Item ID": "2621",
+    "Name": "Tempest Staff",
     "Damage": "50",
     "Knockback": "2 (Very weak)",
     "Mana": "10",
@@ -2909,11 +2883,11 @@
     "Velocity": "10",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2622",
-    "name": "Razorblade Typhoon",
+    "Item ID": "2622",
+    "Name": "Razorblade Typhoon",
     "Damage": "90",
     "Knockback": "5 (Average)",
     "Mana": "16",
@@ -2922,11 +2896,11 @@
     "Velocity": "18",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2623",
-    "name": "Bubble Gun",
+    "Item ID": "2623",
+    "Name": "Bubble Gun",
     "Damage": "70",
     "Knockback": "3 (Very weak)",
     "Mana": "4",
@@ -2935,11 +2909,11 @@
     "Velocity": "11",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2624",
-    "name": "Tsunami",
+    "Item ID": "2624",
+    "Name": "Tsunami",
     "Damage": "53",
     "Knockback": "2 (Very weak)",
     "Mana": "",
@@ -2948,11 +2922,11 @@
     "Velocity": "10",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2745",
-    "name": "Boreal Wood Sword",
+    "Item ID": "2745",
+    "Name": "Boreal Wood Sword",
     "Damage": "8",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -2961,11 +2935,11 @@
     "Velocity": "",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2747",
-    "name": "Boreal Wood Bow",
+    "Item ID": "2747",
+    "Name": "Boreal Wood Bow",
     "Damage": "6",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -2974,11 +2948,11 @@
     "Velocity": "6.6",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2749",
-    "name": "Xeno Staff",
+    "Item ID": "2749",
+    "Name": "Xeno Staff",
     "Damage": "36",
     "Knockback": "2 (Very weak)",
     "Mana": "10",
@@ -2987,11 +2961,11 @@
     "Velocity": "10",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2750",
-    "name": "Meteor Staff",
+    "Item ID": "2750",
+    "Name": "Meteor Staff",
     "Damage": "50",
     "Knockback": "4.5 (Average)",
     "Mana": "13",
@@ -3000,11 +2974,11 @@
     "Velocity": "30",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2795",
-    "name": "Laser Machinegun",
+    "Item ID": "2795",
+    "Name": "Laser Machinegun",
     "Damage": "60",
     "Knockback": "2 (Very weak)",
     "Mana": "6",
@@ -3013,11 +2987,11 @@
     "Velocity": "20",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2796",
-    "name": "Electrosphere Launcher",
+    "Item ID": "2796",
+    "Name": "Electrosphere Launcher",
     "Damage": "40",
     "Knockback": "2 (Very weak)",
     "Mana": "",
@@ -3026,11 +3000,11 @@
     "Velocity": "12",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2797",
-    "name": "Xenopopper",
+    "Item ID": "2797",
+    "Name": "Xenopopper",
     "Damage": "45",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -3039,11 +3013,11 @@
     "Velocity": "24",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2880",
-    "name": "Influx Waver",
+    "Item ID": "2880",
+    "Name": "Influx Waver",
     "Damage": "110",
     "Knockback": "4.5 (Average)",
     "Mana": "",
@@ -3052,11 +3026,11 @@
     "Velocity": "11",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2882",
-    "name": "Charged Blaster Cannon",
+    "Item ID": "2882",
+    "Name": "Charged Blaster Cannon",
     "Damage": "100",
     "Knockback": "2 (Very weak)",
     "Mana": "14",
@@ -3065,11 +3039,11 @@
     "Velocity": "28",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2888",
-    "name": "The Bee's Knees",
+    "Item ID": "2888",
+    "Name": "The Bee's Knees",
     "Damage": "23",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -3078,11 +3052,11 @@
     "Velocity": "8",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2896",
-    "name": "Sticky Dynamite",
+    "Item ID": "2896",
+    "Name": "Sticky Dynamite",
     "Damage": "250",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -3091,11 +3065,11 @@
     "Velocity": "4",
     "Rarity": "1",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3006",
-    "name": "Life Drain",
+    "Item ID": "3006",
+    "Name": "Life Drain",
     "Damage": "35",
     "Knockback": "2.5 (Very weak)",
     "Mana": "10",
@@ -3104,11 +3078,11 @@
     "Velocity": "10",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3007",
-    "name": "Dart Pistol",
+    "Item ID": "3007",
+    "Name": "Dart Pistol",
     "Damage": "33",
     "Knockback": "3.5 (Weak)",
     "Mana": "",
@@ -3117,11 +3091,11 @@
     "Velocity": "13",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3008",
-    "name": "Dart Rifle",
+    "Item ID": "3008",
+    "Name": "Dart Rifle",
     "Damage": "62",
     "Knockback": "5.5 (Average)",
     "Mana": "",
@@ -3130,11 +3104,11 @@
     "Velocity": "14.5",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3012",
-    "name": "Chain Guillotines",
+    "Item ID": "3012",
+    "Name": "Chain Guillotines",
     "Damage": "59",
     "Knockback": "3.25 (Weak)",
     "Mana": "",
@@ -3143,11 +3117,11 @@
     "Velocity": "14",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3013",
-    "name": "Fetid Baghnakhs",
+    "Item ID": "3013",
+    "Name": "Fetid Baghnakhs",
     "Damage": "60",
     "Knockback": "6 (Average)",
     "Mana": "",
@@ -3156,11 +3130,11 @@
     "Velocity": "",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3014",
-    "name": "Clinger Staff",
+    "Item ID": "3014",
+    "Name": "Clinger Staff",
     "Damage": "43",
     "Knockback": "8 (Very strong)",
     "Mana": "40",
@@ -3169,11 +3143,11 @@
     "Velocity": "15",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3018",
-    "name": "Seedler",
+    "Item ID": "3018",
+    "Name": "Seedler",
     "Damage": "50",
     "Knockback": "6 (Average)",
     "Mana": "",
@@ -3182,11 +3156,11 @@
     "Velocity": "12",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3019",
-    "name": "Hellwing Bow",
+    "Item ID": "3019",
+    "Name": "Hellwing Bow",
     "Damage": "22",
     "Knockback": "5.5 (Average)",
     "Mana": "",
@@ -3195,11 +3169,11 @@
     "Velocity": "6",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3029",
-    "name": "Daedalus Stormbow",
+    "Item ID": "3029",
+    "Name": "Daedalus Stormbow",
     "Damage": "38",
     "Knockback": "2.25 (Very weak)",
     "Mana": "",
@@ -3208,11 +3182,11 @@
     "Velocity": "12.5",
     "Rarity": "6",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3030",
-    "name": "Flying Knife",
+    "Item ID": "3030",
+    "Name": "Flying Knife",
     "Damage": "40",
     "Knockback": "4.5 (Average)",
     "Mana": "",
@@ -3221,11 +3195,11 @@
     "Velocity": "17",
     "Rarity": "6",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3051",
-    "name": "Crystal Vile Shard",
+    "Item ID": "3051",
+    "Name": "Crystal Vile Shard",
     "Damage": "25",
     "Knockback": "3 (Very weak)",
     "Mana": "13",
@@ -3234,11 +3208,11 @@
     "Velocity": "32",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3052",
-    "name": "Shadowflame Bow",
+    "Item ID": "3052",
+    "Name": "Shadowflame Bow",
     "Damage": "47",
     "Knockback": "4.5 (Average)",
     "Mana": "",
@@ -3247,11 +3221,11 @@
     "Velocity": "11",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3053",
-    "name": "Shadowflame Hex Doll",
+    "Item ID": "3053",
+    "Name": "Shadowflame Hex Doll",
     "Damage": "40",
     "Knockback": "3.75 (Weak)",
     "Mana": "6",
@@ -3260,11 +3234,11 @@
     "Velocity": "27",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3054",
-    "name": "Shadowflame Knife",
+    "Item ID": "3054",
+    "Name": "Shadowflame Knife",
     "Damage": "38",
     "Knockback": "5.75 (Average)",
     "Mana": "",
@@ -3273,11 +3247,11 @@
     "Velocity": "13",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3063",
-    "name": "Meowmere",
+    "Item ID": "3063",
+    "Name": "Meowmere",
     "Damage": "200",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -3286,11 +3260,11 @@
     "Velocity": "12",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3065",
-    "name": "Star Wrath",
+    "Item ID": "3065",
+    "Name": "Star Wrath",
     "Damage": "110",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -3299,11 +3273,11 @@
     "Velocity": "16",
     "Rarity": "9",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3069",
-    "name": "Wand of Sparking",
+    "Item ID": "3069",
+    "Name": "Wand of Sparking",
     "Damage": "14",
     "Knockback": "0 (No knockback)",
     "Mana": "2",
@@ -3312,11 +3286,11 @@
     "Velocity": "7",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3094",
-    "name": "Javelin",
+    "Item ID": "3094",
+    "Name": "Javelin",
     "Damage": "17",
     "Knockback": "4.75 (Average)",
     "Mana": "",
@@ -3325,11 +3299,11 @@
     "Velocity": "11.5",
     "Rarity": "0",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3105",
-    "name": "Toxic Flask",
+    "Item ID": "3105",
+    "Name": "Toxic Flask",
     "Damage": "46",
     "Knockback": "4 (Weak)",
     "Mana": "30",
@@ -3338,11 +3312,11 @@
     "Velocity": "9",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3106",
-    "name": "Psycho Knife",
+    "Item ID": "3106",
+    "Name": "Psycho Knife",
     "Damage": "85",
     "Knockback": "3.5 (Weak)",
     "Mana": "",
@@ -3351,11 +3325,11 @@
     "Velocity": "",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3107",
-    "name": "Nail Gun",
+    "Item ID": "3107",
+    "Name": "Nail Gun",
     "Damage": "85",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -3364,11 +3338,11 @@
     "Velocity": "10",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3115",
-    "name": "Bouncy Bomb",
+    "Item ID": "3115",
+    "Name": "Bouncy Bomb",
     "Damage": "100",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -3377,11 +3351,11 @@
     "Velocity": "5",
     "Rarity": "0",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3116",
-    "name": "Bouncy Grenade",
+    "Item ID": "3116",
+    "Name": "Bouncy Grenade",
     "Damage": "65",
     "Knockback": "8 (Very strong)",
     "Mana": "",
@@ -3390,11 +3364,11 @@
     "Velocity": "6.5",
     "Rarity": "0",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3196",
-    "name": "Bomb Fish",
+    "Item ID": "3196",
+    "Name": "Bomb Fish",
     "Damage": "100",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -3403,11 +3377,11 @@
     "Velocity": "6",
     "Rarity": "1",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3197",
-    "name": "Frost Daggerfish",
+    "Item ID": "3197",
+    "Name": "Frost Daggerfish",
     "Damage": "17",
     "Knockback": "3.5 (Weak)",
     "Mana": "",
@@ -3416,11 +3390,11 @@
     "Velocity": "12.5",
     "Rarity": "1",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3209",
-    "name": "Crystal Serpent",
+    "Item ID": "3209",
+    "Name": "Crystal Serpent",
     "Damage": "40",
     "Knockback": "4.4 (Average)",
     "Mana": "9",
@@ -3429,11 +3403,11 @@
     "Velocity": "13",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3210",
-    "name": "Toxikarp",
+    "Item ID": "3210",
+    "Name": "Toxikarp",
     "Damage": "43",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -3442,11 +3416,11 @@
     "Velocity": "8.5",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3211",
-    "name": "Bladetongue",
+    "Item ID": "3211",
+    "Name": "Bladetongue",
     "Damage": "55",
     "Knockback": "5.75 (Average)",
     "Mana": "",
@@ -3455,11 +3429,11 @@
     "Velocity": "",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3249",
-    "name": "Deadly Sphere Staff",
+    "Item ID": "3249",
+    "Name": "Deadly Sphere Staff",
     "Damage": "50",
     "Knockback": "2 (Very weak)",
     "Mana": "10",
@@ -3468,11 +3442,11 @@
     "Velocity": "10",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3258",
-    "name": "Slap Hand",
+    "Item ID": "3258",
+    "Name": "Slap Hand",
     "Damage": "35",
     "Knockback": "20 (Insane)",
     "Mana": "",
@@ -3481,11 +3455,11 @@
     "Velocity": "",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3262",
-    "name": "Code 1",
+    "Item ID": "3262",
+    "Name": "Code 1",
     "Damage": "21",
     "Knockback": "3.25 (Weak)",
     "Mana": "",
@@ -3494,11 +3468,11 @@
     "Velocity": "16",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3269",
-    "name": "Medusa Head",
+    "Item ID": "3269",
+    "Name": "Medusa Head",
     "Damage": "40",
     "Knockback": "2 (Very weak)",
     "Mana": "15",
@@ -3507,11 +3481,11 @@
     "Velocity": "1",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3278",
-    "name": "Wooden Yoyo",
+    "Item ID": "3278",
+    "Name": "Wooden Yoyo",
     "Damage": "9",
     "Knockback": "2.5 (Very weak)",
     "Mana": "",
@@ -3520,11 +3494,11 @@
     "Velocity": "16",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3279",
-    "name": "Malaise",
+    "Item ID": "3279",
+    "Name": "Malaise",
     "Damage": "16",
     "Knockback": "4.5 (Average)",
     "Mana": "",
@@ -3533,11 +3507,11 @@
     "Velocity": "16",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3280",
-    "name": "Artery",
+    "Item ID": "3280",
+    "Name": "Artery",
     "Damage": "17",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -3546,11 +3520,11 @@
     "Velocity": "16",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3281",
-    "name": "Amazon",
+    "Item ID": "3281",
+    "Name": "Amazon",
     "Damage": "18",
     "Knockback": "3.75 (Weak)",
     "Mana": "",
@@ -3559,11 +3533,11 @@
     "Velocity": "16",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3282",
-    "name": "Cascade",
+    "Item ID": "3282",
+    "Name": "Cascade",
     "Damage": "27",
     "Knockback": "4.3 (Average)",
     "Mana": "",
@@ -3572,11 +3546,11 @@
     "Velocity": "16",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3283",
-    "name": "Chik",
+    "Item ID": "3283",
+    "Name": "Chik",
     "Damage": "39",
     "Knockback": "3.3 (Weak)",
     "Mana": "",
@@ -3585,11 +3559,11 @@
     "Velocity": "16",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3284",
-    "name": "Code 2",
+    "Item ID": "3284",
+    "Name": "Code 2",
     "Damage": "54",
     "Knockback": "3.8 (Weak)",
     "Mana": "",
@@ -3598,11 +3572,11 @@
     "Velocity": "16",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3285",
-    "name": "Rally",
+    "Item ID": "3285",
+    "Name": "Rally",
     "Damage": "14",
     "Knockback": "3.5 (Weak)",
     "Mana": "",
@@ -3611,11 +3585,11 @@
     "Velocity": "16",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3286",
-    "name": "Yelets",
+    "Item ID": "3286",
+    "Name": "Yelets",
     "Damage": "60",
     "Knockback": "3.1 (Weak)",
     "Mana": "",
@@ -3624,11 +3598,11 @@
     "Velocity": "16",
     "Rarity": "7",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3287",
-    "name": "Red's Throw",
+    "Item ID": "3287",
+    "Name": "Red's Throw",
     "Damage": "70",
     "Knockback": "4.5 (Average)",
     "Mana": "",
@@ -3637,11 +3611,11 @@
     "Velocity": "16",
     "Rarity": "9",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3288",
-    "name": "Valkyrie Yoyo",
+    "Item ID": "3288",
+    "Name": "Valkyrie Yoyo",
     "Damage": "70",
     "Knockback": "4.5 (Average)",
     "Mana": "",
@@ -3650,11 +3624,11 @@
     "Velocity": "16",
     "Rarity": "9",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3289",
-    "name": "Amarok",
+    "Item ID": "3289",
+    "Name": "Amarok",
     "Damage": "43",
     "Knockback": "2.8 (Very weak)",
     "Mana": "",
@@ -3663,11 +3637,11 @@
     "Velocity": "16",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3290",
-    "name": "Hel-Fire",
+    "Item ID": "3290",
+    "Name": "Hel-Fire",
     "Damage": "41",
     "Knockback": "4.5 (Average)",
     "Mana": "",
@@ -3676,11 +3650,11 @@
     "Velocity": "16",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3291",
-    "name": "Kraken",
+    "Item ID": "3291",
+    "Name": "Kraken",
     "Damage": "95",
     "Knockback": "4.3 (Average)",
     "Mana": "",
@@ -3689,11 +3663,11 @@
     "Velocity": "16",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3292",
-    "name": "The Eye of Cthulhu",
+    "Item ID": "3292",
+    "Name": "The Eye of Cthulhu",
     "Damage": "115",
     "Knockback": "3.5 (Weak)",
     "Mana": "",
@@ -3702,11 +3676,11 @@
     "Velocity": "16",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3315",
-    "name": "Format:C",
+    "Item ID": "3315",
+    "Name": "Format:C",
     "Damage": "39",
     "Knockback": "3.25 (Weak)",
     "Mana": "",
@@ -3715,11 +3689,11 @@
     "Velocity": "16",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3316",
-    "name": "Gradient",
+    "Item ID": "3316",
+    "Name": "Gradient",
     "Damage": "49",
     "Knockback": "3.8 (Weak)",
     "Mana": "",
@@ -3728,11 +3702,11 @@
     "Velocity": "16",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3317",
-    "name": "Valor",
+    "Item ID": "3317",
+    "Name": "Valor",
     "Damage": "22",
     "Knockback": "3.85 (Weak)",
     "Mana": "",
@@ -3741,11 +3715,11 @@
     "Velocity": "16",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3349",
-    "name": "Exotic Scimitar",
+    "Item ID": "3349",
+    "Name": "Exotic Scimitar",
     "Damage": "20",
     "Knockback": "4.25 (Average)",
     "Mana": "",
@@ -3754,11 +3728,11 @@
     "Velocity": "",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3350",
-    "name": "Paintball Gun",
+    "Item ID": "3350",
+    "Name": "Paintball Gun",
     "Damage": "12",
     "Knockback": "1.25 (Extremely weak)",
     "Mana": "",
@@ -3767,11 +3741,11 @@
     "Velocity": "10",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3351",
-    "name": "Classy Cane",
+    "Item ID": "3351",
+    "Name": "Classy Cane",
     "Damage": "16",
     "Knockback": "3.5 (Weak)",
     "Mana": "",
@@ -3780,11 +3754,11 @@
     "Velocity": "",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3352",
-    "name": "Stylish Scissors",
+    "Item ID": "3352",
+    "Name": "Stylish Scissors",
     "Damage": "14",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -3793,11 +3767,11 @@
     "Velocity": "",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3368",
-    "name": "Arkhalis",
+    "Item ID": "3368",
+    "Name": "Arkhalis",
     "Damage": "25",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -3806,11 +3780,11 @@
     "Velocity": "15",
     "Rarity": "9",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3377",
-    "name": "Amber Staff",
+    "Item ID": "3377",
+    "Name": "Amber Staff",
     "Damage": "21",
     "Knockback": "4.75 (Average)",
     "Mana": "7",
@@ -3819,11 +3793,11 @@
     "Velocity": "9",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3378",
-    "name": "Bone Javelin",
+    "Item ID": "3378",
+    "Name": "Bone Javelin",
     "Damage": "20",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -3832,11 +3806,11 @@
     "Velocity": "10",
     "Rarity": "1",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3379",
-    "name": "Bone Throwing Knife",
+    "Item ID": "3379",
+    "Name": "Bone Throwing Knife",
     "Damage": "14",
     "Knockback": "1.5 (Extremely weak)",
     "Mana": "",
@@ -3845,11 +3819,11 @@
     "Velocity": "10",
     "Rarity": "1",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3389",
-    "name": "Terrarian",
+    "Item ID": "3389",
+    "Name": "Terrarian",
     "Damage": "190",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -3858,11 +3832,11 @@
     "Velocity": "16",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3473",
-    "name": "Solar Eruption",
+    "Item ID": "3473",
+    "Name": "Solar Eruption",
     "Damage": "105",
     "Knockback": "2 (Very weak)",
     "Mana": "",
@@ -3871,11 +3845,11 @@
     "Velocity": "24",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3474",
-    "name": "Stardust Cell Staff",
+    "Item ID": "3474",
+    "Name": "Stardust Cell Staff",
     "Damage": "60",
     "Knockback": "2 (Very weak)",
     "Mana": "10",
@@ -3884,11 +3858,11 @@
     "Velocity": "10",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3475",
-    "name": "Vortex Beater",
+    "Item ID": "3475",
+    "Name": "Vortex Beater",
     "Damage": "50",
     "Knockback": "2 (Very weak) (bullets)2.5 (Very weak) (rockets)",
     "Mana": "",
@@ -3897,11 +3871,11 @@
     "Velocity": "14",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3476",
-    "name": "Nebula Arcanum",
+    "Item ID": "3476",
+    "Name": "Nebula Arcanum",
     "Damage": "70",
     "Knockback": "5 (Average)",
     "Mana": "30",
@@ -3910,11 +3884,11 @@
     "Velocity": "7",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3480",
-    "name": "Platinum Bow",
+    "Item ID": "3480",
+    "Name": "Platinum Bow",
     "Damage": "13",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -3923,11 +3897,11 @@
     "Velocity": "6.6",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3483",
-    "name": "Platinum Shortsword",
+    "Item ID": "3483",
+    "Name": "Platinum Shortsword",
     "Damage": "13",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -3936,11 +3910,11 @@
     "Velocity": "4.2",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3484",
-    "name": "Platinum Broadsword",
+    "Item ID": "3484",
+    "Name": "Platinum Broadsword",
     "Damage": "15",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -3949,11 +3923,11 @@
     "Velocity": "",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3486",
-    "name": "Tungsten Bow",
+    "Item ID": "3486",
+    "Name": "Tungsten Bow",
     "Damage": "10",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -3962,11 +3936,11 @@
     "Velocity": "6.6",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3489",
-    "name": "Tungsten Shortsword",
+    "Item ID": "3489",
+    "Name": "Tungsten Shortsword",
     "Damage": "10",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -3975,11 +3949,11 @@
     "Velocity": "4.2",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3490",
-    "name": "Tungsten Broadsword",
+    "Item ID": "3490",
+    "Name": "Tungsten Broadsword",
     "Damage": "12",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -3988,11 +3962,11 @@
     "Velocity": "",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3492",
-    "name": "Lead Bow",
+    "Item ID": "3492",
+    "Name": "Lead Bow",
     "Damage": "9",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -4001,11 +3975,11 @@
     "Velocity": "6.6",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3495",
-    "name": "Lead Shortsword",
+    "Item ID": "3495",
+    "Name": "Lead Shortsword",
     "Damage": "9",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -4014,11 +3988,11 @@
     "Velocity": "4.2",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3496",
-    "name": "Lead Broadsword",
+    "Item ID": "3496",
+    "Name": "Lead Broadsword",
     "Damage": "11",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -4027,11 +4001,11 @@
     "Velocity": "",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3498",
-    "name": "Tin Bow",
+    "Item ID": "3498",
+    "Name": "Tin Bow",
     "Damage": "7",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -4040,11 +4014,11 @@
     "Velocity": "6.6",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3501",
-    "name": "Tin Shortsword",
+    "Item ID": "3501",
+    "Name": "Tin Shortsword",
     "Damage": "7",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -4053,11 +4027,11 @@
     "Velocity": "4.2",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3502",
-    "name": "Tin Broadsword",
+    "Item ID": "3502",
+    "Name": "Tin Broadsword",
     "Damage": "9",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -4066,11 +4040,11 @@
     "Velocity": "",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3504",
-    "name": "Copper Bow",
+    "Item ID": "3504",
+    "Name": "Copper Bow",
     "Damage": "6",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -4079,11 +4053,11 @@
     "Velocity": "6.6",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3507",
-    "name": "Copper Shortsword",
+    "Item ID": "3507",
+    "Name": "Copper Shortsword",
     "Damage": "5",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -4092,11 +4066,11 @@
     "Velocity": "4.2",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3508",
-    "name": "Copper Broadsword",
+    "Item ID": "3508",
+    "Name": "Copper Broadsword",
     "Damage": "8",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -4105,11 +4079,11 @@
     "Velocity": "",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3510",
-    "name": "Silver Bow",
+    "Item ID": "3510",
+    "Name": "Silver Bow",
     "Damage": "9",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -4118,11 +4092,11 @@
     "Velocity": "6.6",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3513",
-    "name": "Silver Shortsword",
+    "Item ID": "3513",
+    "Name": "Silver Shortsword",
     "Damage": "9",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -4131,11 +4105,11 @@
     "Velocity": "4.2",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3514",
-    "name": "Silver Broadsword",
+    "Item ID": "3514",
+    "Name": "Silver Broadsword",
     "Damage": "11",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -4144,11 +4118,11 @@
     "Velocity": "",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3516",
-    "name": "Gold Bow",
+    "Item ID": "3516",
+    "Name": "Gold Bow",
     "Damage": "11",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -4157,11 +4131,11 @@
     "Velocity": "6.6",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3519",
-    "name": "Gold Shortsword",
+    "Item ID": "3519",
+    "Name": "Gold Shortsword",
     "Damage": "12",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -4170,11 +4144,11 @@
     "Velocity": "4.2",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3520",
-    "name": "Gold Broadsword",
+    "Item ID": "3520",
+    "Name": "Gold Broadsword",
     "Damage": "13",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -4183,11 +4157,11 @@
     "Velocity": "",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3531",
-    "name": "Stardust Dragon Staff",
+    "Item ID": "3531",
+    "Name": "Stardust Dragon Staff",
     "Damage": "40",
     "Knockback": "2 (Very weak)",
     "Mana": "10",
@@ -4196,11 +4170,11 @@
     "Velocity": "10",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3540",
-    "name": "Phantasm",
+    "Item ID": "3540",
+    "Name": "Phantasm",
     "Damage": "50",
     "Knockback": "2 (Very weak)",
     "Mana": "",
@@ -4209,11 +4183,11 @@
     "Velocity": "20",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3541",
-    "name": "Last Prism",
+    "Item ID": "3541",
+    "Name": "Last Prism",
     "Damage": "100",
     "Knockback": "0 (No knockback)",
     "Mana": "12",
@@ -4222,11 +4196,11 @@
     "Velocity": "30",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3542",
-    "name": "Nebula Blaze",
+    "Item ID": "3542",
+    "Name": "Nebula Blaze",
     "Damage": "130",
     "Knockback": "0 (No knockback)",
     "Mana": "12",
@@ -4235,11 +4209,11 @@
     "Velocity": "18",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3543",
-    "name": "Daybreak",
+    "Item ID": "3543",
+    "Name": "Daybreak",
     "Damage": "150",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -4248,11 +4222,11 @@
     "Velocity": "20",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3546",
-    "name": "Celebration",
+    "Item ID": "3546",
+    "Name": "Celebration",
     "Damage": "25",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -4261,11 +4235,11 @@
     "Velocity": "15",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3547",
-    "name": "Bouncy Dynamite",
+    "Item ID": "3547",
+    "Name": "Bouncy Dynamite",
     "Damage": "250",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -4274,11 +4248,11 @@
     "Velocity": "4",
     "Rarity": "1",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3548",
-    "name": "Happy Grenade",
+    "Item ID": "3548",
+    "Name": "Happy Grenade",
     "Damage": "30",
     "Knockback": "6 (Average)",
     "Mana": "",
@@ -4287,11 +4261,11 @@
     "Velocity": "6",
     "Rarity": "2",
     "Research": "99 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3569",
-    "name": "Lunar Portal Staff",
+    "Item ID": "3569",
+    "Name": "Lunar Portal Staff",
     "Damage": "50",
     "Knockback": "7.5 (Very strong)",
     "Mana": "10",
@@ -4300,11 +4274,11 @@
     "Velocity": "14",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3570",
-    "name": "Lunar Flare",
+    "Item ID": "3570",
+    "Name": "Lunar Flare",
     "Damage": "100",
     "Knockback": "4.5 (Average)",
     "Mana": "13",
@@ -4313,11 +4287,11 @@
     "Velocity": "60",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3571",
-    "name": "Rainbow Crystal Staff",
+    "Item ID": "3571",
+    "Name": "Rainbow Crystal Staff",
     "Damage": "130",
     "Knockback": "7.5 (Very strong)",
     "Mana": "10",
@@ -4326,11 +4300,11 @@
     "Velocity": "14",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3764",
-    "name": "Blue Phasesaber",
+    "Item ID": "3764",
+    "Name": "Blue Phasesaber",
     "Damage": "42",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -4339,11 +4313,11 @@
     "Velocity": "",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3765",
-    "name": "Red Phasesaber",
+    "Item ID": "3765",
+    "Name": "Red Phasesaber",
     "Damage": "42",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -4352,11 +4326,11 @@
     "Velocity": "",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3766",
-    "name": "Green Phasesaber",
+    "Item ID": "3766",
+    "Name": "Green Phasesaber",
     "Damage": "42",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -4365,11 +4339,11 @@
     "Velocity": "",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3767",
-    "name": "Purple Phasesaber",
+    "Item ID": "3767",
+    "Name": "Purple Phasesaber",
     "Damage": "42",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -4378,11 +4352,11 @@
     "Velocity": "",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3768",
-    "name": "White Phasesaber",
+    "Item ID": "3768",
+    "Name": "White Phasesaber",
     "Damage": "42",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -4391,11 +4365,11 @@
     "Velocity": "",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3769",
-    "name": "Yellow Phasesaber",
+    "Item ID": "3769",
+    "Name": "Yellow Phasesaber",
     "Damage": "42",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -4404,11 +4378,11 @@
     "Velocity": "",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3772",
-    "name": "Mandible Blade",
+    "Item ID": "3772",
+    "Name": "Mandible Blade",
     "Damage": "14",
     "Knockback": "4.5 (Average)",
     "Mana": "",
@@ -4417,11 +4391,11 @@
     "Velocity": "",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3779",
-    "name": "Spirit Flame",
+    "Item ID": "3779",
+    "Name": "Spirit Flame",
     "Damage": "85",
     "Knockback": "5 (Average)",
     "Mana": "14",
@@ -4430,11 +4404,11 @@
     "Velocity": "3",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3787",
-    "name": "Sky Fracture",
+    "Item ID": "3787",
+    "Name": "Sky Fracture",
     "Damage": "38",
     "Knockback": "6 (Average)",
     "Mana": "17",
@@ -4443,11 +4417,11 @@
     "Velocity": "14",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3788",
-    "name": "Onyx Blaster",
+    "Item ID": "3788",
+    "Name": "Onyx Blaster",
     "Damage": "24",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -4456,11 +4430,11 @@
     "Velocity": "14",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3818",
-    "name": "Flameburst Rod",
+    "Item ID": "3818",
+    "Name": "Flameburst Rod",
     "Damage": "-1",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -4469,11 +4443,11 @@
     "Velocity": "1",
     "Rarity": "0",
     "Research": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3819",
-    "name": "Flameburst Cane",
+    "Item ID": "3819",
+    "Name": "Flameburst Cane",
     "Damage": "-1",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -4482,11 +4456,11 @@
     "Velocity": "1",
     "Rarity": "0",
     "Research": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3820",
-    "name": "Flameburst Staff",
+    "Item ID": "3820",
+    "Name": "Flameburst Staff",
     "Damage": "-1",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -4495,11 +4469,11 @@
     "Velocity": "1",
     "Rarity": "0",
     "Research": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3821",
-    "name": "Ale Tosser",
+    "Item ID": "3821",
+    "Name": "Ale Tosser",
     "Damage": "20",
     "Knockback": "7 (Strong)",
     "Mana": "",
@@ -4508,11 +4482,11 @@
     "Velocity": "6.5",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3823",
-    "name": "Brand of the Inferno",
+    "Item ID": "3823",
+    "Name": "Brand of the Inferno",
     "Damage": "85",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -4521,11 +4495,11 @@
     "Velocity": "",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3824",
-    "name": "Ballista Rod",
+    "Item ID": "3824",
+    "Name": "Ballista Rod",
     "Damage": "-1",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -4534,11 +4508,11 @@
     "Velocity": "1",
     "Rarity": "0",
     "Research": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3825",
-    "name": "Ballista Cane",
+    "Item ID": "3825",
+    "Name": "Ballista Cane",
     "Damage": "-1",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -4547,11 +4521,11 @@
     "Velocity": "1",
     "Rarity": "0",
     "Research": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3826",
-    "name": "Ballista Staff",
+    "Item ID": "3826",
+    "Name": "Ballista Staff",
     "Damage": "-1",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -4560,11 +4534,11 @@
     "Velocity": "1",
     "Rarity": "0",
     "Research": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3827",
-    "name": "Flying Dragon",
+    "Item ID": "3827",
+    "Name": "Flying Dragon",
     "Damage": "180",
     "Knockback": "5.5 (Average)",
     "Mana": "",
@@ -4573,11 +4547,11 @@
     "Velocity": "17",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3829",
-    "name": "Lightning Aura Rod",
+    "Item ID": "3829",
+    "Name": "Lightning Aura Rod",
     "Damage": "-1",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -4586,11 +4560,11 @@
     "Velocity": "1",
     "Rarity": "0",
     "Research": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3830",
-    "name": "Lightning Aura Cane",
+    "Item ID": "3830",
+    "Name": "Lightning Aura Cane",
     "Damage": "-1",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -4599,11 +4573,11 @@
     "Velocity": "1",
     "Rarity": "0",
     "Research": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3831",
-    "name": "Lightning Aura Staff",
+    "Item ID": "3831",
+    "Name": "Lightning Aura Staff",
     "Damage": "-1",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -4612,11 +4586,11 @@
     "Velocity": "1",
     "Rarity": "0",
     "Research": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3832",
-    "name": "Explosive Trap Rod",
+    "Item ID": "3832",
+    "Name": "Explosive Trap Rod",
     "Damage": "-1",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -4625,11 +4599,11 @@
     "Velocity": "1",
     "Rarity": "0",
     "Research": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3833",
-    "name": "Explosive Trap Cane",
+    "Item ID": "3833",
+    "Name": "Explosive Trap Cane",
     "Damage": "-1",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -4638,11 +4612,11 @@
     "Velocity": "1",
     "Rarity": "0",
     "Research": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3834",
-    "name": "Explosive Trap Staff",
+    "Item ID": "3834",
+    "Name": "Explosive Trap Staff",
     "Damage": "-1",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -4651,11 +4625,11 @@
     "Velocity": "1",
     "Rarity": "0",
     "Research": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3835",
-    "name": "Sleepy Octopod",
+    "Item ID": "3835",
+    "Name": "Sleepy Octopod",
     "Damage": "50",
     "Knockback": "7 (Strong)",
     "Mana": "",
@@ -4664,11 +4638,11 @@
     "Velocity": "24",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3836",
-    "name": "Ghastly Glaive",
+    "Item ID": "3836",
+    "Name": "Ghastly Glaive",
     "Damage": "45",
     "Knockback": "7 (Strong)",
     "Mana": "",
@@ -4677,11 +4651,11 @@
     "Velocity": "42",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3852",
-    "name": "Tome of Infinite Wisdom",
+    "Item ID": "3852",
+    "Name": "Tome of Infinite Wisdom",
     "Damage": "32",
     "Knockback": "9 (Very strong)",
     "Mana": "20",
@@ -4690,11 +4664,11 @@
     "Velocity": "22",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3854",
-    "name": "Phantom Phoenix",
+    "Item ID": "3854",
+    "Name": "Phantom Phoenix",
     "Damage": "32",
     "Knockback": "2 (Very weak)",
     "Mana": "",
@@ -4703,11 +4677,11 @@
     "Velocity": "20",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3858",
-    "name": "Sky Dragon's Fury",
+    "Item ID": "3858",
+    "Name": "Sky Dragon's Fury",
     "Damage": "140",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -4716,11 +4690,11 @@
     "Velocity": "24",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3859",
-    "name": "Aerial Bane",
+    "Item ID": "3859",
+    "Name": "Aerial Bane",
     "Damage": "55",
     "Knockback": "4.5 (Average)",
     "Mana": "",
@@ -4729,11 +4703,11 @@
     "Velocity": "22",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3870",
-    "name": "Betsy's Wrath",
+    "Item ID": "3870",
+    "Name": "Betsy's Wrath",
     "Damage": "100",
     "Knockback": "7 (Strong)",
     "Mana": "14",
@@ -4742,11 +4716,11 @@
     "Velocity": "28",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3930",
-    "name": "Celebration Mk2",
+    "Item ID": "3930",
+    "Name": "Celebration Mk2",
     "Damage": "40",
     "Knockback": "10 (Extremely strong)",
     "Mana": "",
@@ -4755,11 +4729,11 @@
     "Velocity": "17",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4058",
-    "name": "Skull Bow",
+    "Item ID": "4058",
+    "Name": "Skull Bow",
     "Damage": "8",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -4768,11 +4742,11 @@
     "Velocity": "11",
     "Rarity": "3",
     "Research": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4060",
-    "name": "Super Star Shooter",
+    "Item ID": "4060",
+    "Name": "Super Star Shooter",
     "Damage": "60",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -4781,11 +4755,11 @@
     "Velocity": "20",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4061",
-    "name": "Storm Spear",
+    "Item ID": "4061",
+    "Name": "Storm Spear",
     "Damage": "12",
     "Knockback": "6 (Average)",
     "Mana": "",
@@ -4794,11 +4768,11 @@
     "Velocity": "3.5",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4062",
-    "name": "Thunder Zapper",
+    "Item ID": "4062",
+    "Name": "Thunder Zapper",
     "Damage": "12",
     "Knockback": "2 (Very weak)",
     "Mana": "5",
@@ -4807,11 +4781,11 @@
     "Velocity": "16",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4144",
-    "name": "Terragrim",
+    "Item ID": "4144",
+    "Name": "Terragrim",
     "Damage": "17",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -4820,11 +4794,11 @@
     "Velocity": "15",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4258",
-    "name": "Orange Phaseblade",
+    "Item ID": "4258",
+    "Name": "Orange Phaseblade",
     "Damage": "25",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -4833,11 +4807,11 @@
     "Velocity": "",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4259",
-    "name": "Orange Phasesaber",
+    "Item ID": "4259",
+    "Name": "Orange Phasesaber",
     "Damage": "42",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -4846,11 +4820,11 @@
     "Velocity": "",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4269",
-    "name": "Sanguine Staff",
+    "Item ID": "4269",
+    "Name": "Sanguine Staff",
     "Damage": "35",
     "Knockback": "8 (Very strong)",
     "Mana": "10",
@@ -4859,11 +4833,11 @@
     "Velocity": "10",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4270",
-    "name": "Blood Thorn",
+    "Item ID": "4270",
+    "Name": "Blood Thorn",
     "Damage": "34",
     "Knockback": "1 (Extremely weak)",
     "Mana": "20",
@@ -4872,11 +4846,11 @@
     "Velocity": "32",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4272",
-    "name": "Drippler Crippler",
+    "Item ID": "4272",
+    "Name": "Drippler Crippler",
     "Damage": "110",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -4885,11 +4859,11 @@
     "Velocity": "15.9",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4273",
-    "name": "Vampire Frog Staff",
+    "Item ID": "4273",
+    "Name": "Vampire Frog Staff",
     "Damage": "11",
     "Knockback": "5 (Average)",
     "Mana": "10",
@@ -4898,11 +4872,11 @@
     "Velocity": "10",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4281",
-    "name": "Finch Staff",
+    "Item ID": "4281",
+    "Name": "Finch Staff",
     "Damage": "7",
     "Knockback": "4 (Weak)",
     "Mana": "10",
@@ -4911,11 +4885,11 @@
     "Velocity": "10",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4343",
-    "name": "Paper Airplane",
+    "Item ID": "4343",
+    "Name": "Paper Airplane",
     "Damage": "4",
     "Knockback": "2 (Very weak)",
     "Mana": "",
@@ -4924,11 +4898,11 @@
     "Velocity": "5",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4344",
-    "name": "White Paper Airplane",
+    "Item ID": "4344",
+    "Name": "White Paper Airplane",
     "Damage": "4",
     "Knockback": "2 (Very weak)",
     "Mana": "",
@@ -4937,11 +4911,11 @@
     "Velocity": "5",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4347",
-    "name": "Gray Zapinator",
+    "Item ID": "4347",
+    "Name": "Gray Zapinator",
     "Damage": "42",
     "Knockback": "6 (Average)",
     "Mana": "16",
@@ -4950,11 +4924,11 @@
     "Velocity": "60",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4348",
-    "name": "Orange Zapinator",
+    "Item ID": "4348",
+    "Name": "Orange Zapinator",
     "Damage": "100",
     "Knockback": "6 (Average)",
     "Mana": "16",
@@ -4963,11 +4937,11 @@
     "Velocity": "60",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4381",
-    "name": "Blood Rain Bow",
+    "Item ID": "4381",
+    "Name": "Blood Rain Bow",
     "Damage": "14",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -4976,11 +4950,11 @@
     "Velocity": "18",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4463",
-    "name": "Gladius",
+    "Item ID": "4463",
+    "Name": "Gladius",
     "Damage": "15",
     "Knockback": "0.5 (Extremely weak)",
     "Mana": "",
@@ -4989,11 +4963,11 @@
     "Velocity": "4.8",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4607",
-    "name": "Desert Tiger Staff",
+    "Item ID": "4607",
+    "Name": "Desert Tiger Staff",
     "Damage": "41",
     "Knockback": "4 (Weak)",
     "Mana": "10",
@@ -5002,11 +4976,11 @@
     "Velocity": "40",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4672",
-    "name": "Leather Whip",
+    "Item ID": "4672",
+    "Name": "Leather Whip",
     "Damage": "14",
     "Knockback": "0.5 (Extremely weak)",
     "Mana": "",
@@ -5015,11 +4989,11 @@
     "Velocity": "8",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4678",
-    "name": "Durendal",
+    "Item ID": "4678",
+    "Name": "Durendal",
     "Damage": "55",
     "Knockback": "2 (Very weak)",
     "Mana": "",
@@ -5028,11 +5002,11 @@
     "Velocity": "12",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4679",
-    "name": "Morning Star",
+    "Item ID": "4679",
+    "Name": "Morning Star",
     "Damage": "180",
     "Knockback": "11 (Extremely strong)",
     "Mana": "",
@@ -5041,11 +5015,11 @@
     "Velocity": "8",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4680",
-    "name": "Dark Harvest",
+    "Item ID": "4680",
+    "Name": "Dark Harvest",
     "Damage": "100",
     "Knockback": "3 (Very weak)",
     "Mana": "",
@@ -5054,11 +5028,11 @@
     "Velocity": "12",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4703",
-    "name": "Quad-Barrel Shotgun",
+    "Item ID": "4703",
+    "Name": "Quad-Barrel Shotgun",
     "Damage": "17",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -5067,11 +5041,11 @@
     "Velocity": "7",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4707",
-    "name": "Tragic Umbrella",
+    "Item ID": "4707",
+    "Name": "Tragic Umbrella",
     "Damage": "15",
     "Knockback": "5 (Average)",
     "Mana": "",
@@ -5080,11 +5054,11 @@
     "Velocity": "",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4711",
-    "name": "Gravedigger's Shovel",
+    "Item ID": "4711",
+    "Name": "Gravedigger's Shovel",
     "Damage": "12",
     "Knockback": "3.5 (Weak)",
     "Mana": "",
@@ -5093,11 +5067,11 @@
     "Velocity": "",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4715",
-    "name": "Stellar Tune",
+    "Item ID": "4715",
+    "Name": "Stellar Tune",
     "Damage": "85",
     "Knockback": "0 (No knockback)",
     "Mana": "12",
@@ -5106,11 +5080,11 @@
     "Velocity": "3",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4758",
-    "name": "Blade Staff",
+    "Item ID": "4758",
+    "Name": "Blade Staff",
     "Damage": "6",
     "Knockback": "0 (No knockback)",
     "Mana": "10",
@@ -5119,11 +5093,11 @@
     "Velocity": "10",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4760",
-    "name": "Sergeant United Shield",
+    "Item ID": "4760",
+    "Name": "Sergeant United Shield",
     "Damage": "80",
     "Knockback": "0 (No knockback)",
     "Mana": "",
@@ -5132,11 +5106,11 @@
     "Velocity": "20",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4764",
-    "name": "Shroomerang",
+    "Item ID": "4764",
+    "Name": "Shroomerang",
     "Damage": "14",
     "Knockback": "7 (Strong)",
     "Mana": "",
@@ -5145,11 +5119,11 @@
     "Velocity": "10.5",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4788",
-    "name": "Jousting Lance",
+    "Item ID": "4788",
+    "Name": "Jousting Lance",
     "Damage": "56",
     "Knockback": "12 (Insane)",
     "Mana": "",
@@ -5158,11 +5132,11 @@
     "Velocity": "3.5",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4789",
-    "name": "Shadow Jousting Lance",
+    "Item ID": "4789",
+    "Name": "Shadow Jousting Lance",
     "Damage": "108",
     "Knockback": "14 (Insane)",
     "Mana": "",
@@ -5171,11 +5145,11 @@
     "Velocity": "3.5",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4790",
-    "name": "Hallowed Jousting Lance",
+    "Item ID": "4790",
+    "Name": "Hallowed Jousting Lance",
     "Damage": "78",
     "Knockback": "13 (Insane)",
     "Mana": "",
@@ -5184,11 +5158,11 @@
     "Velocity": "3.5",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4818",
-    "name": "Combat Wrench",
+    "Item ID": "4818",
+    "Name": "Combat Wrench",
     "Damage": "25",
     "Knockback": "3.5 (Weak)",
     "Mana": "",
@@ -5197,11 +5171,11 @@
     "Velocity": "17",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4911",
-    "name": "Cool Whip",
+    "Item ID": "4911",
+    "Name": "Cool Whip",
     "Damage": "50",
     "Knockback": "1.5 (Extremely weak)",
     "Mana": "",
@@ -5210,11 +5184,11 @@
     "Velocity": "8",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4912",
-    "name": "Firecracker",
+    "Item ID": "4912",
+    "Name": "Firecracker",
     "Damage": "40",
     "Knockback": "2 (Very weak)",
     "Mana": "",
@@ -5223,11 +5197,11 @@
     "Velocity": "8",
     "Rarity": "4",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4913",
-    "name": "Snapthorn",
+    "Item ID": "4913",
+    "Name": "Snapthorn",
     "Damage": "18",
     "Knockback": "1 (Extremely weak)",
     "Mana": "",
@@ -5236,11 +5210,11 @@
     "Velocity": "8",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4914",
-    "name": "Kaleidoscope",
+    "Item ID": "4914",
+    "Name": "Kaleidoscope",
     "Damage": "180",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -5249,11 +5223,11 @@
     "Velocity": "12",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4923",
-    "name": "Starlight",
+    "Item ID": "4923",
+    "Name": "Starlight",
     "Damage": "80",
     "Knockback": "4 (Weak)",
     "Mana": "",
@@ -5262,11 +5236,11 @@
     "Velocity": "15",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4952",
-    "name": "Nightglow",
+    "Item ID": "4952",
+    "Name": "Nightglow",
     "Damage": "50",
     "Knockback": "2.5 (Very weak)",
     "Mana": "23",
@@ -5275,11 +5249,11 @@
     "Velocity": "34",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4953",
-    "name": "Eventide",
+    "Item ID": "4953",
+    "Name": "Eventide",
     "Damage": "50",
     "Knockback": "2 (Very weak)",
     "Mana": "",
@@ -5288,11 +5262,11 @@
     "Velocity": "10",
     "Rarity": "8",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4956",
-    "name": "Zenith",
+    "Item ID": "4956",
+    "Name": "Zenith",
     "Damage": "190",
     "Knockback": "6.5 (Strong)",
     "Mana": "",
@@ -5301,11 +5275,11 @@
     "Velocity": "32",
     "Rarity": "0",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "5005",
-    "name": "Terraprisma",
+    "Item ID": "5005",
+    "Name": "Terraprisma",
     "Damage": "90",
     "Knockback": "4 (Weak)",
     "Mana": "10",
@@ -5314,11 +5288,11 @@
     "Velocity": "10",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "5011",
-    "name": "Mace",
+    "Item ID": "5011",
+    "Name": "Mace",
     "Damage": "18",
     "Knockback": "4.6 (Average)",
     "Mana": "",
@@ -5327,11 +5301,11 @@
     "Velocity": "11",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "5012",
-    "name": "Flaming Mace",
+    "Item ID": "5012",
+    "Name": "Flaming Mace",
     "Damage": "18",
     "Knockback": "4.6 (Average)",
     "Mana": "",
@@ -5340,11 +5314,11 @@
     "Velocity": "11",
     "Rarity": "1",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "5065",
-    "name": "Resonance Scepter",
+    "Item ID": "5065",
+    "Name": "Resonance Scepter",
     "Damage": "70",
     "Knockback": "5 (Average)",
     "Mana": "18",
@@ -5353,11 +5327,11 @@
     "Velocity": "10",
     "Rarity": "5",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "5069",
-    "name": "Flinx Staff",
+    "Item ID": "5069",
+    "Name": "Flinx Staff",
     "Damage": "8",
     "Knockback": "2 (Very weak)",
     "Mana": "5",
@@ -5366,11 +5340,11 @@
     "Velocity": "10",
     "Rarity": "3",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "5074",
-    "name": "Spinal Tap",
+    "Item ID": "5074",
+    "Name": "Spinal Tap",
     "Damage": "29",
     "Knockback": "2 (Very weak)",
     "Mana": "",
@@ -5379,6 +5353,6 @@
     "Velocity": "5",
     "Rarity": "2",
     "Research": "1 required",
-    "recipes": []
+    "Recipes": []
   }
 ]

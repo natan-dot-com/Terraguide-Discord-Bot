@@ -1,0 +1,829 @@
+[
+  {
+    "ID": "1",
+    "Set Name": "Mining armor",
+    "Set Pieces": [
+      "Mining Helmet",
+      "Ultrabright Helmet",
+      "Mining Shirt",
+      "Mining Pants"
+    ],
+    "Set Bonus": "30% increased mining speed",
+    "Defense": "3",
+    "Rarity": "1"
+  },
+  {
+    "ID": "2",
+    "Set Name": "Wood armor",
+    "Set Pieces": [
+      "Wood Helmet",
+      "Wood Breastplate",
+      "Wood Greaves"
+    ],
+    "Set Bonus": "1 defense",
+    "Defense": "3",
+    "Rarity": "0"
+  },
+  {
+    "ID": "3",
+    "Set Name": "Rich Mahogany armor",
+    "Set Pieces": [
+      "Rich Mahogany Helmet",
+      "Rich Mahogany Breastplate",
+      "Rich Mahogany Greaves"
+    ],
+    "Set Bonus": "1 defense",
+    "Defense": "4",
+    "Rarity": "0"
+  },
+  {
+    "ID": "4",
+    "Set Name": "Boreal Wood armor",
+    "Set Pieces": [
+      "Boreal Wood Helmet",
+      "Boreal Wood Breastplate",
+      "Boreal Wood Greaves"
+    ],
+    "Set Bonus": "1 defense",
+    "Defense": "4",
+    "Rarity": "0"
+  },
+  {
+    "ID": "5",
+    "Set Name": "Palm Wood armor",
+    "Set Pieces": [
+      "Palm Wood Helmet",
+      "Palm Wood Breastplate",
+      "Palm Wood Greaves"
+    ],
+    "Set Bonus": "1 defense",
+    "Defense": "4",
+    "Rarity": "0"
+  },
+  {
+    "ID": "6",
+    "Set Name": "Ebonwood armor",
+    "Set Pieces": [
+      "Ebonwood Helmet",
+      "Ebonwood Breastplate",
+      "Ebonwood Greaves"
+    ],
+    "Set Bonus": "1 defense",
+    "Defense": "5",
+    "Rarity": "0"
+  },
+  {
+    "ID": "7",
+    "Set Name": "Shadewood armor",
+    "Set Pieces": [
+      "Shadewood Helmet",
+      "Shadewood Breastplate",
+      "Shadewood Greaves"
+    ],
+    "Set Bonus": "1 defense",
+    "Defense": "5",
+    "Rarity": "0"
+  },
+  {
+    "ID": "8",
+    "Set Name": "Rain armor",
+    "Set Pieces": [
+      "Rain Hat",
+      "Rain Coat",
+      "Rain Hat",
+      "Rain Coat"
+    ],
+    "Set Bonus": "",
+    "Defense": "3",
+    "Rarity": "0"
+  },
+  {
+    "ID": "9",
+    "Set Name": "Snow armor",
+    "Set Pieces": [
+      "Snow Hood",
+      "Snow Coat",
+      "Snow Pants"
+    ],
+    "Set Bonus": "",
+    "Defense": "4",
+    "Rarity": "0"
+  },
+  {
+    "ID": "10",
+    "Set Name": "Pink Snow armor",
+    "Set Pieces": [
+      "Pink Snow Hood",
+      "Pink Snow Coat",
+      "Pink Snow Pants"
+    ],
+    "Set Bonus": "",
+    "Defense": "4",
+    "Rarity": "0"
+  },
+  {
+    "ID": "11",
+    "Set Name": "Angler armor",
+    "Set Pieces": [
+      "Angler Hat",
+      "Angler Vest",
+      "Angler Pants"
+    ],
+    "Set Bonus": "",
+    "Defense": "4",
+    "Rarity": "1"
+  },
+  {
+    "ID": "12",
+    "Set Name": "Cactus armor",
+    "Set Pieces": [
+      "Cactus Helmet",
+      "Cactus Breastplate",
+      "Cactus Leggings"
+    ],
+    "Set Bonus": "Attackers take damage from the cactus spines",
+    "Defense": "3",
+    "Rarity": "0"
+  },
+  {
+    "ID": "13",
+    "Set Name": "Copper armor",
+    "Set Pieces": [
+      "Copper Helmet",
+      "Copper Chainmail",
+      "Copper Greaves"
+    ],
+    "Set Bonus": "2 defense",
+    "Defense": "6",
+    "Rarity": "0"
+  },
+  {
+    "ID": "14",
+    "Set Name": "Tin armor",
+    "Set Pieces": [
+      "Tin Helmet",
+      "Tin Chainmail",
+      "Tin Greaves"
+    ],
+    "Set Bonus": "2 defense",
+    "Defense": "7",
+    "Rarity": "0"
+  },
+  {
+    "ID": "15",
+    "Set Name": "Pumpkin armor",
+    "Set Pieces": [
+      "Pumpkin Helmet",
+      "Pumpkin Breastplate",
+      "Pumpkin Leggings"
+    ],
+    "Set Bonus": "10% increased damage",
+    "Defense": "7",
+    "Rarity": "0"
+  },
+  {
+    "ID": "16",
+    "Set Name": "Ninja armor",
+    "Set Pieces": [
+      "Ninja Hood",
+      "Ninja Shirt",
+      "Ninja Pants",
+      "Ninja Hood",
+      "Ninja Shirt",
+      "Ninja Pants",
+      "Ninja Hood",
+      "Ninja Shirt",
+      "Ninja Pants"
+    ],
+    "Set Bonus": "20% increased movement speed",
+    "Defense": "9",
+    "Rarity": "1"
+  },
+  {
+    "ID": "17",
+    "Set Name": "Iron armor",
+    "Set Pieces": [
+      "Iron Helmet",
+      "Ancient Iron Helmet",
+      "Iron Chainmail",
+      "Iron Greaves"
+    ],
+    "Set Bonus": "2 defense",
+    "Defense": "9",
+    "Rarity": "0"
+  },
+  {
+    "ID": "18",
+    "Set Name": "Lead armor",
+    "Set Pieces": [
+      "Lead Helmet",
+      "Lead Chainmail",
+      "Lead Greaves"
+    ],
+    "Set Bonus": "3 defense",
+    "Defense": "11",
+    "Rarity": "0"
+  },
+  {
+    "ID": "19",
+    "Set Name": "Silver armor",
+    "Set Pieces": [
+      "Silver Helmet",
+      "Silver Chainmail",
+      "Silver Greaves"
+    ],
+    "Set Bonus": "3 defense",
+    "Defense": "13",
+    "Rarity": "0"
+  },
+  {
+    "ID": "20",
+    "Set Name": "Tungsten armor",
+    "Set Pieces": [
+      "Tungsten Helmet",
+      "Tungsten Chainmail",
+      "Tungsten Greaves"
+    ],
+    "Set Bonus": "3 defense",
+    "Defense": "15",
+    "Rarity": "0"
+  },
+  {
+    "ID": "21",
+    "Set Name": "Gold armor",
+    "Set Pieces": [
+      "Gold Helmet",
+      "Ancient Gold Helmet",
+      "Gold Chainmail",
+      "Gold Greaves"
+    ],
+    "Set Bonus": "3 defense",
+    "Defense": "16",
+    "Rarity": "0"
+  },
+  {
+    "ID": "22",
+    "Set Name": "Platinum armor",
+    "Set Pieces": [
+      "Platinum Helmet",
+      "Platinum Chainmail",
+      "Platinum Greaves"
+    ],
+    "Set Bonus": "4 defense",
+    "Defense": "20",
+    "Rarity": "0"
+  },
+  {
+    "ID": "23",
+    "Set Name": "Fossil armor",
+    "Set Pieces": [
+      "Fossil Helmet",
+      "Fossil Plate",
+      "Fossil Greaves"
+    ],
+    "Set Bonus": "20% chance to not consume ammo . 50% chance to not consume thrown item",
+    "Defense": "13",
+    "Rarity": "1"
+  },
+  {
+    "ID": "24",
+    "Set Name": "Bee armor",
+    "Set Pieces": [
+      "Bee Headgear",
+      "Bee Breastplate",
+      "Bee Greaves"
+    ],
+    "Set Bonus": "Increases minion damage by 10%",
+    "Defense": "13",
+    "Rarity": "3"
+  },
+  {
+    "ID": "25",
+    "Set Name": "Obsidian armor",
+    "Set Pieces": [
+      "Obsidian Outlaw Hat",
+      "Obsidian Longcoat",
+      "Obsidian Pants"
+    ],
+    "Set Bonus": "Increases whip range by 50% and speed by 35%,. Increases minion damage by 15%",
+    "Defense": "15",
+    "Rarity": "0"
+  },
+  {
+    "ID": "26",
+    "Set Name": "Gladiator armor",
+    "Set Pieces": [
+      "Gladiator Helmet",
+      "Gladiator Breastplate",
+      "Gladiator Leggings"
+    ],
+    "Set Bonus": "Grants immunity to knockback",
+    "Defense": "16",
+    "Rarity": "0"
+  },
+  {
+    "ID": "27",
+    "Set Name": "Meteor armor",
+    "Set Pieces": [
+      "Meteor Helmet",
+      "Meteor Suit",
+      "Meteor Leggings"
+    ],
+    "Set Bonus": "Space Gun costs 0 mana",
+    "Defense": "16",
+    "Rarity": "1"
+  },
+  {
+    "ID": "28",
+    "Set Name": "Jungle armor",
+    "Set Pieces": [
+      "Jungle Hat",
+      "Jungle Shirt",
+      "Jungle Pants"
+    ],
+    "Set Bonus": "16% reduced mana usage",
+    "Defense": "17",
+    "Rarity": "3"
+  },
+  {
+    "ID": "29",
+    "Set Name": "Ancient Cobalt armor",
+    "Set Pieces": [
+      "Ancient Cobalt Helmet",
+      "Ancient Cobalt Breastplate",
+      "Ancient Cobalt Leggings"
+    ],
+    "Set Bonus": "16% reduced mana usage",
+    "Defense": "17",
+    "Rarity": "3"
+  },
+  {
+    "ID": "30",
+    "Set Name": "Necro armor",
+    "Set Pieces": [
+      "Necro Helmet",
+      "Ancient Necro Helmet",
+      "Necro Breastplate",
+      "Necro Greaves"
+    ],
+    "Set Bonus": "10% increased ranged critical strike chance   .  20% chance not to consume ammo",
+    "Defense": "19",
+    "Rarity": "2"
+  },
+  {
+    "ID": "31",
+    "Set Name": "Shadow armor",
+    "Set Pieces": [
+      "Shadow Helmet",
+      "Shadow Scalemail",
+      "Shadow Greaves"
+    ],
+    "Set Bonus": "15% increased movement speed",
+    "Defense": "19",
+    "Rarity": "1"
+  },
+  {
+    "ID": "32",
+    "Set Name": "Ancient Shadow armor",
+    "Set Pieces": [
+      "Ancient Shadow Helmet",
+      "Ancient Shadow Scalemail",
+      "Ancient Shadow Greaves"
+    ],
+    "Set Bonus": "15% increased movement speed",
+    "Defense": "19",
+    "Rarity": "1"
+  },
+  {
+    "ID": "33",
+    "Set Name": "Crimson armor",
+    "Set Pieces": [
+      "Crimson Helmet",
+      "Crimson Scalemail",
+      "Crimson Greaves"
+    ],
+    "Set Bonus": "Greatly increased life regen",
+    "Defense": "19",
+    "Rarity": "1"
+  },
+  {
+    "ID": "34",
+    "Set Name": "Molten armor",
+    "Set Pieces": [
+      "Molten Helmet",
+      "Molten Breastplate",
+      "Molten Greaves"
+    ],
+    "Set Bonus": "10% extra melee damage,. Cannot be set on fire . 17% extra melee damage",
+    "Defense": "25",
+    "Rarity": "3"
+  },
+  {
+    "ID": "35",
+    "Set Name": "Pearlwood armor",
+    "Set Pieces": [
+      "Pearlwood Helmet",
+      "Pearlwood Breastplate",
+      "Pearlwood Greaves"
+    ],
+    "Set Bonus": "1 defense",
+    "Defense": "8",
+    "Rarity": "0"
+  },
+  {
+    "ID": "36",
+    "Set Name": "Spider armor",
+    "Set Pieces": [
+      "Spider Mask",
+      "Spider Breastplate",
+      "Spider Greaves"
+    ],
+    "Set Bonus": "Increases minion damage by 12%",
+    "Defense": "20",
+    "Rarity": "4"
+  },
+  {
+    "ID": "37",
+    "Set Name": "Cobalt armor",
+    "Set Pieces": [
+      "Cobalt Breastplate",
+      "Cobalt Leggings",
+      "Cobalt Hat",
+      "Cobalt Helmet",
+      "Cobalt Mask"
+    ],
+    "Set Bonus": ":14% reduced mana usage. :15% increased melee speed. :20% chance to not consume ammo",
+    "Defense": "18",
+    "Rarity": "4"
+  },
+  {
+    "ID": "38",
+    "Set Name": "Palladium armor",
+    "Set Pieces": [
+      "Palladium Breastplate",
+      "Palladium Leggings",
+      "Palladium Headgear",
+      "Palladium Mask",
+      "Palladium Helmet"
+    ],
+    "Set Bonus": "Greatly increases life regeneration after striking an enemy",
+    "Defense": "32",
+    "Rarity": "4"
+  },
+  {
+    "ID": "39",
+    "Set Name": "Mythril armor",
+    "Set Pieces": [
+      "Mythril Chainmail",
+      "Mythril Greaves",
+      "Mythril Hood",
+      "Mythril Helmet",
+      "Mythril Hat"
+    ],
+    "Set Bonus": ":17% reduced mana usage. :10% increased melee critical strike chance. :20% chance to not consume ammo",
+    "Defense": "24",
+    "Rarity": "4"
+  },
+  {
+    "ID": "40",
+    "Set Name": "Orichalcum armor",
+    "Set Pieces": [
+      "Orichalcum Breastplate",
+      "Orichalcum Leggings",
+      "Orichalcum Headgear",
+      "Orichalcum Mask",
+      "Orichalcum Helmet"
+    ],
+    "Set Bonus": "Flower petals will fall on your target for extra damage",
+    "Defense": "42",
+    "Rarity": "4"
+  },
+  {
+    "ID": "41",
+    "Set Name": "Adamantite armor",
+    "Set Pieces": [
+      "Adamantite Breastplate",
+      "Adamantite Leggings",
+      "Adamantite Headgear",
+      "Adamantite Helmet",
+      "Adamantite Mask"
+    ],
+    "Set Bonus": ":19% reduced mana usage. :20% increased melee and movement speed. :25% chance to not consume ammo",
+    "Defense": "32",
+    "Rarity": "4"
+  },
+  {
+    "ID": "42",
+    "Set Name": "Titanium armor",
+    "Set Pieces": [
+      "Titanium Breastplate",
+      "Titanium Leggings",
+      "Titanium Headgear",
+      "Titanium Mask",
+      "Titanium Helmet"
+    ],
+    "Set Bonus": "Attacking generates a defensive barrier of titanium shards",
+    "Defense": "49",
+    "Rarity": "4"
+  },
+  {
+    "ID": "43",
+    "Set Name": "Crystal Assassin armor",
+    "Set Pieces": [
+      "Crystal Assassin Hood",
+      "Crystal Assassin Shirt",
+      "Crystal Assassin Pants"
+    ],
+    "Set Bonus": "Allows the ability to dash. 10% increased damage and critical strike chance",
+    "Defense": "36",
+    "Rarity": "5"
+  },
+  {
+    "ID": "44",
+    "Set Name": "Frost armor",
+    "Set Pieces": [
+      "Frost Helmet",
+      "Frost Breastplate",
+      "Frost Leggings"
+    ],
+    "Set Bonus": "Melee and ranged attacks cause frostburn. Increases melee and ranged damage by 10%",
+    "Defense": "43",
+    "Rarity": "5"
+  },
+  {
+    "ID": "45",
+    "Set Name": "Forbidden armor",
+    "Set Pieces": [
+      "Forbidden Mask",
+      "Forbidden Robes",
+      "Forbidden Treads"
+    ],
+    "Set Bonus": "Double tap  Down",
+    "Defense": "26",
+    "Rarity": "5"
+  },
+  {
+    "ID": "46",
+    "Set Name": "Squire armor",
+    "Set Pieces": [
+      "Squire's Great Helm",
+      "Squire's Plating",
+      "Squire's Greaves"
+    ],
+    "Set Bonus": "Increases your max number of sentries. Ballista pierces more targets and panics when you take damage",
+    "Defense": "58",
+    "Rarity": "8"
+  },
+  {
+    "ID": "47",
+    "Set Name": "Monk armor",
+    "Set Pieces": [
+      "Monk's Bushy Brow Bald Cap",
+      "Monk's Shirt",
+      "Monk's Pants"
+    ],
+    "Set Bonus": "Increases your max number of sentries. Lightning Aura can now crit and strikes faster",
+    "Defense": "46",
+    "Rarity": "8"
+  },
+  {
+    "ID": "48",
+    "Set Name": "Huntress armor",
+    "Set Pieces": [
+      "Huntress's Wig",
+      "Huntress's Jerkin",
+      "Huntress's Pants"
+    ],
+    "Set Bonus": "Increases your max number of sentries. Explosive Traps recharge faster and oil enemies. Set oiled enemies on fire for extra damage",
+    "Defense": "36",
+    "Rarity": "8"
+  },
+  {
+    "ID": "49",
+    "Set Name": "Apprentice armor",
+    "Set Pieces": [
+      "Apprentice's Hat",
+      "Apprentice's Robe",
+      "Apprentice's Trousers"
+    ],
+    "Set Bonus": "Increases your max number of sentries. Flameburst field of view and range are dramatically increased",
+    "Defense": "32",
+    "Rarity": "8"
+  },
+  {
+    "ID": "50",
+    "Set Name": "Hallowed armor",
+    "Set Pieces": [
+      "Hallowed Plate Mail",
+      "Hallowed Greaves",
+      "Hallowed Mask",
+      "Hallowed Helmet",
+      "Hallowed Headgear",
+      "Hallowed Hood"
+    ],
+    "Set Bonus": " Become immune after striking an enemy. :Become immune after striking an enemy,. and increases your max number of minions by 2",
+    "Defense": "31",
+    "Rarity": "5"
+  },
+  {
+    "ID": "51",
+    "Set Name": "Ancient Hallowed armor",
+    "Set Pieces": [
+      "Ancient Hallowed Plate Mail",
+      "Ancient Hallowed Greaves",
+      "Ancient Hallowed Mask",
+      "Ancient Hallowed Helmet",
+      "Ancient Hallowed Headgear",
+      "Ancient Hallowed Hood"
+    ],
+    "Set Bonus": "",
+    "Defense": "50",
+    "Rarity": "5"
+  },
+  {
+    "ID": "52",
+    "Set Name": "Chlorophyte armor",
+    "Set Pieces": [
+      "Chlorophyte Plate Mail",
+      "Chlorophyte Greaves",
+      "Chlorophyte Mask",
+      "Chlorophyte Helmet",
+      "Chlorophyte Headgear"
+    ],
+    "Set Bonus": "Summons a powerful leaf crystal to shoot at nearby enemies .  Reduces damage taken by 5% (with Mask)",
+    "Defense": "51",
+    "Rarity": "7"
+  },
+  {
+    "ID": "53",
+    "Set Name": "Turtle armor",
+    "Set Pieces": [
+      "Turtle Helmet",
+      "Turtle Scale Mail",
+      "Turtle Leggings"
+    ],
+    "Set Bonus": "Attackers also take double damage. Reduces damage taken by 15%",
+    "Defense": "65",
+    "Rarity": "8"
+  },
+  {
+    "ID": "54",
+    "Set Name": "Tiki armor",
+    "Set Pieces": [
+      "Tiki Mask",
+      "Tiki Shirt",
+      "Tiki Pants"
+    ],
+    "Set Bonus": "Increases your max number of minions",
+    "Defense": "35",
+    "Rarity": "7"
+  },
+  {
+    "ID": "55",
+    "Set Name": "Beetle armor",
+    "Set Pieces": [
+      "Beetle Helmet",
+      "Beetle Leggings",
+      "Beetle Scale Mail",
+      "Beetle Shell"
+    ],
+    "Set Bonus": ":Beetles increase your melee damage and speed. :Beetles protect you from damage",
+    "Defense": "61",
+    "Rarity": "8"
+  },
+  {
+    "ID": "56",
+    "Set Name": "Shroomite armor",
+    "Set Pieces": [
+      "Shroomite Breastplate",
+      "Shroomite Leggings",
+      "Shroomite Headgear",
+      "Shroomite Helmet",
+      "Shroomite Mask"
+    ],
+    "Set Bonus": "Not moving puts you in stealth,. increasing ranged ability and reducing chance for enemies to target you",
+    "Defense": "51",
+    "Rarity": "8"
+  },
+  {
+    "ID": "57",
+    "Set Name": "Spectre armor",
+    "Set Pieces": [
+      "Spectre Robe",
+      "Spectre Pants",
+      "Spectre Mask",
+      "Spectre Hood"
+    ],
+    "Set Bonus": ":Reduces Magic damage by 40% and converts it to healing force. Magic damage done to enemies heals the player with lowest health. :Magic damage done will hurt extra nearby enemies",
+    "Defense": "30",
+    "Rarity": "8"
+  },
+  {
+    "ID": "58",
+    "Set Name": "Spooky armor",
+    "Set Pieces": [
+      "Spooky Helmet",
+      "Spooky Breastplate",
+      "Spooky Leggings"
+    ],
+    "Set Bonus": "Increases minion damage by 25%",
+    "Defense": "30",
+    "Rarity": "8"
+  },
+  {
+    "ID": "59",
+    "Set Name": "Valhalla Knight armor",
+    "Set Pieces": [
+      "Valhalla Knight's Helm",
+      "Valhalla Knight's Breastplate",
+      "Valhalla Knight's Greaves"
+    ],
+    "Set Bonus": "Increases your max number of sentries. Greatly enhances Ballista effectiveness",
+    "Defense": "68",
+    "Rarity": "8"
+  },
+  {
+    "ID": "60",
+    "Set Name": "Shinobi Infiltrator armor",
+    "Set Pieces": [
+      "Shinobi Infiltrator's Helmet",
+      "Shinobi Infiltrator's Torso",
+      "Shinobi Infiltrator's Pants"
+    ],
+    "Set Bonus": "Increases your max number of sentries. Greatly enhances Lightning Aura effectiveness",
+    "Defense": "54",
+    "Rarity": "8"
+  },
+  {
+    "ID": "61",
+    "Set Name": "Red Riding armor",
+    "Set Pieces": [
+      "Red Riding Hood",
+      "Red Riding Dress",
+      "Red Riding Leggings"
+    ],
+    "Set Bonus": "Increases your max number of sentries. Greatly enhances Explosive Traps effectiveness",
+    "Defense": "48",
+    "Rarity": "8"
+  },
+  {
+    "ID": "62",
+    "Set Name": "Dark Artist armor",
+    "Set Pieces": [
+      "Dark Artist's Hat",
+      "Dark Artist's Robes",
+      "Dark Artist's Leggings"
+    ],
+    "Set Bonus": "Increases your max number of sentries. Greatly enhances Flameburst effectiveness",
+    "Defense": "42",
+    "Rarity": "8"
+  },
+  {
+    "ID": "63",
+    "Set Name": "Solar Flare armor",
+    "Set Pieces": [
+      "Solar Flare Helmet",
+      "Solar Flare Breastplate",
+      "Solar Flare Leggings"
+    ],
+    "Set Bonus": "Solar shields charge over time to protect you & let you dash. A charge is used to damage enemies you touch. Consumed charges explode & damage enemies",
+    "Defense": "78",
+    "Rarity": "0"
+  },
+  {
+    "ID": "64",
+    "Set Name": "Vortex armor",
+    "Set Pieces": [
+      "Vortex Helmet",
+      "Vortex Breastplate",
+      "Vortex Leggings"
+    ],
+    "Set Bonus": "Double tap  Down to toggle stealth,. increasing ranged ability and reducing chance for enemies to target you but slowing movement speed",
+    "Defense": "62",
+    "Rarity": "0"
+  },
+  {
+    "ID": "65",
+    "Set Name": "Nebula armor",
+    "Set Pieces": [
+      "Nebula Helmet",
+      "Nebula Breastplate",
+      "Nebula Leggings"
+    ],
+    "Set Bonus": "Magic damage has a chance to spawn buff boosters,. pick boosters up to get stacking buffs",
+    "Defense": "46",
+    "Rarity": "0"
+  },
+  {
+    "ID": "66",
+    "Set Name": "Stardust armor",
+    "Set Pieces": [
+      "Stardust Helmet",
+      "Stardust Plate",
+      "Stardust Leggings"
+    ],
+    "Set Bonus": "A stardust guardian will protect you from nearby enemies",
+    "Defense": "38",
+    "Rarity": "0"
+  }
+]

@@ -1,19 +1,18 @@
 
+#Flare and Blue Flare ARE being processed (they shouldn't)
+
 import os,sys,inspect
 current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parent_dir = os.path.dirname(current_dir)
 parent_dir = os.path.dirname(parent_dir)
 sys.path.insert(0, parent_dir) 
 from json_manager import *
-import json
-from tools import *
 import requests
 from bs4 import BeautifulSoup
 
-item_path = 'json_new/items.json'
-item_path_output = 'json_new/items_weapons.json'
+ITEM_PATH_OUTPUT = GLOBAL_JSON_PATH + "items_weapons.json"
 
-item_list = LoadJSONFile(item_path)
+item_list = LoadJSONFile(ITEM_FILE_PATH)
 url = "https://terraria.gamepedia.com/"
 json_list = []
 
@@ -27,8 +26,8 @@ for item in item_list:
 
         if table:
             json_dict = {
-                "id": "",
-                "name": "",
+                "Item ID": "",
+                "Name": "",
                 "Damage": "",
                 "Knockback": "",
                 "Mana": "",
@@ -37,10 +36,10 @@ for item in item_list:
                 "Velocity": "",
                 "Rarity": "",
                 "Research": "",
-                "recipes": [] 
+                "Recipes": [] 
             }
-            json_dict['id'] = item['id']
-            json_dict['name'] = item['name']
+            json_dict["Item ID"] = item["id"]
+            json_dict["Name"] = item["name"]
 
             damage = table.find("th", text="Damage")
             if damage:
@@ -75,7 +74,7 @@ for item in item_list:
             if research:
                 json_dict['Research'] = research.parent.parent.td.text
 
-            json_dict['recipes'] = []
+            json_dict["Recipes"] = []
             json_list.append(json_dict)
 
-SaveJSONFile(item_path_output, json_list)
+SaveJSONFile(ITEM_PATH_OUTPUT, json_list)

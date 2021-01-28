@@ -1,3 +1,5 @@
+#Everything seems to work.
+
 import os,sys,inspect
 current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parent_dir = os.path.dirname(current_dir)
@@ -6,33 +8,32 @@ sys.path.insert(0, parent_dir)
 from json_manager import *
 from bs4 import BeautifulSoup
 import requests
-import json
 
-ITEMS_BLOCK_PATH = 'json_new/items_blocks.json'
+ITEMS_BLOCK_PATH = GLOBAL_JSON_PATH + "items_blocks.json"
 URL = "https://terraria.gamepedia.com/"
 
-itemList = LoadJSONFile('json_new/items.json')
+itemList = LoadJSONFile(ITEM_FILE_PATH)
 blockList = []
 
 blockCounter = 0
 for itemInstance in itemList:
-    if itemInstance['type'] == "Block":
-        newURL = URL + itemInstance['name'].replace(" ", "_")
+    if itemInstance["Type"] == "Block":
+        newURL = URL + itemInstance["Name"].replace(" ", "_")
         page = requests.get(newURL)
         soup = BeautifulSoup(page.content, 'html.parser')
         
         table = soup.find("table", class_="stat")
         if table:
             jsonDict = {
-                "id": "",
-                "name": "",
+                "Item ID": "",
+                "Name": "",
                 "Placeable": "",
                 "Rarity": "",
                 "Research": "",
-                "recipes": []
+                "Recipes": []
             }
-            jsonDict['id'] = itemInstance['id']
-            jsonDict['name'] = itemInstance['name']
+            jsonDict["Item ID"] = itemInstance["ID"]
+            jsonDict["Name"] = itemInstance["Name"]
             
             placement = table.find("a", title="Placement")
             if placement:

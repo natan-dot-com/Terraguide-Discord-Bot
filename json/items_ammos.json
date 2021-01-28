@@ -1,370 +1,394 @@
 [
   {
-    "id": "40",
-    "name": "Wooden Arrow",
+    "Item ID": "40",
+    "Name": "Wooden Arrow",
     "Used in": "Any Bow or Repeater.",
     "Damage": "5",
     "Velocity": "3",
     "Multiplier": "1",
     "Knockback": "2 (Very weak)",
     "Rarity": "0",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "41",
-    "name": "Flaming Arrow",
+    "Item ID": "41",
+    "Name": "Flaming Arrow",
     "Used in": "Any Bow or Repeater.",
     "Damage": "7",
     "Velocity": "3.5",
     "Multiplier": "1",
     "Knockback": "2 (Very weak)",
     "Rarity": "0",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "47",
-    "name": "Unholy Arrow",
+    "Item ID": "47",
+    "Name": "Unholy Arrow",
     "Used in": "Any Bow or Repeater.",
     "Damage": "12",
     "Velocity": "3.4",
     "Multiplier": "1",
     "Knockback": "3 (Very weak)",
     "Rarity": "1",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "51",
-    "name": "Jester's Arrow",
+    "Item ID": "51",
+    "Name": "Jester's Arrow",
     "Used in": "Any Bow or Repeater.",
     "Damage": "10",
     "Velocity": "0.5",
     "Multiplier": "2",
     "Knockback": "4 (Weak)",
     "Rarity": "1",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "265",
-    "name": "Hellfire Arrow",
+    "Item ID": "265",
+    "Name": "Hellfire Arrow",
     "Used in": "Any Bow or Repeater.",
     "Damage": "13",
     "Velocity": "6.5",
     "Multiplier": "1",
     "Knockback": "8 (Very strong)",
     "Rarity": "2",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "516",
-    "name": "Holy Arrow",
+    "Item ID": "516",
+    "Name": "Holy Arrow",
     "Used in": "Any Bow or Repeater.",
     "Damage": "13",
     "Velocity": "3.5",
     "Multiplier": "1",
     "Knockback": "2 (Very weak)",
     "Rarity": "3",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "545",
-    "name": "Cursed Arrow",
+    "Item ID": "545",
+    "Name": "Cursed Arrow",
     "Used in": "Any Bow or Repeater.",
     "Damage": "17",
     "Velocity": "4",
     "Multiplier": "1",
     "Knockback": "3 (Very weak)",
     "Rarity": "3",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "988",
-    "name": "Frostburn Arrow",
+    "Item ID": "931",
+    "Name": "Flare",
+    "Used in": "Flare Gun",
+    "Damage": "1",
+    "Velocity": "6",
+    "Multiplier": "",
+    "Knockback": "1.5 (Extremely weak)",
+    "Rarity": "0",
+    "Research": "99 required",
+    "Recipes": []
+  },
+  {
+    "Item ID": "988",
+    "Name": "Frostburn Arrow",
     "Used in": "Any Bow or Repeater.",
     "Damage": "9",
     "Velocity": "3.75",
     "Multiplier": "1",
     "Knockback": "2.2 (Very weak)",
     "Rarity": "0",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1235",
-    "name": "Chlorophyte Arrow",
+    "Item ID": "1235",
+    "Name": "Chlorophyte Arrow",
     "Used in": "Any Bow or Repeater.",
     "Damage": "16",
     "Velocity": "4.5",
     "Multiplier": "2",
     "Knockback": "3.5 (Weak)",
     "Rarity": "7",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1334",
-    "name": "Ichor Arrow",
+    "Item ID": "1334",
+    "Name": "Ichor Arrow",
     "Used in": "Any Bow or Repeater.",
     "Damage": "16",
     "Velocity": "4.25",
     "Multiplier": "2",
     "Knockback": "3 (Very weak)",
     "Rarity": "3",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1341",
-    "name": "Venom Arrow",
+    "Item ID": "1341",
+    "Name": "Venom Arrow",
     "Used in": "Any Bow or Repeater.",
     "Damage": "19",
     "Velocity": "4.3",
     "Multiplier": "2",
     "Knockback": "4.2 (Average)",
     "Rarity": "3",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3003",
-    "name": "Bone Arrow",
+    "Item ID": "1614",
+    "Name": "Blue Flare",
+    "Used in": "Flare Gun",
+    "Damage": "1",
+    "Velocity": "6",
+    "Multiplier": "",
+    "Knockback": "1.5 (Extremely weak)",
+    "Rarity": "0",
+    "Research": "99 required",
+    "Recipes": []
+  },
+  {
+    "Item ID": "3003",
+    "Name": "Bone Arrow",
     "Used in": "Any Bow or Repeater.",
     "Damage": "8",
     "Velocity": "3.5",
     "Multiplier": "1",
     "Knockback": "2.5 (Very weak)",
     "Rarity": "0",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3103",
-    "name": "Endless Quiver",
+    "Item ID": "3103",
+    "Name": "Endless Quiver",
     "Used in": "Any Bow or Repeater.",
     "Damage": "5",
     "Velocity": "3",
     "Multiplier": "1",
     "Knockback": "2 (Very weak)",
     "Rarity": "2",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3568",
-    "name": "Luminite Arrow",
+    "Item ID": "3568",
+    "Name": "Luminite Arrow",
     "Used in": "Any Bow or Repeater.",
     "Damage": "15",
     "Velocity": "3",
     "Multiplier": "2",
     "Knockback": "3.5 (Weak)",
     "Rarity": "9",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "5013",
-    "name": "Spectral Arrow",
+    "Item ID": "5013",
+    "Name": "Spectral Arrow",
     "Used in": "Any Bow or Repeater.",
     "Damage": "16",
     "Velocity": "0.5",
     "Multiplier": "1",
     "Knockback": "3 (Very weak)",
     "Rarity": "3",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "5015",
-    "name": "Vulcan Bolt",
+    "Item ID": "5015",
+    "Name": "Vulcan Bolt",
     "Used in": "Any Bow or Repeater.",
     "Damage": "12",
     "Velocity": "",
     "Multiplier": "1",
     "Knockback": "8.5 (Very strong)",
     "Rarity": "0",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "5049",
-    "name": "Heart Arrow",
+    "Item ID": "5049",
+    "Name": "Heart Arrow",
     "Used in": "Any Bow or Repeater.",
     "Damage": "4",
     "Velocity": "",
     "Multiplier": "1",
     "Knockback": "",
     "Rarity": "0",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "97",
-    "name": "Musket Ball",
+    "Item ID": "97",
+    "Name": "Musket Ball",
     "Used in": "Any Gun",
     "Damage": "7",
     "Velocity": "4",
     "Multiplier": "2",
     "Knockback": "2 (Very weak)",
     "Rarity": "0",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "234",
-    "name": "Meteor Shot",
+    "Item ID": "234",
+    "Name": "Meteor Shot",
     "Used in": "Any Gun",
     "Damage": "8",
     "Velocity": "3",
     "Multiplier": "2",
     "Knockback": "1 (Extremely weak)",
     "Rarity": "1",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "278",
-    "name": "Silver Bullet",
+    "Item ID": "278",
+    "Name": "Silver Bullet",
     "Used in": "Any Gun",
     "Damage": "9",
     "Velocity": "4.5",
     "Multiplier": "2",
     "Knockback": "3 (Very weak)",
     "Rarity": "0",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "515",
-    "name": "Crystal Bullet",
+    "Item ID": "515",
+    "Name": "Crystal Bullet",
     "Used in": "Any Gun",
     "Damage": "9",
     "Velocity": "5",
     "Multiplier": "2",
     "Knockback": "1 (Extremely weak)",
     "Rarity": "3",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "546",
-    "name": "Cursed Bullet",
+    "Item ID": "546",
+    "Name": "Cursed Bullet",
     "Used in": "Any Gun",
     "Damage": "12",
     "Velocity": "5",
     "Multiplier": "3",
     "Knockback": "4 (Weak)",
     "Rarity": "3",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1179",
-    "name": "Chlorophyte Bullet",
+    "Item ID": "1179",
+    "Name": "Chlorophyte Bullet",
     "Used in": "Any Gun",
     "Damage": "9",
     "Velocity": "5",
     "Multiplier": "3",
     "Knockback": "4.5 (Average)",
     "Rarity": "7",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1302",
-    "name": "High Velocity Bullet",
+    "Item ID": "1302",
+    "Name": "High Velocity Bullet",
     "Used in": "Any Gun",
     "Damage": "11",
     "Velocity": "4",
     "Multiplier": "8",
     "Knockback": "4 (Weak)",
     "Rarity": "3",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1335",
-    "name": "Ichor Bullet",
+    "Item ID": "1335",
+    "Name": "Ichor Bullet",
     "Used in": "Any Gun",
     "Damage": "13",
     "Velocity": "5.25",
     "Multiplier": "3",
     "Knockback": "4 (Weak)",
     "Rarity": "3",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1342",
-    "name": "Venom Bullet",
+    "Item ID": "1342",
+    "Name": "Venom Bullet",
     "Used in": "Any Gun",
     "Damage": "15",
     "Velocity": "5.3",
     "Multiplier": "3",
     "Knockback": "4.1 (Average)",
     "Rarity": "3",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1349",
-    "name": "Party Bullet",
+    "Item ID": "1349",
+    "Name": "Party Bullet",
     "Used in": "Any Gun",
     "Damage": "10",
     "Velocity": "5.1",
     "Multiplier": "3",
     "Knockback": "5 (Average)",
     "Rarity": "3",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1350",
-    "name": "Nano Bullet",
+    "Item ID": "1350",
+    "Name": "Nano Bullet",
     "Used in": "Any Gun",
     "Damage": "15",
     "Velocity": "4.6",
     "Multiplier": "3",
     "Knockback": "3.6 (Weak)",
     "Rarity": "3",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1351",
-    "name": "Exploding Bullet",
+    "Item ID": "1351",
+    "Name": "Exploding Bullet",
     "Used in": "Any Gun",
     "Damage": "10",
     "Velocity": "4.7",
     "Multiplier": "3",
     "Knockback": "6.6 (Strong)",
     "Rarity": "3",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1352",
-    "name": "Golden Bullet",
+    "Item ID": "1352",
+    "Name": "Golden Bullet",
     "Used in": "Any Gun",
     "Damage": "10",
     "Velocity": "4.6",
     "Multiplier": "3",
     "Knockback": "3.6 (Weak)",
     "Rarity": "3",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3104",
-    "name": "Endless Musket Pouch",
+    "Item ID": "3104",
+    "Name": "Endless Musket Pouch",
     "Used in": "Any Gun",
     "Damage": "7",
     "Velocity": "4",
     "Multiplier": "2",
     "Knockback": "2 (Very weak)",
     "Rarity": "2",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3567",
-    "name": "Luminite Bullet",
+    "Item ID": "3567",
+    "Name": "Luminite Bullet",
     "Used in": "Any Gun",
     "Damage": "20",
     "Velocity": "2",
     "Multiplier": "6",
     "Knockback": "3 (Very weak)",
     "Rarity": "9",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4915",
-    "name": "Tungsten Bullet",
+    "Item ID": "4915",
+    "Name": "Tungsten Bullet",
     "Used in": "Any Gun",
     "Damage": "9",
     "Velocity": "4.5",
     "Multiplier": "2",
     "Knockback": "4 (Weak)",
     "Rarity": "0",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "771",
-    "name": "Rocket I",
+    "Item ID": "771",
+    "Name": "Rocket I",
     "Used in": "Launcher",
     "Damage": "40",
     "Availability": "Always",
@@ -375,8 +399,8 @@
     "Recipes": []
   },
   {
-    "id": "772",
-    "name": "Rocket II",
+    "Item ID": "772",
+    "Name": "Rocket II",
     "Used in": "Launcher",
     "Damage": "40",
     "Availability": "Blood Moon",
@@ -387,8 +411,8 @@
     "Recipes": []
   },
   {
-    "id": "773",
-    "name": "Rocket III",
+    "Item ID": "773",
+    "Name": "Rocket III",
     "Used in": "Launcher",
     "Damage": "65",
     "Availability": "Night or Solar Eclipse",
@@ -399,8 +423,8 @@
     "Recipes": []
   },
   {
-    "id": "774",
-    "name": "Rocket IV",
+    "Item ID": "774",
+    "Name": "Rocket IV",
     "Used in": "Launcher",
     "Damage": "65",
     "Availability": "Solar Eclipse",
@@ -411,8 +435,8 @@
     "Recipes": []
   },
   {
-    "id": "4445",
-    "name": "Cluster Rocket I",
+    "Item ID": "4445",
+    "Name": "Cluster Rocket I",
     "Used in": "Launcher",
     "Damage": "50",
     "Availability": "Post-Martian Madness",
@@ -423,11 +447,11 @@
     "Recipes": []
   },
   {
-    "id": "4446",
-    "name": "Cluster Rocket II",
+    "Item ID": "4446",
+    "Name": "Cluster Rocket II",
     "Used in": "Launcher",
     "Damage": "50",
-    "Availability": "Post-Martian Madness, During Blood Moon or Solar Eclipse",
+    "Availability": "Post-Martian Madness,During Blood Moon or  Solar Eclipse",
     "Rarity": "0",
     "Source": "Purchased from Cyborg",
     "Radius": "Spread",
@@ -435,8 +459,8 @@
     "Recipes": []
   },
   {
-    "id": "4459",
-    "name": "Dry Rocket",
+    "Item ID": "4459",
+    "Name": "Dry Rocket",
     "Used in": "Launcher",
     "Damage": "40",
     "Availability": "Always",
@@ -447,8 +471,8 @@
     "Recipes": []
   },
   {
-    "id": "4447",
-    "name": "Wet Rocket",
+    "Item ID": "4447",
+    "Name": "Wet Rocket",
     "Used in": "Launcher",
     "Damage": "40",
     "Availability": "Always",
@@ -459,8 +483,8 @@
     "Recipes": []
   },
   {
-    "id": "4448",
-    "name": "Lava Rocket",
+    "Item ID": "4448",
+    "Name": "Lava Rocket",
     "Used in": "Launcher",
     "Damage": "40",
     "Availability": "Always",
@@ -471,8 +495,8 @@
     "Recipes": []
   },
   {
-    "id": "4449",
-    "name": "Honey Rocket",
+    "Item ID": "4449",
+    "Name": "Honey Rocket",
     "Used in": "Launcher",
     "Damage": "40",
     "Availability": "Always",
@@ -483,8 +507,8 @@
     "Recipes": []
   },
   {
-    "id": "4457",
-    "name": "Mini Nuke I",
+    "Item ID": "4457",
+    "Name": "Mini Nuke I",
     "Used in": "Launcher",
     "Damage": "75",
     "Availability": "Always",
@@ -495,8 +519,8 @@
     "Recipes": []
   },
   {
-    "id": "4458",
-    "name": "Mini Nuke II",
+    "Item ID": "4458",
+    "Name": "Mini Nuke II",
     "Used in": "Launcher",
     "Damage": "75",
     "Availability": "Always",
@@ -507,87 +531,87 @@
     "Recipes": []
   },
   {
-    "id": "1310",
-    "name": "Poison Dart",
+    "Item ID": "1310",
+    "Name": "Poison Dart",
     "Used in": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle",
     "Damage": "10",
     "Velocity": "2",
     "Multiplier": "1",
     "Knockback": "2 (Very weak)",
     "Rarity": "2",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3009",
-    "name": "Crystal Dart",
+    "Item ID": "3009",
+    "Name": "Crystal Dart",
     "Used in": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle",
     "Damage": "14",
     "Velocity": "1",
     "Multiplier": "2",
     "Knockback": "3.5 (Weak)",
     "Rarity": "3",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3010",
-    "name": "Cursed Dart",
+    "Item ID": "3010",
+    "Name": "Cursed Dart",
     "Used in": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle",
     "Damage": "10",
     "Velocity": "3",
     "Multiplier": "1",
     "Knockback": "2.2 (Very weak)",
     "Rarity": "3",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3011",
-    "name": "Ichor Dart",
+    "Item ID": "3011",
+    "Name": "Ichor Dart",
     "Used in": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle",
     "Damage": "12",
     "Velocity": "3",
     "Multiplier": "1",
     "Knockback": "2.5 (Very weak)",
     "Rarity": "3",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "780",
+    "Item ID": "780",
+    "Name": "Green Solution",
     "Available": "When the Steampunker is spoken to anywhere other than The Hallow",
     "Effect": "Removes Corruption, Crimson, and Hallow. Converts Glowing Mushroom biome to Jungle",
     "Rarity": "3",
-    "Tooltip": "Used by the Clentaminator. Spreads the Purity",
-    "name": "Green Solution"
+    "Tooltip": "Used by the Clentaminator. Spreads the Purity"
   },
   {
-    "id": "781",
+    "Item ID": "781",
+    "Name": "Blue Solution",
     "Available": "When the Steampunker is spoken to in The Hallow",
     "Effect": "Spreads Hallow",
     "Rarity": "3",
-    "Tooltip": "Used by the Clentaminator. Spreads the Hallow",
-    "name": "Blue Solution"
+    "Tooltip": "Used by the Clentaminator. Spreads the Hallow"
   },
   {
-    "id": "782",
+    "Item ID": "782",
+    "Name": "Purple Solution",
     "Available": "During a Blood Moon or Solar Eclipse, in a Corrupt world",
     "Effect": "Spreads Corruption",
     "Rarity": "3",
-    "Tooltip": "Used by the Clentaminator. Spreads the Corruption",
-    "name": "Purple Solution"
+    "Tooltip": "Used by the Clentaminator. Spreads the Corruption"
   },
   {
-    "id": "783",
+    "Item ID": "783",
+    "Name": "Dark Blue Solution",
     "Available": "From the Truffle, any time",
     "Effect": "Converts Jungle to Glowing Mushroom biome",
     "Rarity": "3",
-    "Tooltip": "Used by the Clentaminator. Spreads Glowing Mushrooms",
-    "name": "Dark Blue Solution"
+    "Tooltip": "Used by the Clentaminator. Spreads Glowing Mushrooms"
   },
   {
-    "id": "784",
+    "Item ID": "784",
+    "Name": "Red Solution",
     "Available": "During a Blood Moon or Solar Eclipse, in a Crimson world",
     "Effect": "Spreads Crimson",
     "Rarity": "3",
-    "Tooltip": "Used by the Clentaminator. Spreads the Crimson",
-    "name": "Red Solution"
+    "Tooltip": "Used by the Clentaminator. Spreads the Crimson"
   }
 ]

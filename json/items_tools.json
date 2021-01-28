@@ -1,2279 +1,2136 @@
 [
   {
-    "id": "1",
-    "name": "Iron Pickaxe",
+    "Item ID": "1",
+    "Name": "Iron Pickaxe",
     "Rarity": "0",
     "Use Time": "20 (Very fast)",
     "Tool Speed": "13",
     "Pickaxe Power": "40%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "7",
-    "name": "Iron Hammer",
+    "Item ID": "7",
+    "Name": "Iron Hammer",
     "Rarity": "0",
     "Use Time": "30 (Average)",
     "Tool Speed": "20",
     "Pickaxe Power": "0%",
     "Hammer Power": "40%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "10",
-    "name": "Iron Axe",
+    "Item ID": "10",
+    "Name": "Iron Axe",
     "Rarity": "0",
     "Use Time": "27 (Average)",
     "Tool Speed": "19",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "45%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "45",
-    "name": "War Axe of the Night",
+    "Item ID": "45",
+    "Name": "War Axe of the Night",
     "Rarity": "1",
     "Use Time": "30 (Average)",
     "Tool Speed": "15",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "75%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "50",
-    "name": "Magic Mirror",
+    "Item ID": "50",
+    "Name": "Magic Mirror",
     "Rarity": "1",
     "Use Time": "90 (Snail)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "103",
-    "name": "Nightmare Pickaxe",
+    "Item ID": "103",
+    "Name": "Nightmare Pickaxe",
     "Rarity": "1",
     "Use Time": "20 (Very fast)",
     "Tool Speed": "15",
     "Pickaxe Power": "65%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "104",
-    "name": "The Breaker",
+    "Item ID": "104",
+    "Name": "The Breaker",
     "Rarity": "1",
     "Use Time": "45 (Very slow)",
     "Tool Speed": "19",
     "Pickaxe Power": "0%",
     "Hammer Power": "55%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "122",
-    "name": "Molten Pickaxe",
+    "Item ID": "122",
+    "Name": "Molten Pickaxe",
     "Rarity": "3",
     "Use Time": "23 (Fast)",
     "Tool Speed": "18",
     "Pickaxe Power": "100%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "196",
-    "name": "Wooden Hammer",
+    "Item ID": "196",
+    "Name": "Wooden Hammer",
     "Rarity": "0",
     "Use Time": "37 (Very slow)",
     "Tool Speed": "25",
     "Pickaxe Power": "0%",
     "Hammer Power": "25%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "204",
-    "name": "Meteor Hamaxe",
+    "Item ID": "204",
+    "Name": "Meteor Hamaxe",
     "Rarity": "1",
     "Use Time": "30 (Average)",
     "Tool Speed": "16",
     "Pickaxe Power": "0%",
     "Hammer Power": "60%",
     "Axe Power": "100%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "205",
-    "name": "Empty Bucket",
+    "Item ID": "205",
+    "Name": "Empty Bucket",
     "Rarity": "0",
     "Use Time": "10 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "206",
-    "name": "Water Bucket",
+    "Item ID": "206",
+    "Name": "Water Bucket",
     "Rarity": "0",
     "Use Time": "10 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "207",
-    "name": "Lava Bucket",
+    "Item ID": "207",
+    "Name": "Lava Bucket",
     "Rarity": "0",
     "Use Time": "10 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "213",
-    "name": "Staff of Regrowth",
+    "Item ID": "213",
+    "Name": "Staff of Regrowth",
     "Rarity": "3",
     "Use Time": "25 (Fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "217",
-    "name": "Molten Hamaxe",
+    "Item ID": "217",
+    "Name": "Molten Hamaxe",
     "Rarity": "3",
     "Use Time": "27 (Average)",
     "Tool Speed": "14",
     "Pickaxe Power": "0%",
     "Hammer Power": "70%",
     "Axe Power": "150%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "367",
-    "name": "Pwnhammer",
+    "Item ID": "367",
+    "Name": "Pwnhammer",
     "Rarity": "4",
     "Use Time": "27 (Average)",
     "Tool Speed": "14",
     "Pickaxe Power": "0%",
     "Hammer Power": "80%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "383",
-    "name": "Cobalt Chainsaw",
+    "Item ID": "383",
+    "Name": "Cobalt Chainsaw",
     "Rarity": "4",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "7",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "70%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "384",
-    "name": "Mythril Chainsaw",
+    "Item ID": "384",
+    "Name": "Mythril Chainsaw",
     "Rarity": "4",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "6",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "85%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "385",
-    "name": "Cobalt Drill",
+    "Item ID": "385",
+    "Name": "Cobalt Drill",
     "Rarity": "4",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "7",
     "Pickaxe Power": "110%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "386",
-    "name": "Mythril Drill",
+    "Item ID": "386",
+    "Name": "Mythril Drill",
     "Rarity": "4",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "6",
     "Pickaxe Power": "150%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "387",
-    "name": "Adamantite Chainsaw",
+    "Item ID": "387",
+    "Name": "Adamantite Chainsaw",
     "Rarity": "4",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "4",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "100%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "388",
-    "name": "Adamantite Drill",
+    "Item ID": "388",
+    "Name": "Adamantite Drill",
     "Rarity": "4",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "4",
     "Pickaxe Power": "180%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "437",
-    "name": "Dual Hook",
-    "Rarity": "4",
-    "Use Time": "",
-    "Tool Speed": "",
-    "Pickaxe Power": "",
-    "Hammer Power": "",
-    "Axe Power": "",
-    "recipes": []
-  },
-  {
-    "id": "509",
-    "name": "Red Wrench",
+    "Item ID": "509",
+    "Name": "Red Wrench",
     "Rarity": "1",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "510",
-    "name": "Wire Cutter",
+    "Item ID": "510",
+    "Name": "Wire Cutter",
     "Rarity": "1",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "579",
-    "name": "Drax",
+    "Item ID": "579",
+    "Name": "Drax",
     "Rarity": "4",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "4",
     "Pickaxe Power": "200%",
     "Hammer Power": "0%",
     "Axe Power": "110%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "654",
-    "name": "Ebonwood Hammer",
+    "Item ID": "654",
+    "Name": "Ebonwood Hammer",
     "Rarity": "0",
     "Use Time": "30 (Average)",
     "Tool Speed": "20",
     "Pickaxe Power": "0%",
     "Hammer Power": "40%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "657",
-    "name": "Rich Mahogany Hammer",
+    "Item ID": "657",
+    "Name": "Rich Mahogany Hammer",
     "Rarity": "0",
     "Use Time": "33 (Slow)",
     "Tool Speed": "23",
     "Pickaxe Power": "0%",
     "Hammer Power": "35%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "660",
-    "name": "Pearlwood Hammer",
+    "Item ID": "660",
+    "Name": "Pearlwood Hammer",
     "Rarity": "0",
     "Use Time": "29 (Average)",
     "Tool Speed": "19",
     "Pickaxe Power": "0%",
     "Hammer Power": "45%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "776",
-    "name": "Cobalt Pickaxe",
+    "Item ID": "776",
+    "Name": "Cobalt Pickaxe",
     "Rarity": "4",
     "Use Time": "25 (Fast)",
     "Tool Speed": "13",
     "Pickaxe Power": "110%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "777",
-    "name": "Mythril Pickaxe",
+    "Item ID": "777",
+    "Name": "Mythril Pickaxe",
     "Rarity": "4",
     "Use Time": "25 (Fast)",
     "Tool Speed": "10",
     "Pickaxe Power": "150%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "778",
-    "name": "Adamantite Pickaxe",
+    "Item ID": "778",
+    "Name": "Adamantite Pickaxe",
     "Rarity": "4",
     "Use Time": "25 (Fast)",
     "Tool Speed": "8",
     "Pickaxe Power": "180%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "779",
-    "name": "Clentaminator",
+    "Item ID": "779",
+    "Name": "Clentaminator",
     "Rarity": "5",
     "Use Time": "30 (Average)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "780",
-    "name": "Green Solution",
-    "Rarity": "5",
-    "Use Time": "30 (Average)",
-    "Tool Speed": "",
-    "Pickaxe Power": "",
-    "Hammer Power": "",
-    "Axe Power": "",
-    "recipes": []
-  },
-  {
-    "id": "781",
-    "name": "Blue Solution",
-    "Rarity": "5",
-    "Use Time": "30 (Average)",
-    "Tool Speed": "",
-    "Pickaxe Power": "",
-    "Hammer Power": "",
-    "Axe Power": "",
-    "recipes": []
-  },
-  {
-    "id": "782",
-    "name": "Purple Solution",
-    "Rarity": "5",
-    "Use Time": "30 (Average)",
-    "Tool Speed": "",
-    "Pickaxe Power": "",
-    "Hammer Power": "",
-    "Axe Power": "",
-    "recipes": []
-  },
-  {
-    "id": "783",
-    "name": "Dark Blue Solution",
-    "Rarity": "5",
-    "Use Time": "30 (Average)",
-    "Tool Speed": "",
-    "Pickaxe Power": "",
-    "Hammer Power": "",
-    "Axe Power": "",
-    "recipes": []
-  },
-  {
-    "id": "784",
-    "name": "Red Solution",
-    "Rarity": "5",
-    "Use Time": "30 (Average)",
-    "Tool Speed": "",
-    "Pickaxe Power": "",
-    "Hammer Power": "",
-    "Axe Power": "",
-    "recipes": []
-  },
-  {
-    "id": "787",
-    "name": "Hammush",
+    "Item ID": "787",
+    "Name": "Hammush",
     "Rarity": "7",
     "Use Time": "27 (Average)",
     "Tool Speed": "14",
     "Pickaxe Power": "0%",
     "Hammer Power": "85%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "797",
-    "name": "Flesh Grinder",
+    "Item ID": "797",
+    "Name": "Flesh Grinder",
     "Rarity": "1",
     "Use Time": "40 (Very slow)",
     "Tool Speed": "19",
     "Pickaxe Power": "0%",
     "Hammer Power": "55%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "798",
-    "name": "Deathbringer Pickaxe",
+    "Item ID": "798",
+    "Name": "Deathbringer Pickaxe",
     "Rarity": "1",
     "Use Time": "22 (Fast)",
     "Tool Speed": "14",
     "Pickaxe Power": "70%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "799",
-    "name": "Blood Lust Cluster",
+    "Item ID": "799",
+    "Name": "Blood Lust Cluster",
     "Rarity": "1",
     "Use Time": "32 (Slow)",
     "Tool Speed": "15",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "75%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "832",
-    "name": "Living Wood Wand",
+    "Item ID": "832",
+    "Name": "Living Wood Wand",
     "Rarity": "1",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "850",
-    "name": "Blue Wrench",
+    "Item ID": "850",
+    "Name": "Blue Wrench",
     "Rarity": "1",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "851",
-    "name": "Green Wrench",
+    "Item ID": "851",
+    "Name": "Green Wrench",
     "Rarity": "1",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "882",
-    "name": "Cactus Pickaxe",
+    "Item ID": "882",
+    "Name": "Cactus Pickaxe",
     "Rarity": "0",
     "Use Time": "25 (Fast)",
     "Tool Speed": "16",
     "Pickaxe Power": "35%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "922",
-    "name": "Shadewood Hammer",
+    "Item ID": "922",
+    "Name": "Shadewood Hammer",
     "Rarity": "0",
     "Use Time": "30 (Average)",
     "Tool Speed": "20",
     "Pickaxe Power": "0%",
     "Hammer Power": "40%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "932",
-    "name": "Bone Wand",
+    "Item ID": "932",
+    "Name": "Bone Wand",
     "Rarity": "1",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "933",
-    "name": "Leaf Wand",
+    "Item ID": "933",
+    "Name": "Leaf Wand",
     "Rarity": "1",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "946",
-    "name": "Umbrella",
+    "Item ID": "946",
+    "Name": "Umbrella",
     "Rarity": "1",
     "Use Time": "22 (Fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "990",
-    "name": "Pickaxe Axe",
+    "Item ID": "990",
+    "Name": "Pickaxe Axe",
     "Rarity": "4",
     "Use Time": "25 (Fast)",
     "Tool Speed": "7",
     "Pickaxe Power": "200%",
     "Hammer Power": "0%",
     "Axe Power": "110%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "991",
-    "name": "Cobalt Waraxe",
+    "Item ID": "991",
+    "Name": "Cobalt Waraxe",
     "Rarity": "4",
     "Use Time": "35 (Slow)",
     "Tool Speed": "13",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "70%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "992",
-    "name": "Mythril Waraxe",
+    "Item ID": "992",
+    "Name": "Mythril Waraxe",
     "Rarity": "4",
     "Use Time": "35 (Slow)",
     "Tool Speed": "10",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "85%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "993",
-    "name": "Adamantite Waraxe",
+    "Item ID": "993",
+    "Name": "Adamantite Waraxe",
     "Rarity": "4",
     "Use Time": "35 (Slow)",
     "Tool Speed": "8",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "100%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1071",
-    "name": "Paintbrush",
+    "Item ID": "1071",
+    "Name": "Paintbrush",
     "Rarity": "0",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1072",
-    "name": "Paint Roller",
+    "Item ID": "1072",
+    "Name": "Paint Roller",
     "Rarity": "0",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1100",
-    "name": "Paint Scraper",
+    "Item ID": "1100",
+    "Name": "Paint Scraper",
     "Rarity": "0",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1128",
-    "name": "Honey Bucket",
+    "Item ID": "1128",
+    "Name": "Honey Bucket",
     "Rarity": "0",
     "Use Time": "10 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1129",
-    "name": "Hive Wand",
+    "Item ID": "1129",
+    "Name": "Hive Wand",
     "Rarity": "1",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1188",
-    "name": "Palladium Pickaxe",
+    "Item ID": "1188",
+    "Name": "Palladium Pickaxe",
     "Rarity": "4",
     "Use Time": "25 (Fast)",
     "Tool Speed": "12",
     "Pickaxe Power": "130%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1189",
-    "name": "Palladium Drill",
+    "Item ID": "1189",
+    "Name": "Palladium Drill",
     "Rarity": "4",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "7",
     "Pickaxe Power": "130%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1190",
-    "name": "Palladium Chainsaw",
+    "Item ID": "1190",
+    "Name": "Palladium Chainsaw",
     "Rarity": "4",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "7",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "75%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1195",
-    "name": "Orichalcum Pickaxe",
+    "Item ID": "1195",
+    "Name": "Orichalcum Pickaxe",
     "Rarity": "4",
     "Use Time": "25 (Fast)",
     "Tool Speed": "9",
     "Pickaxe Power": "165%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1196",
-    "name": "Orichalcum Drill",
+    "Item ID": "1196",
+    "Name": "Orichalcum Drill",
     "Rarity": "4",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "5",
     "Pickaxe Power": "165%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1197",
-    "name": "Orichalcum Chainsaw",
+    "Item ID": "1197",
+    "Name": "Orichalcum Chainsaw",
     "Rarity": "4",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "5",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "90%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1202",
-    "name": "Titanium Pickaxe",
+    "Item ID": "1202",
+    "Name": "Titanium Pickaxe",
     "Rarity": "4",
     "Use Time": "25 (Fast)",
     "Tool Speed": "7",
     "Pickaxe Power": "190%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1203",
-    "name": "Titanium Drill",
+    "Item ID": "1203",
+    "Name": "Titanium Drill",
     "Rarity": "4",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "4",
     "Pickaxe Power": "190%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1204",
-    "name": "Titanium Chainsaw",
+    "Item ID": "1204",
+    "Name": "Titanium Chainsaw",
     "Rarity": "4",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "4",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "105%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1222",
-    "name": "Palladium Waraxe",
+    "Item ID": "1222",
+    "Name": "Palladium Waraxe",
     "Rarity": "4",
     "Use Time": "35 (Slow)",
     "Tool Speed": "12",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "75%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1223",
-    "name": "Orichalcum Waraxe",
+    "Item ID": "1223",
+    "Name": "Orichalcum Waraxe",
     "Rarity": "4",
     "Use Time": "35 (Slow)",
     "Tool Speed": "9",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "90%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1224",
-    "name": "Titanium Waraxe",
+    "Item ID": "1224",
+    "Name": "Titanium Waraxe",
     "Rarity": "4",
     "Use Time": "35 (Slow)",
     "Tool Speed": "7",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "105%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1230",
-    "name": "Chlorophyte Pickaxe",
+    "Item ID": "1230",
+    "Name": "Chlorophyte Pickaxe",
     "Rarity": "7",
     "Use Time": "25 (Fast)",
     "Tool Speed": "7",
     "Pickaxe Power": "200%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1231",
-    "name": "Chlorophyte Drill",
+    "Item ID": "1231",
+    "Name": "Chlorophyte Drill",
     "Rarity": "7",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "4",
     "Pickaxe Power": "200%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1232",
-    "name": "Chlorophyte Chainsaw",
+    "Item ID": "1232",
+    "Name": "Chlorophyte Chainsaw",
     "Rarity": "7",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "4",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "115%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1233",
-    "name": "Chlorophyte Greataxe",
+    "Item ID": "1233",
+    "Name": "Chlorophyte Greataxe",
     "Rarity": "7",
     "Use Time": "30 (Average)",
     "Tool Speed": "7",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "115%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1234",
-    "name": "Chlorophyte Warhammer",
+    "Item ID": "1234",
+    "Name": "Chlorophyte Warhammer",
     "Rarity": "7",
     "Use Time": "35 (Slow)",
     "Tool Speed": "14",
     "Pickaxe Power": "0%",
     "Hammer Power": "90%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1262",
-    "name": "Chlorophyte Jackhammer",
+    "Item ID": "1262",
+    "Name": "Chlorophyte Jackhammer",
     "Rarity": "7",
     "Use Time": "25 (Fast)",
     "Tool Speed": "7",
     "Pickaxe Power": "0%",
     "Hammer Power": "90%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1294",
-    "name": "Picksaw",
+    "Item ID": "1294",
+    "Name": "Picksaw",
     "Rarity": "7",
     "Use Time": "16 (Very fast)",
     "Tool Speed": "6",
     "Pickaxe Power": "210%",
     "Hammer Power": "0%",
     "Axe Power": "125%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1305",
-    "name": "The Axe",
+    "Item ID": "1305",
+    "Name": "The Axe",
     "Rarity": "8",
     "Use Time": "23 (Fast)",
     "Tool Speed": "7",
     "Pickaxe Power": "0%",
     "Hammer Power": "100%",
     "Axe Power": "175%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1320",
-    "name": "Bone Pickaxe",
+    "Item ID": "1320",
+    "Name": "Bone Pickaxe",
     "Rarity": "1",
     "Use Time": "19 (Very fast)",
     "Tool Speed": "11",
     "Pickaxe Power": "55%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1326",
-    "name": "Rod of Discord",
+    "Item ID": "1326",
+    "Name": "Rod of Discord",
     "Rarity": "7",
     "Use Time": "20 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1506",
-    "name": "Spectre Pickaxe",
+    "Item ID": "1506",
+    "Name": "Spectre Pickaxe",
     "Rarity": "8",
     "Use Time": "24 (Fast)",
     "Tool Speed": "10",
     "Pickaxe Power": "200%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1507",
-    "name": "Spectre Hamaxe",
+    "Item ID": "1507",
+    "Name": "Spectre Hamaxe",
     "Rarity": "8",
     "Use Time": "28 (Average)",
     "Tool Speed": "8",
     "Pickaxe Power": "0%",
     "Hammer Power": "90%",
     "Axe Power": "150%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1543",
-    "name": "Spectre Paintbrush",
+    "Item ID": "1543",
+    "Name": "Spectre Paintbrush",
     "Rarity": "0",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1544",
-    "name": "Spectre Paint Roller",
+    "Item ID": "1544",
+    "Name": "Spectre Paint Roller",
     "Rarity": "0",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1545",
-    "name": "Spectre Paint Scraper",
+    "Item ID": "1545",
+    "Name": "Spectre Paint Scraper",
     "Rarity": "0",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1786",
-    "name": "Sickle",
+    "Item ID": "1786",
+    "Name": "Sickle",
     "Rarity": "0",
     "Use Time": "24 (Fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1800",
-    "name": "Bat Hook",
-    "Rarity": "3",
-    "Use Time": "0 (Insanely fast)",
-    "Tool Speed": "",
-    "Pickaxe Power": "",
-    "Hammer Power": "",
-    "Axe Power": "",
-    "recipes": []
-  },
-  {
-    "id": "1915",
-    "name": "Candy Cane Hook",
-    "Rarity": "7",
-    "Use Time": "",
-    "Tool Speed": "",
-    "Pickaxe Power": "",
-    "Hammer Power": "",
-    "Axe Power": "",
-    "recipes": []
-  },
-  {
-    "id": "1917",
-    "name": "Candy Cane Pickaxe",
+    "Item ID": "1917",
+    "Name": "Candy Cane Pickaxe",
     "Rarity": "0",
     "Use Time": "20 (Very fast)",
     "Tool Speed": "16",
     "Pickaxe Power": "55%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "1991",
-    "name": "Bug Net",
+    "Item ID": "1991",
+    "Name": "Bug Net",
     "Rarity": "0",
     "Use Time": "25 (Fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2176",
-    "name": "Shroomite Digging Claw",
+    "Item ID": "2176",
+    "Name": "Shroomite Digging Claw",
     "Rarity": "8",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "4",
     "Pickaxe Power": "200%",
     "Hammer Power": "0%",
     "Axe Power": "125%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2289",
-    "name": "Wood Fishing Pole",
+    "Item ID": "2289",
+    "Name": "Wood Fishing Pole",
     "Rarity": "0",
     "Use Time": "8 (Insanely fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2291",
-    "name": "Reinforced Fishing Pole",
+    "Item ID": "2291",
+    "Name": "Reinforced Fishing Pole",
     "Rarity": "0",
     "Use Time": "8 (Insanely fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2292",
-    "name": "Fiberglass Fishing Pole",
+    "Item ID": "2292",
+    "Name": "Fiberglass Fishing Pole",
     "Rarity": "0",
     "Use Time": "8 (Insanely fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2293",
-    "name": "Fisher of Souls",
+    "Item ID": "2293",
+    "Name": "Fisher of Souls",
     "Rarity": "0",
     "Use Time": "8 (Insanely fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2294",
-    "name": "Golden Fishing Rod",
+    "Item ID": "2294",
+    "Name": "Golden Fishing Rod",
     "Rarity": "0",
     "Use Time": "8 (Insanely fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2295",
-    "name": "Mechanic's Rod",
+    "Item ID": "2295",
+    "Name": "Mechanic's Rod",
     "Rarity": "0",
     "Use Time": "8 (Insanely fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2296",
-    "name": "Sitting Duck's Fishing Pole",
+    "Item ID": "2296",
+    "Name": "Sitting Duck's Fishing Pole",
     "Rarity": "0",
     "Use Time": "8 (Insanely fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2320",
-    "name": "Rockfish",
+    "Item ID": "2320",
+    "Name": "Rockfish",
     "Rarity": "3",
     "Use Time": "24 (Fast)",
     "Tool Speed": "14",
     "Pickaxe Power": "0%",
     "Hammer Power": "70%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2341",
-    "name": "Reaver Shark",
+    "Item ID": "2341",
+    "Name": "Reaver Shark",
     "Rarity": "3",
     "Use Time": "22 (Fast)",
     "Tool Speed": "13",
     "Pickaxe Power": "59%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2342",
-    "name": "Sawtooth Shark",
+    "Item ID": "2342",
+    "Name": "Sawtooth Shark",
     "Rarity": "3",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "4",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "70%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2421",
-    "name": "Fleshcatcher",
+    "Item ID": "2421",
+    "Name": "Fleshcatcher",
     "Rarity": "0",
     "Use Time": "8 (Insanely fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2422",
-    "name": "Hotline Fishing Hook",
+    "Item ID": "2422",
+    "Name": "Hotline Fishing Hook",
     "Rarity": "0",
     "Use Time": "8 (Insanely fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2516",
-    "name": "Palm Wood Hammer",
+    "Item ID": "2516",
+    "Name": "Palm Wood Hammer",
     "Rarity": "0",
     "Use Time": "33 (Slow)",
     "Tool Speed": "23",
     "Pickaxe Power": "0%",
     "Hammer Power": "35%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2746",
-    "name": "Boreal Wood Hammer",
+    "Item ID": "2746",
+    "Name": "Boreal Wood Hammer",
     "Rarity": "0",
     "Use Time": "33 (Slow)",
     "Tool Speed": "23",
     "Pickaxe Power": "0%",
     "Hammer Power": "35%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2772",
-    "name": "Vortex Axe",
+    "Item ID": "2772",
+    "Name": "Vortex Axe",
     "Rarity": "0",
     "Use Time": "25 (Fast)",
     "Tool Speed": "7",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "135%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2773",
-    "name": "Vortex Chainsaw",
+    "Item ID": "2773",
+    "Name": "Vortex Chainsaw",
     "Rarity": "0",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "4",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "135%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2774",
-    "name": "Vortex Drill",
+    "Item ID": "2774",
+    "Name": "Vortex Drill",
     "Rarity": "0",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "2",
     "Pickaxe Power": "225%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2775",
-    "name": "Vortex Hammer",
+    "Item ID": "2775",
+    "Name": "Vortex Hammer",
     "Rarity": "0",
     "Use Time": "30 (Average)",
     "Tool Speed": "7",
     "Pickaxe Power": "0%",
     "Hammer Power": "100%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2776",
-    "name": "Vortex Pickaxe",
+    "Item ID": "2776",
+    "Name": "Vortex Pickaxe",
     "Rarity": "0",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "6",
     "Pickaxe Power": "225%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2777",
-    "name": "Nebula Axe",
+    "Item ID": "2777",
+    "Name": "Nebula Axe",
     "Rarity": "0",
     "Use Time": "25 (Fast)",
     "Tool Speed": "7",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "135%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2778",
-    "name": "Nebula Chainsaw",
+    "Item ID": "2778",
+    "Name": "Nebula Chainsaw",
     "Rarity": "0",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "4",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "135%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2779",
-    "name": "Nebula Drill",
+    "Item ID": "2779",
+    "Name": "Nebula Drill",
     "Rarity": "0",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "2",
     "Pickaxe Power": "225%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2780",
-    "name": "Nebula Hammer",
+    "Item ID": "2780",
+    "Name": "Nebula Hammer",
     "Rarity": "0",
     "Use Time": "30 (Average)",
     "Tool Speed": "7",
     "Pickaxe Power": "0%",
     "Hammer Power": "100%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2781",
-    "name": "Nebula Pickaxe",
+    "Item ID": "2781",
+    "Name": "Nebula Pickaxe",
     "Rarity": "0",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "6",
     "Pickaxe Power": "225%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2782",
-    "name": "Solar Flare Axe",
+    "Item ID": "2782",
+    "Name": "Solar Flare Axe",
     "Rarity": "0",
     "Use Time": "25 (Fast)",
     "Tool Speed": "7",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "135%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2783",
-    "name": "Solar Flare Chainsaw",
+    "Item ID": "2783",
+    "Name": "Solar Flare Chainsaw",
     "Rarity": "0",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "4",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "135%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2784",
-    "name": "Solar Flare Drill",
+    "Item ID": "2784",
+    "Name": "Solar Flare Drill",
     "Rarity": "0",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "2",
     "Pickaxe Power": "225%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2785",
-    "name": "Solar Flare Hammer",
+    "Item ID": "2785",
+    "Name": "Solar Flare Hammer",
     "Rarity": "0",
     "Use Time": "30 (Average)",
     "Tool Speed": "7",
     "Pickaxe Power": "0%",
     "Hammer Power": "100%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2786",
-    "name": "Solar Flare Pickaxe",
+    "Item ID": "2786",
+    "Name": "Solar Flare Pickaxe",
     "Rarity": "0",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "6",
     "Pickaxe Power": "225%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2798",
-    "name": "Laser Drill",
+    "Item ID": "2798",
+    "Name": "Laser Drill",
     "Rarity": "8",
     "Use Time": "25 (Fast)",
     "Tool Speed": "6",
     "Pickaxe Power": "230%",
     "Hammer Power": "0%",
     "Axe Power": "150%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "2800",
-    "name": "Anti-Gravity Hook",
-    "Rarity": "7",
-    "Use Time": "",
-    "Tool Speed": "",
-    "Pickaxe Power": "",
-    "Hammer Power": "",
-    "Axe Power": "",
-    "recipes": []
-  },
-  {
-    "id": "3031",
-    "name": "Bottomless Water Bucket",
+    "Item ID": "3031",
+    "Name": "Bottomless Water Bucket",
     "Rarity": "7",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3032",
-    "name": "Super Absorbant Sponge",
+    "Item ID": "3032",
+    "Name": "Super Absorbant Sponge",
     "Rarity": "7",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3098",
-    "name": "Butcher's Chainsaw",
+    "Item ID": "3098",
+    "Name": "Butcher's Chainsaw",
     "Rarity": "8",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "4",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "150%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3124",
-    "name": "Cell Phone",
+    "Item ID": "3124",
+    "Name": "Cell Phone",
     "Rarity": "7",
     "Use Time": "90 (Snail)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3182",
-    "name": "Magic Water Dropper",
+    "Item ID": "3182",
+    "Name": "Magic Water Dropper",
     "Rarity": "0",
     "Use Time": "10 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3183",
-    "name": "Golden Bug Net",
+    "Item ID": "3183",
+    "Name": "Golden Bug Net",
     "Rarity": "4",
     "Use Time": "18 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3184",
-    "name": "Magic Lava Dropper",
+    "Item ID": "3184",
+    "Name": "Magic Lava Dropper",
     "Rarity": "0",
     "Use Time": "10 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3185",
-    "name": "Magic Honey Dropper",
+    "Item ID": "3185",
+    "Name": "Magic Honey Dropper",
     "Rarity": "0",
     "Use Time": "10 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3199",
-    "name": "Ice Mirror",
+    "Item ID": "3199",
+    "Name": "Ice Mirror",
     "Rarity": "1",
     "Use Time": "90 (Snail)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3360",
-    "name": "Living Mahogany Wand",
+    "Item ID": "3360",
+    "Name": "Living Mahogany Wand",
     "Rarity": "1",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3361",
-    "name": "Rich Mahogany Leaf Wand",
+    "Item ID": "3361",
+    "Name": "Rich Mahogany Leaf Wand",
     "Rarity": "1",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3384",
-    "name": "Portal Gun",
+    "Item ID": "3384",
+    "Name": "Portal Gun",
     "Rarity": "8",
     "Use Time": "20 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3462",
-    "name": "Stardust Axe",
+    "Item ID": "3462",
+    "Name": "Stardust Axe",
     "Rarity": "0",
     "Use Time": "25 (Fast)",
     "Tool Speed": "7",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "135%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3463",
-    "name": "Stardust Chainsaw",
+    "Item ID": "3463",
+    "Name": "Stardust Chainsaw",
     "Rarity": "0",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "4",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "135%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3464",
-    "name": "Stardust Drill",
+    "Item ID": "3464",
+    "Name": "Stardust Drill",
     "Rarity": "0",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "2",
     "Pickaxe Power": "225%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3465",
-    "name": "Stardust Hammer",
+    "Item ID": "3465",
+    "Name": "Stardust Hammer",
     "Rarity": "0",
     "Use Time": "30 (Average)",
     "Tool Speed": "7",
     "Pickaxe Power": "0%",
     "Hammer Power": "100%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3466",
-    "name": "Stardust Pickaxe",
+    "Item ID": "3466",
+    "Name": "Stardust Pickaxe",
     "Rarity": "0",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "6",
     "Pickaxe Power": "225%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3481",
-    "name": "Platinum Hammer",
+    "Item ID": "3481",
+    "Name": "Platinum Hammer",
     "Rarity": "0",
     "Use Time": "27 (Average)",
     "Tool Speed": "21",
     "Pickaxe Power": "0%",
     "Hammer Power": "59%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3482",
-    "name": "Platinum Axe",
+    "Item ID": "3482",
+    "Name": "Platinum Axe",
     "Rarity": "0",
     "Use Time": "25 (Fast)",
     "Tool Speed": "17",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "60%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3485",
-    "name": "Platinum Pickaxe",
+    "Item ID": "3485",
+    "Name": "Platinum Pickaxe",
     "Rarity": "0",
     "Use Time": "19 (Very fast)",
     "Tool Speed": "15",
     "Pickaxe Power": "59%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3487",
-    "name": "Tungsten Hammer",
+    "Item ID": "3487",
+    "Name": "Tungsten Hammer",
     "Rarity": "0",
     "Use Time": "28 (Average)",
     "Tool Speed": "25",
     "Pickaxe Power": "0%",
     "Hammer Power": "50%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3488",
-    "name": "Tungsten Axe",
+    "Item ID": "3488",
+    "Name": "Tungsten Axe",
     "Rarity": "0",
     "Use Time": "26 (Average)",
     "Tool Speed": "18",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "55%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3491",
-    "name": "Tungsten Pickaxe",
+    "Item ID": "3491",
+    "Name": "Tungsten Pickaxe",
     "Rarity": "0",
     "Use Time": "21 (Fast)",
     "Tool Speed": "19",
     "Pickaxe Power": "50%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3493",
-    "name": "Lead Hammer",
+    "Item ID": "3493",
+    "Name": "Lead Hammer",
     "Rarity": "0",
     "Use Time": "29 (Average)",
     "Tool Speed": "19",
     "Pickaxe Power": "0%",
     "Hammer Power": "43%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3494",
-    "name": "Lead Axe",
+    "Item ID": "3494",
+    "Name": "Lead Axe",
     "Rarity": "0",
     "Use Time": "28 (Average)",
     "Tool Speed": "19",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "50%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3497",
-    "name": "Lead Pickaxe",
+    "Item ID": "3497",
+    "Name": "Lead Pickaxe",
     "Rarity": "0",
     "Use Time": "19 (Very fast)",
     "Tool Speed": "12",
     "Pickaxe Power": "43%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3499",
-    "name": "Tin Hammer",
+    "Item ID": "3499",
+    "Name": "Tin Hammer",
     "Rarity": "0",
     "Use Time": "31 (Slow)",
     "Tool Speed": "21",
     "Pickaxe Power": "0%",
     "Hammer Power": "38%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3500",
-    "name": "Tin Axe",
+    "Item ID": "3500",
+    "Name": "Tin Axe",
     "Rarity": "0",
     "Use Time": "28 (Average)",
     "Tool Speed": "20",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "40%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3503",
-    "name": "Tin Pickaxe",
+    "Item ID": "3503",
+    "Name": "Tin Pickaxe",
     "Rarity": "0",
     "Use Time": "21 (Fast)",
     "Tool Speed": "14",
     "Pickaxe Power": "35%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3505",
-    "name": "Copper Hammer",
+    "Item ID": "3505",
+    "Name": "Copper Hammer",
     "Rarity": "0",
     "Use Time": "33 (Slow)",
     "Tool Speed": "23",
     "Pickaxe Power": "0%",
     "Hammer Power": "35%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3506",
-    "name": "Copper Axe",
+    "Item ID": "3506",
+    "Name": "Copper Axe",
     "Rarity": "0",
     "Use Time": "30 (Average)",
     "Tool Speed": "21",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "35%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3509",
-    "name": "Copper Pickaxe",
+    "Item ID": "3509",
+    "Name": "Copper Pickaxe",
     "Rarity": "0",
     "Use Time": "23 (Fast)",
     "Tool Speed": "15",
     "Pickaxe Power": "35%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3511",
-    "name": "Silver Hammer",
+    "Item ID": "3511",
+    "Name": "Silver Hammer",
     "Rarity": "0",
     "Use Time": "29 (Average)",
     "Tool Speed": "19",
     "Pickaxe Power": "0%",
     "Hammer Power": "45%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3512",
-    "name": "Silver Axe",
+    "Item ID": "3512",
+    "Name": "Silver Axe",
     "Rarity": "0",
     "Use Time": "26 (Average)",
     "Tool Speed": "18",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "50%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3515",
-    "name": "Silver Pickaxe",
+    "Item ID": "3515",
+    "Name": "Silver Pickaxe",
     "Rarity": "0",
     "Use Time": "19 (Very fast)",
     "Tool Speed": "11",
     "Pickaxe Power": "45%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3517",
-    "name": "Gold Hammer",
+    "Item ID": "3517",
+    "Name": "Gold Hammer",
     "Rarity": "0",
     "Use Time": "28 (Average)",
     "Tool Speed": "23",
     "Pickaxe Power": "0%",
     "Hammer Power": "55%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3518",
-    "name": "Gold Axe",
+    "Item ID": "3518",
+    "Name": "Gold Axe",
     "Rarity": "0",
     "Use Time": "26 (Average)",
     "Tool Speed": "18",
     "Pickaxe Power": "0%",
     "Hammer Power": "0%",
     "Axe Power": "55%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3521",
-    "name": "Gold Pickaxe",
+    "Item ID": "3521",
+    "Name": "Gold Pickaxe",
     "Rarity": "0",
     "Use Time": "20 (Very fast)",
     "Tool Speed": "17",
     "Pickaxe Power": "55%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3522",
-    "name": "Solar Flare Hamaxe",
+    "Item ID": "3522",
+    "Name": "Solar Flare Hamaxe",
     "Rarity": "0",
     "Use Time": "28 (Average)",
     "Tool Speed": "7",
     "Pickaxe Power": "0%",
     "Hammer Power": "100%",
     "Axe Power": "150%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3523",
-    "name": "Vortex Hamaxe",
+    "Item ID": "3523",
+    "Name": "Vortex Hamaxe",
     "Rarity": "0",
     "Use Time": "28 (Average)",
     "Tool Speed": "7",
     "Pickaxe Power": "0%",
     "Hammer Power": "100%",
     "Axe Power": "150%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3524",
-    "name": "Nebula Hamaxe",
+    "Item ID": "3524",
+    "Name": "Nebula Hamaxe",
     "Rarity": "0",
     "Use Time": "28 (Average)",
     "Tool Speed": "7",
     "Pickaxe Power": "0%",
     "Hammer Power": "100%",
     "Axe Power": "150%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3525",
-    "name": "Stardust Hamaxe",
+    "Item ID": "3525",
+    "Name": "Stardust Hamaxe",
     "Rarity": "0",
     "Use Time": "28 (Average)",
     "Tool Speed": "7",
     "Pickaxe Power": "0%",
     "Hammer Power": "100%",
     "Axe Power": "150%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3572",
-    "name": "Lunar Hook",
-    "Rarity": "0",
-    "Use Time": "3 (Insanely fast)",
-    "Tool Speed": "",
-    "Pickaxe Power": "",
-    "Hammer Power": "",
-    "Axe Power": "",
-    "recipes": []
-  },
-  {
-    "id": "3611",
-    "name": "The Grand Design",
+    "Item ID": "3611",
+    "Name": "The Grand Design",
     "Rarity": "2",
     "Use Time": "10 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3612",
-    "name": "Yellow Wrench",
+    "Item ID": "3612",
+    "Name": "Yellow Wrench",
     "Rarity": "1",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3620",
-    "name": "Actuation Rod",
+    "Item ID": "3620",
+    "Name": "Actuation Rod",
     "Rarity": "1",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3623",
-    "name": "Static Hook",
-    "Rarity": "0",
-    "Use Time": "",
-    "Tool Speed": "",
-    "Pickaxe Power": "",
-    "Hammer Power": "",
-    "Axe Power": "",
-    "recipes": []
-  },
-  {
-    "id": "3625",
-    "name": "Multicolor Wrench",
+    "Item ID": "3625",
+    "Name": "Multicolor Wrench",
     "Rarity": "1",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "3782",
-    "name": "Magic Sand Dropper",
+    "Item ID": "3782",
+    "Name": "Magic Sand Dropper",
     "Rarity": "0",
     "Use Time": "10 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4039",
-    "name": "Golf Club (Iron)",
+    "Item ID": "4039",
+    "Name": "Golf Club (Iron)",
     "Rarity": "",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4049",
-    "name": "Lawn Mower",
+    "Item ID": "4049",
+    "Name": "Lawn Mower",
     "Rarity": "1",
     "Use Time": "30 (Average)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4057",
-    "name": "Rain Song",
+    "Item ID": "4057",
+    "Name": "Rain Song",
     "Rarity": "3",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4059",
-    "name": "Fossil Pickaxe",
+    "Item ID": "4059",
+    "Name": "Fossil Pickaxe",
     "Rarity": "1",
     "Use Time": "18 (Very fast)",
     "Tool Speed": "14",
     "Pickaxe Power": "55%",
     "Hammer Power": "0%",
     "Axe Power": "0%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4092",
-    "name": "Golf Club (Putter)",
+    "Item ID": "4092",
+    "Name": "Golf Club (Putter)",
     "Rarity": "",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4093",
-    "name": "Golf Club (Wedge)",
+    "Item ID": "4093",
+    "Name": "Golf Club (Wedge)",
     "Rarity": "",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4094",
-    "name": "Golf Club (Driver)",
+    "Item ID": "4094",
+    "Name": "Golf Club (Driver)",
     "Rarity": "",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4095",
-    "name": "Golf Whistle",
+    "Item ID": "4095",
+    "Name": "Golf Whistle",
     "Rarity": "4",
     "Use Time": "10 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4262",
-    "name": "Snake Charmer's Flute",
+    "Item ID": "4262",
+    "Name": "Snake Charmer's Flute",
     "Rarity": "1",
     "Use Time": "90 (Snail)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4263",
-    "name": "Magic Conch",
+    "Item ID": "4263",
+    "Name": "Magic Conch",
     "Rarity": "1",
     "Use Time": "90 (Snail)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4317",
-    "name": "Haemorrhaxe",
+    "Item ID": "4317",
+    "Name": "Haemorrhaxe",
     "Rarity": "4",
     "Use Time": "27 (Average)",
     "Tool Speed": "11",
     "Pickaxe Power": "0%",
     "Hammer Power": "80%",
     "Axe Power": "150%",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4325",
-    "name": "Chum Caster",
+    "Item ID": "4325",
+    "Name": "Chum Caster",
     "Rarity": "0",
     "Use Time": "8 (Insanely fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4346",
-    "name": "Encumbering Stone",
+    "Item ID": "4346",
+    "Name": "Encumbering Stone",
     "Rarity": "1",
     "Use Time": "",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4372",
-    "name": "Ivy",
+    "Item ID": "4372",
+    "Name": "Ivy",
     "Rarity": "3",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4442",
-    "name": "Scarab Fishing Rod",
+    "Item ID": "4442",
+    "Name": "Scarab Fishing Rod",
     "Rarity": "0",
     "Use Time": "8 (Insanely fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4460",
-    "name": "Sandcastle Bucket",
+    "Item ID": "4460",
+    "Name": "Sandcastle Bucket",
     "Rarity": "1",
     "Use Time": "15 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4587",
-    "name": "Worn Golf Club (Iron)",
+    "Item ID": "4587",
+    "Name": "Worn Golf Club (Iron)",
     "Rarity": "",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4588",
-    "name": "Worn Golf Club (Putter)",
+    "Item ID": "4588",
+    "Name": "Worn Golf Club (Putter)",
     "Rarity": "",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4589",
-    "name": "Worn Golf Club (Wedge)",
+    "Item ID": "4589",
+    "Name": "Worn Golf Club (Wedge)",
     "Rarity": "",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4590",
-    "name": "Worn Golf Club (Driver)",
+    "Item ID": "4590",
+    "Name": "Worn Golf Club (Driver)",
     "Rarity": "",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4591",
-    "name": "Fancy Golf Club (Iron)",
+    "Item ID": "4591",
+    "Name": "Fancy Golf Club (Iron)",
     "Rarity": "",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4592",
-    "name": "Fancy Golf Club (Putter)",
+    "Item ID": "4592",
+    "Name": "Fancy Golf Club (Putter)",
     "Rarity": "",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4593",
-    "name": "Fancy Golf Club (Wedge)",
+    "Item ID": "4593",
+    "Name": "Fancy Golf Club (Wedge)",
     "Rarity": "",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4594",
-    "name": "Fancy Golf Club (Driver)",
+    "Item ID": "4594",
+    "Name": "Fancy Golf Club (Driver)",
     "Rarity": "",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4595",
-    "name": "Premium Golf Club (Iron)",
+    "Item ID": "4595",
+    "Name": "Premium Golf Club (Iron)",
     "Rarity": "",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4596",
-    "name": "Premium Golf Club (Putter)",
+    "Item ID": "4596",
+    "Name": "Premium Golf Club (Putter)",
     "Rarity": "",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4597",
-    "name": "Premium Golf Club (Wedge)",
+    "Item ID": "4597",
+    "Name": "Premium Golf Club (Wedge)",
     "Rarity": "",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4598",
-    "name": "Premium Golf Club (Driver)",
+    "Item ID": "4598",
+    "Name": "Premium Golf Club (Driver)",
     "Rarity": "",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4759",
-    "name": "Squirrel Hook",
-    "Rarity": "1",
-    "Use Time": "0 (Insanely fast)",
-    "Tool Speed": "",
-    "Pickaxe Power": "",
-    "Hammer Power": "",
-    "Axe Power": "",
-    "recipes": []
-  },
-  {
-    "id": "4767",
-    "name": "Guide To Critter Companionship",
+    "Item ID": "4767",
+    "Name": "Guide To Critter Companionship",
     "Rarity": "1",
     "Use Time": "",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4819",
-    "name": "Demon Conch",
+    "Item ID": "4819",
+    "Name": "Demon Conch",
     "Rarity": "4",
     "Use Time": "90 (Snail)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4820",
-    "name": "Bottomless Lava Bucket",
+    "Item ID": "4820",
+    "Name": "Bottomless Lava Bucket",
     "Rarity": "7",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4821",
-    "name": "Lavaproof Bug Net",
+    "Item ID": "4821",
+    "Name": "Lavaproof Bug Net",
     "Rarity": "3",
     "Use Time": "21 (Fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   },
   {
-    "id": "4872",
-    "name": "Lava Absorbant Sponge",
+    "Item ID": "4872",
+    "Name": "Lava Absorbant Sponge",
     "Rarity": "7",
     "Use Time": "12 (Very fast)",
     "Tool Speed": "",
     "Pickaxe Power": "",
     "Hammer Power": "",
     "Axe Power": "",
-    "recipes": []
-  },
-  {
-    "id": "4980",
-    "name": "Hook of Dissonance",
-    "Rarity": "5",
-    "Use Time": "0 (Insanely fast)",
-    "Tool Speed": "",
-    "Pickaxe Power": "",
-    "Hammer Power": "",
-    "Axe Power": "",
-    "recipes": []
+    "Recipes": []
   }
 ]
