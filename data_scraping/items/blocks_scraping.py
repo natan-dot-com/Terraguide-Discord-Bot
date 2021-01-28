@@ -5,6 +5,7 @@ current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfra
 parent_dir = os.path.dirname(current_dir)
 parent_dir = os.path.dirname(parent_dir)
 sys.path.insert(0, parent_dir) 
+from scraping_tools import *
 from json_manager import *
 from bs4 import BeautifulSoup
 import requests
@@ -17,37 +18,37 @@ blockList = []
 
 blockCounter = 0
 for itemInstance in itemList:
-    if itemInstance["Type"] == "Block":
-        newURL = URL + itemInstance["Name"].replace(" ", "_")
+    if itemInstance[SCRAPING_TYPE] == "Block":
+        newURL = URL + itemInstance[SCRAPING_NAME].replace(" ", "_")
         page = requests.get(newURL)
-        soup = BeautifulSoup(page.content, 'html.parser')
+        soup = BeautifulSoup(page.content, "html.parser")
         
         table = soup.find("table", class_="stat")
         if table:
             jsonDict = {
-                "Item ID": "",
-                "Name": "",
-                "Placeable": "",
-                "Rarity": "",
-                "Research": "",
-                "Recipes": []
+                SCRAPING_ITEM_ID: "",
+                SCRAPING_NAME: "",
+                SCRAPING_PLACEABLE: "",
+                SCRAPING_RARITY: "",
+                SCRAPING_RESEARCH: "",
+                SCRAPING_RECIPES: []
             }
-            jsonDict["Item ID"] = itemInstance["ID"]
-            jsonDict["Name"] = itemInstance["Name"]
+            jsonDict[SCRAPING_ITEM_ID] = itemInstance[SCRAPING_ID]
+            jsonDict[SCRAPING_NAME] = itemInstance[SCRAPING_NAME]
             
             placement = table.find("a", title="Placement")
             if placement:
-                jsonDict['Placeable'] = placement.parent.parent.img['alt']
+                jsonDict[SCRAPING_PLACEABLE] = placement.parent.parent.img["alt"]
                 
             rarity = table.find("span", class_="rarity")
             if rarity:
-                jsonDict['Rarity'] = rarity.a['title'][-1]
+                jsonDict[SCRAPING_RARITY] = rarity.a["title"][-1]
                 
             research = table.find("abbr", title="Journey Mode")
             if research:
-                jsonDict['Research'] = research.text
+                jsonDict[SCRAPING_RESEARCH] = research.text
             else:
-                jsonDict['Research'] = "n/a"
+                jsonDict[SCRAPING_RESEARCH] = "n/a"
                 
             print(jsonDict)
             blockList.append(jsonDict)

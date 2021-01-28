@@ -6,6 +6,7 @@ current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfra
 parent_dir = os.path.dirname(current_dir)
 parent_dir = os.path.dirname(parent_dir)
 sys.path.insert(0, parent_dir) 
+from scraping_tools import *
 from json_manager import *
 import requests
 from bs4 import BeautifulSoup
@@ -18,66 +19,66 @@ url = "https://terraria.gamepedia.com/"
 jsonList = []
 
 for itemInstance in itemList:
-    if itemInstance["Type"] == "Weapon":
-        newURL = url + itemInstance["Name"].replace(" ", "_")
-        if itemInstance["Name"] in ITEM_URL:
+    if itemInstance[SCRAPING_TYPE] == "Weapon":
+        newURL = url + itemInstance[SCRAPING_NAME].replace(" ", "_")
+        if itemInstance[SCRAPING_NAME] in ITEM_URL:
             newURL += "_(item)"
-        print("Processing " + newURL + " with ID " + itemInstance["ID"])
+        print("Processing " + newURL + " with ID " + itemInstance[SCRAPING_ID])
         page = requests.get(newURL)
         soup = BeautifulSoup(page.content, "html.parser")
         table = soup.find("div", class_="infobox item")
 
         if table:
             jsonDict = {
-                "Item ID": "",
-                "Name": "",
-                "Damage": "",
-                "Knockback": "",
-                "Mana": "",
-                "Critical Chance": "",
-                "Use Time": "",
-                "Velocity": "",
-                "Rarity": "",
-                "Research": "",
-                "Recipes": [] 
+                SCRAPING_ITEM_ID: "",
+                SCRAPING_NAME: "",
+                SCRAPING_DAMAGE: "",
+                SCRAPING_KNOCKBACK: "",
+                SCRAPING_MANA: "",
+                SCRAPING_CRITICAL_CHANCE: "",
+                SCRAPING_USE_TIME: "",
+                SCRAPING_VELOCITY: "",
+                SCRAPING_RARITY: "",
+                SCRAPING_RESEARCH: "",
+                SCRAPING_RECIPES: [] 
             }
-            jsonDict["Item ID"] = itemInstance["ID"]
-            jsonDict["Name"] = itemInstance["Name"]
+            jsonDict[SCRAPING_ITEM_ID] = itemInstance[SCRAPING_ID]
+            jsonDict[SCRAPING_NAME] = itemInstance[SCRAPING_NAME]
 
-            damage = table.find("th", text="Damage")
+            damage = table.find("th", text=SCRAPING_DAMAGE)
             if damage:
-                jsonDict["Damage"] = damage.parent.td.text.split(" ")[0]
+                jsonDict[SCRAPING_DAMAGE] = damage.parent.td.text.split(" ")[0]
 
             knockback = table.find("span", class_="knockback")
             if knockback:
-                jsonDict["Knockback"] = knockback.parent.text.split("/")[0].rstrip()
+                jsonDict[SCRAPING_KNOCKBACK] = knockback.parent.text.split("/")[0].rstrip()
 
-            mana = table.find("a", title="Mana")
+            mana = table.find("a", title=SCRAPING_MANA)
             if mana:
-                jsonDict["Mana"] = mana.parent.parent.td.text.split(" ")[0]
+                jsonDict[SCRAPING_MANA] = mana.parent.parent.td.text.split(" ")[0]
 
             critical_chance = table.find("a", title="Critical hit")
             if critical_chance:
-                jsonDict["Critical Chance"] = critical_chance.parent.parent.td.text.split(" ")[0]
+                jsonDict[SCRAPING_CRITICAL_CHANCE] = critical_chance.parent.parent.td.text.split(" ")[0]
 
             use_time = table.find("span", class_="usetime")
             if use_time:
                 use_time = use_time.parent
-                jsonDict["Use Time"] = use_time.text.split("/")[0].encode("ascii", "ignore").decode().rstrip()
+                jsonDict[SCRAPING_USE_TIME] = use_time.text.split("/")[0].encode("ascii", "ignore").decode().rstrip()
 
-            velocity = table.find("a", title="Velocity")
+            velocity = table.find("a", title=SCRAPING_VELOCITY)
             if velocity:
-                jsonDict["Velocity"] = velocity.parent.parent.td.text.split(" ")[0]
+                jsonDict[SCRAPING_VELOCITY] = velocity.parent.parent.td.text.split(" ")[0]
 
             rarity = table.find("span", class_="rarity")
             if rarity:
-                jsonDict["Rarity"] = rarity.a["title"][-1]
+                jsonDict[SCRAPING_RARITY] = rarity.a["title"][-1]
 
             research = table.find("a", title="Journey mode")
             if research:
-                jsonDict["Research"] = research.parent.parent.td.text
+                jsonDict[SCRAPING_RESEARCH] = research.parent.parent.td.text
 
-            jsonDict["Recipes"] = []
+            jsonDict[SCRAPING_RECIPES] = []
             jsonList.append(jsonDict)
 
 SaveJSONFile(ITEM_PATH_OUTPUT, jsonList)

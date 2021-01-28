@@ -6,6 +6,7 @@ current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfra
 parent_dir = os.path.dirname(current_dir)
 parent_dir = os.path.dirname(parent_dir)
 sys.path.insert(0, parent_dir) 
+from scraping_tools import *
 from json_manager import *
 import requests
 from bs4 import BeautifulSoup
@@ -40,31 +41,31 @@ for table in tables[0:2]:
                 continue
 
             armorDict = {
-                "Item ID": "",
-                "Set ID": "",
-                "Name": "",
-                "Defense": "",
-                "Body Slot": "",
-                "Tooltip": "",
-                "Rarity": "",
-                "Research": "",
-                "Recipes": [] 
+                SCRAPING_ITEM_ID: "",
+                SCRAPING_SET_ID: "",
+                SCRAPING_NAME: "",
+                SCRAPING_DEFENSE: "",
+                SCRAPING_BODY_SLOT: "",
+                SCRAPING_TOOLTIP: "",
+                SCRAPING_RARITY: "",
+                SCRAPING_RESEARCH: "",
+                SCRAPING_RECIPES: [] 
             }
 
-            armorDict["Item ID"] = tableBox.find("div", class_="section ids").find("li").b.text
-            armorDict["Name"] = tableBox.find("div", class_="title").text
+            armorDict[SCRAPING_ITEM_ID] = tableBox.find("div", class_="section ids").find("li").b.text
+            armorDict[SCRAPING_NAME] = tableBox.find("div", class_="title").text
             statistics = tableBox.find("div", class_="section statistics").find_all("tr")
             for statistic in statistics:
-                if statistic.th.text == "Defense":
-                    armorDict["Defense"] = statistic.td.text.split(" ")[0]
+                if statistic.th.text == SCRAPING_DEFENSE:
+                    armorDict[SCRAPING_DEFENSE] = statistic.td.text.split(" ")[0]
                 elif statistic.th.text == "Body slot":
-                    armorDict["Body Slot"] = statistic.td.text
-                elif statistic.th.text == "Tooltip":
-                    armorDict["Tooltip"] = statistic.td.text.split("/")[0].rstrip()
-                elif statistic.th.text == "Rarity":
-                    armorDict["Rarity"] = statistic.td.span.a["title"][-1]
-                elif statistic.th.text == "Research":
-                    armorDict["Research"] = statistic.td.text
+                    armorDict[SCRAPING_BODY_SLOT] = statistic.td.text
+                elif statistic.th.text == SCRAPING_TOOLTIP:
+                    armorDict[SCRAPING_TOOLTIP] = statistic.td.text.split("/")[0].rstrip()
+                elif statistic.th.text == SCRAPING_RARITY:
+                    armorDict[SCRAPING_RARITY] = statistic.td.span.a["title"][-1]
+                elif statistic.th.text == SCRAPING_RESEARCH:
+                    armorDict[SCRAPING_RESEARCH] = statistic.td.text
             
             armorList.append(armorDict)
 
@@ -80,30 +81,30 @@ for table in tables[2:-1]:
         tableBox = soup2.find("div", class_="infobox item")
 
         armorDict = {
-            "Item ID": "",
-            "Set ID": "",
-            "Name": "",
-            "Defense": "",
-            "Body Slot": "",
-            "Tooltip": "",
-            "Rarity": "",
-            "Research": "",
-            "Recipes": [] 
+            SCRAPING_ITEM_ID: "",
+            SCRAPING_SET_ID: "",
+            SCRAPING_NAME: "",
+            SCRAPING_DEFENSE: "",
+            SCRAPING_BODY_SLOT: "",
+            SCRAPING_TOOLTIP: "",
+            SCRAPING_RARITY: "",
+            SCRAPING_RESEARCH: "",
+            SCRAPING_RECIPES: [] 
         }
-        armorDict["Item ID"] = tableBox.find("div", class_="section ids").find("li").b.text
-        armorDict["Name"] = tableBox.find("div", class_="title").text
+        armorDict[SCRAPING_ITEM_ID] = tableBox.find("div", class_="section ids").find("li").b.text
+        armorDict[SCRAPING_NAME] = tableBox.find("div", class_="title").text
         statistics = tableBox.find("div", class_="section statistics").find_all("tr")
         for statistic in statistics:
-            if statistic.th.text == "Defense":
-                armorDict["Defense"] = statistic.td.text.split(" ")[0]
+            if statistic.th.text == SCRAPING_DEFENSE:
+                armorDict[SCRAPING_DEFENSE] = statistic.td.text.split(" ")[0]
             elif statistic.th.text == "Body slot":
-                armorDict["Body Slot"] = statistic.td.text
-            elif statistic.th.text == "Tooltip":
-                armorDict["Tooltip"] = statistic.td.text.split("/")[0].rstrip()
-            elif statistic.th.text == "Rarity":
-                armorDict["Rarity"] = statistic.td.span.a["title"][-1]
-            elif statistic.th.text == "Research":
-                armorDict["Research"] = statistic.td.text
+                armorDict[SCRAPING_BODY_SLOT] = statistic.td.text
+            elif statistic.th.text == SCRAPING_TOOLTIP:
+                armorDict[SCRAPING_TOOLTIP] = statistic.td.text.split("/")[0].rstrip()
+            elif statistic.th.text == SCRAPING_RARITY:
+                armorDict[SCRAPING_RARITY] = statistic.td.span.a["title"][-1]
+            elif statistic.th.text == SCRAPING_RESEARCH:
+                armorDict[SCRAPING_RESEARCH] = statistic.td.text
         
         armorList.append(armorDict)
 
@@ -120,30 +121,30 @@ for trTag in trTags[1:]:
     tableBox = soup2.find("div", class_="infobox item")
 
     armorDict = {
-        "Item ID": "",
-        "Set ID": "",
-        "Name": "",
-        "Defense": "",
-        "Body Slot": "",
-        "Tooltip": "",
-        "Rarity": "",
-        "Research": "",
-        "Recipes": [] 
+        SCRAPING_ITEM_ID: "",
+        SCRAPING_SET_ID: "",
+        SCRAPING_NAME: "",
+        SCRAPING_DEFENSE: "",
+        SCRAPING_BODY_SLOT: "",
+        SCRAPING_TOOLTIP: "",
+        SCRAPING_RARITY: "",
+        SCRAPING_RESEARCH: "",
+        SCRAPING_RECIPES: [] 
     }
-    armorDict["Item ID"] = tableBox.find("div", class_="section ids").find("li").b.text
-    armorDict["Name"] = tableBox.find("div", class_="title").text
+    armorDict[SCRAPING_ITEM_ID] = tableBox.find("div", class_="section ids").find("li").b.text
+    armorDict[SCRAPING_NAME] = tableBox.find("div", class_="title").text
     statistics = tableBox.find("div", class_="section statistics").find_all("tr")
     for statistic in statistics:
-        if statistic.th.text == "Defense":
-            armorDict["Defense"] = statistic.td.text.split(" ")[0]
+        if statistic.th.text == SCRAPING_DEFENSE:
+            armorDict[SCRAPING_DEFENSE] = statistic.td.text.split(" ")[0]
         elif statistic.th.text == "Body slot":
-            armorDict["Body Slot"] = statistic.td.text
-        elif statistic.th.text == "Tooltip":
-            armorDict["Tooltip"] = BeautifulSoup(str(statistic.td).replace("<br/>", ". "), 'html.parser').text.split("/")[0].rstrip()
-        elif statistic.th.text == "Rarity":
-            armorDict["Rarity"] = statistic.td.span.a["title"][-1]
-        elif statistic.th.text == "Research":
-            armorDict["Research"] = statistic.td.text
+            armorDict[SCRAPING_BODY_SLOT] = statistic.td.text
+        elif statistic.th.text == SCRAPING_TOOLTIP:
+            armorDict[SCRAPING_TOOLTIP] = BeautifulSoup(str(statistic.td).replace("<br/>", ". "), 'html.parser').text.split("/")[0].rstrip()
+        elif statistic.th.text == SCRAPING_RARITY:
+            armorDict[SCRAPING_RARITY] = statistic.td.span.a["title"][-1]
+        elif statistic.th.text == SCRAPING_RESEARCH:
+            armorDict[SCRAPING_RESEARCH] = statistic.td.text
     
     armorList.append(armorDict)
 

@@ -5,7 +5,8 @@ import re
 current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parent_dir = os.path.dirname(current_dir)
 parent_dir = os.path.dirname(parent_dir)
-sys.path.insert(0, parent_dir) 
+sys.path.insert(0, parent_dir)
+from scraping_tools import *
 from json_manager import *
 import requests
 from bs4 import BeautifulSoup
@@ -36,12 +37,12 @@ for table in tables[0:2]:
         tableBoxes = soup2.find_all("div", class_="infobox item")
 
         setDict = {
-            "ID": "",
-            "Set Name": "",
-            "Set Pieces": [],
-            "Set Bonus": "",
-            "Defense": "",
-            "Rarity": ""
+            SCRAPING_ID: "",
+            SCRAPING_SET_NAME: "",
+            SCRAPING_SET_PIECES: [],
+            SCRAPING_SET_BONUS: "",
+            SCRAPING_DEFENSE: "",
+            SCRAPING_RARITY: ""
         }
         for tableBox in tableBoxes:
             tableTitle = tableBox.find("div", class_="title")
@@ -50,20 +51,20 @@ for table in tables[0:2]:
                 continue
             
             if re.search("armor", tableTitle.text, re.IGNORECASE):
-                setDict["ID"] = str(setID)
+                setDict[SCRAPING_ID] = str(setID)
                 print("ID {} settled to {}".format(setID, tableTitle.text))
                 setID += 1
-                setDict["Set Name"] = tableTitle.text.rstrip()
+                setDict[SCRAPING_SET_NAME] = tableTitle.text.rstrip()
                 statistics = tableBox.find("div", class_="section statistics").find_all("tr")
                 for statistic in statistics:
-                    if statistic.th.text == "Set Bonus":
-                        setDict["Set Bonus"] = BeautifulSoup(str(statistic.td).replace("<br/>", ". "), 'html.parser').text.split("/")[0].encode("ascii", "ignore").decode().rstrip()
-                    elif statistic.th.text == "Defense":
-                        setDict["Defense"] = statistic.td.text.split(" ")[0].encode("ascii", "ignore").decode().rstrip().replace(":", "")
-                    elif statistic.th.text == "Rarity":
-                        setDict["Rarity"] = statistic.td.span.a["title"][-1]
+                    if statistic.th.text == SCRAPING_SET_BONUS:
+                        setDict[SCRAPING_SET_BONUS] = BeautifulSoup(str(statistic.td).replace("<br/>", ". "), 'html.parser').text.split("/")[0].encode("ascii", "ignore").decode().rstrip()
+                    elif statistic.th.text == SCRAPING_DEFENSE:
+                        setDict[SCRAPING_DEFENSE] = statistic.td.text.split(" ")[0].encode("ascii", "ignore").decode().rstrip().replace(":", "")
+                    elif statistic.th.text == SCRAPING_RARITY:
+                        setDict[SCRAPING_RARITY] = statistic.td.span.a["title"][-1]
             else:
-                setDict["Set Pieces"].append(tableTitle.text)
+                setDict[SCRAPING_SET_PIECES].append(tableTitle.text)
             
         setsList.append(setDict)
 

@@ -2,7 +2,7 @@
   {
     "Item ID": "40",
     "Name": "Wooden Arrow",
-    "Used In": "",
+    "Used In": "Any Bow or Repeater.",
     "Damage": "5",
     "Velocity": "3",
     "Multiplier": "1",
@@ -15,13 +15,12 @@
     "Destroy Tiles": "",
     "Rarity": "0",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Bow or Repeater."
+    "Recipes": []
   },
   {
     "Item ID": "41",
     "Name": "Flaming Arrow",
-    "Used In": "",
+    "Used In": "Any Bow or Repeater.",
     "Damage": "7",
     "Velocity": "3.5",
     "Multiplier": "1",
@@ -34,13 +33,12 @@
     "Destroy Tiles": "",
     "Rarity": "0",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Bow or Repeater."
+    "Recipes": []
   },
   {
     "Item ID": "47",
     "Name": "Unholy Arrow",
-    "Used In": "",
+    "Used In": "Any Bow or Repeater.",
     "Damage": "12",
     "Velocity": "3.4",
     "Multiplier": "1",
@@ -53,13 +51,12 @@
     "Destroy Tiles": "",
     "Rarity": "1",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Bow or Repeater."
+    "Recipes": []
   },
   {
     "Item ID": "51",
     "Name": "Jester's Arrow",
-    "Used In": "",
+    "Used In": "Any Bow or Repeater.",
     "Damage": "10",
     "Velocity": "0.5",
     "Multiplier": "2",
@@ -72,13 +69,12 @@
     "Destroy Tiles": "",
     "Rarity": "1",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Bow or Repeater."
+    "Recipes": []
   },
   {
     "Item ID": "265",
     "Name": "Hellfire Arrow",
-    "Used In": "",
+    "Used In": "Any Bow or Repeater.",
     "Damage": "13",
     "Velocity": "6.5",
     "Multiplier": "1",
@@ -91,13 +87,12 @@
     "Destroy Tiles": "",
     "Rarity": "2",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Bow or Repeater."
+    "Recipes": []
   },
   {
     "Item ID": "516",
     "Name": "Holy Arrow",
-    "Used In": "",
+    "Used In": "Any Bow or Repeater.",
     "Damage": "13",
     "Velocity": "3.5",
     "Multiplier": "1",
@@ -110,13 +105,12 @@
     "Destroy Tiles": "",
     "Rarity": "3",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Bow or Repeater."
+    "Recipes": []
   },
   {
     "Item ID": "545",
     "Name": "Cursed Arrow",
-    "Used In": "",
+    "Used In": "Any Bow or Repeater.",
     "Damage": "17",
     "Velocity": "4",
     "Multiplier": "1",
@@ -129,13 +123,12 @@
     "Destroy Tiles": "",
     "Rarity": "3",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Bow or Repeater."
+    "Recipes": []
   },
   {
     "Item ID": "988",
     "Name": "Frostburn Arrow",
-    "Used In": "",
+    "Used In": "Any Bow or Repeater.",
     "Damage": "9",
     "Velocity": "3.75",
     "Multiplier": "1",
@@ -148,13 +141,12 @@
     "Destroy Tiles": "",
     "Rarity": "0",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Bow or Repeater."
+    "Recipes": []
   },
   {
     "Item ID": "1235",
     "Name": "Chlorophyte Arrow",
-    "Used In": "",
+    "Used In": "Any Bow or Repeater.",
     "Damage": "16",
     "Velocity": "4.5",
     "Multiplier": "2",
@@ -167,13 +159,12 @@
     "Destroy Tiles": "",
     "Rarity": "7",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Bow or Repeater."
+    "Recipes": []
   },
   {
     "Item ID": "1334",
     "Name": "Ichor Arrow",
-    "Used In": "",
+    "Used In": "Any Bow or Repeater.",
     "Damage": "16",
     "Velocity": "4.25",
     "Multiplier": "2",
@@ -186,13 +177,12 @@
     "Destroy Tiles": "",
     "Rarity": "3",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Bow or Repeater."
+    "Recipes": []
   },
   {
     "Item ID": "1341",
     "Name": "Venom Arrow",
-    "Used In": "",
+    "Used In": "Any Bow or Repeater.",
     "Damage": "19",
     "Velocity": "4.3",
     "Multiplier": "2",
@@ -205,13 +195,12 @@
     "Destroy Tiles": "",
     "Rarity": "3",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Bow or Repeater."
+    "Recipes": []
   },
   {
     "Item ID": "3003",
     "Name": "Bone Arrow",
-    "Used In": "",
+    "Used In": "Any Bow or Repeater.",
     "Damage": "8",
     "Velocity": "3.5",
     "Multiplier": "1",
@@ -224,13 +213,12 @@
     "Destroy Tiles": "",
     "Rarity": "0",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Bow or Repeater."
+    "Recipes": []
   },
   {
     "Item ID": "3103",
     "Name": "Endless Quiver",
-    "Used In": "",
+    "Used In": "Any Bow or Repeater.",
     "Damage": "5",
     "Velocity": "3",
     "Multiplier": "1",
@@ -243,13 +231,12 @@
     "Destroy Tiles": "",
     "Rarity": "2",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Bow or Repeater."
+    "Recipes": []
   },
   {
     "Item ID": "3568",
     "Name": "Luminite Arrow",
-    "Used In": "",
+    "Used In": "Any Bow or Repeater.",
     "Damage": "15",
     "Velocity": "3",
     "Multiplier": "2",
@@ -262,13 +249,12 @@
     "Destroy Tiles": "",
     "Rarity": "9",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Bow or Repeater."
+    "Recipes": []
   },
   {
     "Item ID": "97",
     "Name": "Musket Ball",
-    "Used In": "",
+    "Used In": "Any Gun",
     "Damage": "7",
     "Velocity": "4",
     "Multiplier": "2",
@@ -281,13 +267,12 @@
     "Destroy Tiles": "",
     "Rarity": "0",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Gun"
+    "Recipes": []
   },
   {
     "Item ID": "234",
     "Name": "Meteor Shot",
-    "Used In": "",
+    "Used In": "Any Gun",
     "Damage": "8",
     "Velocity": "3",
     "Multiplier": "2",
@@ -300,13 +285,12 @@
     "Destroy Tiles": "",
     "Rarity": "1",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Gun"
+    "Recipes": []
   },
   {
     "Item ID": "278",
     "Name": "Silver Bullet",
-    "Used In": "",
+    "Used In": "Any Gun",
     "Damage": "9",
     "Velocity": "4.5",
     "Multiplier": "2",
@@ -319,13 +303,12 @@
     "Destroy Tiles": "",
     "Rarity": "0",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Gun"
+    "Recipes": []
   },
   {
     "Item ID": "515",
     "Name": "Crystal Bullet",
-    "Used In": "",
+    "Used In": "Any Gun",
     "Damage": "9",
     "Velocity": "5",
     "Multiplier": "2",
@@ -338,13 +321,12 @@
     "Destroy Tiles": "",
     "Rarity": "3",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Gun"
+    "Recipes": []
   },
   {
     "Item ID": "546",
     "Name": "Cursed Bullet",
-    "Used In": "",
+    "Used In": "Any Gun",
     "Damage": "12",
     "Velocity": "5",
     "Multiplier": "3",
@@ -357,13 +339,12 @@
     "Destroy Tiles": "",
     "Rarity": "3",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Gun"
+    "Recipes": []
   },
   {
     "Item ID": "1179",
     "Name": "Chlorophyte Bullet",
-    "Used In": "",
+    "Used In": "Any Gun",
     "Damage": "9",
     "Velocity": "5",
     "Multiplier": "3",
@@ -376,13 +357,12 @@
     "Destroy Tiles": "",
     "Rarity": "7",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Gun"
+    "Recipes": []
   },
   {
     "Item ID": "1302",
     "Name": "High Velocity Bullet",
-    "Used In": "",
+    "Used In": "Any Gun",
     "Damage": "11",
     "Velocity": "4",
     "Multiplier": "8",
@@ -395,13 +375,12 @@
     "Destroy Tiles": "",
     "Rarity": "3",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Gun"
+    "Recipes": []
   },
   {
     "Item ID": "1335",
     "Name": "Ichor Bullet",
-    "Used In": "",
+    "Used In": "Any Gun",
     "Damage": "13",
     "Velocity": "5.25",
     "Multiplier": "3",
@@ -414,13 +393,12 @@
     "Destroy Tiles": "",
     "Rarity": "3",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Gun"
+    "Recipes": []
   },
   {
     "Item ID": "1342",
     "Name": "Venom Bullet",
-    "Used In": "",
+    "Used In": "Any Gun",
     "Damage": "15",
     "Velocity": "5.3",
     "Multiplier": "3",
@@ -433,13 +411,12 @@
     "Destroy Tiles": "",
     "Rarity": "3",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Gun"
+    "Recipes": []
   },
   {
     "Item ID": "1349",
     "Name": "Party Bullet",
-    "Used In": "",
+    "Used In": "Any Gun",
     "Damage": "10",
     "Velocity": "5.1",
     "Multiplier": "3",
@@ -452,13 +429,12 @@
     "Destroy Tiles": "",
     "Rarity": "3",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Gun"
+    "Recipes": []
   },
   {
     "Item ID": "1350",
     "Name": "Nano Bullet",
-    "Used In": "",
+    "Used In": "Any Gun",
     "Damage": "15",
     "Velocity": "4.6",
     "Multiplier": "3",
@@ -471,13 +447,12 @@
     "Destroy Tiles": "",
     "Rarity": "3",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Gun"
+    "Recipes": []
   },
   {
     "Item ID": "1351",
     "Name": "Exploding Bullet",
-    "Used In": "",
+    "Used In": "Any Gun",
     "Damage": "10",
     "Velocity": "4.7",
     "Multiplier": "3",
@@ -490,13 +465,12 @@
     "Destroy Tiles": "",
     "Rarity": "3",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Gun"
+    "Recipes": []
   },
   {
     "Item ID": "1352",
     "Name": "Golden Bullet",
-    "Used In": "",
+    "Used In": "Any Gun",
     "Damage": "10",
     "Velocity": "4.6",
     "Multiplier": "3",
@@ -509,13 +483,12 @@
     "Destroy Tiles": "",
     "Rarity": "3",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Gun"
+    "Recipes": []
   },
   {
     "Item ID": "3104",
     "Name": "Endless Musket Pouch",
-    "Used In": "",
+    "Used In": "Any Gun",
     "Damage": "7",
     "Velocity": "4",
     "Multiplier": "2",
@@ -528,13 +501,12 @@
     "Destroy Tiles": "",
     "Rarity": "2",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Gun"
+    "Recipes": []
   },
   {
     "Item ID": "3567",
     "Name": "Luminite Bullet",
-    "Used In": "",
+    "Used In": "Any Gun",
     "Damage": "20",
     "Velocity": "2",
     "Multiplier": "6",
@@ -547,13 +519,12 @@
     "Destroy Tiles": "",
     "Rarity": "9",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Gun"
+    "Recipes": []
   },
   {
     "Item ID": "4915",
     "Name": "Tungsten Bullet",
-    "Used In": "",
+    "Used In": "Any Gun",
     "Damage": "9",
     "Velocity": "4.5",
     "Multiplier": "2",
@@ -566,13 +537,12 @@
     "Destroy Tiles": "",
     "Rarity": "0",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Any Gun"
+    "Recipes": []
   },
   {
     "Item ID": "771",
     "Name": "Rocket I",
-    "Used In": "",
+    "Used In": "Launcher",
     "Damage": "40",
     "Velocity": "",
     "Multiplier": "",
@@ -585,13 +555,12 @@
     "Destroy Tiles": "No",
     "Rarity": "0",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Launcher"
+    "Recipes": []
   },
   {
     "Item ID": "772",
     "Name": "Rocket II",
-    "Used In": "",
+    "Used In": "Launcher",
     "Damage": "40",
     "Velocity": "",
     "Multiplier": "",
@@ -604,13 +573,12 @@
     "Destroy Tiles": "Yes",
     "Rarity": "1",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Launcher"
+    "Recipes": []
   },
   {
     "Item ID": "773",
     "Name": "Rocket III",
-    "Used In": "",
+    "Used In": "Launcher",
     "Damage": "65",
     "Velocity": "",
     "Multiplier": "",
@@ -623,13 +591,12 @@
     "Destroy Tiles": "No",
     "Rarity": "1",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Launcher"
+    "Recipes": []
   },
   {
     "Item ID": "774",
     "Name": "Rocket IV",
-    "Used In": "",
+    "Used In": "Launcher",
     "Damage": "65",
     "Velocity": "",
     "Multiplier": "",
@@ -642,13 +609,12 @@
     "Destroy Tiles": "Yes",
     "Rarity": "2",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Launcher"
+    "Recipes": []
   },
   {
     "Item ID": "4445",
     "Name": "Cluster Rocket I",
-    "Used In": "",
+    "Used In": "Launcher",
     "Damage": "50",
     "Velocity": "",
     "Multiplier": "",
@@ -661,13 +627,12 @@
     "Destroy Tiles": "No",
     "Rarity": "0",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Launcher"
+    "Recipes": []
   },
   {
     "Item ID": "4446",
     "Name": "Cluster Rocket II",
-    "Used In": "",
+    "Used In": "Launcher",
     "Damage": "50",
     "Velocity": "",
     "Multiplier": "",
@@ -680,13 +645,12 @@
     "Destroy Tiles": "Yes",
     "Rarity": "0",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Launcher"
+    "Recipes": []
   },
   {
     "Item ID": "4459",
     "Name": "Dry Rocket",
-    "Used In": "",
+    "Used In": "Launcher",
     "Damage": "40",
     "Velocity": "",
     "Multiplier": "",
@@ -699,13 +663,12 @@
     "Destroy Tiles": "Yes",
     "Rarity": "0",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Launcher"
+    "Recipes": []
   },
   {
     "Item ID": "4447",
     "Name": "Wet Rocket",
-    "Used In": "",
+    "Used In": "Launcher",
     "Damage": "40",
     "Velocity": "",
     "Multiplier": "",
@@ -718,13 +681,12 @@
     "Destroy Tiles": "No",
     "Rarity": "0",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Launcher"
+    "Recipes": []
   },
   {
     "Item ID": "4448",
     "Name": "Lava Rocket",
-    "Used In": "",
+    "Used In": "Launcher",
     "Damage": "40",
     "Velocity": "",
     "Multiplier": "",
@@ -737,13 +699,12 @@
     "Destroy Tiles": "No",
     "Rarity": "0",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Launcher"
+    "Recipes": []
   },
   {
     "Item ID": "4449",
     "Name": "Honey Rocket",
-    "Used In": "",
+    "Used In": "Launcher",
     "Damage": "40",
     "Velocity": "",
     "Multiplier": "",
@@ -756,13 +717,12 @@
     "Destroy Tiles": "No",
     "Rarity": "0",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Launcher"
+    "Recipes": []
   },
   {
     "Item ID": "4457",
     "Name": "Mini Nuke I",
-    "Used In": "",
+    "Used In": "Launcher",
     "Damage": "75",
     "Velocity": "",
     "Multiplier": "",
@@ -775,13 +735,12 @@
     "Destroy Tiles": "No",
     "Rarity": "0",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Launcher"
+    "Recipes": []
   },
   {
     "Item ID": "4458",
     "Name": "Mini Nuke II",
-    "Used In": "",
+    "Used In": "Launcher",
     "Damage": "75",
     "Velocity": "",
     "Multiplier": "",
@@ -794,13 +753,12 @@
     "Destroy Tiles": "Yes",
     "Rarity": "0",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Launcher"
+    "Recipes": []
   },
   {
     "Item ID": "1310",
     "Name": "Poison Dart",
-    "Used In": "",
+    "Used In": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle",
     "Damage": "10",
     "Velocity": "2",
     "Multiplier": "1",
@@ -813,13 +771,12 @@
     "Destroy Tiles": "",
     "Rarity": "2",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle"
+    "Recipes": []
   },
   {
     "Item ID": "3009",
     "Name": "Crystal Dart",
-    "Used In": "",
+    "Used In": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle",
     "Damage": "14",
     "Velocity": "1",
     "Multiplier": "2",
@@ -832,13 +789,12 @@
     "Destroy Tiles": "",
     "Rarity": "3",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle"
+    "Recipes": []
   },
   {
     "Item ID": "3010",
     "Name": "Cursed Dart",
-    "Used In": "",
+    "Used In": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle",
     "Damage": "10",
     "Velocity": "3",
     "Multiplier": "1",
@@ -851,13 +807,12 @@
     "Destroy Tiles": "",
     "Rarity": "3",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle"
+    "Recipes": []
   },
   {
     "Item ID": "3011",
     "Name": "Ichor Dart",
-    "Used In": "",
+    "Used In": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle",
     "Damage": "12",
     "Velocity": "3",
     "Multiplier": "1",
@@ -870,8 +825,7 @@
     "Destroy Tiles": "",
     "Rarity": "3",
     "Tooltip": "",
-    "Recipes": [],
-    "Used in": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle"
+    "Recipes": []
   },
   {
     "Item ID": "780",
