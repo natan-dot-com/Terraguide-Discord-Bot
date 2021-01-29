@@ -92,22 +92,22 @@
     {
         "ID": "19",
         "Name": "Gold Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "20",
         "Name": "Copper Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "21",
         "Name": "Silver Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "22",
         "Name": "Iron Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "23",
@@ -282,7 +282,7 @@
     {
         "ID": "57",
         "Name": "Demonite Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "58",
@@ -582,7 +582,7 @@
     {
         "ID": "117",
         "Name": "Meteorite Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "118",
@@ -872,7 +872,7 @@
     {
         "ID": "175",
         "Name": "Hellstone Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "176",
@@ -1902,12 +1902,12 @@
     {
         "ID": "381",
         "Name": "Cobalt Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "382",
         "Name": "Mythril Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "383",
@@ -1952,7 +1952,7 @@
     {
         "ID": "391",
         "Name": "Adamantite Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "392",
@@ -3512,22 +3512,22 @@
     {
         "ID": "703",
         "Name": "Tin Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "704",
         "Name": "Lead Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "705",
         "Name": "Tungsten Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "706",
         "Name": "Platinum Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "707",
@@ -5027,7 +5027,7 @@
     {
         "ID": "1006",
         "Name": "Chlorophyte Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "1007",
@@ -5917,7 +5917,7 @@
     {
         "ID": "1184",
         "Name": "Palladium Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "1185",
@@ -5952,7 +5952,7 @@
     {
         "ID": "1191",
         "Name": "Orichalcum Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "1192",
@@ -5987,7 +5987,7 @@
     {
         "ID": "1198",
         "Name": "Titanium Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "1199",
@@ -6122,7 +6122,7 @@
     {
         "ID": "1225",
         "Name": "Hallowed Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "1226",
@@ -6282,7 +6282,7 @@
     {
         "ID": "1257",
         "Name": "Crimtane Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "1258",
@@ -7757,7 +7757,7 @@
     {
         "ID": "1552",
         "Name": "Shroomite Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "1553",
@@ -8571,7 +8571,7 @@
     },
     {
         "ID": "1715",
-        "Name": "Bar",
+        "Name": "Crafting material",
         "Type": "Furniture"
     },
     {
@@ -16302,7 +16302,7 @@
     {
         "ID": "3261",
         "Name": "Spectre Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "3262",
@@ -17332,7 +17332,7 @@
     {
         "ID": "3467",
         "Name": "Luminite Bar",
-        "Type": "Bar"
+        "Type": "Crafting material"
     },
     {
         "ID": "3468",

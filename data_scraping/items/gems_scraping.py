@@ -17,7 +17,7 @@ JSON_PATH = "gems.json"
 
 SuffixList = [IN_STONE_SUFFIX, PLACED_SUFFIX]
 colsList = [2, 4]
-dictInfoList = ['In Stone', 'Placed']
+dictInfoList = [SCRAPING_IN_STONE, SCRAPING_PLACED]
 
 URL = "https://terraria.gamepedia.com/Gems"
 html = requests.get(URL)
@@ -29,13 +29,13 @@ if table:
     for row in rows[1::]:
         cols = row.findAll("td")
         gemDict = {
-            "ID": "",
-            "Rarity": "1",
-            "In Stone": "",
-            "Placed": ""
+            SCRAPING_ITEM_ID: "",
+            SCRAPING_RARITY: "1",
+            SCRAPING_IN_STONE: "",
+            SCRAPING_PLACED: ""
         }
         getID = re.search("\d+", (cols[0].find("div", class_="id").text))
-        gemDict['ID'] = getID.group()
+        gemDict[SCRAPING_ITEM_ID] = getID.group()
         
         gemName = cols[0].find("img")['alt']
         for suffixIdentity, colsIdentity, dictInfoIdentity in zip(SuffixList, colsList, dictInfoList):

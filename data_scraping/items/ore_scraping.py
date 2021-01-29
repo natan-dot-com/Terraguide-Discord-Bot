@@ -26,16 +26,16 @@ tables = soup.findAll("table", class_="terraria")
 rows = tables[0].findAll("tr")
 for row in rows[1::]:
     oreDict = {
-        "Item ID": "",
-        "Ore Tier": "",
-        "Rarity": "",
-        "Minimum Pickaxe Power": "",
-        "In Stone": "",
-        "Source": ""
+        SCRAPING_ITEM_ID: "",
+        SCRAPING_ORE_TIER: "",
+        SCRAPING_RARITY: "",
+        SCRAPING_MINIMUM_PICKAXE_POWER: "",
+        SCRAPING_IN_STONE: "",
+        SCRAPING_SOURCE: ""
     }
     cols = row.findAll("td")
-    oreDict['Item ID'] = (re.search("\d+", cols[1].div.text)).group()
-    oreDict['Rarity'] = (re.search("\d+", cols[2].a['title'])).group()
+    oreDict[SCRAPING_ITEM_ID] = (re.search("\d+", cols[1].div.text)).group()
+    oreDict[SCRAPING_RARITY] = (re.search("\d+", cols[2].a['title'])).group()
     oreDictList.append(oreDict)
 
 # Getting data from the second/third table (Relevant: the other ones)
@@ -50,7 +50,7 @@ for table in tables[1:3:]:
         if colsNumber == 4:
             
             # Table row header (ore tier)
-            oreDictList[oreIndex]['Ore Tier'] = (re.search("\d+", row.th.text)).group()
+            oreDictList[oreIndex][SCRAPING_ORE_TIER] = (re.search("\d+", row.th.text)).group()
             
             # First column (image)
             colImages = cols[0].findAll("img")
@@ -62,21 +62,21 @@ for table in tables[1:3:]:
                         if not block:
                             break
                         handler.write(block)
-            oreDictList[oreIndex]['In Stone'] = imgPath
+            oreDictList[oreIndex][SCRAPING_IN_STONE] = imgPath
             
             # Second column (pickaxe power)
-            oreDictList[oreIndex]['Minimum Pickaxe Power'] = (cols[1].find("img"))['alt']
+            oreDictList[oreIndex][SCRAPING_MINIMUM_PICKAXE_POWER] = (cols[1].find("img"))['alt']
             
             # Fourth column (source)
-            oreDictList[oreIndex]['Source'] = cols[3].text.replace("\n", "")
+            oreDictList[oreIndex][SCRAPING_SOURCE] = cols[3].text.replace("\n", "")
             oreIndex += 1
             
         # For when there's two ores in the same table row
         if colsNumber == 5:
             
             # Table row header (ore tier)
-            oreDictList[oreIndex]['Ore Tier'] = (re.search("\d+", row.th.text)).group()
-            oreDictList[oreIndex+1]['Ore Tier'] = (re.search("\d+", row.th.text)).group()
+            oreDictList[oreIndex][SCRAPING_ORE_TIER] = (re.search("\d+", row.th.text)).group()
+            oreDictList[oreIndex+1][SCRAPING_ORE_TIER] = (re.search("\d+", row.th.text)).group()
             
             # First column (first ore image)
             colImages = cols[0].findAll("img")
@@ -88,7 +88,7 @@ for table in tables[1:3:]:
                         if not block:
                             break
                         handler.write(block)
-            oreDictList[oreIndex]['In Stone'] = imgPath
+            oreDictList[oreIndex][SCRAPING_IN_STONE] = imgPath
             
             # Second column (second ore image)
             colImages = cols[1].findAll("img")
@@ -100,22 +100,15 @@ for table in tables[1:3:]:
                         if not block:
                             break
                         handler.write(block)
-            oreDictList[oreIndex+1]['In Stone'] = imgPath
+            oreDictList[oreIndex+1][SCRAPING_IN_STONE] = imgPath
             
             # Third column (pickaxe power) 
-            oreDictList[oreIndex]['Minimum Pickaxe Power'] = (cols[2].find("img"))['alt']
-            oreDictList[oreIndex+1]['Minimum Pickaxe Power'] = (cols[2].find("img"))['alt']
+            oreDictList[oreIndex][SCRAPING_MINIMUM_PICKAXE_POWER] = (cols[2].find("img"))['alt']
+            oreDictList[oreIndex+1][SCRAPING_MINIMUM_PICKAXE_POWER] = (cols[2].find("img"))['alt']
             
             # Fifth column (source)
-            oreDictList[oreIndex]['Source'] = cols[4].text.replace("\n", "")
-            oreDictList[oreIndex+1]['Source'] = cols[4].text.replace("\n", "")
+            oreDictList[oreIndex][SCRAPING_SOURCE] = cols[4].text.replace("\n", "")
+            oreDictList[oreIndex+1][SCRAPING_SOURCE] = cols[4].text.replace("\n", "")
             oreIndex += 2
             
-SaveJSONFile(JSON_PATH, sorted(oreDictList, key = lambda i: int(i['Item ID'])))
-
-
-
-
-
-
-
+SaveJSONFile(JSON_PATH, sorted(oreDictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))

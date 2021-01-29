@@ -10,8 +10,8 @@ with open('items.json') as infile:
     itemList = json.load(infile)
 
 for itemInstance in itemList:
-    if itemInstance['type'] not in typeList:
-        typeList.append(itemInstance['type'])
+    if itemInstance['Type'] not in typeList:
+        typeList.append(itemInstance['Type'])
 
 inputType = input(">>> Type: ")
 
@@ -20,10 +20,10 @@ if inputType == "cmd.counter":
     for typeInstance in typeList:
         counter = 0
         for itemInstance in itemList:
-            if itemInstance['type'] == typeInstance:
+            if itemInstance['Type'] == typeInstance:
                 counter += 1
         print("Type \"" + typeInstance + "\": " + str(counter))
 
 for itemInstance in itemList:
-    if itemInstance['type'] == inputType:
-        print("- " + itemInstance['id'] + ": " + itemInstance['name'])
+    if itemInstance['Type'] == inputType:
+        print("- " + itemInstance['ItemID'] + ": " + itemInstance['Name'])

@@ -37,7 +37,7 @@
         "Rarity": "1",
         "Minimum Pickaxe Power": "Gold Pickaxe (55%)",
         "In Stone": "ores/Demonite_Ore_In_Stone.png",
-        "Source": "Eye of Cthulhu, Underground, Cavern, Eater of Worlds (Demonite), Brain of Cthulhu (Crimtane)"
+        "Source": "Eye of Cthulhu, Underground, Cavern, Eater of Worlds (Demonite)"
     },
     {
         "Item ID": "116",
@@ -85,7 +85,7 @@
         "Rarity": "3",
         "Minimum Pickaxe Power": "Mythril Pickaxe (150%)",
         "In Stone": "ores/Adamantite_Ore_In_Stone.png",
-        "Source": "Cavern (roughly at lava depth), Ocram (Adamantite only)"
+        "Source": "Cavern (roughly at lava depth), Ocram"
     },
     {
         "Item ID": "699",
@@ -125,7 +125,7 @@
         "Rarity": "1",
         "Minimum Pickaxe Power": "Gold Pickaxe (55%)",
         "In Stone": "ores/Crimtane_Ore_In_Stone.png",
-        "Source": "Eye of Cthulhu, Underground, Cavern, Eater of Worlds (Demonite), Brain of Cthulhu (Crimtane)"
+        "Source": "Eye of Cthulhu, Underground, Cavern, Brain of Cthulhu (Crimtane)"
     },
     {
         "Item ID": "947",
@@ -157,7 +157,7 @@
         "Rarity": "3",
         "Minimum Pickaxe Power": "Mythril Pickaxe (150%)",
         "In Stone": "ores/Titanium_Ore_In_Stone.png",
-        "Source": "Cavern (roughly at lava depth), Ocram (Adamantite only)"
+        "Source": "Cavern (roughly at lava depth)"
     },
     {
         "Item ID": "3460",
