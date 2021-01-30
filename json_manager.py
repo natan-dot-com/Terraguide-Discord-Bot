@@ -12,4 +12,4 @@ def LoadJSONFile(JSONPath):
 
 def SaveJSONFile(JSONPath, Structure):
     with open(JSONPath, "w") as newJSONFile:
-        json.dump(Structure, newJSONFile, indent=2)
+        json.dump(Structure, newJSONFile, indent=4)

@@ -26,4 +26,4 @@ if inputType == "cmd.counter":
 
 for itemInstance in itemList:
     if itemInstance['Type'] == inputType:
-        print("- " + itemInstance['ItemID'] + ": " + itemInstance['Name'])
+        print("- " + itemInstance['ID'] + ": " + itemInstance['Name'])
