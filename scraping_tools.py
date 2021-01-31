@@ -1,3 +1,4 @@
+# General labels
 SCRAPING_ID = "ID"
 SCRAPING_TYPE = "Type"
 SCRAPING_ITEM_ID = "Item ID"
@@ -40,21 +41,30 @@ SCRAPING_PLACED = "Placed"
 SCRAPING_ORE_TIER = "Ore Tier"
 SCRAPING_MINIMUM_PICKAXE_POWER = "Minimum Pickaxe Power"
 SCRAPING_CONSUMED = "Is Consumed"
+SCRAPING_ANGLER_QUOTE = "Angler Quote"
+SCRAPING_HEIGHT = "Height"
+SCRAPING_BIOME = "Biome"
 
-SOURCE_RECIPE = "Recipe"
+# Source dict labels ('SCRAPING_SOURCE')
+SOURCE_RECIPE = "Crafting Recipes"
 SOURCE_NPC = "NPC"
 SOURCE_DROP = "Drop"
+SOURCE_GRAB_BAG = "Grab Bag"
 SOURCE_OTHER = "Other"
 
+# Drop dict labels ('SCRAPING_SOURCE' subdict)
+DROP_ID = "Drop ID"
 DROP_NPC = "NPC"
 DROP_PROBABILITY = "Probability"
 DROP_QUANTITY = "Quantity"
 
-INGREDIENT_NAME = "Ingredient ID"
-INGREDIENT_QUANTITY = "Quantity"
-
+# Crafting recipe labels ('SCRAPING_SOURCE' subdict)
 RECIPE_CRAFT_ID = "Craft ID"
 RECIPE_RESULT = "Result ID"
 RECIPE_RESULT_QUANTITY = "Result Quantity"
 RECIPE_TABLE = "Table ID"
 RECIPE_IDENTITY = "Recipe"
+
+# Recipe ingredient labels ('RECIPE_IDENTITY' subdict)
+INGREDIENT_NAME = "Ingredient ID"
+INGREDIENT_QUANTITY = "Quantity"

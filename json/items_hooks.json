@@ -1,450 +1,563 @@
 [
-  {
-    "Item ID": "84",
-    "Reach": "18.75",
-    "Velocity": "11.5",
-    "Hooks": "1",
-    "Latching": "Single",
-    "Rarity": "1",
-    "Source": {
-      "Drop": "",
-      "NPC": "Goblin Tinkerer",
-      "Recipe": [
-        {
-          "Ingredient": "Chain",
-          "Quantity": "3"
-        },
-        {
-          "Ingredient": "Hook",
-          "Quantity": "1"
+    {
+        "Item ID": "84",
+        "Reach": "18.75",
+        "Velocity": "11.5",
+        "Hooks": "1",
+        "Latching": "Single",
+        "Rarity": "1",
+        "Source": {
+            "Drop": [],
+            "NPC": [
+                "Goblin Tinkerer"
+            ],
+            "Crafting Recipes": [
+                {
+                    "Craft ID": "",
+                    "Result ID": "84",
+                    "Result Quantity": "1",
+                    "Table ID": "2",
+                    "Recipe": [
+                        {
+                            "Ingredient ID": "85",
+                            "Quantity": "3"
+                        },
+                        {
+                            "Ingredient ID": "118",
+                            "Quantity": "1"
+                        }
+                    ]
+                }
+            ],
+            "Grab Bag": [],
+            "Other": ""
         }
-      ],
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "185",
-    "Reach": "28",
-    "Velocity": "13",
-    "Hooks": "3",
-    "Latching": "Simultaneous",
-    "Rarity": "3",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": [
-        {
-          "Ingredient": "Jungle Spores",
-          "Quantity": "12"
-        },
-        {
-          "Ingredient": "Vine",
-          "Quantity": "3"
+    },
+    {
+        "Item ID": "185",
+        "Reach": "28",
+        "Velocity": "13",
+        "Hooks": "3",
+        "Latching": "Simultaneous",
+        "Rarity": "3",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [
+                {
+                    "Craft ID": "",
+                    "Result ID": "185",
+                    "Result Quantity": "1",
+                    "Table ID": "2",
+                    "Recipe": [
+                        {
+                            "Ingredient ID": "331",
+                            "Quantity": "12"
+                        },
+                        {
+                            "Ingredient ID": "210",
+                            "Quantity": "3"
+                        }
+                    ]
+                }
+            ],
+            "Grab Bag": [],
+            "Other": ""
         }
-      ],
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "437",
-    "Reach": "27.5",
-    "Velocity": "14",
-    "Hooks": "2",
-    "Latching": "Individual",
-    "Rarity": "4",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": "",
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "939",
-    "Reach": "15.625",
-    "Velocity": "10",
-    "Hooks": "8",
-    "Latching": "Simultaneous",
-    "Rarity": "2",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": "",
-      "Other": "Web Covered Chests"
-    }
-  },
-  {
-    "Item ID": "1236",
-    "Reach": "18.75",
-    "Velocity": "10",
-    "Hooks": "1",
-    "Latching": "Single",
-    "Rarity": "1",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": [
-        {
-          "Ingredient": "Amethyst",
-          "Quantity": "15"
+    },
+    {
+        "Item ID": "437",
+        "Reach": "27.5",
+        "Velocity": "14",
+        "Hooks": "2",
+        "Latching": "Individual",
+        "Rarity": "4",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [],
+            "Grab Bag": [],
+            "Other": ""
         }
-      ],
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "1237",
-    "Reach": "20.625",
-    "Velocity": "10.5",
-    "Hooks": "1",
-    "Latching": "Single",
-    "Rarity": "1",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": [
-        {
-          "Ingredient": "Topaz",
-          "Quantity": "15"
+    },
+    {
+        "Item ID": "939",
+        "Reach": "15.625",
+        "Velocity": "10",
+        "Hooks": "8",
+        "Latching": "Simultaneous",
+        "Rarity": "2",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [],
+            "Grab Bag": [],
+            "Other": "Web Covered Chests"
         }
-      ],
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "1238",
-    "Reach": "22.5",
-    "Velocity": "11",
-    "Hooks": "1",
-    "Latching": "Single",
-    "Rarity": "1",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": [
-        {
-          "Ingredient": "Sapphire",
-          "Quantity": "15"
+    },
+    {
+        "Item ID": "1236",
+        "Reach": "18.75",
+        "Velocity": "10",
+        "Hooks": "1",
+        "Latching": "Single",
+        "Rarity": "1",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [
+                {
+                    "Craft ID": "",
+                    "Result ID": "1236",
+                    "Result Quantity": "1",
+                    "Table ID": "2",
+                    "Recipe": [
+                        {
+                            "Ingredient ID": "181",
+                            "Quantity": "15"
+                        }
+                    ]
+                }
+            ],
+            "Grab Bag": [],
+            "Other": ""
         }
-      ],
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "1239",
-    "Reach": "24.375",
-    "Velocity": "11.5",
-    "Hooks": "1",
-    "Latching": "Single",
-    "Rarity": "1",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": [
-        {
-          "Ingredient": "Emerald",
-          "Quantity": "15"
+    },
+    {
+        "Item ID": "1237",
+        "Reach": "20.625",
+        "Velocity": "10.5",
+        "Hooks": "1",
+        "Latching": "Single",
+        "Rarity": "1",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [
+                {
+                    "Craft ID": "",
+                    "Result ID": "1237",
+                    "Result Quantity": "1",
+                    "Table ID": "2",
+                    "Recipe": [
+                        {
+                            "Ingredient ID": "180",
+                            "Quantity": "15"
+                        }
+                    ]
+                }
+            ],
+            "Grab Bag": [],
+            "Other": ""
         }
-      ],
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "1240",
-    "Reach": "26.25",
-    "Velocity": "12",
-    "Hooks": "1",
-    "Latching": "Single",
-    "Rarity": "1",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": [
-        {
-          "Ingredient": "Ruby",
-          "Quantity": "15"
+    },
+    {
+        "Item ID": "1238",
+        "Reach": "22.5",
+        "Velocity": "11",
+        "Hooks": "1",
+        "Latching": "Single",
+        "Rarity": "1",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [
+                {
+                    "Craft ID": "",
+                    "Result ID": "1238",
+                    "Result Quantity": "1",
+                    "Table ID": "2",
+                    "Recipe": [
+                        {
+                            "Ingredient ID": "177",
+                            "Quantity": "15"
+                        }
+                    ]
+                }
+            ],
+            "Grab Bag": [],
+            "Other": ""
         }
-      ],
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "1241",
-    "Reach": "29.125",
-    "Velocity": "12.5",
-    "Hooks": "1",
-    "Latching": "Single",
-    "Rarity": "1",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": [
-        {
-          "Ingredient": "Diamond",
-          "Quantity": "15"
+    },
+    {
+        "Item ID": "1239",
+        "Reach": "24.375",
+        "Velocity": "11.5",
+        "Hooks": "1",
+        "Latching": "Single",
+        "Rarity": "1",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [
+                {
+                    "Craft ID": "",
+                    "Result ID": "1239",
+                    "Result Quantity": "1",
+                    "Table ID": "2",
+                    "Recipe": [
+                        {
+                            "Ingredient ID": "179",
+                            "Quantity": "15"
+                        }
+                    ]
+                }
+            ],
+            "Grab Bag": [],
+            "Other": ""
         }
-      ],
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "1273",
-    "Reach": "21.875",
-    "Velocity": "15",
-    "Hooks": "2",
-    "Latching": "Simultaneous",
-    "Rarity": "2",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": "",
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "1800",
-    "Reach": "31.25",
-    "Velocity": "13.5",
-    "Hooks": "1",
-    "Latching": "Single",
-    "Rarity": "3",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": "",
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "1829",
-    "Reach": "34.375",
-    "Velocity": "15.5",
-    "Hooks": "3",
-    "Latching": "Simultaneous",
-    "Rarity": "7",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": "",
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "1915",
-    "Reach": "25",
-    "Velocity": "11.5",
-    "Hooks": "1",
-    "Latching": "Single",
-    "Rarity": "7",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": "",
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "1916",
-    "Reach": "34.375",
-    "Velocity": "15.5",
-    "Hooks": "3",
-    "Latching": "Simultaneous",
-    "Rarity": "7",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": "",
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "2360",
-    "Reach": "25",
-    "Velocity": "13",
-    "Hooks": "2",
-    "Latching": "Simultaneous",
-    "Rarity": "3",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": "",
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "2585",
-    "Reach": "18.75",
-    "Velocity": "13",
-    "Hooks": "3",
-    "Latching": "Simultaneous",
-    "Rarity": "3",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": "",
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "2800",
-    "Reach": "31.25",
-    "Velocity": "14",
-    "Hooks": "3",
-    "Latching": "Simultaneous",
-    "Rarity": "7",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": "",
-      "Other": "All enemies in the Martian Madness event"
-    }
-  },
-  {
-    "Item ID": "3020",
-    "Reach": "30",
-    "Velocity": "15",
-    "Hooks": "3",
-    "Latching": "Simultaneous",
-    "Rarity": "6",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": "",
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "3021",
-    "Reach": "30",
-    "Velocity": "16",
-    "Hooks": "3",
-    "Latching": "Simultaneous",
-    "Rarity": "6",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": "",
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "3022",
-    "Reach": "30",
-    "Velocity": "15",
-    "Hooks": "3",
-    "Latching": "Simultaneous",
-    "Rarity": "6",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": "",
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "3023",
-    "Reach": "30",
-    "Velocity": "15",
-    "Hooks": "3",
-    "Latching": "Simultaneous",
-    "Rarity": "6",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": "",
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "3572",
-    "Reach": "34.375",
-    "Velocity": "18",
-    "Hooks": "4",
-    "Latching": "Simultaneous",
-    "Rarity": "10",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": [
-        {
-          "Ingredient": "Nebula Fragment",
-          "Quantity": "6"
-        },
-        {
-          "Ingredient": "Solar Fragment",
-          "Quantity": "6"
-        },
-        {
-          "Ingredient": "Stardust Fragment",
-          "Quantity": "6"
-        },
-        {
-          "Ingredient": "Vortex Fragment",
-          "Quantity": "6"
+    },
+    {
+        "Item ID": "1240",
+        "Reach": "26.25",
+        "Velocity": "12",
+        "Hooks": "1",
+        "Latching": "Single",
+        "Rarity": "1",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [
+                {
+                    "Craft ID": "",
+                    "Result ID": "1240",
+                    "Result Quantity": "1",
+                    "Table ID": "2",
+                    "Recipe": [
+                        {
+                            "Ingredient ID": "178",
+                            "Quantity": "15"
+                        }
+                    ]
+                }
+            ],
+            "Grab Bag": [],
+            "Other": ""
         }
-      ],
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "3623",
-    "Reach": "37.5",
-    "Velocity": "16",
-    "Hooks": "2",
-    "Latching": "Individual",
-    "Rarity": "10",
-    "Source": {
-      "Drop": "",
-      "NPC": "Steampunker",
-      "Recipe": "",
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "4257",
-    "Reach": "27.5",
-    "Velocity": "12.5",
-    "Hooks": "1",
-    "Latching": "Single",
-    "Rarity": "1",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": [
-        {
-          "Ingredient": "Amber",
-          "Quantity": "15"
+    },
+    {
+        "Item ID": "1241",
+        "Reach": "29.125",
+        "Velocity": "12.5",
+        "Hooks": "1",
+        "Latching": "Single",
+        "Rarity": "1",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [
+                {
+                    "Craft ID": "",
+                    "Result ID": "1241",
+                    "Result Quantity": "1",
+                    "Table ID": "2",
+                    "Recipe": [
+                        {
+                            "Ingredient ID": "182",
+                            "Quantity": "15"
+                        }
+                    ]
+                }
+            ],
+            "Grab Bag": [],
+            "Other": ""
         }
-      ],
-      "Other": ""
+    },
+    {
+        "Item ID": "1273",
+        "Reach": "21.875",
+        "Velocity": "15",
+        "Hooks": "2",
+        "Latching": "Simultaneous",
+        "Rarity": "2",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [],
+            "Grab Bag": [],
+            "Other": ""
+        }
+    },
+    {
+        "Item ID": "1800",
+        "Reach": "31.25",
+        "Velocity": "13.5",
+        "Hooks": "1",
+        "Latching": "Single",
+        "Rarity": "3",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [],
+            "Grab Bag": [],
+            "Other": ""
+        }
+    },
+    {
+        "Item ID": "1829",
+        "Reach": "34.375",
+        "Velocity": "15.5",
+        "Hooks": "3",
+        "Latching": "Simultaneous",
+        "Rarity": "7",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [],
+            "Grab Bag": [],
+            "Other": ""
+        }
+    },
+    {
+        "Item ID": "1915",
+        "Reach": "25",
+        "Velocity": "11.5",
+        "Hooks": "1",
+        "Latching": "Single",
+        "Rarity": "7",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [],
+            "Grab Bag": [],
+            "Other": ""
+        }
+    },
+    {
+        "Item ID": "1916",
+        "Reach": "34.375",
+        "Velocity": "15.5",
+        "Hooks": "3",
+        "Latching": "Simultaneous",
+        "Rarity": "7",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [],
+            "Grab Bag": [],
+            "Other": ""
+        }
+    },
+    {
+        "Item ID": "2360",
+        "Reach": "25",
+        "Velocity": "13",
+        "Hooks": "2",
+        "Latching": "Simultaneous",
+        "Rarity": "3",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [],
+            "Grab Bag": [],
+            "Other": ""
+        }
+    },
+    {
+        "Item ID": "2585",
+        "Reach": "18.75",
+        "Velocity": "13",
+        "Hooks": "3",
+        "Latching": "Simultaneous",
+        "Rarity": "3",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [],
+            "Grab Bag": [],
+            "Other": ""
+        }
+    },
+    {
+        "Item ID": "2800",
+        "Reach": "31.25",
+        "Velocity": "14",
+        "Hooks": "3",
+        "Latching": "Simultaneous",
+        "Rarity": "7",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [],
+            "Grab Bag": [],
+            "Other": "All enemies in the Martian Madness event"
+        }
+    },
+    {
+        "Item ID": "3020",
+        "Reach": "30",
+        "Velocity": "15",
+        "Hooks": "3",
+        "Latching": "Simultaneous",
+        "Rarity": "6",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [],
+            "Grab Bag": [],
+            "Other": ""
+        }
+    },
+    {
+        "Item ID": "3021",
+        "Reach": "30",
+        "Velocity": "16",
+        "Hooks": "3",
+        "Latching": "Simultaneous",
+        "Rarity": "6",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [],
+            "Grab Bag": [],
+            "Other": ""
+        }
+    },
+    {
+        "Item ID": "3022",
+        "Reach": "30",
+        "Velocity": "15",
+        "Hooks": "3",
+        "Latching": "Simultaneous",
+        "Rarity": "6",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [],
+            "Grab Bag": [],
+            "Other": ""
+        }
+    },
+    {
+        "Item ID": "3023",
+        "Reach": "30",
+        "Velocity": "15",
+        "Hooks": "3",
+        "Latching": "Simultaneous",
+        "Rarity": "6",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [],
+            "Grab Bag": [],
+            "Other": ""
+        }
+    },
+    {
+        "Item ID": "3572",
+        "Reach": "34.375",
+        "Velocity": "18",
+        "Hooks": "4",
+        "Latching": "Simultaneous",
+        "Rarity": "10",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [
+                {
+                    "Craft ID": "",
+                    "Result ID": "3572",
+                    "Result Quantity": "1",
+                    "Table ID": "2",
+                    "Recipe": [
+                        {
+                            "Ingredient ID": "3457",
+                            "Quantity": "6"
+                        },
+                        {
+                            "Ingredient ID": "3458",
+                            "Quantity": "6"
+                        },
+                        {
+                            "Ingredient ID": "3459",
+                            "Quantity": "6"
+                        },
+                        {
+                            "Ingredient ID": "3456",
+                            "Quantity": "6"
+                        }
+                    ]
+                }
+            ],
+            "Grab Bag": [],
+            "Other": ""
+        }
+    },
+    {
+        "Item ID": "3623",
+        "Reach": "37.5",
+        "Velocity": "16",
+        "Hooks": "2",
+        "Latching": "Individual",
+        "Rarity": "10",
+        "Source": {
+            "Drop": [],
+            "NPC": [
+                "Steampunker"
+            ],
+            "Crafting Recipes": [],
+            "Grab Bag": [],
+            "Other": ""
+        }
+    },
+    {
+        "Item ID": "4257",
+        "Reach": "27.5",
+        "Velocity": "12.5",
+        "Hooks": "1",
+        "Latching": "Single",
+        "Rarity": "1",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [
+                {
+                    "Craft ID": "",
+                    "Result ID": "4257",
+                    "Result Quantity": "1",
+                    "Table ID": "2",
+                    "Recipe": [
+                        {
+                            "Ingredient ID": "999",
+                            "Quantity": "15"
+                        }
+                    ]
+                }
+            ],
+            "Grab Bag": [],
+            "Other": ""
+        }
+    },
+    {
+        "Item ID": "4759",
+        "Reach": "19",
+        "Velocity": "11.5",
+        "Hooks": "1",
+        "Latching": "Single",
+        "Rarity": "1",
+        "Source": {
+            "Drop": [],
+            "NPC": [
+                "Zoologist"
+            ],
+            "Crafting Recipes": [],
+            "Grab Bag": [],
+            "Other": ""
+        }
+    },
+    {
+        "Item ID": "4980",
+        "Reach": "30",
+        "Velocity": "16",
+        "Hooks": "1",
+        "Latching": "Single",
+        "Rarity": "5",
+        "Source": {
+            "Drop": [],
+            "NPC": [],
+            "Crafting Recipes": [],
+            "Grab Bag": [],
+            "Other": ""
+        }
     }
-  },
-  {
-    "Item ID": "4759",
-    "Reach": "19",
-    "Velocity": "11.5",
-    "Hooks": "1",
-    "Latching": "Single",
-    "Rarity": "1",
-    "Source": {
-      "Drop": "",
-      "NPC": "Zoologist",
-      "Recipe": "",
-      "Other": ""
-    }
-  },
-  {
-    "Item ID": "4980",
-    "Reach": "30",
-    "Velocity": "16",
-    "Hooks": "1",
-    "Latching": "Single",
-    "Rarity": "5",
-    "Source": {
-      "Drop": "",
-      "NPC": "",
-      "Recipe": "",
-      "Other": ""
-    }
-  }
 ]
