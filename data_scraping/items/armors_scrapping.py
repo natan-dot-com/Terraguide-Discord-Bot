@@ -52,7 +52,7 @@ for table in tables[0:2]:
                 SCRAPING_TOOLTIP: "",
                 SCRAPING_RARITY: "",
                 SCRAPING_RESEARCH: "",
-                SCRAPING_RECIPES: [] 
+                SCRAPING_SOURCES: SOURCE_SOURCES_DICT 
             }
 
             armorDict[SCRAPING_ITEM_ID] = tableBox.find("div", class_="section ids").find("li").b.text
@@ -96,7 +96,7 @@ for table in tables[2:-1]:
             SCRAPING_TOOLTIP: "",
             SCRAPING_RARITY: "",
             SCRAPING_RESEARCH: "",
-            SCRAPING_RECIPES: [] 
+            SCRAPING_SOURCES: SOURCE_SOURCES_DICT 
         }
         armorDict[SCRAPING_ITEM_ID] = tableBox.find("div", class_="section ids").find("li").b.text
         armorDict[SCRAPING_NAME] = tableBox.find("div", class_="title").text
@@ -141,7 +141,7 @@ for trTag in trTags[1:]:
         SCRAPING_TOOLTIP: "",
         SCRAPING_RARITY: "",
         SCRAPING_RESEARCH: "",
-        SCRAPING_RECIPES: [] 
+        SCRAPING_SOURCES: SOURCE_SOURCES_DICT
     }
     armorDict[SCRAPING_ITEM_ID] = tableBox.find("div", class_="section ids").find("li").b.text
     armorDict[SCRAPING_NAME] = tableBox.find("div", class_="title").text

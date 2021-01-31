@@ -31,7 +31,7 @@ for itemInstance in itemList:
                 SCRAPING_PLACEABLE: "",
                 SCRAPING_RARITY: "",
                 SCRAPING_RESEARCH: "",
-                SCRAPING_RECIPES: []
+                SCRAPING_SOURCES: SOURCE_SOURCES_DICT
             }
             jsonDict[SCRAPING_ITEM_ID] = itemInstance[SCRAPING_ID]
             jsonDict[SCRAPING_NAME] = itemInstance[SCRAPING_NAME]

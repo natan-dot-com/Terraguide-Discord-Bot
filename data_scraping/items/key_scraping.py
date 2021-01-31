@@ -42,20 +42,11 @@ for row in rows[1::]:
         
     keyDict[SCRAPING_CONSUMED] = cols[3].img['alt']
     
-    sourceDict = {
-        SOURCE_DROP: "",
-        SOURCE_NPC: "",
-        SOURCE_RECIPE: "",
-        SOURCE_OTHER: ""
-    }
+    sourceDict = SOURCE_SOURCES_DICT
     
     # Drop dict as PLACEHOLDER. It will be in the drop-data json.
     if re.search("Drop", cols[1].text, re.IGNORECASE):
-        dropDict = {
-            DROP_NPC: "",
-            DROP_PROBABILITY: "",
-            DROP_QUANTITY: ""
-        }
+        dropDict = DROP_DROPS_DICT
         if re.search("Plantera", cols[1].text):
             dropDict[DROP_NPC] = "Plantera"
             dropDict[DROP_PROBABILITY] = "100%"
@@ -90,7 +81,7 @@ for row in rows[1::]:
         ingredient[INGREDIENT_QUANTITY] = string[string.find("(")+1:string.find(")")]
         ingredientsList.append(ingredient)
         recipeDict[RECIPE_IDENTITY] = ingredientsList
-        sourceDict[SOURCE_RECIPE] = recipeDict
+        sourceDict[SOURCE_RECIPES] = recipeDict
         
     else:
         if cols[1].find("img"):

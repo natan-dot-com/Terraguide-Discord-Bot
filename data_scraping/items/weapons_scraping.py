@@ -40,7 +40,7 @@ for itemInstance in itemList:
                 SCRAPING_VELOCITY: "",
                 SCRAPING_RARITY: "",
                 SCRAPING_RESEARCH: "",
-                SCRAPING_RECIPES: [] 
+                SCRAPING_SOURCES: SOURCE_SOURCES_DICT 
             }
             jsonDict[SCRAPING_ITEM_ID] = itemInstance[SCRAPING_ID]
             jsonDict[SCRAPING_NAME] = itemInstance[SCRAPING_NAME]
@@ -78,7 +78,6 @@ for itemInstance in itemList:
             if research:
                 jsonDict[SCRAPING_RESEARCH] = research.parent.parent.td.text
 
-            jsonDict[SCRAPING_RECIPES] = []
             jsonList.append(jsonDict)
 
 SaveJSONFile(ITEM_PATH_OUTPUT, jsonList)

@@ -41,7 +41,7 @@ for item in itemList:
                     SCRAPING_HAMMER_POWER: "",
                     SCRAPING_AXE_POWER: "",
                     SCRAPING_FISHING_POWER: "",
-                    SCRAPING_RECIPES: [] 
+                    SCRAPING_SOURCES: SOURCE_SOURCES_DICT
                 }
                 jsonDict[SCRAPING_ITEM_ID] = item[SCRAPING_ID]
                 jsonDict[SCRAPING_NAME] = item[SCRAPING_NAME]
@@ -71,7 +71,6 @@ for item in itemList:
                         elif(powerType["title"] == "Axe power"):
                             jsonDict[SCRAPING_AXE_POWER] = powerType.text[1:].split(" ", 1)[0]
 
-                jsonDict[SCRAPING_RECIPES] = []
                 jsonList.append(jsonDict)
         else:
             trTags = soup.find("table", id="fishing-poles-table").find_all("tr")
@@ -89,7 +88,7 @@ for item in itemList:
                         SCRAPING_HAMMER_POWER: "",
                         SCRAPING_AXE_POWER: "",
                         SCRAPING_FISHING_POWER: "",
-                        SCRAPING_RECIPES: [] 
+                        SCRAPING_SOURCES: SOURCE_SOURCES_DICT
                     }
                     
                     jsonDict[SCRAPING_ITEM_ID] = item[SCRAPING_ID]

@@ -28,7 +28,7 @@ def get_statistics(tableBox, usedIn):
         SCRAPING_DESTROY_TILES: "",
         SCRAPING_RARITY: "",
         SCRAPING_TOOLTIP: "",
-        SCRAPING_RECIPES: []
+        SCRAPING_SOURCES: SOURCE_SOURCES_DICT
     }
 
     ammoDict[SCRAPING_ITEM_ID] = tableBox.find("div", class_="section ids").find("li").b.text
@@ -96,7 +96,7 @@ for pageName in AMMOS_TYPES:
                 SCRAPING_DESTROY_TILES: "",
                 SCRAPING_RARITY: "",
                 SCRAPING_TOOLTIP: "",
-                SCRAPING_RECIPES: [] 
+                SCRAPING_SOURCES: SOURCE_SOURCES_DICT
             }
             tdTags = item.find_all("td")
 
@@ -144,7 +144,7 @@ for pageName in AMMOS_TYPES:
                 SCRAPING_DESTROY_TILES: "",
                 SCRAPING_RARITY: "",
                 SCRAPING_TOOLTIP: "",
-                SCRAPING_RECIPES: []
+                SCRAPING_SOURCES: SOURCE_SOURCES_DICT
             }
             tdTags = item.find_all("td")
 
@@ -187,7 +187,7 @@ for pageName in AMMOS_TYPES:
                 SCRAPING_DESTROY_TILES: "",
                 SCRAPING_RARITY: "",
                 SCRAPING_TOOLTIP: "",
-                SCRAPING_RECIPES: []
+                SCRAPING_SOURCES: SOURCE_SOURCES_DICT
             }
             tdTags = item.find_all("td")
             id = item.find("div", class_="id")      
@@ -225,7 +225,7 @@ for ammo in AMMO_EXCEPTIONS:
                 SCRAPING_DESTROY_TILES: "",
                 SCRAPING_RARITY: "",
                 SCRAPING_TOOLTIP: "",
-                SCRAPING_RECIPES: []
+                SCRAPING_SOURCES: SOURCE_SOURCES_DICT
             }
             id = tableCoin.find("div", class_="id")
             tdTags = tableCoin.find_all("td")
