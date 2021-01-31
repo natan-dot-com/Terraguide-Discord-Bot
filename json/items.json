@@ -1277,17 +1277,17 @@
     {
         "ID": "256",
         "Name": "Ninja Hood",
-        "Type": "Vanity"
+        "Type": "Armor"
     },
     {
         "ID": "257",
         "Name": "Ninja Shirt",
-        "Type": "Vanity"
+        "Type": "Armor"
     },
     {
         "ID": "258",
         "Name": "Ninja Pants",
-        "Type": "Vanity"
+        "Type": "Armor"
     },
     {
         "ID": "259",
@@ -16586,77 +16586,77 @@
     },
     {
         "ID": "3318",
-        "Name": "Treasure Bag",
+        "Name": "Treasure Bag (King Slime)",
         "Type": "Grab bag"
     },
     {
         "ID": "3319",
-        "Name": "Treasure Bag",
+        "Name": "Treasure Bag (Eye of Cthulhu)",
         "Type": "Grab bag"
     },
     {
         "ID": "3320",
-        "Name": "Treasure Bag",
+        "Name": "Treasure Bag (Eater of Worlds)",
         "Type": "Grab bag"
     },
     {
         "ID": "3321",
-        "Name": "Treasure Bag",
+        "Name": "Treasure Bag (Brain of Cthulhu)",
         "Type": "Grab bag"
     },
     {
         "ID": "3322",
-        "Name": "Treasure Bag",
+        "Name": "Treasure Bag (Queen Bee)",
         "Type": "Grab bag"
     },
     {
         "ID": "3323",
-        "Name": "Treasure Bag",
+        "Name": "Treasure Bag (Skeletron)",
         "Type": "Grab bag"
     },
     {
         "ID": "3324",
-        "Name": "Treasure Bag",
+        "Name": "Treasure Bag (Wall of Flesh)",
         "Type": "Grab bag"
     },
     {
         "ID": "3325",
-        "Name": "Treasure Bag",
+        "Name": "Treasure Bag (The Destroyer)",
         "Type": "Grab bag"
     },
     {
         "ID": "3326",
-        "Name": "Treasure Bag",
+        "Name": "Treasure Bag (The Twins)",
         "Type": "Grab bag"
     },
     {
         "ID": "3327",
-        "Name": "Treasure Bag",
+        "Name": "Treasure Bag (Skeletron Prime)",
         "Type": "Grab bag"
     },
     {
         "ID": "3328",
-        "Name": "Treasure Bag",
+        "Name": "Treasure Bag (Plantera)",
         "Type": "Grab bag"
     },
     {
         "ID": "3329",
-        "Name": "Treasure Bag",
+        "Name": "Treasure Bag (Golem)",
         "Type": "Grab bag"
     },
     {
         "ID": "3330",
-        "Name": "Treasure Bag",
+        "Name": "Treasure Bag (Duke Fishron)",
         "Type": "Grab bag"
     },
     {
         "ID": "3331",
-        "Name": "Treasure Bag",
+        "Name": "Treasure Bag (Lunatic Cultist)",
         "Type": "Grab bag"
     },
     {
         "ID": "3332",
-        "Name": "Treasure Bag",
+        "Name": "Treasure Bag (Moon Lord)",
         "Type": "Grab bag"
     },
     {
@@ -23906,7 +23906,7 @@
     },
     {
         "ID": "4782",
-        "Name": "Treasure Bag",
+        "Name": "Treasure Bag (Empress of Light)",
         "Type": "Grab bag"
     },
     {
@@ -24781,7 +24781,7 @@
     },
     {
         "ID": "4957",
-        "Name": "Treasure Bag",
+        "Name": "Treasure Bag (Queen Slime)",
         "Type": "Grab bag"
     },
     {

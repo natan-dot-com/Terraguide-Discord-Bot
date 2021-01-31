@@ -20,6 +20,12 @@ RARITY_COLUMN = 8
 JSON_PATH = "items_hooks.json"
 hooksDictList = []
 
+itemList = LoadJSONFile("../../json/items.json")
+def searchForID(itemName, itemList):
+    for itemInstance in itemList:
+        if itemInstance['Name'] == itemName:
+            return itemInstance['ID']
+
 URL = "https://terraria.gamepedia.com/Hooks"
 html = requests.get(URL)
 soup = BeautifulSoup(html.content, 'html.parser')
@@ -49,15 +55,15 @@ for table in tables:
         hooksDict[SCRAPING_RARITY] = (re.search("\d+", cols[RARITY_COLUMN].span.a['title'])).group()
         
         sourceDict = {
-            "Drop" : "",
-            "NPC" : "",
-            "Recipe" : "",
-            "Other" : ""
+            SOURCE_DROP : [],
+            SOURCE_NPC : [],
+            SOURCE_RECIPE : [],
+            SOURCE_GRAB_BAG : [],
+            SOURCE_OTHER : ""
         }
         
         # Splitting string to prevent inconsistences
         stringsList = re.split(" or |\n", cols[SOURCE_COLUMN].text)
-        print(stringsList)
         for instance in stringsList:
             
             # Check to prevent breakline madness
@@ -72,36 +78,44 @@ for table in tables:
                 if (re.search("^Crafted:", instance)):
                     quantityList = re.search("(?<=Crafted:).*$", instance).group().replace(" ", "").split("+")
                     imageList = cols[SOURCE_COLUMN].findAll('img')
-
+                    
                     ingredientList = []
                     for imageInstance in imageList:
                         ingredientList.append(imageInstance['alt'])
-
+                        
+                    recipeDict = {
+                        RECIPE_CRAFT_ID: "",
+                        RECIPE_RESULT: hooksDict[SCRAPING_ITEM_ID],
+                        RECIPE_RESULT_QUANTITY: "1",
+                        RECIPE_TABLE: "2",
+                        RECIPE_IDENTITY: ""
+                    }
                     recipeList = []
                     for ingredient, quantity in zip(ingredientList, quantityList):
-                        recipeDict = {
-                            "Ingredient": "", 
-                            "Quantity": ""
+                        ingredientDict = {
+                            INGREDIENT_NAME: "", 
+                            INGREDIENT_QUANTITY: ""
                         }
-                        recipeDict['Ingredient'] = ingredient
+                        ingredientDict[INGREDIENT_NAME] = searchForID(ingredient, itemList)
                         if not quantity:
                             quantity = "1"
-                        recipeDict['Quantity'] = quantity
-                        recipeList.append(recipeDict)
+                        ingredientDict[INGREDIENT_QUANTITY] = quantity
+                        recipeList.append(ingredientDict)
+                    recipeDict[RECIPE_IDENTITY] = recipeList
                     # PLACEHOLDER: RecipeList will eventually be on the crafting recipe json
                     # The recipe's ID will be put in the 'Recipe' dict key later on.
-                    sourceDict['Recipe'] = recipeList
+                    sourceDict[SOURCE_RECIPE].append(recipeDict)
                     
                 # If the source is an NPC, it's needed to get its respective ID.
                 elif (re.search("\(", instance)):
                     # PLACEHOLDER: NPC's name will be in the dictionary while the NPC json isn't done
-                    sourceDict['NPC'] = re.search(".+?(?=\()", instance).group().rstrip().replace("\n", "")
+                    NPC = re.search(".+?(?=\()", instance).group().rstrip().replace("\n", "")
+                    sourceDict[SOURCE_NPC].append(NPC)
                     
                 # If it's none of the above, we can just put it directly in the 'Other' dict key as open-text.
                 else:
-                    sourceDict['Other'] = instance.rstrip().replace("\n", "")
+                    sourceDict[SOURCE_OTHER] = instance.rstrip().replace("\n", "")
             
         hooksDict[SCRAPING_SOURCE] = sourceDict
         hooksDictList.append(hooksDict)
-
 SaveJSONFile(JSON_PATH, sorted(hooksDictList, key = lambda i: int(i['Item ID'])))
