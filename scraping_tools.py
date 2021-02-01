@@ -78,7 +78,31 @@ RECIPE_RESULT = "Result ID"
 RECIPE_RESULT_QUANTITY = "Result Quantity"
 RECIPE_TABLE = "Table ID"
 RECIPE_IDENTITY = "Recipe"
+RECIPE_CRAFTING_DICT = {
+    RECIPE_CRAFT_ID: "",
+    RECIPE_RESULT: "",
+    RECIPE_RESULT_QUANTITY: "",
+    RECIPE_TABLE: "",
+    RECIPE_IDENTITY: []
+}
 
 # Recipe ingredient labels ('RECIPE_IDENTITY' subdict)
 INGREDIENT_NAME = "Ingredient ID"
 INGREDIENT_QUANTITY = "Quantity"
+INGREDIENT_DICT = {
+    INGREDIENT_NAME: "",
+    INGREDIENT_QUANTITY: ""
+}
+
+# Grab bag dict labels ('SCRAPING_SOURCE' subdict)
+BAG_DROP_ID = "Bag Drop ID"
+BAG_ID = "Bag ID"
+BAG_DROP_PROBABILITY = "Probability"
+BAG_DROP_QUANTITY = "Quantity"
+BAG_DROPS_DICT = {
+    BAG_DROP_ID: "",
+    BAG_ID: "",
+    BAG_DROP_PROBABILITY: "",
+    BAG_DROP_QUANTITY: ""
+}
+
