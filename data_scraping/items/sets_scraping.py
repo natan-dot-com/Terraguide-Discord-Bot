@@ -62,7 +62,7 @@ for table in tables[0:2]:
                     elif statistic.th.text == SCRAPING_DEFENSE:
                         setDict[SCRAPING_DEFENSE] = statistic.td.text.split(" ")[0].encode("ascii", "ignore").decode().rstrip().replace(":", "")
                     elif statistic.th.text == SCRAPING_RARITY:
-                        setDict[SCRAPING_RARITY] = statistic.td.span.a["title"][-1]
+                        setDict[SCRAPING_RARITY] = (re.search("-*\d+", statistic.td.span.a["title"])).group()
             else:
                 if not tableTitle.text in processedItems:
                     setDict[SCRAPING_SET_PIECES].append(tableTitle.text)

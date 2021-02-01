@@ -3627,7 +3627,7 @@
         "Defense": "24",
         "Body Slot": "Helmet",
         "Tooltip": "26% increased melee critical strike chanceGrants minor life regenerationEnemies are more likely to target you",
-        "Rarity": "0",
+        "Rarity": "10",
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [],
@@ -3644,7 +3644,7 @@
         "Defense": "34",
         "Body Slot": "Shirt",
         "Tooltip": "29% increased melee damageGrants minor life regenerationEnemies are more likely to target you",
-        "Rarity": "0",
+        "Rarity": "10",
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [],
@@ -3661,7 +3661,7 @@
         "Defense": "20",
         "Body Slot": "Pants",
         "Tooltip": "15% increased movement and melee speedGrants minor life regenerationEnemies are more likely to target you",
-        "Rarity": "0",
+        "Rarity": "10",
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [],
@@ -3678,7 +3678,7 @@
         "Defense": "14",
         "Body Slot": "Helmet",
         "Tooltip": "16% increased ranged damage7% increased ranged critical strike chance",
-        "Rarity": "0",
+        "Rarity": "10",
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [],
@@ -3695,7 +3695,7 @@
         "Defense": "28",
         "Body Slot": "Shirt",
         "Tooltip": "12% increased ranged damage and critical strike chance25% chance not to consume ammo",
-        "Rarity": "0",
+        "Rarity": "10",
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [],
@@ -3712,7 +3712,7 @@
         "Defense": "20",
         "Body Slot": "Pants",
         "Tooltip": "8% increased ranged damage and critical strike chance10% increased movement speed",
-        "Rarity": "0",
+        "Rarity": "10",
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [],
@@ -3729,7 +3729,7 @@
         "Defense": "14",
         "Body Slot": "Helmet",
         "Tooltip": "Increases maximum mana by 60 and reduces mana usage by 15% 7% increased magic damage and critical strike chance",
-        "Rarity": "0",
+        "Rarity": "10",
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [],
@@ -3746,7 +3746,7 @@
         "Defense": "18",
         "Body Slot": "Shirt",
         "Tooltip": "9% increased magic damage and critical strike chance",
-        "Rarity": "0",
+        "Rarity": "10",
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [],
@@ -3763,7 +3763,7 @@
         "Defense": "14",
         "Body Slot": "Pants",
         "Tooltip": "10% increased magic damage10% increased movement speed",
-        "Rarity": "0",
+        "Rarity": "10",
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [],
@@ -3780,7 +3780,7 @@
         "Defense": "10",
         "Body Slot": "Helmet",
         "Tooltip": "Increases your max number of minions by 1Increases minion damage by 22%",
-        "Rarity": "0",
+        "Rarity": "10",
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [],
@@ -3797,7 +3797,7 @@
         "Defense": "16",
         "Body Slot": "Shirt",
         "Tooltip": "Increases your max number of minions by 2Increases minion damage by 22%",
-        "Rarity": "0",
+        "Rarity": "10",
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [],
@@ -3814,7 +3814,7 @@
         "Defense": "12",
         "Body Slot": "Pants",
         "Tooltip": "Increases your max number of minions by 2Increases minion damage by 22%",
-        "Rarity": "0",
+        "Rarity": "10",
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [],

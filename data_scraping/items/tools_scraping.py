@@ -6,6 +6,7 @@ parent_dir = os.path.dirname(parent_dir)
 sys.path.insert(0, parent_dir)
 from scraping_tools import *
 from json_manager import *
+import re
 import requests
 from bs4 import BeautifulSoup
 
@@ -23,7 +24,7 @@ jsonList = []
 for item in itemList:
     if item[SCRAPING_TYPE] == "Tool":
         newURL = url + item[SCRAPING_NAME].replace(" ", "_")
-        print("Processing " + newURL + " with ID " + item["ID"])
+        print("Processing " + newURL + " with ID " + item[SCRAPING_ID])
         page = requests.get(newURL)
         soup = BeautifulSoup(page.content, "html.parser")
 
@@ -48,7 +49,7 @@ for item in itemList:
 
                 rarity = table.find("span", class_="rarity")
                 if rarity:
-                    jsonDict[SCRAPING_RARITY] = rarity.a["title"][-1]
+                    jsonDict[SCRAPING_RARITY] = (re.search("-*\d+", rarity.a["title"])).group()
 
                 use_time = table.find("span", class_="usetime")
                 if use_time:
@@ -95,10 +96,10 @@ for item in itemList:
                     jsonDict[SCRAPING_NAME] = item[SCRAPING_NAME]
                     jsonDict[SCRAPING_FISHING_POWER] = tdTags[3].text.rstrip()
                     jsonDict[SCRAPING_VELOCITY] = tdTags[4].text.rstrip()
-                    jsonDict[SCRAPING_RARITY] = tdTags[6].a["title"][-1]
+                    jsonDict[SCRAPING_RARITY] = (re.search("-*\d+", tdTags[6].a["title"])).group()
                     statistics = soup.find("div", class_="infobox item").find("div", class_="section statistics").find_all("tr")
                     for statistic in statistics:
-                        if statistic.th.text == "Use time":
+                        if statistic.th.text == SCRAPING_USE_TIME:
                             jsonDict[SCRAPING_USE_TIME] = statistic.td.text.rstrip()
                     jsonList.append(jsonDict)
                     break

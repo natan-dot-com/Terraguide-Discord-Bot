@@ -1,4 +1,4 @@
-#Need to fix duplicates
+#Everything seems to work.
 
 import os,sys,inspect
 import re
@@ -66,7 +66,7 @@ for table in tables[0:2]:
                 elif statistic.th.text == SCRAPING_TOOLTIP:
                     armorDict[SCRAPING_TOOLTIP] = statistic.td.text.split("/")[0].rstrip()
                 elif statistic.th.text == SCRAPING_RARITY:
-                    armorDict[SCRAPING_RARITY] = statistic.td.span.a["title"][-1]
+                    armorDict[SCRAPING_RARITY] = (re.search("-*\d+", statistic.td.span.a["title"])).group()
                 elif statistic.th.text == SCRAPING_RESEARCH:
                     armorDict[SCRAPING_RESEARCH] = statistic.td.text
             processedItems.append(armorDict[SCRAPING_NAME])
@@ -109,7 +109,7 @@ for table in tables[2:-1]:
             elif statistic.th.text == SCRAPING_TOOLTIP:
                 armorDict[SCRAPING_TOOLTIP] = statistic.td.text.split("/")[0].rstrip()
             elif statistic.th.text == SCRAPING_RARITY:
-                armorDict[SCRAPING_RARITY] = statistic.td.span.a["title"][-1]
+                armorDict[SCRAPING_RARITY] = (re.search("-*\d+", statistic.td.span.a["title"])).group()
             elif statistic.th.text == SCRAPING_RESEARCH:
                 armorDict[SCRAPING_RESEARCH] = statistic.td.text
         
@@ -154,7 +154,7 @@ for trTag in trTags[1:]:
         elif statistic.th.text == SCRAPING_TOOLTIP:
             armorDict[SCRAPING_TOOLTIP] = BeautifulSoup(str(statistic.td).replace("<br/>", ". "), 'html.parser').text.split("/")[0].rstrip()
         elif statistic.th.text == SCRAPING_RARITY:
-            armorDict[SCRAPING_RARITY] = statistic.td.span.a["title"][-1]
+            armorDict[SCRAPING_RARITY] = (re.search("-*\d+", statistic.td.span.a["title"])).group()
         elif statistic.th.text == SCRAPING_RESEARCH:
             armorDict[SCRAPING_RESEARCH] = statistic.td.text
     

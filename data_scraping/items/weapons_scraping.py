@@ -8,6 +8,7 @@ parent_dir = os.path.dirname(parent_dir)
 sys.path.insert(0, parent_dir) 
 from scraping_tools import *
 from json_manager import *
+import re
 import requests
 from bs4 import BeautifulSoup
 
@@ -72,7 +73,7 @@ for itemInstance in itemList:
 
             rarity = table.find("span", class_="rarity")
             if rarity:
-                jsonDict[SCRAPING_RARITY] = rarity.a["title"][-1]
+                jsonDict[SCRAPING_RARITY] = (re.search("-*\d+", rarity.a["title"])).group()
 
             research = table.find("a", title="Journey mode")
             if research:

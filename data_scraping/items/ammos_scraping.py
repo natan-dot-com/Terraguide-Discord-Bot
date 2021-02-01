@@ -48,7 +48,7 @@ def get_statistics(tableBox, usedIn):
         elif statistic.th.text == SCRAPING_EFFECT:
             ammoDict[SCRAPING_EFFECT] = BeautifulSoup(str(statistic.td).replace("<br/>", ". "), 'html.parser').text.rstrip()
         elif statistic.th.text == SCRAPING_RARITY:
-            ammoDict[SCRAPING_RARITY] = statistic.td.span.a["title"][-1]
+            ammoDict[SCRAPING_RARITY] = (re.search("-*\d+", statistic.td.span.a["title"])).group()
         elif statistic.th.text == SCRAPING_TOOLTIP:
             ammoDict[SCRAPING_TOOLTIP] = BeautifulSoup(str(statistic.td).replace("<br/>", ". "), 'html.parser').text.rstrip()
     return ammoDict
