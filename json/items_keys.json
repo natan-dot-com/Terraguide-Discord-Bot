@@ -4,9 +4,9 @@
         "Used In": "Locked Gold Chest",
         "Is Consumed": "Yes",
         "Source": {
-            "Drop": [],
-            "NPC": [],
             "Crafting Recipes": [],
+            "NPC": [],
+            "Drop": [],
             "Grab Bag": [],
             "Other": "Dungeon"
         }
@@ -16,9 +16,9 @@
         "Used In": "Locked Shadow Chest",
         "Is Consumed": "No",
         "Source": {
-            "Drop": [],
-            "NPC": [],
             "Crafting Recipes": [],
+            "NPC": [],
+            "Drop": [],
             "Grab Bag": [],
             "Other": "Gold Chest"
         }
@@ -28,16 +28,9 @@
         "Used In": "Lihzahrd Door",
         "Is Consumed": "Yes",
         "Source": {
-            "Drop": [
-                {
-                    "Drop ID": "",
-                    "NPC": "Plantera",
-                    "Probability": "100%",
-                    "Quantity": "1"
-                }
-            ],
-            "NPC": [],
             "Crafting Recipes": [],
+            "NPC": [],
+            "Drop": [],
             "Grab Bag": [],
             "Other": ""
         }
@@ -47,6 +40,8 @@
         "Used In": "Jungle Chest",
         "Is Consumed": "Yes",
         "Source": {
+            "Crafting Recipes": [],
+            "NPC": [],
             "Drop": [
                 {
                     "Drop ID": "",
@@ -55,8 +50,6 @@
                     "Quantity": "1"
                 }
             ],
-            "NPC": [],
-            "Crafting Recipes": [],
             "Grab Bag": [],
             "Other": ""
         }
@@ -66,6 +59,8 @@
         "Used In": "Corruption Chest",
         "Is Consumed": "Yes",
         "Source": {
+            "Crafting Recipes": [],
+            "NPC": [],
             "Drop": [
                 {
                     "Drop ID": "",
@@ -74,8 +69,6 @@
                     "Quantity": "1"
                 }
             ],
-            "NPC": [],
-            "Crafting Recipes": [],
             "Grab Bag": [],
             "Other": ""
         }
@@ -85,6 +78,8 @@
         "Used In": "Crimson Chest",
         "Is Consumed": "Yes",
         "Source": {
+            "Crafting Recipes": [],
+            "NPC": [],
             "Drop": [
                 {
                     "Drop ID": "",
@@ -93,8 +88,6 @@
                     "Quantity": "1"
                 }
             ],
-            "NPC": [],
-            "Crafting Recipes": [],
             "Grab Bag": [],
             "Other": ""
         }
@@ -104,6 +97,8 @@
         "Used In": "Hallowed Chest",
         "Is Consumed": "Yes",
         "Source": {
+            "Crafting Recipes": [],
+            "NPC": [],
             "Drop": [
                 {
                     "Drop ID": "",
@@ -112,8 +107,6 @@
                     "Quantity": "1"
                 }
             ],
-            "NPC": [],
-            "Crafting Recipes": [],
             "Grab Bag": [],
             "Other": ""
         }
@@ -123,6 +116,8 @@
         "Used In": "Ice Chest",
         "Is Consumed": "Yes",
         "Source": {
+            "Crafting Recipes": [],
+            "NPC": [],
             "Drop": [
                 {
                     "Drop ID": "",
@@ -131,8 +126,6 @@
                     "Quantity": "1"
                 }
             ],
-            "NPC": [],
-            "Crafting Recipes": [],
             "Grab Bag": [],
             "Other": ""
         }
@@ -142,22 +135,9 @@
         "Used In": "Corrupt Mimic",
         "Is Consumed": "Yes",
         "Source": {
-            "Drop": [],
+            "Crafting Recipes": [],
             "NPC": [],
-            "Crafting Recipes": [
-                {
-                    "Craft ID": "",
-                    "Result ID": "3091",
-                    "Result Quantity": "1",
-                    "Table ID": "2",
-                    "Recipe": [
-                        {
-                            "Ingredient ID": "521",
-                            "Quantity": "15"
-                        }
-                    ]
-                }
-            ],
+            "Drop": [],
             "Grab Bag": [],
             "Other": ""
         }
@@ -167,22 +147,9 @@
         "Used In": "Hallowed Mimic",
         "Is Consumed": "Yes",
         "Source": {
-            "Drop": [],
+            "Crafting Recipes": [],
             "NPC": [],
-            "Crafting Recipes": [
-                {
-                    "Craft ID": "",
-                    "Result ID": "3092",
-                    "Result Quantity": "1",
-                    "Table ID": "2",
-                    "Recipe": [
-                        {
-                            "Ingredient ID": "520",
-                            "Quantity": "15"
-                        }
-                    ]
-                }
-            ],
+            "Drop": [],
             "Grab Bag": [],
             "Other": ""
         }
@@ -192,6 +159,8 @@
         "Used In": "Desert Chest",
         "Is Consumed": "Yes",
         "Source": {
+            "Crafting Recipes": [],
+            "NPC": [],
             "Drop": [
                 {
                     "Drop ID": "",
@@ -200,8 +169,6 @@
                     "Quantity": "1"
                 }
             ],
-            "NPC": [],
-            "Crafting Recipes": [],
             "Grab Bag": [],
             "Other": ""
         }

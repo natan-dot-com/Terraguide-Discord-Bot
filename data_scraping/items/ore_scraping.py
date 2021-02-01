@@ -11,6 +11,9 @@ from bs4 import BeautifulSoup
 import re
 import requests
 
+# List of strings that we must ignore (since they're related to drops)
+dropList = ["Eater of Worlds", "Eye of Cthulhu", "Brain of Cthulhu", "Ocram", "Moon Lord"]
+
 DIRECTORY = "ores/"
 IMAGE_EXTENSION = ".png"
 IN_STONE_SUFFIX = "_In_Stone"
@@ -31,7 +34,13 @@ for row in rows[1::]:
         SCRAPING_RARITY: "",
         SCRAPING_MINIMUM_PICKAXE_POWER: "",
         SCRAPING_IN_STONE: "",
-        SCRAPING_SOURCE: ""
+        SCRAPING_SOURCE: {
+            SOURCE_RECIPE: [],
+            SOURCE_NPC: [],
+            SOURCE_DROP: [],
+            SOURCE_GRAB_BAG: [],
+            SOURCE_OTHER: ""
+        }
     }
     cols = row.findAll("td")
     oreDict[SCRAPING_ITEM_ID] = (re.search("\d+", cols[1].div.text)).group()
@@ -55,20 +64,25 @@ for table in tables[1:3:]:
             # First column (image)
             colImages = cols[0].findAll("img")
             imgPath = DIRECTORY + colImages[1]['alt'].replace(" ", "_") + IN_STONE_SUFFIX + IMAGE_EXTENSION
-            imgOutput = requests.get(colImages[0]['src'], stream=True)
-            if imgOutput.ok:
-                with open(imgPath, "wb+") as handler:
-                    for block in imgOutput.iter_content(1024):
-                        if not block:
-                            break
-                        handler.write(block)
+            writeImage(colImages[0]['src'], imgPath)
             oreDictList[oreIndex][SCRAPING_IN_STONE] = imgPath
             
             # Second column (pickaxe power)
             oreDictList[oreIndex][SCRAPING_MINIMUM_PICKAXE_POWER] = (cols[1].find("img"))['alt']
             
             # Fourth column (source)
-            oreDictList[oreIndex][SCRAPING_SOURCE] = cols[3].text.replace("\n", "")
+            allSources = cols[3].text.replace("\n", "").split(", ")
+            biomeSources = []
+            for source in allSources:
+                biomeSourceFlag = True
+                for npc in dropList:
+                    if re.search(npc, source):
+                        biomeSourceFlag = False
+                        break
+                if biomeSourceFlag:
+                    biomeSources.append(source)
+                
+            oreDictList[oreIndex][SCRAPING_SOURCE][SOURCE_OTHER] = ", ".join(biomeSources)
             oreIndex += 1
             
         # For when there's two ores in the same table row
@@ -81,25 +95,13 @@ for table in tables[1:3:]:
             # First column (first ore image)
             colImages = cols[0].findAll("img")
             imgPath = DIRECTORY + colImages[1]['alt'].replace(" ", "_") + IN_STONE_SUFFIX + IMAGE_EXTENSION
-            imgOutput = requests.get(colImages[0]['src'], stream=True)
-            if imgOutput.ok:
-                with open(imgPath, "wb+") as handler:
-                    for block in imgOutput.iter_content(1024):
-                        if not block:
-                            break
-                        handler.write(block)
+            writeImage(colImages[0]['src'], imgPath)
             oreDictList[oreIndex][SCRAPING_IN_STONE] = imgPath
             
             # Second column (second ore image)
             colImages = cols[1].findAll("img")
             imgPath = DIRECTORY + colImages[1]['alt'].replace(" ", "_") + IN_STONE_SUFFIX + IMAGE_EXTENSION
-            imgOutput = requests.get(colImages[0]['src'], stream=True)
-            if imgOutput.ok:
-                with open(imgPath, "wb+") as handler:
-                    for block in imgOutput.iter_content(1024):
-                        if not block:
-                            break
-                        handler.write(block)
+            writeImage(colImages[0]['src'], imgPath)
             oreDictList[oreIndex+1][SCRAPING_IN_STONE] = imgPath
             
             # Third column (pickaxe power) 
@@ -107,8 +109,19 @@ for table in tables[1:3:]:
             oreDictList[oreIndex+1][SCRAPING_MINIMUM_PICKAXE_POWER] = (cols[2].find("img"))['alt']
             
             # Fifth column (source)
-            oreDictList[oreIndex][SCRAPING_SOURCE] = cols[4].text.replace("\n", "")
-            oreDictList[oreIndex+1][SCRAPING_SOURCE] = cols[4].text.replace("\n", "")
+            allSources = cols[4].text.replace("\n", "").split(", ")
+            biomeSources = []
+            for source in allSources:
+                biomeSourceFlag = True
+                for npc in dropList:
+                    if re.search(npc, source):
+                        biomeSourceFlag = False
+                        break
+                if biomeSourceFlag:
+                    biomeSources.append(source)
+             
+            oreDictList[oreIndex][SCRAPING_SOURCE][SOURCE_OTHER] = ", ".join(biomeSources)
+            oreDictList[oreIndex+1][SCRAPING_SOURCE][SOURCE_OTHER] = ", ".join(biomeSources)
             oreIndex += 2
             
 SaveJSONFile(JSON_PATH, sorted(oreDictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))

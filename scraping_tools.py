@@ -1,3 +1,5 @@
+import requests
+
 # General labels
 SCRAPING_ID = "ID"
 SCRAPING_TYPE = "Type"
@@ -45,6 +47,10 @@ SCRAPING_ANGLER_QUOTE = "Angler Quote"
 SCRAPING_HEIGHT = "Height"
 SCRAPING_BIOME = "Biome"
 SCRAPING_SOURCES = "Sources"
+SCRAPING_RARITY_ID = "Rarity ID"
+SCRAPING_RARITY_TIER = "Rarity Tier"
+SCRAPING_IMAGE_PATH = "Image Path"
+SCRAPING_RARITY_DESC = "Rarity Description"
 
 # Source dict labels ('SCRAPING_SOURCE')
 SOURCE_RECIPE = "Crafting Recipes"
@@ -106,3 +112,18 @@ BAG_DROPS_DICT = {
     BAG_DROP_QUANTITY: ""
 }
 
+# Find the ID in respect of an item in items.json
+def searchForID(itemName, itemList):
+    for itemInstance in itemList:
+        if itemName == itemInstance[SCRAPING_NAME]:
+            return itemInstance[SCRAPING_ID]
+
+# Write/saves an image from a HTML scrap
+def writeImage(imageSource, imagePath):
+    imgOutput = requests.get(imageSource, stream=True)
+    if imgOutput.ok:
+        with open(imagePath, "wb+") as handler:
+            for block in imgOutput.iter_content(1024):
+                if not block:
+                    break
+                handler.write(block)

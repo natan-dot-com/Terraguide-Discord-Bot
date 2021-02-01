@@ -21,10 +21,6 @@ JSON_PATH = "items_hooks.json"
 hooksDictList = []
 
 itemList = LoadJSONFile("../../json/items.json")
-def searchForID(itemName, itemList):
-    for itemInstance in itemList:
-        if itemInstance['Name'] == itemName:
-            return itemInstance['ID']
 
 URL = "https://terraria.gamepedia.com/Hooks"
 html = requests.get(URL)
@@ -55,9 +51,9 @@ for table in tables:
         hooksDict[SCRAPING_RARITY] = (re.search("\d+", cols[RARITY_COLUMN].span.a['title'])).group()
         
         sourceDict = {
-            SOURCE_DROP : [],
-            SOURCE_NPC : [],
             SOURCE_RECIPE : [],
+            SOURCE_NPC : [],
+            SOURCE_DROP : [],
             SOURCE_GRAB_BAG : [],
             SOURCE_OTHER : ""
         }
@@ -75,36 +71,9 @@ for table in tables:
                     continue
                 
                 # If the source is a crafting recipe, it's needed to put it in the recipes json and get its reference ID
+                # The recipe's ID will be put in the 'Crafting Recipes' dict key later on
                 if (re.search("^Crafted:", instance)):
-                    quantityList = re.search("(?<=Crafted:).*$", instance).group().replace(" ", "").split("+")
-                    imageList = cols[SOURCE_COLUMN].findAll('img')
-                    
-                    ingredientList = []
-                    for imageInstance in imageList:
-                        ingredientList.append(imageInstance['alt'])
-                        
-                    recipeDict = {
-                        RECIPE_CRAFT_ID: "",
-                        RECIPE_RESULT: hooksDict[SCRAPING_ITEM_ID],
-                        RECIPE_RESULT_QUANTITY: "1",
-                        RECIPE_TABLE: "2",
-                        RECIPE_IDENTITY: ""
-                    }
-                    recipeList = []
-                    for ingredient, quantity in zip(ingredientList, quantityList):
-                        ingredientDict = {
-                            INGREDIENT_NAME: "", 
-                            INGREDIENT_QUANTITY: ""
-                        }
-                        ingredientDict[INGREDIENT_NAME] = searchForID(ingredient, itemList)
-                        if not quantity:
-                            quantity = "1"
-                        ingredientDict[INGREDIENT_QUANTITY] = quantity
-                        recipeList.append(ingredientDict)
-                    recipeDict[RECIPE_IDENTITY] = recipeList
-                    # PLACEHOLDER: RecipeList will eventually be on the crafting recipe json
-                    # The recipe's ID will be put in the 'Recipe' dict key later on.
-                    sourceDict[SOURCE_RECIPE].append(recipeDict)
+                    continue
                     
                 # If the source is an NPC, it's needed to get its respective ID.
                 elif (re.search("\(", instance)):
