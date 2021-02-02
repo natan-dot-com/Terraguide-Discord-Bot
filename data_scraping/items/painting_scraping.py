@@ -17,15 +17,6 @@ dictList = []
 
 itemList = LoadJSONFile('../../json/items.json')
 
-def getTableColumns(tableHead, scrappingData):
-    columnDict = {}
-    for data in scrappingData:
-        columnDict[data] = -1
-        for column in tableHead:
-            if re.search("^" + data, column.text):
-                columnDict[data] = int(tableHead.index(column))
-    return columnDict
-
 URL = "https://terraria.gamepedia.com/Paintings"
 html = requests.get(URL)
 soup = BeautifulSoup(html.content, 'html.parser')
@@ -42,24 +33,24 @@ for table in tables:
             SCRAPING_DESCRIPTION: "",
             SCRAPING_SOURCE: SOURCE_SOURCES_DICT
         }
-        if index["Name"] != -1:
+        if index["Name"] != NOT_FOUND:
             paintingDict[SCRAPING_ITEM_ID] = re.search("\d+", cols[index["Name"]].find("div", class_="id").text).group()
             
-        if index["Painting"] != -1:
+        if index["Painting"] != NOT_FOUND:
             imagePath = cols[index["Painting"]].img['alt'].replace(" ", "_") + IMAGE_EXTENSION
             writeImage(cols[index["Painting"]].img['src'], imagePath)
             
-        if index["Placed"] != -1:
+        if index["Placed"] != NOT_FOUND:
             imagePath = DIRECTORY + cols[index["Painting"]].img['alt'].replace(" ", "_") + "_Placed" + IMAGE_EXTENSION
             writeImage(cols[index["Placed"]].img['src'], imagePath)
             paintingDict[SCRAPING_PLACED] = imagePath
             
-        if index["Tooltip"] != -1:
+        if index["Tooltip"] != NOT_FOUND:
             paintingDict[SCRAPING_TOOLTIP] = cols[index["Tooltip"]].text.replace("\n", "")
             
-        if index["Description"] != -1:
+        if index["Description"] != NOT_FOUND:
             paintingDict[SCRAPING_DESCRIPTION] = cols[index["Description"]].text.replace("\n", "").replace("\"", "")
-            
+           
         removeEmptyFields(paintingDict)
         dictList.append(paintingDict)
 SaveJSONFile(JSON_PATH, sorted(dictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))
