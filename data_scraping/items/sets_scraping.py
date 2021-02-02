@@ -1,4 +1,4 @@
-#Everything seems to work. No string format issues found.
+#Minor output formatation issues. Aside that everything seems to work
 
 import os,sys,inspect
 import re
@@ -36,14 +36,7 @@ for table in tables[0:2]:
         soup2 = BeautifulSoup(page2.content, 'html.parser')
         tableBoxes = soup2.find_all("div", class_="infobox item")
 
-        setDict = {
-            SCRAPING_ID: "",
-            SCRAPING_SET_NAME: "",
-            SCRAPING_SET_PIECES: [],
-            SCRAPING_SET_BONUS: "",
-            SCRAPING_DEFENSE: "",
-            SCRAPING_RARITY: ""
-        }
+        setDict = {}
         processedItems = []
         for tableBox in tableBoxes:
             tableTitle = tableBox.find("div", class_="title")
@@ -58,12 +51,40 @@ for table in tables[0:2]:
                 statistics = tableBox.find("div", class_="section statistics").find_all("tr")
                 for statistic in statistics:
                     if statistic.th.text == SCRAPING_SET_BONUS:
-                        setDict[SCRAPING_SET_BONUS] = BeautifulSoup(str(statistic.td).replace("<br/>", ". "), 'html.parser').text.split("/")[0].encode("ascii", "ignore").decode().rstrip()
+                        if statistic.td.find("span", class_="i"):
+                            setTexts = statistic.td.find_all("i")
+                            setImgs = statistic.td.find_all("span")
+                            dictText = ""
+                            for setText, setImg in zip(setTexts, setImgs):
+                                if setImg["class"] == ["eico"]:
+                                    dictText += setText.text.encode("ascii", "ignore").decode().rstrip() + " / "
+                                else:
+                                    dictText += setImg.img["alt"] + ": " + BeautifulSoup(str(setText).replace("<br/>", " "), 'html.parser').text.encode("ascii", "ignore").decode().rstrip() + " / "
+                            setDict[SCRAPING_SET_BONUS] = dictText[:-3]
+                        else:
+                            if statistic.td.find("span"):
+                                setTexts = statistic.td.find_all("i")
+                                dictText = ""
+                                for setText in setTexts:
+                                    dictText += setText.text.encode("ascii", "ignore").decode().rstrip() + ", "
+                                setDict[SCRAPING_SET_BONUS] = dictText[:-2]
+                            else:
+                                setDict[SCRAPING_SET_BONUS] = BeautifulSoup(str(statistic.td).replace("<br/>", ", "), 'html.parser').text.split("/")[0].encode("ascii", "ignore").decode().replace(",,", ",").replace(" ,", ",").rstrip()
                     elif statistic.th.text == SCRAPING_DEFENSE:
-                        setDict[SCRAPING_DEFENSE] = statistic.td.text.split(" ")[0].encode("ascii", "ignore").decode().rstrip().replace(":", "")
+                        if statistic.td.find("span", class_="i"):
+                            setTexts = statistic.td.text.split("(set)")[0].split("/")
+                            setImgs = statistic.td.find_all("span", class_="i")
+                            dictText = ""
+                            for setText, setImg in zip(setTexts, setImgs):
+                                dictText += setImg.img["alt"] + setText.encode("ascii", "ignore").decode().rstrip().replace(":", ": ").replace(" :", ":") + " / "
+                            setDict[SCRAPING_DEFENSE] = dictText[:-3]
+                        else:
+                            setDict[SCRAPING_DEFENSE] = statistic.td.text.split(" ")[0].encode("ascii", "ignore").decode().rstrip().replace(":", "")
                     elif statistic.th.text == SCRAPING_RARITY:
                         setDict[SCRAPING_RARITY] = (re.search("-*\d+", statistic.td.span.a["title"])).group()
             else:
+                if not SCRAPING_SET_PIECES in setDict.keys():
+                    setDict[SCRAPING_SET_PIECES] = []
                 if not tableTitle.text in processedItems:
                     setDict[SCRAPING_SET_PIECES].append(tableTitle.text)
                     processedItems.append(tableTitle.text)
