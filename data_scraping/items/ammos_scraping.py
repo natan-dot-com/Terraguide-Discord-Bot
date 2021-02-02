@@ -1,4 +1,4 @@
-#Need to improve coding but everything works probably
+#Everything seems to work.
 
 import os,sys,inspect
 import re
@@ -11,55 +11,17 @@ from json_manager import *
 import requests
 from bs4 import BeautifulSoup
 
-def get_statistics(tableBox, usedIn):
-    ammoDict = {
-        SCRAPING_ITEM_ID: "",
-        SCRAPING_NAME: "",
-        SCRAPING_USED_IN: "",
-        SCRAPING_DAMAGE: "",
-        SCRAPING_VELOCITY: "",
-        SCRAPING_MULTIPLIER: "",
-        SCRAPING_KNOCKBACK: "",
-        SCRAPING_AVAILABLE: "",
-        SCRAPING_AVAILABILITY: "",
-        SCRAPING_EFFECT: "",
-        SCRAPING_SOURCE: "",
-        SCRAPING_RADIUS: "",
-        SCRAPING_DESTROY_TILES: "",
-        SCRAPING_RARITY: "",
-        SCRAPING_TOOLTIP: "",
-        SCRAPING_SOURCES: SOURCE_SOURCES_DICT
-    }
-
-    ammoDict[SCRAPING_ITEM_ID] = tableBox.find("div", class_="section ids").find("li").b.text
-    ammoDict[SCRAPING_NAME] = tableBox.find("div", class_="title").text
-    if usedIn:
-        ammoDict[SCRAPING_USED_IN] = usedIn
-    statistics = tableBox.find("div", class_="section statistics").find_all("tr")
-    for statistic in statistics:
-        if statistic.th.text == SCRAPING_DAMAGE:
-            ammoDict[SCRAPING_DAMAGE] = statistic.td.text.split(' ')[0].rstrip()
-        elif statistic.th.text == SCRAPING_VELOCITY:
-            ammoDict[SCRAPING_VELOCITY] = statistic.td.text.split(' ')[0].rstrip()
-        elif statistic.th.text == SCRAPING_KNOCKBACK:
-            ammoDict[SCRAPING_KNOCKBACK] = statistic.td.text.rstrip()
-        elif statistic.th.text == SCRAPING_AVAILABLE:
-            ammoDict[SCRAPING_AVAILABLE] = (statistic.td.text.rstrip()).replace("  ", " ")
-        elif statistic.th.text == SCRAPING_EFFECT:
-            ammoDict[SCRAPING_EFFECT] = BeautifulSoup(str(statistic.td).replace("<br/>", ". "), 'html.parser').text.rstrip()
-        elif statistic.th.text == SCRAPING_RARITY:
-            ammoDict[SCRAPING_RARITY] = (re.search("-*\d+", statistic.td.span.a["title"])).group()
-        elif statistic.th.text == SCRAPING_TOOLTIP:
-            ammoDict[SCRAPING_TOOLTIP] = BeautifulSoup(str(statistic.td).replace("<br/>", ". "), 'html.parser').text.rstrip()
-    return ammoDict
-
 OTHER_VERSIONS = {"3DS version", "Console Version", "Old-gen console version", "Mobile version"}
 DESKTOP_VERSION = {"Desktop"}
 AMMO_PATH_OUTPUT = GLOBAL_JSON_PATH + "items_ammos.json"
 AMMOS_TYPES = ["Arrows", "Bullets", "Rockets", "Darts", "Solutions"]
 AMMO_EXCEPTIONS = [
-    "Gel", "Coins", "Fallen Star", "Seed", "Cannonball", "Snowball", "Stynger Bolt", "Explosive Bunny",
-    "Confetti", "Candy Corn", "Explosive Jack 'O Lantern", "Stake", "Nail", "Flare"
+    ["Gel", "Flamethrower, Elf Melter"], ["Coins", "Coin Gun"], ["Fallen Star", "Star Cannon, Super Star Shooter"],
+    ["Seed", "Blowpipe, Blowgun, Dart Pistol, Dart Rifle"], ["Cannonball", "Cannon"],
+    ["Snowball", "Snowball Cannon, Snowball Launcher"], ["Stynger Bolt", "Stynger"],
+    ["Explosive Bunny", "Bunny Cannon"], ["Confetti", "Confetti Gun"], ["Candy Corn", "Candy Corn Rifle"],
+    ["Explosive Jack 'O Lantern", "Jack 'O Lantern Launcher"], ["Stake", "Stake Launcher"],
+    ["Nail", "Nail Gun"], ["Flare", "Flare Gun"]
 ]
 
 wikiURL = "https://terraria.gamepedia.com/"
@@ -80,43 +42,25 @@ for pageName in AMMOS_TYPES:
                 print("item {} isn't desktop".format(item.img['alt']))
                 continue
 
-            ammoDict = {
-                SCRAPING_ITEM_ID: "",
-                SCRAPING_NAME: "",
-                SCRAPING_USED_IN: "",
-                SCRAPING_DAMAGE: "",
-                SCRAPING_VELOCITY: "",
-                SCRAPING_MULTIPLIER: "",
-                SCRAPING_KNOCKBACK: "",
-                SCRAPING_AVAILABLE: "",
-                SCRAPING_AVAILABILITY: "",
-                SCRAPING_EFFECT: "",
-                SCRAPING_SOURCE: "",
-                SCRAPING_RADIUS: "",
-                SCRAPING_DESTROY_TILES: "",
-                SCRAPING_RARITY: "",
-                SCRAPING_TOOLTIP: "",
-                SCRAPING_SOURCES: SOURCE_SOURCES_DICT
-            }
-            tdTags = item.find_all("td")
+            newURL = wikiURL + item.img['alt'].replace(" ", "_")
+            page2 = requests.get(newURL)
+            soup2 = BeautifulSoup(page2.content, 'html.parser')
+            print("Processing {}".format(newURL))
 
-            id = item.find("div", class_="id")      
-            ammoDict[SCRAPING_ITEM_ID] = (re.search("\d+", id.text)).group()
-            ammoDict[SCRAPING_NAME] = item.img['alt']
+            tableBox = soup2.find("div", class_="infobox item")
+            status = {
+                SCRAPING_ID: tableBox.find("div", class_="section ids").find("li").b.text,
+                SCRAPING_NAME: tableBox.find("div", class_="title").text
+            }
+            usedIn = ""
             if pageName == "Arrows":
-                ammoDict[SCRAPING_USED_IN] = "Any Bow or Repeater."
+                usedIn = "Any Bow or Repeater."
             elif pageName == "Bullets":
-                ammoDict[SCRAPING_USED_IN] = "Any Gun"
+                usedIn = "Any Gun"
             elif pageName == "Darts":
-                ammoDict[SCRAPING_USED_IN] = "Blowgun, Blowpipe, Dart Pistol and Dart Rifle"
-            ammoDict[SCRAPING_DAMAGE] = tdTags[2].text.split(' ')[0].rstrip()
-            if tdTags[3].text.split(' ')[0] != "???\n":
-                ammoDict[SCRAPING_VELOCITY] = tdTags[3].text.split(' ')[0].rstrip()
-            ammoDict[SCRAPING_MULTIPLIER] = tdTags[4].text.split(' ')[0].rstrip()
-            if tdTags[5].text != "???\n":
-                ammoDict[SCRAPING_KNOCKBACK] = " (".join(tdTags[5].text.rstrip().split("("))
-            ammoDict[SCRAPING_RARITY] = tdTags[7].a['title'].split(' ')[-1]
-            ammoList.append(ammoDict)
+                usedIn = "Blowgun, Blowpipe, Dart Pistol and Dart Rifle"
+
+            ammoList.append(get_statistics(tableBox, usedIn=usedIn))
 
     #for Rockets page
     elif pageName == "Rockets":
@@ -131,19 +75,12 @@ for pageName in AMMOS_TYPES:
             ammoDict = {
                 SCRAPING_ITEM_ID: "",
                 SCRAPING_NAME: "",
-                SCRAPING_USED_IN: "",
                 SCRAPING_DAMAGE: "",
-                SCRAPING_VELOCITY: "",
-                SCRAPING_MULTIPLIER: "",
-                SCRAPING_KNOCKBACK: "",
-                SCRAPING_AVAILABLE: "",
                 SCRAPING_AVAILABILITY: "",
-                SCRAPING_EFFECT: "",
-                SCRAPING_SOURCE: "",
                 SCRAPING_RADIUS: "",
                 SCRAPING_DESTROY_TILES: "",
                 SCRAPING_RARITY: "",
-                SCRAPING_TOOLTIP: "",
+                SCRAPING_USED_IN: "",
                 SCRAPING_SOURCES: SOURCE_SOURCES_DICT
             }
             tdTags = item.find_all("td")
@@ -155,8 +92,6 @@ for pageName in AMMOS_TYPES:
             ammoDict[SCRAPING_DAMAGE] = tdTags[1].text.split(' ')[0].rstrip()
             ammoDict[SCRAPING_AVAILABILITY] = tdTags[2].text.rstrip().replace("or", "or ")
             ammoDict[SCRAPING_RARITY] = tdTags[3].a['title'].split(' ')[-1]
-            if not tdTags[2].find("img"):
-                ammoDict[SCRAPING_SOURCE] = tdTags[4].text.split('(')[0].rstrip()
             ammoDict[SCRAPING_RADIUS] = tdTags[5].text.rstrip()
             ammoDict[SCRAPING_DESTROY_TILES] = tdTags[6].img['alt']
             ammoList.append(ammoDict)
@@ -165,7 +100,6 @@ for pageName in AMMOS_TYPES:
     elif pageName == "Solutions":
 
         items = soup.find("table", class_="terraria").find_all("tr")
-
         for item in items[1:]:
             if item.find_all("td")[0].find("img", alt=OTHER_VERSIONS) and not item.find_all("td")[1].find("img", alt=DESKTOP_VERSION):
                 print("item {} isn't desktop".format(item.img['alt']))
@@ -174,19 +108,11 @@ for pageName in AMMOS_TYPES:
             ammoDict = {
                 SCRAPING_ITEM_ID: "",
                 SCRAPING_NAME: "",
-                SCRAPING_USED_IN: "",
-                SCRAPING_DAMAGE: "",
-                SCRAPING_VELOCITY: "",
-                SCRAPING_MULTIPLIER: "",
-                SCRAPING_KNOCKBACK: "",
                 SCRAPING_AVAILABLE: "",
-                SCRAPING_AVAILABILITY: "",
                 SCRAPING_EFFECT: "",
-                SCRAPING_SOURCE: "",
-                SCRAPING_RADIUS: "",
-                SCRAPING_DESTROY_TILES: "",
                 SCRAPING_RARITY: "",
                 SCRAPING_TOOLTIP: "",
+                SCRAPING_USED_IN: "",
                 SCRAPING_SOURCES: SOURCE_SOURCES_DICT
             }
             tdTags = item.find_all("td")
@@ -197,53 +123,56 @@ for pageName in AMMOS_TYPES:
             ammoDict[SCRAPING_EFFECT] = BeautifulSoup(str(tdTags[2]).replace("<br/>", ". "), 'html.parser').text.rstrip()
             ammoDict[SCRAPING_RARITY] = "3"
             ammoDict[SCRAPING_TOOLTIP] = BeautifulSoup(str(tdTags[3]).replace("<br/>", ". "), 'html.parser').text.rstrip()
+            ammoDict[SCRAPING_USED_IN] = "Clentaminator"
             ammoList.append(ammoDict)
 
-
+#untyped ammos
 for ammo in AMMO_EXCEPTIONS:
-    print("Processing {}".format(ammo))
-    newURL = wikiURL + ammo
+    print("Processing {}".format(ammo[0]))
+    newURL = wikiURL + ammo[0].replace(" ", "_")
     page = requests.get(newURL)
     soup = BeautifulSoup(page.content, 'html.parser')
 
-    if ammo == "Coins":
+    #Coins ammo
+    if ammo[0] == "Coins":
         tableCoins = soup.find("table", class_="terraria").tbody.find_all("tr")
         for tableCoin in tableCoins[1:]:
             ammoDict = {
                 SCRAPING_ITEM_ID: "",
                 SCRAPING_NAME: "",
-                SCRAPING_USED_IN: "",
                 SCRAPING_DAMAGE: "",
                 SCRAPING_VELOCITY: "",
-                SCRAPING_MULTIPLIER: "",
-                SCRAPING_KNOCKBACK: "",
-                SCRAPING_AVAILABLE: "",
-                SCRAPING_AVAILABILITY: "",
-                SCRAPING_EFFECT: "",
-                SCRAPING_SOURCE: "",
-                SCRAPING_RADIUS: "",
-                SCRAPING_DESTROY_TILES: "",
                 SCRAPING_RARITY: "",
-                SCRAPING_TOOLTIP: "",
+                SCRAPING_RESEARCH: "",
+                SCRAPING_USED_IN: "",
                 SCRAPING_SOURCES: SOURCE_SOURCES_DICT
             }
             id = tableCoin.find("div", class_="id")
             tdTags = tableCoin.find_all("td")
             ammoDict[SCRAPING_ITEM_ID] = (re.search("\d+", id.text)).group()
             ammoDict[SCRAPING_NAME] = tdTags[1].span.span.span.text
-            ammoDict[SCRAPING_USED_IN] = "Coin Gun"
+            ammoDict[SCRAPING_USED_IN] = ammo[1]
             ammoDict[SCRAPING_DAMAGE] = tdTags[4].text.rstrip()
             ammoDict[SCRAPING_VELOCITY] = tdTags[5].text.rstrip()
             ammoDict[SCRAPING_RARITY] = soup.find("div", class_="infobox item").find("span", class_="rarity").a['title'].split(' ')[-1]
+            ammoDict[SCRAPING_RESEARCH] = soup.find("div", class_="infobox item").find("a", title="Journey mode").parent.parent.td.text.rstrip()
             ammoList.append(ammoDict)
 
-    elif ammo == "Flare":
+    #Flare ammos
+    elif ammo[0] == "Flare":
         tableBoxes = soup.find_all("div", class_="infobox item")
-        for tableBox in tableBoxes[1:]:       
-            ammoList.append(get_statistics(tableBox, "Flare Gun"))
+        for tableBox in tableBoxes[1:]:
+            status = {
+                SCRAPING_ID: tableBox.find("div", class_="section ids").find("li").b.text,
+                SCRAPING_NAME: tableBox.find("div", class_="title").text
+            }
+            usedIn = ammo[1]
+            ammoList.append(get_statistics(tableBox, usedIn=usedIn))
 
+    #everything else
     else:
         tableBox = soup.find("div", class_="infobox item")
-        ammoList.append(get_statistics(tableBox, ""))
+        usedIn = ammo[1]
+        ammoList.append(get_statistics(tableBox, usedIn=usedIn))
 
 SaveJSONFile(AMMO_PATH_OUTPUT, ammoList)

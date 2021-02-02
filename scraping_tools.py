@@ -1,4 +1,6 @@
 import requests
+import re
+from bs4 import BeautifulSoup
 
 # General labels
 SCRAPING_ID = "ID"
@@ -8,10 +10,10 @@ SCRAPING_NAME = "Name"
 SCRAPING_RARITY = "Rarity"
 SCRAPING_USE_TIME = "Use time"
 SCRAPING_VELOCITY = "Velocity"
-SCRAPING_TOOL_SPEED = "Tool Speed"
-SCRAPING_PICKAXE_POWER = "Pickaxe Power"
-SCRAPING_HAMMER_POWER = "Hammer Power"
-SCRAPING_AXE_POWER = "Axe Power"
+SCRAPING_TOOL_SPEED = "Tool speed"
+SCRAPING_PICKAXE_POWER = "Pickaxe power"
+SCRAPING_HAMMER_POWER = "Hammer power"
+SCRAPING_AXE_POWER = "Axe power"
 SCRAPING_FISHING_POWER = "Fishing Power"
 SCRAPING_SET_ID = "Set ID"
 SCRAPING_DEFENSE = "Defense"
@@ -33,7 +35,7 @@ SCRAPING_SET_PIECES = "Set Pieces"
 SCRAPING_SET_NAME = "Set Name"
 SCRAPING_SET_BONUS = "Set Bonus"
 SCRAPING_MANA = "Mana"
-SCRAPING_CRITICAL_CHANCE = "Critical Chance"
+SCRAPING_CRITICAL_CHANCE = "Critical chance"
 SCRAPING_REACH = "Reach"
 SCRAPING_HOOKS = "Hooks"
 SCRAPING_LATCHING = "Latching"
@@ -52,6 +54,10 @@ SCRAPING_RARITY_TIER = "Rarity Tier"
 SCRAPING_IMAGE_PATH = "Image Path"
 SCRAPING_RARITY_DESC = "Rarity Description"
 SCRAPING_MAX_LIFE = "Max Life"
+SCRAPING_BUY = "Buy"
+SCRAPING_SELL = "Sell"
+SCRAPING_BASE_VELOCITY = "Base Velocity"
+SCRAPING_VELOCITY_MULTIPLIER = "Velocity Multiplier"
 
 # Source dict labels ('SCRAPING_SOURCE')
 SOURCE_RECIPE = "Crafting Recipes"
@@ -128,3 +134,78 @@ def writeImage(imageSource, imagePath):
                 if not block:
                     break
                 handler.write(block)
+
+#get statistics for every table with infobox class
+def get_statistics(tableBox, itemInstance = {}, usedIn = "", isArmor = False):
+
+    jsonDict = {}
+    #Check if optional parameter was given
+    if itemInstance:
+        jsonDict[SCRAPING_ITEM_ID] = itemInstance[SCRAPING_ID]
+        jsonDict[SCRAPING_NAME] = itemInstance[SCRAPING_NAME]
+    else:
+        jsonDict[SCRAPING_ITEM_ID] = tableBox.find("div", class_="section ids").find("li").b.text
+        jsonDict[SCRAPING_NAME] = tableBox.find("div", class_="title").text
+
+    statistics = tableBox.find("div", class_="section statistics").find_all("tr")
+    for statistic in statistics:
+        if statistic.th.text == SCRAPING_USE_TIME:
+            jsonDict[SCRAPING_USE_TIME] = statistic.td.text.split("/")[0].encode("ascii", "ignore").decode().rstrip()
+        elif statistic.th.text == SCRAPING_RARITY:
+            jsonDict[SCRAPING_RARITY] = (re.search("-*\d+", statistic.td.span.a["title"])).group()
+        elif statistic.th.text == SCRAPING_PLACEABLE:
+            jsonDict[SCRAPING_PLACEABLE] = statistic.td.img["alt"]
+        elif statistic.th.text == SCRAPING_MAX_LIFE:
+            jsonDict[SCRAPING_MAX_LIFE] = BeautifulSoup(str(statistic.td).replace("<br/>", ". "), 'html.parser').text.rstrip()
+        elif statistic.th.text == SCRAPING_RESEARCH:
+            jsonDict[SCRAPING_RESEARCH] = statistic.td.text.rstrip()
+        elif statistic.th.text == SCRAPING_TOOL_SPEED:
+            jsonDict[SCRAPING_TOOL_SPEED] = statistic.td.text.split(" ", 1)[0]
+        elif statistic.th.text == SCRAPING_DAMAGE:
+            jsonDict[SCRAPING_DAMAGE] = statistic.td.text.split(' ')[0].rstrip()
+        elif statistic.th.text == SCRAPING_VELOCITY:
+            jsonDict[SCRAPING_VELOCITY] = statistic.td.text.split(' ')[0].rstrip()
+        elif statistic.th.text == SCRAPING_KNOCKBACK:
+            jsonDict[SCRAPING_KNOCKBACK] = statistic.td.text.split("/")[0].encode("ascii", "ignore").decode().rstrip()
+        elif statistic.th.text == SCRAPING_AVAILABLE:
+            jsonDict[SCRAPING_AVAILABLE] = (statistic.td.text.rstrip()).replace("  ", " ")
+        elif statistic.th.text == SCRAPING_EFFECT:
+            jsonDict[SCRAPING_EFFECT] = BeautifulSoup(str(statistic.td).replace("<br/>", ". "), 'html.parser').text.rstrip()
+        elif statistic.th.text == SCRAPING_TOOLTIP:
+            if isArmor:
+                jsonDict[SCRAPING_TOOLTIP] = BeautifulSoup(str(statistic.td).replace("<br/>", ". "), 'html.parser').text.split("/")[0].rstrip()
+            else:
+                jsonDict[SCRAPING_TOOLTIP] = BeautifulSoup(str(statistic.td).replace("<br/>", ". "), 'html.parser').text.rstrip()
+        elif statistic.th.text == SCRAPING_SELL:
+            jsonDict[SCRAPING_SELL] = statistic.td.span["title"]
+        elif statistic.th.text == SCRAPING_BASE_VELOCITY:
+            jsonDict[SCRAPING_BASE_VELOCITY] = statistic.td.text.rstrip()
+        elif statistic.th.text == SCRAPING_VELOCITY_MULTIPLIER:
+            jsonDict[SCRAPING_VELOCITY_MULTIPLIER] = statistic.td.text.encode("ascii", "ignore").decode().rstrip() + "x"
+        elif statistic.th.text == SCRAPING_MANA:
+            jsonDict[SCRAPING_MANA] = statistic.td.text.split("/")[0].encode("ascii", "ignore").decode().rstrip()
+        elif statistic.th.text == SCRAPING_CRITICAL_CHANCE:
+            jsonDict[SCRAPING_CRITICAL_CHANCE] = statistic.td.text.split("/")[0].encode("ascii", "ignore").decode().rstrip()
+        elif statistic.th.text == SCRAPING_DEFENSE:
+            jsonDict[SCRAPING_DEFENSE] = statistic.td.text.split(" ")[0]
+        elif statistic.th.text == "Body slot":
+            jsonDict[SCRAPING_BODY_SLOT] = statistic.td.text
+
+    #get toolpower for tools json
+    toolPower = tableBox.find("ul", class_="toolpower")
+    if toolPower:
+        powerList = toolPower.find_all("li")
+        for powerType in powerList:
+            if(powerType["title"] == SCRAPING_PICKAXE_POWER):
+                jsonDict[SCRAPING_PICKAXE_POWER] = powerType.text[1:].split(" ", 1)[0]
+            elif(powerType["title"] == SCRAPING_HAMMER_POWER):
+                jsonDict[SCRAPING_HAMMER_POWER] = powerType.text[1:].split(" ", 1)[0]
+            elif(powerType["title"] == SCRAPING_AXE_POWER):
+                jsonDict[SCRAPING_AXE_POWER] = powerType.text[1:].split(" ", 1)[0]
+    #Check if optional parameter was given
+    if usedIn:
+        jsonDict[SCRAPING_USED_IN] = usedIn
+    if isArmor and itemInstance:
+        jsonDict[SCRAPING_SET_ID] = itemInstance[SCRAPING_SET_ID]
+    jsonDict[SCRAPING_SOURCES] = SOURCE_SOURCES_DICT
+    return jsonDict
