@@ -66,6 +66,7 @@ SCRAPING_PET_IMAGE = "Light Pet Image"
 SCRAPING_MASTER_MODE = "Master Mode Exclusive:"
 SCRAPING_DESCRIPTION = "Description"
 SCRAPING_TOOLTIP = "Tooltip"
+SCRAPING_DESTROYED_BY_EXPLOSIVES = "Destroyed by Explosives"
 
 # Source dict labels ('SCRAPING_SOURCE')
 SOURCE_RECIPE = "Crafting Recipes"
