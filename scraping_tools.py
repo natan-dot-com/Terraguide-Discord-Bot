@@ -127,6 +127,17 @@ BAG_DROPS_DICT = {
     BAG_DROP_QUANTITY: ""
 }
 
+RARITY_GRAY = "Gray"
+RARITY_AMBER = "Amber"
+RARITY_RAINBOW = "Rainbow"
+RARITY_FIERY_RED = "Fiery red"
+RARITY_TIER = {
+    RARITY_GRAY: "-1",
+    RARITY_AMBER: "-11",
+    RARITY_RAINBOW: "-12",
+    RARITY_FIERY_RED: "-13"
+}
+
 # Find the ID in respect of an item in items.json
 def searchForID(itemName, itemList):
     for itemInstance in itemList:
@@ -154,14 +165,14 @@ def removeEmptyFields(dataDict):
     return dataDict
     
 # Finds every column index of a table based on a list with each column label. 
-NOT FOUND = -1
+NOT_FOUND = -1
 def getTableColumns(tableHeadRow, scrappingData):
     indexDict = {}
     for data in scrappingData:
         indexDict[data] = NOT_FOUND
-        for column in tableHead:
+        for column in tableHeadRow:
             if re.search("^" + data, column.text):
-                indexDict[data] = int(tableHead.index(column))
+                indexDict[data] = int(tableHeadRow.index(column))
     return indexDict
 
 #get statistics for every table with infobox class
@@ -181,7 +192,11 @@ def get_statistics(tableBox, itemInstance = {}, usedIn = "", isArmor = False):
         if statistic.th.text == SCRAPING_USE_TIME:
             jsonDict[SCRAPING_USE_TIME] = statistic.td.text.split("/")[0].encode("ascii", "ignore").decode().rstrip()
         elif statistic.th.text == SCRAPING_RARITY:
-            jsonDict[SCRAPING_RARITY] = (re.search("-*\d+", statistic.td.span.a["title"])).group()
+            if (re.search("-*\d+", statistic.td.span.a["title"])):
+                jsonDict[SCRAPING_RARITY] = (re.search("-*\d+", statistic.td.span.a["title"])).group()
+            else:
+                print(statistic.td.span.a["title"].split(": ")[-1])
+                jsonDict[SCRAPING_RARITY] = RARITY_TIER[statistic.td.span.a["title"].split(": ")[-1]]
         elif statistic.th.text == SCRAPING_PLACEABLE:
             jsonDict[SCRAPING_PLACEABLE] = statistic.td.img["alt"]
         elif statistic.th.text == SCRAPING_MAX_LIFE:
