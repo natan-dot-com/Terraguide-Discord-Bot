@@ -64,6 +64,8 @@ SCRAPING_NOTES = "Notes"
 SCRAPING_BUFF_IMAGE = "Buff Image"
 SCRAPING_PET_IMAGE = "Light Pet Image"
 SCRAPING_MASTER_MODE = "Master Mode Exclusive:"
+SCRAPING_DESCRIPTION = "Description"
+SCRAPING_TOOLTIP = "Tooltip"
 
 # Source dict labels ('SCRAPING_SOURCE')
 SOURCE_RECIPE = "Crafting Recipes"
@@ -150,7 +152,17 @@ def removeEmptyFields(dataDict):
     for key in dictEmptyKeys:
         del(dataDict[key])
     return dataDict
-
+    
+# Finds every column index of a table based on a list with each column label. 
+NOT FOUND = -1
+def getTableColumns(tableHeadRow, scrappingData):
+    indexDict = {}
+    for data in scrappingData:
+        indexDict[data] = NOT_FOUND
+        for column in tableHead:
+            if re.search("^" + data, column.text):
+                indexDict[data] = int(tableHead.index(column))
+    return indexDict
 
 #get statistics for every table with infobox class
 def get_statistics(tableBox, itemInstance = {}, usedIn = "", isArmor = False):
