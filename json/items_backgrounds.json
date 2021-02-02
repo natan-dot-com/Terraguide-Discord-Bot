@@ -45,18 +45,6 @@
         }
     },
     {
-        "Item ID": "115",
-        "Name": "Shadow Orb",
-        "Max Life": "4 hits to destroy with a Wooden Hammer. Also destructible with explosives",
-        "Sources": {
-            "Crafting Recipes": [],
-            "NPC": [],
-            "Drop": [],
-            "Grab Bag": [],
-            "Other": ""
-        }
-    },
-    {
         "Item ID": "130",
         "Name": "Gray Brick Wall",
         "Placeable": "Yes",
@@ -1950,18 +1938,6 @@
         "Use time": "15 (Very fast)",
         "Rarity": "0",
         "Research": "400 required",
-        "Sources": {
-            "Crafting Recipes": [],
-            "NPC": [],
-            "Drop": [],
-            "Grab Bag": [],
-            "Other": ""
-        }
-    },
-    {
-        "Item ID": "3062",
-        "Name": "Crimson Heart",
-        "Max Life": "4 hits to destroy with a Wooden Hammer. Also destructible with explosives",
         "Sources": {
             "Crafting Recipes": [],
             "NPC": [],

@@ -58,6 +58,12 @@ SCRAPING_BUY = "Buy"
 SCRAPING_SELL = "Sell"
 SCRAPING_BASE_VELOCITY = "Base Velocity"
 SCRAPING_VELOCITY_MULTIPLIER = "Velocity Multiplier"
+SCRAPING_LIGHT_PET = "Light Pet"
+SCRAPING_BRIGHTNESS = "Brightness"
+SCRAPING_NOTES = "Notes"
+SCRAPING_BUFF_IMAGE = "Buff Image"
+SCRAPING_PET_IMAGE = "Light Pet Image"
+SCRAPING_MASTER_MODE = "Master Mode Exclusive:"
 
 # Source dict labels ('SCRAPING_SOURCE')
 SOURCE_RECIPE = "Crafting Recipes"
@@ -134,6 +140,17 @@ def writeImage(imageSource, imagePath):
                 if not block:
                     break
                 handler.write(block)
+
+# Removes every null field inside a dict
+def removeEmptyFields(dataDict):
+    dictEmptyKeys = []
+    for key in dataDict.keys():
+        if dataDict[key] == "":
+            dictEmptyKeys.append(key)
+    for key in dictEmptyKeys:
+        del(dataDict[key])
+    return dataDict
+
 
 #get statistics for every table with infobox class
 def get_statistics(tableBox, itemInstance = {}, usedIn = "", isArmor = False):

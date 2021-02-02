@@ -572,7 +572,7 @@
     {
         "ID": "115",
         "Name": "Shadow Orb",
-        "Type": "Background"
+        "Type": "Light Pet"
     },
     {
         "ID": "116",
@@ -15307,7 +15307,7 @@
     {
         "ID": "3062",
         "Name": "Crimson Heart",
-        "Type": "Background"
+        "Type": "Light Pet"
     },
     {
         "ID": "3063",
