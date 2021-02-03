@@ -69,6 +69,9 @@ SCRAPING_TOOLTIP = "Tooltip"
 SCRAPING_DESTROYED_BY_EXPLOSIVES = "Destroyed by Explosives"
 SCRAPING_BONUS = "Bonus"
 SCRAPING_USABLE = "Usable"
+SCRAPING_MAX_STACK = "Max stack"
+SCRAPING_CREATES = "Creates"
+SCRAPING_PLANTED_IN = "Planted In"
 
 # Source dict labels ('SCRAPING_SOURCE')
 SOURCE_RECIPE = "Crafting Recipes"
@@ -246,6 +249,8 @@ def get_statistics(tableBox, itemInstance = {}, usedIn = "", isArmor = False):
             jsonDict[SCRAPING_BODY_SLOT] = statistic.td.text
         elif statistic.th.text == SCRAPING_BONUS:
             jsonDict[SCRAPING_BONUS] = statistic.td.text
+        elif statistic.th.text == SCRAPING_MAX_STACK:
+            jsonDict[SCRAPING_MAX_STACK] = statistic.td.text.split("/")[0].encode("ascii", "ignore").decode().rstrip()
 
     #get toolpower for tools json
     toolPower = tableBox.find("ul", class_="toolpower")
