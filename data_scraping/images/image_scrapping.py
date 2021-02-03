@@ -34,34 +34,48 @@ class myThread (threading.Thread):
 
 def imgSearch(init, fin):
     for itemInstance in itemList[init:fin]:
-
-        newUrl = URL + itemInstance[SCRAPING_NAME].replace(" ", "_")
-        print("processing {}".format(newUrl))
-        page = requests.get(newUrl)
-        if page.status_code == sucessful:         
-            soup = BeautifulSoup(page.content, 'html.parser')
-            tableBoxImage = soup.find("div", class_="section images")
-            
-            if tableBoxImage:
-                imgSrc = tableBoxImage.find("img")["src"]
-                imgPath = IMG_OUTPUT_PATH.format(itemInstance[SCRAPING_NAME].replace(" ", "_").replace("/", "_"))
-                if writeImage(imgSrc, imgPath) == NOT_FOUND:
+        imgPath = IMG_OUTPUT_PATH.format(itemInstance[SCRAPING_NAME].replace(" ", "_").replace("/", "_"))
+        if not os.path.isfile(imgPath):
+            newUrl = URL + itemInstance[SCRAPING_NAME].replace(" ", "_")
+            print("processing {} with ID {}".format(newUrl, itemInstance[SCRAPING_ID]))
+            page = requests.get(newUrl)
+            if page.status_code == sucessful:         
+                soup = BeautifulSoup(page.content, 'html.parser')
+                tableBoxes = soup.find_all("div", class_="infobox item")
+                if tableBoxes:
+                    soup = tableBoxes[0]
+                    for tableBoxTmp in tableBoxes:
+                        if tableBoxTmp.find("div", class_="title").text == itemInstance[SCRAPING_NAME]:
+                            soup = tableBoxTmp
+                tableBoxImage = soup.find("div", class_="section images")
+                
+                if tableBoxImage:
+                    imgSrc = tableBoxImage.find("img")["src"]
+                    #imgPath = IMG_OUTPUT_PATH.format(itemInstance[SCRAPING_NAME].replace(" ", "_"))
+                    if writeImage(imgSrc, imgPath) == NOT_FOUND:
+                        with open(logFile, "a") as log:
+                            log.write("Failed to write image" + str(itemInstance[SCRAPING_ID]) + "\n")
+                else:
                     with open(logFile, "a") as log:
-                        log.write("Failed to write image" + str(itemInstance[SCRAPING_ID]) + "\n")
-            else:
-                with open(logFile, "a") as log:
-                    log.write("Image not found with link " + newUrl + " and ID " + str(itemInstance[SCRAPING_ID]) + "\n")
+                        log.write("Image not found with link " + newUrl + " and ID " + str(itemInstance[SCRAPING_ID]) + "\n")
 
 
 
 if os.path.exists(logFile):
   os.remove(logFile)
 
+#Four threads
 '''firstQuarter = math.floor(len(itemList)/4)
 secondQuarter = math.floor(len(itemList)/2)
 thirdQuarter = 3*math.floor((len(itemList)/4))
-fouthQuarter = math.floor(len(itemList))'''
+fouthQuarter = math.floor(len(itemList))
 
+thread1 = myThread(1, 0, firstQuarter)
+thread2 = myThread(2, firstQuarter, secondQuarter)
+thread3 = myThread(3, secondQuarter, thirdQuarter)
+thread4 = myThread(4, thirdQuarter, fouthQuarter)'''
+
+#Eight threads
 firstOctave = math.floor(len(itemList)/8)
 secondOctave = 2*math.floor(len(itemList)/8)
 thirdOctave = 3*math.floor(len(itemList)/8)
@@ -71,22 +85,16 @@ sixthOctave = 6*math.floor(len(itemList)/8)
 seventOctave = 7*math.floor(len(itemList)/8)
 eighthOctave = 8*math.floor(len(itemList)/8)
 
-# Create new threads
-'''thread1 = myThread(1, 0, firstQuarter)
-thread2 = myThread(2, firstQuarter, secondQuarter)
-thread3 = myThread(3, secondQuarter, thirdQuarter)
-thread4 = myThread(4, thirdQuarter, fouthQuarter)'''
-# Create new threads
 thread1 = myThread(1, 0, firstOctave)
-thread2 = myThread(1, firstOctave, secondOctave)
-thread3 = myThread(1, secondOctave, thirdOctave)
-thread4 = myThread(1, thirdOctave, fourthOctave)
-thread5 = myThread(1, fourthOctave, fifthOctave)
-thread6 = myThread(1, fifthOctave, sixthOctave)
-thread7 = myThread(1, sixthOctave, seventOctave)
-thread8 = myThread(1, seventOctave, eighthOctave)
+thread2 = myThread(2, firstOctave, secondOctave)
+thread3 = myThread(3, secondOctave, thirdOctave)
+thread4 = myThread(4, thirdOctave, fourthOctave)
+thread5 = myThread(5, fourthOctave, fifthOctave)
+thread6 = myThread(6, fifthOctave, sixthOctave)
+thread7 = myThread(7, sixthOctave, seventOctave)
+thread8 = myThread(8, seventOctave, eighthOctave)
 
-# Start new Threads
+#Start Eight Threads
 thread1.start()
 thread2.start()
 thread3.start()
@@ -96,6 +104,7 @@ thread6.start()
 thread7.start()
 thread8.start()
 
+#Join eight Threads
 thread1.join()
 thread2.join()
 thread3.join()
