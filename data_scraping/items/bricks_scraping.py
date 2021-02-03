@@ -37,12 +37,21 @@ for itemInstance in itemList:
         brickDict = get_statistics(tableBox, itemInstance=itemInstance)
 
         brickDict.pop(SCRAPING_SOURCES, None)
+        brickSourceOther = ""
         for bricksRow in bricksRows:
             if bricksRow.find_all("td")[0].a["title"] == itemInstance[SCRAPING_NAME]:
                 brickDict[SCRAPING_DESTROYED_BY_EXPLOSIVES] = bricksRow.find_all("td")[3].img["alt"]
+                if re.search("Looted", bricksRow.find_all("td")[2].text):
+                    brickSourceOther = bricksRow.find_all("td")[2].text.rstrip()
                 break
 
-        brickDict[SCRAPING_SOURCES] = SOURCE_SOURCES_DICT
+        brickDict[SCRAPING_SOURCES] = {
+            SOURCE_RECIPES: [],
+            SOURCE_NPC: [],
+            SOURCE_DROP: [],
+            SOURCE_GRAB_BAG: [],
+            SOURCE_OTHER: brickSourceOther,
+        }
         bricksList.append(brickDict)
 
 SaveJSONFile(ITEMS_BLOCK_PATH, bricksList)

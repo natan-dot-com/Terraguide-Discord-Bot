@@ -44,7 +44,7 @@
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
-            "Other": ""
+            "Other": "Looted from Blue Dungeons."
         }
     },
     {
@@ -60,7 +60,7 @@
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
-            "Other": ""
+            "Other": "Looted from Green Dungeons."
         }
     },
     {
@@ -76,7 +76,7 @@
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
-            "Other": ""
+            "Other": "Looted from Pink Dungeons."
         }
     },
     {
@@ -411,7 +411,7 @@
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
-            "Other": ""
+            "Other": "Looted from the Jungle Temple."
         }
     },
     {
