@@ -81,13 +81,13 @@ if os.path.exists(log_file):
 first_quarter = math.floor(len(item_list)/4)
 second_quarter = math.floor(len(item_list)/2)
 third_quarter = 3*math.floor((len(item_list)/4))
-fouth_quarter = math.floor(len(item_list)/4)
+fouth_quarter = math.floor(len(item_list))
 
 # Create new threads
 thread1 = myThread(1, item_list, 0, first_quarter)
-thread2 = myThread(2, item_list, first_quarter + 1, second_quarter)
-thread3 = myThread(3, item_list, second_quarter + 1, third_quarter)
-thread4 = myThread(4, item_list, third_quarter + 1, fouth_quarter)
+thread2 = myThread(2, item_list, first_quarter, second_quarter)
+thread3 = myThread(3, item_list, second_quarter, third_quarter)
+thread4 = myThread(4, item_list, third_quarter, fouth_quarter)
 
 # Start new Threads
 thread1.start()

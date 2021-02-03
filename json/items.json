@@ -8142,7 +8142,7 @@
     {
         "ID": "1629",
         "Name": "Chaos Elemental Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "1630",
@@ -8207,7 +8207,7 @@
     {
         "ID": "1642",
         "Name": "Enchanted Sword Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "1643",
@@ -8237,7 +8237,7 @@
     {
         "ID": "1648",
         "Name": "Frankenstein Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "1649",
@@ -8342,7 +8342,7 @@
     {
         "ID": "1669",
         "Name": "Meteor Head Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "1670",
@@ -8362,7 +8362,7 @@
     {
         "ID": "1673",
         "Name": "Parrot Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "1674",
@@ -8377,12 +8377,12 @@
     {
         "ID": "1676",
         "Name": "Pirate Deckhand Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "1677",
         "Name": "Pixie Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "1678",
@@ -8392,7 +8392,7 @@
     {
         "ID": "1679",
         "Name": "Reaper Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "1680",
@@ -8432,7 +8432,7 @@
     {
         "ID": "1687",
         "Name": "Swamp Thing Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "1688",
@@ -8452,12 +8452,12 @@
     {
         "ID": "1691",
         "Name": "Unicorn Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "1692",
         "Name": "Vampire Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "1693",
@@ -8571,7 +8571,7 @@
     },
     {
         "ID": "1715",
-        "Name": "Crafting material",
+        "Name": "Bar",
         "Type": "Furniture"
     },
     {
@@ -14502,17 +14502,17 @@
     {
         "ID": "2901",
         "Name": "Blue Cultist Archer Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2902",
         "Name": "Lunatic Devotee Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2903",
         "Name": "Blue Cultist Fighter Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2904",
@@ -14587,22 +14587,22 @@
     {
         "ID": "2918",
         "Name": "Elf Archer Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2919",
         "Name": "Elf Copter Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2920",
         "Name": "Eyezor Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2921",
         "Name": "Flocko Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2922",
@@ -14627,7 +14627,7 @@
     {
         "ID": "2926",
         "Name": "Gingerbread Man Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2927",
@@ -14642,7 +14642,7 @@
     {
         "ID": "2929",
         "Name": "Headless Horseman Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2930",
@@ -14652,7 +14652,7 @@
     {
         "ID": "2931",
         "Name": "Hellhound Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2932",
@@ -14682,7 +14682,7 @@
     {
         "ID": "2937",
         "Name": "Illuminant Bat Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2938",
@@ -14702,7 +14702,7 @@
     {
         "ID": "2941",
         "Name": "Krampus Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2942",
@@ -14722,52 +14722,52 @@
     {
         "ID": "2945",
         "Name": "Martian Brainscrambler Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2946",
         "Name": "Martian Drone Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2947",
         "Name": "Martian Engineer Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2948",
         "Name": "Martian Gigazapper Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2949",
         "Name": "Martian Gray Grunt Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2950",
         "Name": "Martian Officer Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2951",
         "Name": "Martian Ray Gunner Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2952",
         "Name": "Martian Scutlix Gunner Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2953",
         "Name": "Martian Tesla Turret Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2954",
         "Name": "Mister Stabby Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2955",
@@ -14782,7 +14782,7 @@
     {
         "ID": "2957",
         "Name": "Nutcracker Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2958",
@@ -14802,7 +14802,7 @@
     {
         "ID": "2961",
         "Name": "Poltergeist Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2962",
@@ -14812,7 +14812,7 @@
     {
         "ID": "2963",
         "Name": "Present Mimic Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2964",
@@ -14852,12 +14852,12 @@
     {
         "ID": "2971",
         "Name": "Scarecrow Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2972",
         "Name": "Scutlix Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2973",
@@ -14887,12 +14887,12 @@
     {
         "ID": "2978",
         "Name": "Snow Balla Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2979",
         "Name": "Snowman Gangsta Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2980",
@@ -14907,7 +14907,7 @@
     {
         "ID": "2982",
         "Name": "Splinterling Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2983",
@@ -14942,17 +14942,17 @@
     {
         "ID": "2989",
         "Name": "White Cultist Archer Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2990",
         "Name": "White Cultist Caster Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2991",
         "Name": "White Cultist Fighter Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2992",
@@ -14962,12 +14962,12 @@
     {
         "ID": "2993",
         "Name": "Yeti Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2994",
         "Name": "Zombie Elf Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "2995",
@@ -16967,57 +16967,57 @@
     {
         "ID": "3394",
         "Name": "Fritz Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3395",
         "Name": "Creature From The Deep Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3396",
         "Name": "Dr. Man Fly Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3397",
         "Name": "Mothron Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3398",
         "Name": "Severed Hand Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3399",
         "Name": "The Possessed Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3400",
         "Name": "Butcher Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3401",
         "Name": "Psycho Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3402",
         "Name": "Deadly Sphere Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3403",
         "Name": "Nailhead Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3404",
         "Name": "Poisonous Spore Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3405",
@@ -17032,12 +17032,12 @@
     {
         "ID": "3407",
         "Name": "Granite Elemental Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3408",
         "Name": "Granite Golem Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3409",
@@ -17097,132 +17097,132 @@
     {
         "ID": "3420",
         "Name": "Stargazer Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3421",
         "Name": "Milkyway Weaver Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3422",
         "Name": "Flow Invader Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3423",
         "Name": "Twinkle Popper Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3424",
         "Name": "Small Star Cell Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3425",
         "Name": "Star Cell Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3426",
         "Name": "Corite Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3427",
         "Name": "Sroller Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3428",
         "Name": "Crawltipede Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3429",
         "Name": "Drakomire Rider Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3430",
         "Name": "Drakomire Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3431",
         "Name": "Selenian Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3432",
         "Name": "Predictor Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3433",
         "Name": "Brain Suckler Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3434",
         "Name": "Nebula Floater Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3435",
         "Name": "Evolution Beast Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3436",
         "Name": "Alien Larva Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3437",
         "Name": "Alien Queen Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3438",
         "Name": "Alien Hornet Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3439",
         "Name": "Vortexian Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3440",
         "Name": "Storm Diver Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3441",
         "Name": "Pirate Captain Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3442",
         "Name": "Pirate Deadeye Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3443",
         "Name": "Pirate Corsair Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3444",
         "Name": "Pirate Crossbower Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3445",
         "Name": "Martian Walker Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3446",
@@ -17247,7 +17247,7 @@
     {
         "ID": "3450",
         "Name": "Light Mummy Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "3451",
@@ -23432,7 +23432,7 @@
     {
         "ID": "4687",
         "Name": "Angry Dandelion Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "4688",
@@ -24872,7 +24872,7 @@
     {
         "ID": "4975",
         "Name": "Hallowed Mimic Banner",
-        "Type": "Furniture"
+        "Type": "Enemy banner"
     },
     {
         "ID": "4976",

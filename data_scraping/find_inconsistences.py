@@ -8,8 +8,8 @@ from scraping_tools import *
 from json_manager import *
 from tools import *
 
-ITEM_FILE_NAME = "items_armors.json"
-CATEGORY = "Armor"
+ITEM_FILE_NAME = "items_furnitures.json"
+CATEGORY = "Furniture"
 
 itemList = LoadJSONFile(ITEM_FILE_PATH)
 toolList = LoadJSONFile(GLOBAL_JSON_PATH + ITEM_FILE_NAME)

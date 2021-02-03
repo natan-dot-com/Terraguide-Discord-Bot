@@ -17,7 +17,7 @@ SCRAPING_AXE_POWER = "Axe power"
 SCRAPING_FISHING_POWER = "Fishing Power"
 SCRAPING_SET_ID = "Set ID"
 SCRAPING_DEFENSE = "Defense"
-SCRAPING_BODY_SLOT = "Body Slot"
+SCRAPING_BODY_SLOT = "Body slot"
 SCRAPING_TOOLTIP = "Tooltip"
 SCRAPING_RESEARCH = "Research"
 SCRAPING_USED_IN = "Used In"
@@ -67,6 +67,7 @@ SCRAPING_MASTER_MODE = "Master Mode Exclusive:"
 SCRAPING_DESCRIPTION = "Description"
 SCRAPING_TOOLTIP = "Tooltip"
 SCRAPING_DESTROYED_BY_EXPLOSIVES = "Destroyed by Explosives"
+SCRAPING_BONUS = "Bonus"
 
 # Source dict labels ('SCRAPING_SOURCE')
 SOURCE_RECIPE = "Crafting Recipes"
@@ -129,7 +130,7 @@ BAG_DROPS_DICT = {
 }
 
 RARITY_GRAY = "Gray"
-RARITY_AMBER = "Amber"
+RARITY_AMBER = "Quest"
 RARITY_RAINBOW = "Rainbow"
 RARITY_FIERY_RED = "Fiery red"
 RARITY_TIER = {
@@ -193,11 +194,13 @@ def get_statistics(tableBox, itemInstance = {}, usedIn = "", isArmor = False):
         if statistic.th.text == SCRAPING_USE_TIME:
             jsonDict[SCRAPING_USE_TIME] = statistic.td.text.split("/")[0].encode("ascii", "ignore").decode().rstrip()
         elif statistic.th.text == SCRAPING_RARITY:
-            if (re.search("-*\d+", statistic.td.span.a["title"])):
-                jsonDict[SCRAPING_RARITY] = (re.search("-*\d+", statistic.td.span.a["title"])).group()
+            if statistic.td.span:
+                if (re.search("-*\d+", statistic.td.span.a["title"])):
+                    jsonDict[SCRAPING_RARITY] = (re.search("-*\d+", statistic.td.span.a["title"])).group()
+                else:
+                    jsonDict[SCRAPING_RARITY] = RARITY_TIER[statistic.td.span.a["title"].split(": ")[-1]]
             else:
-                print(statistic.td.span.a["title"].split(": ")[-1])
-                jsonDict[SCRAPING_RARITY] = RARITY_TIER[statistic.td.span.a["title"].split(": ")[-1]]
+                jsonDict[SCRAPING_RARITY] = statistic.td.text.rstrip()
         elif statistic.th.text == SCRAPING_PLACEABLE:
             jsonDict[SCRAPING_PLACEABLE] = statistic.td.img["alt"]
         elif statistic.th.text == SCRAPING_MAX_LIFE:
@@ -233,8 +236,10 @@ def get_statistics(tableBox, itemInstance = {}, usedIn = "", isArmor = False):
             jsonDict[SCRAPING_CRITICAL_CHANCE] = statistic.td.text.split("/")[0].encode("ascii", "ignore").decode().rstrip()
         elif statistic.th.text == SCRAPING_DEFENSE:
             jsonDict[SCRAPING_DEFENSE] = statistic.td.text.split(" ")[0]
-        elif statistic.th.text == "Body slot":
+        elif statistic.th.text == SCRAPING_BODY_SLOT:
             jsonDict[SCRAPING_BODY_SLOT] = statistic.td.text
+        elif statistic.th.text == SCRAPING_BONUS:
+            jsonDict[SCRAPING_BONUS] = statistic.td.text
 
     #get toolpower for tools json
     toolPower = tableBox.find("ul", class_="toolpower")
