@@ -16,6 +16,7 @@ IMG_OUTPUT_PATH = "img/{}.png"
 
 URL = "https://terraria.gamepedia.com/"
 logFile = 'img_log.txt'
+logThread = "thread_log.txt"
 exitFlag = 0
 itemList = LoadJSONFile(ITEM_FILE_PATH)
 
@@ -28,7 +29,7 @@ class myThread (threading.Thread):
    def run(self):
       print ("Starting Thread " + str(self.threadID))
       imgSearch(self.init, self.fin)
-      with open(logFile, "a") as log:
+      with open(logThread, "a") as log:
             log.write("Exiting Thread " + str(self.threadID) + "\n")
       print ("Exiting Thread " + str(self.threadID))
 
@@ -51,7 +52,6 @@ def imgSearch(init, fin):
                 
                 if tableBoxImage:
                     imgSrc = tableBoxImage.find("img")["src"]
-                    #imgPath = IMG_OUTPUT_PATH.format(itemInstance[SCRAPING_NAME].replace(" ", "_"))
                     if writeImage(imgSrc, imgPath) == NOT_FOUND:
                         with open(logFile, "a") as log:
                             log.write("Failed to write image" + str(itemInstance[SCRAPING_ID]) + "\n")
