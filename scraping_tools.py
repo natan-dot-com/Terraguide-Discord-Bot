@@ -68,6 +68,7 @@ SCRAPING_DESCRIPTION = "Description"
 SCRAPING_TOOLTIP = "Tooltip"
 SCRAPING_DESTROYED_BY_EXPLOSIVES = "Destroyed by Explosives"
 SCRAPING_BONUS = "Bonus"
+SCRAPING_USABLE = "Usable"
 
 # Source dict labels ('SCRAPING_SOURCE')
 SOURCE_RECIPE = "Crafting Recipes"

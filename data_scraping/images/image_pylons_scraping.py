@@ -12,9 +12,6 @@ URL = "https://terraria.gamepedia.com/"
 PYLON_IMAGE_PATH = "img/{}.png"
 PYLON_OTHERS_IMAGE_PATH = "data_scraping/pylon_img/{}.png"
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
-bricksList = []
-
 newURL = URL + "Pylons"
 page = requests.get(newURL)
 soup = BeautifulSoup(page.content, "html.parser")
