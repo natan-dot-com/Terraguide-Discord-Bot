@@ -2,99 +2,105 @@ import os,sys,inspect
 current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parent_dir = os.path.dirname(current_dir)
 parent_dir = os.path.dirname(parent_dir)
-sys.path.insert(0, parent_dir) 
-import json
+sys.path.insert(0, parent_dir)
+from scraping_tools import *
+from json_manager import *
 import os
 from bs4 import BeautifulSoup
-import bs4
 import requests 
 import threading
 import math
 
 sucessful = 200
-src_prefix = "img/"
+IMG_OUTPUT_PATH = "img/{}.png"
 
-url = "https://terraria.gamepedia.com/"
-
-log_file = 'img_log.txt'
-
+URL = "https://terraria.gamepedia.com/"
+logFile = 'img_log.txt'
 exitFlag = 0
+itemList = LoadJSONFile(ITEM_FILE_PATH)
 
 class myThread (threading.Thread):
-   def __init__(self, threadID, item_list, init, fin):
+   def __init__(self, threadID, init, fin):
       threading.Thread.__init__(self)
       self.threadID = threadID
-      self.item_list = item_list
       self.init = init
       self.fin = fin
    def run(self):
       print ("Starting Thread " + str(self.threadID))
-      img_search(self.item_list, self.init, self.fin)
+      imgSearch(self.init, self.fin)
+      with open(logFile, "a") as log:
+            log.write("Exiting Thread " + str(self.threadID) + "\n")
       print ("Exiting Thread " + str(self.threadID))
 
-def img_search(item_list, init, fin):
-    for item in item_list[init:fin]:
+def imgSearch(init, fin):
+    for itemInstance in itemList[init:fin]:
 
-        new_url = url + item['name'].replace(" ", "_")
-
-        page = requests.get(new_url)
-        if page.status_code == sucessful:
-            
+        newUrl = URL + itemInstance[SCRAPING_NAME].replace(" ", "_")
+        print("processing {}".format(newUrl))
+        page = requests.get(newUrl)
+        if page.status_code == sucessful:         
             soup = BeautifulSoup(page.content, 'html.parser')
-            item_img = soup.find("div", class_="section images")
+            tableBoxImage = soup.find("div", class_="section images")
             
-            if type(item_img) is bs4.element.Tag:
-                #find tag
-                img = item_img.find("img")
-
-                #get the src link
-                img_src = img['src']
-                print(img_src)
-
-                #img path
-                img_path = src_prefix + item['name'].replace(" ", "_") + ".png"
-
-                #get the image
-                img_output = requests.get(img_src, stream=True)
-                #print(type(img_output))
-                if img_output.ok:
-                    with open(img_path, 'wb') as handler:
-                        for block in img_output.iter_content(1024):
-                            if not block:
-                                break
-                            handler.write(block)
-                else:
-                    with open(log_file, "a") as log:
-                        log.write("Image not found with ID " + str(item['id']) + "\n")
-                #exit(0)
+            if tableBoxImage:
+                imgSrc = tableBoxImage.find("img")["src"]
+                imgPath = IMG_OUTPUT_PATH.format(itemInstance[SCRAPING_NAME].replace(" ", "_").replace("/", "_"))
+                if writeImage(imgSrc, imgPath) == NOT_FOUND:
+                    with open(logFile, "a") as log:
+                        log.write("Failed to write image" + str(itemInstance[SCRAPING_ID]) + "\n")
             else:
-                with open(log_file, "a") as log:
-                    log.write("Image not found with link " + new_url + " and ID " + str(item['id']) + "\n")
+                with open(logFile, "a") as log:
+                    log.write("Image not found with link " + newUrl + " and ID " + str(itemInstance[SCRAPING_ID]) + "\n")
 
-    
-with open('json/items2.json') as items:
-    item_list = json.load(items)
 
-if os.path.exists(log_file):
-  os.remove(log_file)
 
-first_quarter = math.floor(len(item_list)/4)
-second_quarter = math.floor(len(item_list)/2)
-third_quarter = 3*math.floor((len(item_list)/4))
-fouth_quarter = math.floor(len(item_list))
+if os.path.exists(logFile):
+  os.remove(logFile)
+
+'''firstQuarter = math.floor(len(itemList)/4)
+secondQuarter = math.floor(len(itemList)/2)
+thirdQuarter = 3*math.floor((len(itemList)/4))
+fouthQuarter = math.floor(len(itemList))'''
+
+firstOctave = math.floor(len(itemList)/8)
+secondOctave = 2*math.floor(len(itemList)/8)
+thirdOctave = 3*math.floor(len(itemList)/8)
+fourthOctave = 4*math.floor(len(itemList)/8)
+fifthOctave = 5*math.floor(len(itemList)/8)
+sixthOctave = 6*math.floor(len(itemList)/8)
+seventOctave = 7*math.floor(len(itemList)/8)
+eighthOctave = 8*math.floor(len(itemList)/8)
 
 # Create new threads
-thread1 = myThread(1, item_list, 0, first_quarter)
-thread2 = myThread(2, item_list, first_quarter, second_quarter)
-thread3 = myThread(3, item_list, second_quarter, third_quarter)
-thread4 = myThread(4, item_list, third_quarter, fouth_quarter)
+'''thread1 = myThread(1, 0, firstQuarter)
+thread2 = myThread(2, firstQuarter, secondQuarter)
+thread3 = myThread(3, secondQuarter, thirdQuarter)
+thread4 = myThread(4, thirdQuarter, fouthQuarter)'''
+# Create new threads
+thread1 = myThread(1, 0, firstOctave)
+thread2 = myThread(1, firstOctave, secondOctave)
+thread3 = myThread(1, secondOctave, thirdOctave)
+thread4 = myThread(1, thirdOctave, fourthOctave)
+thread5 = myThread(1, fourthOctave, fifthOctave)
+thread6 = myThread(1, fifthOctave, sixthOctave)
+thread7 = myThread(1, sixthOctave, seventOctave)
+thread8 = myThread(1, seventOctave, eighthOctave)
 
 # Start new Threads
 thread1.start()
 thread2.start()
 thread3.start()
 thread4.start()
+thread5.start()
+thread6.start()
+thread7.start()
+thread8.start()
+
 thread1.join()
 thread2.join()
 thread3.join()
 thread4.join()
+thread5.join()
+thread6.join()
+thread7.join()
+thread8.join()

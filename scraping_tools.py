@@ -140,6 +140,9 @@ RARITY_TIER = {
     RARITY_FIERY_RED: "-13"
 }
 
+NOT_FOUND = -1
+FOUND = 1
+
 # Find the ID in respect of an item in items.json
 def searchForID(itemName, itemList):
     for itemInstance in itemList:
@@ -155,6 +158,9 @@ def writeImage(imageSource, imagePath):
                 if not block:
                     break
                 handler.write(block)
+    else:
+        return NOT_FOUND
+    return FOUND
 
 # Removes every null field inside a dict
 def removeEmptyFields(dataDict):
@@ -167,7 +173,6 @@ def removeEmptyFields(dataDict):
     return dataDict
     
 # Finds every column index of a table based on a list with each column label. 
-NOT_FOUND = -1
 def getTableColumns(tableHeadRow, scrappingData):
     indexDict = {}
     for data in scrappingData:
