@@ -76,6 +76,7 @@ SCRAPING_PLANTED_IN = "Planted In"
 SCRAPING_CATCH_QUALITY = "Catch Quality"
 SCRAPING_EVENT = "Event"
 SCRAPING_BAIT_POWER = "Bait Power"
+SCRAPING_SUMMONS = "Summons"
 
 # Source dict labels ('SCRAPING_SOURCE')
 SOURCE_RECIPE = "Crafting Recipes"
@@ -147,6 +148,8 @@ RARITY_TIER = {
     RARITY_RAINBOW: "-12",
     RARITY_FIERY_RED: "-13"
 }
+
+BOSS_SUMMON_JSON_NAME_FILE = "items_boss_summons.json"
 
 NOT_FOUND = -1
 FOUND = 1
