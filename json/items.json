@@ -522,22 +522,22 @@
     {
         "ID": "105",
         "Name": "Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "106",
         "Name": "Copper Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "107",
         "Name": "Silver Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "108",
         "Name": "Gold Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "109",
@@ -737,7 +737,7 @@
     {
         "ID": "148",
         "Name": "Water Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "149",
@@ -1702,7 +1702,7 @@
     {
         "ID": "341",
         "Name": "Lamp Post",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "342",
@@ -1742,7 +1742,7 @@
     {
         "ID": "349",
         "Name": "Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "350",
@@ -3547,27 +3547,27 @@
     {
         "ID": "710",
         "Name": "Tin Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "711",
         "Name": "Tungsten Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "712",
         "Name": "Platinum Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "713",
         "Name": "Platinum Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "714",
         "Name": "Platinum Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "715",
@@ -7022,17 +7022,17 @@
     {
         "ID": "1405",
         "Name": "Blue Dungeon Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "1406",
         "Name": "Green Dungeon Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "1407",
         "Name": "Pink Dungeon Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "1408",
@@ -9057,7 +9057,7 @@
     {
         "ID": "1812",
         "Name": "Jackelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "1813",
@@ -10222,107 +10222,107 @@
     {
         "ID": "2045",
         "Name": "Cactus Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2046",
         "Name": "Ebonwood Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2047",
         "Name": "Flesh Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2048",
         "Name": "Glass Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2049",
         "Name": "Frozen Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2050",
         "Name": "Rich Mahogany Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2051",
         "Name": "Pearlwood Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2052",
         "Name": "Lihzahrd Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2053",
         "Name": "Skyware Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2054",
         "Name": "Pumpkin Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2055",
         "Name": "Cactus Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2056",
         "Name": "Ebonwood Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2057",
         "Name": "Flesh Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2058",
         "Name": "Honey Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2059",
         "Name": "Frozen Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2060",
         "Name": "Rich Mahogany Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2061",
         "Name": "Pearlwood Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2062",
         "Name": "Lihzahrd Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2063",
         "Name": "Skyware Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2064",
         "Name": "Spooky Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2065",
         "Name": "Glass Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2066",
@@ -10407,112 +10407,112 @@
     {
         "ID": "2082",
         "Name": "Cactus Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2083",
         "Name": "Ebonwood Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2084",
         "Name": "Flesh Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2085",
         "Name": "Glass Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2086",
         "Name": "Frozen Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2087",
         "Name": "Rich Mahogany Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2088",
         "Name": "Pearlwood Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2089",
         "Name": "Lihzahrd Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2090",
         "Name": "Skyware Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2091",
         "Name": "Spooky Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2092",
         "Name": "Cactus Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2093",
         "Name": "Ebonwood Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2094",
         "Name": "Flesh Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2095",
         "Name": "Honey Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2096",
         "Name": "Steampunk Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2097",
         "Name": "Glass Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2098",
         "Name": "Rich Mahogany Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2099",
         "Name": "Pearlwood Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2100",
         "Name": "Frozen Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2101",
         "Name": "Lihzahrd Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2102",
         "Name": "Skyware Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2103",
         "Name": "Spooky Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2104",
@@ -10642,32 +10642,32 @@
     {
         "ID": "2129",
         "Name": "Honey Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2130",
         "Name": "Steampunk Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2131",
         "Name": "Living Wood Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2132",
         "Name": "Shadewood Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2133",
         "Name": "Golden Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2134",
         "Name": "Bone Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2135",
@@ -10702,22 +10702,22 @@
     {
         "ID": "2141",
         "Name": "Living Wood Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2142",
         "Name": "Shadewood Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2143",
         "Name": "Golden Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2144",
         "Name": "Bone Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2145",
@@ -10742,37 +10742,37 @@
     {
         "ID": "2149",
         "Name": "Living Wood Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2150",
         "Name": "Shadewood Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2151",
         "Name": "Golden Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2152",
         "Name": "Bone Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2153",
         "Name": "Living Wood Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2154",
         "Name": "Shadewood Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2155",
         "Name": "Golden Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2156",
@@ -11117,12 +11117,12 @@
     {
         "ID": "2224",
         "Name": "Large Dynasty Lantern",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2225",
         "Name": "Dynasty Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2226",
@@ -11132,7 +11132,7 @@
     {
         "ID": "2227",
         "Name": "Large Dynasty Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2228",
@@ -11177,7 +11177,7 @@
     {
         "ID": "2236",
         "Name": "Dynasty Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2237",
@@ -12607,12 +12607,12 @@
     {
         "ID": "2522",
         "Name": "Palm Wood Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2523",
         "Name": "Palm Wood Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2524",
@@ -12622,7 +12622,7 @@
     {
         "ID": "2525",
         "Name": "Palm Wood Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2526",
@@ -12662,7 +12662,7 @@
     {
         "ID": "2533",
         "Name": "Palm Wood Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2534",
@@ -12702,17 +12702,17 @@
     {
         "ID": "2541",
         "Name": "Mushroom Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2542",
         "Name": "Mushroom Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2543",
         "Name": "Mushroom Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2544",
@@ -12732,7 +12732,7 @@
     {
         "ID": "2547",
         "Name": "Mushroom Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2548",
@@ -12772,12 +12772,12 @@
     {
         "ID": "2555",
         "Name": "Boreal Wood Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2556",
         "Name": "Boreal Wood Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2557",
@@ -12787,7 +12787,7 @@
     {
         "ID": "2558",
         "Name": "Boreal Wood Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2559",
@@ -12812,7 +12812,7 @@
     {
         "ID": "2563",
         "Name": "Boreal Wood Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2564",
@@ -12847,12 +12847,12 @@
     {
         "ID": "2570",
         "Name": "Slime Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2571",
         "Name": "Slime Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2572",
@@ -12862,7 +12862,7 @@
     {
         "ID": "2573",
         "Name": "Slime Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2574",
@@ -12887,7 +12887,7 @@
     {
         "ID": "2578",
         "Name": "Slime Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2579",
@@ -13212,77 +13212,77 @@
     {
         "ID": "2643",
         "Name": "Pumpkin Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2644",
         "Name": "Obsidian Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2645",
         "Name": "Blue Dungeon Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2646",
         "Name": "Green Dungeon Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2647",
         "Name": "Pink Dungeon Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2648",
         "Name": "Honey Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2649",
         "Name": "Steampunk Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2650",
         "Name": "Spooky Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2651",
         "Name": "Obsidian Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2652",
         "Name": "Blue Dungeon Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2653",
         "Name": "Green Dungeon Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2654",
         "Name": "Pink Dungeon Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2655",
         "Name": "Steampunk Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2656",
         "Name": "Pumpkin Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2657",
         "Name": "Obsidian Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2658",
@@ -13317,27 +13317,27 @@
     {
         "ID": "2664",
         "Name": "Blue Dungeon Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2665",
         "Name": "Green Dungeon Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2666",
         "Name": "Pink Dungeon Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2667",
         "Name": "Obsidian Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2668",
         "Name": "Pumpkin Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2669",
@@ -14062,7 +14062,7 @@
     {
         "ID": "2813",
         "Name": "Martian Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2814",
@@ -14087,12 +14087,12 @@
     {
         "ID": "2818",
         "Name": "Martian Hover Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2819",
         "Name": "Martian Lamppost",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2820",
@@ -14122,7 +14122,7 @@
     {
         "ID": "2825",
         "Name": "Martian Table Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "2826",
@@ -15582,7 +15582,7 @@
     {
         "ID": "3117",
         "Name": "Peace Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3118",
@@ -15672,17 +15672,17 @@
     {
         "ID": "3135",
         "Name": "Meteorite Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3136",
         "Name": "Marble Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3137",
         "Name": "Granite Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3138",
@@ -15837,32 +15837,32 @@
     {
         "ID": "3168",
         "Name": "Meteorite Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3169",
         "Name": "Marble Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3170",
         "Name": "Granite Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3171",
         "Name": "Meteorite Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3172",
         "Name": "Marble Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3173",
         "Name": "Granite Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3174",
@@ -15882,17 +15882,17 @@
     {
         "ID": "3177",
         "Name": "Meteorite Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3178",
         "Name": "Marble Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3179",
         "Name": "Granite Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3180",
@@ -16262,7 +16262,7 @@
     {
         "ID": "3253",
         "Name": "Lava Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3254",
@@ -18972,7 +18972,7 @@
     {
         "ID": "3795",
         "Name": "Desert Spirit Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3796",
@@ -19447,7 +19447,7 @@
     {
         "ID": "3890",
         "Name": "Crystal Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3891",
@@ -19457,17 +19457,17 @@
     {
         "ID": "3892",
         "Name": "Crystal Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3893",
         "Name": "Crystal Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3894",
         "Name": "Crystal Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3895",
@@ -19672,12 +19672,12 @@
     {
         "ID": "3935",
         "Name": "Spider Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3936",
         "Name": "Spider Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3937",
@@ -19687,7 +19687,7 @@
     {
         "ID": "3938",
         "Name": "Spider Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3939",
@@ -19707,7 +19707,7 @@
     {
         "ID": "3942",
         "Name": "Spider Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3943",
@@ -19802,12 +19802,12 @@
     {
         "ID": "3961",
         "Name": "Lesion Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3962",
         "Name": "Lesion Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3963",
@@ -19817,7 +19817,7 @@
     {
         "ID": "3964",
         "Name": "Lesion Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3965",
@@ -19842,7 +19842,7 @@
     {
         "ID": "3969",
         "Name": "Lesion Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "3970",
@@ -20742,12 +20742,12 @@
     {
         "ID": "4149",
         "Name": "Solar Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4150",
         "Name": "Solar Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4151",
@@ -20757,7 +20757,7 @@
     {
         "ID": "4152",
         "Name": "Solar Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4153",
@@ -20777,7 +20777,7 @@
     {
         "ID": "4156",
         "Name": "Solar Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4157",
@@ -20847,12 +20847,12 @@
     {
         "ID": "4170",
         "Name": "Vortex Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4171",
         "Name": "Vortex Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4172",
@@ -20862,7 +20862,7 @@
     {
         "ID": "4173",
         "Name": "Vortex Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4174",
@@ -20882,7 +20882,7 @@
     {
         "ID": "4177",
         "Name": "Vortex Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4178",
@@ -20952,12 +20952,12 @@
     {
         "ID": "4191",
         "Name": "Nebula Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4192",
         "Name": "Nebula Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4193",
@@ -20967,7 +20967,7 @@
     {
         "ID": "4194",
         "Name": "Nebula Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4195",
@@ -20987,7 +20987,7 @@
     {
         "ID": "4198",
         "Name": "Nebula Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4199",
@@ -21057,12 +21057,12 @@
     {
         "ID": "4212",
         "Name": "Stardust Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4213",
         "Name": "Stardust Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4214",
@@ -21072,7 +21072,7 @@
     {
         "ID": "4215",
         "Name": "Stardust Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4216",
@@ -21092,7 +21092,7 @@
     {
         "ID": "4219",
         "Name": "Stardust Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4220",
@@ -21507,12 +21507,12 @@
     {
         "ID": "4302",
         "Name": "Sandstone Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4303",
         "Name": "Sandstone Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4304",
@@ -21522,7 +21522,7 @@
     {
         "ID": "4305",
         "Name": "Sandstone Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4306",
@@ -21537,7 +21537,7 @@
     {
         "ID": "4308",
         "Name": "Sandstone Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4309",
@@ -22762,7 +22762,7 @@
     {
         "ID": "4553",
         "Name": "Plasma Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4554",
@@ -22847,12 +22847,12 @@
     {
         "ID": "4570",
         "Name": "Bamboo Candelabra",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4571",
         "Name": "Bamboo Candle",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4572",
@@ -22862,7 +22862,7 @@
     {
         "ID": "4573",
         "Name": "Bamboo Chandelier",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4574",
@@ -22882,7 +22882,7 @@
     {
         "ID": "4577",
         "Name": "Bamboo Lamp",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "4578",

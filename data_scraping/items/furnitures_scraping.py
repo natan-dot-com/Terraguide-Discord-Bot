@@ -16,25 +16,45 @@ from multithreading_starter import *
 ITEMS_FURNITURE_PATH = GLOBAL_JSON_PATH + "items_furnitures.json"
 URL = "https://terraria.gamepedia.com/"
 BRICKS_IMAGE_PATH = "data_scraping/bricks_img/{}.png"
+OTHER_FOUNDS = ["Dungeon", "Obsidian"]
+OTHER_FOUNDS_SOURCE = ["Found in the Dungeon", "Found in Ruined Houses, in the Underworld"]
 
-log = open("log.txt", "w")
 itemList = LoadJSONFile(ITEM_FILE_PATH)
 furnituresList = []
 
-def furniturescraping(init, fin):
+def furniturescraping(init, fin, threadID):
     for itemInstance in itemList[init:fin]:
         if itemInstance[SCRAPING_TYPE] == "Furniture":
             newURL = URL + itemInstance[SCRAPING_NAME].replace(" ", "_")
             page = requests.get(newURL)
             soup = BeautifulSoup(page.content, "html.parser")
-            print("processing {}".format(newURL))
+            print("processing {} on Thread {}".format(newURL, threadID))
 
             tableBoxes = soup.find_all("div", class_="infobox item")
             tableBox = tableBoxes[0]
             for tableBoxTmp in tableBoxes:
                 if tableBoxTmp.find("div", class_="title").text == itemInstance[SCRAPING_NAME]:
                     tableBox = tableBoxTmp
-            furnituresList.append(get_statistics(tableBox, itemInstance=itemInstance))
+            furnitureDict = get_statistics(tableBox, itemInstance=itemInstance)
+
+            furnitureDict.pop(SCRAPING_SOURCES)
+            furnitureSourceOther = ""
+            for otherFoundInstance, otherFoundSourceInstance in zip(OTHER_FOUNDS, OTHER_FOUNDS_SOURCE):
+                if re.search(otherFoundInstance, itemInstance[SCRAPING_NAME]) and not re.search("Sink|Obsidian Watcher Banner", itemInstance[SCRAPING_NAME]):
+                    furnitureSourceOther = otherFoundSourceInstance
+                    break
+                elif itemInstance[SCRAPING_NAME] == "Book":
+                    furnitureSourceOther = "Found in the Dungeon"
+
+            furnitureDict[SCRAPING_SOURCES] = {
+                SOURCE_RECIPES: [],
+                SOURCE_NPC: [],
+                SOURCE_DROP: [],
+                SOURCE_GRAB_BAG: [],
+                SOURCE_OTHER: furnitureSourceOther,
+            }
+
+            furnituresList.append(furnitureDict)
 
 
 start_threads(__file__, furniturescraping.__name__, len(itemList), 8)

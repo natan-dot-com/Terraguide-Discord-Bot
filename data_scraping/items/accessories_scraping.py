@@ -15,13 +15,13 @@ ACCESSORY_PATH = GLOBAL_JSON_PATH + "items_accessories.json"
 itemList = LoadJSONFile(ITEM_FILE_PATH)
 accessoriesList = []
 
-def accessoriesScraping(init, fin):
+def accessoriesScraping(init, fin, threadID):
     for itemInstance in itemList[init:fin]:
         if itemInstance[SCRAPING_TYPE] == "Accessory":
             newURL = URL + itemInstance[SCRAPING_NAME].replace(" ", "_")
             page = requests.get(newURL)
             soup = BeautifulSoup(page.content, "html.parser")
-            print("processing {}".format(newURL))
+            print("processing {} on thread {}".format(newURL, threadID))
         
             tableBoxes = soup.find_all("div", class_="infobox item")
             tableBox = tableBoxes[0]
