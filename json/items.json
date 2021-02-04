@@ -11607,7 +11607,7 @@
     {
         "ID": "2322",
         "Name": "Mining Potion",
-        "Type": "Fishing catches"
+        "Type": "Potion"
     },
     {
         "ID": "2323",
@@ -22012,7 +22012,7 @@
     {
         "ID": "4403",
         "Name": "Lobster Tail",
-        "Type": "Fishing catches"
+        "Type": "Potion"
     },
     {
         "ID": "4404",
