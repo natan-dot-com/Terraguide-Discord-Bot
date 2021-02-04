@@ -438,54 +438,6 @@
         }
     },
     {
-        "Item ID": "2436",
-        "Name": "Blue Jellyfish (bait)",
-        "Rarity": "1",
-        "Sell": "3 Gold Coins",
-        "Height": "Cavern, Underworld",
-        "Biome": "Not Corruption or Hallow (or Desert)",
-        "Catch Quality": "Rare",
-        "Sources": {
-            "Crafting Recipes": [],
-            "NPC": [],
-            "Drop": [],
-            "Grab Bag": [],
-            "Other": ""
-        }
-    },
-    {
-        "Item ID": "2437",
-        "Name": "Green Jellyfish (bait)",
-        "Rarity": "1",
-        "Sell": "3 Gold Coins",
-        "Height": "Cavern, Underworld",
-        "Biome": "Not Corruption or Hallow (or Desert)",
-        "Catch Quality": "Rare",
-        "Sources": {
-            "Crafting Recipes": [],
-            "NPC": [],
-            "Drop": [],
-            "Grab Bag": [],
-            "Other": ""
-        }
-    },
-    {
-        "Item ID": "2438",
-        "Name": "Pink Jellyfish (bait)",
-        "Rarity": "1",
-        "Sell": "3 Gold Coins",
-        "Height": "Sky, Surface",
-        "Biome": "Ocean",
-        "Catch Quality": "Rare",
-        "Sources": {
-            "Crafting Recipes": [],
-            "NPC": [],
-            "Drop": [],
-            "Grab Bag": [],
-            "Other": ""
-        }
-    },
-    {
         "Item ID": "4401",
         "Name": "Flounder",
         "Rarity": "0",

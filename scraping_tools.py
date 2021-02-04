@@ -73,6 +73,8 @@ SCRAPING_MAX_STACK = "Max stack"
 SCRAPING_CREATES = "Creates"
 SCRAPING_PLANTED_IN = "Planted In"
 SCRAPING_CATCH_QUALITY = "Catch Quality"
+SCRAPING_EVENT = "Event"
+SCRAPING_BAIT_POWER = "Bait Power"
 
 # Source dict labels ('SCRAPING_SOURCE')
 SOURCE_RECIPE = "Crafting Recipes"

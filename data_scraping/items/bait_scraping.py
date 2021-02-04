@@ -1,0 +1,63 @@
+import os,sys,inspect
+current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parent_dir = os.path.dirname(current_dir)
+parent_dir = os.path.dirname(parent_dir)
+sys.path.insert(0, parent_dir) 
+from scraping_tools import *
+from json_manager import *
+from bs4 import BeautifulSoup
+import re
+import requests
+
+mainURLsuffix = "/Bait"
+scrappingData = ["Item", "Power", "Rarity"]
+JSON_PATH = "items_bait.json"
+dictList = []
+
+itemList = LoadJSONFile('../../json/items.json')
+
+baseURL = "https://terraria.gamepedia.com"
+html = requests.get(baseURL + mainURLsuffix)
+soup = BeautifulSoup(html.content, 'html.parser')
+table = soup.find("table", class_="terraria")
+rows = table.findAll("tr")
+index = getTableColumns(table.findAll("th"), scrappingData)
+for row in rows[1::]:
+    cols = row.findAll("td")
+    baitDict = {
+        SCRAPING_ITEM_ID: "",
+        SCRAPING_RARITY: "",
+        SCRAPING_BAIT_POWER: "",
+        SCRAPING_SOURCE: {
+            SOURCE_RECIPE: [],
+            SOURCE_NPC: [],
+            SOURCE_DROP: [],
+            SOURCE_GRAB_BAG: [],
+            SOURCE_OTHER: ""
+        }
+    }
+
+    baitDict[SCRAPING_ITEM_ID] = searchForID(cols[index["Item"]].img['alt'], itemList)
+    if not baitDict[SCRAPING_ITEM_ID]:
+        baitDict[SCRAPING_ITEM_ID] = searchForID(cols[index["Item"]].img['alt'] + " (bait)", itemList)
+
+    baitDict[SCRAPING_RARITY] = re.search("\d+", cols[index["Rarity"]+1].img['alt']).group()
+    baitDict[SCRAPING_BAIT_POWER] = cols[index["Power"]+1].text.replace("\n", "")
+
+    if row.find("td", class_="il2c").find("a")['title'] != "Item IDs":
+        newSuffix = row.find("td", class_="il2c").a['href']
+        newHtml = requests.get(baseURL + newSuffix)
+        newSoup = BeautifulSoup(newHtml.content, 'html.parser')
+        newTable = newSoup.find("div", class_="infobox npc c-normal critter")
+        if not newTable:
+            newTable = newSoup.find("div", class_="infobox npc c-normal gold critter")
+        if newTable:
+            newTable = newTable.find("table", class_="stat")
+            newIndexes = getTableColumns(newTable.findAll("th"), ["Environment"])
+            newRows = newTable.findAll("td")
+            if (newIndexes["Environment"] != -1):
+                baitDict[SCRAPING_SOURCE][SOURCE_OTHER] = "Found in " + newRows[newIndexes["Environment"]].a['title']
+    print(baitDict)
+    dictList.append(baitDict)
+
+SaveJSONFile(JSON_PATH, sorted(dictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))
