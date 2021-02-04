@@ -107,4 +107,4 @@ for armor in armorList:
             armor[SCRAPING_SET_ID] = str(set[SCRAPING_ID])
             break
 
-SaveJSONFile(ARMOR_PATH_OUTPUT, armorList)
+SaveJSONFile(ARMOR_PATH_OUTPUT, sortListOfDictsByKey(armorList, SCRAPING_ITEM_ID))

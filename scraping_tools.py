@@ -1,6 +1,7 @@
 import requests
 import re
 from bs4 import BeautifulSoup
+import operator
 
 # General labels
 SCRAPING_ID = "ID"
@@ -178,6 +179,9 @@ def removeEmptyFields(dataDict):
     for key in dictEmptyKeys:
         del(dataDict[key])
     return dataDict
+
+def sortListOfDictsByKey(dataList, key):
+    return sorted(dataList, key=lambda x: int(operator.itemgetter(key)(x)))
     
 # Finds every column index of a table based on a list with each column label. 
 def getTableColumns(tableHeadRow, scrappingData):

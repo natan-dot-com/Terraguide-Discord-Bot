@@ -175,4 +175,4 @@ for ammo in AMMO_EXCEPTIONS:
         usedIn = ammo[1]
         ammoList.append(get_statistics(tableBox, usedIn=usedIn))
 
-SaveJSONFile(AMMO_PATH_OUTPUT, ammoList)
+SaveJSONFile(AMMO_PATH_OUTPUT, sortListOfDictsByKey(ammoList, SCRAPING_ITEM_ID))
