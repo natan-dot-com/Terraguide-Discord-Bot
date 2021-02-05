@@ -22,13 +22,14 @@ OTHER_FOUNDS_SOURCE = ["Found in the Dungeon", "Found in Ruined Houses, in the U
 itemList = LoadJSONFile(ITEM_FILE_PATH)
 furnituresList = []
 
+@start_threads_decorator(size=len(itemList), threads_number=8)
 def furniturescraping(init, fin, threadID):
     for itemInstance in itemList[init:fin]:
         if itemInstance[SCRAPING_TYPE] == "Furniture":
             newURL = URL + itemInstance[SCRAPING_NAME].replace(" ", "_")
             page = requests.get(newURL)
             soup = BeautifulSoup(page.content, "html.parser")
-            print("processing {} on Thread {}".format(newURL, threadID))
+            print("Thread {}: Processing {} with ID {}".format(threadID, newURL, itemInstance[SCRAPING_ID]))
 
             tableBoxes = soup.find_all("div", class_="infobox item")
             tableBox = tableBoxes[0]
@@ -56,7 +57,4 @@ def furniturescraping(init, fin, threadID):
 
             furnituresList.append(furnitureDict)
 
-
-start_threads(__file__, furniturescraping.__name__, len(itemList), 8)
 SaveJSONFile(ITEMS_FURNITURE_PATH, sortListOfDictsByKey(furnituresList, SCRAPING_ITEM_ID))
-exit(0)

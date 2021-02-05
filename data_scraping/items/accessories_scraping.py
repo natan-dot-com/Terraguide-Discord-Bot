@@ -15,13 +15,14 @@ ACCESSORY_PATH = GLOBAL_JSON_PATH + "items_accessories.json"
 itemList = LoadJSONFile(ITEM_FILE_PATH)
 accessoriesList = []
 
+@start_threads_decorator(size=len(itemList), threads_number=8)
 def accessoriesScraping(init, fin, threadID):
     for itemInstance in itemList[init:fin]:
         if itemInstance[SCRAPING_TYPE] == "Accessory":
             newURL = URL + itemInstance[SCRAPING_NAME].replace(" ", "_")
             page = requests.get(newURL)
             soup = BeautifulSoup(page.content, "html.parser")
-            print("processing {} on thread {}".format(newURL, threadID))
+            print("Thread {}: Processing {} with ID {}".format(threadID, newURL, itemInstance[SCRAPING_ID]))
         
             tableBoxes = soup.find_all("div", class_="infobox item")
             tableBox = tableBoxes[0]
@@ -31,6 +32,4 @@ def accessoriesScraping(init, fin, threadID):
             accessoriesList.append(get_statistics(tableBox, itemInstance=itemInstance))
               
     
-start_threads(__file__, accessoriesScraping.__name__, len(itemList), 8)
 SaveJSONFile(ACCESSORY_PATH, sortListOfDictsByKey(accessoriesList, SCRAPING_ITEM_ID))
-exit(0)

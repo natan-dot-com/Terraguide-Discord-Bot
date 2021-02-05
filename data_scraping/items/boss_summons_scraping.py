@@ -18,13 +18,14 @@ soupConsumables = BeautifulSoup(pageConsumables.content, "html.parser")
 itemList = LoadJSONFile(ITEM_FILE_PATH)
 bossSummonsList = []
 
+@start_threads_decorator(size=len(itemList), threads_number=8)
 def bossSummonsScraping(init, fin, threadID):
     for itemInstance in itemList[init:fin]:
         if itemInstance[SCRAPING_TYPE] == "Boss summon":
             newURL = URL + itemInstance[SCRAPING_NAME].replace(" ", "_")
             page = requests.get(newURL)
             soup = BeautifulSoup(page.content, "html.parser")
-            print("processing {} on thread {}".format(newURL, threadID))
+            print("Thread {}: Processing {} with ID {}".format(threadID, newURL, itemInstance[SCRAPING_ID]))
         
             tableBoxes = soup.find_all("div", class_="infobox item")
             tableBox = tableBoxes[0]
@@ -43,7 +44,4 @@ def bossSummonsScraping(init, fin, threadID):
             bossSummonDict[SCRAPING_SOURCES] = SOURCE_SOURCES_DICT
             bossSummonsList.append(bossSummonDict)
               
-    
-start_threads(__file__, bossSummonsScraping.__name__, len(itemList), 8)
 SaveJSONFile(STORAGE_PATH, sortListOfDictsByKey(bossSummonsList, SCRAPING_ITEM_ID))
-exit(0)
