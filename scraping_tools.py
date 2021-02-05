@@ -77,6 +77,9 @@ SCRAPING_CATCH_QUALITY = "Catch Quality"
 SCRAPING_EVENT = "Event"
 SCRAPING_BAIT_POWER = "Bait Power"
 SCRAPING_SUMMONS = "Summons"
+SCRAPING_HOUSE = "House"
+SCRAPING_MECHANISM = "Mechanism"
+SCRAPING_WATERPROOF = "Waterproof"
 
 # Source dict labels ('SCRAPING_SOURCE')
 SOURCE_RECIPE = "Crafting Recipes"
@@ -150,6 +153,7 @@ RARITY_TIER = {
 }
 
 BOSS_SUMMON_JSON_NAME_FILE = "items_boss_summons.json"
+LIGHT_SOURCE_JSON_NAME_FILE = "light_sources.json"
 
 NOT_FOUND = -1
 FOUND = 1

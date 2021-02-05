@@ -6,7 +6,6 @@ import math
 class myThread (threading.Thread):
    def __init__(self, threadID, func, init, fin):
       threading.Thread.__init__(self)
-      print("Thread {}: {}, {}, {}".format(threadID, init, fin, func))
       self.threadID = threadID
       self.init = init
       self.fin = fin
@@ -25,7 +24,7 @@ def start_threads_decorator(*args, **kwargs):
       threads = []
       threads_number = int(kwargs["threads_number"])
       size = int(kwargs["size"])
-      
+
       #Start Threads
       for i in range(threads_number):
          if i < threads_number-1:

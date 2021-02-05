@@ -1732,7 +1732,7 @@
     {
         "ID": "347",
         "Name": "Skull Lantern",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "348",
@@ -9062,7 +9062,7 @@
     {
         "ID": "1813",
         "Name": "Jack 'O Lantern",
-        "Type": "Furniture"
+        "Type": "Light source"
     },
     {
         "ID": "1814",

@@ -421,22 +421,6 @@
         }
     },
     {
-        "Item ID": "347",
-        "Name": "Skull Lantern",
-        "Placeable": "Yes",
-        "Use time": "15 (Very fast)",
-        "Rarity": "0",
-        "Sell": "1 Silver Coin",
-        "Research": "1 required",
-        "Sources": {
-            "Crafting Recipes": [],
-            "NPC": [],
-            "Drop": [],
-            "Grab Bag": [],
-            "Other": ""
-        }
-    },
-    {
         "Item ID": "350",
         "Name": "Pink Vase",
         "Placeable": "Yes",
@@ -4556,21 +4540,6 @@
         "Use time": "10 (Very fast)",
         "Max stack": "999",
         "Rarity": "0",
-        "Sources": {
-            "Crafting Recipes": [],
-            "NPC": [],
-            "Drop": [],
-            "Grab Bag": [],
-            "Other": ""
-        }
-    },
-    {
-        "Item ID": "1813",
-        "Name": "Jack 'O Lantern",
-        "Placeable": "Yes",
-        "Use time": "15 (Very fast)",
-        "Rarity": "0",
-        "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
