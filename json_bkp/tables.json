@@ -1,0 +1,242 @@
+[
+    {
+        "id": "1",
+        "name": "By Hand",
+        "description": ""
+    },
+    {
+        "id": "2",
+        "name": "Work Bench",
+        "description": ""
+    },
+    {
+        "id": "3",
+        "name": "Furnace",
+        "description": ""
+    },
+    {
+        "id": "4",
+        "name": "Hellforge",
+        "description": ""
+    },
+    {
+        "id": "5",
+        "name": "Iron Anvil",
+        "description": ""
+    },
+    {
+        "id": "6",
+        "name": "Lead Anvil",
+        "description": ""
+    },
+    {
+        "id": "7",
+        "name": "Placed Bottle",
+        "description": ""
+    },
+    {
+        "id": "8",
+        "name": "Alchemy Table",
+        "description": ""
+    },
+    {
+        "id": "9",
+        "name": "Sink",
+        "description": ""
+    },
+    {
+        "id": "10",
+        "name": "Sawmill",
+        "description": ""
+    },
+    {
+        "id": "11",
+        "name": "Loom",
+        "description": ""
+    },
+    {
+        "id": "12",
+        "name": "Table and Chair",
+        "description": ""
+    },
+    {
+        "id": "13",
+        "name": "Work Bench and Chair",
+        "description": ""
+    },
+    {
+        "id": "14",
+        "name": "Cooking Pot",
+        "description": ""
+    },
+    {
+        "id": "15",
+        "name": "Cauldron",
+        "description": ""
+    },
+    {
+        "id": "16",
+        "name": "Tinkerer's Workshop",
+        "description": ""
+    },
+    {
+        "id": "17",
+        "name": "Imbuing Station",
+        "description": ""
+    },
+    {
+        "id": "18",
+        "name": "Dye Vat",
+        "description": ""
+    },
+    {
+        "id": "19",
+        "name": "Heavy Work Bench",
+        "description": ""
+    },
+    {
+        "id": "20",
+        "name": "Demon Altar",
+        "description": ""
+    },
+    {
+        "id": "21",
+        "name": "Crimson Altar",
+        "description": ""
+    },
+    {
+        "id": "22",
+        "name": "Mythril Anvil",
+        "description": ""
+    },
+    {
+        "id": "23",
+        "name": "Orichalcum Anvil",
+        "description": ""
+    },
+    {
+        "id": "24",
+        "name": "Adamantite Forge",
+        "description": ""
+    },
+    {
+        "id": "25",
+        "name": "Titanium Forge",
+        "description": ""
+    },
+    {
+        "id": "26",
+        "name": "Bookcase",
+        "description": ""
+    },
+    {
+        "id": "27",
+        "name": "Crystal Ball",
+        "description": ""
+    },
+    {
+        "id": "28",
+        "name": "Autohammer",
+        "description": ""
+    },
+    {
+        "id": "29",
+        "name": "Ancient Manipulator",
+        "description": ""
+    },
+    {
+        "id": "30",
+        "name": "Keg",
+        "description": ""
+    },
+    {
+        "id": "31",
+        "name": "Teapot",
+        "description": ""
+    },
+    {
+        "id": "32",
+        "name": "Living Wood",
+        "description": ""
+    },
+    {
+        "id": "33",
+        "name": "Blend-O-Matic",
+        "description": ""
+    },
+    {
+        "id": "34",
+        "name": "Meat Grinder",
+        "description": ""
+    },
+    {
+        "id": "35",
+        "name": "Bone Welder",
+        "description": ""
+    },
+    {
+        "id": "36",
+        "name": "Glass Kiln",
+        "description": ""
+    },
+    {
+        "id": "37",
+        "name": "Honey Dispenser",
+        "description": ""
+    },
+    {
+        "id": "38",
+        "name": "Ice Machine",
+        "description": ""
+    },
+    {
+        "id": "39",
+        "name": "Living Loom",
+        "description": ""
+    },
+    {
+        "id": "40",
+        "name": "Sky Mill",
+        "description": ""
+    },
+    {
+        "id": "41",
+        "name": "Solidifier",
+        "description": ""
+    },
+    {
+        "id": "42",
+        "name": "Decay Chamber",
+        "description": ""
+    },
+    {
+        "id": "43",
+        "name": "Flesh Cloning Vat",
+        "description": ""
+    },
+    {
+        "id": "44",
+        "name": "Steampunk Boiler",
+        "description": ""
+    },
+    {
+        "id": "45",
+        "name": "Lihzahrd Furnace",
+        "description": ""
+    },
+    {
+        "id": "46",
+        "name": "Water",
+        "description": ""
+    },
+    {
+        "id": "47",
+        "name": "Lava",
+        "description": ""
+    },
+    {
+        "id": "48",
+        "name": "Honey",
+        "description": ""
+    }
+]

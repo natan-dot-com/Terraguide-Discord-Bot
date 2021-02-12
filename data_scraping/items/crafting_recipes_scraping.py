@@ -10,6 +10,8 @@ from item_hash import *
 import re
 import requests
 
+MAIN_JSON_PREFIX = "../../json/items_"
+JSON_EXT = ".json"
 LOG_FILE_PATH = "recipes_log.txt"
 RECIPE_JSON_PATH = "../../json/crafting_recipes.json"
 ITEMS_JSON_PATH = "../../json/items.json"
@@ -40,7 +42,34 @@ def getTableContent(urlSuffix):
     table = soup.find("table", class_="sortable")
     return table
 
+def insertRecipeOnJSON(recipeID, itemID, itemList, logFile):
+    filenameSuffix = itemList[int(itemID)-1][SCRAPING_TYPE].lower().replace(" ", "_")
+    filename = MAIN_JSON_PREFIX + filenameSuffix + JSON_EXT
+    typeList = LoadJSONFile(filename)
+    # Temporary sequential search
+    if typeList:
+        print("\tJSON file '" + filename + "' found. Writing recipe " + str(recipeID) + " in '" + itemList[int(itemID)-1][SCRAPING_NAME] + "'.")
+        for typeItem in typeList:
+            if typeItem[SCRAPING_ITEM_ID] == itemID:
+                print("\tFound item '" + itemList[int(itemID)-1][SCRAPING_NAME] + "'.")
+                try:
+                    if recipeID not in typeItem[SCRAPING_SOURCES][SOURCE_RECIPES]:
+                        typeItem[SCRAPING_SOURCES][SOURCE_RECIPES].append(recipeID)
+                    else:
+                        print("\tRecipe " + str(recipeID) + " is already on file.")
+                except:
+                    if recipeID not in typeItem[SCRAPING_SOURCE][SOURCE_RECIPES]:
+                        typeItem[SCRAPING_SOURCE][SOURCE_RECIPES].append(recipeID)
+                    else:
+                        print("\tRecipe " + str(recipeID) + " is already on file.")
+                break
+        SaveJSONFile(filename, typeList)
+    else:
+        print("\tJSON file '" + filename + "' not found. Aborting writing proccess.")
+        logFile.write("Can't reach '" + filename + "'. No such file or directory.\n\n")
+
 def main():
+    itemList = LoadJSONFile(ITEMS_JSON_PATH)
     dictList = LoadJSONFile(RECIPE_JSON_PATH)
     itemHash, tableHash = initializeHashTables()
     
@@ -59,7 +88,7 @@ def main():
 
     recipeResult = ""
     recipeQty = ""
-    recipesCounter = len(dictList)+1
+    recipesCounter = 1
 
     for row in rows[1::]:
         recipeDict = {
@@ -87,7 +116,10 @@ def main():
         recipeDict[RECIPE_RESULT] =  itemHash.search(recipeResult, SCRAPING_ID)
         if recipeDict[RECIPE_RESULT] == NOT_FOUND:
             print("\tError detected. Please check the log file for more details.")
-            logFile.write("RECIPE ERROR: Item '" + recipeResult + "' was not found in database. Maybe this item was already removed from/replaced in Terraria.\n")
+                
+            logFile.write("RECIPE ERROR: Item '" + recipeResult + \
+                "' was not found in database. Maybe this item was already removed from/replaced in Terraria.\n")
+                
             logFile.write("\tACTION: Recipe dictionary from '" + recipeResult + "' was removed from the list.\n\n")
             continue
             
@@ -111,7 +143,10 @@ def main():
             ingredientDict[INGREDIENT_NAME] = itemHash.search(ingredientRow.a['title'], SCRAPING_ID)
             if ingredientDict[INGREDIENT_NAME] == NOT_FOUND:
                 print("\tError detected. Please check the log file for more details.")
-                logFile.write("INGREDIENT ERROR (" + str(recipesCounter) + "): Ingredient '" + ingredientRow.a['title'] + "' from '" + recipeResult + "' was not found.\n") 
+                    
+                logFile.write("INGREDIENT ERROR (" + str(recipesCounter) + "): Ingredient '" + ingredientRow.a['title'] + \
+                    "' from '" + recipeResult + "' was not found.\n")
+                    
                 logFile.write("\tACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.\n\n")
                 
             ingredientQty = ingredientRow.find("span", class_="note-text")
@@ -120,8 +155,11 @@ def main():
             else:
                 ingredientDict[INGREDIENT_QUANTITY] = "1"
             recipeDict[RECIPE_IDENTITY].append(ingredientDict)
+            
         dictList.append(recipeDict)
+        insertRecipeOnJSON(recipeDict[RECIPE_CRAFT_ID], recipeDict[RECIPE_RESULT], itemList, logFile)
         recipesCounter += 1
+        
     print("Successful operation. Exiting with value 0.")
     logFile.close()
     SaveJSONFile(RECIPE_JSON_PATH, dictList)
