@@ -45,8 +45,8 @@
         "Used In": "Any Bow or Repeater.",
         "Sources": {
             "Crafting Recipes": [
-                100,
-                101
+                "100",
+                "101"
             ],
             "NPC": [],
             "Drop": [],
@@ -85,8 +85,8 @@
         "Used In": "Any Bow or Repeater.",
         "Sources": {
             "Crafting Recipes": [
-                171,
-                172
+                "171",
+                "172"
             ],
             "NPC": [],
             "Drop": [],
@@ -104,7 +104,7 @@
         "Used In": "Coin Gun",
         "Sources": {
             "Crafting Recipes": [
-                45
+                "45"
             ],
             "NPC": [],
             "Drop": [],
@@ -122,8 +122,8 @@
         "Used In": "Coin Gun",
         "Sources": {
             "Crafting Recipes": [
-                274,
-                275
+                "274",
+                "275"
             ],
             "NPC": [],
             "Drop": [],
@@ -141,8 +141,8 @@
         "Used In": "Coin Gun",
         "Sources": {
             "Crafting Recipes": [
-                118,
-                119
+                "118",
+                "119"
             ],
             "NPC": [],
             "Drop": [],
@@ -160,7 +160,7 @@
         "Used In": "Coin Gun",
         "Sources": {
             "Crafting Recipes": [
-                227
+                "227"
             ],
             "NPC": [],
             "Drop": [],
@@ -549,8 +549,8 @@
         "Used In": "Snowball Cannon, Snowball Launcher",
         "Sources": {
             "Crafting Recipes": [
-                286,
-                287
+                "286",
+                "287"
             ],
             "NPC": [],
             "Drop": [],
@@ -570,8 +570,8 @@
         "Used In": "Any Bow or Repeater.",
         "Sources": {
             "Crafting Recipes": [
-                106,
-                107
+                "106",
+                "107"
             ],
             "NPC": [],
             "Drop": [],
@@ -670,8 +670,8 @@
         "Used In": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle",
         "Sources": {
             "Crafting Recipes": [
-                228,
-                229
+                "228",
+                "229"
             ],
             "NPC": [],
             "Drop": [],
@@ -731,7 +731,7 @@
         "Used In": "Bunny Cannon",
         "Sources": {
             "Crafting Recipes": [
-                96
+                "96"
             ],
             "NPC": [],
             "Drop": [],
@@ -980,7 +980,7 @@
         "Used In": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle",
         "Sources": {
             "Crafting Recipes": [
-                59
+                "59"
             ],
             "NPC": [],
             "Drop": [],
@@ -1001,7 +1001,7 @@
         "Used In": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle",
         "Sources": {
             "Crafting Recipes": [
-                63
+                "63"
             ],
             "NPC": [],
             "Drop": [],
@@ -1022,7 +1022,7 @@
         "Used In": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle",
         "Sources": {
             "Crafting Recipes": [
-                168
+                "168"
             ],
             "NPC": [],
             "Drop": [],
@@ -1255,9 +1255,9 @@
         "Used In": "Launcher",
         "Sources": {
             "Crafting Recipes": [
-                80,
-                81,
-                82
+                "80",
+                "81",
+                "82"
             ],
             "NPC": [],
             "Drop": [],

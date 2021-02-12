@@ -317,7 +317,7 @@
         "Bait Power": "35%",
         "Source": {
             "Crafting Recipes": [
-                94
+                "94"
             ],
             "NPC": [],
             "Drop": [],

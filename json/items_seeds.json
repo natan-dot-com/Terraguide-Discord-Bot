@@ -435,7 +435,7 @@
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                318
+                "318"
             ],
             "NPC": [],
             "Drop": [],
@@ -450,7 +450,7 @@
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                7
+                "7"
             ],
             "NPC": [],
             "Drop": [],
@@ -465,7 +465,7 @@
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                263
+                "263"
             ],
             "NPC": [],
             "Drop": [],
@@ -480,7 +480,7 @@
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                91
+                "91"
             ],
             "NPC": [],
             "Drop": [],
@@ -495,7 +495,7 @@
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                258
+                "258"
             ],
             "NPC": [],
             "Drop": [],
@@ -510,7 +510,7 @@
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                74
+                "74"
             ],
             "NPC": [],
             "Drop": [],
@@ -525,7 +525,7 @@
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                4
+                "4"
             ],
             "NPC": [],
             "Drop": [],

@@ -41,7 +41,7 @@
         "Is Consumed": "Yes",
         "Source": {
             "Crafting Recipes": [
-                175
+                "175"
             ],
             "NPC": [],
             "Drop": [
@@ -62,7 +62,7 @@
         "Is Consumed": "Yes",
         "Source": {
             "Crafting Recipes": [
-                52
+                "52"
             ],
             "NPC": [],
             "Drop": [
@@ -83,7 +83,7 @@
         "Is Consumed": "Yes",
         "Source": {
             "Crafting Recipes": [
-                54
+                "54"
             ],
             "NPC": [],
             "Drop": [
@@ -104,7 +104,7 @@
         "Is Consumed": "Yes",
         "Source": {
             "Crafting Recipes": [
-                143
+                "143"
             ],
             "NPC": [],
             "Drop": [
@@ -125,7 +125,7 @@
         "Is Consumed": "Yes",
         "Source": {
             "Crafting Recipes": [
-                109
+                "109"
             ],
             "NPC": [],
             "Drop": [

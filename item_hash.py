@@ -2,8 +2,8 @@ NOT_FOUND = -1
 
 class hashTable:
     def __init__(self, tableSize, stringDictIndex):
-        self.size = tableSize
         self.dictIndex = stringDictIndex
+        self.size = tableSize
         self.data = [None] * self.size
         
     # Private functions to hash/rehash (if needed) each string
@@ -36,6 +36,7 @@ class hashTable:
                 self.data[nextIndex] = stringDict
                 return
         
+
     # Public function to search a dictionary from a string
     def search(self, stringData, dictIndexToReturn):
         hashIndex = self.__hashFunction(stringData)

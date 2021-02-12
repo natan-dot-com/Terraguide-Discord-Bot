@@ -152,3 +152,311 @@ Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
 
 Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
 
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+INGREDIENT ERROR (25): Ingredient 'Any Wood' from 'Bone Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (41): Ingredient 'Any Wood' from 'Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (42): Ingredient 'Any Wood' from 'Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (46): Ingredient 'Any Wood' from 'Coral Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (48): Ingredient 'Any Wood' from 'Corrupt Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (53): Ingredient 'Any Wood' from 'Crimson Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (62): Ingredient 'Any Wood' from 'Cursed Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (66): Ingredient 'Any Wood' from 'Demon Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (68): Ingredient 'Any Wood' from 'Desert Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_mechanism.json'. No such file or directory.
+
+INGREDIENT ERROR (108): Ingredient 'Any Wood' from 'Frozen Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (142): Ingredient 'Any Wood' from 'Hallowed Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+INGREDIENT ERROR (167): Ingredient 'Any Wood' from 'Ichor Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (174): Ingredient 'Any Wood' from 'Jungle Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_potion.json'. No such file or directory.
+
+Can't reach '../../json/items_potion.json'. No such file or directory.
+
+INGREDIENT ERROR (194): Ingredient 'Any Wood' from 'Marshmallow on a Stick' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+INGREDIENT ERROR (226): Ingredient 'Any Wood' from 'Pink Torch' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+RECIPE ERROR: Item 'Pot o' Gold' was not found in database. Maybe this item was already removed from/replaced in Terraria.
+	ACTION: Recipe dictionary from 'Pot o' Gold' was removed from the list.
+
+INGREDIENT ERROR (242): Ingredient 'Any Wood' from 'Rainbow Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_crafting_material.json'. No such file or directory.
+
+INGREDIENT ERROR (320): Ingredient 'Any Wood' from 'Torch' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (324): Ingredient 'Any Wood' from 'Ultrabright Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+INGREDIENT ERROR (25): Ingredient 'Any Wood' from 'Bone Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (41): Ingredient 'Any Wood' from 'Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (42): Ingredient 'Any Wood' from 'Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (46): Ingredient 'Any Wood' from 'Coral Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (48): Ingredient 'Any Wood' from 'Corrupt Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (53): Ingredient 'Any Wood' from 'Crimson Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (62): Ingredient 'Any Wood' from 'Cursed Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (66): Ingredient 'Any Wood' from 'Demon Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (68): Ingredient 'Any Wood' from 'Desert Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_mechanism.json'. No such file or directory.
+
+INGREDIENT ERROR (108): Ingredient 'Any Wood' from 'Frozen Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (142): Ingredient 'Any Wood' from 'Hallowed Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+INGREDIENT ERROR (167): Ingredient 'Any Wood' from 'Ichor Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (174): Ingredient 'Any Wood' from 'Jungle Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_potion.json'. No such file or directory.
+
+Can't reach '../../json/items_potion.json'. No such file or directory.
+
+INGREDIENT ERROR (194): Ingredient 'Any Wood' from 'Marshmallow on a Stick' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+INGREDIENT ERROR (226): Ingredient 'Any Wood' from 'Pink Torch' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+RECIPE ERROR: Item 'Pot o' Gold' was not found in database. Maybe this item was already removed from/replaced in Terraria.
+	ACTION: Recipe dictionary from 'Pot o' Gold' was removed from the list.
+
+INGREDIENT ERROR (242): Ingredient 'Any Wood' from 'Rainbow Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_crafting_material.json'. No such file or directory.
+
+INGREDIENT ERROR (320): Ingredient 'Any Wood' from 'Torch' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (324): Ingredient 'Any Wood' from 'Ultrabright Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+INGREDIENT ERROR (25): Ingredient 'Any Wood' from 'Bone Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (41): Ingredient 'Any Wood' from 'Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (42): Ingredient 'Any Wood' from 'Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (46): Ingredient 'Any Wood' from 'Coral Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (48): Ingredient 'Any Wood' from 'Corrupt Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (53): Ingredient 'Any Wood' from 'Crimson Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (62): Ingredient 'Any Wood' from 'Cursed Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (66): Ingredient 'Any Wood' from 'Demon Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (68): Ingredient 'Any Wood' from 'Desert Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_mechanism.json'. No such file or directory.
+
+INGREDIENT ERROR (108): Ingredient 'Any Wood' from 'Frozen Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (142): Ingredient 'Any Wood' from 'Hallowed Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+INGREDIENT ERROR (167): Ingredient 'Any Wood' from 'Ichor Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (174): Ingredient 'Any Wood' from 'Jungle Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_potion.json'. No such file or directory.
+
+Can't reach '../../json/items_potion.json'. No such file or directory.
+
+INGREDIENT ERROR (194): Ingredient 'Any Wood' from 'Marshmallow on a Stick' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+INGREDIENT ERROR (226): Ingredient 'Any Wood' from 'Pink Torch' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+RECIPE ERROR: Item 'Pot o' Gold' was not found in database. Maybe this item was already removed from/replaced in Terraria.
+	ACTION: Recipe dictionary from 'Pot o' Gold' was removed from the list.
+
+INGREDIENT ERROR (242): Ingredient 'Any Wood' from 'Rainbow Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_crafting_material.json'. No such file or directory.
+
+INGREDIENT ERROR (320): Ingredient 'Any Wood' from 'Torch' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (324): Ingredient 'Any Wood' from 'Ultrabright Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+INGREDIENT ERROR (25): Ingredient 'Any Wood' from 'Bone Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (41): Ingredient 'Any Wood' from 'Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (42): Ingredient 'Any Wood' from 'Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (46): Ingredient 'Any Wood' from 'Coral Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (48): Ingredient 'Any Wood' from 'Corrupt Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (53): Ingredient 'Any Wood' from 'Crimson Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (62): Ingredient 'Any Wood' from 'Cursed Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (66): Ingredient 'Any Wood' from 'Demon Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (68): Ingredient 'Any Wood' from 'Desert Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_mechanism.json'. No such file or directory.
+
+INGREDIENT ERROR (108): Ingredient 'Any Wood' from 'Frozen Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (142): Ingredient 'Any Wood' from 'Hallowed Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+INGREDIENT ERROR (167): Ingredient 'Any Wood' from 'Ichor Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (174): Ingredient 'Any Wood' from 'Jungle Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_potion.json'. No such file or directory.
+
+Can't reach '../../json/items_potion.json'. No such file or directory.
+
+INGREDIENT ERROR (194): Ingredient 'Any Wood' from 'Marshmallow on a Stick' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+INGREDIENT ERROR (226): Ingredient 'Any Wood' from 'Pink Torch' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+RECIPE ERROR: Item 'Pot o' Gold' was not found in database. Maybe this item was already removed from/replaced in Terraria.
+	ACTION: Recipe dictionary from 'Pot o' Gold' was removed from the list.
+
+INGREDIENT ERROR (242): Ingredient 'Any Wood' from 'Rainbow Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_crafting_material.json'. No such file or directory.
+
+INGREDIENT ERROR (320): Ingredient 'Any Wood' from 'Torch' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+INGREDIENT ERROR (324): Ingredient 'Any Wood' from 'Ultrabright Campfire' was not found.
+	ACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+
+Can't reach '../../json/items_miscellaneous.json'. No such file or directory.
+

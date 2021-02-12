@@ -44,7 +44,7 @@
         "Research": "10 required",
         "Sources": {
             "Crafting Recipes": [
-                256
+                "256"
             ],
             "NPC": [],
             "Drop": [],
@@ -469,7 +469,7 @@
         "Research": "10 required",
         "Sources": {
             "Crafting Recipes": [
-                328
+                "328"
             ],
             "NPC": [],
             "Drop": [],
@@ -505,7 +505,7 @@
         "Research": "100 required",
         "Sources": {
             "Crafting Recipes": [
-                333
+                "333"
             ],
             "NPC": [],
             "Drop": [],
@@ -524,7 +524,7 @@
         "Research": "10 required",
         "Sources": {
             "Crafting Recipes": [
-                272
+                "272"
             ],
             "NPC": [],
             "Drop": [],
@@ -543,7 +543,7 @@
         "Research": "10 required",
         "Sources": {
             "Crafting Recipes": [
-                334
+                "334"
             ],
             "NPC": [],
             "Drop": [],
@@ -608,7 +608,7 @@
         "Research": "99 required",
         "Sources": {
             "Crafting Recipes": [
-                265
+                "265"
             ],
             "NPC": [],
             "Drop": [],
@@ -716,9 +716,9 @@
         "Research": "99 required",
         "Sources": {
             "Crafting Recipes": [
-                77,
-                78,
-                79
+                "77",
+                "78",
+                "79"
             ],
             "NPC": [],
             "Drop": [],
@@ -739,7 +739,7 @@
         "Research": "99 required",
         "Sources": {
             "Crafting Recipes": [
-                76
+                "76"
             ],
             "NPC": [],
             "Drop": [],
@@ -760,8 +760,8 @@
         "Research": "99 required",
         "Sources": {
             "Crafting Recipes": [
-                308,
-                309
+                "308",
+                "309"
             ],
             "NPC": [],
             "Drop": [],

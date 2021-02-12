@@ -54,12 +54,12 @@ def insertRecipeOnJSON(recipeID, itemID, itemList, logFile):
                 print("\tFound item '" + itemList[int(itemID)-1][SCRAPING_NAME] + "'.")
                 try:
                     if recipeID not in typeItem[SCRAPING_SOURCES][SOURCE_RECIPES]:
-                        typeItem[SCRAPING_SOURCES][SOURCE_RECIPES].append(recipeID)
+                        typeItem[SCRAPING_SOURCES][SOURCE_RECIPES].append(str(recipeID))
                     else:
                         print("\tRecipe " + str(recipeID) + " is already on file.")
                 except:
                     if recipeID not in typeItem[SCRAPING_SOURCE][SOURCE_RECIPES]:
-                        typeItem[SCRAPING_SOURCE][SOURCE_RECIPES].append(recipeID)
+                        typeItem[SCRAPING_SOURCE][SOURCE_RECIPES].append(str(recipeID))
                     else:
                         print("\tRecipe " + str(recipeID) + " is already on file.")
                 break
@@ -123,7 +123,7 @@ def main():
             logFile.write("\tACTION: Recipe dictionary from '" + recipeResult + "' was removed from the list.\n\n")
             continue
             
-        recipeDict[RECIPE_CRAFT_ID] = recipesCounter
+        recipeDict[RECIPE_CRAFT_ID] = str(recipesCounter)
         recipeDict[RECIPE_RESULT_QUANTITY] = recipeQty
         recipeDict[RECIPE_TABLE] = tableHash.search(urlSuffix.replace("_", " "), "id")
         
