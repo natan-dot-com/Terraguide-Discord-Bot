@@ -6,11 +6,9 @@
         "Hooks": "1",
         "Latching": "Single",
         "Rarity": "1",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
-            "NPC": [
-                "Goblin Tinkerer"
-            ],
+            "NPC": [],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -23,7 +21,7 @@
         "Hooks": "3",
         "Latching": "Simultaneous",
         "Rarity": "3",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -38,7 +36,7 @@
         "Hooks": "2",
         "Latching": "Individual",
         "Rarity": "4",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -53,12 +51,12 @@
         "Hooks": "8",
         "Latching": "Simultaneous",
         "Rarity": "2",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
-            "Other": "Web Covered Chests"
+            "Other": "Found in Web Covered Chests"
         }
     },
     {
@@ -68,7 +66,7 @@
         "Hooks": "1",
         "Latching": "Single",
         "Rarity": "1",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -83,7 +81,7 @@
         "Hooks": "1",
         "Latching": "Single",
         "Rarity": "1",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -98,7 +96,7 @@
         "Hooks": "1",
         "Latching": "Single",
         "Rarity": "1",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -113,7 +111,7 @@
         "Hooks": "1",
         "Latching": "Single",
         "Rarity": "1",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -128,7 +126,7 @@
         "Hooks": "1",
         "Latching": "Single",
         "Rarity": "1",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -143,7 +141,7 @@
         "Hooks": "1",
         "Latching": "Single",
         "Rarity": "1",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -158,7 +156,7 @@
         "Hooks": "2",
         "Latching": "Simultaneous",
         "Rarity": "2",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -173,7 +171,7 @@
         "Hooks": "1",
         "Latching": "Single",
         "Rarity": "3",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -188,7 +186,7 @@
         "Hooks": "3",
         "Latching": "Simultaneous",
         "Rarity": "7",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -203,7 +201,7 @@
         "Hooks": "1",
         "Latching": "Single",
         "Rarity": "7",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -218,7 +216,7 @@
         "Hooks": "3",
         "Latching": "Simultaneous",
         "Rarity": "7",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -233,7 +231,7 @@
         "Hooks": "2",
         "Latching": "Simultaneous",
         "Rarity": "3",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -248,7 +246,7 @@
         "Hooks": "3",
         "Latching": "Simultaneous",
         "Rarity": "3",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -263,12 +261,12 @@
         "Hooks": "3",
         "Latching": "Simultaneous",
         "Rarity": "7",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
-            "Other": "All enemies in the Martian Madness event"
+            "Other": ""
         }
     },
     {
@@ -278,7 +276,7 @@
         "Hooks": "3",
         "Latching": "Simultaneous",
         "Rarity": "6",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -293,7 +291,7 @@
         "Hooks": "3",
         "Latching": "Simultaneous",
         "Rarity": "6",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -308,7 +306,7 @@
         "Hooks": "3",
         "Latching": "Simultaneous",
         "Rarity": "6",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -323,7 +321,7 @@
         "Hooks": "3",
         "Latching": "Simultaneous",
         "Rarity": "6",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -338,7 +336,7 @@
         "Hooks": "4",
         "Latching": "Simultaneous",
         "Rarity": "10",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -353,11 +351,9 @@
         "Hooks": "2",
         "Latching": "Individual",
         "Rarity": "10",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
-            "NPC": [
-                "Steampunker"
-            ],
+            "NPC": [],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -370,7 +366,7 @@
         "Hooks": "1",
         "Latching": "Single",
         "Rarity": "1",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -385,11 +381,9 @@
         "Hooks": "1",
         "Latching": "Single",
         "Rarity": "1",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
-            "NPC": [
-                "Zoologist"
-            ],
+            "NPC": [],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -402,7 +396,7 @@
         "Hooks": "1",
         "Latching": "Single",
         "Rarity": "5",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],

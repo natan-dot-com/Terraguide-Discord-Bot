@@ -1,242 +1,242 @@
 [
     {
-        "id": "1",
-        "name": "By Hand",
-        "description": ""
+        "Table ID": "1",
+        "Name": "By Hand",
+        "Description": ""
     },
     {
-        "id": "2",
-        "name": "Work Bench",
-        "description": ""
+        "Table ID": "2",
+        "Name": "Work Bench",
+        "Description": ""
     },
     {
-        "id": "3",
-        "name": "Furnace",
-        "description": ""
+        "Table ID": "3",
+        "Name": "Furnace",
+        "Description": ""
     },
     {
-        "id": "4",
-        "name": "Hellforge",
-        "description": ""
+        "Table ID": "4",
+        "Name": "Hellforge",
+        "Description": ""
     },
     {
-        "id": "5",
-        "name": "Iron Anvil",
-        "description": ""
+        "Table ID": "5",
+        "Name": "Iron Anvil",
+        "Description": ""
     },
     {
-        "id": "6",
-        "name": "Lead Anvil",
-        "description": ""
+        "Table ID": "6",
+        "Name": "Lead Anvil",
+        "Description": ""
     },
     {
-        "id": "7",
-        "name": "Placed Bottle",
-        "description": ""
+        "Table ID": "7",
+        "Name": "Placed Bottle",
+        "Description": ""
     },
     {
-        "id": "8",
-        "name": "Alchemy Table",
-        "description": ""
+        "Table ID": "8",
+        "Name": "Alchemy Table",
+        "Description": ""
     },
     {
-        "id": "9",
-        "name": "Sink",
-        "description": ""
+        "Table ID": "9",
+        "Name": "Sink",
+        "Description": ""
     },
     {
-        "id": "10",
-        "name": "Sawmill",
-        "description": ""
+        "Table ID": "10",
+        "Name": "Sawmill",
+        "Description": ""
     },
     {
-        "id": "11",
-        "name": "Loom",
-        "description": ""
+        "Table ID": "11",
+        "Name": "Loom",
+        "Description": ""
     },
     {
-        "id": "12",
-        "name": "Table and Chair",
-        "description": ""
+        "Table ID": "12",
+        "Name": "Table and Chair",
+        "Description": ""
     },
     {
-        "id": "13",
-        "name": "Work Bench and Chair",
-        "description": ""
+        "Table ID": "13",
+        "Name": "Work Bench and Chair",
+        "Description": ""
     },
     {
-        "id": "14",
-        "name": "Cooking Pot",
-        "description": ""
+        "Table ID": "14",
+        "Name": "Cooking Pot",
+        "Description": ""
     },
     {
-        "id": "15",
-        "name": "Cauldron",
-        "description": ""
+        "Table ID": "15",
+        "Name": "Cauldron",
+        "Description": ""
     },
     {
-        "id": "16",
-        "name": "Tinkerer's Workshop",
-        "description": ""
+        "Table ID": "16",
+        "Name": "Tinkerer's Workshop",
+        "Description": ""
     },
     {
-        "id": "17",
-        "name": "Imbuing Station",
-        "description": ""
+        "Table ID": "17",
+        "Name": "Imbuing Station",
+        "Description": ""
     },
     {
-        "id": "18",
-        "name": "Dye Vat",
-        "description": ""
+        "Table ID": "18",
+        "Name": "Dye Vat",
+        "Description": ""
     },
     {
-        "id": "19",
-        "name": "Heavy Work Bench",
-        "description": ""
+        "Table ID": "19",
+        "Name": "Heavy Work Bench",
+        "Description": ""
     },
     {
-        "id": "20",
-        "name": "Demon Altar",
-        "description": ""
+        "Table ID": "20",
+        "Name": "Demon Altar",
+        "Description": ""
     },
     {
-        "id": "21",
-        "name": "Crimson Altar",
-        "description": ""
+        "Table ID": "21",
+        "Name": "Crimson Altar",
+        "Description": ""
     },
     {
-        "id": "22",
-        "name": "Mythril Anvil",
-        "description": ""
+        "Table ID": "22",
+        "Name": "Mythril Anvil",
+        "Description": ""
     },
     {
-        "id": "23",
-        "name": "Orichalcum Anvil",
-        "description": ""
+        "Table ID": "23",
+        "Name": "Orichalcum Anvil",
+        "Description": ""
     },
     {
-        "id": "24",
-        "name": "Adamantite Forge",
-        "description": ""
+        "Table ID": "24",
+        "Name": "Adamantite Forge",
+        "Description": ""
     },
     {
-        "id": "25",
-        "name": "Titanium Forge",
-        "description": ""
+        "Table ID": "25",
+        "Name": "Titanium Forge",
+        "Description": ""
     },
     {
-        "id": "26",
-        "name": "Bookcase",
-        "description": ""
+        "Table ID": "26",
+        "Name": "Bookcase",
+        "Description": ""
     },
     {
-        "id": "27",
-        "name": "Crystal Ball",
-        "description": ""
+        "Table ID": "27",
+        "Name": "Crystal Ball",
+        "Description": ""
     },
     {
-        "id": "28",
-        "name": "Autohammer",
-        "description": ""
+        "Table ID": "28",
+        "Name": "Autohammer",
+        "Description": ""
     },
     {
-        "id": "29",
-        "name": "Ancient Manipulator",
-        "description": ""
+        "Table ID": "29",
+        "Name": "Ancient Manipulator",
+        "Description": ""
     },
     {
-        "id": "30",
-        "name": "Keg",
-        "description": ""
+        "Table ID": "30",
+        "Name": "Keg",
+        "Description": ""
     },
     {
-        "id": "31",
-        "name": "Teapot",
-        "description": ""
+        "Table ID": "31",
+        "Name": "Teapot",
+        "Description": ""
     },
     {
-        "id": "32",
-        "name": "Living Wood",
-        "description": ""
+        "Table ID": "32",
+        "Name": "Living Wood",
+        "Description": ""
     },
     {
-        "id": "33",
-        "name": "Blend-O-Matic",
-        "description": ""
+        "Table ID": "33",
+        "Name": "Blend-O-Matic",
+        "Description": ""
     },
     {
-        "id": "34",
-        "name": "Meat Grinder",
-        "description": ""
+        "Table ID": "34",
+        "Name": "Meat Grinder",
+        "Description": ""
     },
     {
-        "id": "35",
-        "name": "Bone Welder",
-        "description": ""
+        "Table ID": "35",
+        "Name": "Bone Welder",
+        "Description": ""
     },
     {
-        "id": "36",
-        "name": "Glass Kiln",
-        "description": ""
+        "Table ID": "36",
+        "Name": "Glass Kiln",
+        "Description": ""
     },
     {
-        "id": "37",
-        "name": "Honey Dispenser",
-        "description": ""
+        "Table ID": "37",
+        "Name": "Honey Dispenser",
+        "Description": ""
     },
     {
-        "id": "38",
-        "name": "Ice Machine",
-        "description": ""
+        "Table ID": "38",
+        "Name": "Ice Machine",
+        "Description": ""
     },
     {
-        "id": "39",
-        "name": "Living Loom",
-        "description": ""
+        "Table ID": "39",
+        "Name": "Living Loom",
+        "Description": ""
     },
     {
-        "id": "40",
-        "name": "Sky Mill",
-        "description": ""
+        "Table ID": "40",
+        "Name": "Sky Mill",
+        "Description": ""
     },
     {
-        "id": "41",
-        "name": "Solidifier",
-        "description": ""
+        "Table ID": "41",
+        "Name": "Solidifier",
+        "Description": ""
     },
     {
-        "id": "42",
-        "name": "Decay Chamber",
-        "description": ""
+        "Table ID": "42",
+        "Name": "Decay Chamber",
+        "Description": ""
     },
     {
-        "id": "43",
-        "name": "Flesh Cloning Vat",
-        "description": ""
+        "Table ID": "43",
+        "Name": "Flesh Cloning Vat",
+        "Description": ""
     },
     {
-        "id": "44",
-        "name": "Steampunk Boiler",
-        "description": ""
+        "Table ID": "44",
+        "Name": "Steampunk Boiler",
+        "Description": ""
     },
     {
-        "id": "45",
-        "name": "Lihzahrd Furnace",
-        "description": ""
+        "Table ID": "45",
+        "Name": "Lihzahrd Furnace",
+        "Description": ""
     },
     {
-        "id": "46",
-        "name": "Water",
-        "description": ""
+        "Table ID": "46",
+        "Name": "Water",
+        "Description": ""
     },
     {
-        "id": "47",
-        "name": "Lava",
-        "description": ""
+        "Table ID": "47",
+        "Name": "Lava",
+        "Description": ""
     },
     {
-        "id": "48",
-        "name": "Honey",
-        "description": ""
+        "Table ID": "48",
+        "Name": "Honey",
+        "Description": ""
     }
 ]

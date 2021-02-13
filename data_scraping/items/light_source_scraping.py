@@ -17,7 +17,7 @@ newURL = URL + "Light_sources"
 pageLightSources = requests.get(newURL)
 soupLightSources = BeautifulSoup(pageLightSources.content, "html.parser")
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 lightSourcesList = []
 
 @start_threads_decorator(size=len(itemList), threads_number=8)
@@ -38,7 +38,7 @@ def lightSourcesScraping(init, fin, threadID):
             lightSourceDict = get_statistics(tableBox, itemInstance=itemInstance)
 
             #shit code that doesn't work
-            '''lightSourceDict.pop(SCRAPING_SOURCES)
+            '''lightSourceDict.pop(SCRAPING_SOURCE)
             lightSourcesTables = soupLightSources.find_all("table", class_="terraria")[0:2]
 
             nowBreak = 0
@@ -87,7 +87,7 @@ def lightSourcesScraping(init, fin, threadID):
                     break
 
 
-            lightSourceDict[SCRAPING_SOURCES] = SOURCE_SOURCES_DICT'''
+            lightSourceDict[SCRAPING_SOURCE] = SOURCE_SOURCES_DICT'''
             lightSourcesList.append(lightSourceDict)
               
 SaveJSONFile(LIGHT_SOURCE_PATH, sortListOfDictsByKey(lightSourcesList, SCRAPING_ITEM_ID))

@@ -14,7 +14,7 @@ def searchByName(JSONData, name):
 
 IMG_PATH = "img/{}.png"
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 
 for itemInstance in itemList:
     if not os.path.isfile(IMG_PATH.format(itemInstance[SCRAPING_NAME].replace(" ", "_").replace("/", "_"))):

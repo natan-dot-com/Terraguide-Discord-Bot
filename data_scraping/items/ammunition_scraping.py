@@ -79,7 +79,7 @@ for pageName in AMMOS_TYPES:
                 SCRAPING_DESTROY_TILES: "",
                 SCRAPING_RARITY: "",
                 SCRAPING_USED_IN: "",
-                SCRAPING_SOURCES: SOURCE_SOURCES_DICT
+                SCRAPING_SOURCE: SOURCE_SOURCES_DICT
             }
             tdTags = item.find_all("td")
 
@@ -111,7 +111,7 @@ for pageName in AMMOS_TYPES:
                 SCRAPING_RARITY: "",
                 SCRAPING_TOOLTIP: "",
                 SCRAPING_USED_IN: "",
-                SCRAPING_SOURCES: SOURCE_SOURCES_DICT
+                SCRAPING_SOURCE: SOURCE_SOURCES_DICT
             }
             tdTags = item.find_all("td")
             id = item.find("div", class_="id")      
@@ -143,7 +143,7 @@ for ammo in AMMO_EXCEPTIONS:
                 SCRAPING_RARITY: "",
                 SCRAPING_RESEARCH: "",
                 SCRAPING_USED_IN: "",
-                SCRAPING_SOURCES: SOURCE_SOURCES_DICT
+                SCRAPING_SOURCE: SOURCE_SOURCES_DICT
             }
             id = tableCoin.find("div", class_="id")
             tdTags = tableCoin.find_all("td")

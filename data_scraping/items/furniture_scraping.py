@@ -15,11 +15,10 @@ from multithreading_starter import *
 
 FURNITURE_PATH = GLOBAL_JSON_PATH + FURNITURE_NAME_FILE + JSON_EXT
 URL = "https://terraria.gamepedia.com/"
-BRICKS_IMAGE_PATH = "data_scraping/bricks_img/{}.png"
 OTHER_FOUNDS = ["Dungeon", "Obsidian"]
 OTHER_FOUNDS_SOURCE = ["Found in the Dungeon", "Found in Ruined Houses, in the Underworld"]
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 furnituresList = []
 
 @start_threads_decorator(size=len(itemList), threads_number=8)
@@ -38,7 +37,7 @@ def furniturescraping(init, fin, threadID):
                     tableBox = tableBoxTmp
             furnitureDict = get_statistics(tableBox, itemInstance=itemInstance)
 
-            furnitureDict.pop(SCRAPING_SOURCES)
+            furnitureDict.pop(SCRAPING_SOURCE)
             furnitureSourceOther = ""
             for otherFoundInstance, otherFoundSourceInstance in zip(OTHER_FOUNDS, OTHER_FOUNDS_SOURCE):
                 if re.search(otherFoundInstance, itemInstance[SCRAPING_NAME]) and not re.search("Sink|Obsidian Watcher Banner", itemInstance[SCRAPING_NAME]):
@@ -47,7 +46,7 @@ def furniturescraping(init, fin, threadID):
                 elif itemInstance[SCRAPING_NAME] == "Book":
                     furnitureSourceOther = "Found in the Dungeon"
 
-            furnitureDict[SCRAPING_SOURCES] = {
+            furnitureDict[SCRAPING_SOURCE] = {
                 SOURCE_RECIPES: [],
                 SOURCE_NPC: [],
                 SOURCE_DROP: [],

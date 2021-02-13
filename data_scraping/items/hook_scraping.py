@@ -20,7 +20,7 @@ RARITY_COLUMN = 8
 HOOK_PATH = GLOBAL_JSON_PATH + HOOK_NAME_FILE + JSON_EXT
 hooksDictList = []
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 
 URL = "https://terraria.gamepedia.com/Hooks"
 html = requests.get(URL)
@@ -44,6 +44,8 @@ for table in tables:
         
         # Scraping all the trivial information
         hooksDict[SCRAPING_ITEM_ID] = (re.search("\d+", cols[ITEM_ID_COLUMN].find("div", class_="id").text)).group()
+        print("Getting information from ID " + hooksDict[SCRAPING_ITEM_ID])
+
         hooksDict[SCRAPING_REACH] = cols[REACH_COLUMN].text.replace("\n", "")
         hooksDict[SCRAPING_VELOCITY] = cols[VELOCITY_COLUMN].text.replace("\n", "")
         hooksDict[SCRAPING_HOOKS] = cols[HOOKS_COLUMN].text.replace("\n", "")
@@ -76,15 +78,17 @@ for table in tables:
                     continue
                     
                 # If the source is an NPC, it's needed to get its respective ID.
+                # This will be done later on.
                 elif (re.search("\(", instance)):
-                    # PLACEHOLDER: NPC's name will be in the dictionary while the NPC json isn't done
-                    NPC = re.search(".+?(?=\()", instance).group().rstrip().replace("\n", "")
-                    sourceDict[SOURCE_NPC].append(NPC)
+                    continue
                     
                 # If it's none of the above, we can just put it directly in the 'Other' dict key as open-text.
+                elif re.search("Chests", instance):
+                    sourceDict[SOURCE_OTHER] = "Found in " + instance.strip().replace("\n", "")
+
                 else:
-                    sourceDict[SOURCE_OTHER] = instance.rstrip().replace("\n", "")
+                    continue
             
         hooksDict[SCRAPING_SOURCE] = sourceDict
         hooksDictList.append(hooksDict)
-SaveJSONFile(HOOK_PATH, sorted(hooksDictList, key = lambda i: int(i['Item ID'])))
+SaveJSONFile(HOOK_PATH, sorted(hooksDictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))

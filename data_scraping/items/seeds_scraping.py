@@ -11,8 +11,8 @@ import requests
 URL = "https://terraria.gamepedia.com/"
 SEEDS_PATH = GLOBAL_JSON_PATH + SEEDS_NAME_FILE + JSON_EXT
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
-pylonsList = []
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
+seedsList = []
 
 newURL = URL + "Seeds"
 pageSeeds = requests.get(newURL)
@@ -32,7 +32,7 @@ for itemInstance in itemList:
         
         seedDict = get_statistics(tableBox, itemInstance=itemInstance)
 
-        seedDict.pop(SCRAPING_SOURCES, None)
+        seedDict.pop(SCRAPING_SOURCE, None)
         seedsTables = soupSeeds.find_all("table", class_="terraria")
         found = 0
         for seedsTable in seedsTables:
@@ -46,7 +46,7 @@ for itemInstance in itemList:
             if found:
                 break
         
-        seedDict[SCRAPING_SOURCES] = SOURCE_SOURCES_DICT
-        pylonsList.append(seedDict)
+        seedDict[SCRAPING_SOURCE] = SOURCE_SOURCES_DICT
+        seedsList.append(seedDict)
     
-SaveJSONFile(SEEDS_PATH, pylonsList)
+SaveJSONFile(SEEDS_PATH, seedsList)

@@ -4,8 +4,8 @@
         "Ore Tier": "2",
         "Rarity": "0",
         "Minimum Pickaxe Power": "Copper Pickaxe",
-        "In Stone": "ores/Iron_Ore_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Iron_Ore_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -18,8 +18,8 @@
         "Ore Tier": "1",
         "Rarity": "0",
         "Minimum Pickaxe Power": "Copper Pickaxe",
-        "In Stone": "ores/Copper_Ore_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Copper_Ore_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -32,8 +32,8 @@
         "Ore Tier": "4",
         "Rarity": "0",
         "Minimum Pickaxe Power": "Copper Pickaxe",
-        "In Stone": "ores/Gold_Ore_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Gold_Ore_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -46,8 +46,8 @@
         "Ore Tier": "3",
         "Rarity": "0",
         "Minimum Pickaxe Power": "Copper Pickaxe",
-        "In Stone": "ores/Silver_Ore_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Silver_Ore_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -60,8 +60,8 @@
         "Ore Tier": "6",
         "Rarity": "1",
         "Minimum Pickaxe Power": "Gold Pickaxe",
-        "In Stone": "ores/Demonite_Ore_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Demonite_Ore_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -74,8 +74,8 @@
         "Ore Tier": "5",
         "Rarity": "0",
         "Minimum Pickaxe Power": "Tungsten Pickaxe",
-        "In Stone": "ores/Meteorite_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Meteorite_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -88,8 +88,8 @@
         "Ore Tier": "7",
         "Rarity": "0",
         "Minimum Pickaxe Power": "Nightmare Pickaxe",
-        "In Stone": "ores/Obsidian_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Obsidian_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -102,8 +102,8 @@
         "Ore Tier": "8",
         "Rarity": "2",
         "Minimum Pickaxe Power": "Nightmare Pickaxe",
-        "In Stone": "ores/Hellstone_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Hellstone_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -116,8 +116,8 @@
         "Ore Tier": "9",
         "Rarity": "3",
         "Minimum Pickaxe Power": "Molten Pickaxe",
-        "In Stone": "ores/Cobalt_Ore_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Cobalt_Ore_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -130,8 +130,8 @@
         "Ore Tier": "10",
         "Rarity": "3",
         "Minimum Pickaxe Power": "Cobalt Pickaxe",
-        "In Stone": "ores/Mythril_Ore_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Mythril_Ore_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -144,8 +144,8 @@
         "Ore Tier": "11",
         "Rarity": "3",
         "Minimum Pickaxe Power": "Mythril Pickaxe",
-        "In Stone": "ores/Adamantite_Ore_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Adamantite_Ore_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -158,8 +158,8 @@
         "Ore Tier": "1",
         "Rarity": "0",
         "Minimum Pickaxe Power": "Copper Pickaxe",
-        "In Stone": "ores/Tin_Ore_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Tin_Ore_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -172,8 +172,8 @@
         "Ore Tier": "2",
         "Rarity": "0",
         "Minimum Pickaxe Power": "Copper Pickaxe",
-        "In Stone": "ores/Lead_Ore_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Lead_Ore_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -186,8 +186,8 @@
         "Ore Tier": "3",
         "Rarity": "0",
         "Minimum Pickaxe Power": "Copper Pickaxe",
-        "In Stone": "ores/Tungsten_Ore_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Tungsten_Ore_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -200,8 +200,8 @@
         "Ore Tier": "4",
         "Rarity": "0",
         "Minimum Pickaxe Power": "Copper Pickaxe",
-        "In Stone": "ores/Platinum_Ore_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Platinum_Ore_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -214,8 +214,8 @@
         "Ore Tier": "6",
         "Rarity": "1",
         "Minimum Pickaxe Power": "Gold Pickaxe",
-        "In Stone": "ores/Crimtane_Ore_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Crimtane_Ore_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -228,8 +228,8 @@
         "Ore Tier": "12",
         "Rarity": "7",
         "Minimum Pickaxe Power": "Pickaxe Axe",
-        "In Stone": "ores/Chlorophyte_Ore_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Chlorophyte_Ore_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -242,8 +242,8 @@
         "Ore Tier": "9",
         "Rarity": "3",
         "Minimum Pickaxe Power": "Molten Pickaxe",
-        "In Stone": "ores/Palladium_Ore_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Palladium_Ore_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -256,8 +256,8 @@
         "Ore Tier": "10",
         "Rarity": "3",
         "Minimum Pickaxe Power": "Cobalt Pickaxe",
-        "In Stone": "ores/Orichalcum_Ore_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Orichalcum_Ore_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -270,8 +270,8 @@
         "Ore Tier": "11",
         "Rarity": "3",
         "Minimum Pickaxe Power": "Mythril Pickaxe",
-        "In Stone": "ores/Titanium_Ore_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Titanium_Ore_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -284,8 +284,8 @@
         "Ore Tier": "13",
         "Rarity": "10",
         "Minimum Pickaxe Power": "Copper Pickaxe",
-        "In Stone": "ores/Luminite_In_Stone.png",
-        "Source": {
+        "In Stone": "json/ores/Luminite_In_Stone.png",
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],

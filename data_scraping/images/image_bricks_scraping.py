@@ -11,10 +11,10 @@ from bs4 import BeautifulSoup
 import requests
 
 URL = "https://terraria.gamepedia.com/"
-BRICKS_IMAGE_PATH = "data_scraping/bricks_img/{}.png"
+BRICKS_IMAGE_PATH = "bricks/{}.png"
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
-bricksList = []
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
+brickList = LoadJSONFile(GLOBAL_JSON_PATH + BRICK_NAME_FILE + JSON_EXT)
 
 for itemInstance in itemList:
     if itemInstance[SCRAPING_TYPE] == "Brick":
@@ -28,9 +28,16 @@ for itemInstance in itemList:
         for tableBoxTmp in tableBoxes:
             if tableBoxTmp.find("div", class_="title").text == itemInstance[SCRAPING_NAME]:
                 tableBox = tableBoxTmp
+            
         #Get Brick Appearance
         imageBrick = tableBox.find("ul", class_="infobox-inline").find_all("li")[-1].img["src"]
         imageBrickName = tableBox.find("ul", class_="infobox-inline").find_all("li")[-1].img["alt"].replace(" ", "_")
         imageBrickPath = BRICKS_IMAGE_PATH.format(imageBrickName)
         print("Saving {}".format(imageBrickPath))
-        writeImage(imageBrick, imageBrickPath)
+        writeImage(imageBrick, GLOBAL_JSON_PATH  + imageBrickPath)
+
+        for brickInstance in brickList:
+            if tableBox.find("ul", class_="infobox-inline").find_all("li")[-1].img["alt"].replace(" placed", "") == brickInstance[SCRAPING_NAME]:
+                brickInstance[IMAGE_BRICK] = imageBrickPath
+
+SaveJSONFile(GLOBAL_JSON_PATH + BRICK_NAME_FILE + JSON_EXT, brickList)

@@ -13,7 +13,7 @@ URL = "https://terraria.gamepedia.com/"
 
 LIQUID_BOMBS = {"Dry Bomb", "Wet Bomb", "Lava Bomb", "Honey Bomb"}
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 consumablesList = []
 
 for itemInstance in itemList:

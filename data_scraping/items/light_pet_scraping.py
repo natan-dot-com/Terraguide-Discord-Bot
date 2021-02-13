@@ -11,11 +11,11 @@ import requests
 DYNAMIC_IMAGE_ITEMS = ["Crimson Heart", "Wisp", "Suspicious Looking Eye", "Flickerwick", "Jack 'O Lantern", "Toy Golem", "Fairy Princess"]
 IMAGE_EXTENSION = ".png"
 DYNAMIC_IMAGE_EXTENSION = ".gif"
-DIRECTORY = "light_pets/"
+LIGHT_PETS_DIRECTORY = "light_pets/"
 LIGHT_PET_PATH = GLOBAL_JSON_PATH + LIGHT_PET_NAME_FILE + JSON_EXT
 dictList = []
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 
 URL = "https://terraria.gamepedia.com/Pets#Light_Pets"
 html = requests.get(URL)
@@ -39,19 +39,21 @@ if tables:
                 SCRAPING_SOURCE: SOURCE_SOURCES_DICT
             } 
             petDict[SCRAPING_ITEM_ID] = searchForID(cols[2].text.replace("\n", ""), itemList)
+            print("Getting information from ID " + petDict[SCRAPING_ITEM_ID])
+
             petDict[SCRAPING_LIGHT_PET] = cols[1].text.replace("\n", "")
             petDict[SCRAPING_BRIGHTNESS] = cols[3].text.replace("\n", "")
             if len(cols) == 6:
                 petDict[SCRAPING_NOTES] = cols[5].text.replace("\n", "")
             
-            imagePath = DIRECTORY + cols[2].text.replace("\n", "").replace(" ", "_") + "_Buff" + IMAGE_EXTENSION
+            imagePath = GLOBAL_JSON_PATH + LIGHT_PETS_DIRECTORY + cols[2].text.replace("\n", "").replace(" ", "_") + "_Buff" + IMAGE_EXTENSION
             writeImage(cols[0].find("img")['src'], imagePath)
             petDict[SCRAPING_BUFF_IMAGE] = imagePath
             
             if cols[1].text.replace("\n", "") == "Fairy":
                 imageCounter = 1
                 for petImage in cols[1].findAll("img"):
-                    imagePath = DIRECTORY + cols[1].text.replace("\n", "").replace(" ", "_")
+                    imagePath = GLOBAL_JSON_PATH + LIGHT_PETS_DIRECTORY + cols[1].text.replace("\n", "").replace(" ", "_")
                     imagePath += "_" + str(imageCounter)
                     if petDict[SCRAPING_LIGHT_PET] in DYNAMIC_IMAGE_ITEMS:
                         imagePath += DYNAMIC_IMAGE_EXTENSION
@@ -61,7 +63,7 @@ if tables:
                     petDict[SCRAPING_PET_IMAGE].append(imagePath)
                     imageCounter += 1
             else:
-                imagePath = DIRECTORY + cols[1].text.replace("\n", "").replace(" ", "_")
+                imagePath = GLOBAL_JSON_PATH + LIGHT_PETS_DIRECTORY + cols[1].text.replace("\n", "").replace(" ", "_")
                 if petDict[SCRAPING_LIGHT_PET] not in DYNAMIC_IMAGE_ITEMS:
                     imagePath += IMAGE_EXTENSION
                 else:

@@ -18,7 +18,7 @@ DUNGEON_WALLS = {
     "Blue Slab Wall", "Green Slab Wall", "Pink Slab Wall",
     "Blue Tiled Wall", "Green Tiled Wall", "Pink Tiled Wall"
 }
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 url = "https://terraria.gamepedia.com/"
 wallsList = []
 

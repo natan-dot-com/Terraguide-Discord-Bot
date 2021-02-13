@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 WEAPON_PATH = GLOBAL_JSON_PATH + WEAPON_NAME_FILE + JSON_EXT
 ITEM_URL = ["Enchanted Sword"]
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 url = "https://terraria.gamepedia.com/"
 weaponsList = []
 

@@ -4,7 +4,7 @@
         "Placed": "paintings/Blood_Moon_Rising_Placed.png",
         "Tooltip": "'W. Garner'",
         "Description": "Blood Moon. Also possibly a parody of Blue Moon Rising by Simon R. Green.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -17,7 +17,7 @@
         "Placed": "paintings/The_Hanged_Man_Placed.png",
         "Tooltip": "'W. Garner'",
         "Description": "A figure hanging on a tree.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -30,7 +30,7 @@
         "Placed": "paintings/Glory_of_the_Fire_Placed.png",
         "Tooltip": "'W. Garner'",
         "Description": "Two Ruined Houses surrounded by lava.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -43,7 +43,7 @@
         "Placed": "paintings/Bone_Warp_Placed.png",
         "Tooltip": "'W. Garner'",
         "Description": "Various Bones.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -56,7 +56,7 @@
         "Placed": "paintings/Skellington_J_Skellingsworth_Placed.png",
         "Tooltip": "'W. Garner'",
         "Description": "A skull. A reference to Jack Skellington from the movie The Nightmare Before Christmas.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -69,7 +69,7 @@
         "Placed": "paintings/The_Cursed_Man_Placed.png",
         "Tooltip": "'W. Garner'",
         "Description": "The Old Man.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -82,7 +82,7 @@
         "Placed": "paintings/The_Eye_Sees_the_End_Placed.png",
         "Tooltip": "'W. Garner'",
         "Description": "Player battling the Eye of Cthulhu.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -95,7 +95,7 @@
         "Placed": "paintings/Something_Evil_is_Watching_You_Placed.png",
         "Tooltip": "'R. Moosdijk'",
         "Description": "Eye of Cthulhu watching a player wearing full silver armor",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -108,7 +108,7 @@
         "Placed": "paintings/The_Twins_Have_Awoken_Placed.png",
         "Tooltip": "'R. Moosdijk'",
         "Description": "Player battling The Twins.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -121,7 +121,7 @@
         "Placed": "paintings/The_Screamer_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Parody of The Scream featuring a Face Monster.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -134,7 +134,7 @@
         "Placed": "paintings/Goblins_Playing_Poker_Placed.png",
         "Tooltip": "'W. Garner'",
         "Description": "Parody of Dogs Playing Poker featuring Goblins.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -147,7 +147,7 @@
         "Placed": "paintings/Dryadisque_Placed.png",
         "Tooltip": "'W. Garner'",
         "Description": "Parody of Grande Odalisque featuring the Dryad.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -160,7 +160,7 @@
         "Placed": "paintings/Sunflowers_Placed.png",
         "Tooltip": "'W. Garner'",
         "Description": "Based on Sunflowers by Vincent van Gogh.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -173,7 +173,7 @@
         "Placed": "paintings/Terrarian_Gothic_Placed.png",
         "Tooltip": "'W. Garner'",
         "Description": "Parody of American Gothic  featuring the Goblin Tinkerer and the Mechanic.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -186,7 +186,7 @@
         "Placed": "paintings/Impact_Placed.png",
         "Tooltip": "'K. Wright'",
         "Description": "The Hallow and the Crimson colliding.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -199,7 +199,7 @@
         "Placed": "paintings/Powered_by_Birds_Placed.png",
         "Tooltip": "'C. J. Ness'",
         "Description": "Bird on a stationary bicycle powering a Tesla coil.  Nod to Bird Engines.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -212,7 +212,7 @@
         "Placed": "paintings/The_Destroyer_Placed.png",
         "Tooltip": "'R. Moosdijk'",
         "Description": "Player battling The Destroyer.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -225,7 +225,7 @@
         "Placed": "paintings/The_Persistency_of_Eyes_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Parody of The Persistence of Memory featuring eyes.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -238,7 +238,7 @@
         "Placed": "paintings/Unicorn_Crossing_the_Hallows_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Parody of Napoleon Crossing the Alps  featuring the Party Girl on a Unicorn in the Hallow.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -251,7 +251,7 @@
         "Placed": "paintings/Great_Wave_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Reference to The Great Wave off Kanagawa.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -264,7 +264,7 @@
         "Placed": "paintings/Starry_Night_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Based on The Starry Night.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -277,7 +277,7 @@
         "Placed": "paintings/Guide_Picasso_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Guide painted in Picasso style.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -290,7 +290,7 @@
         "Placed": "paintings/The_Guardian's_Gaze_Placed.png",
         "Tooltip": "'A. G. Kolf'",
         "Description": "A Picture of Skeletron.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -303,7 +303,7 @@
         "Placed": "paintings/Father_of_Someone_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Based on The Son of Man. The man appears to be the merchant.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -316,7 +316,7 @@
         "Placed": "paintings/Nurse_Lisa_Placed.png",
         "Tooltip": "'W. Garner'",
         "Description": "Parody of Mona Lisa featuring the Nurse.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -329,7 +329,7 @@
         "Placed": "paintings/Waldo_Placed.png",
         "Tooltip": "-",
         "Description": "Waldo from Where's Waldo?.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -342,7 +342,7 @@
         "Placed": "paintings/Darkness_Placed.png",
         "Tooltip": "-",
         "Description": "The back of a Yu-Gi-Oh! card.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -355,7 +355,7 @@
         "Placed": "paintings/Dark_Soul_Reaper_Placed.png",
         "Tooltip": "'J. T. Kjexrud'",
         "Description": "Reaper portrait.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -367,7 +367,7 @@
         "Item ID": "1477",
         "Placed": "paintings/Land_Placed.png",
         "Tooltip": "'J. T. Kjexrud'",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -380,7 +380,7 @@
         "Placed": "paintings/Trapped_Ghost_Placed.png",
         "Tooltip": "'J. T. Kjexrud'",
         "Description": "An unhappy ghost trapped in limbo.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -393,7 +393,7 @@
         "Placed": "paintings/Demon's_Eye_Placed.png",
         "Tooltip": "'J. T. Kjexrud'",
         "Description": "A demon's eye.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -406,7 +406,7 @@
         "Placed": "paintings/Finding_Gold_Placed.png",
         "Tooltip": "'J. T. Kjexrud'",
         "Description": "A Pickaxe and a nugget of Gold.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -418,7 +418,7 @@
         "Item ID": "1481",
         "Tooltip": "'V. Costa Moura'",
         "Description": "A Green Slime.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -430,7 +430,7 @@
         "Item ID": "1482",
         "Tooltip": "'V. Costa Moura'",
         "Description": "A Sunflower.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -442,7 +442,7 @@
         "Item ID": "1483",
         "Tooltip": "'V. Costa Moura'",
         "Description": "A Crystal Heart.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -454,7 +454,7 @@
         "Item ID": "1484",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Forest trees.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -466,7 +466,7 @@
         "Item ID": "1485",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Floating Island landscape.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -478,7 +478,7 @@
         "Item ID": "1486",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Jungle landscape.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -490,7 +490,7 @@
         "Item ID": "1487",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Snow Biome landscape.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -502,7 +502,7 @@
         "Item ID": "1488",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Corruption landscape.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -514,7 +514,7 @@
         "Item ID": "1489",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Hallow landscape.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -526,7 +526,7 @@
         "Item ID": "1490",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Forest landscape.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -538,7 +538,7 @@
         "Item ID": "1491",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Desert landscape with Pyramid.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -550,7 +550,7 @@
         "Item ID": "1492",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Crimson landscape.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -562,7 +562,7 @@
         "Item ID": "1493",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Frontal view of the Eye of Cthulhu.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -574,7 +574,7 @@
         "Item ID": "1494",
         "Tooltip": "'V. Costa Moura'",
         "Description": "A Wyvern.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -587,7 +587,7 @@
         "Placed": "paintings/American_Explosive_Placed.png",
         "Tooltip": "'A. G. Kolf'",
         "Description": "Portrait of the Demolitionist.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -600,7 +600,7 @@
         "Placed": "paintings/Discover_Placed.png",
         "Tooltip": "'J. T. Kjexrud'",
         "Description": "A player wearing Gold Armor spots a Floating Island.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -613,7 +613,7 @@
         "Placed": "paintings/Hand_Earth_Placed.png",
         "Tooltip": "'J. T. Kjexrud'",
         "Description": "A hand reaching out from the ground.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -626,7 +626,7 @@
         "Placed": "paintings/Old_Miner_Placed.png",
         "Tooltip": "'J. T. Kjexrud'",
         "Description": "Person leaning on a Pickaxe.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -639,7 +639,7 @@
         "Placed": "paintings/Skelehead_Placed.png",
         "Tooltip": "'J. T. Kjexrud'",
         "Description": "Bone Serpent head.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -652,7 +652,7 @@
         "Placed": "paintings/Facing_the_Cerebral_Mastermind_Placed.png",
         "Tooltip": "'A. G. Kolf'",
         "Description": "Player facing the Brain of Cthulhu.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -665,7 +665,7 @@
         "Placed": "paintings/Lake_of_Fire_Placed.png",
         "Tooltip": "'W. Garner'",
         "Description": "Lava pool under Forest land.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -678,7 +678,7 @@
         "Placed": "paintings/Trio_Super_Heroes_Placed.png",
         "Tooltip": "'C. Burczyk'",
         "Description": "Based on the Guide, Merchant, and Nurse designs and color.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -691,7 +691,7 @@
         "Placed": "paintings/Imp_Face_Placed.png",
         "Tooltip": "'J. T. Kjexrud'",
         "Description": "A Fire Imp's face.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -704,7 +704,7 @@
         "Placed": "paintings/Ominous_Presence_Placed.png",
         "Tooltip": "'A. Craig'",
         "Description": "A Reaper flying over an Underworld landscape.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -717,7 +717,7 @@
         "Placed": "paintings/Shining_Moon_Placed.png",
         "Tooltip": "'A. Craig'",
         "Description": "Crescent moon and stars.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -730,7 +730,7 @@
         "Placed": "paintings/Living_Gore_Placed.png",
         "Tooltip": "'A. Craig'",
         "Description": "A piece of the Wall of Flesh.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -743,7 +743,7 @@
         "Placed": "paintings/Flowing_Magma_Placed.png",
         "Tooltip": "'A. Craig'",
         "Description": "Underworld landscape.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -756,7 +756,7 @@
         "Placed": "paintings/The_Creation_of_the_Guide_Placed.png",
         "Tooltip": "'W. Garner'",
         "Description": "Parody of The Creation of Adam featuring the Guide.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -769,7 +769,7 @@
         "Placed": "paintings/The_Merchant_Placed.png",
         "Tooltip": "'W. Garner'",
         "Description": "Parody of Leonardo da Vinci self-portrait  featuring the Merchant.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -782,7 +782,7 @@
         "Placed": "paintings/Crowno_Devours_His_Lunch_Placed.png",
         "Tooltip": "'W. Garner'",
         "Description": "Parody of Saturn Devouring His Son. Crowno is one of Terraria's spriters.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -795,7 +795,7 @@
         "Placed": "paintings/Rare_Enchantment_Placed.png",
         "Tooltip": "'D. Phelps'",
         "Description": "Tim.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -808,7 +808,7 @@
         "Placed": "paintings/Glorious_Night_Placed.png",
         "Tooltip": "'M. J. Duncan'",
         "Description": "Moon and stars.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -821,7 +821,7 @@
         "Placed": "paintings/Jacking_Skeletron_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Skeletron hovering over the Spiral Hill from The Nightmare Before Christmas.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -834,7 +834,7 @@
         "Placed": "paintings/Bitter_Harvest_Placed.png",
         "Tooltip": "'J. Hayes'",
         "Description": "Green Slime wearing a witch hat among Pumpkins.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -847,7 +847,7 @@
         "Placed": "paintings/Blood_Moon_Countess_Placed.png",
         "Tooltip": "'J. Hayes'",
         "Description": "A vampire lady with red eyes and a cloak.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -860,7 +860,7 @@
         "Placed": "paintings/Hallow's_Eve_Placed.png",
         "Tooltip": "'J. Hayes'",
         "Description": "Portrait of the Mechanic's face.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -873,7 +873,7 @@
         "Placed": "paintings/Morbid_Curiosity_Placed.png",
         "Tooltip": "'J. Hayes'",
         "Description": "A winged skeleton examines an eyeball. Possibly a tribute to the famous scene in Hamlet, where Hamlet holds Yorick's skull.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -886,7 +886,7 @@
         "Placed": "paintings/Pillagin_Me_Pixels_Placed.png",
         "Tooltip": "'J. Hayes'",
         "Description": "Pirate ship from Pixel Piracy.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -899,7 +899,7 @@
         "Placed": "paintings/Castle_Marsberg_Placed.png",
         "Tooltip": "'J. Hayes'",
         "Description": "Parody of the Wolfenstein 3D title screen featuring the player wearing Meteor armor and wielding a Space Gun, with a Martian in the back. The name of the painting itself might be a reference to another Wolfenstein game - Return to Castle Wolfenstein.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -912,7 +912,7 @@
         "Placed": "paintings/Martia_Lisa_Placed.png",
         "Tooltip": "'J. Hayes'",
         "Description": "Parody of Mona Lisa featuring a Martian.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -925,7 +925,7 @@
         "Placed": "paintings/The_Truth_Is_Up_There_Placed.png",
         "Tooltip": "'J. Hayes'",
         "Description": "Martian Saucer abducting a Bunny. The name is a parody of The X-Files tagline, The Truth is Out There. It is also a slightly different and pixelated version of the achievement, 'Tin-Foil Hatter'.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -938,7 +938,7 @@
         "Placed": "paintings/Sparky_Placed.png",
         "Tooltip": "'V. Costa Moura''In loving memory'",
         "Description": "Sparky Doo, Redigit and Cenx's deceased pet dog",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -951,7 +951,7 @@
         "Placed": "paintings/Acorns_Placed.png",
         "Tooltip": "'J. Hayes'",
         "Description": "A Red Bulb hanging from a tree. A reference to A Charlie Brown Christmas.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -964,7 +964,7 @@
         "Placed": "paintings/Cold_Snap_Placed.png",
         "Tooltip": "'J. Hayes'",
         "Description": "Portrait of the Ice Queen attacking.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -977,7 +977,7 @@
         "Placed": "paintings/Cursed_Saint_Placed.png",
         "Tooltip": "'J. Hayes'",
         "Description": "Portrait of Skeletron dressed as Santa Claus.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -990,7 +990,7 @@
         "Placed": "paintings/Snowfellas_Placed.png",
         "Tooltip": "'J. Hayes'",
         "Description": "Parody of the Goodfellas poster featuring Snowmen.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1003,7 +1003,7 @@
         "Placed": "paintings/The_Season_Placed.png",
         "Tooltip": "'J. Hayes'",
         "Description": "Snowy landscape with a Present, Christmas Tree and a Candy Cane.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1016,7 +1016,7 @@
         "Placed": "paintings/Not_a_Kid,_nor_a_Squid_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Moon Lord. The name is a reference to the Splatoon commercial.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1029,7 +1029,7 @@
         "Placed": "paintings/Andrew_Sphinx_Placed.png",
         "Tooltip": "'U. One' (Restored)",
         "Description": "A play on Terraria lead developer Andrew Spinks' name, featuring a Sphinx wearing Andrew's signature green cap.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1042,7 +1042,7 @@
         "Placed": "paintings/Watchful_Antlion_Placed.png",
         "Tooltip": "'J. Witzig' (Restored)",
         "Description": "An Antlion.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1055,7 +1055,7 @@
         "Placed": "paintings/Burning_Spirit_Placed.png",
         "Tooltip": "'A. Dale'",
         "Description": "A Desert Spirit in darkness.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1068,7 +1068,7 @@
         "Placed": "paintings/Jaws_of_Death_Placed.png",
         "Tooltip": "'C. Schneider'",
         "Description": "An Antlion seen from above.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1081,7 +1081,7 @@
         "Placed": "paintings/The_Sands_of_Slime_Placed.png",
         "Tooltip": "'C. Rohde'",
         "Description": "A Sand Slime coming out of an hourglass. The name is a reference to the classic expression, sands of time, correlating the passage of time with sand draining in an hourglass.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1094,7 +1094,7 @@
         "Placed": "paintings/Snakes,_I_Hate_Snakes_Placed.png",
         "Tooltip": "'X. Calder'",
         "Description": "A Lamia. The name is a reference to the catchphrase spoken often by the titular character from the classic Indiana Jones film franchise.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1107,7 +1107,7 @@
         "Placed": "paintings/Life_Above_the_Sand_Placed.png",
         "Tooltip": "'A. Dale'",
         "Description": "Desert canyons.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1120,7 +1120,7 @@
         "Placed": "paintings/Oasis_Placed.png",
         "Tooltip": "'J. Sterling'",
         "Description": "Oasis landscape.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1133,7 +1133,7 @@
         "Placed": "paintings/Prehistory_Preserved_Placed.png",
         "Tooltip": "'Unearthed by C. Schneider'",
         "Description": "A stone tablet featuring fossils of two ammonites and what appears to be a pterosaur, without the wings.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1146,7 +1146,7 @@
         "Placed": "paintings/Ancient_Tablet_Placed.png",
         "Tooltip": "'Unearthed by C. Schneider'",
         "Description": "A tablet with ancient Egyptian hieroglyphics-style etchings.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1159,7 +1159,7 @@
         "Placed": "paintings/Uluru_Placed.png",
         "Tooltip": "'S. Poirier'",
         "Description": "Uluru, also known as Ayers Rock, a landmark in the Australian outback.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1172,7 +1172,7 @@
         "Placed": "paintings/Visiting_the_Pyramids_Placed.png",
         "Tooltip": "'J. Parker III'",
         "Description": "A tourist photo-style depiction of the Traveling Merchant posing with a Pyramid, and the Sun wearing Sunglasses.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1185,7 +1185,7 @@
         "Placed": "paintings/Bandage_Boy_Placed.png",
         "Tooltip": "'C. Schneider'",
         "Description": "A Mummy coming out of a sarcophagus.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1198,7 +1198,7 @@
         "Placed": "paintings/Divine_Eye_Placed.png",
         "Tooltip": "'C. Schneider'",
         "Description": "An interpretation of the Eye of Providence, or Eye of God, a version of which appears on the US $1 bill.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1211,7 +1211,7 @@
         "Placed": "paintings/The_Rolling_Greens_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Golf course landscape.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1224,7 +1224,7 @@
         "Placed": "paintings/Study_of_a_Ball_at_Rest_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "A Golf Ball on a Golf Tee.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1237,7 +1237,7 @@
         "Placed": "paintings/Fore!_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "A golfer swinging.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1250,7 +1250,7 @@
         "Placed": "paintings/The_Duplicity_of_Reflections_Placed.png",
         "Tooltip": "'Ceci n'est pas un club de golf.''V. Costa Moura'",
         "Description": "Parody of The Treachery of Images, a well-known 1929 painting of a pipe with a caption that states This is not a pipe in French. This tooltip states This is not a golf club in French.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1263,7 +1263,7 @@
         "Placed": "paintings/Nevermore_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Reference to The Raven, a poem by Edgar Allen Poe, which prominently features the phrase nevermore.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1276,7 +1276,7 @@
         "Placed": "paintings/Reborn_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "A hand rising from the ground.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1289,7 +1289,7 @@
         "Placed": "paintings/Graveyard_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Graveyard landscape.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1302,7 +1302,7 @@
         "Placed": "paintings/Ghost_Manifestation_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Based on the iconic movie poster from Poltergeist, a classic 1982 horror film.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1315,7 +1315,7 @@
         "Placed": "paintings/Wicked_Undead_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "Based on the movie poster from Evil Dead II, a classic 1987 horror film.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1328,7 +1328,7 @@
         "Placed": "paintings/Bloody_Goblet_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "A goblet filled with blood, which appears to be spilling outside the painting's frame.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1341,7 +1341,7 @@
         "Placed": "paintings/Still_Life_Placed.png",
         "Tooltip": "'V. Costa Moura'",
         "Description": "A typical still-life painting of a bowl of fruit beside a skull.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1354,7 +1354,7 @@
         "Placed": "paintings/Princess_64_Placed.png",
         "Tooltip": "'J. Hayes'",
         "Description": "A castle in a field. It is a reference to Peach's Castle as it appears in Super Mario 64. It may also be a reference to several other games in the Mario franchise.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1367,7 +1367,7 @@
         "Placed": "paintings/Painting_of_a_Lass_Placed.png",
         "Tooltip": "'J. Hayes'",
         "Description": "A painting of the Princess.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -1380,7 +1380,7 @@
         "Placed": "paintings/Dark_Side_of_the_Hallow_Placed.png",
         "Tooltip": "'J. Hayes'",
         "Description": "A rainbow shining from a unicorn's horn. References a popular diagram of white light splitting into a rainbow after passing through a prism, while the name references the Pink Floyd album The Dark Side of the Moon.",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],

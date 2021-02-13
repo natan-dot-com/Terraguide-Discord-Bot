@@ -11,9 +11,8 @@ import requests
 BRICK_PATH = GLOBAL_JSON_PATH + BRICK_NAME_FILE + JSON_EXT
 URL = "https://terraria.gamepedia.com/"
 URL_BRICKS = "Bricks"
-BRICKS_IMAGE_PATH = "data_scraping/bricks_img/{}.png"
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 bricksList = []
 
 pageBricks = requests.get(URL + URL_BRICKS)
@@ -34,7 +33,7 @@ for itemInstance in itemList:
                 tableBox = tableBoxTmp
         brickDict = get_statistics(tableBox, itemInstance=itemInstance)
 
-        brickDict.pop(SCRAPING_SOURCES, None)
+        brickDict.pop(SCRAPING_SOURCE, None)
         brickSourceOther = ""
         for bricksRow in bricksRows:
             if bricksRow.find_all("td")[0].a["title"] == itemInstance[SCRAPING_NAME]:
@@ -43,7 +42,7 @@ for itemInstance in itemList:
                     brickSourceOther = bricksRow.find_all("td")[2].text.rstrip()
                 break
 
-        brickDict[SCRAPING_SOURCES] = {
+        brickDict[SCRAPING_SOURCE] = {
             SOURCE_RECIPES: [],
             SOURCE_NPC: [],
             SOURCE_DROP: [],

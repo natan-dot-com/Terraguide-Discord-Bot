@@ -15,7 +15,7 @@ newURL = URL + "Consumables"
 pageConsumables = requests.get(newURL)
 soupConsumables = BeautifulSoup(pageConsumables.content, "html.parser")
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 bossSummonsList = []
 
 @start_threads_decorator(size=len(itemList), threads_number=8)
@@ -34,14 +34,14 @@ def bossSummonsScraping(init, fin, threadID):
                     tableBox = tableBoxTmp
             bossSummonDict = get_statistics(tableBox, itemInstance=itemInstance)
 
-            bossSummonDict.pop(SCRAPING_SOURCES)
+            bossSummonDict.pop(SCRAPING_SOURCE)
             bossSummonRows = soupConsumables.find_all("table")[4].find_all("tr")[1:]
             for bossSummonRow in bossSummonRows:
                 if bossSummonRow.find("td").find("img")["alt"] == itemInstance[SCRAPING_NAME]:
                     bossSummonDict[SCRAPING_SUMMONS] = bossSummonRow.find_all("td")[2].text.strip()
                     bossSummonDict[SCRAPING_USABLE] = bossSummonRow.find_all("td")[3].text.strip()
 
-            bossSummonDict[SCRAPING_SOURCES] = SOURCE_SOURCES_DICT
+            bossSummonDict[SCRAPING_SOURCE] = SOURCE_SOURCES_DICT
             bossSummonsList.append(bossSummonDict)
               
 SaveJSONFile(BOSS_SUMMON_PATH, sortListOfDictsByKey(bossSummonsList, SCRAPING_ITEM_ID))

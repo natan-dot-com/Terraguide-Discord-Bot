@@ -17,7 +17,7 @@ FISHING_POLES = [
     "Sitting Duck's Fishing Pole", "Hotline Fishing Hook", "Golden Fishing Rod"
 ]
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 url = "https://terraria.gamepedia.com/"
 toolsList = []
 
@@ -45,7 +45,7 @@ for itemInstance in itemList:
                         SCRAPING_RARITY: "",
                         SCRAPING_VELOCITY: "",
                         SCRAPING_FISHING_POWER: "",
-                        SCRAPING_SOURCES: SOURCE_SOURCES_DICT
+                        SCRAPING_SOURCE: SOURCE_SOURCES_DICT
                     }
                     
                     toolDict[SCRAPING_ITEM_ID] = itemInstance[SCRAPING_ID]

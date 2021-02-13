@@ -10,27 +10,21 @@ from item_hash import *
 import re
 import requests
 
-MAIN_JSON_PREFIX = "../../json/items_"
-JSON_EXT = ".json"
-LOG_FILE_PATH = "recipes_log.txt"
-RECIPE_JSON_PATH = "../../json/crafting_recipes.json"
-ITEMS_JSON_PATH = "../../json/items.json"
-TABLES_JSON_PATH = "../../json/tables.json"  
-
+LOG_FILE_PATH = "logs/recipes.log"
 scrappingData = ["Result", "Ingredients"]
 
 # Initialize both hash tables.
 def initializeHashTables():
-    itemList = LoadJSONFile(ITEMS_JSON_PATH)
-    tableList = LoadJSONFile(TABLES_JSON_PATH)
+    itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
+    tableList = LoadJSONFile(GLOBAL_JSON_PATH + TABLE_NAME_FILE + JSON_EXT)
 
-    itemHash = hashTable(8192, SCRAPING_NAME)
+    itemHash = hashTable(ITEMS_HASH_SIZE, SCRAPING_NAME)
     for itemInstance in itemList:
         itemHash.add(itemInstance[SCRAPING_NAME], itemInstance)
 
-    tableHash = hashTable(64, "name")
+    tableHash = hashTable(TABLES_HASH_SIZE, SCRAPING_NAME)
     for tableInstance in tableList:
-        tableHash.add(tableInstance["name"], tableInstance)
+        tableHash.add(tableInstance[SCRAPING_NAME], tableInstance)
 
     return itemHash, tableHash
 
@@ -42,35 +36,31 @@ def getTableContent(urlSuffix):
     table = soup.find("table", class_="sortable")
     return table
 
+# Algorithm to get the recipe's ID and refers it inside each JSON-data file.
 def insertRecipeOnJSON(recipeID, itemID, itemList, logFile):
     filenameSuffix = itemList[int(itemID)-1][SCRAPING_TYPE].lower().replace(" ", "_")
     filename = MAIN_JSON_PREFIX + filenameSuffix + JSON_EXT
     typeList = LoadJSONFile(filename)
-    # Temporary sequential search
     if typeList:
         print("\tJSON file '" + filename + "' found. Writing recipe " + str(recipeID) + " in '" + itemList[int(itemID)-1][SCRAPING_NAME] + "'.")
         for typeItem in typeList:
             if typeItem[SCRAPING_ITEM_ID] == itemID:
                 print("\tFound item '" + itemList[int(itemID)-1][SCRAPING_NAME] + "'.")
-                try:
-                    if recipeID not in typeItem[SCRAPING_SOURCES][SOURCE_RECIPES]:
-                        typeItem[SCRAPING_SOURCES][SOURCE_RECIPES].append(str(recipeID))
-                    else:
-                        print("\tRecipe " + str(recipeID) + " is already on file.")
-                except:
-                    if recipeID not in typeItem[SCRAPING_SOURCE][SOURCE_RECIPES]:
-                        typeItem[SCRAPING_SOURCE][SOURCE_RECIPES].append(str(recipeID))
-                    else:
-                        print("\tRecipe " + str(recipeID) + " is already on file.")
-                break
+                if recipeID not in typeItem[SCRAPING_SOURCE][SOURCE_RECIPES]:
+                    typeItem[SCRAPING_SOURCE][SOURCE_RECIPES].append(str(recipeID))
+                    break
+                else:
+                    print("\tRecipe " + str(recipeID) + " is already on file.")
+                    return
         SaveJSONFile(filename, typeList)
+
     else:
         print("\tJSON file '" + filename + "' not found. Aborting writing proccess.")
         logFile.write("Can't reach '" + filename + "'. No such file or directory.\n\n")
 
 def main():
-    itemList = LoadJSONFile(ITEMS_JSON_PATH)
-    dictList = LoadJSONFile(RECIPE_JSON_PATH)
+    itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
+    dictList = LoadJSONFile(GLOBAL_JSON_PATH + RECIPE_NAME_FILE + JSON_EXT)
     itemHash, tableHash = initializeHashTables()
     
     try:
@@ -81,7 +71,6 @@ def main():
         print("Error log file not found. A new one will be created.")
         
     urlSuffix = "By_Hand"
-
     table = getTableContent(urlSuffix)
     rows = table.findAll("tr")
     tableHead = getTableColumns(rows[0], scrappingData)
@@ -125,7 +114,7 @@ def main():
             
         recipeDict[RECIPE_CRAFT_ID] = str(recipesCounter)
         recipeDict[RECIPE_RESULT_QUANTITY] = recipeQty
-        recipeDict[RECIPE_TABLE] = tableHash.search(urlSuffix.replace("_", " "), "id")
+        recipeDict[RECIPE_TABLE] = tableHash.search(urlSuffix.replace("_", " "), SCRAPING_TABLE_ID)
         
         # Getting the informations from 'Ingredients' column.
         

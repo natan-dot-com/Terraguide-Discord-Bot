@@ -16,7 +16,7 @@ scrappingData = ["Item", "Event", "Notes"]
 EVENT_SUMMON_PATH = GLOBAL_JSON_PATH + EVENT_SUMMON_NAME_FILE + JSON_EXT
 dictList = []
 
-itemList = LoadJSONFile('../../json/items.json')
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 
 baseURL = "https://terraria.gamepedia.com"
 html = requests.get(baseURL + mainURLsuffix)
@@ -37,10 +37,11 @@ for row in rows[1::]:
         SCRAPING_EVENT: "",
         SCRAPING_TOOLTIP: "",
         SCRAPING_NOTES: "",
-        SCRAPING_SOURCES: SOURCE_SOURCES_DICT
+        SCRAPING_SOURCE: SOURCE_SOURCES_DICT
     }
 
     eventDict[SCRAPING_ITEM_ID] = searchForID(cols[index["Item"]].img['alt'], itemList)
+    print("Getting information from '" + cols[index["Item"]].img['alt'] + "' with ID " + eventDict[SCRAPING_ITEM_ID])
 
     itemURLprefix = row.find("td", class_="il2c").a['href']
     itemHtml = requests.get(baseURL + itemURLprefix)
@@ -77,9 +78,11 @@ eventDict = {
     SCRAPING_EVENT: "",
     SCRAPING_TOOLTIP: "",
     SCRAPING_NOTES: "",
-    SCRAPING_SOURCES: SOURCE_SOURCES_DICT
+    SCRAPING_SOURCE: SOURCE_SOURCES_DICT
 }
 eventDict[SCRAPING_ITEM_ID] = searchForID("Eternia Crystal", itemList)
+print("Getting information from 'Eternia Crystal' with ID " + eventDict[SCRAPING_ITEM_ID])
+
 eventDict[SCRAPING_RARITY] = re.search("\d+", rows[index["Rarity"]].img['alt']).group()
 eventDict[SCRAPING_EVENT] = "Old's One Army"
 eventDict[SCRAPING_TOOLTIP] = re.sub(r'(Crystal)', r'\1.', rows[index["Tooltip"]].text) + "."

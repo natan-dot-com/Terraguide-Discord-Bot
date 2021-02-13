@@ -29,8 +29,10 @@ for row in rows[1::]:
     string = cols[0].text
     questFishDict[SCRAPING_ANGLER_QUOTE] = string[:string.find("(")]
     questFishDict[SCRAPING_ITEM_ID] = re.search("\d+", cols[2].find("div", class_="id").text).group()
+    print("Getting information from ID " + questFishDict[SCRAPING_ITEM_ID])
     questFishDict[SCRAPING_HEIGHT] = cols[3].text.replace("\n", "")
     questFishDict[SCRAPING_BIOME] = cols[4].text.replace("\n", "").replace("[1]", "")
     questFishDictList.append(questFishDict)
+
 SaveJSONFile(QUEST_FISH_PATH, sorted(questFishDictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))
 

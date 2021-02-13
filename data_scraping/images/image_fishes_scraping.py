@@ -9,10 +9,10 @@ import os
 from bs4 import BeautifulSoup
 import requests 
 
-IMG_OUTPUT_PATH = "img/{}.png"
+IMG_OUTPUT_PATH = "fishing_catches/{}.png"
 
 URL = "https://terraria.gamepedia.com/"
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 
 newUrl = URL + "Angler/Quests"
 page = requests.get(newUrl)
@@ -26,4 +26,3 @@ for row in fishTable[1:]:
     print("Generating {}".format(imgPath))
     if writeImage(imgSrc, imgPath) == NOT_FOUND:
         print("Erro")
-

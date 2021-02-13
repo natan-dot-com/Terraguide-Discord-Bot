@@ -14,7 +14,7 @@ mainURLsuffix = "/Bait"
 scrappingData = ["Item", "Power", "Rarity"]
 dictList = []
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 
 baseURL = "https://terraria.gamepedia.com"
 html = requests.get(baseURL + mainURLsuffix)
@@ -38,8 +38,6 @@ for row in rows[1::]:
     }
 
     baitDict[SCRAPING_ITEM_ID] = searchForID(cols[index["Item"]].img['alt'], itemList)
-    if not baitDict[SCRAPING_ITEM_ID]:
-        baitDict[SCRAPING_ITEM_ID] = searchForID(cols[index["Item"]].img['alt'] + " (bait)", itemList)
 
     baitDict[SCRAPING_RARITY] = re.search("\d+", cols[index["Rarity"]+1].img['alt']).group()
     baitDict[SCRAPING_BAIT_POWER] = cols[index["Power"]+1].text.replace("\n", "")

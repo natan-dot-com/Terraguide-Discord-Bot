@@ -12,7 +12,7 @@ from multithreading_starter import *
 URL = "https://terraria.gamepedia.com/"
 ACCESSORY_PATH = GLOBAL_JSON_PATH + ACCESSORY_NAME_FILE + JSON_EXT
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 accessoriesList = []
 
 @start_threads_decorator(size=len(itemList), threads_number=8)

@@ -2,6 +2,7 @@
     {
         "Item ID": "85",
         "Name": "Chain",
+        "Bonus": "+3 range",
         "Placeable": "Yes",
         "Use time": "15 (Very fast)",
         "Tooltip": "Can be climbed on",
@@ -19,6 +20,7 @@
     {
         "Item ID": "965",
         "Name": "Rope",
+        "Bonus": "+3 range",
         "Placeable": "Yes",
         "Use time": "15 (Very fast)",
         "Tooltip": "Can be climbed on",
@@ -443,6 +445,7 @@
     {
         "Item ID": "2996",
         "Name": "Vine Rope",
+        "Bonus": "+3 range",
         "Placeable": "Yes",
         "Use time": "15 (Very fast)",
         "Tooltip": "Can be climbed on",
@@ -476,6 +479,7 @@
     {
         "Item ID": "3077",
         "Name": "Silk Rope",
+        "Bonus": "+3 range",
         "Placeable": "Yes",
         "Use time": "15 (Very fast)",
         "Tooltip": "Can be climbed on",
@@ -493,6 +497,7 @@
     {
         "Item ID": "3078",
         "Name": "Web Rope",
+        "Bonus": "+3 range",
         "Placeable": "Yes",
         "Use time": "15 (Very fast)",
         "Tooltip": "Can be climbed on",

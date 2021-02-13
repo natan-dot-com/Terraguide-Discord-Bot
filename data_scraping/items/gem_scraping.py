@@ -13,11 +13,12 @@ import requests
 
 IN_STONE_SUFFIX = "_In_Stone.png"
 PLACED_SUFFIX = "_Placed.png"
+GEM_IMAGE_DIRECTORY = "gems/"
 GEM_PATH = GLOBAL_JSON_PATH + GEM_NAME_FILE + JSON_EXT
 
 SuffixList = [IN_STONE_SUFFIX, PLACED_SUFFIX]
 colsList = [2, 4]
-dictInfoList = [SCRAPING_IN_STONE, SCRAPING_PLACED]
+dictInfoList = [IMAGE_IN_STONE, IMAGE_PLACED]
 
 URL = "https://terraria.gamepedia.com/Gems"
 html = requests.get(URL)
@@ -31,16 +32,17 @@ if table:
         gemDict = {
             SCRAPING_ITEM_ID: "",
             SCRAPING_RARITY: "1",
-            SCRAPING_IN_STONE: "",
-            SCRAPING_PLACED: ""
+            IMAGE_IN_STONE: "",
+            IMAGE_PLACED: ""
         }
         getID = re.search("\d+", (cols[0].find("div", class_="id").text))
         gemDict[SCRAPING_ITEM_ID] = getID.group()
+        print("Getting information from ID " + gemDict[SCRAPING_ITEM_ID])
         
         gemName = cols[0].find("img")['alt']
         for suffixIdentity, colsIdentity, dictInfoIdentity in zip(SuffixList, colsList, dictInfoList):
             imgSrc = cols[colsIdentity].find("img")['src']
-            imgPath = "gems/" + gemName + suffixIdentity
+            imgPath = GLOBAL_JSON_PATH + GEM_IMAGE_DIRECTORY + gemName + suffixIdentity
             
             imgOutput = requests.get(imgSrc, stream=True)
             if imgOutput.ok:
@@ -51,6 +53,6 @@ if table:
                         handler.write(block)
             gemDict[dictInfoIdentity] = imgPath
         gemDictList.append(gemDict)
-SaveJSONFile(GEM_PATH, sorted(gemDictList, key = lambda i: i['ID']))
+SaveJSONFile(GEM_PATH, sorted(gemDictList, key = lambda i: i[SCRAPING_ITEM_ID]))
 
 

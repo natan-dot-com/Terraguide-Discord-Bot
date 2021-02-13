@@ -18,7 +18,7 @@ URL = "https://terraria.gamepedia.com/"
 logFile = 'img_log.txt'
 logThread = "thread_log.txt"
 exitFlag = 0
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 
 class myThread (threading.Thread):
    def __init__(self, threadID, init, fin):

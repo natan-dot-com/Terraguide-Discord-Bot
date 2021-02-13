@@ -141,9 +141,7 @@
         "Sell": "1 Gold Coin",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [
-                "93"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -400,9 +398,7 @@
         "Sell": "10 Copper Coins",
         "Research": "99 required",
         "Sources": {
-            "Crafting Recipes": [
-                "24"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -572,6 +568,7 @@
         "Use time": "25 (Fast)",
         "Velocity": "5",
         "Tooltip": "A small explosion that will destroy most tiles",
+        "Max stack": "99",
         "Rarity": "0",
         "Sell": "60 Copper Coins",
         "Research": "99 required",
@@ -591,6 +588,7 @@
         "Use time": "40 (Very slow)",
         "Velocity": "4",
         "Tooltip": "A large explosion that will destroy most tiles",
+        "Max stack": "99",
         "Rarity": "1",
         "Sell": "4 Silver Coins",
         "Research": "99 required",
@@ -874,13 +872,12 @@
         "Use time": "25 (Fast)",
         "Velocity": "5",
         "Tooltip": "A small explosion that will destroy most tiles. 'Tossing may be difficult.'",
+        "Max stack": "99",
         "Rarity": "0",
         "Sell": "1 Silver Coin",
         "Research": "99 required",
         "Sources": {
-            "Crafting Recipes": [
-                "307"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1074,11 +1071,7 @@
         "Sell": "12 Copper Coins",
         "Research": "99 required",
         "Sources": {
-            "Crafting Recipes": [
-                "230",
-                "231",
-                "232"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -4272,9 +4265,7 @@
         "Sell": "15 Copper Coins",
         "Research": "99 required",
         "Sources": {
-            "Crafting Recipes": [
-                "312"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -4294,10 +4285,7 @@
         "Sell": "1 Silver Coin",
         "Research": "99 required",
         "Sources": {
-            "Crafting Recipes": [
-                "201",
-                "202"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -4627,13 +4615,12 @@
         "Use time": "40 (Very slow)",
         "Velocity": "4",
         "Tooltip": "A large explosion that will destroy most tiles. 'Tossing may be difficult.'",
+        "Max stack": "99",
         "Rarity": "1",
         "Sell": "4 Silver Coins",
         "Research": "99 required",
         "Sources": {
-            "Crafting Recipes": [
-                "310"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -5067,9 +5054,7 @@
         "Sell": "80 Copper Coins",
         "Research": "99 required",
         "Sources": {
-            "Crafting Recipes": [
-                "31"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -5089,9 +5074,7 @@
         "Sell": "20 Copper Coins",
         "Research": "99 required",
         "Sources": {
-            "Crafting Recipes": [
-                "34"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -6389,13 +6372,12 @@
         "Use time": "40 (Very slow)",
         "Velocity": "4",
         "Tooltip": "A large explosion that will destroy most tiles. 'This will prove to be a terrible idea'",
+        "Max stack": "99",
         "Rarity": "1",
         "Sell": "4 Silver Coins",
         "Research": "99 required",
         "Sources": {
-            "Crafting Recipes": [
-                "32"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -7966,9 +7948,7 @@
         "Sell": "2 Gold Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [
-                "102"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],

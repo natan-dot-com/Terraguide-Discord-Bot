@@ -15,7 +15,7 @@ STORAGE_WITH_SOURCES = [
     "Blue Dungeon Dresser", "Green Dungeon Dresser", "Pink Dungeon Dresser", "Obsidian Dresser"
 ]
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 storagesList = []
 
 @start_threads_decorator(size=len(itemList), threads_number=8)
@@ -34,7 +34,7 @@ def storagesScraping(init, fin, threadID):
                     tableBox = tableBoxTmp
             storageDict = get_statistics(tableBox, itemInstance=itemInstance)
 
-            storageDict.pop(SCRAPING_SOURCES)
+            storageDict.pop(SCRAPING_SOURCE)
             storageSourceOther = ""
             if itemInstance[SCRAPING_NAME] in STORAGE_WITH_SOURCES:
                 newURL = URL + "Dressers"
@@ -57,7 +57,7 @@ def storagesScraping(init, fin, threadID):
                         textHTML = BeautifulSoup(str(tableRow.find_all("td")[1]).replace("<br/>", ","), 'html.parser')
                         storageSourceOther = "Found in " + textHTML.text.replace(" ,", ",").strip()
 
-            storageDict[SCRAPING_SOURCES] = {
+            storageDict[SCRAPING_SOURCE] = {
                 SOURCE_RECIPES: [],
                 SOURCE_NPC: [],
                 SOURCE_DROP: [],

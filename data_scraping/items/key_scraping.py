@@ -9,11 +9,10 @@ from bs4 import BeautifulSoup
 import re
 import requests
 
-IMAGE_EXTENSION = ".png"
 KEY_PATH = GLOBAL_JSON_PATH + KEY_NAME_FILE + JSON_EXT
 keyDictList = []
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 
 URL = "https://terraria.gamepedia.com/Keys"
 html = requests.get(URL)
@@ -35,6 +34,7 @@ for row in rows[1::]:
         }
     }
     keyDict[SCRAPING_ITEM_ID] = searchForID(cols[0].find("img")['alt'], itemList)
+    print("Getting information from ID " + keyDict[SCRAPING_ITEM_ID])
 
     if cols[2].find("img"):
         keyDict[SCRAPING_USED_IN] = cols[2].find("img")['alt'].replace(".png", "")

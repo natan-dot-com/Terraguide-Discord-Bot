@@ -11,7 +11,7 @@ from tools import *
 ITEM_FILE_NAME = "items_furnitures.json"
 CATEGORY = "Furniture"
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 toolList = LoadJSONFile(GLOBAL_JSON_PATH + ITEM_FILE_NAME)
 
 count = 0

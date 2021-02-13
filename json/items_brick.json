@@ -15,7 +15,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Gray_Brick_placed.png"
     },
     {
         "Item ID": "131",
@@ -31,7 +32,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Red_Brick_placed.png"
     },
     {
         "Item ID": "134",
@@ -47,7 +49,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": "Looted from Blue Dungeons."
-        }
+        },
+        "Brick Image": "bricks/Blue_Brick_placed.png"
     },
     {
         "Item ID": "137",
@@ -63,7 +66,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": "Looted from Green Dungeons."
-        }
+        },
+        "Brick Image": "bricks/Green_Brick_placed.png"
     },
     {
         "Item ID": "139",
@@ -79,7 +83,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": "Looted from Pink Dungeons."
-        }
+        },
+        "Brick Image": "bricks/Pink_Brick_placed.png"
     },
     {
         "Item ID": "141",
@@ -95,7 +100,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Gold_Brick_placed.png"
     },
     {
         "Item ID": "143",
@@ -111,7 +117,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Silver_Brick_placed.png"
     },
     {
         "Item ID": "145",
@@ -127,7 +134,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Copper_Brick_placed.png"
     },
     {
         "Item ID": "192",
@@ -145,7 +153,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Obsidian_Brick_placed.png"
     },
     {
         "Item ID": "214",
@@ -161,7 +170,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Hellstone_Brick_placed.png"
     },
     {
         "Item ID": "412",
@@ -177,7 +187,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Pearlstone_Brick_placed.png"
     },
     {
         "Item ID": "413",
@@ -193,7 +204,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Iridescent_Brick_placed.png"
     },
     {
         "Item ID": "414",
@@ -209,7 +221,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Mudstone_Brick_placed.png"
     },
     {
         "Item ID": "415",
@@ -225,7 +238,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Cobalt_Brick_placed.png"
     },
     {
         "Item ID": "416",
@@ -241,7 +255,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Mythril_Brick_placed.png"
     },
     {
         "Item ID": "577",
@@ -257,7 +272,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Demonite_Brick_placed.png"
     },
     {
         "Item ID": "594",
@@ -273,7 +289,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Snow_Brick_placed.png"
     },
     {
         "Item ID": "604",
@@ -288,7 +305,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Adamantite_Beam_placed.png"
     },
     {
         "Item ID": "607",
@@ -304,7 +322,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Sandstone_Brick_placed.png"
     },
     {
         "Item ID": "609",
@@ -320,7 +339,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Ebonstone_Brick_placed.png"
     },
     {
         "Item ID": "662",
@@ -336,7 +356,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Rainbow_Brick_placed.png"
     },
     {
         "Item ID": "717",
@@ -352,7 +373,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Tin_Brick_placed.png"
     },
     {
         "Item ID": "718",
@@ -368,7 +390,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Tungsten_Brick_placed.png"
     },
     {
         "Item ID": "719",
@@ -384,7 +407,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Platinum_Brick_placed.png"
     },
     {
         "Item ID": "883",
@@ -400,7 +424,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Ice_Brick_placed.png"
     },
     {
         "Item ID": "1101",
@@ -418,7 +443,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": "Looted from the Jungle Temple."
-        }
+        },
+        "Brick Image": "bricks/Lihzahrd_Brick_placed.png"
     },
     {
         "Item ID": "1589",
@@ -433,7 +459,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Palladium_Column_placed.png"
     },
     {
         "Item ID": "1593",
@@ -448,7 +475,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Titanstone_Block_placed.png"
     },
     {
         "Item ID": "2792",
@@ -464,7 +492,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Chlorophyte_Brick_placed.png"
     },
     {
         "Item ID": "2793",
@@ -480,7 +509,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Crimtane_Brick_placed.png"
     },
     {
         "Item ID": "3100",
@@ -498,7 +528,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Meteorite_Brick_placed.png"
     },
     {
         "Item ID": "3461",
@@ -514,7 +545,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Luminite_Brick_placed.png"
     },
     {
         "Item ID": "3951",
@@ -530,7 +562,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Iron_Brick_placed.png"
     },
     {
         "Item ID": "3953",
@@ -546,7 +579,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Lead_Brick_placed.png"
     },
     {
         "Item ID": "4050",
@@ -562,7 +596,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Crimstone_Brick_placed.png"
     },
     {
         "Item ID": "4229",
@@ -580,7 +615,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Solar_Brick_placed.png"
     },
     {
         "Item ID": "4230",
@@ -598,7 +634,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Vortex_Brick_placed.png"
     },
     {
         "Item ID": "4231",
@@ -616,7 +653,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Nebula_Brick_placed.png"
     },
     {
         "Item ID": "4232",
@@ -634,7 +672,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Stardust_Brick_placed.png"
     },
     {
         "Item ID": "4238",
@@ -650,7 +689,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Cracked_Blue_Brick_placed.png"
     },
     {
         "Item ID": "4239",
@@ -666,7 +706,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Cracked_Green_Brick_placed.png"
     },
     {
         "Item ID": "4240",
@@ -682,7 +723,8 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Cracked_Pink_Brick_placed.png"
     },
     {
         "Item ID": "4547",
@@ -698,6 +740,7 @@
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
-        }
+        },
+        "Brick Image": "bricks/Large_Bamboo_placed.png"
     }
 ]

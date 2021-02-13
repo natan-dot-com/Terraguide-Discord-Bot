@@ -14,10 +14,10 @@ import requests
 # List of strings that we must ignore (since they're related to drops)
 dropList = ["Eater of Worlds", "Eye of Cthulhu", "Brain of Cthulhu", "Ocram", "Moon Lord"]
 
-DIRECTORY = "ores/"
+ORES_DIRECTORY = "ores/"
 IMAGE_EXTENSION = ".png"
 IN_STONE_SUFFIX = "_In_Stone"
-ORE_PATH = GLOBAL_JSON_PATH + ORE_NAME_FILE + JSON_EXT
+ORE_PATH = "script_test/" + ORE_NAME_FILE + JSON_EXT
 oreDictList = []
 
 URL = "https://terraria.gamepedia.com/Ores"
@@ -33,7 +33,7 @@ for row in rows[1::]:
         SCRAPING_ORE_TIER: "",
         SCRAPING_RARITY: "",
         SCRAPING_MINIMUM_PICKAXE_POWER: "",
-        SCRAPING_IN_STONE: "",
+        IMAGE_IN_STONE: "",
         SCRAPING_SOURCE: {
             SOURCE_RECIPES: [],
             SOURCE_NPC: [],
@@ -60,12 +60,13 @@ for table in tables[1:3:]:
             
             # Table row header (ore tier)
             oreDictList[oreIndex][SCRAPING_ORE_TIER] = (re.search("\d+", row.th.text)).group()
+            print("Getting information from ID " + oreDictList[oreIndex][SCRAPING_ITEM_ID])
             
             # First column (image)
             colImages = cols[0].findAll("img")
-            imgPath = DIRECTORY + colImages[1]['alt'].replace(" ", "_") + IN_STONE_SUFFIX + IMAGE_EXTENSION
+            imgPath = GLOBAL_JSON_PATH + ORES_DIRECTORY + colImages[1]['alt'].replace(" ", "_") + IN_STONE_SUFFIX + IMAGE_EXTENSION
             writeImage(colImages[0]['src'], imgPath)
-            oreDictList[oreIndex][SCRAPING_IN_STONE] = imgPath
+            oreDictList[oreIndex][IMAGE_IN_STONE] = imgPath
             
             # Second column (pickaxe power)
             oreDictList[oreIndex][SCRAPING_MINIMUM_PICKAXE_POWER] = (cols[1].find("img"))['alt']
@@ -88,21 +89,24 @@ for table in tables[1:3:]:
         # For when there's two ores in the same table row
         if colsNumber == 5:
             
+            print("Getting information from ID " + oreDictList[oreIndex][SCRAPING_ITEM_ID])
+            print("Getting information from ID " + oreDictList[oreIndex+1][SCRAPING_ITEM_ID])
+
             # Table row header (ore tier)
             oreDictList[oreIndex][SCRAPING_ORE_TIER] = (re.search("\d+", row.th.text)).group()
             oreDictList[oreIndex+1][SCRAPING_ORE_TIER] = (re.search("\d+", row.th.text)).group()
             
             # First column (first ore image)
             colImages = cols[0].findAll("img")
-            imgPath = DIRECTORY + colImages[1]['alt'].replace(" ", "_") + IN_STONE_SUFFIX + IMAGE_EXTENSION
+            imgPath = GLOBAL_JSON_PATH + ORES_DIRECTORY + colImages[1]['alt'].replace(" ", "_") + IN_STONE_SUFFIX + IMAGE_EXTENSION
             writeImage(colImages[0]['src'], imgPath)
-            oreDictList[oreIndex][SCRAPING_IN_STONE] = imgPath
+            oreDictList[oreIndex][IMAGE_IN_STONE] = imgPath
             
             # Second column (second ore image)
             colImages = cols[1].findAll("img")
-            imgPath = DIRECTORY + colImages[1]['alt'].replace(" ", "_") + IN_STONE_SUFFIX + IMAGE_EXTENSION
+            imgPath = GLOBAL_JSON_PATH + ORES_DIRECTORY + colImages[1]['alt'].replace(" ", "_") + IN_STONE_SUFFIX + IMAGE_EXTENSION
             writeImage(colImages[0]['src'], imgPath)
-            oreDictList[oreIndex+1][SCRAPING_IN_STONE] = imgPath
+            oreDictList[oreIndex+1][IMAGE_IN_STONE] = imgPath
             
             # Third column (pickaxe power) 
             oreDictList[oreIndex][SCRAPING_MINIMUM_PICKAXE_POWER] = (cols[2].find("img"))['alt']

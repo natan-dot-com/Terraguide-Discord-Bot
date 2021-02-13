@@ -3,6 +3,9 @@ import re
 from bs4 import BeautifulSoup
 import operator
 
+NOT_FOUND = -1
+FOUND = 1
+
 # General labels
 SCRAPING_ID = "ID"
 SCRAPING_TYPE = "Type"
@@ -40,18 +43,15 @@ SCRAPING_CRITICAL_CHANCE = "Critical chance"
 SCRAPING_REACH = "Reach"
 SCRAPING_HOOKS = "Hooks"
 SCRAPING_LATCHING = "Latching"
-SCRAPING_IN_STONE = "In Stone"
-SCRAPING_PLACED = "Placed"
 SCRAPING_ORE_TIER = "Ore Tier"
 SCRAPING_MINIMUM_PICKAXE_POWER = "Minimum Pickaxe Power"
 SCRAPING_CONSUMED = "Is Consumed"
 SCRAPING_ANGLER_QUOTE = "Angler Quote"
 SCRAPING_HEIGHT = "Height"
 SCRAPING_BIOME = "Biome"
-SCRAPING_SOURCES = "Sources"
+SCRAPING_SOURCE = "Sources"
 SCRAPING_RARITY_ID = "Rarity ID"
 SCRAPING_RARITY_TIER = "Rarity Tier"
-SCRAPING_IMAGE_PATH = "Image Path"
 SCRAPING_RARITY_DESC = "Rarity Description"
 SCRAPING_MAX_LIFE = "Max Life"
 SCRAPING_BUY = "Buy"
@@ -79,6 +79,13 @@ SCRAPING_SUMMONS = "Summons"
 SCRAPING_HOUSE = "House"
 SCRAPING_MECHANISM = "Mechanism"
 SCRAPING_WATERPROOF = "Waterproof"
+SCRAPING_TABLE_ID = "Table ID"
+
+# Image data
+IMAGE_BRICK = "Brick Image"
+IMAGE_IN_STONE = "In Stone"
+IMAGE_PLACED = "Placed"
+IMAGE_RARITY = "Rarity Image Path"
 
 # Source dict labels ('SCRAPING_SOURCE')
 SOURCE_RECIPES = "Crafting Recipes"
@@ -140,6 +147,7 @@ BAG_DROPS_DICT = {
     BAG_DROP_QUANTITY: ""
 }
 
+# Rarity labels
 RARITY_GRAY = "Gray"
 RARITY_AMBER = "Quest"
 RARITY_RAINBOW = "Rainbow"
@@ -151,7 +159,11 @@ RARITY_TIER = {
     RARITY_FIERY_RED: "-13"
 }
 
+# Files data
 JSON_EXT = ".json"
+TABLE_NAME_FILE = "tables"
+RECIPE_NAME_FILE = "recipes"
+MAIN_NAME_FILE = "items"
 ACCESSORY_NAME_FILE = "items_accessory"
 AMMUNITION_NAME_FILE = "items_ammunition"
 ARMOR_NAME_FILE = "items_armor"
@@ -179,9 +191,6 @@ SHIELD_NAME_FILE = "items_shield"
 STORAGE_NAME_FILE = "items_storage"
 TOOL_NAME_FILE = "items_tool"
 WEAPON_NAME_FILE = "items_weapon"
-
-NOT_FOUND = -1
-FOUND = 1
 
 # Find the ID in respect of an item in items.json
 def searchForID(itemName, itemList):
@@ -307,5 +316,5 @@ def get_statistics(tableBox, itemInstance = {}, usedIn = "", isArmor = False):
         jsonDict[SCRAPING_USED_IN] = usedIn
     if isArmor and itemInstance:
         jsonDict[SCRAPING_SET_ID] = itemInstance[SCRAPING_SET_ID]
-    jsonDict[SCRAPING_SOURCES] = SOURCE_SOURCES_DICT
+    jsonDict[SCRAPING_SOURCE] = SOURCE_SOURCES_DICT
     return jsonDict

@@ -13,7 +13,7 @@ URL = "https://terraria.gamepedia.com/"
 FISH_URL = "Fishing_catches"
 JUNK_LIST = ["Old Shoe", "Seaweed", "Tin Can"]
 
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 fishesList = []
 newURL = URL + FISH_URL
 pageFish = requests.get(newURL)
@@ -39,7 +39,7 @@ for itemInstance in itemList:
 
             for fishRow in fishRows[1:]:
                 if fishRow.find("td", class_="il2c").find("a").text == itemInstance[SCRAPING_NAME]:
-                    fishDict.pop(SCRAPING_SOURCES, None)
+                    fishDict.pop(SCRAPING_SOURCE, None)
                     fishDict[SCRAPING_HEIGHT] = fishRow.find_all("td")[4].text.encode("ascii", "ignore").decode().rstrip()
 
                     textBiome = ""
@@ -65,7 +65,7 @@ for itemInstance in itemList:
                         fishDict[SCRAPING_CATCH_QUALITY] = textCatch.replace(re.search("\[\d]", textCatch).group(), "")
                     else:
                         fishDict[SCRAPING_CATCH_QUALITY] = textCatch
-                    fishDict[SCRAPING_SOURCES] = SOURCE_SOURCES_DICT
+                    fishDict[SCRAPING_SOURCE] = SOURCE_SOURCES_DICT
                     fishesList.append(fishDict)
                     break 
         else:
@@ -75,7 +75,7 @@ for itemInstance in itemList:
                 SCRAPING_RARITY: "-1",
                 SCRAPING_HEIGHT: "Any",
                 SCRAPING_BIOME: "Any",
-                SCRAPING_SOURCES: SOURCE_SOURCES_DICT
+                SCRAPING_SOURCE: SOURCE_SOURCES_DICT
             }
             fishesList.append(fishDict)
 

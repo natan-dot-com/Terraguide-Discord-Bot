@@ -12,7 +12,7 @@ import requests
 IMG_OUTPUT_PATH = "img/{}.png"
 
 URL = "https://terraria.gamepedia.com/"
-itemList = LoadJSONFile(ITEM_FILE_PATH)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 
 newUrl = URL + "Hooks"
 page = requests.get(newUrl)

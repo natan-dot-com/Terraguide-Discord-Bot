@@ -38,7 +38,7 @@ async def list(ctx, *args):
 
     matchCounter = 0
     matchList = [[]]
-    itemList = LoadJSONFile(ITEM_FILE_PATH)
+    itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 
     #Regex usage to find every match of the input
     for itemInstance in itemList:
@@ -115,9 +115,9 @@ async def craft(ctx, *args):
 
     print('User ' + str(ctx.author) + ' has requested a craft recipe for ' + arg + '.')
 
-    itemList = LoadJSONFile(ITEM_FILE_PATH)
-    recipeList = LoadJSONFile(RECIPE_FILE_PATH)
-    tableList = LoadJSONFile(TABLE_FILE_PATH)
+    itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
+    recipeList = LoadJSONFile(GLOBAL_JSON_PATH + RECIPE_NAME_FILE + JSON_EXT)
+    tableList = LoadJSONFile(GLOBAL_JSON_PATH + TABLE_NAME_FILE + JSON_EXT)
 
     #Search for the given item name
     itemInstance = searchByName(itemList, arg)

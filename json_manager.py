@@ -3,9 +3,6 @@ import json
 NOT_FOUND = -1
 
 GLOBAL_JSON_PATH = "json/"
-ITEM_FILE_PATH = "json/items.json"
-RECIPE_FILE_PATH = "json/recipes.json"
-TABLE_FILE_PATH = "json/tables.json"
 
 def LoadJSONFile(JSONPath):
     try:

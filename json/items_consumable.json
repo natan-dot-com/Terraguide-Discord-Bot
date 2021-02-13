@@ -2,6 +2,7 @@
     {
         "Item ID": "85",
         "Name": "Chain",
+        "Bonus": "+3 range",
         "Placeable": "Yes",
         "Use time": "15 (Very fast)",
         "Tooltip": "Can be climbed on",
@@ -19,6 +20,7 @@
     {
         "Item ID": "965",
         "Name": "Rope",
+        "Bonus": "+3 range",
         "Placeable": "Yes",
         "Use time": "15 (Very fast)",
         "Tooltip": "Can be climbed on",
@@ -43,9 +45,7 @@
         "Sell": "20 Copper Coins",
         "Research": "10 required",
         "Sources": {
-            "Crafting Recipes": [
-                "256"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -445,6 +445,7 @@
     {
         "Item ID": "2996",
         "Name": "Vine Rope",
+        "Bonus": "+3 range",
         "Placeable": "Yes",
         "Use time": "15 (Very fast)",
         "Tooltip": "Can be climbed on",
@@ -468,9 +469,7 @@
         "Sell": "20 Copper Coins",
         "Research": "10 required",
         "Sources": {
-            "Crafting Recipes": [
-                "328"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -480,6 +479,7 @@
     {
         "Item ID": "3077",
         "Name": "Silk Rope",
+        "Bonus": "+3 range",
         "Placeable": "Yes",
         "Use time": "15 (Very fast)",
         "Tooltip": "Can be climbed on",
@@ -497,6 +497,7 @@
     {
         "Item ID": "3078",
         "Name": "Web Rope",
+        "Bonus": "+3 range",
         "Placeable": "Yes",
         "Use time": "15 (Very fast)",
         "Tooltip": "Can be climbed on",
@@ -504,9 +505,7 @@
         "Sell": "2 Copper Coins",
         "Research": "100 required",
         "Sources": {
-            "Crafting Recipes": [
-                "333"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -523,9 +522,7 @@
         "Sell": "20 Copper Coins",
         "Research": "10 required",
         "Sources": {
-            "Crafting Recipes": [
-                "272"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -542,9 +539,7 @@
         "Sell": "20 Copper Coins",
         "Research": "10 required",
         "Sources": {
-            "Crafting Recipes": [
-                "334"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -607,9 +602,7 @@
         "Sell": "3 Silver Coins",
         "Research": "99 required",
         "Sources": {
-            "Crafting Recipes": [
-                "265"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -715,11 +708,7 @@
         "Sell": "5 Silver Coins",
         "Research": "99 required",
         "Sources": {
-            "Crafting Recipes": [
-                "77",
-                "78",
-                "79"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -738,9 +727,7 @@
         "Sell": "1 Silver Coin",
         "Research": "99 required",
         "Sources": {
-            "Crafting Recipes": [
-                "76"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -759,10 +746,7 @@
         "Sell": "1 Silver Coin",
         "Research": "99 required",
         "Sources": {
-            "Crafting Recipes": [
-                "308",
-                "309"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],

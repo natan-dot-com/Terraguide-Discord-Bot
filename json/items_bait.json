@@ -3,7 +3,7 @@
         "Item ID": "1992",
         "Rarity": "1",
         "Bait Power": "20%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -15,7 +15,7 @@
         "Item ID": "1994",
         "Rarity": "0",
         "Bait Power": "5%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -27,7 +27,7 @@
         "Item ID": "1995",
         "Rarity": "2",
         "Bait Power": "35%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -39,7 +39,7 @@
         "Item ID": "1996",
         "Rarity": "2",
         "Bait Power": "30%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -51,7 +51,7 @@
         "Item ID": "1997",
         "Rarity": "1",
         "Bait Power": "20%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -63,7 +63,7 @@
         "Item ID": "1998",
         "Rarity": "0",
         "Bait Power": "10%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -75,7 +75,7 @@
         "Item ID": "1999",
         "Rarity": "3",
         "Bait Power": "50%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -87,7 +87,7 @@
         "Item ID": "2000",
         "Rarity": "1",
         "Bait Power": "15%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -99,7 +99,7 @@
         "Item ID": "2001",
         "Rarity": "1",
         "Bait Power": "25%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -111,7 +111,7 @@
         "Item ID": "2002",
         "Rarity": "1",
         "Bait Power": "25%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -123,7 +123,7 @@
         "Item ID": "2004",
         "Rarity": "2",
         "Bait Power": "35%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -135,7 +135,7 @@
         "Item ID": "2006",
         "Rarity": "0",
         "Bait Power": "10%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -147,7 +147,7 @@
         "Item ID": "2007",
         "Rarity": "1",
         "Bait Power": "15%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -159,7 +159,7 @@
         "Item ID": "2156",
         "Rarity": "1",
         "Bait Power": "15%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -171,7 +171,7 @@
         "Item ID": "2157",
         "Rarity": "0",
         "Bait Power": "10%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -183,7 +183,7 @@
         "Item ID": "2436",
         "Rarity": "1",
         "Bait Power": "20%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -195,7 +195,7 @@
         "Item ID": "2437",
         "Rarity": "1",
         "Bait Power": "20%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -207,7 +207,7 @@
         "Item ID": "2438",
         "Rarity": "1",
         "Bait Power": "20%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -219,7 +219,7 @@
         "Item ID": "2673",
         "Rarity": "3",
         "Bait Power": "666%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -231,7 +231,7 @@
         "Item ID": "2674",
         "Rarity": "1",
         "Bait Power": "15%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -243,7 +243,7 @@
         "Item ID": "2675",
         "Rarity": "2",
         "Bait Power": "30%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -255,7 +255,7 @@
         "Item ID": "2676",
         "Rarity": "3",
         "Bait Power": "50%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -267,7 +267,7 @@
         "Item ID": "2740",
         "Rarity": "0",
         "Bait Power": "10%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -279,7 +279,7 @@
         "Item ID": "2891",
         "Rarity": "3",
         "Bait Power": "50%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -291,7 +291,7 @@
         "Item ID": "2893",
         "Rarity": "3",
         "Bait Power": "50%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -303,7 +303,7 @@
         "Item ID": "2895",
         "Rarity": "3",
         "Bait Power": "50%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -315,10 +315,8 @@
         "Item ID": "3191",
         "Rarity": "2",
         "Bait Power": "35%",
-        "Source": {
-            "Crafting Recipes": [
-                "94"
-            ],
+        "Sources": {
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -329,7 +327,7 @@
         "Item ID": "3192",
         "Rarity": "1",
         "Bait Power": "15%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -341,7 +339,7 @@
         "Item ID": "3193",
         "Rarity": "1",
         "Bait Power": "25%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -353,7 +351,7 @@
         "Item ID": "3194",
         "Rarity": "2",
         "Bait Power": "40%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -365,7 +363,7 @@
         "Item ID": "4334",
         "Rarity": "1",
         "Bait Power": "20%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -377,7 +375,7 @@
         "Item ID": "4335",
         "Rarity": "1",
         "Bait Power": "20%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -389,7 +387,7 @@
         "Item ID": "4336",
         "Rarity": "1",
         "Bait Power": "20%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -401,7 +399,7 @@
         "Item ID": "4337",
         "Rarity": "1",
         "Bait Power": "20%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -413,7 +411,7 @@
         "Item ID": "4338",
         "Rarity": "1",
         "Bait Power": "20%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -425,7 +423,7 @@
         "Item ID": "4339",
         "Rarity": "1",
         "Bait Power": "20%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -437,7 +435,7 @@
         "Item ID": "4340",
         "Rarity": "3",
         "Bait Power": "50%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -449,7 +447,7 @@
         "Item ID": "4361",
         "Rarity": "1",
         "Bait Power": "17%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -461,7 +459,7 @@
         "Item ID": "4362",
         "Rarity": "3",
         "Bait Power": "50%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -473,7 +471,7 @@
         "Item ID": "4363",
         "Rarity": "1",
         "Bait Power": "22%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -485,7 +483,7 @@
         "Item ID": "4418",
         "Rarity": "1",
         "Bait Power": "17%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -497,7 +495,7 @@
         "Item ID": "4419",
         "Rarity": "3",
         "Bait Power": "50%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -509,7 +507,7 @@
         "Item ID": "4845",
         "Rarity": "1",
         "Bait Power": "15%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -521,7 +519,7 @@
         "Item ID": "4847",
         "Rarity": "1",
         "Bait Power": "25%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
@@ -533,7 +531,7 @@
         "Item ID": "4849",
         "Rarity": "2",
         "Bait Power": "35%",
-        "Source": {
+        "Sources": {
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
