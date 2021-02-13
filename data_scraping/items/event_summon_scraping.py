@@ -13,7 +13,7 @@ exceptionSuffix = "/Eternia_Crystal"
 mainURLsuffix = "/Consumables#Summoning_items"
 itemScrappingData = ["Tooltip", "Rarity"]
 scrappingData = ["Item", "Event", "Notes"]
-JSON_PATH = "items_event_summon.json"
+EVENT_SUMMON_PATH = GLOBAL_JSON_PATH + EVENT_SUMMON_NAME_FILE + JSON_EXT
 dictList = []
 
 itemList = LoadJSONFile('../../json/items.json')
@@ -86,4 +86,4 @@ eventDict[SCRAPING_TOOLTIP] = re.sub(r'(Crystal)', r'\1.', rows[index["Tooltip"]
 removeEmptyFields(eventDict)
 dictList.append(eventDict)
 
-SaveJSONFile(JSON_PATH, sorted(dictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))
+SaveJSONFile(EVENT_SUMMON_PATH, sorted(dictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))

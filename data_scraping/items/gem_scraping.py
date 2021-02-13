@@ -13,7 +13,7 @@ import requests
 
 IN_STONE_SUFFIX = "_In_Stone.png"
 PLACED_SUFFIX = "_Placed.png"
-JSON_PATH = "gems.json"
+GEM_PATH = GLOBAL_JSON_PATH + GEM_NAME_FILE + JSON_EXT
 
 SuffixList = [IN_STONE_SUFFIX, PLACED_SUFFIX]
 colsList = [2, 4]
@@ -51,6 +51,6 @@ if table:
                         handler.write(block)
             gemDict[dictInfoIdentity] = imgPath
         gemDictList.append(gemDict)
-SaveJSONFile(JSON_PATH, sorted(gemDictList, key = lambda i: i['ID']))
+SaveJSONFile(GEM_PATH, sorted(gemDictList, key = lambda i: i['ID']))
 
 
