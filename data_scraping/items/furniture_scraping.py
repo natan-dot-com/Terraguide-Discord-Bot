@@ -13,7 +13,7 @@ import threading
 import math
 from multithreading_starter import *
 
-ITEMS_FURNITURE_PATH = GLOBAL_JSON_PATH + "items_furnitures.json"
+FURNITURE_PATH = GLOBAL_JSON_PATH + FURNITURE_NAME_FILE + JSON_EXT
 URL = "https://terraria.gamepedia.com/"
 BRICKS_IMAGE_PATH = "data_scraping/bricks_img/{}.png"
 OTHER_FOUNDS = ["Dungeon", "Obsidian"]
@@ -57,4 +57,4 @@ def furniturescraping(init, fin, threadID):
 
             furnituresList.append(furnitureDict)
 
-SaveJSONFile(ITEMS_FURNITURE_PATH, sortListOfDictsByKey(furnituresList, SCRAPING_ITEM_ID))
+SaveJSONFile(FURNITURE_PATH, sortListOfDictsByKey(furnituresList, SCRAPING_ITEM_ID))

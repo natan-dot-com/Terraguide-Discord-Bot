@@ -10,15 +10,18 @@ import requests
 from multithreading_starter import *
 
 URL = "https://terraria.gamepedia.com/"
-ACCESSORY_PATH = GLOBAL_JSON_PATH + "items_accessories.json"
+BOSS_SUMMON_PATH = GLOBAL_JSON_PATH + BOSS_SUMMON_NAME_FILE + JSON_EXT
+newURL = URL + "Consumables"
+pageConsumables = requests.get(newURL)
+soupConsumables = BeautifulSoup(pageConsumables.content, "html.parser")
 
 itemList = LoadJSONFile(ITEM_FILE_PATH)
-accessoriesList = []
+bossSummonsList = []
 
 @start_threads_decorator(size=len(itemList), threads_number=8)
-def accessoriesScraping(init, fin, threadID):
+def bossSummonsScraping(init, fin, threadID):
     for itemInstance in itemList[init:fin]:
-        if itemInstance[SCRAPING_TYPE] == "Accessory":
+        if itemInstance[SCRAPING_TYPE] == "Boss summon":
             newURL = URL + itemInstance[SCRAPING_NAME].replace(" ", "_")
             page = requests.get(newURL)
             soup = BeautifulSoup(page.content, "html.parser")
@@ -29,7 +32,16 @@ def accessoriesScraping(init, fin, threadID):
             for tableBoxTmp in tableBoxes:
                 if tableBoxTmp.find("div", class_="title").text == itemInstance[SCRAPING_NAME]:
                     tableBox = tableBoxTmp
-            accessoriesList.append(get_statistics(tableBox, itemInstance=itemInstance))
+            bossSummonDict = get_statistics(tableBox, itemInstance=itemInstance)
+
+            bossSummonDict.pop(SCRAPING_SOURCES)
+            bossSummonRows = soupConsumables.find_all("table")[4].find_all("tr")[1:]
+            for bossSummonRow in bossSummonRows:
+                if bossSummonRow.find("td").find("img")["alt"] == itemInstance[SCRAPING_NAME]:
+                    bossSummonDict[SCRAPING_SUMMONS] = bossSummonRow.find_all("td")[2].text.strip()
+                    bossSummonDict[SCRAPING_USABLE] = bossSummonRow.find_all("td")[3].text.strip()
+
+            bossSummonDict[SCRAPING_SOURCES] = SOURCE_SOURCES_DICT
+            bossSummonsList.append(bossSummonDict)
               
-    
-SaveJSONFile(ACCESSORY_PATH, sortListOfDictsByKey(accessoriesList, SCRAPING_ITEM_ID))
+SaveJSONFile(BOSS_SUMMON_PATH, sortListOfDictsByKey(bossSummonsList, SCRAPING_ITEM_ID))

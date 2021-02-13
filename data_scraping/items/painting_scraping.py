@@ -12,7 +12,7 @@ import requests
 scrappingData = ["Painting", "Name", "Placed", "Tooltip", "Description"]
 IMAGE_EXTENSION = ".png"
 DIRECTORY = "paintings/"
-JSON_PATH = "items_paintings.json"
+PAITING_PATH = GLOBAL_JSON_PATH + PAINTING_NAME_FILE + JSON_EXT
 dictList = []
 
 itemList = LoadJSONFile('../../json/items.json')
@@ -53,4 +53,4 @@ for table in tables:
            
         removeEmptyFields(paintingDict)
         dictList.append(paintingDict)
-SaveJSONFile(JSON_PATH, sorted(dictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))
+SaveJSONFile(PAITING_PATH, sorted(dictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))

@@ -9,12 +9,12 @@ from bs4 import BeautifulSoup
 import re
 import requests
 
+BAIT_PATH = GLOBAL_JSON_PATH + BAIT_NAME_FILE + JSON_EXT
 mainURLsuffix = "/Bait"
 scrappingData = ["Item", "Power", "Rarity"]
-JSON_PATH = "items_bait.json"
 dictList = []
 
-itemList = LoadJSONFile('../../json/items.json')
+itemList = LoadJSONFile(ITEM_FILE_PATH)
 
 baseURL = "https://terraria.gamepedia.com"
 html = requests.get(baseURL + mainURLsuffix)
@@ -29,7 +29,7 @@ for row in rows[1::]:
         SCRAPING_RARITY: "",
         SCRAPING_BAIT_POWER: "",
         SCRAPING_SOURCE: {
-            SOURCE_RECIPE: [],
+            SOURCE_RECIPES: [],
             SOURCE_NPC: [],
             SOURCE_DROP: [],
             SOURCE_GRAB_BAG: [],
@@ -60,4 +60,4 @@ for row in rows[1::]:
     print(baitDict)
     dictList.append(baitDict)
 
-SaveJSONFile(JSON_PATH, sorted(dictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))
+SaveJSONFile(BAIT_PATH, sorted(dictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))

@@ -10,10 +10,10 @@ import re
 import requests
 
 IMAGE_EXTENSION = ".png"
-JSON_PATH = "items_keys.json"
+KEY_PATH = GLOBAL_JSON_PATH + KEY_NAME_FILE + JSON_EXT
 keyDictList = []
 
-itemList = LoadJSONFile('../../json/items.json')
+itemList = LoadJSONFile(ITEM_FILE_PATH)
 
 URL = "https://terraria.gamepedia.com/Keys"
 html = requests.get(URL)
@@ -27,7 +27,7 @@ for row in rows[1::]:
         SCRAPING_USED_IN: "",
         SCRAPING_CONSUMED: "",
         SCRAPING_SOURCE: {
-            SOURCE_RECIPE: [],
+            SOURCE_RECIPES: [],
             SOURCE_NPC: [],
             SOURCE_DROP: [],
             SOURCE_GRAB_BAG: [],
@@ -68,4 +68,4 @@ for row in rows[1::]:
         else:
             keyDict[SCRAPING_SOURCE][SOURCE_OTHER] = cols[1].a['title']
     keyDictList.append(keyDict)
-SaveJSONFile(JSON_PATH, sorted(keyDictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))
+SaveJSONFile(KEY_PATH, sorted(keyDictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))

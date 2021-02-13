@@ -1,5 +1,3 @@
-#Everything seems to work.
-
 import os,sys,inspect
 current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parent_dir = os.path.dirname(current_dir)
@@ -11,7 +9,7 @@ import re
 from bs4 import BeautifulSoup
 import requests
 
-ITEMS_BLOCK_PATH = GLOBAL_JSON_PATH + "items_blocks.json"
+BLOCK_PATH = GLOBAL_JSON_PATH + BLOCK_NAME_FILE + JSON_EXT
 URL = "https://terraria.gamepedia.com/"
 
 itemList = LoadJSONFile(ITEM_FILE_PATH)
@@ -29,4 +27,4 @@ for itemInstance in itemList:
         blockList.append(get_statistics(tableBox, itemInstance=itemInstance))
         blockCounter += 1
         
-SaveJSONFile(ITEMS_BLOCK_PATH, blockList)
+SaveJSONFile(BLOCK_PATH, blockList)

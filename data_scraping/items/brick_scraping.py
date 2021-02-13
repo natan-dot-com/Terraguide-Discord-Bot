@@ -1,5 +1,3 @@
-#Everything seems to work.
-
 import os,sys,inspect
 current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parent_dir = os.path.dirname(current_dir)
@@ -10,7 +8,7 @@ from json_manager import *
 from bs4 import BeautifulSoup
 import requests
 
-ITEMS_BLOCK_PATH = GLOBAL_JSON_PATH + "items_bricks.json"
+BRICK_PATH = GLOBAL_JSON_PATH + BRICK_NAME_FILE + JSON_EXT
 URL = "https://terraria.gamepedia.com/"
 URL_BRICKS = "Bricks"
 BRICKS_IMAGE_PATH = "data_scraping/bricks_img/{}.png"
@@ -54,4 +52,4 @@ for itemInstance in itemList:
         }
         bricksList.append(brickDict)
 
-SaveJSONFile(ITEMS_BLOCK_PATH, bricksList)
+SaveJSONFile(BRICK_PATH, bricksList)

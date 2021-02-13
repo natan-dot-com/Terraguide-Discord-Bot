@@ -1,5 +1,3 @@
-#Everything seems to work.
-
 import os,sys,inspect
 import re
 current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -11,7 +9,7 @@ from json_manager import *
 import requests
 from bs4 import BeautifulSoup
 
-ARMOR_PATH_OUTPUT = GLOBAL_JSON_PATH + "items_armors.json"
+ARMOR_PATH = GLOBAL_JSON_PATH + ARMOR_NAME_FILE + JSON_EXT
 REJECTED_ARMORS = {"Empty Bucket", "Boots of Ostara", "Ultrabright Helmet"}
 REJECTED_SETS = {"Dragon armor", "Titan armor", "Spectral armor"}
 
@@ -107,4 +105,4 @@ for armor in armorList:
             armor[SCRAPING_SET_ID] = str(set[SCRAPING_ID])
             break
 
-SaveJSONFile(ARMOR_PATH_OUTPUT, sortListOfDictsByKey(armorList, SCRAPING_ITEM_ID))
+SaveJSONFile(ARMOR_PATH, sortListOfDictsByKey(armorList, SCRAPING_ITEM_ID))

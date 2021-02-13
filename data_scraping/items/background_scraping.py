@@ -8,7 +8,7 @@ from json_manager import *
 import requests
 from bs4 import BeautifulSoup
 
-ITEM_PATH_OUTPUT = GLOBAL_JSON_PATH + "items_backgrounds.json"
+BACKGROUND_PATH = GLOBAL_JSON_PATH + BACKGROUND_NAME_FILE + JSON_EXT
 WALLS_SUBTYPES = {
     "Stained Glass", "Wallpapers", "Fences", "Gemstone Walls",
     "Cave Walls", "Mossy Walls", "Sandstone Walls", "Corruption Walls"
@@ -46,4 +46,4 @@ for itemInstance in itemList:
         wallDict = get_statistics(tableBox, itemInstance)
         wallsList.append(wallDict)
 
-SaveJSONFile(ITEM_PATH_OUTPUT, wallsList)
+SaveJSONFile(BACKGROUND_PATH, wallsList)

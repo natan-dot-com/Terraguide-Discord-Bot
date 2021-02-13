@@ -6,17 +6,16 @@ sys.path.insert(0, parent_dir)
 from scraping_tools import *
 from json_manager import *
 from bs4 import BeautifulSoup
-import re
 import requests
 
 DYNAMIC_IMAGE_ITEMS = ["Crimson Heart", "Wisp", "Suspicious Looking Eye", "Flickerwick", "Jack 'O Lantern", "Toy Golem", "Fairy Princess"]
 IMAGE_EXTENSION = ".png"
 DYNAMIC_IMAGE_EXTENSION = ".gif"
 DIRECTORY = "light_pets/"
-JSON_PATH = "items_light_pet.json"
+LIGHT_PET_PATH = GLOBAL_JSON_PATH + LIGHT_PET_NAME_FILE + JSON_EXT
 dictList = []
 
-itemList = LoadJSONFile('../../json/items.json')
+itemList = LoadJSONFile(ITEM_FILE_PATH)
 
 URL = "https://terraria.gamepedia.com/Pets#Light_Pets"
 html = requests.get(URL)
@@ -78,4 +77,4 @@ if tables:
             petDict = removeEmptyFields(petDict)
             dictList.append(petDict)
 
-SaveJSONFile(JSON_PATH, sorted(dictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))
+SaveJSONFile(LIGHT_PET_PATH, sorted(dictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))

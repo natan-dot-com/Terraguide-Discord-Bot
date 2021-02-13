@@ -1,5 +1,3 @@
-#Everything seems to work.
-
 import os,sys,inspect
 current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parent_dir = os.path.dirname(current_dir)
@@ -8,10 +6,9 @@ sys.path.insert(0, parent_dir)
 from scraping_tools import *
 from json_manager import *
 from bs4 import BeautifulSoup
-import re
 import requests
 
-JSON_PATH = "items_shields.json"
+SHIELD_PATH = GLOBAL_JSON_PATH + SHIELD_NAME_FILE + JSON_EXT
 itemList = LoadJSONFile("../../json/items.json")
 shieldsList = []
 
@@ -36,6 +33,6 @@ if table:
                     shieldsDict[SCRAPING_EFFECT].append(effect.text.replace("\n", "").replace("\"", "").strip())
             shieldsList.append(shieldsDict)
             # It's needed to take Cobalt Shield's source manually
-SaveJSONFile(JSON_PATH, sorted(shieldsList, key = lambda i: int(i[SCRAPING_ITEM_ID])))
+SaveJSONFile(SHIELD_PATH, sorted(shieldsList, key = lambda i: int(i[SCRAPING_ITEM_ID])))
 
 

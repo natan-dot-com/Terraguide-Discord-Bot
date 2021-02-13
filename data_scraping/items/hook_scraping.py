@@ -17,10 +17,10 @@ HOOKS_COLUMN = 5
 LATCHING_COLUMN = 6
 RARITY_COLUMN = 8
 
-JSON_PATH = "items_hooks.json"
+HOOK_PATH = GLOBAL_JSON_PATH + HOOK_NAME_FILE + JSON_EXT
 hooksDictList = []
 
-itemList = LoadJSONFile("../../json/items.json")
+itemList = LoadJSONFile(ITEM_FILE_PATH)
 
 URL = "https://terraria.gamepedia.com/Hooks"
 html = requests.get(URL)
@@ -51,11 +51,11 @@ for table in tables:
         hooksDict[SCRAPING_RARITY] = (re.search("\d+", cols[RARITY_COLUMN].span.a['title'])).group()
         
         sourceDict = {
-            SOURCE_RECIPE : [],
-            SOURCE_NPC : [],
-            SOURCE_DROP : [],
-            SOURCE_GRAB_BAG : [],
-            SOURCE_OTHER : ""
+            SOURCE_RECIPES: [],
+            SOURCE_NPC: [],
+            SOURCE_DROP: [],
+            SOURCE_GRAB_BAG: [],
+            SOURCE_OTHER: ""
         }
         
         # Splitting string to prevent inconsistences
@@ -87,4 +87,4 @@ for table in tables:
             
         hooksDict[SCRAPING_SOURCE] = sourceDict
         hooksDictList.append(hooksDict)
-SaveJSONFile(JSON_PATH, sorted(hooksDictList, key = lambda i: int(i['Item ID'])))
+SaveJSONFile(HOOK_PATH, sorted(hooksDictList, key = lambda i: int(i['Item ID'])))

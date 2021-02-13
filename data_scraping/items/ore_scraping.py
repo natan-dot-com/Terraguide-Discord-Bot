@@ -17,7 +17,7 @@ dropList = ["Eater of Worlds", "Eye of Cthulhu", "Brain of Cthulhu", "Ocram", "M
 DIRECTORY = "ores/"
 IMAGE_EXTENSION = ".png"
 IN_STONE_SUFFIX = "_In_Stone"
-JSON_PATH = "items_ore.json"
+ORE_PATH = GLOBAL_JSON_PATH + ORE_NAME_FILE + JSON_EXT
 oreDictList = []
 
 URL = "https://terraria.gamepedia.com/Ores"
@@ -35,7 +35,7 @@ for row in rows[1::]:
         SCRAPING_MINIMUM_PICKAXE_POWER: "",
         SCRAPING_IN_STONE: "",
         SCRAPING_SOURCE: {
-            SOURCE_RECIPE: [],
+            SOURCE_RECIPES: [],
             SOURCE_NPC: [],
             SOURCE_DROP: [],
             SOURCE_GRAB_BAG: [],
@@ -124,4 +124,4 @@ for table in tables[1:3:]:
             oreDictList[oreIndex+1][SCRAPING_SOURCE][SOURCE_OTHER] = ", ".join(biomeSources)
             oreIndex += 2
             
-SaveJSONFile(JSON_PATH, sorted(oreDictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))
+SaveJSONFile(ORE_PATH, sorted(oreDictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))

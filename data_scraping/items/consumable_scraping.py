@@ -1,5 +1,3 @@
-#Everything seems to work.
-
 import os,sys,inspect
 current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parent_dir = os.path.dirname(current_dir)
@@ -10,7 +8,7 @@ from json_manager import *
 from bs4 import BeautifulSoup
 import requests
 
-ITEMS_BLOCK_PATH = GLOBAL_JSON_PATH + "items_consumables.json"
+CONSUMABLE_PATH = GLOBAL_JSON_PATH + CONSUMABLE_NAME_FILE + JSON_EXT
 URL = "https://terraria.gamepedia.com/"
 
 LIQUID_BOMBS = {"Dry Bomb", "Wet Bomb", "Lava Bomb", "Honey Bomb"}
@@ -41,4 +39,4 @@ for itemInstance in itemList:
                     tableBox = tableBoxTmp
             consumablesList.append(get_statistics(tableBox, itemInstance=itemInstance))
 
-SaveJSONFile(ITEMS_BLOCK_PATH, consumablesList)
+SaveJSONFile(CONSUMABLE_PATH, consumablesList)

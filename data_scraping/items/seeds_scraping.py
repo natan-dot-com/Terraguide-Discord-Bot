@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 import requests
 
 URL = "https://terraria.gamepedia.com/"
-SEEDS_PATH = GLOBAL_JSON_PATH + "items_seeds.json"
+SEEDS_PATH = GLOBAL_JSON_PATH + SEEDS_NAME_FILE + JSON_EXT
 
 itemList = LoadJSONFile(ITEM_FILE_PATH)
 pylonsList = []

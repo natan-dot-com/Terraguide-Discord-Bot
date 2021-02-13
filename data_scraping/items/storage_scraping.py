@@ -10,7 +10,7 @@ import requests
 from multithreading_starter import *
 
 URL = "https://terraria.gamepedia.com/"
-STORAGE_PATH = GLOBAL_JSON_PATH + "items_storages.json"
+STORAGE_PATH = GLOBAL_JSON_PATH + STORAGE_NAME_FILE + JSON_EXT
 STORAGE_WITH_SOURCES = [
     "Blue Dungeon Dresser", "Green Dungeon Dresser", "Pink Dungeon Dresser", "Obsidian Dresser"
 ]

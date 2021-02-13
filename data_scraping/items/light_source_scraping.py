@@ -10,7 +10,7 @@ import requests
 from multithreading_starter import *
 
 URL = "https://terraria.gamepedia.com/"
-STORAGE_PATH = GLOBAL_JSON_PATH + LIGHT_SOURCE_JSON_NAME_FILE
+LIGHT_SOURCE_PATH = GLOBAL_JSON_PATH + LIGHT_SOURCE_NAME_FILE + JSON_EXT
 DATA_TO_BE_SCRAPPED = [SCRAPING_HOUSE, SCRAPING_MECHANISM, SCRAPING_WATERPROOF]
 GENERAL_LIGHT_SOURCES = ["Torch", "Candle", "Candelabra", "Lantern", "Chandelier", "Lamps"]
 newURL = URL + "Light_sources"
@@ -90,4 +90,4 @@ def lightSourcesScraping(init, fin, threadID):
             lightSourceDict[SCRAPING_SOURCES] = SOURCE_SOURCES_DICT'''
             lightSourcesList.append(lightSourceDict)
               
-SaveJSONFile(STORAGE_PATH, sortListOfDictsByKey(lightSourcesList, SCRAPING_ITEM_ID))
+SaveJSONFile(LIGHT_SOURCE_PATH, sortListOfDictsByKey(lightSourcesList, SCRAPING_ITEM_ID))

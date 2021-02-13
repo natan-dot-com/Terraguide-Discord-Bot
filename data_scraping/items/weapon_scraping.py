@@ -8,11 +8,10 @@ parent_dir = os.path.dirname(parent_dir)
 sys.path.insert(0, parent_dir) 
 from scraping_tools import *
 from json_manager import *
-import re
 import requests
 from bs4 import BeautifulSoup
 
-ITEM_PATH_OUTPUT = GLOBAL_JSON_PATH + "items_weapons.json"
+WEAPON_PATH = GLOBAL_JSON_PATH + WEAPON_NAME_FILE + JSON_EXT
 ITEM_URL = ["Enchanted Sword"]
 
 itemList = LoadJSONFile(ITEM_FILE_PATH)
@@ -31,4 +30,4 @@ for itemInstance in itemList:
 
         weaponsList.append(get_statistics(tableBox, itemInstance))
 
-SaveJSONFile(ITEM_PATH_OUTPUT, weaponsList)
+SaveJSONFile(WEAPON_PATH, weaponsList)

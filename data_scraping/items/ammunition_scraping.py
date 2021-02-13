@@ -1,5 +1,3 @@
-#Everything seems to work.
-
 import os,sys,inspect
 import re
 current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -13,7 +11,7 @@ from bs4 import BeautifulSoup
 
 OTHER_VERSIONS = {"3DS version", "Console Version", "Old-gen console version", "Mobile version"}
 DESKTOP_VERSION = {"Desktop"}
-AMMO_PATH_OUTPUT = GLOBAL_JSON_PATH + "items_ammos.json"
+AMMUNITION_PATH = GLOBAL_JSON_PATH + AMMUNITION_NAME_FILE + JSON_EXT
 AMMOS_TYPES = ["Arrows", "Bullets", "Rockets", "Darts", "Solutions"]
 AMMO_EXCEPTIONS = [
     ["Gel", "Flamethrower, Elf Melter"], ["Coins", "Coin Gun"], ["Fallen Star", "Star Cannon, Super Star Shooter"],
@@ -175,4 +173,4 @@ for ammo in AMMO_EXCEPTIONS:
         usedIn = ammo[1]
         ammoList.append(get_statistics(tableBox, usedIn=usedIn))
 
-SaveJSONFile(AMMO_PATH_OUTPUT, sortListOfDictsByKey(ammoList, SCRAPING_ITEM_ID))
+SaveJSONFile(AMMUNITION_PATH, sortListOfDictsByKey(ammoList, SCRAPING_ITEM_ID))

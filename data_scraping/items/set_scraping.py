@@ -11,7 +11,7 @@ from json_manager import *
 import requests
 from bs4 import BeautifulSoup
 
-SETS_PATH_OUTPUT = GLOBAL_JSON_PATH + "sets.json"
+SET_PATH = GLOBAL_JSON_PATH + SET_NAME_FILE + JSON_EXT
 REJECTED_SETS = {"Dragon armor", "Titan armor", "Spectral armor"}
 OTHER_VERSIONS = {"Console Version", "Old-gen console version", "Mobile version"}
 
@@ -92,4 +92,4 @@ for table in tables[0:2]:
         setsList.append(setDict)
 
 
-SaveJSONFile(SETS_PATH_OUTPUT, setsList)
+SaveJSONFile(SET_PATH, setsList)

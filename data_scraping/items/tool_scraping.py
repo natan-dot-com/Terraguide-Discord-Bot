@@ -10,7 +10,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-ITEM_PATH_OUTPUT = GLOBAL_JSON_PATH + "items_tools.json"
+TOOL_PATH = GLOBAL_JSON_PATH + TOOL_NAME_FILE + JSON_EXT
 FISHING_POLES = [
     "Wood Fishing Pole", "Reinforced Fishing Pole", "Fisher of Souls", "Fleshcatcher",
     "Scarab Fishing Rod", "Chum Caster", "Fiberglass Fishing Pole", "Mechanic's Rod",
@@ -19,7 +19,7 @@ FISHING_POLES = [
 
 itemList = LoadJSONFile(ITEM_FILE_PATH)
 url = "https://terraria.gamepedia.com/"
-jsonList = []
+toolsList = []
 
 for itemInstance in itemList:
     if itemInstance[SCRAPING_TYPE] == "Tool":
@@ -31,7 +31,7 @@ for itemInstance in itemList:
         if not itemInstance[SCRAPING_NAME] in FISHING_POLES:
             tableBox = soup.find("div", class_="infobox item")
             toolDict = get_statistics(tableBox, itemInstance)
-            jsonList.append(toolDict)
+            toolsList.append(toolDict)
             
         #get fishing poles
         else:
@@ -57,7 +57,7 @@ for itemInstance in itemList:
                     for statistic in statistics:
                         if statistic.th.text == SCRAPING_USE_TIME:
                             toolDict[SCRAPING_USE_TIME] = statistic.td.text.rstrip()
-                    jsonList.append(toolDict)
+                    toolsList.append(toolDict)
                     break
 
-SaveJSONFile(ITEM_PATH_OUTPUT, jsonList)
+SaveJSONFile(TOOL_PATH, toolsList)

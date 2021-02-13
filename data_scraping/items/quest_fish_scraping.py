@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 import re
 import requests
 
-JSON_PATH = "items_quest_fish.json"
+QUEST_FISH_PATH = GLOBAL_JSON_PATH + QUEST_FISH_NAME_FILE + JSON_EXT
 questFishDictList = []
 
 URL = "https://terraria.gamepedia.com/Angler/Quests"
@@ -32,5 +32,5 @@ for row in rows[1::]:
     questFishDict[SCRAPING_HEIGHT] = cols[3].text.replace("\n", "")
     questFishDict[SCRAPING_BIOME] = cols[4].text.replace("\n", "").replace("[1]", "")
     questFishDictList.append(questFishDict)
-SaveJSONFile(JSON_PATH, sorted(questFishDictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))
+SaveJSONFile(QUEST_FISH_PATH, sorted(questFishDictList, key = lambda i: int(i[SCRAPING_ITEM_ID])))
 

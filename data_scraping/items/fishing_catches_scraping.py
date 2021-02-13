@@ -1,5 +1,3 @@
-#Everything seems to work.
-
 import os,sys,inspect
 current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parent_dir = os.path.dirname(current_dir)
@@ -10,7 +8,7 @@ from json_manager import *
 from bs4 import BeautifulSoup
 import requests
 
-ITEMS_FISH_PATH = GLOBAL_JSON_PATH + "items_fishes.json"
+FISHING_CATCHES_PATH = GLOBAL_JSON_PATH + FISHING_CATCHES_NAME_FILE + JSON_EXT
 URL = "https://terraria.gamepedia.com/"
 FISH_URL = "Fishing_catches"
 JUNK_LIST = ["Old Shoe", "Seaweed", "Tin Can"]
@@ -81,4 +79,4 @@ for itemInstance in itemList:
             }
             fishesList.append(fishDict)
 
-SaveJSONFile(ITEMS_FISH_PATH, fishesList)
+SaveJSONFile(FISHING_CATCHES_PATH, fishesList)
