@@ -10,7 +10,9 @@ from item_hash import *
 import re
 import requests
 
+MAIN_ITEM_FILE_PREFIX = "items_"
 LOG_FILE_PATH = "logs/recipes.log"
+RECIPE_JSON_PATH = GLOBAL_JSON_PATH + RECIPE_NAME_FILE + JSON_EXT
 scrappingData = ["Result", "Ingredients"]
 
 # Initialize both hash tables.
@@ -39,7 +41,7 @@ def getTableContent(urlSuffix):
 # Algorithm to get the recipe's ID and refers it inside each JSON-data file.
 def insertRecipeOnJSON(recipeID, itemID, itemList, logFile):
     filenameSuffix = itemList[int(itemID)-1][SCRAPING_TYPE].lower().replace(" ", "_")
-    filename = MAIN_JSON_PREFIX + filenameSuffix + JSON_EXT
+    filename = GLOBAL_JSON_PATH + MAIN_ITEM_FILE_PREFIX + filenameSuffix + JSON_EXT
     typeList = LoadJSONFile(filename)
     if typeList:
         print("\tJSON file '" + filename + "' found. Writing recipe " + str(recipeID) + " in '" + itemList[int(itemID)-1][SCRAPING_NAME] + "'.")

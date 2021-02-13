@@ -126,7 +126,9 @@
         "Summons": "Queen Bee",
         "Usable": "Must be consumed in the Jungle or Underground Jungle.",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "1"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],

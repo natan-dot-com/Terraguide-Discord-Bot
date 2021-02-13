@@ -316,7 +316,9 @@
         "Rarity": "2",
         "Bait Power": "35%",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "94"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],

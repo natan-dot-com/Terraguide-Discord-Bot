@@ -163,7 +163,9 @@
         "Name": "Cactus",
         "Rarity": "0",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "38"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],

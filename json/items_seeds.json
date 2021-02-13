@@ -434,7 +434,9 @@
         "Rarity": "0",
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "318"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -447,7 +449,9 @@
         "Rarity": "0",
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "7"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -460,7 +464,9 @@
         "Rarity": "0",
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "263"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -473,7 +479,9 @@
         "Rarity": "0",
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "91"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -486,7 +494,9 @@
         "Rarity": "0",
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "258"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -499,7 +509,9 @@
         "Rarity": "0",
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "74"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -512,7 +524,9 @@
         "Rarity": "0",
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "4"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
