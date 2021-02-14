@@ -1,7 +1,8 @@
 import threading
 import math
+from scraping_tools import LOG_PATH
 
-#log = open("log.txt", "w")
+log = open(LOG_PATH + "multithreading_log.txt", "w")
 
 class myThread (threading.Thread):
    def __init__(self, threadID, func, init, fin):
@@ -13,7 +14,7 @@ class myThread (threading.Thread):
    def run(self):
       print ("Starting Thread " + str(self.threadID) + " on indexes " + str(self.init) + " to " + str(self.fin))
       self.func(self.init, self.fin, self.threadID)
-      #log.write("Exiting Thread" + str(self.threadID) + "\n")
+      log.write("Exiting Thread" + str(self.threadID) + "\n")
       print ("Exiting Thread " + str(self.threadID))
 
 def start_threads_decorator(*args, **kwargs):

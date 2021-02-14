@@ -190,7 +190,10 @@ SET_NAME_FILE = "set"
 SHIELD_NAME_FILE = "items_shield"
 STORAGE_NAME_FILE = "items_storage"
 TOOL_NAME_FILE = "items_tool"
+VANITY_NAME_FILE = "items_vanity"
 WEAPON_NAME_FILE = "items_weapon"
+
+LOG_PATH = "logs/"
 
 # Find the ID in respect of an item in items.json
 def searchForID(itemName, itemList):
@@ -280,7 +283,7 @@ def get_statistics(tableBox, itemInstance = {}, usedIn = "", isArmor = False):
             if isArmor:
                 jsonDict[SCRAPING_TOOLTIP] = BeautifulSoup(str(statistic.td).replace("<br/>", ". "), 'html.parser').text.split("/")[0].rstrip()
             else:
-                jsonDict[SCRAPING_TOOLTIP] = BeautifulSoup(str(statistic.td).replace("<br/>", ". "), 'html.parser').text.rstrip()
+                jsonDict[SCRAPING_TOOLTIP] = BeautifulSoup(str(statistic.td).replace("<br/>", ". "), 'html.parser').text.encode("ascii", "ignore").decode().rstrip()
         elif statistic.th.text == SCRAPING_SELL:
             jsonDict[SCRAPING_SELL] = statistic.td.span["title"]
         elif statistic.th.text == SCRAPING_BASE_VELOCITY:
