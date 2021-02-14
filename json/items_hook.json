@@ -7,7 +7,10 @@
         "Latching": "Single",
         "Rarity": "1",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "545",
+                "899"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -22,7 +25,10 @@
         "Latching": "Simultaneous",
         "Rarity": "3",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "575",
+                "929"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -67,7 +73,10 @@
         "Latching": "Single",
         "Rarity": "1",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "439",
+                "793"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -82,7 +91,10 @@
         "Latching": "Single",
         "Rarity": "1",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "751",
+                "1105"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -97,7 +109,10 @@
         "Latching": "Single",
         "Rarity": "1",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "688",
+                "1042"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -112,7 +127,10 @@
         "Latching": "Single",
         "Rarity": "1",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "508",
+                "862"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -127,7 +145,10 @@
         "Latching": "Single",
         "Rarity": "1",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "684",
+                "1038"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -142,7 +163,10 @@
         "Latching": "Single",
         "Rarity": "1",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "503",
+                "857"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -337,7 +361,9 @@
         "Latching": "Simultaneous",
         "Rarity": "10",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "2423"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -367,7 +393,10 @@
         "Latching": "Single",
         "Rarity": "1",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "436",
+                "790"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],

@@ -29,7 +29,12 @@
             "json/light_pets/Fairy_3.png"
         ],
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "2020",
+                "2021",
+                "2228",
+                "2229"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],

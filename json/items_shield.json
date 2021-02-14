@@ -19,7 +19,9 @@
             "Grants immunity to knockback"
         ],
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "1614"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -48,7 +50,9 @@
             "Grants immunity to knockback"
         ],
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "1538"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -105,7 +109,9 @@
             "Grants immunity to knockback"
         ],
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "1577"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -120,7 +126,9 @@
             "Grants immunity to knockback"
         ],
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "1584"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
