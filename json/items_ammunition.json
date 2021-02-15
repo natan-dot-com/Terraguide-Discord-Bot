@@ -26,7 +26,10 @@
         "Research": "99 required",
         "Used In": "Any Bow or Repeater.",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "917",
+                "918"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -66,8 +69,8 @@
         "Used In": "Any Bow or Repeater.",
         "Sources": {
             "Crafting Recipes": [
-                "772",
-                "1126"
+                "1557",
+                "1915"
             ],
             "NPC": [],
             "Drop": [],
@@ -221,8 +224,8 @@
         "Used In": "Any Gun",
         "Sources": {
             "Crafting Recipes": [
-                "618",
-                "972"
+                "1403",
+                "1761"
             ],
             "NPC": [],
             "Drop": [],
@@ -242,10 +245,10 @@
         "Used In": "Any Bow or Repeater.",
         "Sources": {
             "Crafting Recipes": [
-                "551",
-                "552",
-                "905",
-                "906"
+                "1336",
+                "1337",
+                "1694",
+                "1695"
             ],
             "NPC": [],
             "Drop": [],
@@ -266,8 +269,8 @@
         "Used In": "Any Gun",
         "Sources": {
             "Crafting Recipes": [
-                "700",
-                "1054"
+                "1485",
+                "1843"
             ],
             "NPC": [],
             "Drop": [],
@@ -305,10 +308,10 @@
         "Used In": "Any Gun",
         "Sources": {
             "Crafting Recipes": [
-                "2008",
-                "2009",
-                "2216",
-                "2217"
+                "2986",
+                "2987",
+                "3194",
+                "3195"
             ],
             "NPC": [],
             "Drop": [],
@@ -329,10 +332,10 @@
         "Used In": "Any Bow or Repeater.",
         "Sources": {
             "Crafting Recipes": [
-                "2052",
-                "2053",
-                "2260",
-                "2261"
+                "3030",
+                "3031",
+                "3238",
+                "3239"
             ],
             "NPC": [],
             "Drop": [],
@@ -352,10 +355,10 @@
         "Used In": "Any Bow or Repeater.",
         "Sources": {
             "Crafting Recipes": [
-                "2010",
-                "2011",
-                "2218",
-                "2219"
+                "2988",
+                "2989",
+                "3196",
+                "3197"
             ],
             "NPC": [],
             "Drop": [],
@@ -376,10 +379,10 @@
         "Used In": "Any Gun",
         "Sources": {
             "Crafting Recipes": [
-                "2012",
-                "2013",
-                "2220",
-                "2221"
+                "2990",
+                "2991",
+                "3198",
+                "3199"
             ],
             "NPC": [],
             "Drop": [],
@@ -627,10 +630,10 @@
         "Used In": "Any Gun",
         "Sources": {
             "Crafting Recipes": [
-                "1990",
-                "1991",
-                "2198",
-                "2199"
+                "2968",
+                "2969",
+                "3176",
+                "3177"
             ],
             "NPC": [],
             "Drop": [],
@@ -652,10 +655,10 @@
         "Used In": "Any Bow or Repeater.",
         "Sources": {
             "Crafting Recipes": [
-                "1988",
-                "1989",
-                "2196",
-                "2197"
+                "2966",
+                "2967",
+                "3174",
+                "3175"
             ],
             "NPC": [],
             "Drop": [],
@@ -695,7 +698,9 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "560"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -737,10 +742,10 @@
         "Used In": "Any Bow or Repeater.",
         "Sources": {
             "Crafting Recipes": [
-                "2055",
-                "2056",
-                "2263",
-                "2264"
+                "3033",
+                "3034",
+                "3241",
+                "3242"
             ],
             "NPC": [],
             "Drop": [],
@@ -762,10 +767,10 @@
         "Used In": "Any Gun",
         "Sources": {
             "Crafting Recipes": [
-                "2057",
-                "2058",
-                "2265",
-                "2266"
+                "3035",
+                "3036",
+                "3243",
+                "3244"
             ],
             "NPC": [],
             "Drop": [],
@@ -807,8 +812,8 @@
         "Used In": "Any Bow or Repeater.",
         "Sources": {
             "Crafting Recipes": [
-                "2166",
-                "2374"
+                "3144",
+                "3352"
             ],
             "NPC": [],
             "Drop": [],
@@ -829,7 +834,9 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "904"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -865,7 +872,9 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "691"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -885,7 +894,9 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "651"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -905,7 +916,9 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "514"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -925,7 +938,9 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "532"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1099,7 +1114,7 @@
         "Used In": "Any Bow or Repeater.",
         "Sources": {
             "Crafting Recipes": [
-                "2404"
+                "3544"
             ],
             "NPC": [],
             "Drop": [],
@@ -1120,7 +1135,7 @@
         "Used In": "Any Gun",
         "Sources": {
             "Crafting Recipes": [
-                "2403"
+                "3543"
             ],
             "NPC": [],
             "Drop": [],
@@ -1160,7 +1175,7 @@
         "Used In": "Any Gun",
         "Sources": {
             "Crafting Recipes": [
-                "2422"
+                "3570"
             ],
             "NPC": [],
             "Drop": [],
@@ -1182,7 +1197,7 @@
         "Used In": "Any Bow or Repeater.",
         "Sources": {
             "Crafting Recipes": [
-                "2420"
+                "3568"
             ],
             "NPC": [],
             "Drop": [],
@@ -1235,8 +1250,8 @@
         "Used In": "Launcher",
         "Sources": {
             "Crafting Recipes": [
-                "1139",
-                "2792"
+                "2062",
+                "3942"
             ],
             "NPC": [],
             "Drop": [],
@@ -1255,7 +1270,7 @@
         "Used In": "Launcher",
         "Sources": {
             "Crafting Recipes": [
-                "2794"
+                "3949"
             ],
             "NPC": [],
             "Drop": [],
@@ -1274,7 +1289,7 @@
         "Used In": "Launcher",
         "Sources": {
             "Crafting Recipes": [
-                "2798"
+                "3955"
             ],
             "NPC": [],
             "Drop": [],
@@ -1293,7 +1308,7 @@
         "Used In": "Launcher",
         "Sources": {
             "Crafting Recipes": [
-                "2415"
+                "3563"
             ],
             "NPC": [],
             "Drop": [],
@@ -1312,7 +1327,7 @@
         "Used In": "Launcher",
         "Sources": {
             "Crafting Recipes": [
-                "2416"
+                "3564"
             ],
             "NPC": [],
             "Drop": [],
@@ -1354,8 +1369,8 @@
         "Used In": "Any Gun",
         "Sources": {
             "Crafting Recipes": [
-                "759",
-                "1113"
+                "1544",
+                "1902"
             ],
             "NPC": [],
             "Drop": [],

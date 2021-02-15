@@ -10,7 +10,11 @@
         "Sources": {
             "Crafting Recipes": [
                 "133",
-                "371"
+                "544",
+                "1083",
+                "1164",
+                "3398",
+                "3487"
             ],
             "NPC": [],
             "Drop": [],
@@ -29,7 +33,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "402"
+                "752",
+                "1114",
+                "1195",
+                "3429",
+                "3518"
             ],
             "NPC": [],
             "Drop": [],
@@ -99,7 +107,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "370"
+                "528",
+                "1082",
+                "1163",
+                "3397",
+                "3486"
             ],
             "NPC": [],
             "Drop": [],
@@ -118,7 +130,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "408"
+                "831",
+                "1120",
+                "1201",
+                "3435",
+                "3524"
             ],
             "NPC": [],
             "Drop": [],
@@ -137,7 +153,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "356"
+                "448",
+                "1068",
+                "1149",
+                "3383",
+                "3472"
             ],
             "NPC": [],
             "Drop": [],
@@ -157,9 +177,19 @@
         "Sources": {
             "Crafting Recipes": [
                 "209",
-                "389",
-                "390",
-                "391"
+                "657",
+                "1101",
+                "1102",
+                "1103",
+                "1182",
+                "1183",
+                "1184",
+                "3416",
+                "3417",
+                "3418",
+                "3505",
+                "3506",
+                "3507"
             ],
             "NPC": [],
             "Drop": [],
@@ -178,7 +208,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "376"
+                "558",
+                "1088",
+                "1169",
+                "3403",
+                "3492"
             ],
             "NPC": [],
             "Drop": [],
@@ -197,7 +231,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "396"
+                "694",
+                "1108",
+                "1189",
+                "3423",
+                "3512"
             ],
             "NPC": [],
             "Drop": [],
@@ -216,7 +254,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "377"
+                "572",
+                "1089",
+                "1170",
+                "3404",
+                "3493"
             ],
             "NPC": [],
             "Drop": [],
@@ -235,7 +277,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "385"
+                "633",
+                "1097",
+                "1178",
+                "3412",
+                "3501"
             ],
             "NPC": [],
             "Drop": [],
@@ -254,7 +300,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "354"
+                "442",
+                "1066",
+                "1147",
+                "3381",
+                "3470"
             ],
             "NPC": [],
             "Drop": [],
@@ -273,7 +323,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "388"
+                "649",
+                "1100",
+                "1181",
+                "3415",
+                "3504"
             ],
             "NPC": [],
             "Drop": [],
@@ -292,7 +346,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "365"
+                "467",
+                "1077",
+                "1158",
+                "3392",
+                "3481"
             ],
             "NPC": [],
             "Drop": [],
@@ -310,7 +368,10 @@
         "Research": "100 required",
         "Destroyed by Explosives": "Yes",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "844",
+                "845"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -327,7 +388,11 @@
         "Research": "100 required",
         "Sources": {
             "Crafting Recipes": [
-                "346"
+                "348",
+                "1058",
+                "1139",
+                "3373",
+                "3462"
             ],
             "NPC": [],
             "Drop": [],
@@ -346,7 +411,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "405"
+                "782",
+                "1117",
+                "1198",
+                "3432",
+                "3521"
             ],
             "NPC": [],
             "Drop": [],
@@ -365,7 +434,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "366"
+                "489",
+                "1078",
+                "1159",
+                "3393",
+                "3482"
             ],
             "NPC": [],
             "Drop": [],
@@ -383,7 +456,9 @@
         "Research": "100 required",
         "Destroyed by Explosives": "Yes",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "750"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -401,7 +476,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "413"
+                "891",
+                "1125",
+                "1206",
+                "3440",
+                "3529"
             ],
             "NPC": [],
             "Drop": [],
@@ -420,7 +499,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "416"
+                "902",
+                "1128",
+                "1209",
+                "3443",
+                "3532"
             ],
             "NPC": [],
             "Drop": [],
@@ -439,7 +522,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "400"
+                "723",
+                "1112",
+                "1193",
+                "3427",
+                "3516"
             ],
             "NPC": [],
             "Drop": [],
@@ -457,7 +544,10 @@
         "Research": "100 required",
         "Destroyed by Explosives": "Yes",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "569",
+                "570"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -475,7 +565,8 @@
         "Destroyed by Explosives": "No",
         "Sources": {
             "Crafting Recipes": [
-                "184"
+                "184",
+                "593"
             ],
             "NPC": [],
             "Drop": [],
@@ -493,7 +584,11 @@
         "Research": "100 required",
         "Sources": {
             "Crafting Recipes": [
-                "395"
+                "670",
+                "1107",
+                "1188",
+                "3422",
+                "3511"
             ],
             "NPC": [],
             "Drop": [],
@@ -511,7 +606,11 @@
         "Research": "100 required",
         "Sources": {
             "Crafting Recipes": [
-                "414"
+                "895",
+                "1126",
+                "1207",
+                "3441",
+                "3530"
             ],
             "NPC": [],
             "Drop": [],
@@ -530,7 +629,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "350"
+                "438",
+                "1062",
+                "1143",
+                "3377",
+                "3466"
             ],
             "NPC": [],
             "Drop": [],
@@ -549,8 +652,15 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "360",
-                "361"
+                "454",
+                "1072",
+                "1073",
+                "1153",
+                "1154",
+                "3387",
+                "3388",
+                "3476",
+                "3477"
             ],
             "NPC": [],
             "Drop": [],
@@ -570,7 +680,11 @@
         "Sources": {
             "Crafting Recipes": [
                 "198",
-                "384"
+                "620",
+                "1096",
+                "1177",
+                "3411",
+                "3500"
             ],
             "NPC": [],
             "Drop": [],
@@ -589,7 +703,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "382"
+                "596",
+                "1094",
+                "1175",
+                "3409",
+                "3498"
             ],
             "NPC": [],
             "Drop": [],
@@ -608,7 +726,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "379"
+                "575",
+                "1091",
+                "1172",
+                "3406",
+                "3495"
             ],
             "NPC": [],
             "Drop": [],
@@ -627,7 +749,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "381"
+                "588",
+                "1093",
+                "1174",
+                "3408",
+                "3497"
             ],
             "NPC": [],
             "Drop": [],
@@ -646,7 +772,11 @@
         "Destroyed by Explosives": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "357"
+                "452",
+                "1069",
+                "1150",
+                "3384",
+                "3473"
             ],
             "NPC": [],
             "Drop": [],
@@ -666,7 +796,8 @@
         "Sources": {
             "Crafting Recipes": [
                 "288",
-                "2460"
+                "849",
+                "3608"
             ],
             "NPC": [],
             "Drop": [],
@@ -686,7 +817,8 @@
         "Sources": {
             "Crafting Recipes": [
                 "330",
-                "2527"
+                "905",
+                "3675"
             ],
             "NPC": [],
             "Drop": [],
@@ -706,7 +838,8 @@
         "Sources": {
             "Crafting Recipes": [
                 "207",
-                "2430"
+                "652",
+                "3578"
             ],
             "NPC": [],
             "Drop": [],
@@ -726,7 +859,8 @@
         "Sources": {
             "Crafting Recipes": [
                 "304",
-                "2491"
+                "882",
+                "3639"
             ],
             "NPC": [],
             "Drop": [],
@@ -745,7 +879,7 @@
         "Research": "100 required",
         "Sources": {
             "Crafting Recipes": [
-                "1839"
+                "2784"
             ],
             "NPC": [],
             "Drop": [],
@@ -764,7 +898,7 @@
         "Research": "100 required",
         "Sources": {
             "Crafting Recipes": [
-                "1840"
+                "2785"
             ],
             "NPC": [],
             "Drop": [],
@@ -783,7 +917,7 @@
         "Research": "100 required",
         "Sources": {
             "Crafting Recipes": [
-                "1841"
+                "2786"
             ],
             "NPC": [],
             "Drop": [],
@@ -802,7 +936,8 @@
         "Research": "100 required",
         "Sources": {
             "Crafting Recipes": [
-                "1218"
+                "581",
+                "2146"
             ],
             "NPC": [],
             "Drop": [],

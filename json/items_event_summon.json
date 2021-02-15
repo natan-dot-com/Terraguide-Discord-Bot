@@ -7,7 +7,7 @@
         "Notes": "Must be consumed during the day, once at least one Shadow Orb/Crimson Heart has been destroyed and the player has at least 200 maximum health.",
         "Sources": {
             "Crafting Recipes": [
-                "1351"
+                "2279"
             ],
             "NPC": [],
             "Drop": [],
@@ -51,8 +51,8 @@
         "Notes": "Only usable at night.",
         "Sources": {
             "Crafting Recipes": [
-                "2108",
-                "2316"
+                "3086",
+                "3294"
             ],
             "NPC": [],
             "Drop": [],
@@ -68,8 +68,8 @@
         "Notes": "Only usable at night.",
         "Sources": {
             "Crafting Recipes": [
-                "2089",
-                "2297"
+                "3067",
+                "3275"
             ],
             "NPC": [],
             "Drop": [],
@@ -85,8 +85,8 @@
         "Notes": "Can only be used in a Hardmode world during the day.",
         "Sources": {
             "Crafting Recipes": [
-                "2120",
-                "2328"
+                "3098",
+                "3306"
             ],
             "NPC": [],
             "Drop": [],

@@ -7,6 +7,11 @@ from scraping_tools import *
 from json_manager import *
 from bs4 import BeautifulSoup
 from item_hash import *
+from itertools import chain
+from contextlib import closing
+from selenium.webdriver import Firefox
+from selenium.webdriver.support.ui import WebDriverWait
+
 import re
 import requests
 
@@ -36,9 +41,16 @@ nameSubstitutes = {
     "Any Firefly": "Firefly",
     "Any Scorpion": "Scorpion",
     "Any Snail": "Snail",
-    "Any Squirrel": "Squirrel"
+    "Any Sand": "Sand Block",
+    "Any Squirrel": "Squirrel",
+    "Green Jellyfish (bait)": "Green Jellyfish",
+    "Blue Jellyfish (bait)": "Blue Jellyfish",
+    "Pink Jellyfish (bait)": "Pink Jellyfish",
+    "Any Fruit": "Apple",
+    "Any Turtle": "Turtle"
 }
-javascriptTables = ["/Work_Bench", "/Placed_Bottle", "/Alchemy_Table", "/Extractinator"]
+javascriptTables = ["/Work_Bench", "/Placed_Bottle", "/Alchemy_Table"]
+exceptionTables = ["/Campfire", "/Extractinator"]
 
 # Initialize both hash tables.
 def initializeHashTables(itemList):
@@ -53,6 +65,23 @@ def initializeHashTables(itemList):
         tableHash.add(tableInstance[SCRAPING_NAME], tableInstance)
 
     return itemHash, tableHash
+
+def findTableID(tableName, tableHash, logFile):
+    tableID = tableHash.search(tableName, SCRAPING_TABLE_ID)
+    if tableID == NOT_FOUND:
+        print("Table ID for '" + tableName + "' not found. Aborting Process.")
+        logFile.write("TABLE ERROR: Table ID not found. Aborted proccess.\n")
+        return NOT_FOUND
+    else:
+        logFile.write("Table ID (" + tableID + ") found. Starting execution.\n\n")
+        return tableID
+
+def createLogFile(tableName):
+    logFilePath = DEFAULT_LOG_PATH + tableName.replace(" ", "_").lower() + LOG_EXT
+    logFile = open(logFilePath, "w+")
+    print("Creating new log file for '"+ tableName + "'.")
+    logFile.write("Starting log file for '" + tableName + "'.\n")
+    return logFile
 
 # Loads HTML content from the table we're looking for.
 def getTableContent(urlSuffix, tableClass):
@@ -95,36 +124,14 @@ def insertRecipeOnJSON(writeFileStructure, itemList, logFile):
             logFile.write("Can't reach '" + filename + "'. No such file or directory.\n\n")
 
 # Scraps every recipe from a table in specified suffix.
-def getCraftingRecipes(stationTuple, craftDictList, itemList, itemHash, tableHash, recipesCounter):
+def getCraftingRecipes(stationTuple, craftDictList, itemList, itemHash, recipesCounter, tableHTML, tableID, logFile):
     writeFileStructure = {}
-    print("Starting processing '" + stationTuple[TUPLE_TABLE_NAME] + "'s page...")
-    
-    tableList = getTableContent(stationTuple[TUPLE_TABLE_URL], SORTABLE_TABLE_CLASS)
-    for tableInstance in tableList:
-        if tableInstance.find("caption"):
-            table = tableInstance
-            break
-
-    rows = table.findAll("tr")
-    tableHead = getTableColumns(rows[0], scrappingData)
-
-    logFilePath = DEFAULT_LOG_PATH + stationTuple[TUPLE_TABLE_NAME].lower().replace(" ", "_") + LOG_EXT
-    logFile = open(logFilePath, "w+")
-    print("Creating new log file for '"+ stationTuple[TUPLE_TABLE_NAME] + "'.")
-    logFile.write("Starting log file for '" + stationTuple[TUPLE_TABLE_NAME] + "'.\n")
         
     recipeResult = ""
     recipeQty = ""
 
-    tableID = tableHash.search(stationTuple[TUPLE_TABLE_NAME], SCRAPING_TABLE_ID)
-    if tableID == NOT_FOUND:
-        print("Table ID for '" + stationTuple[TUPLE_TABLE_NAME] + "' not found. Aborting Process.")
-        logFile.write("TABLE ERROR: Table ID not found. Aborted proccess.\n")
-        logFile.write("Execution failed returning value 1.\n")
-        logFile.close()
-        return
-    else:
-        logFile.write("Table ID (" + tableID + ") found. Starting execution.\n\n")
+    rows = tableHTML.findAll("tr")
+    tableHead = getTableColumns(rows[0], scrappingData)
 
     for row in rows[1::]:
         recipeDict = {
@@ -198,11 +205,31 @@ def getCraftingRecipes(stationTuple, craftDictList, itemList, itemHash, tableHas
         recipesCounter += 1
             
     insertRecipeOnJSON(writeFileStructure, itemList, logFile)
-    
-    print("Successful operation. Exiting with value 0.\n")
-    logFile.write("Successful operation. Exiting with value 0.\n")
-    logFile.close()
 
+# Gets every table HTML with the javascript function loaded
+def getJavascriptTableHTML(urlSuffix):
+
+    print("Opening web-page in Firefox Webdriver...")
+    with closing(Firefox()) as webBrowser:
+        URL = "https://terraria.gamepedia.com" + urlSuffix
+        webBrowser.get(URL)
+        button = webBrowser.find_element_by_class_name("showLinkHere")
+        button.click()
+        WebDriverWait(webBrowser, timeout=10).until(
+            lambda x: x.find_element_by_xpath('//*[@id="ajaxTable0"]/tbody/tr[2]/td/div/div[1]/div/table')
+        )
+        pageSource = webBrowser.page_source
+        
+    tableList = []
+    html = BeautifulSoup(pageSource, 'html.parser')
+    if html:
+        divList = html.findAll("div", class_="crafts")
+        for divTag in divList:
+            if divTag.find("caption"):
+                tableList.append(divTag.find("table", class_=SORTABLE_TABLE_CLASS))
+    return tableList
+
+# Gets every table URL suffix
 def getTableLinks():
     stationLinks = []
     craftingStationTables = getTableContent(MAIN_CRAFTING_STATION_SUFFIX, TERRARIA_TABLE_CLASS) 
@@ -219,6 +246,15 @@ def getTableLinks():
                 stationLinks.append((tableColumn.a['title'], tableColumn.a['href']))
     return stationLinks
             
+# Finds every crafting recipe table inside the page
+def findEveryRecipeTable(urlSuffix, tableClass):
+    recipeTableList = []
+    tableList = getTableContent(urlSuffix, tableClass)
+    for tableInstance in tableList:
+        if tableInstance.find("caption"):
+            recipeTableList.append(tableInstance)
+    return recipeTableList
+
 def main():
     craftDictList = []
     recipeCounter = 1
@@ -226,10 +262,36 @@ def main():
     itemHash, tableHash = initializeHashTables(itemList)
     stationTupleList = getTableLinks()
     for stationTuple in stationTupleList:
-        # adm corno
-        if stationTuple[TUPLE_TABLE_URL] not in javascriptTables:
-            getCraftingRecipes(stationTuple, craftDictList, itemList, itemHash, tableHash, recipeCounter)
-            recipeCounter = len(craftDictList)+1
+        if stationTuple[TUPLE_TABLE_URL] not in exceptionTables:
+            recipeTableList = []
+
+            # Scrap initial setup
+            print("Starting processing '" + stationTuple[TUPLE_TABLE_NAME] + "'s page...")
+            logFile = createLogFile(stationTuple[TUPLE_TABLE_NAME])
+            tableID = findTableID(stationTuple[TUPLE_TABLE_NAME], tableHash, logFile)
+            if tableID == NOT_FOUND:
+                print("Scrapping proccess failed. Exiting with value 1. (tableID_NOT_FOUND).\n")
+                logFile.write("FATAL ERROR: Table not found. Exiting with value 1.\n")
+                continue
+
+            # If the table isn't loaded by javascript
+            if stationTuple[TUPLE_TABLE_URL] not in javascriptTables:
+                recipeTableList = findEveryRecipeTable(stationTuple[TUPLE_TABLE_URL], SORTABLE_TABLE_CLASS)
+
+            # Exception when the table is loaded externally by a javascript function
+            else:
+                print("External Javascript function detected.")
+                recipeTableList = getJavascriptTableHTML(stationTuple[TUPLE_TABLE_URL])
+
+            # Scraps every recipe from each table
+            for tableHTML in recipeTableList:
+                getCraftingRecipes(stationTuple, craftDictList, itemList, itemHash, recipeCounter, tableHTML, tableID, logFile)
+                recipeCounter = len(craftDictList)+1
+            
+            print("Successful operation. Exiting with value 0.\n")
+            logFile.write("Successful operation. Exiting with value 0.\n")
+            logFile.close()
+
     SaveJSONFile(RECIPE_JSON_PATH, craftDictList)
 
 if __name__ == "__main__":

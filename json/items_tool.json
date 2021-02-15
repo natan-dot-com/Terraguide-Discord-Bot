@@ -15,10 +15,10 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "571",
-                "572",
-                "925",
-                "926"
+                "1356",
+                "1357",
+                "1714",
+                "1715"
             ],
             "NPC": [],
             "Drop": [],
@@ -42,10 +42,10 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "567",
-                "568",
-                "921",
-                "922"
+                "1352",
+                "1353",
+                "1710",
+                "1711"
             ],
             "NPC": [],
             "Drop": [],
@@ -69,10 +69,10 @@
         "Axe power": "45%",
         "Sources": {
             "Crafting Recipes": [
-                "556",
-                "557",
-                "910",
-                "911"
+                "1341",
+                "1342",
+                "1699",
+                "1700"
             ],
             "NPC": [],
             "Drop": [],
@@ -96,8 +96,8 @@
         "Axe power": "75%",
         "Sources": {
             "Crafting Recipes": [
-                "773",
-                "1127"
+                "1558",
+                "1916"
             ],
             "NPC": [],
             "Drop": [],
@@ -138,8 +138,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "632",
-                "986"
+                "1417",
+                "1775"
             ],
             "NPC": [],
             "Drop": [],
@@ -163,8 +163,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "726",
-                "1080"
+                "1511",
+                "1869"
             ],
             "NPC": [],
             "Drop": [],
@@ -188,8 +188,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "629",
-                "983"
+                "1414",
+                "1772"
             ],
             "NPC": [],
             "Drop": [],
@@ -213,7 +213,9 @@
         "Hammer power": "25%",
         "Axe power": "0%",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "923"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -236,10 +238,10 @@
         "Axe power": "100%",
         "Sources": {
             "Crafting Recipes": [
-                "612",
-                "613",
-                "966",
-                "967"
+                "1397",
+                "1398",
+                "1755",
+                "1756"
             ],
             "NPC": [],
             "Drop": [],
@@ -254,8 +256,8 @@
         "Rarity": "0",
         "Sources": {
             "Crafting Recipes": [
-                "511",
-                "865"
+                "1296",
+                "1654"
             ],
             "NPC": [],
             "Drop": [],
@@ -325,8 +327,8 @@
         "Axe power": "150%",
         "Sources": {
             "Crafting Recipes": [
-                "627",
-                "981"
+                "1412",
+                "1770"
             ],
             "NPC": [],
             "Drop": [],
@@ -375,8 +377,8 @@
         "Axe power": "70%",
         "Sources": {
             "Crafting Recipes": [
-                "466",
-                "820"
+                "1251",
+                "1609"
             ],
             "NPC": [],
             "Drop": [],
@@ -402,8 +404,8 @@
         "Axe power": "85%",
         "Sources": {
             "Crafting Recipes": [
-                "2077",
-                "2285"
+                "3055",
+                "3263"
             ],
             "NPC": [],
             "Drop": [],
@@ -430,8 +432,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "467",
-                "821"
+                "1252",
+                "1610"
             ],
             "NPC": [],
             "Drop": [],
@@ -458,8 +460,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "2078",
-                "2286"
+                "3056",
+                "3264"
             ],
             "NPC": [],
             "Drop": [],
@@ -485,8 +487,8 @@
         "Axe power": "100%",
         "Sources": {
             "Crafting Recipes": [
-                "1964",
-                "2172"
+                "2942",
+                "3150"
             ],
             "NPC": [],
             "Drop": [],
@@ -512,8 +514,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "1965",
-                "2173"
+                "2943",
+                "3151"
             ],
             "NPC": [],
             "Drop": [],
@@ -573,8 +575,8 @@
         "Axe power": "110%",
         "Sources": {
             "Crafting Recipes": [
-                "2016",
-                "2224"
+                "2994",
+                "3202"
             ],
             "NPC": [],
             "Drop": [],
@@ -597,7 +599,9 @@
         "Hammer power": "40%",
         "Axe power": "0%",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "502"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -619,7 +623,9 @@
         "Hammer power": "35%",
         "Axe power": "0%",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "768"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -641,7 +647,9 @@
         "Hammer power": "45%",
         "Axe power": "0%",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "707"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -665,8 +673,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "473",
-                "827"
+                "1258",
+                "1616"
             ],
             "NPC": [],
             "Drop": [],
@@ -691,8 +699,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "2084",
-                "2292"
+                "3062",
+                "3270"
             ],
             "NPC": [],
             "Drop": [],
@@ -716,8 +724,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "1972",
-                "2180"
+                "2950",
+                "3158"
             ],
             "NPC": [],
             "Drop": [],
@@ -782,8 +790,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "515",
-                "869"
+                "1300",
+                "1658"
             ],
             "NPC": [],
             "Drop": [],
@@ -808,8 +816,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "501",
-                "855"
+                "1286",
+                "1644"
             ],
             "NPC": [],
             "Drop": [],
@@ -833,8 +841,8 @@
         "Axe power": "75%",
         "Sources": {
             "Crafting Recipes": [
-                "454",
-                "808"
+                "1239",
+                "1597"
             ],
             "NPC": [],
             "Drop": [],
@@ -906,7 +914,9 @@
         "Hammer power": "0%",
         "Axe power": "0%",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "425"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -928,7 +938,9 @@
         "Hammer power": "40%",
         "Axe power": "0%",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "814"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1005,8 +1017,8 @@
         "Axe power": "110%",
         "Sources": {
             "Crafting Recipes": [
-                "2107",
-                "2315"
+                "3085",
+                "3293"
             ],
             "NPC": [],
             "Drop": [],
@@ -1030,8 +1042,8 @@
         "Axe power": "70%",
         "Sources": {
             "Crafting Recipes": [
-                "477",
-                "831"
+                "1262",
+                "1620"
             ],
             "NPC": [],
             "Drop": [],
@@ -1055,8 +1067,8 @@
         "Axe power": "85%",
         "Sources": {
             "Crafting Recipes": [
-                "2088",
-                "2296"
+                "3066",
+                "3274"
             ],
             "NPC": [],
             "Drop": [],
@@ -1080,8 +1092,8 @@
         "Axe power": "100%",
         "Sources": {
             "Crafting Recipes": [
-                "1975",
-                "2183"
+                "2953",
+                "3161"
             ],
             "NPC": [],
             "Drop": [],
@@ -1184,8 +1196,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "643",
-                "997"
+                "1428",
+                "1786"
             ],
             "NPC": [],
             "Drop": [],
@@ -1212,8 +1224,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "638",
-                "992"
+                "1423",
+                "1781"
             ],
             "NPC": [],
             "Drop": [],
@@ -1239,8 +1251,8 @@
         "Axe power": "75%",
         "Sources": {
             "Crafting Recipes": [
-                "637",
-                "991"
+                "1422",
+                "1780"
             ],
             "NPC": [],
             "Drop": [],
@@ -1265,8 +1277,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "2102",
-                "2310"
+                "3080",
+                "3288"
             ],
             "NPC": [],
             "Drop": [],
@@ -1293,8 +1305,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "2096",
-                "2304"
+                "3074",
+                "3282"
             ],
             "NPC": [],
             "Drop": [],
@@ -1320,8 +1332,8 @@
         "Axe power": "90%",
         "Sources": {
             "Crafting Recipes": [
-                "2095",
-                "2303"
+                "3073",
+                "3281"
             ],
             "NPC": [],
             "Drop": [],
@@ -1345,8 +1357,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "2154",
-                "2362"
+                "3132",
+                "3340"
             ],
             "NPC": [],
             "Drop": [],
@@ -1372,8 +1384,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "2148",
-                "2356"
+                "3126",
+                "3334"
             ],
             "NPC": [],
             "Drop": [],
@@ -1399,8 +1411,8 @@
         "Axe power": "105%",
         "Sources": {
             "Crafting Recipes": [
-                "2147",
-                "2355"
+                "3125",
+                "3333"
             ],
             "NPC": [],
             "Drop": [],
@@ -1424,8 +1436,8 @@
         "Axe power": "75%",
         "Sources": {
             "Crafting Recipes": [
-                "648",
-                "1002"
+                "1433",
+                "1791"
             ],
             "NPC": [],
             "Drop": [],
@@ -1449,8 +1461,8 @@
         "Axe power": "90%",
         "Sources": {
             "Crafting Recipes": [
-                "2106",
-                "2314"
+                "3084",
+                "3292"
             ],
             "NPC": [],
             "Drop": [],
@@ -1474,8 +1486,8 @@
         "Axe power": "105%",
         "Sources": {
             "Crafting Recipes": [
-                "2158",
-                "2366"
+                "3136",
+                "3344"
             ],
             "NPC": [],
             "Drop": [],
@@ -1500,8 +1512,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "2002",
-                "2210"
+                "2980",
+                "3188"
             ],
             "NPC": [],
             "Drop": [],
@@ -1526,8 +1538,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "1994",
-                "2202"
+                "2972",
+                "3180"
             ],
             "NPC": [],
             "Drop": [],
@@ -1552,8 +1564,8 @@
         "Axe power": "115%",
         "Sources": {
             "Crafting Recipes": [
-                "1992",
-                "2200"
+                "2970",
+                "3178"
             ],
             "NPC": [],
             "Drop": [],
@@ -1578,8 +1590,8 @@
         "Axe power": "115%",
         "Sources": {
             "Crafting Recipes": [
-                "1995",
-                "2203"
+                "2973",
+                "3181"
             ],
             "NPC": [],
             "Drop": [],
@@ -1604,8 +1616,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "2006",
-                "2214"
+                "2984",
+                "3192"
             ],
             "NPC": [],
             "Drop": [],
@@ -1631,8 +1643,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "1999",
-                "2207"
+                "2977",
+                "3185"
             ],
             "NPC": [],
             "Drop": [],
@@ -1742,10 +1754,10 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "2135",
-                "2136",
-                "2343",
-                "2344"
+                "3113",
+                "3114",
+                "3321",
+                "3322"
             ],
             "NPC": [],
             "Drop": [],
@@ -1770,10 +1782,10 @@
         "Axe power": "150%",
         "Sources": {
             "Crafting Recipes": [
-                "2121",
-                "2122",
-                "2329",
-                "2330"
+                "3099",
+                "3100",
+                "3307",
+                "3308"
             ],
             "NPC": [],
             "Drop": [],
@@ -1792,10 +1804,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2131",
-                "2132",
-                "2339",
-                "2340"
+                "3109",
+                "3110",
+                "3317",
+                "3318"
             ],
             "NPC": [],
             "Drop": [],
@@ -1814,10 +1826,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2127",
-                "2128",
-                "2335",
-                "2336"
+                "3105",
+                "3106",
+                "3313",
+                "3314"
             ],
             "NPC": [],
             "Drop": [],
@@ -1836,10 +1848,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2129",
-                "2130",
-                "2337",
-                "2338"
+                "3107",
+                "3108",
+                "3315",
+                "3316"
             ],
             "NPC": [],
             "Drop": [],
@@ -1922,8 +1934,8 @@
         "Axe power": "125%",
         "Sources": {
             "Crafting Recipes": [
-                "2114",
-                "2322"
+                "3092",
+                "3300"
             ],
             "NPC": [],
             "Drop": [],
@@ -1938,7 +1950,9 @@
         "Velocity": "9",
         "Fishing Power": "5%",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "913"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1954,8 +1968,8 @@
         "Fishing Power": "15%",
         "Sources": {
             "Crafting Recipes": [
-                "681",
-                "1035"
+                "1466",
+                "1824"
             ],
             "NPC": [],
             "Drop": [],
@@ -1987,8 +2001,8 @@
         "Fishing Power": "20%",
         "Sources": {
             "Crafting Recipes": [
-                "513",
-                "867"
+                "1298",
+                "1656"
             ],
             "NPC": [],
             "Drop": [],
@@ -2118,8 +2132,8 @@
         "Fishing Power": "22%",
         "Sources": {
             "Crafting Recipes": [
-                "516",
-                "870"
+                "1301",
+                "1659"
             ],
             "NPC": [],
             "Drop": [],
@@ -2158,7 +2172,9 @@
         "Hammer power": "35%",
         "Axe power": "0%",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "683"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -2180,7 +2196,9 @@
         "Hammer power": "35%",
         "Axe power": "0%",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "396"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -2250,7 +2268,7 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "2536"
+                "3684"
             ],
             "NPC": [],
             "Drop": [],
@@ -2297,7 +2315,7 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "2546"
+                "3694"
             ],
             "NPC": [],
             "Drop": [],
@@ -2368,7 +2386,7 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "2439"
+                "3587"
             ],
             "NPC": [],
             "Drop": [],
@@ -2415,7 +2433,7 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "2450"
+                "3598"
             ],
             "NPC": [],
             "Drop": [],
@@ -2486,7 +2504,7 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "2471"
+                "3619"
             ],
             "NPC": [],
             "Drop": [],
@@ -2533,7 +2551,7 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "2475"
+                "3623"
             ],
             "NPC": [],
             "Drop": [],
@@ -2634,8 +2652,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "1558",
-                "1559"
+                "2500",
+                "2501"
             ],
             "NPC": [],
             "Drop": [],
@@ -2651,7 +2669,11 @@
         "Rarity": "0",
         "Sell": "40 Copper Coins",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "2063",
+                "3555",
+                "3943"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -2682,7 +2704,10 @@
         "Rarity": "0",
         "Sell": "40 Copper Coins",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "3560",
+                "3951"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -2697,7 +2722,10 @@
         "Rarity": "0",
         "Sell": "40 Copper Coins",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "3562",
+                "3957"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -2834,7 +2862,7 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "2502"
+                "3650"
             ],
             "NPC": [],
             "Drop": [],
@@ -2881,7 +2909,7 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "2512"
+                "3660"
             ],
             "NPC": [],
             "Drop": [],
@@ -2905,10 +2933,10 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "664",
-                "665",
-                "1018",
-                "1019"
+                "1449",
+                "1450",
+                "1807",
+                "1808"
             ],
             "NPC": [],
             "Drop": [],
@@ -2932,10 +2960,10 @@
         "Axe power": "60%",
         "Sources": {
             "Crafting Recipes": [
-                "653",
-                "654",
-                "1007",
-                "1008"
+                "1438",
+                "1439",
+                "1796",
+                "1797"
             ],
             "NPC": [],
             "Drop": [],
@@ -2960,10 +2988,10 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "668",
-                "669",
-                "1022",
-                "1023"
+                "1453",
+                "1454",
+                "1811",
+                "1812"
             ],
             "NPC": [],
             "Drop": [],
@@ -2987,10 +3015,10 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "765",
-                "766",
-                "1119",
-                "1120"
+                "1550",
+                "1551",
+                "1908",
+                "1909"
             ],
             "NPC": [],
             "Drop": [],
@@ -3014,10 +3042,10 @@
         "Axe power": "55%",
         "Sources": {
             "Crafting Recipes": [
-                "755",
-                "756",
-                "1109",
-                "1110"
+                "1540",
+                "1541",
+                "1898",
+                "1899"
             ],
             "NPC": [],
             "Drop": [],
@@ -3042,10 +3070,10 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "769",
-                "770",
-                "1123",
-                "1124"
+                "1554",
+                "1555",
+                "1912",
+                "1913"
             ],
             "NPC": [],
             "Drop": [],
@@ -3069,10 +3097,10 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "599",
-                "600",
-                "953",
-                "954"
+                "1384",
+                "1385",
+                "1742",
+                "1743"
             ],
             "NPC": [],
             "Drop": [],
@@ -3096,10 +3124,10 @@
         "Axe power": "50%",
         "Sources": {
             "Crafting Recipes": [
-                "588",
-                "589",
-                "942",
-                "943"
+                "1373",
+                "1374",
+                "1731",
+                "1732"
             ],
             "NPC": [],
             "Drop": [],
@@ -3123,10 +3151,10 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "603",
-                "604",
-                "957",
-                "958"
+                "1388",
+                "1389",
+                "1746",
+                "1747"
             ],
             "NPC": [],
             "Drop": [],
@@ -3150,10 +3178,10 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "742",
-                "743",
-                "1096",
-                "1097"
+                "1527",
+                "1528",
+                "1885",
+                "1886"
             ],
             "NPC": [],
             "Drop": [],
@@ -3177,10 +3205,10 @@
         "Axe power": "40%",
         "Sources": {
             "Crafting Recipes": [
-                "732",
-                "733",
-                "1086",
-                "1087"
+                "1517",
+                "1518",
+                "1875",
+                "1876"
             ],
             "NPC": [],
             "Drop": [],
@@ -3204,10 +3232,10 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "746",
-                "747",
-                "1100",
-                "1101"
+                "1531",
+                "1532",
+                "1889",
+                "1890"
             ],
             "NPC": [],
             "Drop": [],
@@ -3232,10 +3260,10 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "489",
-                "490",
-                "843",
-                "844"
+                "1274",
+                "1275",
+                "1632",
+                "1633"
             ],
             "NPC": [],
             "Drop": [],
@@ -3260,10 +3288,10 @@
         "Axe power": "35%",
         "Sources": {
             "Crafting Recipes": [
-                "479",
-                "480",
-                "833",
-                "834"
+                "1264",
+                "1265",
+                "1622",
+                "1623"
             ],
             "NPC": [],
             "Drop": [],
@@ -3288,10 +3316,10 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "493",
-                "494",
-                "847",
-                "848"
+                "1278",
+                "1279",
+                "1636",
+                "1637"
             ],
             "NPC": [],
             "Drop": [],
@@ -3315,10 +3343,10 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "706",
-                "707",
-                "1060",
-                "1061"
+                "1491",
+                "1492",
+                "1849",
+                "1850"
             ],
             "NPC": [],
             "Drop": [],
@@ -3342,10 +3370,10 @@
         "Axe power": "50%",
         "Sources": {
             "Crafting Recipes": [
-                "696",
-                "697",
-                "1050",
-                "1051"
+                "1481",
+                "1482",
+                "1839",
+                "1840"
             ],
             "NPC": [],
             "Drop": [],
@@ -3369,10 +3397,10 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "710",
-                "711",
-                "1064",
-                "1065"
+                "1495",
+                "1496",
+                "1853",
+                "1854"
             ],
             "NPC": [],
             "Drop": [],
@@ -3396,10 +3424,10 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "536",
-                "537",
-                "890",
-                "891"
+                "1321",
+                "1322",
+                "1679",
+                "1680"
             ],
             "NPC": [],
             "Drop": [],
@@ -3423,10 +3451,10 @@
         "Axe power": "55%",
         "Sources": {
             "Crafting Recipes": [
-                "525",
-                "526",
-                "879",
-                "880"
+                "1310",
+                "1311",
+                "1668",
+                "1669"
             ],
             "NPC": [],
             "Drop": [],
@@ -3451,10 +3479,10 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "540",
-                "541",
-                "894",
-                "895"
+                "1325",
+                "1326",
+                "1683",
+                "1684"
             ],
             "NPC": [],
             "Drop": [],
@@ -3479,7 +3507,7 @@
         "Axe power": "150%",
         "Sources": {
             "Crafting Recipes": [
-                "2472"
+                "3620"
             ],
             "NPC": [],
             "Drop": [],
@@ -3504,7 +3532,7 @@
         "Axe power": "150%",
         "Sources": {
             "Crafting Recipes": [
-                "2539"
+                "3687"
             ],
             "NPC": [],
             "Drop": [],
@@ -3529,7 +3557,7 @@
         "Axe power": "150%",
         "Sources": {
             "Crafting Recipes": [
-                "2442"
+                "3590"
             ],
             "NPC": [],
             "Drop": [],
@@ -3554,7 +3582,7 @@
         "Axe power": "150%",
         "Sources": {
             "Crafting Recipes": [
-                "2505"
+                "3653"
             ],
             "NPC": [],
             "Drop": [],
@@ -3573,7 +3601,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "1638"
+                "2580"
             ],
             "NPC": [],
             "Drop": [],
@@ -3608,8 +3636,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "433",
-                "787"
+                "1218",
+                "1576"
             ],
             "NPC": [],
             "Drop": [],
@@ -3628,7 +3656,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "1610"
+                "2552"
             ],
             "NPC": [],
             "Drop": [],
@@ -3645,7 +3673,7 @@
         "Sell": "40 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "2411"
+                "3551"
             ],
             "NPC": [],
             "Drop": [],
@@ -3715,8 +3743,8 @@
         "Axe power": "0%",
         "Sources": {
             "Crafting Recipes": [
-                "521",
-                "875"
+                "1306",
+                "1664"
             ],
             "NPC": [],
             "Drop": [],
@@ -4141,7 +4169,9 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "420"
+                "1132",
+                "3366",
+                "3455"
             ],
             "NPC": [],
             "Drop": [],

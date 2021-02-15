@@ -49,7 +49,10 @@
         "Creates": "Grass",
         "Planted In": "Dirt",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "986",
+                "987"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -87,7 +90,10 @@
         "Creates": "Jungle",
         "Planted In": "Mud",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "1009",
+                "1010"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],

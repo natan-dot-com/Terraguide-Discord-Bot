@@ -11,8 +11,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "560",
-                "914"
+                "1345",
+                "1703"
             ],
             "NPC": [],
             "Drop": [],
@@ -33,10 +33,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "573",
-                "574",
-                "927",
-                "928"
+                "1358",
+                "1359",
+                "1716",
+                "1717"
             ],
             "NPC": [],
             "Drop": [],
@@ -55,7 +55,9 @@
         "Sell": "20 Copper Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "925"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -74,7 +76,9 @@
         "Sell": "20 Copper Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "919"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -113,8 +117,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "502",
-                "856"
+                "1287",
+                "1645"
             ],
             "NPC": [],
             "Drop": [],
@@ -134,8 +138,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "607",
-                "961"
+                "1392",
+                "1750"
             ],
             "NPC": [],
             "Drop": [],
@@ -276,8 +280,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "559",
-                "913"
+                "1344",
+                "1702"
             ],
             "NPC": [],
             "Drop": [],
@@ -340,8 +344,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "514",
-                "868"
+                "1299",
+                "1657"
             ],
             "NPC": [],
             "Drop": [],
@@ -363,8 +367,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "625",
-                "979"
+                "1410",
+                "1768"
             ],
             "NPC": [],
             "Drop": [],
@@ -385,8 +389,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "512",
-                "866"
+                "1297",
+                "1655"
             ],
             "NPC": [],
             "Drop": [],
@@ -408,12 +412,12 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "714",
-                "715",
-                "716",
-                "1068",
-                "1069",
-                "1070"
+                "1499",
+                "1500",
+                "1501",
+                "1857",
+                "1858",
+                "1859"
             ],
             "NPC": [],
             "Drop": [],
@@ -435,8 +439,9 @@
         "Sources": {
             "Crafting Recipes": [
                 "24",
-                "2558",
-                "2559"
+                "380",
+                "3706",
+                "3707"
             ],
             "NPC": [],
             "Drop": [],
@@ -691,10 +696,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "451",
-                "452",
-                "805",
-                "806"
+                "1236",
+                "1237",
+                "1594",
+                "1595"
             ],
             "NPC": [],
             "Drop": [],
@@ -715,10 +720,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "728",
-                "729",
-                "1082",
-                "1083"
+                "1513",
+                "1514",
+                "1871",
+                "1872"
             ],
             "NPC": [],
             "Drop": [],
@@ -740,8 +745,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "723",
-                "1077"
+                "1508",
+                "1866"
             ],
             "NPC": [],
             "Drop": [],
@@ -761,10 +766,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "455",
-                "456",
-                "809",
-                "810"
+                "1240",
+                "1241",
+                "1598",
+                "1599"
             ],
             "NPC": [],
             "Drop": [],
@@ -784,10 +789,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "678",
-                "679",
-                "1032",
-                "1033"
+                "1463",
+                "1464",
+                "1821",
+                "1822"
             ],
             "NPC": [],
             "Drop": [],
@@ -807,10 +812,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "547",
-                "548",
-                "901",
-                "902"
+                "1332",
+                "1333",
+                "1690",
+                "1691"
             ],
             "NPC": [],
             "Drop": [],
@@ -830,10 +835,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "674",
-                "675",
-                "1028",
-                "1029"
+                "1459",
+                "1460",
+                "1817",
+                "1818"
             ],
             "NPC": [],
             "Drop": [],
@@ -853,10 +858,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "775",
-                "776",
-                "1129",
-                "1130"
+                "1560",
+                "1561",
+                "1918",
+                "1919"
             ],
             "NPC": [],
             "Drop": [],
@@ -876,10 +881,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "778",
-                "779",
-                "1132",
-                "1133"
+                "1563",
+                "1564",
+                "1921",
+                "1922"
             ],
             "NPC": [],
             "Drop": [],
@@ -921,8 +926,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "652",
-                "1006"
+                "1437",
+                "1795"
             ],
             "NPC": [],
             "Drop": [],
@@ -985,7 +990,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "404"
+                "1116",
+                "1197",
+                "3431",
+                "3520"
             ],
             "NPC": [],
             "Drop": [],
@@ -1026,10 +1034,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "1930",
-                "1931",
-                "1951",
-                "1952"
+                "2908",
+                "2909",
+                "2929",
+                "2930"
             ],
             "NPC": [],
             "Drop": [],
@@ -1188,8 +1196,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2019",
-                "2227"
+                "2997",
+                "3205"
             ],
             "NPC": [],
             "Drop": [],
@@ -1211,8 +1219,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2014",
-                "2222"
+                "2992",
+                "3200"
             ],
             "NPC": [],
             "Drop": [],
@@ -1233,8 +1241,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2080",
-                "2288"
+                "3058",
+                "3266"
             ],
             "NPC": [],
             "Drop": [],
@@ -1255,8 +1263,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "1967",
-                "2175"
+                "2945",
+                "3153"
             ],
             "NPC": [],
             "Drop": [],
@@ -1316,8 +1324,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "474",
-                "828"
+                "1259",
+                "1617"
             ],
             "NPC": [],
             "Drop": [],
@@ -1338,8 +1346,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2085",
-                "2293"
+                "3063",
+                "3271"
             ],
             "NPC": [],
             "Drop": [],
@@ -1360,8 +1368,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "1973",
-                "2181"
+                "2951",
+                "3159"
             ],
             "NPC": [],
             "Drop": [],
@@ -1381,8 +1389,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "1974",
-                "2182"
+                "2952",
+                "3160"
             ],
             "NPC": [],
             "Drop": [],
@@ -1402,10 +1410,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "475",
-                "476",
-                "829",
-                "830"
+                "1260",
+                "1261",
+                "1618",
+                "1619"
             ],
             "NPC": [],
             "Drop": [],
@@ -1425,10 +1433,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2086",
-                "2087",
-                "2294",
-                "2295"
+                "3064",
+                "3065",
+                "3272",
+                "3273"
             ],
             "NPC": [],
             "Drop": [],
@@ -1469,10 +1477,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2067",
-                "2068",
-                "2275",
-                "2276"
+                "3045",
+                "3046",
+                "3253",
+                "3254"
             ],
             "NPC": [],
             "Drop": [],
@@ -1495,10 +1503,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2110",
-                "2111",
-                "2318",
-                "2319"
+                "3088",
+                "3089",
+                "3296",
+                "3297"
             ],
             "NPC": [],
             "Drop": [],
@@ -1542,8 +1550,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2024",
-                "2232"
+                "3002",
+                "3210"
             ],
             "NPC": [],
             "Drop": [],
@@ -1607,8 +1615,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2395",
-                "2396"
+                "3535",
+                "3536"
             ],
             "NPC": [],
             "Drop": [],
@@ -1631,8 +1639,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2397",
-                "2398"
+                "3537",
+                "3538"
             ],
             "NPC": [],
             "Drop": [],
@@ -1654,8 +1662,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2074",
-                "2282"
+                "3052",
+                "3260"
             ],
             "NPC": [],
             "Drop": [],
@@ -1696,8 +1704,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "472",
-                "826"
+                "1257",
+                "1615"
             ],
             "NPC": [],
             "Drop": [],
@@ -1718,8 +1726,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2042",
-                "2250"
+                "3020",
+                "3228"
             ],
             "NPC": [],
             "Drop": [],
@@ -1741,8 +1749,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2059",
-                "2267"
+                "3037",
+                "3245"
             ],
             "NPC": [],
             "Drop": [],
@@ -1763,8 +1771,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2050",
-                "2258"
+                "3028",
+                "3236"
             ],
             "NPC": [],
             "Drop": [],
@@ -1783,7 +1791,9 @@
         "Sell": "20 Copper Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "507"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1802,7 +1812,9 @@
         "Sell": "20 Copper Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "493"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1820,7 +1832,9 @@
         "Sell": "20 Copper Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "773"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1839,7 +1853,9 @@
         "Sell": "20 Copper Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "759"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1857,7 +1873,9 @@
         "Sell": "20 Copper Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "712"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1876,7 +1894,9 @@
         "Sell": "20 Copper Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "698"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1952,10 +1972,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2159",
-                "2160",
-                "2367",
-                "2368"
+                "3137",
+                "3138",
+                "3345",
+                "3346"
             ],
             "NPC": [],
             "Drop": [],
@@ -1976,10 +1996,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2161",
-                "2162",
-                "2369",
-                "2370"
+                "3139",
+                "3140",
+                "3347",
+                "3348"
             ],
             "NPC": [],
             "Drop": [],
@@ -2161,8 +2181,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "441",
-                "795"
+                "1226",
+                "1584"
             ],
             "NPC": [],
             "Drop": [],
@@ -2184,8 +2204,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "753",
-                "1107"
+                "1538",
+                "1896"
             ],
             "NPC": [],
             "Drop": [],
@@ -2207,8 +2227,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "690",
-                "1044"
+                "1475",
+                "1833"
             ],
             "NPC": [],
             "Drop": [],
@@ -2230,8 +2250,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "510",
-                "864"
+                "1295",
+                "1653"
             ],
             "NPC": [],
             "Drop": [],
@@ -2253,8 +2273,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "686",
-                "1040"
+                "1471",
+                "1829"
             ],
             "NPC": [],
             "Drop": [],
@@ -2276,8 +2296,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "505",
-                "859"
+                "1290",
+                "1648"
             ],
             "NPC": [],
             "Drop": [],
@@ -2317,10 +2337,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2144",
-                "2145",
-                "2352",
-                "2353"
+                "3122",
+                "3123",
+                "3330",
+                "3331"
             ],
             "NPC": [],
             "Drop": [],
@@ -2420,8 +2440,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "453",
-                "807"
+                "1238",
+                "1596"
             ],
             "NPC": [],
             "Drop": [],
@@ -2442,8 +2462,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "724",
-                "1078"
+                "1509",
+                "1867"
             ],
             "NPC": [],
             "Drop": [],
@@ -2483,8 +2503,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "727",
-                "1081"
+                "1512",
+                "1870"
             ],
             "NPC": [],
             "Drop": [],
@@ -2522,7 +2542,9 @@
         "Sell": "3 Silver 60 Copper Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "428"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -2560,7 +2582,9 @@
         "Sell": "20 Copper Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "819"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -2579,7 +2603,9 @@
         "Sell": "20 Copper Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "805"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -2738,8 +2764,8 @@
         "Research": "99 required",
         "Sources": {
             "Crafting Recipes": [
-                "449",
-                "803"
+                "1234",
+                "1592"
             ],
             "NPC": [],
             "Drop": [],
@@ -2859,10 +2885,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "646",
-                "647",
-                "1000",
-                "1001"
+                "1431",
+                "1432",
+                "1789",
+                "1790"
             ],
             "NPC": [],
             "Drop": [],
@@ -2883,8 +2909,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "644",
-                "998"
+                "1429",
+                "1787"
             ],
             "NPC": [],
             "Drop": [],
@@ -2905,8 +2931,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "645",
-                "999"
+                "1430",
+                "1788"
             ],
             "NPC": [],
             "Drop": [],
@@ -2926,10 +2952,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2104",
-                "2105",
-                "2312",
-                "2313"
+                "3082",
+                "3083",
+                "3290",
+                "3291"
             ],
             "NPC": [],
             "Drop": [],
@@ -2950,8 +2976,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2097",
-                "2305"
+                "3075",
+                "3283"
             ],
             "NPC": [],
             "Drop": [],
@@ -2972,8 +2998,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2103",
-                "2311"
+                "3081",
+                "3289"
             ],
             "NPC": [],
             "Drop": [],
@@ -2993,8 +3019,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2156",
-                "2364"
+                "3134",
+                "3342"
             ],
             "NPC": [],
             "Drop": [],
@@ -3015,8 +3041,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2157",
-                "2365"
+                "3135",
+                "3343"
             ],
             "NPC": [],
             "Drop": [],
@@ -3037,8 +3063,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2155",
-                "2363"
+                "3133",
+                "3341"
             ],
             "NPC": [],
             "Drop": [],
@@ -3060,8 +3086,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "1993",
-                "2201"
+                "2971",
+                "3179"
             ],
             "NPC": [],
             "Drop": [],
@@ -3083,8 +3109,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2004",
-                "2212"
+                "2982",
+                "3190"
             ],
             "NPC": [],
             "Drop": [],
@@ -3106,8 +3132,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2001",
-                "2209"
+                "2979",
+                "3187"
             ],
             "NPC": [],
             "Drop": [],
@@ -3128,8 +3154,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2005",
-                "2213"
+                "2983",
+                "3191"
             ],
             "NPC": [],
             "Drop": [],
@@ -3615,8 +3641,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2399",
-                "2400"
+                "3539",
+                "3540"
             ],
             "NPC": [],
             "Drop": [],
@@ -4194,8 +4220,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2167",
-                "2375"
+                "3145",
+                "3353"
             ],
             "NPC": [],
             "Drop": [],
@@ -4350,8 +4376,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "553",
-                "907"
+                "1338",
+                "1696"
             ],
             "NPC": [],
             "Drop": [],
@@ -4373,8 +4399,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "554",
-                "908"
+                "1339",
+                "1697"
             ],
             "NPC": [],
             "Drop": [],
@@ -4396,8 +4422,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "677",
-                "1031"
+                "1462",
+                "1820"
             ],
             "NPC": [],
             "Drop": [],
@@ -4436,7 +4462,9 @@
         "Sell": "20 Copper Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "674"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -4454,7 +4482,9 @@
         "Sell": "20 Copper Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "688"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -4475,8 +4505,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2092",
-                "2300"
+                "3070",
+                "3278"
             ],
             "NPC": [],
             "Drop": [],
@@ -4498,8 +4528,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "721",
-                "1075"
+                "1506",
+                "1864"
             ],
             "NPC": [],
             "Drop": [],
@@ -4703,7 +4733,9 @@
         "Sell": "20 Copper Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "401"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -4722,7 +4754,9 @@
         "Sell": "20 Copper Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "387"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -4764,8 +4798,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2075",
-                "2283"
+                "3053",
+                "3261"
             ],
             "NPC": [],
             "Drop": [],
@@ -5557,7 +5591,9 @@
         "Sell": "1 Silver Coin",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "927"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -5577,8 +5613,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "608",
-                "962"
+                "1393",
+                "1751"
             ],
             "NPC": [],
             "Drop": [],
@@ -5599,8 +5635,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "443",
-                "797"
+                "1228",
+                "1586"
             ],
             "NPC": [],
             "Drop": [],
@@ -5621,10 +5657,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "434",
-                "435",
-                "788",
-                "789"
+                "1219",
+                "1220",
+                "1577",
+                "1578"
             ],
             "NPC": [],
             "Drop": [],
@@ -5664,8 +5700,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "1987",
-                "2195"
+                "2965",
+                "3173"
             ],
             "NPC": [],
             "Drop": [],
@@ -6010,8 +6046,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "438",
-                "792"
+                "1223",
+                "1581"
             ],
             "NPC": [],
             "Drop": [],
@@ -6032,10 +6068,10 @@
         "Research": "99 required",
         "Sources": {
             "Crafting Recipes": [
-                "458",
-                "459",
-                "812",
-                "813"
+                "1243",
+                "1244",
+                "1601",
+                "1602"
             ],
             "NPC": [],
             "Drop": [],
@@ -6056,10 +6092,10 @@
         "Research": "99 required",
         "Sources": {
             "Crafting Recipes": [
-                "460",
-                "461",
-                "814",
-                "815"
+                "1245",
+                "1246",
+                "1603",
+                "1604"
             ],
             "NPC": [],
             "Drop": [],
@@ -6100,7 +6136,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2469"
+                "3617"
             ],
             "NPC": [],
             "Drop": [],
@@ -6122,7 +6158,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2494"
+                "3642"
             ],
             "NPC": [],
             "Drop": [],
@@ -6144,7 +6180,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2522"
+                "3670"
             ],
             "NPC": [],
             "Drop": [],
@@ -6167,7 +6203,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2424"
+                "3572"
             ],
             "NPC": [],
             "Drop": [],
@@ -6188,8 +6224,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "655",
-                "1009"
+                "1440",
+                "1798"
             ],
             "NPC": [],
             "Drop": [],
@@ -6210,10 +6246,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "670",
-                "671",
-                "1024",
-                "1025"
+                "1455",
+                "1456",
+                "1813",
+                "1814"
             ],
             "NPC": [],
             "Drop": [],
@@ -6233,8 +6269,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "656",
-                "1010"
+                "1441",
+                "1799"
             ],
             "NPC": [],
             "Drop": [],
@@ -6255,8 +6291,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "757",
-                "1111"
+                "1542",
+                "1900"
             ],
             "NPC": [],
             "Drop": [],
@@ -6277,8 +6313,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "771",
-                "1125"
+                "1556",
+                "1914"
             ],
             "NPC": [],
             "Drop": [],
@@ -6298,8 +6334,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "758",
-                "1112"
+                "1543",
+                "1901"
             ],
             "NPC": [],
             "Drop": [],
@@ -6320,8 +6356,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "591",
-                "945"
+                "1376",
+                "1734"
             ],
             "NPC": [],
             "Drop": [],
@@ -6342,10 +6378,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "605",
-                "606",
-                "959",
-                "960"
+                "1390",
+                "1391",
+                "1748",
+                "1749"
             ],
             "NPC": [],
             "Drop": [],
@@ -6365,8 +6401,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "592",
-                "946"
+                "1377",
+                "1735"
             ],
             "NPC": [],
             "Drop": [],
@@ -6387,8 +6423,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "734",
-                "1088"
+                "1519",
+                "1877"
             ],
             "NPC": [],
             "Drop": [],
@@ -6409,10 +6445,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "748",
-                "749",
-                "1102",
-                "1103"
+                "1533",
+                "1534",
+                "1891",
+                "1892"
             ],
             "NPC": [],
             "Drop": [],
@@ -6432,10 +6468,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "735",
-                "736",
-                "1089",
-                "1090"
+                "1520",
+                "1521",
+                "1878",
+                "1879"
             ],
             "NPC": [],
             "Drop": [],
@@ -6456,8 +6492,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "481",
-                "835"
+                "1266",
+                "1624"
             ],
             "NPC": [],
             "Drop": [],
@@ -6478,10 +6514,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "495",
-                "496",
-                "849",
-                "850"
+                "1280",
+                "1281",
+                "1638",
+                "1639"
             ],
             "NPC": [],
             "Drop": [],
@@ -6501,10 +6537,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "482",
-                "483",
-                "836",
-                "837"
+                "1267",
+                "1268",
+                "1625",
+                "1626"
             ],
             "NPC": [],
             "Drop": [],
@@ -6525,8 +6561,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "698",
-                "1052"
+                "1483",
+                "1841"
             ],
             "NPC": [],
             "Drop": [],
@@ -6547,8 +6583,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "712",
-                "1066"
+                "1497",
+                "1855"
             ],
             "NPC": [],
             "Drop": [],
@@ -6568,8 +6604,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "699",
-                "1053"
+                "1484",
+                "1842"
             ],
             "NPC": [],
             "Drop": [],
@@ -6590,8 +6626,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "527",
-                "881"
+                "1312",
+                "1670"
             ],
             "NPC": [],
             "Drop": [],
@@ -6612,10 +6648,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "542",
-                "543",
-                "896",
-                "897"
+                "1327",
+                "1328",
+                "1685",
+                "1686"
             ],
             "NPC": [],
             "Drop": [],
@@ -6635,8 +6671,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "528",
-                "882"
+                "1313",
+                "1671"
             ],
             "NPC": [],
             "Drop": [],
@@ -6658,7 +6694,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2500"
+                "3648"
             ],
             "NPC": [],
             "Drop": [],
@@ -6680,7 +6716,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2456"
+                "3604"
             ],
             "NPC": [],
             "Drop": [],
@@ -6724,7 +6760,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2427"
+                "3575"
             ],
             "NPC": [],
             "Drop": [],
@@ -6746,7 +6782,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2419"
+                "3567"
             ],
             "NPC": [],
             "Drop": [],
@@ -6888,10 +6924,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "457",
-                "811",
-                "1984",
-                "2192"
+                "1242",
+                "1600",
+                "2962",
+                "3170"
             ],
             "NPC": [],
             "Drop": [],
@@ -6911,10 +6947,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "680",
-                "1034",
-                "2112",
-                "2320"
+                "1465",
+                "1823",
+                "3090",
+                "3298"
             ],
             "NPC": [],
             "Drop": [],
@@ -6934,10 +6970,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "549",
-                "903",
-                "2041",
-                "2249"
+                "1334",
+                "1692",
+                "3019",
+                "3227"
             ],
             "NPC": [],
             "Drop": [],
@@ -6957,10 +6993,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "676",
-                "1030",
-                "2109",
-                "2317"
+                "1461",
+                "1819",
+                "3087",
+                "3295"
             ],
             "NPC": [],
             "Drop": [],
@@ -6980,10 +7016,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "777",
-                "1131",
-                "2168",
-                "2376"
+                "1562",
+                "1920",
+                "3146",
+                "3354"
             ],
             "NPC": [],
             "Drop": [],
@@ -7003,10 +7039,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "780",
-                "1134",
-                "2169",
-                "2377"
+                "1565",
+                "1923",
+                "3147",
+                "3355"
             ],
             "NPC": [],
             "Drop": [],
@@ -7046,8 +7082,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2140",
-                "2348"
+                "3118",
+                "3326"
             ],
             "NPC": [],
             "Drop": [],
@@ -7069,8 +7105,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2119",
-                "2327"
+                "3097",
+                "3305"
             ],
             "NPC": [],
             "Drop": [],
@@ -7091,8 +7127,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2091",
-                "2299"
+                "3069",
+                "3277"
             ],
             "NPC": [],
             "Drop": [],
@@ -7556,8 +7592,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2142",
-                "2350"
+                "3120",
+                "3328"
             ],
             "NPC": [],
             "Drop": [],
@@ -7636,8 +7672,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "633",
-                "987"
+                "1418",
+                "1776"
             ],
             "NPC": [],
             "Drop": [],
@@ -7657,8 +7693,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2093",
-                "2301"
+                "3071",
+                "3279"
             ],
             "NPC": [],
             "Drop": [],
@@ -7938,8 +7974,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2018",
-                "2226"
+                "2996",
+                "3204"
             ],
             "NPC": [],
             "Drop": [],
@@ -8037,7 +8073,12 @@
         "Sell": "10 Silver Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "1568",
+                "1569",
+                "1926",
+                "1927"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -8178,8 +8219,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2047",
-                "2255"
+                "3025",
+                "3233"
             ],
             "NPC": [],
             "Drop": [],
@@ -8220,8 +8261,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2007",
-                "2215"
+                "2985",
+                "3193"
             ],
             "NPC": [],
             "Drop": [],
@@ -8261,8 +8302,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "713",
-                "1067"
+                "1498",
+                "1856"
             ],
             "NPC": [],
             "Drop": [],
@@ -8360,8 +8401,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2170",
-                "2378"
+                "3148",
+                "3356"
             ],
             "NPC": [],
             "Drop": [],
@@ -8464,7 +8505,10 @@
         "Sell": "50 Silver Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "518",
+                "519"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -8483,7 +8527,9 @@
         "Sell": "1 Gold 50 Silver Coins",
         "Research": "1 required",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "863"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
