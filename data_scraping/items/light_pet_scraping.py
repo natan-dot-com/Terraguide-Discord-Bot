@@ -46,29 +46,29 @@ if tables:
             if len(cols) == 6:
                 petDict[SCRAPING_NOTES] = cols[5].text.replace("\n", "")
             
-            imagePath = GLOBAL_JSON_PATH + LIGHT_PETS_DIRECTORY + cols[2].text.replace("\n", "").replace(" ", "_") + "_Buff" + IMAGE_EXTENSION
-            writeImage(cols[0].find("img")['src'], imagePath)
+            imagePath =  LIGHT_PETS_DIRECTORY + cols[2].text.replace("\n", "").replace(" ", "_") + "_Buff" + IMAGE_EXTENSION
+            writeImage(cols[0].find("img")['src'], GLOBAL_JSON_PATH + imagePath)
             petDict[SCRAPING_BUFF_IMAGE] = imagePath
             
             if cols[1].text.replace("\n", "") == "Fairy":
                 imageCounter = 1
                 for petImage in cols[1].findAll("img"):
-                    imagePath = GLOBAL_JSON_PATH + LIGHT_PETS_DIRECTORY + cols[1].text.replace("\n", "").replace(" ", "_")
+                    imagePath = LIGHT_PETS_DIRECTORY + cols[1].text.replace("\n", "").replace(" ", "_")
                     imagePath += "_" + str(imageCounter)
                     if petDict[SCRAPING_LIGHT_PET] in DYNAMIC_IMAGE_ITEMS:
                         imagePath += DYNAMIC_IMAGE_EXTENSION
                     else:
                         imagePath += IMAGE_EXTENSION
-                    writeImage(petImage['src'], imagePath)
+                    writeImage(petImage['src'], GLOBAL_JSON_PATH + imagePath)
                     petDict[SCRAPING_PET_IMAGE].append(imagePath)
                     imageCounter += 1
             else:
-                imagePath = GLOBAL_JSON_PATH + LIGHT_PETS_DIRECTORY + cols[1].text.replace("\n", "").replace(" ", "_")
+                imagePath = LIGHT_PETS_DIRECTORY + cols[1].text.replace("\n", "").replace(" ", "_")
                 if petDict[SCRAPING_LIGHT_PET] not in DYNAMIC_IMAGE_ITEMS:
                     imagePath += IMAGE_EXTENSION
                 else:
                     imagePath += DYNAMIC_IMAGE_EXTENSION
-                writeImage(cols[1].find("img")['src'], imagePath)
+                writeImage(cols[1].find("img")['src'], GLOBAL_JSON_PATH + imagePath)
                 petDict[SCRAPING_PET_IMAGE].append(imagePath)
             
             if tables.index(table) == 0:

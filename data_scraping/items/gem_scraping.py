@@ -42,11 +42,11 @@ if table:
         gemName = cols[0].find("img")['alt']
         for suffixIdentity, colsIdentity, dictInfoIdentity in zip(SuffixList, colsList, dictInfoList):
             imgSrc = cols[colsIdentity].find("img")['src']
-            imgPath = GLOBAL_JSON_PATH + GEM_IMAGE_DIRECTORY + gemName + suffixIdentity
+            imgPath =  GEM_IMAGE_DIRECTORY + gemName + suffixIdentity
             
             imgOutput = requests.get(imgSrc, stream=True)
             if imgOutput.ok:
-                with open(imgPath, "wb+") as handler:
+                with open(GLOBAL_JSON_PATH + imgPath, "wb+") as handler:
                     for block in imgOutput.iter_content(1024):
                         if not block:
                             break

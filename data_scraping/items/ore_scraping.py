@@ -17,7 +17,7 @@ dropList = ["Eater of Worlds", "Eye of Cthulhu", "Brain of Cthulhu", "Ocram", "M
 ORES_DIRECTORY = "ores/"
 IMAGE_EXTENSION = ".png"
 IN_STONE_SUFFIX = "_In_Stone"
-ORE_PATH = "script_test/" + ORE_NAME_FILE + JSON_EXT
+ORE_PATH = GLOBAL_JSON_PATH + ORE_NAME_FILE + JSON_EXT
 oreDictList = []
 
 URL = "https://terraria.gamepedia.com/Ores"
@@ -64,8 +64,8 @@ for table in tables[1:3:]:
             
             # First column (image)
             colImages = cols[0].findAll("img")
-            imgPath = GLOBAL_JSON_PATH + ORES_DIRECTORY + colImages[1]['alt'].replace(" ", "_") + IN_STONE_SUFFIX + IMAGE_EXTENSION
-            writeImage(colImages[0]['src'], imgPath)
+            imgPath = ORES_DIRECTORY + colImages[1]['alt'].replace(" ", "_") + IN_STONE_SUFFIX + IMAGE_EXTENSION
+            writeImage(colImages[0]['src'], GLOBAL_JSON_PATH + imgPath)
             oreDictList[oreIndex][IMAGE_IN_STONE] = imgPath
             
             # Second column (pickaxe power)
@@ -98,14 +98,14 @@ for table in tables[1:3:]:
             
             # First column (first ore image)
             colImages = cols[0].findAll("img")
-            imgPath = GLOBAL_JSON_PATH + ORES_DIRECTORY + colImages[1]['alt'].replace(" ", "_") + IN_STONE_SUFFIX + IMAGE_EXTENSION
-            writeImage(colImages[0]['src'], imgPath)
+            imgPath = ORES_DIRECTORY + colImages[1]['alt'].replace(" ", "_") + IN_STONE_SUFFIX + IMAGE_EXTENSION
+            writeImage(colImages[0]['src'], GLOBAL_JSON_PATH + imgPath)
             oreDictList[oreIndex][IMAGE_IN_STONE] = imgPath
             
             # Second column (second ore image)
             colImages = cols[1].findAll("img")
-            imgPath = GLOBAL_JSON_PATH + ORES_DIRECTORY + colImages[1]['alt'].replace(" ", "_") + IN_STONE_SUFFIX + IMAGE_EXTENSION
-            writeImage(colImages[0]['src'], imgPath)
+            imgPath = ORES_DIRECTORY + colImages[1]['alt'].replace(" ", "_") + IN_STONE_SUFFIX + IMAGE_EXTENSION
+            writeImage(colImages[0]['src'], GLOBAL_JSON_PATH + imgPath)
             oreDictList[oreIndex+1][IMAGE_IN_STONE] = imgPath
             
             # Third column (pickaxe power) 
