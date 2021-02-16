@@ -8,7 +8,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "435"
+                "380"
             ],
             "NPC": [],
             "Drop": [],
@@ -74,7 +74,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "2113"
+                "1815"
             ],
             "NPC": [],
             "Drop": [],
@@ -92,7 +92,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2080"
+                "1782"
             ],
             "NPC": [],
             "Drop": [],
@@ -127,8 +127,8 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "1539",
-                "1897"
+                "1357",
+                "1623"
             ],
             "NPC": [],
             "Drop": [],
@@ -145,7 +145,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "498"
+                "442"
             ],
             "NPC": [],
             "Drop": [],
@@ -163,7 +163,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "764"
+                "687"
             ],
             "NPC": [],
             "Drop": [],
@@ -180,7 +180,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "703"
+                "634"
             ],
             "NPC": [],
             "Drop": [],
@@ -197,7 +197,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "2126"
+                "1828"
             ],
             "NPC": [],
             "Drop": [],
@@ -214,7 +214,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "2219"
+                "1921"
             ],
             "NPC": [],
             "Drop": [],
@@ -231,7 +231,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "2198"
+                "1900"
             ],
             "NPC": [],
             "Drop": [],
@@ -265,7 +265,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "3777"
+                "3326"
             ],
             "NPC": [],
             "Drop": [],
@@ -283,7 +283,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "3797"
+                "3346"
             ],
             "NPC": [],
             "Drop": [],
@@ -301,7 +301,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "3821"
+                "3370"
             ],
             "NPC": [],
             "Drop": [],
@@ -318,7 +318,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "810"
+                "732"
             ],
             "NPC": [],
             "Drop": [],
@@ -335,7 +335,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "2236"
+                "1938"
             ],
             "NPC": [],
             "Drop": [],
@@ -369,7 +369,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "3927"
+                "3472"
             ],
             "NPC": [],
             "Drop": [],
@@ -482,7 +482,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "479"
+                "424"
             ],
             "NPC": [],
             "Drop": [],
@@ -499,7 +499,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "3756"
+                "3306"
             ],
             "NPC": [],
             "Drop": [],
@@ -516,7 +516,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "3907"
+                "3453"
             ],
             "NPC": [],
             "Drop": [],
@@ -608,7 +608,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "3718"
+                "3271"
             ],
             "NPC": [],
             "Drop": [],
@@ -625,8 +625,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "419",
-                "2099"
+                "1801"
             ],
             "NPC": [],
             "Drop": [],
@@ -643,8 +642,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "872",
-                "2254"
+                "1956"
             ],
             "NPC": [],
             "Drop": [],
@@ -661,7 +659,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "3824"
+                "3373"
             ],
             "NPC": [],
             "Drop": [],
@@ -678,7 +676,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "3760"
+                "3310"
             ],
             "NPC": [],
             "Drop": [],
@@ -695,7 +693,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "3930"
+                "3475"
             ],
             "NPC": [],
             "Drop": [],
@@ -712,7 +710,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "679"
+                "610"
             ],
             "NPC": [],
             "Drop": [],
@@ -729,7 +727,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "2190"
+                "1892"
             ],
             "NPC": [],
             "Drop": [],
@@ -747,7 +745,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "639"
+                "574"
             ],
             "NPC": [],
             "Drop": [],
@@ -764,7 +762,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "2180"
+                "1882"
             ],
             "NPC": [],
             "Drop": [],
@@ -781,7 +779,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "392"
+                "346"
             ],
             "NPC": [],
             "Drop": [],
@@ -798,7 +796,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "2091"
+                "1793"
             ],
             "NPC": [],
             "Drop": [],
@@ -815,7 +813,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "3849"
+                "3396"
             ],
             "NPC": [],
             "Drop": [],
@@ -832,7 +830,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "3852"
+                "3399"
             ],
             "NPC": [],
             "Drop": [],
@@ -849,7 +847,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "550"
+                "490"
             ],
             "NPC": [],
             "Drop": [],
@@ -866,7 +864,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "718"
+                "649"
             ],
             "NPC": [],
             "Drop": [],
@@ -883,7 +881,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "374"
+                "333"
             ],
             "NPC": [],
             "Drop": [],
@@ -900,7 +898,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "3715"
+                "3268"
             ],
             "NPC": [],
             "Drop": [],
@@ -917,7 +915,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "416"
+                "365"
             ],
             "NPC": [],
             "Drop": [],
@@ -934,7 +932,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "3887"
+                "3434"
             ],
             "NPC": [],
             "Drop": [],
@@ -951,7 +949,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "659"
+                "591"
             ],
             "NPC": [],
             "Drop": [],
@@ -968,7 +966,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "736"
+                "663"
             ],
             "NPC": [],
             "Drop": [],
@@ -985,7 +983,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "870"
+                "790"
             ],
             "NPC": [],
             "Drop": [],
@@ -1002,8 +1000,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "739",
-                "2210"
+                "1912"
             ],
             "NPC": [],
             "Drop": [],
@@ -1020,7 +1017,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "3910"
+                "3456"
             ],
             "NPC": [],
             "Drop": [],
@@ -1037,7 +1034,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "3739"
+                "3290"
             ],
             "NPC": [],
             "Drop": [],
@@ -1054,7 +1051,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "3890"
+                "3437"
             ],
             "NPC": [],
             "Drop": [],
@@ -1071,7 +1068,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "3735"
+                "3287"
             ],
             "NPC": [],
             "Drop": [],
@@ -1088,7 +1085,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "609"
+                "544"
             ],
             "NPC": [],
             "Drop": [],
@@ -1105,7 +1102,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "2161"
+                "1863"
             ],
             "NPC": [],
             "Drop": [],
@@ -1123,7 +1120,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "537"
+                "477"
             ],
             "NPC": [],
             "Drop": [],
@@ -1140,7 +1137,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "2171"
+                "1873"
             ],
             "NPC": [],
             "Drop": [],
@@ -1157,7 +1154,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "2154"
+                "1856"
             ],
             "NPC": [],
             "Drop": [],
@@ -1174,7 +1171,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "2137"
+                "1839"
             ],
             "NPC": [],
             "Drop": [],
@@ -1191,7 +1188,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "625"
+                "560"
             ],
             "NPC": [],
             "Drop": [],
@@ -1209,7 +1206,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "602"
+                "537"
             ],
             "NPC": [],
             "Drop": [],
@@ -1260,7 +1257,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "461"
+                "406"
             ],
             "NPC": [],
             "Drop": [],
@@ -1292,7 +1289,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "2108"
+                "1810"
             ],
             "NPC": [],
             "Drop": [],
@@ -1309,7 +1306,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "2118"
+                "1820"
             ],
             "NPC": [],
             "Drop": [],
@@ -1326,7 +1323,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "3780"
+                "3329"
             ],
             "NPC": [],
             "Drop": [],
@@ -1343,7 +1340,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "3800"
+                "3349"
             ],
             "NPC": [],
             "Drop": [],
@@ -1360,7 +1357,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "2246"
+                "1948"
             ],
             "NPC": [],
             "Drop": [],
@@ -1377,7 +1374,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "854"
+                "776"
             ],
             "NPC": [],
             "Drop": [],
@@ -1394,7 +1391,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "3868"
+                "3415"
             ],
             "NPC": [],
             "Drop": [],
@@ -1411,7 +1408,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "3871"
+                "3418"
             ],
             "NPC": [],
             "Drop": [],
@@ -1430,10 +1427,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2917",
-                "2918",
-                "2938",
-                "2939"
+                "2559",
+                "2560",
+                "2576",
+                "2577"
             ],
             "NPC": [],
             "Drop": [],
@@ -1452,10 +1449,10 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "2915",
-                "2916",
-                "2936",
-                "2937"
+                "2557",
+                "2558",
+                "2574",
+                "2575"
             ],
             "NPC": [],
             "Drop": [],
@@ -1472,7 +1469,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "3616"
+                "3171"
             ],
             "NPC": [],
             "Drop": [],
@@ -1489,7 +1486,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "3613"
+                "3168"
             ],
             "NPC": [],
             "Drop": [],
@@ -1506,7 +1503,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "3683"
+                "3238"
             ],
             "NPC": [],
             "Drop": [],
@@ -1523,7 +1520,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "3680"
+                "3235"
             ],
             "NPC": [],
             "Drop": [],
@@ -1540,7 +1537,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "3586"
+                "3141"
             ],
             "NPC": [],
             "Drop": [],
@@ -1557,7 +1554,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "3583"
+                "3138"
             ],
             "NPC": [],
             "Drop": [],
@@ -1574,7 +1571,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "3649"
+                "3204"
             ],
             "NPC": [],
             "Drop": [],
@@ -1591,7 +1588,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "3645"
+                "3200"
             ],
             "NPC": [],
             "Drop": [],
@@ -1624,7 +1621,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "787"
+                "710"
             ],
             "NPC": [],
             "Drop": [],
@@ -1641,7 +1638,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "2228"
+                "1930"
             ],
             "NPC": [],
             "Drop": [],
@@ -1658,7 +1655,7 @@
         "Sell": "60 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "2073"
+                "1775"
             ],
             "NPC": [],
             "Drop": [],
@@ -1675,7 +1672,7 @@
         "Research": "1 required",
         "Sources": {
             "Crafting Recipes": [
-                "366"
+                "325"
             ],
             "NPC": [],
             "Drop": [],

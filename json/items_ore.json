@@ -91,7 +91,7 @@
         "In Stone": "ores/Obsidian_In_Stone.png",
         "Sources": {
             "Crafting Recipes": [
-                "1019"
+                "935"
             ],
             "NPC": [],
             "Drop": [],
@@ -107,10 +107,10 @@
         "In Stone": "ores/Hellstone_In_Stone.png",
         "Sources": {
             "Crafting Recipes": [
-                "1002",
-                "1003",
-                "1004",
-                "1005"
+                "918",
+                "919",
+                "920",
+                "921"
             ],
             "NPC": [],
             "Drop": [],

@@ -50,7 +50,7 @@ nameSubstitutes = {
     "Any Turtle": "Turtle"
 }
 javascriptTables = ["/Work_Bench", "/Placed_Bottle", "/Alchemy_Table"]
-exceptionTables = ["/Campfire", "/Extractinator"]
+exceptionTables = ["/Campfire", "/Extractinator", "/Living_Wood"]
 
 # Initialize both hash tables.
 def initializeHashTables(itemList):
@@ -129,6 +129,7 @@ def getCraftingRecipes(stationTuple, craftDictList, itemList, itemHash, recipesC
         
     recipeResult = ""
     recipeQty = ""
+    PCExcludedRecipe = False
 
     rows = tableHTML.findAll("tr")
     tableHead = getTableColumns(rows[0], scrappingData)
@@ -147,63 +148,81 @@ def getCraftingRecipes(stationTuple, craftDictList, itemList, itemHash, recipesC
         
         # If it exists, recipeResult will be updated. The same happens with recipeQty.
         if row.find("td", class_="result"):
-            recipeResult = cols[tableHead["Result"]].img['alt']
+
+            # Checking if this recipe is PC included.
+            imageList = cols[tableHead["Result"]].findAll("img")
+            if len(imageList) >= 2:
+                booleanList = []
+                for versionInstance in imageList[1::]:
+                    if re.search("Desktop", versionInstance['alt'], re.IGNORECASE):
+                        booleanList.append(True)
+                    else:
+                        booleanList.append(False)
+                        
+                if all(boolValue == False for boolValue in booleanList):
+                    logFile.write("PC-excluded recipe detected: " + imageList[0]['alt'] + ". Skipping it.\n\n")
+                    PCExcludedRecipe = True
+                    continue
+
+            PCExcludedRecipe = False
+            recipeResult = imageList[0]['alt']
                 
             if cols[tableHead["Result"]].find("span", class_="note-text"):
                 recipeQty = re.search("\d+", cols[tableHead["Result"]].find("span", class_="note-text").text).group()
             else:
                 recipeQty = "1"
                 
-        print(str(recipesCounter) + ": Scrapping '" + recipeResult + "' from '" + stationTuple[TUPLE_TABLE_NAME] + "'s page.")
-        
-        recipeDict[RECIPE_RESULT] =  itemHash.search(recipeResult, SCRAPING_ID)
-        if recipeDict[RECIPE_RESULT] == NOT_FOUND:
-            print("\tError detected. Please check the log file for more details.")
-                
-            logFile.write("RECIPE WARNING: Item '" + recipeResult + \
-                "' was not found in database. Maybe this item was already removed from/replaced in Terraria.\n")
-                
-            logFile.write("\tACTION: Recipe dictionary from '" + recipeResult + "' was removed from the list.\n\n")
-            continue
+        if not PCExcludedRecipe:
+            print(str(recipesCounter) + ": Scrapping '" + recipeResult + "' from '" + stationTuple[TUPLE_TABLE_NAME] + "'s page.")
             
-        recipeDict[RECIPE_CRAFT_ID] = str(recipesCounter)
-        recipeDict[RECIPE_RESULT_QUANTITY] = recipeQty
-        recipeDict[RECIPE_TABLE] = tableID
-        
-        # Getting the informations from 'Ingredients' column.
-        
-        # THE WORST (If there's not 'Result' class, the ingredient column is actually the first one)
-        if not row.find("td", class_="result"):
-            ingredientRows = cols[0].findAll("li")
-        else:
-            ingredientRows = cols[tableHead["Ingredients"]].findAll("li")
-        
-        for ingredientRow in ingredientRows:
-            ingredientDict = {
-                INGREDIENT_NAME: "",
-                INGREDIENT_QUANTITY: ""
-            }
-            ingredientName = ingredientRow.a['title']
-            if ingredientName in nameSubstitutes:
-                ingredientName = nameSubstitutes[ingredientName]
-
-            ingredientDict[INGREDIENT_NAME] = itemHash.search(ingredientName, SCRAPING_ID)
-            if ingredientDict[INGREDIENT_NAME] == NOT_FOUND:
+            recipeDict[RECIPE_RESULT] =  itemHash.search(recipeResult, SCRAPING_ID)
+            if recipeDict[RECIPE_RESULT] == NOT_FOUND:
                 print("\tError detected. Please check the log file for more details.")
-                logFile.write("INGREDIENT ERROR (" + str(recipesCounter) + "): Ingredient '" + ingredientRow.a['title'] + \
-                    "' from '" + recipeResult + "' was not found.\n")
-                logFile.write("\tACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.\n\n")
+                    
+                logFile.write("RECIPE WARNING: Item '" + recipeResult + \
+                    "' was not found in database. Maybe this item was already removed from/replaced in Terraria.\n")
+                    
+                logFile.write("\tACTION: Recipe dictionary from '" + recipeResult + "' was removed from the list.\n\n")
+                continue
                 
-            ingredientQty = ingredientRow.find("span", class_="note-text")
-            if ingredientQty:
-                ingredientDict[INGREDIENT_QUANTITY] = re.search("\d+", ingredientQty.text).group()
-            else:
-                ingredientDict[INGREDIENT_QUANTITY] = "1"
-            recipeDict[RECIPE_IDENTITY].append(ingredientDict)
-        craftDictList.append(recipeDict)
-        feedWriteStructure(itemList, recipeDict, writeFileStructure)
-        recipesCounter += 1
+            recipeDict[RECIPE_CRAFT_ID] = str(recipesCounter)
+            recipeDict[RECIPE_RESULT_QUANTITY] = recipeQty
+            recipeDict[RECIPE_TABLE] = tableID
             
+            # Getting the informations from 'Ingredients' column.
+            
+            # THE WORST (If there's not 'Result' class, the ingredient column is actually the first one)
+            if not row.find("td", class_="result"):
+                ingredientRows = cols[0].findAll("li")
+            else:
+                ingredientRows = cols[tableHead["Ingredients"]].findAll("li")
+            
+            for ingredientRow in ingredientRows:
+                ingredientDict = {
+                    INGREDIENT_NAME: "",
+                    INGREDIENT_QUANTITY: ""
+                }
+                ingredientName = ingredientRow.a['title']
+                if ingredientName in nameSubstitutes:
+                    ingredientName = nameSubstitutes[ingredientName]
+
+                ingredientDict[INGREDIENT_NAME] = itemHash.search(ingredientName, SCRAPING_ID)
+                if ingredientDict[INGREDIENT_NAME] == NOT_FOUND:
+                    print("\tError detected. Please check the log file for more details.")
+                    logFile.write("INGREDIENT ERROR (" + str(recipesCounter) + "): Ingredient '" + ingredientRow.a['title'] + \
+                        "' from '" + recipeResult + "' was not found.\n")
+                    logFile.write("\tACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.\n\n")
+                    
+                ingredientQty = ingredientRow.find("span", class_="note-text")
+                if ingredientQty:
+                    ingredientDict[INGREDIENT_QUANTITY] = re.search("\d+", ingredientQty.text).group()
+                else:
+                    ingredientDict[INGREDIENT_QUANTITY] = "1"
+                recipeDict[RECIPE_IDENTITY].append(ingredientDict)
+            craftDictList.append(recipeDict)
+            feedWriteStructure(itemList, recipeDict, writeFileStructure)
+            recipesCounter += 1
+                
     insertRecipeOnJSON(writeFileStructure, itemList, logFile)
 
 # Gets every table HTML with the javascript function loaded

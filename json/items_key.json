@@ -40,9 +40,7 @@
         "Used In": "Jungle Chest",
         "Is Consumed": "Yes",
         "Sources": {
-            "Crafting Recipes": [
-                "175"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [
                 {
@@ -61,9 +59,7 @@
         "Used In": "Corruption Chest",
         "Is Consumed": "Yes",
         "Sources": {
-            "Crafting Recipes": [
-                "52"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [
                 {
@@ -82,9 +78,7 @@
         "Used In": "Crimson Chest",
         "Is Consumed": "Yes",
         "Sources": {
-            "Crafting Recipes": [
-                "54"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [
                 {
@@ -103,9 +97,7 @@
         "Used In": "Hallowed Chest",
         "Is Consumed": "Yes",
         "Sources": {
-            "Crafting Recipes": [
-                "143"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [
                 {
@@ -124,9 +116,7 @@
         "Used In": "Ice Chest",
         "Is Consumed": "Yes",
         "Sources": {
-            "Crafting Recipes": [
-                "109"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [
                 {
@@ -146,7 +136,7 @@
         "Is Consumed": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "580"
+                "516"
             ],
             "NPC": [],
             "Drop": [],
@@ -160,7 +150,7 @@
         "Is Consumed": "Yes",
         "Sources": {
             "Crafting Recipes": [
-                "579"
+                "515"
             ],
             "NPC": [],
             "Drop": [],

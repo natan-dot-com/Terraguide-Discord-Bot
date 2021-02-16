@@ -50,8 +50,8 @@
         "Planted In": "Dirt",
         "Sources": {
             "Crafting Recipes": [
-                "986",
-                "987"
+                "902",
+                "903"
             ],
             "NPC": [],
             "Drop": [],
@@ -91,8 +91,8 @@
         "Planted In": "Mud",
         "Sources": {
             "Crafting Recipes": [
-                "1009",
-                "1010"
+                "925",
+                "926"
             ],
             "NPC": [],
             "Drop": [],
@@ -441,7 +441,7 @@
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "318"
+                "282"
             ],
             "NPC": [],
             "Drop": [],
@@ -471,7 +471,7 @@
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "263"
+                "231"
             ],
             "NPC": [],
             "Drop": [],
@@ -486,7 +486,7 @@
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "91"
+                "82"
             ],
             "NPC": [],
             "Drop": [],
@@ -501,7 +501,7 @@
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "258"
+                "226"
             ],
             "NPC": [],
             "Drop": [],
@@ -516,7 +516,7 @@
         "Sell": "3 Silver 75 Copper Coins",
         "Sources": {
             "Crafting Recipes": [
-                "74"
+                "65"
             ],
             "NPC": [],
             "Drop": [],

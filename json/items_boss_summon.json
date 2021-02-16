@@ -10,8 +10,8 @@
         "Usable": "Only usable at night.",
         "Sources": {
             "Crafting Recipes": [
-                "2914",
-                "2935"
+                "2556",
+                "2573"
             ],
             "NPC": [],
             "Drop": [],
@@ -30,8 +30,8 @@
         "Usable": "Must be consumed in the Corruption.",
         "Sources": {
             "Crafting Recipes": [
-                "2919",
-                "2940"
+                "2561",
+                "2578"
             ],
             "NPC": [],
             "Drop": [],
@@ -65,8 +65,8 @@
         "Usable": "Only usable at night.",
         "Sources": {
             "Crafting Recipes": [
-                "3048",
-                "3256"
+                "2673",
+                "2852"
             ],
             "NPC": [],
             "Drop": [],
@@ -85,10 +85,10 @@
         "Usable": "Only usable at night.",
         "Sources": {
             "Crafting Recipes": [
-                "3050",
-                "3051",
-                "3258",
-                "3259"
+                "2675",
+                "2676",
+                "2854",
+                "2855"
             ],
             "NPC": [],
             "Drop": [],
@@ -107,8 +107,8 @@
         "Usable": "Only usable at night.",
         "Sources": {
             "Crafting Recipes": [
-                "3049",
-                "3257"
+                "2674",
+                "2853"
             ],
             "NPC": [],
             "Drop": [],
@@ -127,14 +127,10 @@
         "Usable": "Can be consumed any time.",
         "Sources": {
             "Crafting Recipes": [
-                "2910",
-                "2911",
-                "2912",
-                "2913",
-                "2931",
-                "2932",
-                "2933",
-                "2934"
+                "2554",
+                "2555",
+                "2571",
+                "2572"
             ],
             "NPC": [],
             "Drop": [],
@@ -153,9 +149,7 @@
         "Usable": "Must be consumed in the Jungle or Underground Jungle.",
         "Sources": {
             "Crafting Recipes": [
-                "1",
-                "2899",
-                "2920"
+                "1"
             ],
             "NPC": [],
             "Drop": [],
@@ -173,9 +167,7 @@
         "Summons": "Golem",
         "Usable": "Must be consumed on a Lihzahrd Altar. Can only be used in Hardmode worlds where Plantera has been defeated.",
         "Sources": {
-            "Crafting Recipes": [
-                "595"
-            ],
+            "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -208,10 +200,8 @@
         "Usable": "Must be consumed in the Crimson.",
         "Sources": {
             "Crafting Recipes": [
-                "2906",
-                "2907",
-                "2927",
-                "2928"
+                "2551",
+                "2568"
             ],
             "NPC": [],
             "Drop": [],
@@ -230,7 +220,7 @@
         "Usable": "Can only be used in Hardmode worlds where Golem has been defeated. There is a delay of 60 seconds between the item use and the boss summon. Can not be used if any of the Celestial Pillars are activated or if the cultists are on screen.",
         "Sources": {
             "Crafting Recipes": [
-                "3566"
+                "3121"
             ],
             "NPC": [],
             "Drop": [],
