@@ -80,6 +80,7 @@ SCRAPING_HOUSE = "House"
 SCRAPING_MECHANISM = "Mechanism"
 SCRAPING_WATERPROOF = "Waterproof"
 SCRAPING_TABLE_ID = "Table ID"
+SCRAPING_BAG_DROPS = "Bag Drops"
 
 # Image data
 IMAGE_BRICK = "Brick Image"
@@ -192,6 +193,7 @@ STORAGE_NAME_FILE = "items_storage"
 TOOL_NAME_FILE = "items_tool"
 VANITY_NAME_FILE = "items_vanity"
 WEAPON_NAME_FILE = "items_weapon"
+GRAB_BAG_FILE = "items_grab_bag"
 
 LOG_PATH = "logs/"
 
