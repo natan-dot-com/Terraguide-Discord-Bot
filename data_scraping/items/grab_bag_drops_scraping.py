@@ -158,7 +158,7 @@ def scrapDropInformation(itemHash: hashTable, urlSuffix: str, logFile, IDcounter
             if len(cols) > 1:
                 if not cols[dropTableHead["Item"]+1].find("span", class_="chance"):
                     if not re.search("%", cols[dropTableHead["Item"]+1].text):
-                        quantityValue = cols[dropTableHead["Quantity"]].text.strip()
+                        quantityValue = cols[dropTableHead["Quantity"]].text.strip().replace("\u2013", "-")
                         if len(cols) > 2:
                             if cols[dropTableHead["Chance"]].find("span", class_="chance"):
                                 if cols[dropTableHead["Chance"]].find("s"):
@@ -212,7 +212,7 @@ def main():
             logFile.write("Sucessful scrap. Exiting with value 0.\n")
             print("\n")
 
-    SaveJSONFile(dropList, "../../" + GLOBAL_JSON_PATH + BAGS_DROP_NAME_FILE + JSON_EXT)
+    SaveJSONFile("../../" + GLOBAL_JSON_PATH + BAGS_DROP_NAME_FILE + JSON_EXT, dropList)
     print("Exiting returning value 0.")
 
 if __name__ == "__main__":
