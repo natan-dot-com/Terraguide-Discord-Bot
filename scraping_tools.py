@@ -178,6 +178,7 @@ TABLE_NAME_FILE = "crafting_stations"
 RECIPE_NAME_FILE = "recipes"
 MAIN_NAME_FILE = "items"
 BAGS_NAME_FILE = "grab_bags"
+BAGS_DROP_NAME_FILE = "grab_bags_drops"
 
 # Items subfiles
 MAIN_ITEM_SUBFILE_PREFIX = "items_"

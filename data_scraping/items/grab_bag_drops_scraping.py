@@ -10,13 +10,16 @@ from bs4 import BeautifulSoup
 import re
 import requests
 
+# Constant values
 MAIN_URL = "https://terraria.gamepedia.com"
 MAIN_SUFFIX = "/Grab_bags"
 CRATES_SUFFIX = "/Crates"
 
+# Table Head Labels
 crateHeadLabels = ["Pre-Hardmode type", "Hardmode type"]
 dropHeadLabels = ["Item", "Quantity", "Chance"]
 
+# Initializes both item hash table and bag hash table
 def initializeHashTables(itemList: list, bagList: list):
     itemHash = hashTable(ITEMS_HASH_SIZE, SCRAPING_NAME)
     for itemInstance in itemList:
@@ -28,6 +31,7 @@ def initializeHashTables(itemList: list, bagList: list):
 
     return itemHash, bagHash
 
+# Gets every crate URL suffix from the crates table (in '/Crates'). Used inside the next function scope
 def getCratesSuffixes(suffixesList: list):
     html = requests.get(MAIN_URL + CRATES_SUFFIX)
     soup = BeautifulSoup(html.content, 'html.parser')
@@ -40,6 +44,7 @@ def getCratesSuffixes(suffixesList: list):
             if crateSuffix:
                 suffixesList.append(crateSuffix)
 
+# Gets every URL suffix from the grab bag table (in '/Grab_bags')
 def getURLSuffixes():
     suffixesList = []
     html = requests.get(MAIN_URL + MAIN_SUFFIX)
@@ -55,12 +60,14 @@ def getURLSuffixes():
                 suffixesList.append(suffix)
     return suffixesList
 
+# Initializes a log file for the respective bag
 def createLogFile(urlSuffix: str):
     logFile = open("../../" + LOG_PATH + urlSuffix[1::].lower() + LOG_EXT, "w+") 
     print("Creating log file for '" + urlSuffix + "'")
     logFile.write("Starting log file for '" + urlSuffix + "'.\n")
     return logFile
 
+# Finds the bag ID using the bag hash table
 def findBagID(bagName: str, bagHash: hashTable, logFile):
     hashResult = bagHash.search(bagName, BAG_ID)
     if hashResult == NOT_FOUND:
@@ -70,6 +77,7 @@ def findBagID(bagName: str, bagHash: hashTable, logFile):
         print("Bag ID for '" + bagName + "' found.")
     return hashResult
     
+# Write algorithm uses a specific structure to avoid rewriting the file every time a number is written
 def feedWriteStructure(dropDict, writeStructure, itemList):
     itemIndex = int(dropDict[BAG_DROP_RESULT])-1
     itemType = itemList[itemIndex][SCRAPING_TYPE]
@@ -79,6 +87,7 @@ def feedWriteStructure(dropDict, writeStructure, itemList):
         writeStructure[itemType][itemIndex+1] = []
     writeStructure[itemType][itemIndex+1].append(dropDict[BAG_DROP_ID])
    
+# Writes every bag drop ID on every respective source list inside each items-prefixed json file
 def writeOnJSONFiles(writeStructure, logFile):
     for itemType in writeStructure.keys():
         filename = MAIN_ITEM_SUBFILE_PREFIX + itemType.lower().replace(" ", "_") + JSON_EXT
@@ -101,7 +110,8 @@ def writeOnJSONFiles(writeStructure, logFile):
                     break
             SaveJSONFile(filePath, typeList)
 
-def writeOnBagFile(writeStructure, bagID):
+# Writes every bag drop ID on every respective loot list in grab_bags_drops.json
+def writeOnBagFile(writeStructure, bagID: str):
     bagFilePath = "../../" + GLOBAL_JSON_PATH + BAGS_NAME_FILE + JSON_EXT
     bagList = LoadJSONFile(bagFilePath)
     for itemType in writeStructure.keys():
@@ -112,6 +122,7 @@ def writeOnBagFile(writeStructure, bagID):
     bagList[int(bagID)-1][GRAB_BAGS_LOOT_LIST].sort(key=int)
     SaveJSONFile(bagFilePath, bagList)
 
+# Scraps general information for every grab bag (Treasure bags are exceptions)
 def scrapDropInformation(itemHash: hashTable, urlSuffix: str, logFile, IDcounter: int, bagID: str, dropList, itemList):
     writeStructure = {}
 
@@ -172,7 +183,6 @@ def scrapDropInformation(itemHash: hashTable, urlSuffix: str, logFile, IDcounter
             
         writeOnJSONFiles(writeStructure, logFile)
         writeOnBagFile(writeStructure, bagID)
-        input()
 
 def main():
     itemList = LoadJSONFile("../../" + GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
@@ -183,17 +193,26 @@ def main():
 
     suffixesList = getURLSuffixes()
     for urlSuffix in suffixesList:
+        # Initial setup
         logFile = createLogFile(urlSuffix)
         bagName = urlSuffix.replace("_", " ")
         bagID = findBagID(bagName[1::], bagHash, logFile) 
+
         if bagID != NOT_FOUND:
+            # Inicialization messages
             logFile.write("Bag ID found (" + bagID + ").\n")
             print("Starting getting information from '" + MAIN_URL + urlSuffix + "'...")
+            
+            # Scrap block
             if urlSuffix != "/Treasure_Bag":
                 scrapDropInformation(itemHash, urlSuffix, logFile, IDcounter, bagID, dropList, itemList)
             IDcounter = len(dropList)+1
+            
+            # Exit block
             logFile.write("Sucessful scrap. Exiting with value 0.\n")
             print("\n")
+
+    SaveJSONFile(dropList, "../../" + GLOBAL_JSON_PATH + BAGS_DROP_NAME_FILE + JSON_EXT)
     print("Exiting returning value 0.")
 
 if __name__ == "__main__":
