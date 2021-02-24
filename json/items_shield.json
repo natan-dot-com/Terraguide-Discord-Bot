@@ -8,7 +8,9 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "1016"
+            ],
             "Other": "Found in Gold Chests, Dungeon"
         }
     },

@@ -6,6 +6,10 @@ import operator
 NOT_FOUND = -1
 FOUND = 1
 
+# Table HTML classes
+TERRARIA_TABLE_CLASS = "terraria"
+SORTABLE_TABLE_CLASS = "sortable"
+
 # General labels
 SCRAPING_ID = "ID"
 SCRAPING_TYPE = "Type"
@@ -79,7 +83,6 @@ SCRAPING_SUMMONS = "Summons"
 SCRAPING_HOUSE = "House"
 SCRAPING_MECHANISM = "Mechanism"
 SCRAPING_WATERPROOF = "Waterproof"
-SCRAPING_TABLE_ID = "Table ID"
 SCRAPING_BAG_DROPS = "Bag Drops"
 
 # Image data
@@ -115,6 +118,10 @@ DROP_DROPS_DICT = {
 }
 
 # Crafting recipe labels ('SCRAPING_SOURCE' subdict)
+# From tables.json
+TABLE_RECIPES_LIST = "Table Recipes List"
+
+# From recipes.json
 RECIPE_CRAFT_ID = "Craft ID"
 RECIPE_RESULT = "Result ID"
 RECIPE_RESULT_QUANTITY = "Result Quantity"
@@ -137,8 +144,13 @@ INGREDIENT_DICT = {
 }
 
 # Grab bag dict labels ('SCRAPING_SOURCE' subdict)
+# From grab_bags.json
+GRAB_BAGS_LOOT_LIST = "Grab Bag Loot List"
+
+# From bag_drops.json
 BAG_DROP_ID = "Bag Drop ID"
 BAG_ID = "Bag ID"
+BAG_DROP_RESULT = "Drop Result"
 BAG_DROP_PROBABILITY = "Probability"
 BAG_DROP_QUANTITY = "Quantity"
 BAG_DROPS_DICT = {
@@ -160,11 +172,15 @@ RARITY_TIER = {
     RARITY_FIERY_RED: "-13"
 }
 
-# Files data
+# Table files data
 JSON_EXT = ".json"
-TABLE_NAME_FILE = "tables"
+TABLE_NAME_FILE = "crafting_stations"
 RECIPE_NAME_FILE = "recipes"
 MAIN_NAME_FILE = "items"
+BAGS_NAME_FILE = "grab_bags"
+
+# Items subfiles
+MAIN_ITEM_SUBFILE_PREFIX = "items_"
 ACCESSORY_NAME_FILE = "items_accessory"
 AMMUNITION_NAME_FILE = "items_ammunition"
 ARMOR_NAME_FILE = "items_armor"
@@ -178,6 +194,7 @@ EVENT_SUMMON_NAME_FILE = "items_event_summon"
 FISHING_CATCHES_NAME_FILE = "items_fishing_catches"
 FURNITURE_NAME_FILE = "items_furniture"
 GEM_NAME_FILE = "items_gem"
+GRAB_BAG_NAME_FILE = "items_grab_bag"
 HOOK_NAME_FILE = "items_hook"
 KEY_NAME_FILE = "items_key"
 LIGHT_PET_NAME_FILE = "items_light_pet"
@@ -193,9 +210,31 @@ STORAGE_NAME_FILE = "items_storage"
 TOOL_NAME_FILE = "items_tool"
 VANITY_NAME_FILE = "items_vanity"
 WEAPON_NAME_FILE = "items_weapon"
-GRAB_BAG_FILE = "items_grab_bag"
 
+# Log file informations
 LOG_PATH = "logs/"
+LOG_EXT = ".log"
+
+# Universal aliases for generalized items
+nameSubstitutes = {
+    "Any Wood": "Wood",
+    "Any Iron Bar": "Iron Bar",
+    "Any Pressure Plate": "Brown Pressure Plate",
+    "Any Bird": "Bird",
+    "Any Butterfly": "Julia Butterfly",
+    "Any Bug": "Buggy",
+    "Any Duck": "Duck",
+    "Any Firefly": "Firefly",
+    "Any Scorpion": "Scorpion",
+    "Any Snail": "Snail",
+    "Any Sand": "Sand Block",
+    "Any Squirrel": "Squirrel",
+    "Green Jellyfish (bait)": "Green Jellyfish",
+    "Blue Jellyfish (bait)": "Blue Jellyfish",
+    "Pink Jellyfish (bait)": "Pink Jellyfish",
+    "Any Fruit": "Apple",
+    "Any Turtle": "Turtle"
+}
 
 # Find the ID in respect of an item in items.json
 def searchForID(itemName, itemList):

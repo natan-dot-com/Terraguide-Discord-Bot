@@ -1,0 +1,272 @@
+[
+    {
+        "Bag ID": "1",
+        "Name": "Goodie Bag",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "2",
+        "Name": "Present",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "3",
+        "Name": "Wooden Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "4",
+        "Name": "Iron Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "5",
+        "Name": "Golden Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "6",
+        "Name": "Golden Lock Box",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "7",
+        "Name": "Herb Bag",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "8",
+        "Name": "Corrupt Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "9",
+        "Name": "Crimson Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "10",
+        "Name": "Dungeon Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "11",
+        "Name": "Sky Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "12",
+        "Name": "Hallowed Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "13",
+        "Name": "Jungle Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "14",
+        "Name": "Treasure Bag (King Slime)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "15",
+        "Name": "Treasure Bag (Eye of Cthulhu)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "16",
+        "Name": "Treasure Bag (Eater of Worlds)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "17",
+        "Name": "Treasure Bag (Brain of Cthulhu)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "18",
+        "Name": "Treasure Bag (Queen Bee)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "19",
+        "Name": "Treasure Bag (Skeletron)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "20",
+        "Name": "Treasure Bag (Wall of Flesh)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "21",
+        "Name": "Treasure Bag (The Destroyer)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "22",
+        "Name": "Treasure Bag (The Twins)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "23",
+        "Name": "Treasure Bag (Skeletron Prime)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "24",
+        "Name": "Treasure Bag (Plantera)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "25",
+        "Name": "Treasure Bag (Golem)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "26",
+        "Name": "Treasure Bag (Duke Fishron)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "27",
+        "Name": "Treasure Bag (Lunatic Cultist)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "28",
+        "Name": "Treasure Bag (Moon Lord)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "29",
+        "Name": "Pigronata",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "30",
+        "Name": "Treasure Bag (Betsy)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "31",
+        "Name": "n/a (No official name)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "32",
+        "Name": "n/a (No official name)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "33",
+        "Name": "Pearlwood Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "34",
+        "Name": "Mythril Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "35",
+        "Name": "Titanium Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "36",
+        "Name": "Defiled Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "37",
+        "Name": "Hematic Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "38",
+        "Name": "Stockade Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "39",
+        "Name": "Azure Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "40",
+        "Name": "Divine Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "41",
+        "Name": "Bramble Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "42",
+        "Name": "Can Of Worms",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "43",
+        "Name": "Frozen Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "44",
+        "Name": "Boreal Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "45",
+        "Name": "Oasis Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "46",
+        "Name": "Mirage Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "47",
+        "Name": "Oyster",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "48",
+        "Name": "Treasure Bag (Empress of Light)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "49",
+        "Name": "Obsidian Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "50",
+        "Name": "Hellstone Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "51",
+        "Name": "Obsidian Lock Box",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "52",
+        "Name": "Treasure Bag (Queen Slime)",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "53",
+        "Name": "Ocean Crate",
+        "Grab Bag Loot List": []
+    },
+    {
+        "Bag ID": "54",
+        "Name": "Seaside Crate",
+        "Grab Bag Loot List": []
+    }
+]

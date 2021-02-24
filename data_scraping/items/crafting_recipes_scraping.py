@@ -16,45 +16,23 @@ import re
 import requests
 
 # Constant values
-MAIN_ITEM_FILE_PREFIX = "items_"
+MAIN_ITEM_SUBFILE_PREFIX = "items_"
 MAIN_CRAFTING_STATION_SUFFIX = "/Crafting_stations"
-TERRARIA_TABLE_CLASS = "terraria"
-SORTABLE_TABLE_CLASS = "sortable"
 
-LOG_EXT = ".log"
-DEFAULT_LOG_PATH = "logs/recipes_"
-ITEMS_JSON_PATH = GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT
-RECIPE_JSON_PATH = GLOBAL_JSON_PATH + RECIPE_NAME_FILE + JSON_EXT
+DEFAULT_LOG_PATH = LOG_PATH + "recipes_"
+ITEMS_JSON_PATH = "../../" + GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT
+RECIPE_JSON_PATH = "../../" + GLOBAL_JSON_PATH + RECIPE_NAME_FILE + JSON_EXT
 
 TUPLE_TABLE_NAME = 0
 TUPLE_TABLE_URL = 1
 
 scrappingData = ["Result", "Ingredients"]
-nameSubstitutes = {
-    "Any Wood": "Wood",
-    "Any Iron Bar": "Iron Bar",
-    "Any Pressure Plate": "Brown Pressure Plate",
-    "Any Bird": "Bird",
-    "Any Butterfly": "Julia Butterfly",
-    "Any Bug": "Buggy",
-    "Any Duck": "Duck",
-    "Any Firefly": "Firefly",
-    "Any Scorpion": "Scorpion",
-    "Any Snail": "Snail",
-    "Any Sand": "Sand Block",
-    "Any Squirrel": "Squirrel",
-    "Green Jellyfish (bait)": "Green Jellyfish",
-    "Blue Jellyfish (bait)": "Blue Jellyfish",
-    "Pink Jellyfish (bait)": "Pink Jellyfish",
-    "Any Fruit": "Apple",
-    "Any Turtle": "Turtle"
-}
 javascriptTables = ["/Work_Bench", "/Placed_Bottle", "/Alchemy_Table"]
 exceptionTables = ["/Campfire", "/Extractinator", "/Living_Wood"]
 
 # Initialize both hash tables.
 def initializeHashTables(itemList):
-    tableList = LoadJSONFile(GLOBAL_JSON_PATH + TABLE_NAME_FILE + JSON_EXT)
+    tableList = LoadJSONFile("../../" + GLOBAL_JSON_PATH + TABLE_NAME_FILE + JSON_EXT)
 
     itemHash = hashTable(ITEMS_HASH_SIZE, SCRAPING_NAME)
     for itemInstance in itemList:
@@ -67,7 +45,7 @@ def initializeHashTables(itemList):
     return itemHash, tableHash
 
 def findTableID(tableName, tableHash, logFile):
-    tableID = tableHash.search(tableName, SCRAPING_TABLE_ID)
+    tableID = tableHash.search(tableName, RECIPE_TABLE)
     if tableID == NOT_FOUND:
         print("Table ID for '" + tableName + "' not found. Aborting Process.")
         logFile.write("TABLE ERROR: Table ID not found. Aborted proccess.\n")
@@ -77,7 +55,7 @@ def findTableID(tableName, tableHash, logFile):
         return tableID
 
 def createLogFile(tableName):
-    logFilePath = DEFAULT_LOG_PATH + tableName.replace(" ", "_").lower() + LOG_EXT
+    logFilePath = "../../" + DEFAULT_LOG_PATH + tableName.replace(" ", "_").lower() + LOG_EXT
     logFile = open(logFilePath, "w+")
     print("Creating new log file for '"+ tableName + "'.")
     logFile.write("Starting log file for '" + tableName + "'.\n")
@@ -105,7 +83,7 @@ def insertRecipeOnJSON(writeFileStructure, itemList, logFile):
     print("\nInitiating writing process...")
     for itemType in writeFileStructure.keys():
         filenameSuffix = itemType.lower().replace(" ", "_")
-        filename = GLOBAL_JSON_PATH + MAIN_ITEM_FILE_PREFIX + filenameSuffix + JSON_EXT
+        filename = "../../" + GLOBAL_JSON_PATH + MAIN_ITEM_SUBFILE_PREFIX + filenameSuffix + JSON_EXT
         try:
             with open(filename) as outputFile:
                 JSONList = LoadJSONFile(filename)
@@ -122,6 +100,18 @@ def insertRecipeOnJSON(writeFileStructure, itemList, logFile):
         except IOError:
             print("File '" + filename + "' not found. Aborting proccess.")
             logFile.write("Can't reach '" + filename + "'. No such file or directory.\n\n")
+
+# Insert every table recipe on its respective table recipe list in crafting_stations.json
+def writeOnTableFile(writeFileStructure, tableID):
+    tableFilePath = "../../" + GLOBAL_JSON_PATH + TABLE_NAME_FILE + JSON_EXT 
+    tableList = LoadJSONFile(tableFilePath)
+    for itemType in writeFileStructure.keys():
+        for itemID in writeFileStructure[itemType].keys():
+            for recipeID in writeFileStructure[itemType][itemID]:
+                if recipeID not in tableList[int(tableID)-1][TABLE_RECIPES_LIST]:
+                    tableList[int(tableID)-1][TABLE_RECIPES_LIST].append(str(recipeID))
+    tableList[int(tableID)-1][TABLE_RECIPES_LIST].sort(key=int)
+    SaveJSONFile(tableFilePath, tableList)
 
 # Scraps every recipe from a table in specified suffix.
 def getCraftingRecipes(stationTuple, craftDictList, itemList, itemHash, recipesCounter, tableHTML, tableID, logFile):
@@ -224,6 +214,7 @@ def getCraftingRecipes(stationTuple, craftDictList, itemList, itemHash, recipesC
             recipesCounter += 1
                 
     insertRecipeOnJSON(writeFileStructure, itemList, logFile)
+    writeOnTableFile(writeFileStructure, tableID)
 
 # Gets every table HTML with the javascript function loaded
 def getJavascriptTableHTML(urlSuffix):
