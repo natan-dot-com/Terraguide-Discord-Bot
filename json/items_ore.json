@@ -163,7 +163,10 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "1029",
+                "1035"
+            ],
             "Other": "Underground, Cavern"
         }
     },
@@ -460,7 +463,10 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "1027",
+                "1041"
+            ],
             "Other": "Underground, Cavern"
         }
     },
@@ -568,7 +574,9 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "1133"
+            ],
             "Other": ""
         }
     }

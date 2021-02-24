@@ -168,14 +168,14 @@
         "Bag ID": "6",
         "Name": "Golden Lock Box",
         "Grab Bag Loot List": [
-            "1014",
-            "1015",
-            "1016",
-            "1017",
-            "1018",
-            "1019",
-            "1020",
-            "1021"
+            "1172",
+            "1173",
+            "1174",
+            "1175",
+            "1176",
+            "1177",
+            "1178",
+            "1179"
         ]
     },
     {
@@ -411,67 +411,195 @@
     {
         "Bag ID": "14",
         "Name": "Treasure Bag (King Slime)",
-        "Grab Bag Loot List": []
+        "Grab Bag Loot List": [
+            "1014",
+            "1015",
+            "1016",
+            "1017",
+            "1018",
+            "1019",
+            "1020",
+            "1021",
+            "1022",
+            "1023"
+        ]
     },
     {
         "Bag ID": "15",
         "Name": "Treasure Bag (Eye of Cthulhu)",
-        "Grab Bag Loot List": []
+        "Grab Bag Loot List": [
+            "1024",
+            "1025",
+            "1026",
+            "1027",
+            "1028",
+            "1029",
+            "1030",
+            "1031",
+            "1032"
+        ]
     },
     {
         "Bag ID": "16",
         "Name": "Treasure Bag (Eater of Worlds)",
-        "Grab Bag Loot List": []
+        "Grab Bag Loot List": [
+            "1033",
+            "1034",
+            "1035",
+            "1036",
+            "1037",
+            "1038"
+        ]
     },
     {
         "Bag ID": "17",
         "Name": "Treasure Bag (Brain of Cthulhu)",
-        "Grab Bag Loot List": []
+        "Grab Bag Loot List": [
+            "1039",
+            "1040",
+            "1041",
+            "1042",
+            "1043",
+            "1044"
+        ]
     },
     {
         "Bag ID": "18",
         "Name": "Treasure Bag (Queen Bee)",
-        "Grab Bag Loot List": []
+        "Grab Bag Loot List": [
+            "1045",
+            "1046",
+            "1047",
+            "1048",
+            "1049",
+            "1050",
+            "1051",
+            "1052",
+            "1053",
+            "1054",
+            "1055",
+            "1056",
+            "1057",
+            "1058",
+            "1059"
+        ]
     },
     {
         "Bag ID": "19",
         "Name": "Treasure Bag (Skeletron)",
-        "Grab Bag Loot List": []
+        "Grab Bag Loot List": [
+            "1072",
+            "1073",
+            "1074",
+            "1075",
+            "1076"
+        ]
     },
     {
         "Bag ID": "20",
         "Name": "Treasure Bag (Wall of Flesh)",
-        "Grab Bag Loot List": []
+        "Grab Bag Loot List": [
+            "1060",
+            "1061",
+            "1062",
+            "1063",
+            "1064",
+            "1065",
+            "1066",
+            "1067",
+            "1068",
+            "1069",
+            "1070",
+            "1071"
+        ]
     },
     {
         "Bag ID": "21",
         "Name": "Treasure Bag (The Destroyer)",
-        "Grab Bag Loot List": []
+        "Grab Bag Loot List": [
+            "1082",
+            "1083",
+            "1084",
+            "1085",
+            "1086"
+        ]
     },
     {
         "Bag ID": "22",
         "Name": "Treasure Bag (The Twins)",
-        "Grab Bag Loot List": []
+        "Grab Bag Loot List": [
+            "1077",
+            "1078",
+            "1079",
+            "1080",
+            "1081"
+        ]
     },
     {
         "Bag ID": "23",
         "Name": "Treasure Bag (Skeletron Prime)",
-        "Grab Bag Loot List": []
+        "Grab Bag Loot List": [
+            "1087",
+            "1088",
+            "1089",
+            "1090",
+            "1091"
+        ]
     },
     {
         "Bag ID": "24",
         "Name": "Treasure Bag (Plantera)",
-        "Grab Bag Loot List": []
+        "Grab Bag Loot List": [
+            "1092",
+            "1093",
+            "1094",
+            "1095",
+            "1096",
+            "1097",
+            "1098",
+            "1099",
+            "1100",
+            "1101",
+            "1102",
+            "1103",
+            "1104",
+            "1105",
+            "1106"
+        ]
     },
     {
         "Bag ID": "25",
         "Name": "Treasure Bag (Golem)",
-        "Grab Bag Loot List": []
+        "Grab Bag Loot List": [
+            "1107",
+            "1108",
+            "1109",
+            "1110",
+            "1111",
+            "1112",
+            "1113",
+            "1114",
+            "1115",
+            "1116",
+            "1117",
+            "1118",
+            "1119"
+        ]
     },
     {
         "Bag ID": "26",
         "Name": "Treasure Bag (Duke Fishron)",
-        "Grab Bag Loot List": []
+        "Grab Bag Loot List": [
+            "1120",
+            "1121",
+            "1122",
+            "1123",
+            "1124",
+            "1125",
+            "1126",
+            "1127",
+            "1128"
+        ]
     },
     {
         "Bag ID": "27",
@@ -481,22 +609,48 @@
     {
         "Bag ID": "28",
         "Name": "Treasure Bag (Moon Lord)",
-        "Grab Bag Loot List": []
+        "Grab Bag Loot List": [
+            "1129",
+            "1130",
+            "1131",
+            "1132",
+            "1133",
+            "1134",
+            "1135",
+            "1136",
+            "1137",
+            "1138",
+            "1139",
+            "1140",
+            "1141",
+            "1142",
+            "1143",
+            "1144",
+            "1145"
+        ]
     },
     {
         "Bag ID": "29",
         "Name": "Pigronata",
         "Grab Bag Loot List": [
-            "1032",
-            "1033",
-            "1034",
-            "1035"
+            "1190",
+            "1191",
+            "1192",
+            "1193"
         ]
     },
     {
         "Bag ID": "30",
         "Name": "Treasure Bag (Betsy)",
-        "Grab Bag Loot List": []
+        "Grab Bag Loot List": [
+            "1146",
+            "1147",
+            "1148",
+            "1149",
+            "1150",
+            "1151",
+            "1152"
+        ]
     },
     {
         "Bag ID": "31",
@@ -1114,16 +1268,27 @@
         "Bag ID": "47",
         "Name": "Oyster",
         "Grab Bag Loot List": [
-            "1028",
-            "1029",
-            "1030",
-            "1031"
+            "1186",
+            "1187",
+            "1188",
+            "1189"
         ]
     },
     {
         "Bag ID": "48",
         "Name": "Treasure Bag (Empress of Light)",
-        "Grab Bag Loot List": []
+        "Grab Bag Loot List": [
+            "1153",
+            "1154",
+            "1155",
+            "1156",
+            "1157",
+            "1158",
+            "1159",
+            "1160",
+            "1161",
+            "1162"
+        ]
     },
     {
         "Bag ID": "49",
@@ -1235,18 +1400,28 @@
         "Bag ID": "51",
         "Name": "Obsidian Lock Box",
         "Grab Bag Loot List": [
-            "1022",
-            "1023",
-            "1024",
-            "1025",
-            "1026",
-            "1027"
+            "1180",
+            "1181",
+            "1182",
+            "1183",
+            "1184",
+            "1185"
         ]
     },
     {
         "Bag ID": "52",
         "Name": "Treasure Bag (Queen Slime)",
-        "Grab Bag Loot List": []
+        "Grab Bag Loot List": [
+            "1163",
+            "1164",
+            "1165",
+            "1166",
+            "1167",
+            "1168",
+            "1169",
+            "1170",
+            "1171"
+        ]
     },
     {
         "Bag ID": "53",

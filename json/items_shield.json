@@ -9,7 +9,7 @@
             "NPC": [],
             "Drop": [],
             "Grab Bag": [
-                "1016"
+                "1174"
             ],
             "Other": "Found in Gold Chests, Dungeon"
         }
@@ -71,7 +71,9 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "1024"
+            ],
             "Other": ""
         }
     },

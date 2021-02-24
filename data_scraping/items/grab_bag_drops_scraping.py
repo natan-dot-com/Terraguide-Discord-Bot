@@ -18,6 +18,7 @@ CRATES_SUFFIX = "/Crates"
 # Table Head Labels
 crateHeadLabels = ["Pre-Hardmode type", "Hardmode type"]
 dropHeadLabels = ["Item", "Quantity", "Chance"]
+bagDropHeadLabels = ["Item", "Chance", "Amount"]
 
 # Initializes both item hash table and bag hash table
 def initializeHashTables(itemList: list, bagList: list):
@@ -184,6 +185,67 @@ def scrapDropInformation(itemHash: hashTable, urlSuffix: str, logFile, IDcounter
         writeOnJSONFiles(writeStructure, logFile)
         writeOnBagFile(writeStructure, bagID)
 
+def treasureBagDropScrap(dropList, urlSuffix, bagHash, itemHash, logFile, itemList, IDcounter):
+    funcIDcounter = 0
+
+    html = requests.get(MAIN_URL + urlSuffix)
+    soup = BeautifulSoup(html.content, 'html.parser')
+    bagTables = soup.findAll("table", class_=TERRARIA_TABLE_CLASS)[0:20]
+
+    for table in bagTables:
+        writeStructure = {}
+        bagName = "Treasure Bag (" + table['id'].replace("_", " ") + ")"
+        bagID = findBagID(bagName, bagHash, logFile)
+        
+        if bagID != NOT_FOUND:
+            rows = []
+            
+            if table.find("table"):
+                subtables = table.findAll("table")
+                for s_table in subtables:
+                    rows.extend(s_table.findAll("tr"))
+                dropTableHead = getTableColumns(rows[0].findAll("th"), bagDropHeadLabels)
+            else:
+                rows = table.findAll("tr")
+                dropTableHead = getTableColumns(rows[1].findAll("th"), bagDropHeadLabels)
+                
+            if rows[1].find("th", class_="unobtainablehighlight"):
+                continue
+                
+            for row in rows:
+                if row.find("th"):
+                    continue
+                cols = row.findAll("td")
+                dropDict = {
+                    BAG_DROP_ID: "",
+                    BAG_DROP_RESULT: "",
+                    BAG_DROP_QUANTITY: "",
+                    BAG_DROP_PROBABILITY: "",
+                    BAG_ID: ""
+                }
+                dropDict[BAG_DROP_ID] = str(IDcounter + funcIDcounter)
+                
+                itemDrop = cols[dropTableHead["Item"]].find("img")
+                itemDropID = itemHash.search(itemDrop['alt'], SCRAPING_ID)
+                if itemDropID != NOT_FOUND:
+                    print("Scrapping information for ID " + itemDropID + ".")
+                    dropDict[BAG_DROP_RESULT] = str(itemDropID)
+                else:
+                    print("ERROR: Check log file for more information.")
+                    logFile.write("ERROR: ID for item '" + drop['alt'] + "' not found in the database.\n")
+                    logFile.write("\tACTION: Item ID replaced with -1 (NOT_FOUND).\n\n")
+                    
+                dropDict[BAG_DROP_QUANTITY] = cols[dropTableHead["Amount"]].text.strip() 
+                dropDict[BAG_DROP_PROBABILITY] = cols[dropTableHead["Chance"]].contents[0].strip() 
+                dropDict[BAG_ID] = str(bagID)
+                
+                feedWriteStructure(dropDict, writeStructure, itemList)
+                dropList.append(dropDict)
+                funcIDcounter += 1
+                
+            writeOnJSONFiles(writeStructure, logFile)
+            writeOnBagFile(writeStructure, bagID)
+
 def main():
     itemList = LoadJSONFile("../../" + GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
     bagList = LoadJSONFile("../../" + GLOBAL_JSON_PATH + BAGS_NAME_FILE + JSON_EXT)
@@ -197,20 +259,21 @@ def main():
         logFile = createLogFile(urlSuffix)
         bagName = urlSuffix.replace("_", " ")
         bagID = findBagID(bagName[1::], bagHash, logFile) 
+            
+        # Initialization messages
+        logFile.write("Bag ID found (" + str(bagID) + ").\n")
+        print("Starting getting information from '" + MAIN_URL + urlSuffix + "'...")
 
+        # Scrap block
+        if urlSuffix == "/Treasure_Bag":
+            treasureBagDropScrap(dropList, urlSuffix, bagHash, itemHash, logFile, itemList, IDcounter)
         if bagID != NOT_FOUND:
-            # Inicialization messages
-            logFile.write("Bag ID found (" + bagID + ").\n")
-            print("Starting getting information from '" + MAIN_URL + urlSuffix + "'...")
-            
-            # Scrap block
-            if urlSuffix != "/Treasure_Bag":
-                scrapDropInformation(itemHash, urlSuffix, logFile, IDcounter, bagID, dropList, itemList)
-            IDcounter = len(dropList)+1
-            
-            # Exit block
-            logFile.write("Sucessful scrap. Exiting with value 0.\n")
-            print("\n")
+            scrapDropInformation(itemHash, urlSuffix, logFile, IDcounter, bagID, dropList, itemList)
+        IDcounter = len(dropList)+1
+
+        # Exit block
+        logFile.write("Sucessful scrap. Exiting with value 0.\n")
+        print("\n")
 
     SaveJSONFile("../../" + GLOBAL_JSON_PATH + BAGS_DROP_NAME_FILE + JSON_EXT, dropList)
     print("Exiting returning value 0.")
