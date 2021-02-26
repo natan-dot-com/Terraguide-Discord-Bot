@@ -85,6 +85,9 @@ SCRAPING_HOUSE = "House"
 SCRAPING_MECHANISM = "Mechanism"
 SCRAPING_WATERPROOF = "Waterproof"
 SCRAPING_BAG_DROPS = "Bag Drops"
+SCRAPING_DURATION = "Duration"
+SCRAPING_BUFF = "Buff"
+SCRAPING_BUFF_TOOLTIP = "Buff tooltip"
 
 # Image data
 IMAGE_BRICK = "Brick Image"
@@ -195,6 +198,7 @@ CONSUMABLE_NAME_FILE = "items_consumable"
 EVENT_SUMMON_NAME_FILE = "items_event_summon"
 FISHING_CATCHES_NAME_FILE = "items_fishing_catches"
 FURNITURE_NAME_FILE = "items_furniture"
+FOOD_NAME_FILE = "items_food"
 GEM_NAME_FILE = "items_gem"
 GRAB_BAG_NAME_FILE = "items_grab_bag"
 HOOK_NAME_FILE = "items_hook"
@@ -347,6 +351,20 @@ def get_statistics(tableBox, itemInstance = {}, usedIn = "", isArmor = False):
                 jsonDict[SCRAPING_HAMMER_POWER] = powerType.text[1:].split(" ", 1)[0]
             elif(powerType["title"] == SCRAPING_AXE_POWER):
                 jsonDict[SCRAPING_AXE_POWER] = powerType.text[1:].split(" ", 1)[0]
+    #get buffs
+    if tableBox.find("div", class_="section buff"):
+        tableBuffs = tableBox.find_all("tr")
+        for tableBuff in tableBuffs:
+            if tableBuff.th.text == SCRAPING_BUFF:
+                jsonDict[SCRAPING_BUFF] = tableBuff.find("img")["alt"]
+            elif tableBuff.th.text == SCRAPING_BUFF_TOOLTIP:
+                if tableBuff.find("a", title="Expert Mode"):
+                    BuffsTexts = BeautifulSoup(str(tableBuff.i).replace("<br/>", "."), 'html.parser').text.encode("ascii", "ignore").decode().split(".")
+                    jsonDict[SCRAPING_BUFF_TOOLTIP] = BuffsTexts[0].rstrip() + " (Normal Mode). " + BuffsTexts[1].rstrip() + " (Expert Mode)."
+                else:
+                    jsonDict[SCRAPING_BUFF_TOOLTIP] = tableBuff.i.text
+            elif tableBuff.th.text == SCRAPING_DURATION:
+                jsonDict[SCRAPING_DURATION] = tableBuff.td.text.encode("ascii", "replace").decode().replace("?", " ").rstrip()
     #Check if optional parameter was given
     if usedIn:
         jsonDict[SCRAPING_USED_IN] = usedIn
