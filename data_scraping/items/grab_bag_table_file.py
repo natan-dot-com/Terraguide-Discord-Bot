@@ -1,16 +1,26 @@
-import os,sys,inspect
-current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-parent_dir = os.path.dirname(current_dir)
-parent_dir = os.path.dirname(parent_dir)
-sys.path.insert(0, parent_dir) 
-from scraping_tools import *
-from json_manager import *
+# Load 3-level parent directories
+from importlib import import_module
+import path_manager
+if __name__ == '__main__' and __package__ == None:
+    __package__ = path_manager.importParents(level=3)
+    import_module(__package__)
+
+# Setting the root directory as working directory for Linux systems
+from platform import system
+from pathlib import Path
+import os
+executionOS = system()
+if executionOS == "Linux":
+    os.chdir("../../")
+
+from ...utility_tools.scraping_tools import *
+from ...utility_tools.json_manager import *
 from bs4 import BeautifulSoup
 import re
 import requests
 
-bagList = LoadJSONFile("../../" + GLOBAL_JSON_PATH + GRAB_BAG_NAME_FILE + JSON_EXT)
-itemList = LoadJSONFile("../../" + GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
+bagList = LoadJSONFile(GLOBAL_JSON_PATH + GRAB_BAG_NAME_FILE + JSON_EXT)
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 
 newList = []
 IDcounter = 1
@@ -25,4 +35,4 @@ for bagInstance in bagList:
     print("Processing " + newDict[SCRAPING_NAME]) 
     newList.append(newDict)
     IDcounter += 1
-SaveJSONFile("../../" + GLOBAL_JSON_PATH + BAGS_NAME_FILE + JSON_EXT, newList)
+SaveJSONFile(GLOBAL_JSON_PATH + BAGS_NAME_FILE + JSON_EXT, newList)

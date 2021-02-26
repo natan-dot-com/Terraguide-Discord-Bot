@@ -1,27 +1,37 @@
-import os,sys,inspect
-current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-parent_dir = os.path.dirname(current_dir)
-parent_dir = os.path.dirname(parent_dir)
-sys.path.insert(0, parent_dir) 
-from scraping_tools import *
-from json_manager import *
-from bs4 import BeautifulSoup
-from item_hash import *
-from itertools import chain
-from contextlib import closing
-from selenium.webdriver import Firefox
-from selenium.webdriver.support.ui import WebDriverWait
+# Load 3-level parent directories
+from importlib import import_module
+import path_manager
+if __name__ == '__main__' and __package__ == None:
+    __package__ = path_manager.importParents(level=3)
+    import_module(__package__)
+
+# Setting the root directory as working directory for Linux systems
+from platform import system
+from pathlib import Path
+import os
+executionOS = system()
+if executionOS == "Linux":
+    os.chdir("../../")
+
+# Personal files
+from ...utility_tools.scraping_tools import *
+from ...utility_tools.json_manager import *
+from ...utility_tools.item_hash import *
 
 import re
 import requests
+from bs4 import BeautifulSoup
+from contextlib import closing
+from selenium.webdriver import Firefox
+from selenium.webdriver.support.ui import WebDriverWait
 
 # Constant values
 MAIN_ITEM_SUBFILE_PREFIX = "items_"
 MAIN_CRAFTING_STATION_SUFFIX = "/Crafting_stations"
 
 DEFAULT_LOG_PATH = LOG_PATH + "recipes_"
-ITEMS_JSON_PATH = "../../" + GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT
-RECIPE_JSON_PATH = "../../" + GLOBAL_JSON_PATH + RECIPE_NAME_FILE + JSON_EXT
+ITEMS_JSON_PATH = GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT
+RECIPE_JSON_PATH = GLOBAL_JSON_PATH + RECIPE_NAME_FILE + JSON_EXT
 
 TUPLE_TABLE_NAME = 0
 TUPLE_TABLE_URL = 1
@@ -30,9 +40,10 @@ scrappingData = ["Result", "Ingredients"]
 javascriptTables = ["/Work_Bench", "/Placed_Bottle", "/Alchemy_Table"]
 exceptionTables = ["/Campfire", "/Extractinator", "/Living_Wood"]
 
+
 # Initialize both hash tables.
 def initializeHashTables(itemList):
-    tableList = LoadJSONFile("../../" + GLOBAL_JSON_PATH + TABLE_NAME_FILE + JSON_EXT)
+    tableList = LoadJSONFile(GLOBAL_JSON_PATH + TABLE_NAME_FILE + JSON_EXT)
 
     itemHash = hashTable(ITEMS_HASH_SIZE, SCRAPING_NAME)
     for itemInstance in itemList:
@@ -44,6 +55,7 @@ def initializeHashTables(itemList):
 
     return itemHash, tableHash
 
+
 def findTableID(tableName, tableHash, logFile):
     tableID = tableHash.search(tableName, RECIPE_TABLE)
     if tableID == NOT_FOUND:
@@ -54,12 +66,14 @@ def findTableID(tableName, tableHash, logFile):
         logFile.write("Table ID (" + tableID + ") found. Starting execution.\n\n")
         return tableID
 
+
 def createLogFile(tableName):
-    logFilePath = "../../" + DEFAULT_LOG_PATH + tableName.replace(" ", "_").lower() + LOG_EXT
+    logFilePath = DEFAULT_LOG_PATH + tableName.replace(" ", "_").lower() + LOG_EXT
     logFile = open(logFilePath, "w+")
-    print("Creating new log file for '"+ tableName + "'.")
+    print("Creating new log file for '" + tableName + "'.")
     logFile.write("Starting log file for '" + tableName + "'.\n")
     return logFile
+
 
 # Loads HTML content from the table we're looking for.
 def getTableContent(urlSuffix, tableClass):
@@ -68,6 +82,7 @@ def getTableContent(urlSuffix, tableClass):
     soup = BeautifulSoup(html.content, 'html.parser')
     table = soup.findAll("table", class_=tableClass)
     return table
+
 
 def feedWriteStructure(itemList, recipeDict, writeFileStructure):
     itemIndex = int(recipeDict[RECIPE_RESULT])-1
@@ -78,12 +93,13 @@ def feedWriteStructure(itemList, recipeDict, writeFileStructure):
         writeFileStructure[itemType][itemIndex+1] = []
     writeFileStructure[itemType][itemIndex+1].append(recipeDict[RECIPE_CRAFT_ID])
 
+
 # Algorithm to get the recipe's ID and refers it inside each JSON-data file.
 def insertRecipeOnJSON(writeFileStructure, itemList, logFile):
     print("\nInitiating writing process...")
     for itemType in writeFileStructure.keys():
         filenameSuffix = itemType.lower().replace(" ", "_")
-        filename = "../../" + GLOBAL_JSON_PATH + MAIN_ITEM_SUBFILE_PREFIX + filenameSuffix + JSON_EXT
+        filename = GLOBAL_JSON_PATH + MAIN_ITEM_SUBFILE_PREFIX + filenameSuffix + JSON_EXT
         try:
             with open(filename) as outputFile:
                 JSONList = LoadJSONFile(filename)
@@ -101,9 +117,10 @@ def insertRecipeOnJSON(writeFileStructure, itemList, logFile):
             print("File '" + filename + "' not found. Aborting proccess.")
             logFile.write("Can't reach '" + filename + "'. No such file or directory.\n\n")
 
+
 # Insert every table recipe on its respective table recipe list in crafting_stations.json
 def writeOnTableFile(writeFileStructure, tableID):
-    tableFilePath = "../../" + GLOBAL_JSON_PATH + TABLE_NAME_FILE + JSON_EXT 
+    tableFilePath = GLOBAL_JSON_PATH + TABLE_NAME_FILE + JSON_EXT
     tableList = LoadJSONFile(tableFilePath)
     for itemType in writeFileStructure.keys():
         for itemID in writeFileStructure[itemType].keys():
@@ -116,7 +133,7 @@ def writeOnTableFile(writeFileStructure, tableID):
 # Scraps every recipe from a table in specified suffix.
 def getCraftingRecipes(stationTuple, craftDictList, itemList, itemHash, recipesCounter, tableHTML, tableID, logFile):
     writeFileStructure = {}
-        
+
     recipeResult = ""
     recipeQty = ""
     PCExcludedRecipe = False
@@ -131,11 +148,11 @@ def getCraftingRecipes(stationTuple, craftDictList, itemList, itemHash, recipesC
             RECIPE_RESULT_QUANTITY: "",
             RECIPE_TABLE: "",
             RECIPE_IDENTITY: []
-        } 
+        }
         cols = row.findAll("td")
-        
+
         # Getting the informations from 'Result' column.
-        
+
         # If it exists, recipeResult will be updated. The same happens with recipeQty.
         if row.find("td", class_="result"):
 
@@ -148,7 +165,7 @@ def getCraftingRecipes(stationTuple, craftDictList, itemList, itemHash, recipesC
                         booleanList.append(True)
                     else:
                         booleanList.append(False)
-                        
+
                 if all(boolValue == False for boolValue in booleanList):
                     logFile.write("PC-excluded recipe detected: " + imageList[0]['alt'] + ". Skipping it.\n\n")
                     PCExcludedRecipe = True
@@ -156,37 +173,37 @@ def getCraftingRecipes(stationTuple, craftDictList, itemList, itemHash, recipesC
 
             PCExcludedRecipe = False
             recipeResult = imageList[0]['alt']
-                
+
             if cols[tableHead["Result"]].find("span", class_="note-text"):
                 recipeQty = re.search("\d+", cols[tableHead["Result"]].find("span", class_="note-text").text).group()
             else:
                 recipeQty = "1"
-                
+
         if not PCExcludedRecipe:
             print(str(recipesCounter) + ": Scrapping '" + recipeResult + "' from '" + stationTuple[TUPLE_TABLE_NAME] + "'s page.")
-            
+
             recipeDict[RECIPE_RESULT] =  itemHash.search(recipeResult, SCRAPING_ID)
             if recipeDict[RECIPE_RESULT] == NOT_FOUND:
                 print("\tError detected. Please check the log file for more details.")
-                    
+
                 logFile.write("RECIPE WARNING: Item '" + recipeResult + \
                     "' was not found in database. Maybe this item was already removed from/replaced in Terraria.\n")
-                    
+
                 logFile.write("\tACTION: Recipe dictionary from '" + recipeResult + "' was removed from the list.\n\n")
                 continue
-                
+
             recipeDict[RECIPE_CRAFT_ID] = str(recipesCounter)
             recipeDict[RECIPE_RESULT_QUANTITY] = recipeQty
             recipeDict[RECIPE_TABLE] = tableID
-            
+
             # Getting the informations from 'Ingredients' column.
-            
+
             # THE WORST (If there's not 'Result' class, the ingredient column is actually the first one)
             if not row.find("td", class_="result"):
                 ingredientRows = cols[0].findAll("li")
             else:
                 ingredientRows = cols[tableHead["Ingredients"]].findAll("li")
-            
+
             for ingredientRow in ingredientRows:
                 ingredientDict = {
                     INGREDIENT_NAME: "",
@@ -202,7 +219,7 @@ def getCraftingRecipes(stationTuple, craftDictList, itemList, itemHash, recipesC
                     logFile.write("INGREDIENT ERROR (" + str(recipesCounter) + "): Ingredient '" + ingredientRow.a['title'] + \
                         "' from '" + recipeResult + "' was not found.\n")
                     logFile.write("\tACTION: Ingredient ID replaced with NOT_FOUND value (-1). Need to be fixed outside the algorithm.\n\n")
-                    
+
                 ingredientQty = ingredientRow.find("span", class_="note-text")
                 if ingredientQty:
                     ingredientDict[INGREDIENT_QUANTITY] = re.search("\d+", ingredientQty.text).group()
@@ -212,7 +229,7 @@ def getCraftingRecipes(stationTuple, craftDictList, itemList, itemHash, recipesC
             craftDictList.append(recipeDict)
             feedWriteStructure(itemList, recipeDict, writeFileStructure)
             recipesCounter += 1
-                
+
     insertRecipeOnJSON(writeFileStructure, itemList, logFile)
     writeOnTableFile(writeFileStructure, tableID)
 
@@ -229,7 +246,7 @@ def getJavascriptTableHTML(urlSuffix):
             lambda x: x.find_element_by_xpath('//*[@id="ajaxTable0"]/tbody/tr[2]/td/div/div[1]/div/table')
         )
         pageSource = webBrowser.page_source
-        
+
     tableList = []
     html = BeautifulSoup(pageSource, 'html.parser')
     if html:
@@ -242,7 +259,7 @@ def getJavascriptTableHTML(urlSuffix):
 # Gets every table URL suffix
 def getTableLinks():
     stationLinks = []
-    craftingStationTables = getTableContent(MAIN_CRAFTING_STATION_SUFFIX, TERRARIA_TABLE_CLASS) 
+    craftingStationTables = getTableContent(MAIN_CRAFTING_STATION_SUFFIX, TERRARIA_TABLE_CLASS)
     for craftingTable in craftingStationTables:
         rows = craftingTable.findAll("tr")
         for row in rows[1::]:
@@ -255,7 +272,7 @@ def getTableLinks():
             else:
                 stationLinks.append((tableColumn.a['title'], tableColumn.a['href']))
     return stationLinks
-            
+
 # Finds every crafting recipe table inside the page
 def findEveryRecipeTable(urlSuffix, tableClass):
     recipeTableList = []
@@ -297,7 +314,7 @@ def main():
             for tableHTML in recipeTableList:
                 getCraftingRecipes(stationTuple, craftDictList, itemList, itemHash, recipeCounter, tableHTML, tableID, logFile)
                 recipeCounter = len(craftDictList)+1
-            
+
             print("Successful operation. Exiting with value 0.\n")
             logFile.write("Successful operation. Exiting with value 0.\n")
             logFile.close()

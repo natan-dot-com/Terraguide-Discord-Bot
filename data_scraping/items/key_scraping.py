@@ -1,10 +1,20 @@
-import os,sys,inspect
-current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-parent_dir = os.path.dirname(current_dir)
-parent_dir = os.path.dirname(parent_dir)
-sys.path.insert(0, parent_dir) 
-from scraping_tools import *
-from json_manager import *
+# Load 3-level parent directories
+from importlib import import_module
+import path_manager
+if __name__ == '__main__' and __package__ == None:
+    __package__ = path_manager.importParents(level=3)
+    import_module(__package__)
+
+# Setting the root directory as working directory for Linux systems
+from platform import system
+from pathlib import Path
+import os
+executionOS = system()
+if executionOS == "Linux":
+    os.chdir("../../")
+
+from ...utility_tools.scraping_tools import *
+from ...utility_tools.json_manager import *
 from bs4 import BeautifulSoup
 import re
 import requests
@@ -40,9 +50,9 @@ for row in rows[1::]:
         keyDict[SCRAPING_USED_IN] = cols[2].find("img")['alt'].replace(".png", "")
     else:
         keyDict[SCRAPING_USED_IN] = cols[2].find("a")['title']
-        
+
     keyDict[SCRAPING_CONSUMED] = cols[3].img['alt']
-    
+
     # Drop dict as PLACEHOLDER. It will be in the drop-data json.
     if re.search("Drop", cols[1].text, re.IGNORECASE):
         if not re.search("Plantera", cols[1].text):
@@ -52,16 +62,16 @@ for row in rows[1::]:
                 DROP_PROBABILITY: "",
                 DROP_QUANTITY: "",
             }
-            string = "Hardmode drop in" 
+            string = "Hardmode drop in"
             for biome in cols[1].findAll("a"):
                 string += " " + biome.text + ","
             string = string[:-1] + "."
             dropDict[DROP_NPC] = string
             dropDict[DROP_PROBABILITY] = "0.04%"
-                
+
             dropDict[DROP_QUANTITY] = "1"
             keyDict[SCRAPING_SOURCE][SOURCE_DROP].append(dropDict)
-            
+
     elif not re.search("Soul", cols[1].text):
         if cols[1].find("img"):
             keyDict[SCRAPING_SOURCE][SOURCE_OTHER] = cols[1].find("img")['alt']

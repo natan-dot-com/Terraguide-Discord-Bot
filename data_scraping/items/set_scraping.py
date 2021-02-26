@@ -1,13 +1,22 @@
 #Minor output formatation issues. Aside that everything seems to work
 
-import os,sys,inspect
-import re
-current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-parent_dir = os.path.dirname(current_dir)
-parent_dir = os.path.dirname(parent_dir)
-sys.path.insert(0, parent_dir)
-from scraping_tools import *
-from json_manager import *
+# Load 3-level parent directories
+from importlib import import_module
+import path_manager
+if __name__ == '__main__' and __package__ == None:
+    __package__ = path_manager.importParents(level=3)
+    import_module(__package__)
+
+# Setting the root directory as working directory for Linux systems
+from platform import system
+from pathlib import Path
+import os
+executionOS = system()
+if executionOS == "Linux":
+    os.chdir("../../")
+
+from ...utility_tools.scraping_tools import *
+from ...utility_tools.json_manager import *
 import requests
 from bs4 import BeautifulSoup
 

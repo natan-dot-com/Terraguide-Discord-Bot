@@ -1,13 +1,23 @@
-import os,sys,inspect
-current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-parent_dir = os.path.dirname(current_dir)
-parent_dir = os.path.dirname(parent_dir)
-sys.path.insert(0, parent_dir) 
-from scraping_tools import *
-from json_manager import *
+# Load 3-level parent directories
+from importlib import import_module
+import path_manager
+if __name__ == '__main__' and __package__ == None:
+    __package__ = path_manager.importParents(level=3)
+    import_module(__package__)
+
+# Setting the root directory as working directory for Linux systems
+from platform import system
+from pathlib import Path
+import os
+executionOS = system()
+if executionOS == "Linux":
+    os.chdir("../../")
+
+from ...utility_tools.scraping_tools import *
+from ...utility_tools.json_manager import *
+from ...utility_tools.multithreading_starter import *
 from bs4 import BeautifulSoup
 import requests
-from multithreading_starter import *
 
 URL = "https://terraria.gamepedia.com/"
 BOSS_SUMMON_PATH = GLOBAL_JSON_PATH + BOSS_SUMMON_NAME_FILE + JSON_EXT

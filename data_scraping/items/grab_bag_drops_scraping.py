@@ -1,11 +1,21 @@
-import os,sys,inspect
-current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-parent_dir = os.path.dirname(current_dir)
-parent_dir = os.path.dirname(parent_dir)
-sys.path.insert(0, parent_dir) 
-from scraping_tools import *
-from json_manager import *
-from item_hash import *
+# Load 3-level parent directories
+from importlib import import_module
+import path_manager
+if __name__ == '__main__' and __package__ == None:
+    __package__ = path_manager.importParents(level=3)
+    import_module(__package__)
+
+# Setting the root directory as working directory for Linux systems
+from platform import system
+from pathlib import Path
+import os
+executionOS = system()
+if executionOS == "Linux":
+    os.chdir("../../")
+
+from ...utility_tools.scraping_tools import *
+from ...utility_tools.json_manager import *
+from ...utility_tools.item_hash import *
 from bs4 import BeautifulSoup
 import re
 import requests
@@ -26,7 +36,7 @@ def initializeHashTables(itemList: list, bagList: list):
     for itemInstance in itemList:
         itemHash.add(itemInstance[SCRAPING_NAME], itemInstance)
 
-    bagHash = hashTable(TABLES_HASH_SIZE, SCRAPING_NAME) 
+    bagHash = hashTable(TABLES_HASH_SIZE, SCRAPING_NAME)
     for bagInstance in bagList:
         bagHash.add(bagInstance[SCRAPING_NAME], bagInstance)
 
@@ -37,7 +47,7 @@ def getCratesSuffixes(suffixesList: list):
     html = requests.get(MAIN_URL + CRATES_SUFFIX)
     soup = BeautifulSoup(html.content, 'html.parser')
     rows = soup.find("table", class_="terraria").findAll("tr")
-    tableHead = getTableColumns(rows[0].findAll("th"), crateHeadLabels) 
+    tableHead = getTableColumns(rows[0].findAll("th"), crateHeadLabels)
     for row in rows[1::]:
         for columnLabel in crateHeadLabels:
             cols = row.findAll("td")
@@ -63,7 +73,7 @@ def getURLSuffixes():
 
 # Initializes a log file for the respective bag
 def createLogFile(urlSuffix: str):
-    logFile = open("../../" + LOG_PATH + urlSuffix[1::].lower() + LOG_EXT, "w+") 
+    logFile = open("../../" + LOG_PATH + urlSuffix[1::].lower() + LOG_EXT, "w+")
     print("Creating log file for '" + urlSuffix + "'")
     logFile.write("Starting log file for '" + urlSuffix + "'.\n")
     return logFile
@@ -77,7 +87,7 @@ def findBagID(bagName: str, bagHash: hashTable, logFile):
     else:
         print("Bag ID for '" + bagName + "' found.")
     return hashResult
-    
+
 # Write algorithm uses a specific structure to avoid rewriting the file every time a number is written
 def feedWriteStructure(dropDict, writeStructure, itemList):
     itemIndex = int(dropDict[BAG_DROP_RESULT])-1
@@ -87,7 +97,7 @@ def feedWriteStructure(dropDict, writeStructure, itemList):
     if itemIndex+1 not in writeStructure[itemType].keys():
         writeStructure[itemType][itemIndex+1] = []
     writeStructure[itemType][itemIndex+1].append(dropDict[BAG_DROP_ID])
-   
+
 # Writes every bag drop ID on every respective source list inside each items-prefixed json file
 def writeOnJSONFiles(writeStructure, logFile):
     for itemType in writeStructure.keys():
@@ -97,7 +107,7 @@ def writeOnJSONFiles(writeStructure, logFile):
 
         if not typeList:
             logFile.write("WRITING ERROR: Can't reach file " + filePath + ". No such file or directory.\n")
-            logFile.write("\tACTION: Writing process for type " + itemType + "aborted.\n\n")
+            logFile.write("\tACTION: Writing process for type " + itemType + " aborted.\n\n")
             continue
 
         for itemID in writeStructure[itemType].keys():
@@ -144,9 +154,9 @@ def scrapDropInformation(itemHash: hashTable, urlSuffix: str, logFile, IDcounter
                 BAG_ID: ""
             }
             cols = row.findAll("td")
-            
-            dropDict[BAG_DROP_ID] = str(IDcounter) 
-            
+
+            dropDict[BAG_DROP_ID] = str(IDcounter)
+
             itemDropID = str(itemHash.search(cols[dropTableHead["Item"]].a['title'], SCRAPING_ID))
             if itemDropID != str(NOT_FOUND):
                 print("Scrapping information for ID " + itemDropID + ".")
@@ -154,7 +164,7 @@ def scrapDropInformation(itemHash: hashTable, urlSuffix: str, logFile, IDcounter
                 print("ERROR: Check log file for more information.")
                 logFile.write("ERROR: ID for item '" + cols[dropTableHead["Item"]].a['title'] + "' not found in the database.\n")
                 logFile.write("\tACTION: Item ID replaced with -1 (NOT_FOUND).\n\n")
-            
+
             # I have no fucking idea, it works
             if len(cols) > 1:
                 if not cols[dropTableHead["Item"]+1].find("span", class_="chance"):
@@ -172,16 +182,16 @@ def scrapDropInformation(itemHash: hashTable, urlSuffix: str, logFile, IDcounter
                         dropChance = cols[dropTableHead["Chance"]-1].text.strip()
                 else:
                     dropChance = cols[dropTableHead["Chance"]-1].s.text.strip()
-                
+
             dropDict[BAG_DROP_RESULT] = itemDropID
             dropDict[BAG_DROP_QUANTITY] = quantityValue
             dropDict[BAG_DROP_PROBABILITY] = dropChance[:-1:] + "%"
             dropDict[BAG_ID] = bagID
-            
+
             feedWriteStructure(dropDict, writeStructure, itemList)
             dropList.append(dropDict)
             IDcounter += 1
-            
+
         writeOnJSONFiles(writeStructure, logFile)
         writeOnBagFile(writeStructure, bagID)
 
@@ -196,10 +206,10 @@ def treasureBagDropScrap(dropList, urlSuffix, bagHash, itemHash, logFile, itemLi
         writeStructure = {}
         bagName = "Treasure Bag (" + table['id'].replace("_", " ") + ")"
         bagID = findBagID(bagName, bagHash, logFile)
-        
+
         if bagID != NOT_FOUND:
             rows = []
-            
+
             if table.find("table"):
                 subtables = table.findAll("table")
                 for s_table in subtables:
@@ -208,10 +218,10 @@ def treasureBagDropScrap(dropList, urlSuffix, bagHash, itemHash, logFile, itemLi
             else:
                 rows = table.findAll("tr")
                 dropTableHead = getTableColumns(rows[1].findAll("th"), bagDropHeadLabels)
-                
+
             if rows[1].find("th", class_="unobtainablehighlight"):
                 continue
-                
+
             for row in rows:
                 if row.find("th"):
                     continue
@@ -224,7 +234,7 @@ def treasureBagDropScrap(dropList, urlSuffix, bagHash, itemHash, logFile, itemLi
                     BAG_ID: ""
                 }
                 dropDict[BAG_DROP_ID] = str(IDcounter + funcIDcounter)
-                
+
                 itemDrop = cols[dropTableHead["Item"]].find("img")
                 itemDropID = itemHash.search(itemDrop['alt'], SCRAPING_ID)
                 if itemDropID != NOT_FOUND:
@@ -234,15 +244,15 @@ def treasureBagDropScrap(dropList, urlSuffix, bagHash, itemHash, logFile, itemLi
                     print("ERROR: Check log file for more information.")
                     logFile.write("ERROR: ID for item '" + drop['alt'] + "' not found in the database.\n")
                     logFile.write("\tACTION: Item ID replaced with -1 (NOT_FOUND).\n\n")
-                    
-                dropDict[BAG_DROP_QUANTITY] = cols[dropTableHead["Amount"]].text.strip() 
-                dropDict[BAG_DROP_PROBABILITY] = cols[dropTableHead["Chance"]].contents[0].strip() 
+
+                dropDict[BAG_DROP_QUANTITY] = cols[dropTableHead["Amount"]].text.strip()
+                dropDict[BAG_DROP_PROBABILITY] = cols[dropTableHead["Chance"]].contents[0].strip()
                 dropDict[BAG_ID] = str(bagID)
-                
+
                 feedWriteStructure(dropDict, writeStructure, itemList)
                 dropList.append(dropDict)
                 funcIDcounter += 1
-                
+
             writeOnJSONFiles(writeStructure, logFile)
             writeOnBagFile(writeStructure, bagID)
 
@@ -258,8 +268,8 @@ def main():
         # Initial setup
         logFile = createLogFile(urlSuffix)
         bagName = urlSuffix.replace("_", " ")
-        bagID = findBagID(bagName[1::], bagHash, logFile) 
-            
+        bagID = findBagID(bagName[1::], bagHash, logFile)
+
         # Initialization messages
         logFile.write("Bag ID found (" + str(bagID) + ").\n")
         print("Starting getting information from '" + MAIN_URL + urlSuffix + "'...")
