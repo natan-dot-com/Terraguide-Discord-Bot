@@ -270,10 +270,7 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [
-                "192",
-                "225"
-            ],
+            "Grab Bag": [],
             "Other": ""
         }
     },
@@ -910,10 +907,7 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [
-                "5",
-                "38"
-            ],
+            "Grab Bag": [],
             "Other": ""
         }
     },
@@ -1806,10 +1800,7 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [
-                "193",
-                "226"
-            ],
+            "Grab Bag": [],
             "Other": ""
         },
         "Use time": "8 (Insanely fast)"

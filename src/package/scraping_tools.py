@@ -176,6 +176,9 @@ RARITY_TIER = {
     RARITY_FIERY_RED: "-13"
 }
 
+# NPC related labels
+NPC_ID = "NPC ID"
+
 # Table files data
 JSON_EXT = ".json"
 TABLE_NAME_FILE = "crafting_stations"
@@ -183,6 +186,7 @@ RECIPE_NAME_FILE = "recipes"
 MAIN_NAME_FILE = "items"
 BAGS_NAME_FILE = "grab_bags"
 BAGS_DROP_NAME_FILE = "grab_bags_drops"
+NPC_NAME_FILE = "npc"
 
 # Items subfiles
 MAIN_ITEM_SUBFILE_PREFIX = "items_"
@@ -216,6 +220,26 @@ STORAGE_NAME_FILE = "items_storage"
 TOOL_NAME_FILE = "items_tool"
 VANITY_NAME_FILE = "items_vanity"
 WEAPON_NAME_FILE = "items_weapon"
+
+# NPC subfiles
+MAIN_NPC_SUBFILE_PREFIX = "npc_"
+NPC_ENEMIES_NAME_FILE = "npc_enemy"
+NPC_CRITTERS_NAME_FILE = "npc_critter"
+NPC_TOWN_NAME_FILE = "npc_town"
+NPC_BOSSES_NAME_FILE = "npc_boss"
+
+# Image directories inside json folder
+STATIC_IMAGE_EXT = ".png"
+DYNAMIC_IMAGE_EXT = ".gif"
+
+IMAGE_DIR_BRICKS = "/bricks/"
+IMAGE_DIR_GEMS = "/gems/"
+IMAGE_DIR_LIGHT_PETS = "/light_pets/"
+IMAGE_DIR_ORES = "/ores/"
+IMAGE_DIR_PAINTINGS = "/paintings/"
+IMAGE_DIR_PYLON = "/pylon/"
+IMAGE_DIR_RARITY = "/rarity/"
+IMAGE_DIR_NPC = "/npc/"
 
 # Universal aliases for generalized items
 nameSubstitutes = {
@@ -263,8 +287,8 @@ def removeEmptyFields(dataDict):
 
 def sortListOfDictsByKey(dataList, key):
     return sorted(dataList, key=lambda x: int(operator.itemgetter(key)(x)))
-    
-# Finds every column index of a table based on a list with each column label. 
+
+# Finds every column index of a table based on a list with each column label.
 def getTableColumns(tableHeadRow, scrappingData):
     indexDict = {}
     for data in scrappingData:

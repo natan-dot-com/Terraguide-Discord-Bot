@@ -15,7 +15,7 @@ def createLogFile(logName: str):
     logFilePath = LOG_PATH + logName.replace(" ", "_").lower() + LOG_EXT
     logFile = open(logFilePath, "w+")
     if logFile:
-        print("Creating new log file for '" + logName + LOG_EXT + "'.")
+        print("Creating new log file for '" + logName + LOG_EXT + "' (" + logFile.name + ").")
         print("Log file is open. Be sure to close it using 'closeLogFile(logFile)' at the end of the execution.")
         logFile.write("Starting log file for '" + logName + LOG_EXT + "'.\n")
         return logFile
