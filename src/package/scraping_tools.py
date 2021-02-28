@@ -232,14 +232,14 @@ NPC_BOSSES_NAME_FILE = "npc_boss"
 STATIC_IMAGE_EXT = ".png"
 DYNAMIC_IMAGE_EXT = ".gif"
 
-IMAGE_DIR_BRICKS = "/bricks/"
-IMAGE_DIR_GEMS = "/gems/"
-IMAGE_DIR_LIGHT_PETS = "/light_pets/"
-IMAGE_DIR_ORES = "/ores/"
-IMAGE_DIR_PAINTINGS = "/paintings/"
-IMAGE_DIR_PYLON = "/pylon/"
-IMAGE_DIR_RARITY = "/rarity/"
-IMAGE_DIR_NPC = "/npc/"
+IMAGE_DIR_BRICKS = "bricks/"
+IMAGE_DIR_GEMS = "gems/"
+IMAGE_DIR_LIGHT_PETS = "light_pets/"
+IMAGE_DIR_ORES = "ores/"
+IMAGE_DIR_PAINTINGS = "paintings/"
+IMAGE_DIR_PYLON = "pylon/"
+IMAGE_DIR_RARITY = "rarity/"
+IMAGE_DIR_NPC = "npc/"
 
 # Universal aliases for generalized items
 nameSubstitutes = {
