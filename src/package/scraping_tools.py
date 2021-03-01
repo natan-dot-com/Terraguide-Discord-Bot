@@ -110,15 +110,22 @@ SOURCE_SOURCES_DICT = {
 }
 
 # Drop dict labels ('SCRAPING_SOURCE' subdict)
+# About Drop Dict:
+    # DROP_ID: ID identifier for each structure
+    # DROP_ITEM: Which item can be dropped
+    # DROP_PROBABILITY: Probability value to drop
+    # DROP_QUANTITY: How many does it drop
+    # DROP_NPC: From which NPC it can be dropped
 DROP_ID = "Drop ID"
 DROP_NPC = "NPC"
+DROP_ITEM: "Item Dropped"
 DROP_PROBABILITY = "Probability"
 DROP_QUANTITY = "Quantity"
 DROP_DROPS_DICT = {
     DROP_ID: "",
-    DROP_NPC: "",
     DROP_PROBABILITY: "",
     DROP_QUANTITY: ""
+    DROP_NPC: "",
 }
 
 # Crafting recipe labels ('SCRAPING_SOURCE' subdict)
@@ -126,6 +133,14 @@ DROP_DROPS_DICT = {
 TABLE_RECIPES_LIST = "Table Recipes List"
 
 # From recipes.json
+# About Recipe Crafting Dict:
+    # RECIPE_CRAFT_ID: ID identifier for each structure
+    # RECIPE_RESULT Which item is crafted
+    # RECIPE_RESULT_QUANTITY: How many it's crafted
+    # RECIPE_TABLE: In which table it can be crafted
+    # RECIPE_IDENTITY: Every ingredient from that recipe,
+    #  containing a list of ingredient dictionaries (as it
+    #  can be seen below)
 RECIPE_CRAFT_ID = "Craft ID"
 RECIPE_RESULT = "Result ID"
 RECIPE_RESULT_QUANTITY = "Result Quantity"
@@ -152,6 +167,12 @@ INGREDIENT_DICT = {
 GRAB_BAGS_LOOT_LIST = "Grab Bag Loot List"
 
 # From bag_drops.json
+# About Bag Drops Dict:
+    # BAG_DROP_ID: ID identifier for each structure
+    # BAG_DROP_RESULT: Which item is dropped
+    # BAG_DROP_PROBABILITY: Probability value to drop
+    # BAG_DROP_QUANTITY: How much it can drop
+    # BAG_ID: From which bag it can be dropped
 BAG_DROP_ID = "Bag Drop ID"
 BAG_ID = "Bag ID"
 BAG_DROP_RESULT = "Drop Result"
@@ -159,9 +180,10 @@ BAG_DROP_PROBABILITY = "Probability"
 BAG_DROP_QUANTITY = "Quantity"
 BAG_DROPS_DICT = {
     BAG_DROP_ID: "",
-    BAG_ID: "",
+    BAG_DROP_RESULT: "",
     BAG_DROP_PROBABILITY: "",
-    BAG_DROP_QUANTITY: ""
+    BAG_DROP_QUANTITY: "",
+    BAG_ID: ""
 }
 
 # Rarity labels
@@ -177,7 +199,25 @@ RARITY_TIER = {
 }
 
 # NPC related labels
+
+# ABout Sell Structure:
+    # NPC_SELL_ID: ID identifier for each structure
+    # NPC_ID: Which NPC sells
+    # NPC_SELL_ITEM: Which item it sells
+    # NPC_ITEM_COST: How much does it cost
+    # NPC_SELL_CONDITION: In what condition does that NPC sell
+NPC_SELL_ID = "Sell ID"
 NPC_ID = "NPC ID"
+NPC_SELL_ITEM = "Selling Item"
+NPC_ITEM_COST = "Item Cost"
+NPC_SELL_CONDITION = "Sell Condition"
+SELL_STRUCTURE = {
+    NPC_SELL_ID: "",
+    NPC_ID: "",
+    NPC_SELL_ITEM: "",
+    NPC_ITEM_COST: "",
+    NPC_SELL_CONDITION: ""
+}
 
 # Table files data
 JSON_EXT = ".json"
@@ -271,9 +311,9 @@ def writeImage(imageSource, imagePath):
                 if not block:
                     break
                 handler.write(block)
+        return FOUND
     else:
         return NOT_FOUND
-    return FOUND
 
 # Removes every null field inside a dict
 def removeEmptyFields(dataDict):
