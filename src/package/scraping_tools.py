@@ -88,6 +88,9 @@ SCRAPING_BAG_DROPS = "Bag Drops"
 SCRAPING_DURATION = "Duration"
 SCRAPING_BUFF = "Buff"
 SCRAPING_BUFF_TOOLTIP = "Buff tooltip"
+SCRAPING_CONSUMABLE = "Consumable"
+SCRAPING_DEBUFF = "Debuff"
+SCRAPING_DEBUFF_TOOLTIP = "Debuff tooltip"
 
 # Image data
 IMAGE_BRICK = "Brick Image"
@@ -118,13 +121,13 @@ SOURCE_SOURCES_DICT = {
     # DROP_NPC: From which NPC it can be dropped
 DROP_ID = "Drop ID"
 DROP_NPC = "NPC"
-DROP_ITEM: "Item Dropped"
+DROP_ITEM = "Item Dropped"
 DROP_PROBABILITY = "Probability"
 DROP_QUANTITY = "Quantity"
 DROP_DROPS_DICT = {
     DROP_ID: "",
     DROP_PROBABILITY: "",
-    DROP_QUANTITY: ""
+    DROP_QUANTITY: "",
     DROP_NPC: "",
 }
 
@@ -251,6 +254,7 @@ LIGHT_PET_NAME_FILE = "items_light_pet"
 LIGHT_SOURCE_NAME_FILE = "items_light_source"
 ORE_NAME_FILE = "items_ore"
 PAINTING_NAME_FILE = "items_painting"
+POTION_NAME_FILE = "items_potion"
 PYLON_NAME_FILE = "items_pylon"
 QUEST_FISH_NAME_FILE = "items_quest_fish"
 SEEDS_NAME_FILE = "items_seeds"
@@ -338,6 +342,20 @@ def getTableColumns(tableHeadRow, scrappingData):
                 indexDict[data] = int(tableHeadRow.index(column))
     return indexDict
 
+def get_desktop_text_linear(row):
+    eicos = row.find_all("span", class_="eico")
+    if eicos:
+        count = 0
+        countReturn = 0
+        for eico in eicos:
+            if re.search("Desktop", eico.find("img")["alt"]):
+                countReturn = count
+                break
+            count += 1
+        return row.td.text.split("/")[countReturn].rstrip()
+    else:
+        return row.td.text
+
 #get statistics for every table with infobox class
 def get_statistics(tableBox, itemInstance = {}, usedIn = "", isArmor = False):
 
@@ -363,7 +381,10 @@ def get_statistics(tableBox, itemInstance = {}, usedIn = "", isArmor = False):
             else:
                 jsonDict[SCRAPING_RARITY] = statistic.td.text.rstrip()
         elif statistic.th.text == SCRAPING_PLACEABLE:
-            jsonDict[SCRAPING_PLACEABLE] = statistic.td.img["alt"]
+            if statistic.td.span["class"][0] == "t-yes":
+                jsonDict[SCRAPING_PLACEABLE] = "Yes"
+            elif statistic.td.span["class"][0] == "t-no":
+                jsonDict[SCRAPING_PLACEABLE] = "No"
         elif statistic.th.text == SCRAPING_MAX_LIFE:
             jsonDict[SCRAPING_MAX_LIFE] = BeautifulSoup(str(statistic.td).replace("<br/>", ". "), 'html.parser').text.rstrip()
         elif statistic.th.text == SCRAPING_RESEARCH:
@@ -403,6 +424,11 @@ def get_statistics(tableBox, itemInstance = {}, usedIn = "", isArmor = False):
             jsonDict[SCRAPING_BONUS] = statistic.td.text
         elif statistic.th.text == SCRAPING_MAX_STACK:
             jsonDict[SCRAPING_MAX_STACK] = statistic.td.text.split("/")[0].encode("ascii", "ignore").decode().rstrip()
+        elif statistic.th.text == SCRAPING_CONSUMABLE:
+            if statistic.td.span["class"] == "t-yes":
+                jsonDict[SCRAPING_CONSUMABLE] = "Yes"
+            elif statistic.td.span["class"] == "t-no":
+                jsonDict[SCRAPING_CONSUMABLE] = "No"
 
     #get toolpower for tools json
     toolPower = tableBox.find("ul", class_="toolpower")
@@ -428,7 +454,21 @@ def get_statistics(tableBox, itemInstance = {}, usedIn = "", isArmor = False):
                 else:
                     jsonDict[SCRAPING_BUFF_TOOLTIP] = tableBuff.i.text
             elif tableBuff.th.text == SCRAPING_DURATION:
-                jsonDict[SCRAPING_DURATION] = tableBuff.td.text.encode("ascii", "replace").decode().replace("?", " ").rstrip()
+                jsonDict[SCRAPING_DURATION] = get_desktop_text_linear(tableBuff).encode("ascii", "replace").decode().replace("?", " ").rstrip()
+    #get debuffs
+    if tableBox.find("div", class_="section debuff"):
+        tableBuffs = tableBox.find_all("tr")
+        for tableBuff in tableBuffs:
+            if tableBuff.th.text == SCRAPING_DEBUFF:
+                jsonDict[SCRAPING_DEBUFF] = tableBuff.find("img")["alt"]
+            elif tableBuff.th.text == SCRAPING_DEBUFF_TOOLTIP:
+                if tableBuff.find("a", title="Expert Mode"):
+                    BuffsTexts = BeautifulSoup(str(tableBuff.i).replace("<br/>", "."), 'html.parser').text.encode("ascii", "ignore").decode().split(".")
+                    jsonDict[SCRAPING_DEBUFF_TOOLTIP] = BuffsTexts[0].rstrip() + " (Normal Mode). " + BuffsTexts[1].rstrip() + " (Expert Mode)."
+                else:
+                    jsonDict[SCRAPING_DEBUFF_TOOLTIP] = tableBuff.i.text
+            elif tableBuff.th.text == SCRAPING_DURATION:
+                jsonDict[SCRAPING_DURATION] = get_desktop_text_linear(tableBuff).encode("ascii", "replace").decode().replace("?", " ").rstrip()
     #Check if optional parameter was given
     if usedIn:
         jsonDict[SCRAPING_USED_IN] = usedIn

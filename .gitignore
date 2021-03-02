@@ -3,3 +3,4 @@ __pycache__
 *.swp
 *.log
 *_linkdict.json
+.vscode

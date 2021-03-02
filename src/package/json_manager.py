@@ -3,7 +3,7 @@ import json
 
 NOT_FOUND = -1
 
-GLOBAL_JSON_PATH = "dataset/json/"
+GLOBAL_JSON_PATH = "src/dataset/json/"
 
 # Loads a structure inside a JSON file
 def LoadJSONFile(JSONPath):

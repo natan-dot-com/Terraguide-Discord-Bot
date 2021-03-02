@@ -46,4 +46,4 @@ def start_threads_decorator(*args, **kwargs):
    
    return start_threads
    
-closeLogFile(log)
+#closeLogFile(log)
