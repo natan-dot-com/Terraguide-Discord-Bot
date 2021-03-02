@@ -88,6 +88,7 @@ SCRAPING_BAG_DROPS = "Bag Drops"
 SCRAPING_DURATION = "Duration"
 SCRAPING_BUFF = "Buff"
 SCRAPING_BUFF_TOOLTIP = "Buff tooltip"
+SCRAPING_SPAWN_REQUIREMENT = "Spawn Requirement"
 
 # Image data
 IMAGE_BRICK = "Brick Image"
@@ -124,8 +125,8 @@ DROP_QUANTITY = "Quantity"
 DROP_DROPS_DICT = {
     DROP_ID: "",
     DROP_PROBABILITY: "",
-    DROP_QUANTITY: ""
-    DROP_NPC: "",
+    DROP_QUANTITY: "",
+    DROP_NPC: ""
 }
 
 # Crafting recipe labels ('SCRAPING_SOURCE' subdict)
@@ -199,6 +200,7 @@ RARITY_TIER = {
 }
 
 # NPC related labels
+NPC_SELL_LIST = "Selling List"
 
 # ABout Sell Structure:
     # NPC_SELL_ID: ID identifier for each structure

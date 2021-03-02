@@ -1,6 +1,7 @@
 NOT_FOUND = -1
 ITEMS_HASH_SIZE = 8192
 TABLES_HASH_SIZE = 128
+NPC_HASH_SIZE = 1024
 
 class hashTable:
     def __init__(self, tableSize, stringDictIndex):
