@@ -42,8 +42,9 @@ def start_threads_decorator(*args, **kwargs):
       #Join Threads
       for i in range(threads_number):
          threads[i].join()
+         
+      closeLogFile(log)
       return
    
    return start_threads
    
-#closeLogFile(log)
