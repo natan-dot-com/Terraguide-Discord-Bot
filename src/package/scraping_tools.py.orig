@@ -88,10 +88,14 @@ SCRAPING_BAG_DROPS = "Bag Drops"
 SCRAPING_DURATION = "Duration"
 SCRAPING_BUFF = "Buff"
 SCRAPING_BUFF_TOOLTIP = "Buff tooltip"
+<<<<<<< HEAD
+SCRAPING_SPAWN_REQUIREMENT = "Spawn Requirement"
+||||||| f1a741e
+=======
 SCRAPING_CONSUMABLE = "Consumable"
 SCRAPING_DEBUFF = "Debuff"
 SCRAPING_DEBUFF_TOOLTIP = "Debuff tooltip"
-SCRAPING_SPAWN_REQUIREMENT = "Spawn requirement"
+>>>>>>> dfe1a58f3fba6ee8ad55fa73a58638473192ec61
 
 # Image data
 IMAGE_BRICK = "Brick Image"
@@ -128,8 +132,16 @@ DROP_QUANTITY = "Quantity"
 DROP_DROPS_DICT = {
     DROP_ID: "",
     DROP_PROBABILITY: "",
+<<<<<<< HEAD
     DROP_QUANTITY: "",
     DROP_NPC: ""
+||||||| f1a741e
+    DROP_QUANTITY: ""
+    DROP_NPC: "",
+=======
+    DROP_QUANTITY: "",
+    DROP_NPC: "",
+>>>>>>> dfe1a58f3fba6ee8ad55fa73a58638473192ec61
 }
 
 # Crafting recipe labels ('SCRAPING_SOURCE' subdict)
@@ -232,7 +244,6 @@ MAIN_NAME_FILE = "items"
 BAGS_NAME_FILE = "grab_bags"
 BAGS_DROP_NAME_FILE = "grab_bags_drops"
 NPC_NAME_FILE = "npc"
-SELLING_LIST_NAME_FILE = "selling_list"
 
 # Items subfiles
 MAIN_ITEM_SUBFILE_PREFIX = "items_"
@@ -306,11 +317,7 @@ nameSubstitutes = {
     "Blue Jellyfish (bait)": "Blue Jellyfish",
     "Pink Jellyfish (bait)": "Pink Jellyfish",
     "Any Fruit": "Apple",
-    "Any Turtle": "Turtle",
-    "Any Pylon": "Forest Pylon",
-    "Princess Dress (Clothier)": "Princess Dress",
-    "Conveyor Belt": "Conveyor Belt (Clockwise)",
-    "Logic Gates": "Logic Gate (AND)"
+    "Any Turtle": "Turtle"
 }
 
 # Write/saves an image from a HTML scrap
