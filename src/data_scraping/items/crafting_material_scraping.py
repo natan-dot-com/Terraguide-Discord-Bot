@@ -18,22 +18,22 @@ from ...package.multithreading_starter import *
 from bs4 import BeautifulSoup
 import requests
 
-POTION_PATH = GLOBAL_JSON_PATH + POTION_NAME_FILE + JSON_EXT
+CRAFTING_MATERIAL_PATH = GLOBAL_JSON_PATH + CRAFTING_MATERIAL_NAME_FILE + JSON_EXT
 URL = "https://terraria.gamepedia.com/"
 
 itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
-potionList = []
+craftingMaterialList = []
 
 @start_threads_decorator(size=len(itemList), threads_number=8)
-def potionScraping(init, fin, threadID):
+def craftingMaterialScraping(init, fin, threadID):
     for itemInstance in itemList[init:fin]:
-        if itemInstance[SCRAPING_TYPE] == "Potion":
+        if itemInstance[SCRAPING_TYPE] == "Crafting material":
             newURL = URL + itemInstance[SCRAPING_NAME].replace(" ", "_")
             page = requests.get(newURL)
             soup = BeautifulSoup(page.content, "html.parser")
             print("Thread {}: Processing {} with ID {}".format(threadID, newURL, itemInstance[SCRAPING_ID]))
 
             tableBox = soup.find("div", class_="infobox item")
-            potionList.append(get_statistics(tableBox, itemInstance=itemInstance))
+            craftingMaterialList.append(get_statistics(tableBox, itemInstance=itemInstance))
         
-SaveJSONFile(POTION_PATH, sortListOfDictsByKey(potionList, SCRAPING_ITEM_ID))
+SaveJSONFile(CRAFTING_MATERIAL_PATH, sortListOfDictsByKey(craftingMaterialList, SCRAPING_ITEM_ID))
