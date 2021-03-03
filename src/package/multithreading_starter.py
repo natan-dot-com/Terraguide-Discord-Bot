@@ -21,28 +21,29 @@ class myThread (threading.Thread):
 
 def start_threads_decorator(*args, **kwargs):
 
-    def start_threads(func):
-        indexes = []
-        indexes.append(0)
-        threads = []
-        threads_number = int(kwargs["threads_number"])
-        size = int(kwargs["size"])
+   def start_threads(func):
+      indexes = []
+      indexes.append(0)
+      threads = []
+      threads_number = int(kwargs["threads_number"])
+      size = int(kwargs["size"])
 
-        #Start Threads
-        for i in range(threads_number):
-            if i < threads_number-1:
-                index = (i+1) * math.floor(size/threads_number)
-            else:
-                index = size
-            indexes.append(index)
-            threads.append(myThread((i+1), func, indexes[-2], indexes[-1]))
-            threads[-1].start()
-
-        #Join Threads
-        for i in range(threads_number):
-            threads[i].join()
-
-        closeLogFile(log)
-        return
-
-        return start_threads
+      #Start Threads
+      for i in range(threads_number):
+         if i < threads_number-1:
+            index = (i+1) * math.floor(size/threads_number)
+         else:
+            index = size
+         indexes.append(index)
+         threads.append(myThread((i+1), func, indexes[-2], indexes[-1]))
+         threads[-1].start()
+      
+      #Join Threads
+      for i in range(threads_number):
+         threads[i].join()
+         
+      closeLogFile(log)
+      return
+   
+   return start_threads
+   
