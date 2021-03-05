@@ -2,13 +2,13 @@
     {
         "NPC ID": "410",
         "Description": "Provides tips and a general guide on how to acquire other NPCs. Provides recipes that include an item that is shown to him when the 'crafting' option is selected.",
-        "Spawn requirement": "Always already present when starting a new world.",
+        "Spawn Requirement": "Always already present when starting a new world.",
         "Selling List": []
     },
     {
         "NPC ID": "411",
         "Description": "Sells basic tools and supplies.",
-        "Spawn requirement": "All players combined have more than 50 in their inventories or when spawning in not the bees.",
+        "Spawn Requirement": "All players combined have more than 50 in their inventories or when spawning in not the bees.",
         "Selling List": [
             "1",
             "2",
@@ -46,13 +46,13 @@
     {
         "NPC ID": "412",
         "Description": "Heals players and cancels debuffs in exchange for coins.",
-        "Spawn requirement": "A player has more than 100 health.",
+        "Spawn Requirement": "A player has more than 100 health.",
         "Selling List": []
     },
     {
         "NPC ID": "413",
         "Description": "Sells explosives.",
-        "Spawn requirement": "A player has an explosive in their inventory or when spawning in For The Worthy.",
+        "Spawn Requirement": "A player has an explosive in their inventory or when spawning in For The Worthy.",
         "Selling List": [
             "32",
             "33",
@@ -71,7 +71,7 @@
     {
         "NPC ID": "414",
         "Description": "Sells the Dye Vat crafting station. Provides rare dyes in exchange for Strange Plants.",
-        "Spawn requirement": "A player has a dye item or any item used to craft dye in their inventory. In addition, a player must either defeat a pre-Hardmode boss or have a Strange Plant in their inventory.",
+        "Spawn Requirement": "A player has a dye item or any item used to craft dye in their inventory. In addition, a player must either defeat a pre-Hardmode boss or have a Strange Plant in their inventory.",
         "Selling List": [
             "44",
             "45",
@@ -89,13 +89,13 @@
     {
         "NPC ID": "415",
         "Description": "Gives fishing quests and rewards players for completing them.",
-        "Spawn requirement": "Found and spoken to in an Ocean biome.",
+        "Spawn Requirement": "Found and spoken to in an Ocean biome.",
         "Selling List": []
     },
     {
         "NPC ID": "416",
         "Description": "Sells vanity, mount, pet, and critter-themed items.",
-        "Spawn requirement": "At least 10% of the Bestiary (53 entries) has been filled.",
+        "Spawn Requirement": "At least 10% of the Bestiary (53 entries) has been filled.",
         "Selling List": [
             "55",
             "56",
@@ -137,7 +137,7 @@
     {
         "NPC ID": "417",
         "Description": "Sells nature/Corruption/Crimson items, and can report the percentage of Corruption/Crimson and Hallow in the world.",
-        "Spawn requirement": "A boss has been defeated other than King Slime, Lepus, and the Wall of Flesh.",
+        "Spawn Requirement": "A boss has been defeated other than King Slime, Lepus, and the Wall of Flesh.",
         "Selling List": [
             "90",
             "91",
@@ -194,7 +194,7 @@
     {
         "NPC ID": "418",
         "Description": "Sells paint, painting tools, and paintings.",
-        "Spawn requirement": "8 / 4 other town NPCs have been acquired (including the Old Man and Traveling Merchant).",
+        "Spawn Requirement": "8 / 4 other town NPCs have been acquired (including the Old Man and Traveling Merchant).",
         "Selling List": [
             "140",
             "141",
@@ -224,7 +224,7 @@
     {
         "NPC ID": "419",
         "Description": "Sells Golf Clubs, Balls, and other golfing items.",
-        "Spawn requirement": "Found and spoken to in the Underground Desert.",
+        "Spawn Requirement": "Found and spoken to in the Underground Desert.",
         "Selling List": [
             "163",
             "164",
@@ -274,7 +274,7 @@
     {
         "NPC ID": "420",
         "Description": "Sells guns, bullets, and other ammunition.",
-        "Spawn requirement": "A player has bullets or a gun that shoots bullets in their inventory.",
+        "Spawn Requirement": "A player has bullets or a gun that shoots bullets in their inventory.",
         "Selling List": [
             "206",
             "207",
@@ -300,7 +300,7 @@
     {
         "NPC ID": "421",
         "Description": "Sells items that summon and help with fighting the Old One's Army. Most items cost Defender Medals, except for Eternia Crystals, the Eternia Crystal Stand, and Ale, which cost ordinary coins.",
-        "Spawn requirement": "Found and spoken to, after the Eater of Worlds or Brain of Cthulhu has been defeated.",
+        "Spawn Requirement": "Found and spoken to, after the Eater of Worlds or Brain of Cthulhu has been defeated.",
         "Selling List": [
             "225",
             "226",
@@ -326,7 +326,7 @@
     {
         "NPC ID": "422",
         "Description": "Can change the player's hairstyle and sells Hair Dyes.",
-        "Spawn requirement": "Found and spoken to in a Spider Cave.",
+        "Spawn Requirement": "Found and spoken to in a Spider Cave.",
         "Selling List": [
             "244",
             "245",
@@ -347,7 +347,7 @@
     {
         "NPC ID": "423",
         "Description": "Sells items such as the Tinkerer's Workshop, and can reforge items.",
-        "Spawn requirement": "Found and spoken to in the Cavern layer, after a Goblin Invasion has been defeated.",
+        "Spawn Requirement": "Found and spoken to in the Cavern layer, after a Goblin Invasion has been defeated.",
         "Selling List": [
             "258",
             "259",
@@ -361,7 +361,7 @@
     {
         "NPC ID": "424",
         "Description": "Sells the Blowgun, the Imbuing Station, summoner equipment, Fountains, and Leaf Wings.",
-        "Spawn requirement": "The Queen Bee has been defeated.",
+        "Spawn Requirement": "The Queen Bee has been defeated.",
         "Selling List": [
             "265",
             "266",
@@ -393,7 +393,7 @@
     {
         "NPC ID": "425",
         "Description": "Sells some vanity items, including the Familiar set.",
-        "Spawn requirement": "Skeletron has been defeated.",
+        "Spawn Requirement": "Skeletron has been defeated.",
         "Selling List": [
             "290",
             "291",
@@ -458,7 +458,7 @@
     {
         "NPC ID": "426",
         "Description": "Sells the Wrench, Wire, and other mechanism-related items.",
-        "Spawn requirement": "Found and spoken to in the Dungeon.",
+        "Spawn Requirement": "Found and spoken to in the Dungeon.",
         "Selling List": [
             "348",
             "349",
@@ -495,7 +495,7 @@
     {
         "NPC ID": "427",
         "Description": "Sells novelty items that create colorful visual effects.",
-        "Spawn requirement": "1/40 chance of spawning after 14 / 8 other town NPCs (including the Old Man and Traveling Merchant) have been acquired.",
+        "Spawn Requirement": "1/40 chance of spawning after 14 / 8 other town NPCs (including the Old Man and Traveling Merchant) have been acquired.",
         "Selling List": [
             "378",
             "379",
@@ -543,7 +543,7 @@
     {
         "NPC ID": "428",
         "Description": "Sells magic-related items.",
-        "Spawn requirement": "Found and spoken to in the Cavern layer.",
+        "Spawn Requirement": "Found and spoken to in the Cavern layer.",
         "Selling List": [
             "419",
             "420",
@@ -561,13 +561,13 @@
     {
         "NPC ID": "429",
         "Description": "Collects property taxes from other NPCs. Earns 50 per NPC present, collectible by the player.",
-        "Spawn requirement": "A Tortured Soul is transformed with Purification Powder in the Underworld.",
+        "Spawn Requirement": "A Tortured Soul is transformed with Purification Powder in the Underworld.",
         "Selling List": []
     },
     {
         "NPC ID": "430",
         "Description": "Sells the Autohammer, Mushroom Spear, and other mushroom-themed items.",
-        "Spawn requirement": "A house is available in an above-ground Glowing Mushroom biome during Hardmode.",
+        "Spawn Requirement": "A house is available in an above-ground Glowing Mushroom biome during Hardmode.",
         "Selling List": [
             "430",
             "431",
@@ -581,7 +581,7 @@
     {
         "NPC ID": "431",
         "Description": "Sells the Cannon and other pirate-themed items.",
-        "Spawn requirement": "A Pirate Invasion has been defeated.",
+        "Spawn Requirement": "A Pirate Invasion has been defeated.",
         "Selling List": [
             "437",
             "438",
@@ -598,7 +598,7 @@
     {
         "NPC ID": "432",
         "Description": "Sells the Clentaminator, Teleporter, Jetpack, and other items.",
-        "Spawn requirement": "A mechanical boss has been defeated.",
+        "Spawn Requirement": "A mechanical boss has been defeated.",
         "Selling List": [
             "447",
             "448",
@@ -636,7 +636,7 @@
     {
         "NPC ID": "433",
         "Description": "Sells the Proximity Mine Launcher, Rockets, and Nanites.",
-        "Spawn requirement": "Plantera has been defeated.",
+        "Spawn Requirement": "Plantera has been defeated.",
         "Selling List": [
             "478",
             "479",
@@ -661,7 +661,7 @@
     {
         "NPC ID": "434",
         "Description": "Sells the Santa set, colored lights, Christmas trees and their decorations.",
-        "Spawn requirement": "The Frost Legion has been defeated and it is Christmas.",
+        "Spawn Requirement": "The Frost Legion has been defeated and it is Christmas.",
         "Selling List": [
             "496",
             "497",
@@ -687,7 +687,7 @@
     {
         "NPC ID": "435",
         "Description": "Sells the Royal set, Royal Scepter, Glass Slipper, the Prince set, Potted Crystal Plants, three unique paintings and an addition to the Music Boxes collection.",
-        "Spawn requirement": "Every other NPC is housed (except Santa Claus and town pets).",
+        "Spawn Requirement": "Every other NPC is housed (except Santa Claus and town pets).",
         "Selling List": [
             "515",
             "516",
@@ -710,19 +710,19 @@
     {
         "NPC ID": "439",
         "Description": "Stays until the evening, sells a random selection of unique items each day.",
-        "Spawn requirement": "22.12% spawn chance during morning hours (04:30AM - 12:00PM) once two other NPCs are present.",
+        "Spawn Requirement": "22.12% spawn chance during morning hours (04:30AM - 12:00PM) once two other NPCs are present.",
         "Selling List": []
     },
     {
         "NPC ID": "440",
         "Description": "Found at the entrance to the Dungeon. Summons Skeletron when spoken to, but only at night. Once Skeletron is defeated, the Old Man moves into town as the Clothier.",
-        "Spawn requirement": "Starting a new world.",
+        "Spawn Requirement": "Starting a new world.",
         "Selling List": []
     },
     {
         "NPC ID": "441",
         "Description": "Sells Counterweights, Spelunker Glowsticks, Magic Lantern, the Yoyo Glove and some other items, based on the lunar cycle. Some items such as the Slap Hand can only be obtained from him.",
-        "Spawn requirement": "Rarely found in the Caverns.",
+        "Spawn Requirement": "Rarely found in the Caverns.",
         "Selling List": [
             "531",
             "532",

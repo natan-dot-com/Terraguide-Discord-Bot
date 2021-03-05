@@ -13,7 +13,10 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "339",
+                "369"
+            ],
             "Other": ""
         }
     },
@@ -29,7 +32,10 @@
             "light_pets/Fairy_3.png"
         ],
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "2631",
+                "2810"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -66,7 +72,9 @@
         ],
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "549"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -85,7 +93,10 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "414",
+                "444"
+            ],
             "Other": ""
         }
     },
@@ -103,7 +114,9 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "1130"
+            ],
             "Other": ""
         }
     },

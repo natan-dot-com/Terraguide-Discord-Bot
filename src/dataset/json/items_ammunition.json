@@ -26,8 +26,13 @@
         "Research": "99 required",
         "Used In": "Any Bow or Repeater.",
         "Sources": {
-            "Crafting Recipes": [],
-            "NPC": [],
+            "Crafting Recipes": [
+                "834"
+            ],
+            "NPC": [
+                "10",
+                "538"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -44,7 +49,9 @@
         "Research": "99 required",
         "Used In": "Any Bow or Repeater.",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "91"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -62,10 +69,17 @@
         "Research": "99 required",
         "Used In": "Any Bow or Repeater.",
         "Sources": {
-            "Crafting Recipes": [],
-            "NPC": [],
+            "Crafting Recipes": [
+                "1369",
+                "1635"
+            ],
+            "NPC": [
+                "209"
+            ],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "1031"
+            ],
             "Other": ""
         }
     },
@@ -81,7 +95,9 @@
         "Research": "99 required",
         "Used In": "Any Bow or Repeater.",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "155"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -97,7 +113,9 @@
         "Research": "100 required",
         "Used In": "Coin Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "39"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -113,10 +131,18 @@
         "Research": "100 required",
         "Used In": "Coin Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "242",
+                "243"
+            ],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "9",
+                "42",
+                "1128",
+                "1193"
+            ],
             "Other": ""
         }
     },
@@ -129,10 +155,52 @@
         "Research": "100 required",
         "Used In": "Coin Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "106",
+                "107"
+            ],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "10",
+                "43",
+                "75",
+                "106",
+                "141",
+                "162",
+                "194",
+                "227",
+                "270",
+                "299",
+                "341",
+                "371",
+                "415",
+                "445",
+                "484",
+                "509",
+                "550",
+                "577",
+                "620",
+                "652",
+                "699",
+                "734",
+                "786",
+                "827",
+                "872",
+                "905",
+                "1023",
+                "1032",
+                "1038",
+                "1044",
+                "1059",
+                "1071",
+                "1076",
+                "1081",
+                "1086",
+                "1091",
+                "1106",
+                "1119"
+            ],
             "Other": ""
         }
     },
@@ -145,7 +213,9 @@
         "Research": "100 required",
         "Used In": "Coin Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "203"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -183,9 +253,13 @@
         "Used In": "Any Gun",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "206"
+            ],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "992"
+            ],
             "Other": ""
         }
     },
@@ -201,7 +275,10 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "1255",
+                "1521"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -219,8 +296,13 @@
         "Research": "99 required",
         "Used In": "Any Bow or Repeater.",
         "Sources": {
-            "Crafting Recipes": [],
-            "NPC": [],
+            "Crafting Recipes": [
+                "1207",
+                "1473"
+            ],
+            "NPC": [
+                "35"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -238,8 +320,13 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
-            "NPC": [],
+            "Crafting Recipes": [
+                "1319",
+                "1585"
+            ],
+            "NPC": [
+                "207"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -274,7 +361,10 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "2622",
+                "2801"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -293,7 +383,10 @@
         "Research": "99 required",
         "Used In": "Any Bow or Repeater.",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "2659",
+                "2838"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -311,7 +404,10 @@
         "Research": "99 required",
         "Used In": "Any Bow or Repeater.",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "2623",
+                "2802"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -330,7 +426,10 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "2624",
+                "2803"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -348,7 +447,9 @@
         "Used In": "Launcher",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "478"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -365,7 +466,9 @@
         "Used In": "Launcher",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "479"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -382,7 +485,9 @@
         "Used In": "Launcher",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "480"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -399,7 +504,9 @@
         "Used In": "Launcher",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "481"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -415,7 +522,9 @@
         "Used In": "Clentaminator",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "466"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -431,7 +540,9 @@
         "Used In": "Clentaminator",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "465"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -447,7 +558,9 @@
         "Used In": "Clentaminator",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "463"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -463,7 +576,9 @@
         "Used In": "Clentaminator",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "432"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -479,7 +594,9 @@
         "Used In": "Clentaminator",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "464"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -497,7 +614,9 @@
         "Used In": "Cannon",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "438"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -515,7 +634,9 @@
         "Used In": "Flare Gun",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "22"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -532,7 +653,9 @@
         "Research": "99 required",
         "Used In": "Snowball Cannon, Snowball Launcher",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "252"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -550,7 +673,9 @@
         "Research": "99 required",
         "Used In": "Any Bow or Repeater.",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "96"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -570,7 +695,10 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "2605",
+                "2784"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -590,7 +718,10 @@
         "Research": "99 required",
         "Used In": "Any Bow or Repeater.",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "2604",
+                "2783"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -611,7 +742,11 @@
         "Used In": "Stynger",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "38",
+                "215",
+                "267"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -629,7 +764,9 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "500"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -647,7 +784,9 @@
         "Research": "99 required",
         "Used In": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "204"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -667,7 +806,10 @@
         "Research": "99 required",
         "Used In": "Any Bow or Repeater.",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "2661",
+                "2840"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -687,7 +829,10 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "2662",
+                "2841"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -705,8 +850,12 @@
         "Research": "25 required",
         "Used In": "Bunny Cannon",
         "Sources": {
-            "Crafting Recipes": [],
-            "NPC": [],
+            "Crafting Recipes": [
+                "87"
+            ],
+            "NPC": [
+                "445"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -725,7 +874,10 @@
         "Research": "99 required",
         "Used In": "Any Bow or Repeater.",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "2753",
+                "2932"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -745,7 +897,9 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "821"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -762,7 +916,9 @@
         "Used In": "Confetti Gun",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "379"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -781,10 +937,14 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "622"
+            ],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "1191"
+            ],
             "Other": ""
         }
     },
@@ -801,7 +961,9 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "584"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -821,7 +983,9 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "458"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -841,7 +1005,9 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "472"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -860,7 +1026,9 @@
         "Used In": "Flare Gun",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "23"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -878,7 +1046,9 @@
         "Used In": "Candy Corn Rifle",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "218"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -896,7 +1066,9 @@
         "Used In": "Jack 'O Lantern Launcher",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "219"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -915,7 +1087,10 @@
         "Used In": "Stake Launcher",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "216",
+                "268"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -933,7 +1108,9 @@
         "Used In": "Any Bow or Repeater.",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "537"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -952,7 +1129,9 @@
         "Research": "99 required",
         "Used In": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "51"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -971,7 +1150,9 @@
         "Research": "99 required",
         "Used In": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "55"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -990,7 +1171,9 @@
         "Research": "99 required",
         "Used In": "Blowgun, Blowpipe, Dart Pistol and Dart Rifle",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "152"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1008,7 +1191,9 @@
         "Research": "1 required",
         "Used In": "Any Bow or Repeater.",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "3099"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1027,7 +1212,9 @@
         "Research": "1 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "3098"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1046,7 +1233,10 @@
         "Used In": "Nail Gun",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "28",
+                "217"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -1065,7 +1255,9 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "3125"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1085,7 +1277,9 @@
         "Research": "99 required",
         "Used In": "Any Bow or Repeater.",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "3123"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1103,7 +1297,9 @@
         "Used In": "Launcher",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "485"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -1120,7 +1316,9 @@
         "Used In": "Launcher",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "486"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -1136,7 +1334,10 @@
         "Rarity": "0",
         "Used In": "Launcher",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "1764",
+                "3487"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1153,7 +1354,9 @@
         "Rarity": "0",
         "Used In": "Launcher",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "3494"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1170,7 +1373,9 @@
         "Rarity": "0",
         "Used In": "Launcher",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "3499"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1187,7 +1392,9 @@
         "Rarity": "0",
         "Used In": "Launcher",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "3118"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1204,7 +1411,9 @@
         "Rarity": "0",
         "Used In": "Launcher",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "3119"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -1221,8 +1430,14 @@
         "Rarity": "0",
         "Used In": "Launcher",
         "Sources": {
-            "Crafting Recipes": [],
-            "NPC": [],
+            "Crafting Recipes": [
+                "71",
+                "72",
+                "73"
+            ],
+            "NPC": [
+                "482"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -1240,8 +1455,13 @@
         "Research": "99 required",
         "Used In": "Any Gun",
         "Sources": {
-            "Crafting Recipes": [],
-            "NPC": [],
+            "Crafting Recipes": [
+                "1361",
+                "1627"
+            ],
+            "NPC": [
+                "208"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""

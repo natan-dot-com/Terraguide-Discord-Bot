@@ -8,7 +8,9 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "1174"
+            ],
             "Other": "Found in Gold Chests, Dungeon"
         }
     },
@@ -19,7 +21,9 @@
             "Grants immunity to knockback"
         ],
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "2234"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -48,7 +52,9 @@
             "Grants immunity to knockback"
         ],
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "2163"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -65,7 +71,9 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "1024"
+            ],
             "Other": ""
         }
     },
@@ -105,7 +113,9 @@
             "Grants immunity to knockback"
         ],
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "2200"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -120,7 +130,9 @@
             "Grants immunity to knockback"
         ],
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "2207"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],

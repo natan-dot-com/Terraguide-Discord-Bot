@@ -11,7 +11,7 @@ from pathlib import Path
 import os
 systemOS = system()
 if systemOS == "Linux":
-    os.chdir("../../")
+    os.chdir("../../../")
 from ...package.scraping_tools import *
 from ...package.json_manager import *
 from bs4 import BeautifulSoup

@@ -11,7 +11,7 @@ from pathlib import Path
 import os
 systemOS = system()
 if systemOS == "Linux":
-    os.chdir("../../")
+    os.chdir("../../../")
 
 # Personal files
 from ...package.scraping_tools import *

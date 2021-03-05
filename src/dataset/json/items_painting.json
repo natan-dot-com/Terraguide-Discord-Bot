@@ -825,7 +825,9 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "964"
+            ],
             "Other": ""
         }
     },
@@ -838,7 +840,9 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "965"
+            ],
             "Other": ""
         }
     },
@@ -851,7 +855,9 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "966"
+            ],
             "Other": ""
         }
     },
@@ -864,7 +870,9 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "967"
+            ],
             "Other": ""
         }
     },
@@ -877,7 +885,9 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "968"
+            ],
             "Other": ""
         }
     },
@@ -1213,7 +1223,9 @@
         "Description": "Golf course landscape.",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "185"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -1226,7 +1238,9 @@
         "Description": "A Golf Ball on a Golf Tee.",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "186"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -1239,7 +1253,9 @@
         "Description": "A golfer swinging.",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "187"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -1252,7 +1268,9 @@
         "Description": "Parody of The Treachery of Images, a well-known 1929 painting of a pipe with a caption that states This is not a pipe in French. This tooltip states This is not a golf club in French.",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "188"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -1356,7 +1374,9 @@
         "Description": "A castle in a field. It is a reference to Peach's Castle as it appears in Super Mario 64. It may also be a reference to several other games in the Mario franchise.",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "527"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -1369,7 +1389,9 @@
         "Description": "A painting of the Princess.",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "528"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""
@@ -1382,7 +1404,9 @@
         "Description": "A rainbow shining from a unicorn's horn. References a popular diagram of white light splitting into a rainbow after passing through a prism, while the name references the Pink Floyd album The Dark Side of the Moon.",
         "Sources": {
             "Crafting Recipes": [],
-            "NPC": [],
+            "NPC": [
+                "529"
+            ],
             "Drop": [],
             "Grab Bag": [],
             "Other": ""

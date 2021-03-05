@@ -40,6 +40,7 @@ def initializeHashTables(itemList):
 
     return npcHash, itemHash
 
+# Gets every basic information about each town NPC
 def scrapGeneralInformation(townList, npcHash):
     html = requests.get(MAIN_URL + TOWN_NPC_SUFFIX)
     soup = bs4.BeautifulSoup(html.content, 'html.parser')
@@ -76,6 +77,30 @@ def feedWriteStructure(itemList, sellDict, writeStructure):
         writeStructure[itemType][itemIndex+1]  = []
     writeStructure[itemType][itemIndex+1].append(sellDict[NPC_SELL_ID])
 
+# Refering every selling structure into the respective's item SOURCE_NPC list
+def writeOnJSONFiles(writeStructure):
+    print("Initiating writing proccess...")
+    for itemType in writeStructure.keys():
+        filename = MAIN_ITEM_SUBFILE_PREFIX + itemType.lower().replace(" ", "_") + JSON_EXT
+        filePath = GLOBAL_JSON_PATH + filename
+        typeList = LoadJSONFile(filePath)
+
+        if not typeList:
+            print("WRITING ERROR: Can't reach file " + filePath + ". No such file or directory.")
+            print("\tACTION: Writing process for type " + itemType + " aborted.")
+            continue
+
+        for itemID in writeStructure[itemType].keys():
+            for itemInstance in typeList:
+                if int(itemID) == int(itemInstance[SCRAPING_ITEM_ID]):
+                    for sellID in writeStructure[itemType][itemID]:
+                        if sellID not in itemInstance[SCRAPING_SOURCE][SOURCE_NPC]:
+                            itemInstance[SCRAPING_SOURCE][SOURCE_NPC].append(sellID)
+                        else:
+                            print("Selling structure with ID " + str(sellID) + " is already on file. Aborting writing proccess.")
+                    break
+            SaveJSONFile(filePath, typeList)
+
 def getSellingList(urlSuffix, townList, npcHash, itemHash, IDcounter, sellingList, itemList):
     writeStructure = {}
 
@@ -103,6 +128,7 @@ def getSellingList(urlSuffix, townList, npcHash, itemHash, IDcounter, sellingLis
                 sellDict[NPC_SELL_ID] = str(IDcounter)
                 sellDict[NPC_ID] = str(npcHash.search(npcName, NPC_ID))
 
+                # Checking if the selling row is PC-excluded
                 imageList = cols[tableHead["Item"]].findAll("img")
                 pcExcluded = True
                 if len(imageList) > 1:
@@ -113,24 +139,27 @@ def getSellingList(urlSuffix, townList, npcHash, itemHash, IDcounter, sellingLis
                 else:
                     pcExcluded = False
 
-                print("\tStarting getting information for '" + imageList[0]['alt'] + "' in " + urlSuffix + ".")
-                if not pcExcluded:
-                    itemID = str(itemHash.search(imageList[0]['alt'], SCRAPING_ID))
-                    if int(itemID) == NOT_FOUND:
-                        if imageList[0]['alt'] in nameSubstitutes.keys():
-                            itemName = nameSubstitutes[imageList[0]['alt']]
-                            sellDict[NPC_SELL_ITEM] = str(itemHash.search(itemName, SCRAPING_ID))
-                        else:
-                            sellDict[NPC_SELL_ITEM] = str(NOT_FOUND)
-                            print("\t\tItem '" + imageList[0]['alt'] + "' not found in database. Replaced with NOT_FOUND.")
-                    else:
-                        sellDict[NPC_SELL_ITEM] = itemID
-                else:
-                    print("\t\tItem selling data for '" + imageList[0]['alt'] + "' is PC-excluded. Skipping it.")
+                # If it's PC-excluded, we can skip it
+                if pcExcluded:
+                    print("\tItem selling data for '" + imageList[0]['alt'] + "' is PC-excluded. Skipping it.")
                     continue
+
+                # Getting which item it's being sold
+                print("\tStarting getting information for '" + imageList[0]['alt'] + "' in " + urlSuffix + ".")
+                itemID = str(itemHash.search(imageList[0]['alt'], SCRAPING_ID))
+                if int(itemID) == NOT_FOUND:
+                    if imageList[0]['alt'] in nameSubstitutes.keys():
+                        itemName = nameSubstitutes[imageList[0]['alt']]
+                        sellDict[NPC_SELL_ITEM] = str(itemHash.search(itemName, SCRAPING_ID))
+                    else:
+                        sellDict[NPC_SELL_ITEM] = str(NOT_FOUND)
+                        print("\t\tItem '" + imageList[0]['alt'] + "' not found in database. Replaced with NOT_FOUND.")
+                else:
+                    sellDict[NPC_SELL_ITEM] = itemID
 
                 sellDict[NPC_ITEM_COST] = cols[tableHead["Cost"]].span['title']
 
+                # Really awkward string manipulation to done things right while getting Selling Condition
                 conditionChilden = list(cols[tableHead["Availability"]].children)
                 if cols[tableHead["Availability"]].find("br") in conditionChilden:
                     conditionChilden = conditionChilden[:conditionChilden.index(cols[tableHead["Availability"]].find("br")):]
@@ -142,10 +171,22 @@ def getSellingList(urlSuffix, townList, npcHash, itemHash, IDcounter, sellingLis
                             filtredTag += tagInstance
                     sellDict[NPC_SELL_CONDITION] = filtredTag.strip()
                 else:
-                    sellDict[NPC_SELL_CONDITION] = cols[tableHead["Availability"]].text.strip().replace(" .", ".")
+                    sellDict[NPC_SELL_CONDITION] = cols[tableHead["Availability"]].text.strip().replace("\u2013", "-")\
+                    .replace("\u00a0", "").replace("()", "").replace(" .", "").strip(".") + " "
+                    if sellDict[NPC_ID] != "425":
+                        conditionImages = cols[tableHead["Availability"]].findAll("img")
+                        moonPhase = False
+                        for imageInstance in conditionImages:
+                            if re.search("Moon", imageInstance['alt'], re.IGNORECASE):
+                                moonPhase = True
+                                sellDict[NPC_SELL_CONDITION] += re.search("\(([^)]+)\)", imageInstance['alt']).group()[1:-1:] + ", "
+                        if moonPhase:
+                            sellDict[NPC_SELL_CONDITION] = sellDict[NPC_SELL_CONDITION][:-2:]
 
                 IDcounter += 1
                 sellingList.append(sellDict)
+
+                # Writing the selling structure ID in respective NPC selling list
                 for npcInstance in townList:
                     if npcInstance[NPC_ID] == sellDict[NPC_ID]:
                         npcInstance[NPC_SELL_LIST].append(sellDict[NPC_SELL_ID])
@@ -154,18 +195,26 @@ def getSellingList(urlSuffix, townList, npcHash, itemHash, IDcounter, sellingLis
                 if int(sellDict[NPC_SELL_ITEM]) != NOT_FOUND:
                     feedWriteStructure(itemList, sellDict, writeStructure)
 
+            # Refering every selling structure into the respective's item SOURCE_NPC list
+            writeOnJSONFiles(writeStructure)
+            print("\tSuccessful writing proccess. Exiting with value 0.")
+
 def main():
     townList = []
     sellingList = []
     IDcounter = 1
 
+    # Getting the base information for each NPC
     itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
     npcHash, itemHash = initializeHashTables(itemList)
     scrapGeneralInformation(townList, npcHash)
+
+    # Getting each selling table for every NPC that sells something
     linkList = LoadJSONFile("src/town_linkdict.json")
     for linkInstance in linkList.values():
         getSellingList(linkInstance, townList, npcHash, itemHash, IDcounter, sellingList, itemList)
         IDcounter = len(sellingList)+1
+
     SaveJSONFile(SELL_LIST_PATH, sellingList)
     SaveJSONFile(TOWN_NPC_PATH, townList)
 

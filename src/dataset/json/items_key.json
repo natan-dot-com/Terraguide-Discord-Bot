@@ -19,7 +19,9 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "1179"
+            ],
             "Other": "Gold Chest"
         }
     },
@@ -31,7 +33,9 @@
             "Crafting Recipes": [],
             "NPC": [],
             "Drop": [],
-            "Grab Bag": [],
+            "Grab Bag": [
+                "1094"
+            ],
             "Other": ""
         }
     },
@@ -135,7 +139,9 @@
         "Used In": "Corrupt Mimic",
         "Is Consumed": "Yes",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "516"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
@@ -147,7 +153,9 @@
         "Used In": "Hallowed Mimic",
         "Is Consumed": "Yes",
         "Sources": {
-            "Crafting Recipes": [],
+            "Crafting Recipes": [
+                "515"
+            ],
             "NPC": [],
             "Drop": [],
             "Grab Bag": [],
