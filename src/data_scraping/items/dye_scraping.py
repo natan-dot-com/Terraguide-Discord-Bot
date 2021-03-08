@@ -15,7 +15,6 @@ if systemOS == "Linux":
 from ...package.scraping_tools import *
 from ...package.json_manager import *
 from ...package.multithreading_starter import *
-from bs4 import BeautifulSoup
 
 POTION_PATH = GLOBAL_JSON_PATH + DYE_NAME_FILE + JSON_EXT
 URL = "https://terraria.gamepedia.com/"
