@@ -1,3 +1,3 @@
 # Discord Terraria Bot
 
-Simple Terraria bot to learn some python.
+Branch based on web scraping to create JSON-data files.
