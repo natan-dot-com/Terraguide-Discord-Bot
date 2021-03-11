@@ -1,5 +1,10 @@
+from .json_manager import *
+from .json_labels import *
+from .item_hash import *
+
 NOT_FOUND = 0
 ERROR = -1
+ARG_NOT_FOUND = -2
 
 botDescription = 'A terraria bot.'
 botPrefix = 't.'
@@ -20,4 +25,11 @@ craftCommand = "Show all recipes for an item"
 listCommand  = "Find all items that contains the input word"
 
 pageSize = 12
+
+def loadDependencies():
+    itemFilePath = GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT
+    itemHash = hashTable(ITEMS_HASH_SIZE, LABEL_NAME)
+    itemHash = initializeHashTable(itemHash, LoadJSONFile(itemFilePath))
+
+    return itemHash
 

@@ -1,9 +1,12 @@
-from .scraping_tools import *
+from .json_labels import *
 import json
 
 NOT_FOUND = -1
 
-GLOBAL_JSON_PATH = "src/dataset/json/"
+GLOBAL_JSON_PATH = "data/json/"
+DIR_ID_REFERENCES = "id_references/"
+DIR_ITEMS_DATA = "items_data/"
+DIR_NPC_DATA = "npc_data/"
 
 # Loads a structure inside a JSON file
 def LoadJSONFile(JSONPath):

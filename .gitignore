@@ -5,3 +5,4 @@ __pycache__
 *_linkdict.json
 .vscode
 geckodriver.exe
+scraping_tools.py

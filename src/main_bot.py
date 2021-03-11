@@ -1,11 +1,17 @@
+from os import chdir
+from platform import system
+if system() == "Linux":
+    chdir("../")
+
 import discord
-import json
 import re
 from discord.ext import commands
-from tools import *
-from json_manager import *
+from package.json_manager import *
+from package.item_hash import *
+from package.bot_config import *
 
 bot = commands.Bot(command_prefix=botPrefix, description=botDescription, help_command=None)
+itemHash = loadDependencies()
 
 @bot.event
 async def on_ready():
@@ -26,6 +32,19 @@ async def help(ctx):
     
     await ctx.send(embed=embed)
 
+@bot.command()
+async def item(ctx, *args):
+
+    arg = " ".join(args)
+    if ctx.author == bot.user or not arg:
+        return
+    
+    print('User ' + str(ctx.author) + ' has requested informations for ' + arg + '.')
+    itemID = itemHash.search(arg, LABEL_ID)
+    await ctx.send(str(itemID))
+
+
+# Old bot commands
 # Shows a list of  every item which starts with 'arg'
 @bot.command()
 async def list(ctx, *args):
