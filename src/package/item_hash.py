@@ -10,7 +10,8 @@ TABLES_HASH_SIZE = 128
 NPC_HASH_SIZE = 1024
 
 class hashTable:
-    def __init__(self, tableSize, stringDictIndex):
+    def __init__(self, tableSize, stringDictIndex, caseSensitive="no"):
+        self.sensitive = caseSensitive
         self.dictIndex = stringDictIndex
         self.size = tableSize
         self.inserted = 0
@@ -20,23 +21,25 @@ class hashTable:
     def __hashFunction(self, stringData):
         hashValue = 0
         counter = 1
+        lowerString = stringData.lower()
 
-        for charInstance in stringData:
+        for charInstance in lowerString:
             hashValue += counter * ord(charInstance)
             counter += 1
 
         return hashValue % self.size
 
     def __rehashFunction(self, oldValue, rehashCounter):
-        return (oldValue + rehashCounter ** 2) % self.size
+        return (oldValue + (rehashCounter ** 2)) % self.size
 
     # Public function to add a dictionary in data list
     def add(self, stringData, stringDict):
         if self.inserted == self.size:
             print("Hash table is already full. Aborted.")
-            return FULL_TABLE 
+            return FULL_TABLE
 
-        hashIndex = self.__hashFunction(stringData)
+        lowerString = stringData.casefold()
+        hashIndex = self.__hashFunction(lowerString)
 
         if self.data[hashIndex] == None:
             self.data[hashIndex] = stringDict
@@ -59,20 +62,21 @@ class hashTable:
             print("Hash table is empty. Aborted.")
             return EMPTY_TABLE
 
-        hashIndex = self.__hashFunction(stringData)
+        lowerString = stringData.lower()
+        hashIndex = self.__hashFunction(lowerString)
 
         if self.data[hashIndex] != None:
-            if self.data[hashIndex][self.dictIndex] == stringData:
+            if self.data[hashIndex][self.dictIndex].lower() == lowerString:
                 return self.data[hashIndex][dictIndexToReturn]
             else:
                 rehashCounter = 1
                 nextIndex = self.__rehashFunction(hashIndex, rehashCounter)
-                while (self.data[nextIndex] != None) and (self.data[nextIndex][self.dictIndex] != stringData):
+                while (self.data[nextIndex] != None) and (self.data[nextIndex][self.dictIndex].lower() != lowerString):
                     rehashCounter += 1
                     nextIndex = self.__rehashFunction(hashIndex, rehashCounter)
                 if self.data[nextIndex] == None:
                     return NOT_FOUND
-                elif self.data[nextIndex][self.dictIndex] == stringData:
+                elif self.data[nextIndex][self.dictIndex] == lowerString:
                     return self.data[nextIndex][dictIndexToReturn]
         else:
             return NOT_FOUND
