@@ -1,3 +1,5 @@
+from .json_labels import *
+
 itemFileManager = {
     "Acessory": ACCESSORY_NAME_FILE,
     "Ammunition": AMMUNITION_NAME_FILE,

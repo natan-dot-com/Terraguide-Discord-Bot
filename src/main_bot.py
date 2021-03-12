@@ -9,9 +9,13 @@ from discord.ext import commands
 from package.json_manager import *
 from package.item_hash import *
 from package.bot_config import *
+from package.search import *
+from package.utility_dictionaries import *
+from package.embed_functions import *
 
 bot = commands.Bot(command_prefix=botPrefix, description=botDescription, help_command=None)
-itemHash = loadDependencies()
+itemList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT)
+itemHash = loadDependencies(itemList)
 
 @bot.event
 async def on_ready():
@@ -37,11 +41,30 @@ async def item(ctx, *args):
 
     arg = " ".join(args)
     if ctx.author == bot.user or not arg:
-        return
+        return ARG_NOT_FOUND
     
     print('User ' + str(ctx.author) + ' has requested informations for ' + arg + '.')
     itemID = itemHash.search(arg, LABEL_ID)
-    await ctx.send(str(itemID))
+    if itemID == -1:
+        await ctx.send("Can't find item '" + arg + "' in data base.")
+        return ITEM_NOT_FOUND
+
+    itemType = itemList[int(itemID)-1][LABEL_TYPE]
+    itemFilePath = GLOBAL_JSON_PATH + DIR_ITEMS_DATA + itemFileManager[itemType] + JSON_EXT
+    itemDict = binarySearch(LoadJSONFile(itemFilePath), itemID)
+    if itemDict == NOT_FOUND:
+        return ITEM_NOT_FOUND
+
+    embedList = []
+    mainPage = discord.Embed(color=craftColor, title="General informations about '" + itemList[int(itemID)-1][LABEL_NAME] + "'")
+    for itemCategory in itemDict.keys():
+        if itemCategory == LABEL_SOURCE:
+            break
+        embedInsertField(mainPage, itemDict[itemCategory], itemCategory)
+    
+    await ctx.send(embed = mainPage)
+
+
 
 
 # Old bot commands
