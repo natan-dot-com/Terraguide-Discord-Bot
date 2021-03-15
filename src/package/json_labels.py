@@ -164,15 +164,16 @@ NPC_ITEM_COST = "Item Cost"
 NPC_SELL_CONDITION = "Sell Condition"
 
 # Table files data
-JSON_EXT = ".json"
-TABLE_NAME_FILE = "crafting_stations"
-RECIPE_NAME_FILE = "recipes"
-MAIN_NAME_FILE = "items"
-BAGS_NAME_FILE = "grab_bags"
-SET_NAME_FILE = "set"
 BAGS_DROP_NAME_FILE = "grab_bags_drops"
+BAGS_NAME_FILE = "grab_bags"
+JSON_EXT = ".json"
+MAIN_NAME_FILE = "items"
 NPC_NAME_FILE = "npc"
+RARITY_NAME_FILE = "rarity"
+RECIPE_NAME_FILE = "recipes"
 SELLING_LIST_NAME_FILE = "selling_list"
+SET_NAME_FILE = "set"
+TABLE_NAME_FILE = "crafting_stations"
 
 # Items subfiles
 MAIN_ITEM_SUBFILE_PREFIX = "items_"

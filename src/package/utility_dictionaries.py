@@ -7,7 +7,7 @@ itemFileManager = {
     "Background": BACKGROUND_NAME_FILE,
     "Bait": BAIT_NAME_FILE,
     "Block": BLOCK_NAME_FILE,
-    "Boss Summon": BOSS_SUMMON_NAME_FILE,
+    "Boss summon": BOSS_SUMMON_NAME_FILE,
     "Brick": BRICK_NAME_FILE,
     "Consumable": CONSUMABLE_NAME_FILE,
     "Crafting material": CRAFTING_MATERIAL_NAME_FILE,

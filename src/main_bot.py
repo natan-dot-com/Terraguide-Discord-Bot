@@ -11,10 +11,12 @@ from package.item_hash import *
 from package.bot_config import *
 from package.search import *
 from package.utility_dictionaries import *
+from package.utility_functions import *
 from package.embed_functions import *
 
 bot = commands.Bot(command_prefix=botPrefix, description=botDescription, help_command=None)
 itemList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT)
+rarityList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + RARITY_NAME_FILE + JSON_EXT)
 itemHash = loadDependencies(itemList)
 
 @bot.event
@@ -39,30 +41,45 @@ async def help(ctx):
 @bot.command()
 async def item(ctx, *args):
 
+    # Checks empty argument
     arg = " ".join(args)
     if ctx.author == bot.user or not arg:
         return ARG_NOT_FOUND
     
+    # Hash search the current item
     print('User ' + str(ctx.author) + ' has requested informations for ' + arg + '.')
     itemID = itemHash.search(arg, LABEL_ID)
     if itemID == -1:
         await ctx.send("Can't find item '" + arg + "' in data base.")
         return ITEM_NOT_FOUND
 
+    # Gets respective item info dictionary
     itemType = itemList[int(itemID)-1][LABEL_TYPE]
     itemFilePath = GLOBAL_JSON_PATH + DIR_ITEMS_DATA + itemFileManager[itemType] + JSON_EXT
     itemDict = binarySearch(LoadJSONFile(itemFilePath), itemID)
     if itemDict == NOT_FOUND:
         return ITEM_NOT_FOUND
 
+    # Starts building each embed panel 
     embedList = []
-    mainPage = discord.Embed(color=craftColor, title="General informations about '" + itemList[int(itemID)-1][LABEL_NAME] + "'")
+
+    itemName = itemList[int(itemID)-1][LABEL_NAME]
+    imageFilename = itemName.replace(" ", "_") + STATIC_IMAGE_EXT
+
+    # Main info embed panel construction
+    mainPage = discord.Embed(color=pickDominantColor(imageFilename), title="General informations about '" + itemName + "':")
+    mainImage = discord.File(GLOBAL_IMAGE_PATH + imageFilename, filename="image.png")
+    mainPage.set_thumbnail(url="attachment://image.png")
     for itemCategory in itemDict.keys():
         if itemCategory == LABEL_SOURCE:
             break
-        embedInsertField(mainPage, itemDict[itemCategory], itemCategory)
+        elif itemCategory == LABEL_RARITY:
+            embedInsertRarityField(mainPage, itemDict[itemCategory], rarityList)
+        else:
+            embedInsertField(mainPage, itemDict[itemCategory], itemCategory)
+    embedList.append(mainPage)
     
-    await ctx.send(embed = mainPage)
+    await ctx.send(file=mainImage, embed=mainPage)
 
 
 
