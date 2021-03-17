@@ -178,7 +178,8 @@ async def list(ctx, *args):
     botMessage = await ctx.send(embed = pageList[0])
 
     # Changing page system via Discord reactions
-    await embedSetReactions(bot, botMessage, pageList)
+    if len(pageList) > 1:
+        await embedSetReactions(bot, botMessage, pageList)
 
 
 # Shows crafting information
