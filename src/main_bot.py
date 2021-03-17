@@ -48,7 +48,6 @@ async def item(ctx, *args):
     # Hash search the current item
     print("User {} has requested a craft recipe for {}.".format(str(ctx.author), arg))
     itemID = itemHash.search(arg, LABEL_ID)
-    print(itemID)
     if itemID == NOT_FOUND:
         await ctx.send("Can't find item '" + arg + "' in data base.")
         return ITEM_NOT_FOUND
@@ -79,7 +78,7 @@ async def item(ctx, *args):
         elif itemCategory == LABEL_RARITY:
             embedInsertRarityField(mainPage, itemDict[itemCategory], rarityList)
         else:
-            embedInsertField(mainPage, itemDict[itemCategory], itemCategory, inline=True)
+            embedInsertField(mainPage, itemDict[itemCategory], itemCategory)
     embedList.append(mainPage)
 
     # If item has source dict (i.e. if embed will have more than one page)
@@ -131,35 +130,7 @@ async def item(ctx, *args):
 
     # Page system manager (if number of pages greater than one)
     if len(embedList) > 1:
-        await botMessage.add_reaction('◀')
-        await botMessage.add_reaction('▶')
-
-        def check(reaction, user):
-            return user != botMessage.author and reaction.message.id == botMessage.id
-
-        reaction = None
-        while True:
-            if str(reaction) == '◀':
-                if currentEmbed > 0:
-                    currentEmbed -= 1
-                    await botMessage.edit(embed = embedList[currentEmbed])
-                elif currentEmbed == 0:
-                    currentEmbed = len(embedList) - 1
-                    await botMessage.edit(embed = embedList[currentEmbed])
-            elif str(reaction) == '▶':
-                if currentEmbed < len(embedList) - 1:
-                    currentEmbed += 1
-                    await botMessage.edit(embed = embedList[currentEmbed])
-                elif currentEmbed == len(embedList) - 1:
-                    currentEmbed = 0
-                    await botMessage.edit(embed = embedList[currentEmbed])
-            try:
-                reaction, user = await bot.wait_for('reaction_add', timeout = 20.0, check = check)
-                await botMessage.remove_reaction(reaction, user)
-            except:
-                break
-            
-        await botMessage.clear_reactions()
+        await embedSetReactions(bot, botMessage, embedList)
 
 
 
