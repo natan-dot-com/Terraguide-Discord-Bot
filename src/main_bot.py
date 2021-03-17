@@ -49,8 +49,10 @@ async def item(ctx, *args):
     
     # Hash search the current item
     print('User ' + str(ctx.author) + ' has requested informations for ' + arg + '.')
+    print(arg)
     itemID = itemHash.search(arg, LABEL_ID)
-    if itemID == -1:
+    print(itemID)
+    if itemID == NOT_FOUND:
         await ctx.send("Can't find item '" + arg + "' in data base.")
         return ITEM_NOT_FOUND
 
@@ -97,6 +99,8 @@ async def item(ctx, *args):
 
         # Source embed panels creation
         recipesList = [] 
+        npcList = []
+        sellingList = []
         for existentCategory in nonEmptyLists:
             newEmbed = None
 
@@ -109,8 +113,20 @@ async def item(ctx, *args):
                 newEmbed.set_thumbnail(url="attachment://image.png")
                 createRecipesPanel(itemList, tableList, recipesList, itemDict[LABEL_SOURCE][SOURCE_RECIPES], newEmbed)
                 newEmbed.set_footer(text="Page " + str(2+nonEmptyLists.index(existentCategory)) + "/" + str(1+len(nonEmptyLists)))
+
+            elif existentCategory == SOURCE_NPC:
+                if not npcList:
+                    npcList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + NPC_NAME_FILE + JSON_EXT)
+                if not sellingList:
+                    sellingList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + SELLING_LIST_NAME_FILE + JSON_EXT)
+                titleMessage = "Showing selling offers for '" + itemName + "':"
+                newEmbed = discord.Embed(title=titleMessage, color=dominantImageColor)
+                newEmbed.set_thumbnail(url="attachment://image.png")
+                createSellingPanel(itemList, npcList, sellingList, itemDict[LABEL_SOURCE][SOURCE_NPC], newEmbed, itemName)
+                newEmbed.set_footer(text="Page " + str(2+nonEmptyLists.index(existentCategory)) + "/" + str(1+len(nonEmptyLists)))
+
             else:
-                pass
+                continue
             embedList.append(newEmbed)
 
     currentEmbed = 0
@@ -141,7 +157,7 @@ async def item(ctx, *args):
                     currentEmbed = 0
                     await botMessage.edit(embed = embedList[currentEmbed])
             try:
-                reaction, user = await bot.wait_for('reaction_add', timeout = 30.0, check = check)
+                reaction, user = await bot.wait_for('reaction_add', timeout = 20.0, check = check)
                 await botMessage.remove_reaction(reaction, user)
             except:
                 break
