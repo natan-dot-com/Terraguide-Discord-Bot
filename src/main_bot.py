@@ -16,6 +16,7 @@ from package.embed_functions import *
 
 bot = commands.Bot(command_prefix=botPrefix, description=botDescription, help_command=None)
 itemList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT)
+tableList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + TABLE_NAME_FILE + JSON_EXT)
 rarityList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + RARITY_NAME_FILE + JSON_EXT)
 recipesList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + RECIPE_NAME_FILE + JSON_EXT)
 tablesList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + TABLE_NAME_FILE + JSON_EXT)
@@ -65,22 +66,91 @@ async def item(ctx, *args):
 
     itemName = itemList[int(itemID)-1][LABEL_NAME]
     imageFilename = itemName.replace(" ", "_") + STATIC_IMAGE_EXT
+    dominantImageColor = pickDominantColor(imageFilename)
+    hasSource = False
 
     # Main info embed panel construction
-    mainPage = discord.Embed(color=pickDominantColor(imageFilename), title="General informations about '" + itemName + "':")
+    mainPage = discord.Embed(color=dominantImageColor, title="General informations about '" + itemName + "':")
     mainImage = discord.File(GLOBAL_IMAGE_PATH + imageFilename, filename="image.png")
     mainPage.set_thumbnail(url="attachment://image.png")
     for itemCategory in itemDict.keys():
         if itemCategory == LABEL_SOURCE:
+            hasSource = True
             break
         elif itemCategory == LABEL_RARITY:
             embedInsertRarityField(mainPage, itemDict[itemCategory], rarityList)
         else:
-            embedInsertField(mainPage, itemDict[itemCategory], itemCategory)
+            embedInsertField(mainPage, itemDict[itemCategory], itemCategory, inline=True)
     embedList.append(mainPage)
-    
-    await ctx.send(file=mainImage, embed=mainPage)
 
+    # If item has source dict (i.e. if embed will have more than one page)
+    if hasSource:
+
+        # LABEL_SOURCE dict analysis
+        nonEmptyLists = []
+        for sourceCategory in itemDict[LABEL_SOURCE]:
+            if itemDict[LABEL_SOURCE][sourceCategory]:
+                nonEmptyLists.append(sourceCategory)
+
+        pageAlert = "React to this message to switch between pages!\n"
+        mainPage.set_footer(text=pageAlert + "Page 1/" + str(1+len(nonEmptyLists)))
+
+        # Source embed panels creation
+        recipesList = [] 
+        for existentCategory in nonEmptyLists:
+            newEmbed = None
+
+            # Recipes embed panel cration
+            if existentCategory == SOURCE_RECIPES:
+                if not recipesList:
+                    recipesList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + RECIPE_NAME_FILE + JSON_EXT)
+                titleMessage = "Showing craft recipes for '" + itemName + "':"
+                newEmbed = discord.Embed(title=titleMessage, color=dominantImageColor)
+                newEmbed.set_thumbnail(url="attachment://image.png")
+                createRecipesPanel(itemList, tableList, recipesList, itemDict[LABEL_SOURCE][SOURCE_RECIPES], newEmbed)
+                newEmbed.set_footer(text="Page " + str(2+nonEmptyLists.index(existentCategory)) + "/" + str(1+len(nonEmptyLists)))
+            else:
+                pass
+            embedList.append(newEmbed)
+
+    currentEmbed = 0
+    botMessage = await ctx.send(file=mainImage, embed=embedList[currentEmbed])
+
+    # Page system manager (if number of pages greater than one)
+    if len(embedList) > 1:
+        await botMessage.add_reaction('◀')
+        await botMessage.add_reaction('▶')
+
+        def check(reaction, user):
+            return user != botMessage.author and reaction.message.id == botMessage.id
+
+        reaction = None
+        while True:
+            if str(reaction) == '◀':
+                if currentEmbed > 0:
+                    currentEmbed -= 1
+                    await botMessage.edit(embed = embedList[currentEmbed])
+                elif currentEmbed == 0:
+                    currentEmbed = len(embedList) - 1
+                    await botMessage.edit(embed = embedList[currentEmbed])
+            elif str(reaction) == '▶':
+                if currentEmbed < len(embedList) - 1:
+                    currentEmbed += 1
+                    await botMessage.edit(embed = embedList[currentEmbed])
+                elif currentEmbed == len(embedList) - 1:
+                    currentEmbed = 0
+                    await botMessage.edit(embed = embedList[currentEmbed])
+            try:
+                reaction, user = await bot.wait_for('reaction_add', timeout = 30.0, check = check)
+                await botMessage.remove_reaction(reaction, user)
+            except:
+                break
+            
+        await botMessage.clear_reactions()
+
+
+
+# Old bot commands
 # Shows a list of  every item which starts with 'arg'
 @bot.command()
 async def list(ctx, *args):
@@ -139,19 +209,20 @@ async def craft(ctx, *args):
     #Find input in hash table
     itemID = itemHash.search(arg, LABEL_ID)
     if itemID == -1:
-        await ctx.send("Can't find item '" + arg + "' in data base.")
+        await ctx.send("Can't find item '{}' in data base.".format(arg))
         return ITEM_NOT_FOUND
 
     itemType = itemList[int(itemID)-1][LABEL_TYPE]
     itemFilePath = GLOBAL_JSON_PATH + DIR_ITEMS_DATA + itemFileManager[itemType] + JSON_EXT
     itemName = itemList[int(itemID)-1][LABEL_NAME]
     imageFilename = itemName.replace(" ", "_").lower() + STATIC_IMAGE_EXT
-    craftTitle = "Craft info about " + itemName
-    mainImage = discord.File(GLOBAL_IMAGE_PATH + imageFilename, filename="image.png")
+    dominantImageColor = pickDominantColor(imageFilename)
+    craftTitle = "Craft info about '{}'.".format(itemName)
+    embedImage = discord.File(GLOBAL_IMAGE_PATH + imageFilename, filename="image.png")
     itemDict = binarySearch(LoadJSONFile(itemFilePath), itemID)
 
-    newPage = discord.Embed(color=craftColor, title=craftTitle)
-    newPage.set_thumbnail(url="attachment://image.png")
+    embedPage = discord.Embed(color=dominantImageColor, title=craftTitle)
+    embedPage.set_thumbnail(url="attachment://image.png")
 
     itemRecipes = itemDict[LABEL_SOURCE][SOURCE_RECIPES]
     for craftingRecipeIndex in range(len(itemRecipes)):
@@ -167,10 +238,10 @@ async def craft(ctx, *args):
             ingredientQuantity = ingredients[ingredientIndex][INGREDIENT_QUANTITY]
             outputMessage += ingredientQuantity + " " + itemList[ingredientId-1][LABEL_NAME] + "\n"
 
-        embedInsertField(newPage, outputMessage, outputDescription, inline=False)
+        embedInsertField(embedPage, outputMessage, outputDescription, inline=False)
 
     #Send Message
-    await ctx.send(file=mainImage, embed=newPage)
+    await ctx.send(file=embedImage, embed=embedPage)
 
     #Layout with pages
     '''itemType = itemList[int(itemID)-1][LABEL_TYPE]
@@ -210,5 +281,5 @@ async def craft(ctx, *args):
     await embedSetReactions(bot, botMessage, pageList)'''
 
 
-#bot.run('MjQ2NTExOTcxMDY5ODUzNjk3.WCVcKQ.quxR1uO0TUb6UQPhvLYzqoApHBI')
-bot.run('Nzk2MDY1OTI0NzU1MDk1NTg0.X_SgKg.8UNAsVGPDnbS2nMc40LrpuoepTI')
+bot.run('MjQ2NTExOTcxMDY5ODUzNjk3.WCVcKQ.quxR1uO0TUb6UQPhvLYzqoApHBI')
+#bot.run('Nzk2MDY1OTI0NzU1MDk1NTg0.X_SgKg.8UNAsVGPDnbS2nMc40LrpuoepTI')
