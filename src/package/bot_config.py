@@ -18,12 +18,17 @@ craftColor = 0x0a850e
 listColor = 0xe40101
 helpColor = 0x000000
 
-#Output for help command
-helpCommand = "Show this dialog"
-craftCommand = "Show all recipes for an item"
-listCommand  = "Find all items that contains the input word"
+#Command List
+commandList = {
+    botPrefix + "help": "Show this dialog",
+    botPrefix + "craft *Item Name*": "Show all recipes for an item",
+    botPrefix + "list *Something to Search*": "Find all items that contains the input word",
+    botPrefix + "item *Item Name*": "Show informations about an item"
+}
 
 pageSize = 12
+reactionTimeOut = 30.0
+
 
 def loadDependencies(itemList):
     itemFilePath = GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT

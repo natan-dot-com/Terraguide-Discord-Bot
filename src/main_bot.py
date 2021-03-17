@@ -33,10 +33,8 @@ async def help(ctx):
 
     embed = discord.Embed(color=helpColor, title="Command List")
     embed.set_thumbnail(url=helpThumbNail)
-    embed.add_field(name=botPrefix + "help", value=helpCommand, inline=False)
-    embed.add_field(name=botPrefix + "craft *Item Name*", value=craftCommand, inline=False)
-    embed.add_field(name=botPrefix + "list  *Something to Search*", value=listCommand, inline=False)
-    
+    for command, commandDescription in zip(commandList.keys(), commandList.values()):
+        embedInsertField(embed, commandDescription, command, inline=False)  
     await ctx.send(embed=embed)
 
 @bot.command()
@@ -48,8 +46,7 @@ async def item(ctx, *args):
         return ARG_NOT_FOUND
     
     # Hash search the current item
-    print('User ' + str(ctx.author) + ' has requested informations for ' + arg + '.')
-    print(arg)
+    print("User {} has requested a craft recipe for {}.".format(str(ctx.author), arg))
     itemID = itemHash.search(arg, LABEL_ID)
     print(itemID)
     if itemID == NOT_FOUND:
@@ -175,19 +172,17 @@ async def list(ctx, *args):
     if ctx.author == bot.user or not arg:
         return
 
-    print('User ' + str(ctx.author) + ' has requested a list of items for ' + arg + '.')
-
+    print("User {} has requested a craft recipe for {}.".format(str(ctx.author), arg))
     matchCounter = 0
     matchList = [[]]
-    itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
 
     #Regex usage to find every match of the input
     for itemInstance in itemList:
-        if re.search("^" + arg + "+", itemInstance['name'], re.IGNORECASE): 
+        if re.search("^" + arg + "+", itemInstance[LABEL_NAME], re.IGNORECASE): 
             #print("^" + arg + "*\n" + itemInstance['name'] + "\n")
             if len(matchList[len(matchList)-1]) >= pageSize:
                 matchList.append([])
-            matchList[len(matchList)-1].append(itemInstance['name'])
+            matchList[len(matchList)-1].append(itemInstance[LABEL_NAME])
     
     for matchInstance in matchList:
         matchCounter += len(matchInstance)
@@ -195,137 +190,108 @@ async def list(ctx, *args):
         await ctx.send("No items were found containing " + arg)
         return NOT_FOUND
 
-    description = str(matchCounter) + " occurrencies found:\n"
-
+    listDescription = str(matchCounter) + " occurrencies found:\n"
     # Pages creation with 12 lines each
     pageList = []
     for matchInstance in matchList:
-        message = ""
+        listMessage = ""
         for subInstance in matchInstance:
-            message += subInstance + "\n"
+            listMessage += subInstance + "\n"
             
-        newPage = discord.Embed (
-            title = "Search Info about " + arg,
-            colour = discord.Colour.green(),
-        )
-        newPage.add_field(name=description, value=message, inline=False)
-        newPage.set_footer(text="Page " + str(matchList.index(matchInstance) + 1) + "/" + str(len(matchList)))
+        newPage = discord.Embed(title ="Search Info about " + arg, colour=discord.Colour.green())
+        embedInsertField(newPage, listMessage, listDescription, inline=False)
+        embedSetFooter(newPage, "Page " + str(matchList.index(matchInstance) + 1) + "/" + str(len(matchList)))
         pageList.append(newPage)
 
+    #Send Message
+    botMessage = await ctx.send(embed = pageList[0])
+
     # Changing page system via Discord reactions
-    pageNumber = 0
-    botMessage = await ctx.send(embed = pageList[pageNumber])
-    await botMessage.add_reaction('◀')
-    await botMessage.add_reaction('▶')
+    await embedSetReactions(bot, botMessage, pageList)
 
-    def check(reaction, user):
-        return user != botMessage.author and reaction.message.id == botMessage.id
 
-    reaction = None
-    while True:
-        if str(reaction) == '◀':
-            if pageNumber > 0:
-                pageNumber -= 1
-                await botMessage.edit(embed = pageList[pageNumber])
-            elif pageNumber == 0:
-                pageNumber = len(pageList) - 1
-                await botMessage.edit(embed = pageList[pageNumber])
-        elif str(reaction) == '▶':
-            if pageNumber < len(pageList) - 1:
-                pageNumber += 1
-                await botMessage.edit(embed = pageList[pageNumber])
-            elif pageNumber == len(pageList) - 1:
-                pageNumber = 0
-                await botMessage.edit(embed = pageList[pageNumber])
-        try:
-            reaction, user = await bot.wait_for('reaction_add', timeout = 30.0, check = check)
-            await botMessage.remove_reaction(reaction, user)
-        except:
-            break
-        
-    await botMessage.clear_reactions()
-
-# Shows crafting information about 'arg'
+# Shows crafting information
 @bot.command()
 async def craft(ctx, *args):
 
     arg = " ".join(args)
-
     if ctx.author == bot.user or not arg:
         return
+    print("User {} has requested a craft recipe for {}.".format(str(ctx.author), arg))
 
-    print('User ' + str(ctx.author) + ' has requested a craft recipe for ' + arg + '.')
+    #Find input in hash table
+    itemID = itemHash.search(arg, LABEL_ID)
+    if itemID == -1:
+        await ctx.send("Can't find item '" + arg + "' in data base.")
+        return ITEM_NOT_FOUND
 
-    itemList = LoadJSONFile(GLOBAL_JSON_PATH + MAIN_NAME_FILE + JSON_EXT)
-    recipeList = LoadJSONFile(GLOBAL_JSON_PATH + RECIPE_NAME_FILE + JSON_EXT)
-    tableList = LoadJSONFile(GLOBAL_JSON_PATH + TABLE_NAME_FILE + JSON_EXT)
+    itemType = itemList[int(itemID)-1][LABEL_TYPE]
+    itemFilePath = GLOBAL_JSON_PATH + DIR_ITEMS_DATA + itemFileManager[itemType] + JSON_EXT
+    itemName = itemList[int(itemID)-1][LABEL_NAME]
+    imageFilename = itemName.replace(" ", "_").lower() + STATIC_IMAGE_EXT
+    craftTitle = "Craft info about " + itemName
+    mainImage = discord.File(GLOBAL_IMAGE_PATH + imageFilename, filename="image.png")
+    itemDict = binarySearch(LoadJSONFile(itemFilePath), itemID)
 
-    #Search for the given item name
-    itemInstance = searchByName(itemList, arg)
-    if not itemInstance:
-        await ctx.send('Item not found. Be sure to spell the item name correctly.')
-        return NOT_FOUND
+    newPage = discord.Embed(color=craftColor, title=craftTitle)
+    newPage.set_thumbnail(url="attachment://image.png")
 
-    title = "Craft info about " + itemInstance['name']
-    embed = discord.Embed(color=craftColor, title=title)
-    embed.set_thumbnail(url=craftThumbNail)
-    
-    #Check each of the recipes
-    for recipeName in recipeNameList:
+    itemRecipes = itemDict[LABEL_SOURCE][SOURCE_RECIPES]
+    for craftingRecipeIndex in range(len(itemRecipes)):
+        ingredients = recipesList[int(itemRecipes[craftingRecipeIndex])-1][RECIPE_IDENTITY]
+        tableId = int(recipesList[int(itemRecipes[craftingRecipeIndex])-1][RECIPE_TABLE])
+        tableName = tablesList[tableId-1][LABEL_NAME]
+        outputDescription = "Table - {}:".format(tableName)
+        outputMessage = ""
 
-        #If the JSON doesn't have any recipes left then break
-        if not itemInstance[recipeName]:
-            if recipeName == 'recipe1':
-                await ctx.send("Item " + itemInstance['name'] + " doesn't have any recipe")
-            break
-        
-        #Clearing everything
-        messageTable = ""
-        messageCraft = ""
-        descriptionTable = ""
-        descriptionCraft = ""
-        embed.clear_fields()
-        
-        recipeInstance = recipeList[int(itemInstance[recipeName]) - 1]
-        if not recipeInstance:
-            print('(ERROR) recipeInstance is an empty variable.\n')
-            return ERROR  
-        
-        tableInstance = tableList[int(recipeInstance['table']) - 1]
-        if not tableInstance:
-            print('(ERROR) tableInstance is an empty variable.\n')
-            return ERROR
-        
-        #Get table infos
-        descriptionTable = ":hammer_pick: **" + itemInstance['name'] + "** is made on the following tables :hammer_pick:" 
-        if tableInstance['alternate_name']:
-            messageTable = tableInstance['name'] + ", " + tableInstance['alternate_name']
-        else:
-            messageTable = tableInstance['name']
-        
-        embed.add_field(name=descriptionTable, value=messageTable, inline=False)
-        descriptionCraft += ":gear: **" + itemInstance['name'] + "** uses the following ingredients :gear:"             
-        
-        #Get the ingredients
-        for ingredientName, amountName in zip(ingredientNameList, amountNameList):
-            
-            #if the JSON doesn't have any ingredients left then break
-            if not recipeInstance[ingredientName]:
-                break
-                
-            ingredientInstance = itemList[int(recipeInstance[ingredientName]) - 1]
-            if not ingredientInstance:
-                print('(ERROR) ingredientInstance is an empty variable.\n')
-                return ERROR
-                
-            messageCraft += recipeInstance[amountName] + " " + ingredientInstance['name'] + ", "
-            
-        #remove the last comma
-        messageCraft = messageCraft[:-2]
-        
-        #Send the message to UI discord
-        embed.add_field(name=descriptionCraft, value=messageCraft, inline=False)
-        await ctx.send(embed=embed)               
+        #Get ingredients infos
+        for ingredientIndex in range(len(ingredients)):
+            ingredientId = int(ingredients[ingredientIndex][INGREDIENT_NAME])
+            ingredientQuantity = ingredients[ingredientIndex][INGREDIENT_QUANTITY]
+            outputMessage += ingredientQuantity + " " + itemList[ingredientId-1][LABEL_NAME] + "\n"
+
+        embedInsertField(newPage, outputMessage, outputDescription, inline=False)
+
+    #Send Message
+    await ctx.send(file=mainImage, embed=newPage)
+
+    #Layout with pages
+    '''itemType = itemList[int(itemID)-1][LABEL_TYPE]
+    itemFilePath = GLOBAL_JSON_PATH + DIR_ITEMS_DATA + itemFileManager[itemType] + JSON_EXT
+    itemName = itemList[int(itemID)-1][LABEL_NAME]
+    imageFilename = itemName.replace(" ", "_").lower() + STATIC_IMAGE_EXT
+    craftTitle = "Craft info about " + itemName
+    mainImage = discord.File(GLOBAL_IMAGE_PATH + imageFilename, filename="image.png")
+    itemDict = binarySearch(LoadJSONFile(itemFilePath), itemID)
+
+    pageList = []
+    itemRecipes = itemDict[LABEL_SOURCE][SOURCE_RECIPES]
+    for craftingRecipeIndex in range(len(itemRecipes)):
+        ingredients = recipesList[int(itemRecipes[craftingRecipeIndex])-1][RECIPE_IDENTITY]
+        tableId = int(recipesList[int(itemRecipes[craftingRecipeIndex])-1][RECIPE_TABLE])
+        tableName = tablesList[tableId-1][LABEL_NAME]
+        outputDescription = "Table - {}:".format(tableName)
+        outputMessage = ""
+
+        #Get ingredients infos
+        for ingredientIndex in range(len(ingredients)):
+            ingredientId = int(ingredients[ingredientIndex][INGREDIENT_NAME])
+            ingredientQuantity = ingredients[ingredientIndex][INGREDIENT_QUANTITY]
+            outputMessage += ingredientQuantity + " " + itemList[ingredientId-1][LABEL_NAME] + "\n"
+
+        #Create embed page
+        newPage = discord.Embed(color=craftColor, title=craftTitle)
+        newPage.set_thumbnail(url="attachment://image.png")
+        embedInsertField(newPage, outputMessage, outputDescription, inline=False)
+        embedSetFooter(newPage, "Page {}/{}".format(str(craftingRecipeIndex+1), str(len(itemRecipes))))
+        pageList.append(newPage)
+
+    #Send Message
+    botMessage = await ctx.send(file=mainImage, embed=pageList[0])
+
+    # Changing page system via Discord reactions
+    await embedSetReactions(bot, botMessage, pageList)'''
+
 
 #bot.run('MjQ2NTExOTcxMDY5ODUzNjk3.WCVcKQ.quxR1uO0TUb6UQPhvLYzqoApHBI')
 bot.run('Nzk2MDY1OTI0NzU1MDk1NTg0.X_SgKg.8UNAsVGPDnbS2nMc40LrpuoepTI')

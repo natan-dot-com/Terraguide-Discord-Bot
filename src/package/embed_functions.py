@@ -3,8 +3,9 @@
 import discord
 from discord.ext import commands
 from .json_labels import *
+from .bot_config import *
 
-def embedInsertField(embedPage, dictValue, dictLabel, inline=False):
+def embedInsertField(embedPage, dictValue, dictLabel, inline=True):
     embedPage.add_field(name=dictLabel, value=dictValue, inline=inline)
 
 def embedInsertRarityField(embedPage, rarityID, rarityList):
