@@ -16,6 +16,7 @@ from package.embed_functions import *
 
 bot = commands.Bot(command_prefix=botPrefix, description=botDescription, help_command=None)
 itemList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT)
+tableList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + TABLE_NAME_FILE + JSON_EXT)
 rarityList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + RARITY_NAME_FILE + JSON_EXT)
 itemHash = loadDependencies(itemList)
 
@@ -65,22 +66,87 @@ async def item(ctx, *args):
 
     itemName = itemList[int(itemID)-1][LABEL_NAME]
     imageFilename = itemName.replace(" ", "_") + STATIC_IMAGE_EXT
+    dominantImageColor = pickDominantColor(imageFilename)
+    hasSource = False
 
     # Main info embed panel construction
-    mainPage = discord.Embed(color=pickDominantColor(imageFilename), title="General informations about '" + itemName + "':")
+    mainPage = discord.Embed(color=dominantImageColor, title="General informations about '" + itemName + "':")
     mainImage = discord.File(GLOBAL_IMAGE_PATH + imageFilename, filename="image.png")
     mainPage.set_thumbnail(url="attachment://image.png")
     for itemCategory in itemDict.keys():
         if itemCategory == LABEL_SOURCE:
+            hasSource = True
             break
         elif itemCategory == LABEL_RARITY:
             embedInsertRarityField(mainPage, itemDict[itemCategory], rarityList)
         else:
-            embedInsertField(mainPage, itemDict[itemCategory], itemCategory)
+            embedInsertField(mainPage, itemDict[itemCategory], itemCategory, inline=True)
     embedList.append(mainPage)
-    
-    await ctx.send(file=mainImage, embed=mainPage)
 
+    # If item has source dict (i.e. if embed will have more than one page)
+    if hasSource:
+
+        # LABEL_SOURCE dict analysis
+        nonEmptyLists = []
+        for sourceCategory in itemDict[LABEL_SOURCE]:
+            if itemDict[LABEL_SOURCE][sourceCategory]:
+                nonEmptyLists.append(sourceCategory)
+
+        pageAlert = "React to this message to switch between pages!\n"
+        mainPage.set_footer(text=pageAlert + "Page 1/" + str(1+len(nonEmptyLists)))
+
+        # Source embed panels creation
+        recipesList = [] 
+        for existentCategory in nonEmptyLists:
+            newEmbed = None
+
+            # Recipes embed panel cration
+            if existentCategory == SOURCE_RECIPES:
+                if not recipesList:
+                    recipesList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + RECIPE_NAME_FILE + JSON_EXT)
+                titleMessage = "Showing craft recipes for '" + itemName + "':"
+                newEmbed = discord.Embed(title=titleMessage, color=dominantImageColor)
+                newEmbed.set_thumbnail(url="attachment://image.png")
+                createRecipesPanel(itemList, tableList, recipesList, itemDict[LABEL_SOURCE][SOURCE_RECIPES], newEmbed)
+                newEmbed.set_footer(text="Page " + str(2+nonEmptyLists.index(existentCategory)) + "/" + str(1+len(nonEmptyLists)))
+            else:
+                pass
+            embedList.append(newEmbed)
+
+    currentEmbed = 0
+    botMessage = await ctx.send(file=mainImage, embed=embedList[currentEmbed])
+
+    # Page system manager (if number of pages greater than one)
+    if len(embedList) > 1:
+        await botMessage.add_reaction('◀')
+        await botMessage.add_reaction('▶')
+
+        def check(reaction, user):
+            return user != botMessage.author and reaction.message.id == botMessage.id
+
+        reaction = None
+        while True:
+            if str(reaction) == '◀':
+                if currentEmbed > 0:
+                    currentEmbed -= 1
+                    await botMessage.edit(embed = embedList[currentEmbed])
+                elif currentEmbed == 0:
+                    currentEmbed = len(embedList) - 1
+                    await botMessage.edit(embed = embedList[currentEmbed])
+            elif str(reaction) == '▶':
+                if currentEmbed < len(embedList) - 1:
+                    currentEmbed += 1
+                    await botMessage.edit(embed = embedList[currentEmbed])
+                elif currentEmbed == len(embedList) - 1:
+                    currentEmbed = 0
+                    await botMessage.edit(embed = embedList[currentEmbed])
+            try:
+                reaction, user = await bot.wait_for('reaction_add', timeout = 30.0, check = check)
+                await botMessage.remove_reaction(reaction, user)
+            except:
+                break
+            
+        await botMessage.clear_reactions()
 
 
 
