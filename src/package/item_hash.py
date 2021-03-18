@@ -8,6 +8,7 @@ EMPTY_TABLE = -3
 ITEMS_HASH_SIZE = 8192
 TABLES_HASH_SIZE = 128
 NPC_HASH_SIZE = 1024
+SET_HASH_SIZE = 256
 
 class hashTable:
     def __init__(self, tableSize, stringDictIndex, caseSensitive="no"):
@@ -76,7 +77,7 @@ class hashTable:
                     nextIndex = self.__rehashFunction(hashIndex, rehashCounter)
                 if self.data[nextIndex] == None:
                     return NOT_FOUND
-                elif self.data[nextIndex][self.dictIndex] == lowerString:
+                elif self.data[nextIndex][self.dictIndex].lower() == lowerString:
                     return self.data[nextIndex][dictIndexToReturn]
         else:
             return NOT_FOUND

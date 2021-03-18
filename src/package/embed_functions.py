@@ -5,13 +5,13 @@ from discord.ext import commands
 from .json_labels import *
 from .bot_config import *
 
-def embedInsertField(embedPage, dictValue, dictLabel, inline=True):
+def embedInsertField(embedPage, dictValue, dictLabel, inline=False):
     embedPage.add_field(name=dictLabel, value=dictValue, inline=inline)
 
-def embedInsertRarityField(embedPage, rarityID, rarityList):
+def embedInsertRarityField(embedPage, rarityID, rarityList, inline=True):
     for rarityInstance in rarityList:
         if rarityInstance[LABEL_RARITY_ID] == rarityID:
-            embedInsertField(embedPage, rarityInstance[LABEL_RARITY_TIER], LABEL_RARITY_TIER, inline=True)
+            embedInsertField(embedPage, rarityInstance[LABEL_RARITY_TIER], LABEL_RARITY_TIER, inline=inline)
             return
 
 # Builds the recipe's panel UI inside a discord embed class

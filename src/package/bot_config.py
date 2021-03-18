@@ -4,6 +4,7 @@ from .item_hash import *
 
 ARG_NOT_FOUND = -1
 ITEM_NOT_FOUND = -2
+SET_NOT_FOUND = -3
 
 botDescription = 'A terraria bot.'
 botPrefix = 't.'
@@ -23,17 +24,20 @@ commandList = {
     botPrefix + "help": "Show this dialog",
     botPrefix + "craft *Item Name*": "Show all recipes for an item",
     botPrefix + "list *Something to Search*": "Find all items that contains the input word",
-    botPrefix + "item *Item Name*": "Show informations about an item"
+    botPrefix + "item *Item Name*": "Show informations about an item",
+    botPrefix + "set *Set Name*": "Show informations about a set"
 }
 
 pageSize = 12
 reactionTimeOut = 30.0
 
+#BotToken = "MjQ2NTExOTcxMDY5ODUzNjk3.WCVcKQ.quxR1uO0TUb6UQPhvLYzqoApHBI"
+BotToken = "Nzk2MDY1OTI0NzU1MDk1NTg0.X_SgKg.8UNAsVGPDnbS2nMc40LrpuoepTI"
 
-def loadDependencies(itemList):
+def loadDependencies(jsonList, hashSize=ITEMS_HASH_SIZE, label=LABEL_NAME):
     itemFilePath = GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT
-    itemHash = hashTable(ITEMS_HASH_SIZE, LABEL_NAME)
-    itemHash = initializeHashTable(itemHash, itemList)
+    itemHash = hashTable(hashSize, label)
+    itemHash = initializeHashTable(itemHash, jsonList)
 
     return itemHash
 
