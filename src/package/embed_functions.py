@@ -5,13 +5,23 @@ from discord.ext import commands
 from .json_labels import *
 from .bot_config import *
 
+def getRarityEmoji(rarityTier):
+    emojiFilePath = EMOJI_DIR + EMOJI_NAME_FILE + JSON_EXT
+    emojiList = LoadJSONFile(emojiFilePath)
+    emojiName = emojiPrefix + rarityTier.replace(" ", "_").lower()
+    if emojiName in emojiList.keys():
+        return "<:" + emojiName + ":" + str(emojiList[emojiName]) + ">"
+    else:
+        return rarityTier
+
 def embedInsertField(embedPage, dictValue, dictLabel, inline=False):
     embedPage.add_field(name=dictLabel, value=dictValue, inline=inline)
 
 def embedInsertRarityField(embedPage, rarityID, rarityList, inline=True):
     for rarityInstance in rarityList:
         if rarityInstance[LABEL_RARITY_ID] == rarityID:
-            embedInsertField(embedPage, rarityInstance[LABEL_RARITY_TIER], LABEL_RARITY_TIER, inline=inline)
+            #embedInsertField(embedPage, rarityInstance[LABEL_RARITY_TIER], LABEL_RARITY_TIER, inline=inline)
+            embedInsertField(embedPage, getRarityEmoji(rarityInstance[LABEL_RARITY_TIER]), LABEL_RARITY_TIER, inline=inline)
             return
 
 # Builds the recipe's panel UI inside a discord embed class

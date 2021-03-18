@@ -18,7 +18,7 @@ itemFileManager = {
     "Food": FOOD_NAME_FILE,
     "Furniture": FURNITURE_NAME_FILE,
     "Gem": GEM_NAME_FILE,
-    "Grab Bag": GRAB_BAG_NAME_FILE,
+    "Grab bag": GRAB_BAG_NAME_FILE,
     "Hook": HOOK_NAME_FILE,
     "Key": KEY_NAME_FILE,
     "Light pet": LIGHT_PET_NAME_FILE,

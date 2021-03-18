@@ -10,8 +10,6 @@ botDescription = 'A terraria bot.'
 botPrefix = 't.'
 
 #Thumbnail for UI output commands
-craftThumbNail = 'https://art.pixilart.com/7b7bd37bb742cd4.png'
-listThumbNail = 'https://cdn2.iconfinder.com/data/icons/font-awesome/1792/search-512.png'
 helpThumbNail = 'https://img2.gratispng.com/20180326/ytq/kisspng-question-mark-clip-art-competition-5ab8be3d0288c7.3002224515220567650104.jpg'
 
 #Color for UI output commands
@@ -33,6 +31,8 @@ reactionTimeOut = 30.0
 
 #BotToken = "MjQ2NTExOTcxMDY5ODUzNjk3.WCVcKQ.quxR1uO0TUb6UQPhvLYzqoApHBI"
 BotToken = "Nzk2MDY1OTI0NzU1MDk1NTg0.X_SgKg.8UNAsVGPDnbS2nMc40LrpuoepTI"
+
+emojiPrefix = "t_"
 
 def loadDependencies(jsonList, hashSize=ITEMS_HASH_SIZE, label=LABEL_NAME):
     itemFilePath = GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT

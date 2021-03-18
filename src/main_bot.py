@@ -1,4 +1,5 @@
 from os import chdir
+import os
 from platform import system
 if system() == "Linux":
     chdir("../")
@@ -13,6 +14,7 @@ from package.search import *
 from package.utility_dictionaries import *
 from package.utility_functions import *
 from package.embed_functions import *
+from package.permissions import *
 
 bot = commands.Bot(command_prefix=botPrefix, description=botDescription, help_command=None)
 itemList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT)
@@ -182,7 +184,6 @@ async def list(ctx, *args):
     if len(pageList) > 1:
         await embedSetReactions(bot, botMessage, pageList)
 
-# Probably will be removed
 # Shows crafting information
 @bot.command()
 async def craft(ctx, *args):
@@ -213,17 +214,18 @@ async def craft(ctx, *args):
     itemRecipes = itemDict[LABEL_SOURCE][SOURCE_RECIPES]
     for craftingRecipeIndex in range(len(itemRecipes)):
         ingredients = recipesList[int(itemRecipes[craftingRecipeIndex])-1][RECIPE_IDENTITY]
+        resultQuantity = recipesList[int(itemRecipes[craftingRecipeIndex])-1][RECIPE_RESULT_QUANTITY]
         tableId = int(recipesList[int(itemRecipes[craftingRecipeIndex])-1][RECIPE_TABLE])
         tableName = tablesList[tableId-1][LABEL_NAME]
-        outputDescription = "Table - {}:".format(tableName)
+        outputDescription = "Made in {} using:".format(tableName)
         outputMessage = ""
 
         #Get ingredients infos
         for ingredientIndex in range(len(ingredients)):
             ingredientId = int(ingredients[ingredientIndex][INGREDIENT_NAME])
             ingredientQuantity = ingredients[ingredientIndex][INGREDIENT_QUANTITY]
-            outputMessage += ingredientQuantity + " " + itemList[ingredientId-1][LABEL_NAME] + "\n"
-
+            outputMessage += "{} ({})\n".format(itemList[ingredientId-1][LABEL_NAME], ingredientQuantity)
+        outputMessage += "Producing {} units.".format(resultQuantity)
         embedInsertField(embedPage, outputMessage, outputDescription, inline=False)
 
     #Send Message
@@ -271,5 +273,73 @@ async def set(ctx, *args):
     #Send Message
     #await ctx.send(file=embedImage, embed=embedPage)
     await ctx.send(embed=embedPage)
+
+# This functions works when it wants.
+# Add emojis to bot server
+@bot.command()
+async def add_emojis(ctx, *args):
+
+    if ctx.author == bot.user or not str(ctx.author.id) in ADMIN_LIST:
+        await ctx.send("Permission Denied.")
+        return
+    
+    await ctx.send("Starting adding emojis. This may take a few moments...")
+    emojiFilePath = EMOJI_DIR + EMOJI_NAME_FILE + JSON_EXT
+    emojiList = {}
+    emojiCount = 0
+    rarityFilePath = GLOBAL_JSON_PATH + DIR_ID_REFERENCES + IMAGE_DIR_RARITY
+    for filename in os.listdir(rarityFilePath):
+        with open(rarityFilePath + filename, "rb") as image:
+            emojiFileName, emojiFileFormat = os.path.splitext(filename)
+            emojiName = emojiPrefix + emojiFileName.lower()
+            if emojiFileFormat != DYNAMIC_IMAGE_EXT:
+                f = image.read()
+                b = bytearray(f)
+                guildEmoji = getGuildEmoji(emojiName, ctx.guild.emojis)
+                if guildEmoji == EMOJI_NOT_FOUND:
+                    print("Emoji {} is NOT!!!! on server {}".format(emojiName, ctx.guild))
+                    emoji = await ctx.guild.create_custom_emoji(image=b, name=emojiName)
+                    emojiList[emojiName] = emoji.id
+                    emojiCount += 1     
+                else:
+                    print("Emoji {} is already on server {}".format(emojiName, ctx.guild))
+                    emojiList[emojiName] = emoji.id
+                    
+    
+    SaveJSONFile(emojiFilePath, emojiList)
+    await ctx.send("Done adding emojis. A total of {} emojis were added.".format(emojiCount))
+
+# Delete emojis from bot server
+@bot.command()
+async def remove_emojis(ctx, *args):
+
+    if ctx.author == bot.user or not str(ctx.author.id) in ADMIN_LIST:
+        await ctx.send("Permission Denied.")
+        return
+    
+    await ctx.send("Starting removing server emojis. This may take a few moments...")
+    emojiFilePath = EMOJI_DIR + EMOJI_NAME_FILE + JSON_EXT
+    emojiList = LoadJSONFile(emojiFilePath)
+    emojiCount = 0
+    rarityFilePath = GLOBAL_JSON_PATH + DIR_ID_REFERENCES + IMAGE_DIR_RARITY
+    for filename in os.listdir(rarityFilePath):
+        with open(rarityFilePath + filename, "rb") as image:
+            emojiFileName, emojiFileFormat = os.path.splitext(filename)
+            emojiName = emojiPrefix + emojiFileName.lower()
+            if emojiFileFormat != DYNAMIC_IMAGE_EXT:
+                f = image.read()
+                b = bytearray(f)
+                guildEmoji = getGuildEmoji(emojiName, ctx.guild.emojis)
+                if guildEmoji == EMOJI_NOT_FOUND:
+                    print("Emoji {} not found on server {}".format(emojiName, ctx.guild))
+                else:
+                    print("Emoji {} found on server {}".format(emojiName, ctx.guild))
+                    await guildEmoji.delete()
+                    if emojiName in emojiList.keys():
+                        emojiList.pop(emojiName)
+                    emojiCount += 1     
+    
+    SaveJSONFile(emojiFilePath, emojiList)
+    await ctx.send("Done removing emojis. A total of {} emojis were removed.".format(emojiCount))
 
 bot.run(BotToken)
