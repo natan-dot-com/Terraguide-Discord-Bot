@@ -57,7 +57,7 @@ async def item(ctx, *args):
         titleMessage = "Couldn't find item '" + arg + "' in the data base."
         errorEmbed = discord.Embed(title=titleMessage, color=0xFFFFFF)
 
-        notFoundTitle =  "Didn't you mean..."
+        notFoundTitle =  "Didn't you mean...?"
         notFoundMessage = ""
         similarStrings = getSimilarStrings(arg, itemList)
         if similarStrings:
@@ -165,7 +165,8 @@ async def item(ctx, *args):
                 createBagDropPanel(npcList, bagList, grabBagDropList, itemDict[LABEL_SOURCE][SOURCE_GRAB_BAG], newEmbed, itemName)
 
             elif existentCategory == SOURCE_OTHER:
-                continue
+                fieldTitle = "General availability"
+                embedInsertField(mainPage, itemDict[LABEL_SOURCE][SOURCE_OTHER], fieldTitle, inline=False)
 
             if newEmbed:
                 newEmbed.set_thumbnail(url="attachment://image.png")
