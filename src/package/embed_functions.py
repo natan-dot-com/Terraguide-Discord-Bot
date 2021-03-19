@@ -24,17 +24,26 @@ def createRecipesPanel(itemList, tableList, recipesList, recipeDict, recipeEmbed
         for ingredientInstance in recipeInfo[RECIPE_IDENTITY]:
             fieldMessage += itemList[int(ingredientInstance[INGREDIENT_NAME])-1][LABEL_NAME] + " (" +\
             ingredientInstance[INGREDIENT_QUANTITY] + ")\n"
-        fieldMessage += "Producing " + recipeInfo[RECIPE_RESULT_QUANTITY] + " units."
+        fieldMessage += "Producing " + recipeInfo[RECIPE_RESULT_QUANTITY] + " unit(s)."
         embedInsertField(recipeEmbed, fieldMessage, fieldName, inline=False)
 
 
-def createSellingPanel(itemList, npcList, sellingList, npcDict, newEmbed, itemName):
+def createSellingPanel(npcList, sellingList, npcDict, newEmbed, itemName):
     for sellingInstance in npcDict:
         sellingInstance = int(sellingInstance)
         sellingInfo = sellingList[sellingInstance-1]
         fieldName = "Item '" + itemName + "' can be bought from:"
         fieldMessage = npcList[int(sellingInfo[NPC_ID])-1][LABEL_NAME] + ", for " + sellingInfo[NPC_ITEM_COST] +\
             " under the condition: " + sellingInfo[NPC_SELL_CONDITION].strip() + "."
+        embedInsertField(newEmbed, fieldMessage, fieldName, inline=False)
+
+def createBagDropPanel(npcList, bagList, bagDropList, bagDropDict, newEmbed, itemName):
+    for bagDropInstance in bagDropDict:
+        bagDropInstance = int(bagDropInstance)
+        bagDropInfo = bagDropList[bagDropInstance-1]
+        fieldName = "Item '" + itemName + "' can be dropped from:"
+        fieldMessage = bagList[int(bagDropInfo[BAG_ID])-1][LABEL_NAME] + ", with probability of " + bagDropInfo[BAG_DROP_PROBABILITY] +\
+            ".\n It commonly drops " + bagDropInfo[BAG_DROP_QUANTITY] + " instance(s)."
         embedInsertField(newEmbed, fieldMessage, fieldName, inline=False)
 
 def embedSetFooter(embedPage, embedText):
