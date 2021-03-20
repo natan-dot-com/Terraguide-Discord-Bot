@@ -19,3 +19,9 @@ def __binarySearching(searchList, searchValue, firstElement, lastElement):
 def binarySearch(searchList, searchValue):
     return __binarySearching(searchList, searchValue, 0, len(searchList))
 
+def linearSearch(searchList, searchIndex, searchValue):
+    for searchItem in searchList:
+        if searchItem[searchIndex].lower() == searchValue:
+            return searchItem
+    return NOT_FOUND
+

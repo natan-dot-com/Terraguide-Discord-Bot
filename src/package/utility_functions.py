@@ -10,7 +10,7 @@ def pickDominantColor(imageFilename):
     hexcode = "0x" + rgb2hex(dominant_color[0], dominant_color[1], dominant_color[2])[1::]
     return int(hexcode, 16)
 
-def getGuildEmoji(emojiName, guildEmojis):
+def getGuildEmojiByName(emojiName, guildEmojis):
     for guildEmoji in guildEmojis:
         if emojiName == str(guildEmoji.name):
             return guildEmoji

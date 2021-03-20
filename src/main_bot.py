@@ -4,6 +4,7 @@ from platform import system
 if system() == "Linux":
     chdir("../")
 
+import math
 import discord
 import re
 from discord.ext import commands
@@ -18,12 +19,14 @@ from package.permissions import *
 from package.string_similarity import getSimilarStrings
 
 bot = commands.Bot(command_prefix=botPrefix, description=botDescription, help_command=None)
+
 itemList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT)
 tableList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + TABLE_NAME_FILE + JSON_EXT)
 rarityList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + RARITY_NAME_FILE + JSON_EXT)
 recipesList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + RECIPE_NAME_FILE + JSON_EXT)
 tablesList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + TABLE_NAME_FILE + JSON_EXT)
 setList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + SET_NAME_FILE + JSON_EXT)
+
 itemHash = loadDependencies(itemList)
 setHash = loadDependencies(setList, SET_HASH_SIZE, LABEL_SET_NAME)
 
@@ -322,6 +325,58 @@ async def set(ctx, *args):
     #await ctx.send(file=embedImage, embed=embedPage)
     await ctx.send(embed=embedPage)
 
+@bot.command()
+async def rarity(ctx, *args):
+
+    if ctx.author == bot.user:
+        return
+    print("User {} has requested rarity information.".format(str(ctx.author)))
+
+
+    # If the user didn't type the rarity then the command shows every rarity tier information
+    if not args:
+        rarityPage = 0
+        rarityModuleCounter = 0
+        rarityPageItemsCount = 4
+        rarityTotalPages = math.ceil(len(rarityList) / rarityPageItemsCount)
+        rarityTitle = "Information about all Terraria Rarity Tiers:"
+        embedPageList = []
+        for rarityInstance in rarityList:
+            if rarityModuleCounter == rarityPageItemsCount:
+                rarityModuleCounter = 0
+            if rarityModuleCounter == 0:
+                rarityPage += 1
+                embedPage = discord.Embed(color=0x0a850e, title=rarityTitle)
+                rarityPagealert = pageAlert.format(rarityPage, rarityTotalPages)
+                embedPage.set_footer(text =rarityPagealert, )
+                embedPageList.append(embedPage)
+
+            rarityModuleCounter += 1
+            rarityLabel = rarityInstance[LABEL_RARITY_TIER]
+            rarityValue = rarityInstance[LABEL_RARITY_DESC]
+            embedInsertField(embedPageList[len(embedPageList)-1], rarityValue, rarityLabel, inline=False)
+
+        # Send Message
+        botMessage = await ctx.send(embed=embedPageList[0])
+
+        # Reactions to switch between pages
+        await embedSetReactions(bot, botMessage, embedPageList)
+    else:
+        arg = " ".join(args)
+        rarityDict = linearSearch(rarityList, LABEL_RARITY_TIER, arg.lower())
+        if rarityDict == NOT_FOUND:
+            await ctx.send("Rarity Tier {} was not found in database.".format(arg))
+            return
+
+        rarityTitle = "Information about {} Rarity:".format(arg)
+        embedPage = discord.Embed(color=0x0a850e, title=rarityTitle)
+        rarityLabel = rarityDict[LABEL_RARITY_TIER]
+        rarityValue = rarityDict[LABEL_RARITY_DESC]
+        embedInsertField(embedPage, rarityValue, rarityLabel, inline=False)
+
+        #Send Message
+        await ctx.send(embed=embedPage)
+
 # This functions works when it wants.
 # Useless now but i will maintain it for future code reference
 # Add emojis to bot server
@@ -344,7 +399,7 @@ async def add_emojis(ctx, *args):
             if emojiFileFormat != DYNAMIC_IMAGE_EXT:
                 f = image.read()
                 b = bytearray(f)
-                guildEmoji = getGuildEmoji(emojiName, ctx.guild.emojis)
+                guildEmoji = getGuildEmojiByName(emojiName, ctx.guild.emojis)
                 if guildEmoji == EMOJI_NOT_FOUND:
                     print("Emoji {} is NOT!!!! on server {}".format(emojiName, ctx.guild))
                     emoji = await ctx.guild.create_custom_emoji(image=b, name=emojiName)
@@ -378,7 +433,7 @@ async def remove_emojis(ctx, *args):
             if emojiFileFormat != DYNAMIC_IMAGE_EXT:
                 f = image.read()
                 b = bytearray(f)
-                guildEmoji = getGuildEmoji(emojiName, ctx.guild.emojis)
+                guildEmoji = getGuildEmojiByName(emojiName, ctx.guild.emojis)
                 if guildEmoji == EMOJI_NOT_FOUND:
                     print("Emoji {} not found on server {}".format(emojiName, ctx.guild))
                 else:
