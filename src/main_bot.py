@@ -15,6 +15,7 @@ from package.utility_dictionaries import *
 from package.utility_functions import *
 from package.embed_functions import *
 from package.permissions import *
+from package.string_similarity import getSimilarStrings
 
 bot = commands.Bot(command_prefix=botPrefix, description=botDescription, help_command=None)
 itemList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT)
@@ -55,7 +56,20 @@ async def item(ctx, *args):
     print("User {} has requested a craft recipe for {}.".format(str(ctx.author), arg))
     itemID = itemHash.search(arg, LABEL_ID)
     if itemID == NOT_FOUND:
-        await ctx.send("Can't find item '" + arg + "' in data base.")
+        titleMessage = "Couldn't find item '" + arg + "' in the data base."
+        errorEmbed = discord.Embed(title=titleMessage, color=0xFFFFFF)
+
+        notFoundTitle =  "Didn't you mean...?"
+        notFoundMessage = ""
+        similarStrings = getSimilarStrings(arg, itemList)
+        if similarStrings:
+            for string in similarStrings:
+                notFoundMessage += string + "\n" 
+        else:
+            notFoundMessage = "Couldn't retrieve any suggestions from data base."
+        errorEmbed.add_field(name=notFoundTitle, value=notFoundMessage)
+        await ctx.send(embed = errorEmbed)
+
         return ITEM_NOT_FOUND
 
     # Gets respective item info dictionary
@@ -77,14 +91,27 @@ async def item(ctx, *args):
     mainPage = discord.Embed(color=dominantImageColor, title="General informations about '" + itemName + "':")
     mainImage = discord.File(GLOBAL_IMAGE_PATH + imageFilename, filename="image.png")
     mainPage.set_thumbnail(url="attachment://image.png")
+
+    exceptionLabels = [
+        LABEL_ITEM_ID
+    ]
     for itemCategory in itemDict.keys():
+        if itemCategory in exceptionLabels:
+            continue
+
         if itemCategory == LABEL_SOURCE:
             hasSource = True
             break
+
+        elif itemCategory == LABEL_SET_ID:
+            embedInsertField(mainPage, setList[int(itemDict[itemCategory])-1][LABEL_SET_NAME], LABEL_SET_NAME, inline=True)
+
         elif itemCategory == LABEL_RARITY:
             embedInsertRarityField(mainPage, itemDict[itemCategory], rarityList)
+
         else:
-            embedInsertField(mainPage, itemDict[itemCategory], itemCategory)
+            embedInsertField(mainPage, itemDict[itemCategory], itemCategory, inline=True)
+
     embedList.append(mainPage)
 
     # If item has source dict (i.e. if embed will have more than one page)
@@ -96,13 +123,13 @@ async def item(ctx, *args):
             if itemDict[LABEL_SOURCE][sourceCategory]:
                 nonEmptyLists.append(sourceCategory)
 
-        pageAlert = "React to this message to switch between pages!\n"
-        mainPage.set_footer(text=pageAlert + "Page 1/" + str(1+len(nonEmptyLists)))
 
         # Source embed panels creation
         recipesList = [] 
         npcList = []
         sellingList = []
+        grabBagDropList = []
+        bagList = []
         for existentCategory in nonEmptyLists:
             newEmbed = None
 
@@ -112,10 +139,9 @@ async def item(ctx, *args):
                     recipesList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + RECIPE_NAME_FILE + JSON_EXT)
                 titleMessage = "Showing craft recipes for '" + itemName + "':"
                 newEmbed = discord.Embed(title=titleMessage, color=dominantImageColor)
-                newEmbed.set_thumbnail(url="attachment://image.png")
                 createRecipesPanel(itemList, tableList, recipesList, itemDict[LABEL_SOURCE][SOURCE_RECIPES], newEmbed)
-                newEmbed.set_footer(text="Page " + str(2+nonEmptyLists.index(existentCategory)) + "/" + str(1+len(nonEmptyLists)))
 
+            # NPC's selling offers embed panel creation
             elif existentCategory == SOURCE_NPC:
                 if not npcList:
                     npcList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + NPC_NAME_FILE + JSON_EXT)
@@ -123,13 +149,35 @@ async def item(ctx, *args):
                     sellingList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + SELLING_LIST_NAME_FILE + JSON_EXT)
                 titleMessage = "Showing selling offers for '" + itemName + "':"
                 newEmbed = discord.Embed(title=titleMessage, color=dominantImageColor)
-                newEmbed.set_thumbnail(url="attachment://image.png")
-                createSellingPanel(itemList, npcList, sellingList, itemDict[LABEL_SOURCE][SOURCE_NPC], newEmbed, itemName)
-                newEmbed.set_footer(text="Page " + str(2+nonEmptyLists.index(existentCategory)) + "/" + str(1+len(nonEmptyLists)))
+                createSellingPanel(npcList, sellingList, itemDict[LABEL_SOURCE][SOURCE_NPC], newEmbed, itemName)
 
-            else:
+            elif existentCategory == SOURCE_DROP:
                 continue
-            embedList.append(newEmbed)
+
+            # Grab bags' drops embed panel creation
+            elif existentCategory == SOURCE_GRAB_BAG:
+                if not grabBagDropList:
+                    grabBagDropList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + BAGS_DROP_NAME_FILE + JSON_EXT)
+                if not npcList:
+                    npcList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + NPC_NAME_FILE + JSON_EXT)
+                if not bagList:
+                    bagList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + BAGS_NAME_FILE + JSON_EXT)
+                titleMessage = "Showing bag drops from '" + itemName + "':"
+                newEmbed = discord.Embed(title=titleMessage, color=dominantImageColor)
+                createBagDropPanel(npcList, bagList, grabBagDropList, itemDict[LABEL_SOURCE][SOURCE_GRAB_BAG], newEmbed, itemName)
+
+            elif existentCategory == SOURCE_OTHER:
+                fieldTitle = "General availability"
+                embedInsertField(mainPage, itemDict[LABEL_SOURCE][SOURCE_OTHER], fieldTitle, inline=False)
+
+            if newEmbed:
+                newEmbed.set_thumbnail(url="attachment://image.png")
+                newEmbed.set_footer(text="Page " + str(2+nonEmptyLists.index(existentCategory)) + "/" + str(1+len(nonEmptyLists)))
+                embedList.append(newEmbed)
+
+    if len(embedList) > 1:
+        pageAlert = "React to this message to switch between pages!\n"
+        mainPage.set_footer(text=pageAlert + "Page 1/" + str(1+len(nonEmptyLists)))
 
     currentEmbed = 0
     botMessage = await ctx.send(file=mainImage, embed=embedList[currentEmbed])
@@ -275,6 +323,7 @@ async def set(ctx, *args):
     await ctx.send(embed=embedPage)
 
 # This functions works when it wants.
+# Useless now but i will maintain it for future code reference
 # Add emojis to bot server
 @bot.command()
 async def add_emojis(ctx, *args):

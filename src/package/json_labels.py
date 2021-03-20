@@ -222,9 +222,6 @@ NPC_BOSSES_NAME_FILE = "npc_boss"
 STATIC_IMAGE_EXT = ".png"
 DYNAMIC_IMAGE_EXT = ".gif"
 
-# Emoji files
-EMOJI_NAME_FILE = "emoji_id"
-
 IMAGE_DIR_BRICKS = "bricks_sprites/"
 IMAGE_DIR_GEMS = "gems_sprites/"
 IMAGE_DIR_LIGHT_PETS = "light_pets_sprites/"
@@ -234,4 +231,9 @@ IMAGE_DIR_PYLON = "pylon_sprites/"
 IMAGE_DIR_RARITY = "rarity_sprites/"
 IMAGE_DIR_NPC = "npc_sprites/"
 
+# Not used because of discord UI emoji issues
+# Emoji files
+EMOJI_NAME_FILE = "emoji_id"
+
+# Emoji dataset path
 EMOJI_DIR = "terraria_emojis/"
