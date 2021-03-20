@@ -16,7 +16,7 @@ from package.utility_dictionaries import *
 from package.utility_functions import *
 from package.embed_functions import *
 from package.permissions import *
-from package.string_similarity import getSimilarStrings
+from package.string_similarity import *
 
 bot = commands.Bot(command_prefix=botPrefix, description=botDescription, help_command=None)
 
@@ -365,10 +365,12 @@ async def rarity(ctx, *args):
         arg = " ".join(args)
         rarityDict = linearSearch(rarityList, LABEL_RARITY_TIER, arg.lower())
         if rarityDict == NOT_FOUND:
-            await ctx.send("Rarity Tier {} was not found in database.".format(arg))
+            rarityTitle = "Rarity Tier '{}' was not found in database.".format(arg)
+            embedMessage = getSimilarStringEmbed(rarityTitle, arg.lower(), rarityList, label=LABEL_RARITY_TIER)
+            await ctx.send(embed=embedMessage)
             return
 
-        rarityTitle = "Information about {} Rarity:".format(arg)
+        rarityTitle = "Information about '{}' Rarity:".format(arg)
         embedPage = discord.Embed(color=0x0a850e, title=rarityTitle)
         rarityLabel = rarityDict[LABEL_RARITY_TIER]
         rarityValue = rarityDict[LABEL_RARITY_DESC]

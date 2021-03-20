@@ -1,3 +1,4 @@
+import discord
 import numpy as np
 import Levenshtein as lev
 from .json_labels import LABEL_NAME
@@ -5,14 +6,14 @@ from .json_labels import LABEL_NAME
 TUPLE_RATIO_INDEX = 0
 TUPLE_STRING_INDEX = 1
 
-def getSimilarStrings(typedString, itemList, maxSamples=4):
+def getSimilarStrings(typedString, itemList, maxSamples=4, label=LABEL_NAME):
     dissimilarityList = []
 
     # Gets Levenshtein ratio from each string in itemList
     for itemInstance in itemList:
 
         # (levRatio, respectiveString) tuple
-        infoTuple = (lev.ratio(typedString.lower(), itemInstance[LABEL_NAME].lower()), itemInstance[LABEL_NAME])
+        infoTuple = (lev.ratio(typedString.lower(), itemInstance[label].lower()), itemInstance[label])
         dissimilarityList.append(infoTuple)
 
     # Sort list in descending order
@@ -31,3 +32,17 @@ def getSimilarStrings(typedString, itemList, maxSamples=4):
         else:
             break
     return similarStrings
+
+def getSimilarStringEmbed(titleMessage, inputString, itemList, label=LABEL_NAME):
+    errorEmbed = discord.Embed(title=titleMessage, color=0xFFFFFF)
+
+    notFoundTitle =  "Didn't you mean...?"
+    notFoundMessage = ""
+    similarStrings = getSimilarStrings(inputString, itemList, label=label)
+    if similarStrings:
+        for string in similarStrings:
+            notFoundMessage += string + "\n" 
+    else:
+        notFoundMessage = "Couldn't retrieve any suggestions from data base."
+    errorEmbed.add_field(name=notFoundTitle, value=notFoundMessage)
+    return errorEmbed
