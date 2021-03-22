@@ -5,6 +5,21 @@ from colormap import rgb2hex
 
 EMOJI_NOT_FOUND = -1
 
+def getCommandArguments(args):
+    commandArgumentList = []
+    commandStringInput = ""
+    if args:
+        for arg in args:
+            if arg[0] == "-":
+                commandArgumentList.append(str(args[0]))
+            else:
+                commandStringInput = " ".join(args[args.index(arg):])
+                break
+    else:
+        return [], ""
+    
+    return commandArgumentList, commandStringInput
+
 def pickDominantColor(imageFilename, imagePath=GLOBAL_IMAGE_PATH):
     dominant_color = ColorThief(imagePath + imageFilename).get_color(quality=1)
     hexcode = "0x" + rgb2hex(dominant_color[0], dominant_color[1], dominant_color[2])[1::]

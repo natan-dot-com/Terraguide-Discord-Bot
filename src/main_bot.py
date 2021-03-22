@@ -45,37 +45,41 @@ async def help(ctx):
     if ctx.author == bot.user:
         return
 
-    embed = discord.Embed(color=helpColor, title="Command List")
+    embed = discord.Embed(color=helpColor, title="Command List:")
     embed.set_thumbnail(url=helpThumbNail)
     for command, commandDescription in zip(commandList.keys(), commandList.values()):
         embedInsertField(embed, commandDescription, command, inline=False)  
+    embedInsertField(embed, argumentsDescription, argumentsLabel, inline=False)
     await ctx.send(embed=embed)
 
 @bot.command()
 async def item(ctx, *args):
 
+
+    commandArgumentList, commandStringInput = getCommandArguments(args)
     # Checks empty argument
-    arg = " ".join(args)
-    if ctx.author == bot.user or not arg:
+    #arg = " ".join(args)
+    if ctx.author == bot.user or not commandStringInput:
         return ARG_NOT_FOUND
     
     # Hash search the current item
-    print("User {} has requested a craft recipe for {}.".format(str(ctx.author), arg))
-    itemID = itemHash.search(arg, LABEL_ID)
+    print("User {} has requested a craft recipe for {}.".format(str(ctx.author), commandStringInput))
+    itemID = itemHash.search(commandStringInput, LABEL_ID)
     if itemID == NOT_FOUND:
-        titleMessage = "Couldn't find item '" + arg + "' in the data base."
+        titleMessage = "Couldn't find item '" + commandStringInput + "' in the data base."
         errorEmbed = discord.Embed(title=titleMessage, color=0xFFFFFF)
 
         notFoundTitle =  "Didn't you mean...?"
         notFoundMessage = ""
-        similarStrings = getSimilarStrings(arg, itemList)
+        similarStrings = getSimilarStrings(commandStringInput, itemList)
         if similarStrings:
             for string in similarStrings:
                 notFoundMessage += string + "\n" 
         else:
             notFoundMessage = "Couldn't retrieve any suggestions from data base."
         errorEmbed.add_field(name=notFoundTitle, value=notFoundMessage)
-        await ctx.send(embed = errorEmbed)
+        #await ctx.send(embed = errorEmbed)
+        await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
 
         return ITEM_NOT_FOUND
 
@@ -186,29 +190,31 @@ async def item(ctx, *args):
         pageAlert = "React to this message to switch between pages!\n"
         mainPage.set_footer(text=pageAlert + "Page 1/" + str(1+len(nonEmptyLists)))
 
-    currentEmbed = 0
+    '''currentEmbed = 0
     botMessage = await ctx.send(file=mainImage, embed=embedList[currentEmbed])
 
     # Page system manager (if number of pages greater than one)
     if len(embedList) > 1:
-        await embedSetReactions(bot, botMessage, embedList)
+        await embedSetReactions(bot, botMessage, embedList)'''
+    await sendMessage(ctx, bot, embedList, embedImage=mainImage, commandArgumentList=commandArgumentList)
 
 
 # Shows a list of  every item which starts with 'arg'
 @bot.command()
 async def list(ctx, *args):
 
-    arg = " ".join(args)
-    if ctx.author == bot.user or not arg:
+    commandArgumentList, commandStringInput = getCommandArguments(args)
+    #arg = " ".join(args)
+    if ctx.author == bot.user or not commandStringInput:
         return
 
-    print("User {} has requested a craft recipe for {}.".format(str(ctx.author), arg))
+    print("User {} has requested a craft recipe for {}.".format(str(ctx.author), commandStringInput))
     matchCounter = 0
     matchList = [[]]
 
     #Regex usage to find every match of the input
     for itemInstance in itemList:
-        if re.search("^" + arg + "+", itemInstance[LABEL_NAME], re.IGNORECASE): 
+        if re.search("^" + commandStringInput + "+", itemInstance[LABEL_NAME], re.IGNORECASE): 
             if len(matchList[len(matchList)-1]) >= pageSize:
                 matchList.append([])
             matchList[len(matchList)-1].append(itemInstance[LABEL_NAME])
@@ -216,7 +222,7 @@ async def list(ctx, *args):
     for matchInstance in matchList:
         matchCounter += len(matchInstance)
     if matchCounter == 0:
-        await ctx.send("No items were found containing " + arg)
+        await ctx.send("No items were found containing " + commandStringInput)
         return NOT_FOUND
 
     listDescription = str(matchCounter) + " occurrencies found:\n"
@@ -227,31 +233,33 @@ async def list(ctx, *args):
         for subInstance in matchInstance:
             listMessage += subInstance + "\n"
             
-        newPage = discord.Embed(title ="Search Info about " + arg, colour=discord.Colour.green())
+        newPage = discord.Embed(title ="Search Info about " + commandStringInput, colour=discord.Colour.green())
         embedInsertField(newPage, listMessage, listDescription, inline=False)
         embedSetFooter(newPage, "Page " + str(matchList.index(matchInstance) + 1) + "/" + str(len(matchList)))
         pageList.append(newPage)
 
-    #Send Message
+    '''#Send Message
     botMessage = await ctx.send(embed = pageList[0])
 
     # Changing page system via Discord reactions
     if len(pageList) > 1:
-        await embedSetReactions(bot, botMessage, pageList)
+        await embedSetReactions(bot, botMessage, pageList)'''
+    await sendMessage(ctx, bot, pageList, commandArgumentList=commandArgumentList)
 
 # Shows crafting information
 @bot.command()
 async def craft(ctx, *args):
 
-    arg = " ".join(args)
-    if ctx.author == bot.user or not arg:
+    commandArgumentList, commandStringInput = getCommandArguments(args)
+    #arg = " ".join(args)
+    if ctx.author == bot.user or not commandStringInput:
         return
-    print("User {} has requested a craft recipe for {}.".format(str(ctx.author), arg))
+    print("User {} has requested a craft recipe for {}.".format(str(ctx.author), commandStringInput))
 
     #Find input in hash table
-    itemID = itemHash.search(arg, LABEL_ID)
+    itemID = itemHash.search(commandStringInput, LABEL_ID)
     if itemID == -1:
-        await ctx.send("Can't find item '{}' in data base.".format(arg))
+        await ctx.send("Can't find item '{}' in data base.".format(commandStringInput))
         return ITEM_NOT_FOUND
 
     itemType = itemList[int(itemID)-1][LABEL_TYPE]
@@ -284,21 +292,23 @@ async def craft(ctx, *args):
         embedInsertField(embedPage, outputMessage, outputDescription, inline=False)
 
     #Send Message
-    await ctx.send(file=embedImage, embed=embedPage)
+    #await ctx.send(file=embedImage, embed=embedPage)
+    await sendMessage(ctx, bot, embedPage, embedImage=embedImage, commandArgumentList=commandArgumentList)
 
 # Shows set information
 @bot.command()
 async def set(ctx, *args):
 
-    arg = " ".join(args)
-    if ctx.author == bot.user or not arg:
+    commandArgumentList, commandStringInput = getCommandArguments(args)
+    #arg = " ".join(args)
+    if ctx.author == bot.user or not commandStringInput:
         return
-    print("User {} has requested set information about {}.".format(str(ctx.author), arg))
+    print("User {} has requested set information about {}.".format(str(ctx.author), commandStringInput))
 
     #Find input in hash table
-    setID = setHash.search(arg, LABEL_ID)
+    setID = setHash.search(commandStringInput, LABEL_ID)
     if setID == -1:
-        await ctx.send("Can't find set '{}' in data base.".format(arg))
+        await ctx.send("Can't find set '{}' in data base.".format(commandStringInput))
         return SET_NOT_FOUND
 
     setDict = setList[int(setID)-1]
@@ -327,18 +337,20 @@ async def set(ctx, *args):
             embedInsertField(embedPage, setDict[setCategory].replace(" / ", "\n"), setCategory, inline=False)
     #Send Message
     #await ctx.send(file=embedImage, embed=embedPage)
-    await ctx.send(embed=embedPage)
+    await sendMessage(ctx, bot, embedPage, commandArgumentList=commandArgumentList)
 
 @bot.command()
 async def rarity(ctx, *args):
 
     if ctx.author == bot.user:
         return
-    print("User {} has requested rarity information.".format(str(ctx.author)))
 
+    commandArgumentList, commandStringInput = getCommandArguments(args)
 
     # If the user didn't type the rarity then the command shows every rarity tier information
-    if not args:
+    if not commandStringInput:
+        print("User {} has requested rarity information.".format(str(ctx.author)))
+
         rarityPage = 0
         rarityModuleCounter = 0
         rarityPageItemsCount = 4
@@ -361,20 +373,19 @@ async def rarity(ctx, *args):
             embedInsertField(embedPageList[len(embedPageList)-1], rarityValue, rarityLabel, inline=False)
 
         # Send Message
-        botMessage = await ctx.send(embed=embedPageList[0])
-
-        # Reactions to switch between pages
-        await embedSetReactions(bot, botMessage, embedPageList)
+        await sendMessage(ctx, bot, embedPageList, commandArgumentList=commandArgumentList)
     else:
-        arg = " ".join(args)
-        rarityDict = linearSearch(rarityList, LABEL_RARITY_TIER, arg.lower())
+        commandString = " ".join(commandStringInput)
+        print("User '{}' has requested rarity information about '{}'.".format(str(ctx.author, commandString)))
+
+        rarityDict = linearSearch(rarityList, LABEL_RARITY_TIER, commandString.lower())
         if rarityDict == NOT_FOUND:
-            rarityTitle = "Rarity Tier '{}' was not found in database.".format(arg)
-            embedMessage = getSimilarStringEmbed(rarityTitle, arg.lower(), rarityList, label=LABEL_RARITY_TIER)
-            await ctx.send(embed=embedMessage)
+            rarityTitle = "Rarity Tier '{}' was not found in database.".format(commandString)
+            embedMessage = getSimilarStringEmbed(rarityTitle, commandString.lower(), rarityList, label=LABEL_RARITY_TIER)
+            await sendMessage(ctx, bot, embedMessage, commandArgumentList=commandArgumentList)
             return
 
-        rarityTitle = "Information about '{}' Rarity:".format(arg)
+        rarityTitle = "Information about '{}' Rarity:".format(commandString)
         rarityImagePath = GLOBAL_JSON_PATH + DIR_ID_REFERENCES + IMAGE_DIR_RARITY
         imageFileName = rarityDict[LABEL_RARITY_TIER].replace(" ", "_").lower() + STATIC_IMAGE_EXT
         embedImage = discord.File(rarityImagePath + imageFileName, filename="image.png")
@@ -387,7 +398,7 @@ async def rarity(ctx, *args):
         embedInsertField(embedPage, rarityValue, rarityLabel, inline=False)
 
         #Send Message
-        await ctx.send(file=embedImage, embed=embedPage)
+        await sendMessage(ctx, bot, embedPage, commandArgumentList=commandArgumentList, embedImage=embedImage)
 
 @bot.command()
 async def npc(ctx, *args):

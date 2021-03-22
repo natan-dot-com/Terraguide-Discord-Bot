@@ -19,6 +19,9 @@ craftColor = 0x0a850e
 listColor = 0xe40101
 helpColor = 0x000000
 
+#Emojis
+whiteCheckMark = "✅"
+
 # Discord bot commands
 helpCommand = botPrefix + "help"
 craftCommand = botPrefix + "craft *Item Name*"
@@ -35,6 +38,16 @@ commandList = {
     itemCommand: "Show informations about an item",
     setCommand: "Show informations about a set",
     rarityCommand: "Show informations about a Rarity Tier. If no parameters were given to this command, it shows all rarity tiers information"
+}
+
+argumentsLabel = "Command Arguments:"
+argumentsDescription = "**-p**: Sends message to user DM"
+
+# Commands Arguments
+sendDM = "-p"
+
+argumentListDescription = {
+    sendDM: "Send a private message to de user"
 }
 
 pageSize = 12

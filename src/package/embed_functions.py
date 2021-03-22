@@ -91,3 +91,31 @@ async def embedSetReactions(bot, botMessage, pageList):
             break
 
     await botMessage.clear_reactions()
+
+# Function to send message acording to parameters
+# If a list of embed is passed, it will add reactions to navigate between pages
+# If command arguments are passed, it will treat the message acording to the arguments
+async def sendMessage(ctx, bot, embed, commandArgumentList=[], embedImage=None):
+
+    # Message will be sent to DM
+    if sendDM in commandArgumentList:
+        if type(embed) is list:
+            for embedInstance in embed:
+                if embedImage:
+                    if embedImage.fp.closed:
+                        embedImage = discord.File(embedImage.fp.raw.name , filename=embedImage.filename)
+                embedInstance.set_footer()
+                await ctx.author.send(file=embedImage, embed=embedInstance)        
+        else:
+            await ctx.author.send(file=embedImage, embed=embed)
+        await ctx.message.add_reaction(whiteCheckMark)
+
+    # Message will be sent normaly on server
+    else:
+        if type(embed) is list:
+            botMessage = await ctx.send(file=embedImage, embed=embed[0])
+            # Reactions to switch between pages
+            await embedSetReactions(bot, botMessage, embed)
+        else:
+            await ctx.send(file=embedImage, embed=embed)
+    
