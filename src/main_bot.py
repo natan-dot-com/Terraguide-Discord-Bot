@@ -375,13 +375,19 @@ async def rarity(ctx, *args):
             return
 
         rarityTitle = "Information about '{}' Rarity:".format(arg)
-        embedPage = discord.Embed(color=0x0a850e, title=rarityTitle)
+        rarityImagePath = GLOBAL_JSON_PATH + DIR_ID_REFERENCES + IMAGE_DIR_RARITY
+        imageFileName = rarityDict[LABEL_RARITY_TIER].replace(" ", "_").lower() + STATIC_IMAGE_EXT
+        embedImage = discord.File(rarityImagePath + imageFileName, filename="image.png")
+        dominantImageColor = pickDominantColor(imageFileName, imagePath=rarityImagePath)
+        embedPage = discord.Embed(color=dominantImageColor, title=rarityTitle)
+        embedPage.set_thumbnail(url="attachment://image.png")
+
         rarityLabel = rarityDict[LABEL_RARITY_TIER]
         rarityValue = rarityDict[LABEL_RARITY_DESC]
         embedInsertField(embedPage, rarityValue, rarityLabel, inline=False)
 
         #Send Message
-        await ctx.send(embed=embedPage)
+        await ctx.send(file=embedImage, embed=embedPage)
 
 @bot.command()
 async def npc(ctx, *args):
