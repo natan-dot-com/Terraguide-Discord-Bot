@@ -26,9 +26,13 @@ rarityList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + RARITY_NAME_FIL
 recipesList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + RECIPE_NAME_FILE + JSON_EXT)
 tablesList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + TABLE_NAME_FILE + JSON_EXT)
 setList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + SET_NAME_FILE + JSON_EXT)
+npcTownList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_NPC_DATA + NPC_TOWN_NAME_FILE + JSON_EXT)
+npcList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + NPC_NAME_FILE + JSON_EXT)
+sellingList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + SELLING_LIST_NAME_FILE + JSON_EXT)
 
 itemHash = loadDependencies(itemList)
 setHash = loadDependencies(setList, SET_HASH_SIZE, LABEL_SET_NAME)
+npcHash = loadDependencies(npcList, NPC_HASH_SIZE, LABEL_NAME)
 
 @bot.event
 async def on_ready():
@@ -348,7 +352,7 @@ async def rarity(ctx, *args):
                 rarityPage += 1
                 embedPage = discord.Embed(color=0x0a850e, title=rarityTitle)
                 rarityPagealert = pageAlert.format(rarityPage, rarityTotalPages)
-                embedPage.set_footer(text =rarityPagealert, )
+                embedPage.set_footer(text=rarityPagealert)
                 embedPageList.append(embedPage)
 
             rarityModuleCounter += 1
@@ -378,6 +382,109 @@ async def rarity(ctx, *args):
 
         #Send Message
         await ctx.send(embed=embedPage)
+
+@bot.command()
+async def npc(ctx, *args):
+
+    if ctx.author == bot.user:
+        return
+    elif not args:
+        await ctx.send("{} you must type the name of npc you want to find information about.".format(ctx.author))
+        
+    arg = " ".join(args)
+    print("User {} has requested npc information about {}.".format(str(ctx.author), arg))
+
+    #Find input in hash table
+    npcID = npcHash.search(arg, NPC_ID)
+    if npcID == -1:
+        npcTitle = "Can't find npc '{}' in data base.".format(arg)
+        embedMessage = getSimilarStringEmbed(npcTitle, arg.lower(), npcList, label=LABEL_NAME)
+        await ctx.send(embed=embedMessage)
+        return SET_NOT_FOUND
+    #Will be supported after enemy npcs drops update on dataset
+    elif npcList[int(npcID)-1][LABEL_TYPE] != "Town NPC":
+        await ctx.send("Npc type not supported yet.")
+        return
+
+    npcPageList = []
+    npcDict = npcList[int(npcID)-1]
+    npcName = npcDict[LABEL_NAME]
+
+    # Temporary linear search until we improve our npc database
+    npcTownDict = linearSearch(npcTownList, NPC_ID, str(npcID))
+    if npcTownDict == NOT_FOUND:
+        print("NPC Town not found")
+        return NOT_FOUND
+    if str(npcTownDict[NPC_ID]) != str(npcDict[NPC_ID]):
+        print("Inconsistence on NPC id from {}".format(npcDict[LABEL_NAME]))
+        return DATASET_INCONSISTENCE
+
+    imageFilePath = GLOBAL_JSON_PATH + DIR_NPC_DATA + DIR_NPC_SPRITES
+    imageFileName = npcName.replace(" ", "_").lower() + STATIC_IMAGE_EXT
+    dominantImageColor = pickDominantColor(imageFileName, imagePath=imageFilePath)
+    npcTitle = "General Information about '{}' NPC:".format(npcName)
+    sellingListTitle = "Items sold by {}:".format(npcName)
+
+    embedImage = discord.File(imageFilePath + imageFileName, filename="image.png")
+
+    # First Page with general info about the NPC
+    embedGeneralInfoPage = discord.Embed(color=dominantImageColor, title=npcTitle)
+    embedGeneralInfoPage.set_thumbnail(url="attachment://image.png")
+
+    for npcCategory in npcTownDict.keys():
+        if npcCategory == NPC_SELLING_LIST:
+            break
+        elif npcCategory == NPC_ID:
+            continue
+        else:
+            embedInsertField(embedGeneralInfoPage, npcTownDict[npcCategory], npcCategory, inline=False)
+
+    # If has selling list then get infos
+    if npcTownDict[NPC_SELLING_LIST]:
+
+        # Put footer because there will be more than 1 page
+        npcTotalPages = math.ceil(len(npcTownDict[NPC_SELLING_LIST]) / npcPageItemsCount) + 1
+        embedSetFooter(embedGeneralInfoPage, pageAlert.format(1, npcTotalPages))
+        npcPageList.append(embedGeneralInfoPage)
+
+        npcPage = 1
+        npcModuleCounter = 0
+
+        for sellingID in npcTownDict[NPC_SELLING_LIST]:
+            # Check Page counter variable
+            if npcModuleCounter == npcPageItemsCount:
+                npcModuleCounter = 0
+            if npcModuleCounter == 0:              
+                npcPage += 1
+                # Second Page with selling info about the NPC
+                embedSelligListPage = discord.Embed(color=dominantImageColor, title=sellingListTitle)
+                embedSelligListPage.set_thumbnail(url="attachment://image.png")
+                embedSetFooter(embedSelligListPage, pageAlert.format(npcPage, npcTotalPages))
+                npcPageList.append(embedSelligListPage)
+
+            npcModuleCounter += 1
+            sellingDict = sellingList[int(sellingID)-1]
+
+            # Get Label
+            itemID = sellingDict[NPC_SELLING_ITEM]
+            sellingLabel = itemList[int(itemID)-1][LABEL_NAME]
+
+            # Get Value
+            itemCost = sellingDict[NPC_ITEM_COST]
+            sellCondition = sellingDict[NPC_SELL_CONDITION]
+            sellingValue = "**{}**: {}.\n**{}**: {}.".format(NPC_ITEM_COST, itemCost, NPC_SELL_CONDITION, sellCondition)
+            
+            embedInsertField(embedSelligListPage, sellingValue, sellingLabel, inline=False)
+
+        # Send Message
+        botMessage = await ctx.send(file=embedImage, embed=npcPageList[0])
+
+        # Changing page system via Discord reactions
+        await embedSetReactions(bot, botMessage, npcPageList)
+
+    # If we don't have any sell items then just send general info       
+    else:
+        await ctx.send(file=embedImage, embed=embedGeneralInfoPage)
 
 # This functions works when it wants.
 # Useless now but i will maintain it for future code reference

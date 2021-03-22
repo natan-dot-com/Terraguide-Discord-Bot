@@ -5,6 +5,7 @@ from .item_hash import *
 ARG_NOT_FOUND = -1
 ITEM_NOT_FOUND = -2
 SET_NOT_FOUND = -3
+DATASET_INCONSISTENCE = -4
 
 botDescription = 'A terraria bot.'
 botPrefix = 't.'
@@ -37,6 +38,7 @@ commandList = {
 }
 
 pageSize = 12
+npcPageItemsCount = 5
 reactionTimeOut = 30.0
 pageAlert = "React to this message to switch between pages!\n" + "Page {}/{}"
 

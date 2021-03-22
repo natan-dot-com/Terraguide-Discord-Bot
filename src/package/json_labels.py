@@ -149,7 +149,7 @@ BAG_DROP_PROBABILITY = "Probability"
 BAG_DROP_QUANTITY = "Quantity"
 
 # NPC related labels
-NPC_SELL_LIST = "Selling List"
+NPC_SELLING_LIST = "Selling List"
 
 # ABout Sell Structure:
     # NPC_SELL_ID: ID identifier for each structure
@@ -159,7 +159,7 @@ NPC_SELL_LIST = "Selling List"
     # NPC_SELL_CONDITION: In what condition does that NPC sell
 NPC_SELL_ID = "Sell ID"
 NPC_ID = "NPC ID"
-NPC_SELL_ITEM = "Selling Item"
+NPC_SELLING_ITEM = "Selling Item"
 NPC_ITEM_COST = "Item Cost"
 NPC_SELL_CONDITION = "Sell Condition"
 

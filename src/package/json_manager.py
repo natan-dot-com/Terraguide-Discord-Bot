@@ -9,6 +9,7 @@ GLOBAL_IMAGE_PATH = "data/img_sprites/"
 DIR_ID_REFERENCES = "id_references/"
 DIR_ITEMS_DATA = "items_data/"
 DIR_NPC_DATA = "npc_data/"
+DIR_NPC_SPRITES = "npc_sprites/"
 
 # Loads a structure inside a JSON file
 def LoadJSONFile(JSONPath):
