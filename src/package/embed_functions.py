@@ -97,7 +97,7 @@ async def embedSetReactions(bot, botMessage, pageList):
 # If command arguments are passed, it will treat the message acording to the arguments
 async def sendMessage(ctx, bot, embed, commandArgumentList=[], embedImage=None):
 
-    # Message will be sent to DM
+    # Message will be sent as private
     if sendDM in commandArgumentList:
         if type(embed) is list:
             for embedInstance in embed:
@@ -114,6 +114,7 @@ async def sendMessage(ctx, bot, embed, commandArgumentList=[], embedImage=None):
     else:
         if type(embed) is list:
             botMessage = await ctx.send(file=embedImage, embed=embed[0])
+
             # Reactions to switch between pages
             await embedSetReactions(bot, botMessage, embed)
         else:

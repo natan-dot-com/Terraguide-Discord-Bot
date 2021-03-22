@@ -45,16 +45,29 @@ async def help(ctx):
     if ctx.author == bot.user:
         return
 
-    embed = discord.Embed(color=helpColor, title="Command List:")
-    embed.set_thumbnail(url=helpThumbNail)
+    embedList = []
+
+    # Main panel construction
+    mainPanel = discord.Embed(color=helpColor, title="Terraria Bot Help Documentation:")
+    helpIntroductionTitle = "Usage: [COMMAND] [FLAGS] [ARGUMENTS]"
+    helpIntroductionDesc = "Multiple flags should be written together of each other (e.g. -abcd). As an optional\
+    factor, flags can be ignored simply by putting none at the actual command."
+    embedInsertField(mainPanel, helpIntroductionDesc, helpIntroductionTitle, inline=False)
     for command, commandDescription in zip(commandList.keys(), commandList.values()):
-        embedInsertField(embed, commandDescription, command, inline=False)  
-    embedInsertField(embed, argumentsDescription, argumentsLabel, inline=False)
-    await ctx.send(embed=embed)
+        embedInsertField(mainPanel, commandDescription, command, inline=False)  
+    mainPanel.set_footer(text=pageAlert.format('1','2'))
+    embedList.append(mainPanel)
+
+    # Flags panel construction
+    flagsPanel = discord.Embed(color=helpColor, title="Terraria Bot Help Documentation:")
+    embedInsertField(flagsPanel, argumentsDescription, argumentsLabel, inline=False)
+    flagsPanel.set_footer(text=pageAlert.format('2','2'))
+    embedList.append(flagsPanel)
+
+    await sendMessage(ctx, bot, embedList)
 
 @bot.command()
 async def item(ctx, *args):
-
 
     commandArgumentList, commandStringInput = getCommandArguments(args)
     # Checks empty argument

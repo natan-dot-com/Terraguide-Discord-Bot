@@ -9,7 +9,6 @@ DATASET_INCONSISTENCE = -4
 
 botDescription = 'A terraria bot.'
 botPrefix = 't.'
-emojiPrefix = "t_"
 
 # Thumbnail for UI output commands
 helpThumbNail = 'https://img2.gratispng.com/20180326/ytq/kisspng-question-mark-clip-art-competition-5ab8be3d0288c7.3002224515220567650104.jpg'
@@ -24,24 +23,26 @@ whiteCheckMark = "✅"
 
 # Discord bot commands
 helpCommand = botPrefix + "help"
-craftCommand = botPrefix + "craft *Item Name*"
-listCommand = botPrefix + "list *Something to Search*"
-itemCommand = botPrefix + "item *Item Name*"
-setCommand = botPrefix + "set *Set Name*"
-rarityCommand = botPrefix + "rarity *rarity Name*"
+craftCommand = botPrefix + "craft 'Item Name'"
+listCommand = botPrefix + "list 'Something to Search'"
+itemCommand = botPrefix + "item 'Item Name'"
+setCommand = botPrefix + "set 'Set Name'"
+rarityCommand = botPrefix + "rarity 'rarity Name'"
 
 # Command List description
 commandList = {
-    helpCommand: "Show this dialog",
-    craftCommand: "Show all recipes for an item",
-    listCommand: "Find all items that contains the input word",
-    itemCommand: "Show informations about an item",
-    setCommand: "Show informations about a set",
-    rarityCommand: "Show informations about a Rarity Tier. If no parameters were given to this command, it shows all rarity tiers information"
+    helpCommand: "Opens the command help box.",
+    craftCommand: "Shows every crafting recipe for a given argument.",
+    listCommand: "Searches for all related items inside the dataset based on a given argument.",
+    itemCommand: "Points every information about a given item such as its crafting recipes, its general stats and where does\
+    it can drop.",
+    setCommand: "Displays every information about a given armor set.",
+    rarityCommand: "Displays a brief description about the specified rarity tier. All tiers can be displayed by giving\
+    no arguments to the command."
 }
 
-argumentsLabel = "Command Arguments:"
-argumentsDescription = "**-p**: Sends message to user DM"
+argumentsLabel = "Command flags:"
+argumentsDescription = "**-p** (private): Sends the current output as a private message to the author."
 
 # Commands Arguments
 sendDM = "-p"
