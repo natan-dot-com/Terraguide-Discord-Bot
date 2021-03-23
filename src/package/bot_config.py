@@ -27,7 +27,7 @@ craftCommand = botPrefix + "craft 'Item Name'"
 listCommand = botPrefix + "list 'Something to Search'"
 itemCommand = botPrefix + "item 'Item Name'"
 setCommand = botPrefix + "set 'Set Name'"
-rarityCommand = botPrefix + "rarity 'rarity Name'"
+rarityCommand = botPrefix + "rarity 'Rarity Name'"
 
 # Command List description
 commandList = {

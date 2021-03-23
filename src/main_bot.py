@@ -1,6 +1,9 @@
 from os import chdir
 import os
 from platform import system
+from posix import RTLD_GLOBAL
+
+#from discord import embeds
 if system() == "Linux":
     chdir("../")
 
@@ -8,18 +11,17 @@ import math
 import discord
 import re
 from discord.ext import commands
-from package.json_manager import *
-from package.item_hash import *
-from package.bot_config import *
-from package.search import *
-from package.utility_dictionaries import *
-from package.utility_functions import *
-from package.embed_functions import *
-from package.permissions import *
-from package.string_similarity import *
+from .package.json_manager import *
+from .package.item_hash import *
+from .package.bot_config import *
+from .package.search import *
+from .package.utility_dictionaries import *
+from .package.utility_functions import *
+from .package.embed_functions import *
+from .package.permissions import *
+from .package.string_similarity import *
 
 bot = commands.Bot(command_prefix=botPrefix, description=botDescription, help_command=None)
-
 itemList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT)
 tableList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + TABLE_NAME_FILE + JSON_EXT)
 rarityList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + RARITY_NAME_FILE + JSON_EXT)
@@ -29,6 +31,8 @@ setList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + SET_NAME_FILE + JS
 npcTownList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_NPC_DATA + NPC_TOWN_NAME_FILE + JSON_EXT)
 npcList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + NPC_NAME_FILE + JSON_EXT)
 sellingList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + SELLING_LIST_NAME_FILE + JSON_EXT)
+grabBagList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + BAGS_NAME_FILE + JSON_EXT)
+grabBagDropList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + BAGS_DROP_NAME_FILE + JSON_EXT)
 
 itemHash = loadDependencies(itemList)
 setHash = loadDependencies(setList, SET_HASH_SIZE, LABEL_SET_NAME)
@@ -41,10 +45,9 @@ async def on_ready():
 
 @bot.command()
 async def help(ctx):
-    
+
     if ctx.author == bot.user:
         return
-
     embedList = []
 
     # Main panel construction
@@ -54,7 +57,7 @@ async def help(ctx):
     factor, flags can be ignored simply by putting none at the actual command."
     embedInsertField(mainPanel, helpIntroductionDesc, helpIntroductionTitle, inline=False)
     for command, commandDescription in zip(commandList.keys(), commandList.values()):
-        embedInsertField(mainPanel, commandDescription, command, inline=False)  
+        embedInsertField(mainPanel, commandDescription, command, inline=False)
     mainPanel.set_footer(text=pageAlert.format('1','2'))
     embedList.append(mainPanel)
 
@@ -70,11 +73,9 @@ async def help(ctx):
 async def item(ctx, *args):
 
     commandArgumentList, commandStringInput = getCommandArguments(args)
-    # Checks empty argument
-    #arg = " ".join(args)
     if ctx.author == bot.user or not commandStringInput:
         return ARG_NOT_FOUND
-    
+
     # Hash search the current item
     print("User {} has requested a craft recipe for {}.".format(str(ctx.author), commandStringInput))
     itemID = itemHash.search(commandStringInput, LABEL_ID)
@@ -87,11 +88,10 @@ async def item(ctx, *args):
         similarStrings = getSimilarStrings(commandStringInput, itemList)
         if similarStrings:
             for string in similarStrings:
-                notFoundMessage += string + "\n" 
+                notFoundMessage += string + "\n"
         else:
             notFoundMessage = "Couldn't retrieve any suggestions from data base."
         errorEmbed.add_field(name=notFoundTitle, value=notFoundMessage)
-        #await ctx.send(embed = errorEmbed)
         await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
 
         return ITEM_NOT_FOUND
@@ -103,7 +103,7 @@ async def item(ctx, *args):
     if itemDict == NOT_FOUND:
         return ITEM_NOT_FOUND
 
-    # Starts building each embed panel 
+    # Starts building each embed panel
     embedList = []
 
     itemName = itemList[int(itemID)-1][LABEL_NAME]
@@ -139,17 +139,16 @@ async def item(ctx, *args):
     embedList.append(mainPage)
 
     # If item has source dict (i.e. if embed will have more than one page)
+    nonEmptyLists = []
     if hasSource:
 
         # LABEL_SOURCE dict analysis
-        nonEmptyLists = []
         for sourceCategory in itemDict[LABEL_SOURCE]:
             if itemDict[LABEL_SOURCE][sourceCategory]:
                 nonEmptyLists.append(sourceCategory)
 
-
         # Source embed panels creation
-        recipesList = [] 
+        recipesList = []
         npcList = []
         sellingList = []
         grabBagDropList = []
@@ -159,18 +158,12 @@ async def item(ctx, *args):
 
             # Recipes embed panel cration
             if existentCategory == SOURCE_RECIPES:
-                if not recipesList:
-                    recipesList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + RECIPE_NAME_FILE + JSON_EXT)
                 titleMessage = "Showing craft recipes for '" + itemName + "':"
                 newEmbed = discord.Embed(title=titleMessage, color=dominantImageColor)
                 createRecipesPanel(itemList, tableList, recipesList, itemDict[LABEL_SOURCE][SOURCE_RECIPES], newEmbed)
 
             # NPC's selling offers embed panel creation
             elif existentCategory == SOURCE_NPC:
-                if not npcList:
-                    npcList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + NPC_NAME_FILE + JSON_EXT)
-                if not sellingList:
-                    sellingList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + SELLING_LIST_NAME_FILE + JSON_EXT)
                 titleMessage = "Showing selling offers for '" + itemName + "':"
                 newEmbed = discord.Embed(title=titleMessage, color=dominantImageColor)
                 createSellingPanel(npcList, sellingList, itemDict[LABEL_SOURCE][SOURCE_NPC], newEmbed, itemName)
@@ -180,12 +173,6 @@ async def item(ctx, *args):
 
             # Grab bags' drops embed panel creation
             elif existentCategory == SOURCE_GRAB_BAG:
-                if not grabBagDropList:
-                    grabBagDropList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + BAGS_DROP_NAME_FILE + JSON_EXT)
-                if not npcList:
-                    npcList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + NPC_NAME_FILE + JSON_EXT)
-                if not bagList:
-                    bagList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + BAGS_NAME_FILE + JSON_EXT)
                 titleMessage = "Showing bag drops from '" + itemName + "':"
                 newEmbed = discord.Embed(title=titleMessage, color=dominantImageColor)
                 createBagDropPanel(npcList, bagList, grabBagDropList, itemDict[LABEL_SOURCE][SOURCE_GRAB_BAG], newEmbed, itemName)
@@ -196,19 +183,11 @@ async def item(ctx, *args):
 
             if newEmbed:
                 newEmbed.set_thumbnail(url="attachment://image.png")
-                newEmbed.set_footer(text="Page " + str(2+nonEmptyLists.index(existentCategory)) + "/" + str(1+len(nonEmptyLists)))
+                newEmbed.set_footer(text=pageAlert.format(str(2+nonEmptyLists.index(existentCategory)),str(1+len(nonEmptyLists))))
                 embedList.append(newEmbed)
 
     if len(embedList) > 1:
-        pageAlert = "React to this message to switch between pages!\n"
-        mainPage.set_footer(text=pageAlert + "Page 1/" + str(1+len(nonEmptyLists)))
-
-    '''currentEmbed = 0
-    botMessage = await ctx.send(file=mainImage, embed=embedList[currentEmbed])
-
-    # Page system manager (if number of pages greater than one)
-    if len(embedList) > 1:
-        await embedSetReactions(bot, botMessage, embedList)'''
+        mainPage.set_footer(text=pageAlert.format('1', str(1+len(nonEmptyLists))))
     await sendMessage(ctx, bot, embedList, embedImage=mainImage, commandArgumentList=commandArgumentList)
 
 
@@ -227,11 +206,11 @@ async def list(ctx, *args):
 
     #Regex usage to find every match of the input
     for itemInstance in itemList:
-        if re.search("^" + commandStringInput + "+", itemInstance[LABEL_NAME], re.IGNORECASE): 
+        if re.search("^" + commandStringInput + "+", itemInstance[LABEL_NAME], re.IGNORECASE):
             if len(matchList[len(matchList)-1]) >= pageSize:
                 matchList.append([])
             matchList[len(matchList)-1].append(itemInstance[LABEL_NAME])
-    
+
     for matchInstance in matchList:
         matchCounter += len(matchInstance)
     if matchCounter == 0:
@@ -245,7 +224,7 @@ async def list(ctx, *args):
         listMessage = ""
         for subInstance in matchInstance:
             listMessage += subInstance + "\n"
-            
+
         newPage = discord.Embed(title ="Search Info about " + commandStringInput, colour=discord.Colour.green())
         embedInsertField(newPage, listMessage, listDescription, inline=False)
         embedSetFooter(newPage, "Page " + str(matchList.index(matchInstance) + 1) + "/" + str(len(matchList)))
@@ -334,7 +313,7 @@ async def set(ctx, *args):
     #embedImage = discord.File(GLOBAL_IMAGE_PATH + imageFileName, filename="image.png")
     embedPage = discord.Embed(color=0x0a850e, title=setTitle) #will be updated with dominantImageColor
     embedPage.set_thumbnail(url="attachment://image.png")
-    
+
     for setCategory in setDict.keys():
         if setCategory == LABEL_RARITY:
             embedInsertRarityField(embedPage, setDict[setCategory], rarityList, inline=False)
@@ -420,7 +399,7 @@ async def npc(ctx, *args):
         return
     elif not args:
         await ctx.send("{} you must type the name of npc you want to find information about.".format(ctx.author))
-        
+
     arg = " ".join(args)
     print("User {} has requested npc information about {}.".format(str(ctx.author), arg))
 
@@ -484,7 +463,7 @@ async def npc(ctx, *args):
             # Check Page counter variable
             if npcModuleCounter == npcPageItemsCount:
                 npcModuleCounter = 0
-            if npcModuleCounter == 0:              
+            if npcModuleCounter == 0:
                 npcPage += 1
                 # Second Page with selling info about the NPC
                 embedSelligListPage = discord.Embed(color=dominantImageColor, title=sellingListTitle)
@@ -503,7 +482,7 @@ async def npc(ctx, *args):
             itemCost = sellingDict[NPC_ITEM_COST]
             sellCondition = sellingDict[NPC_SELL_CONDITION]
             sellingValue = "**{}**: {}.\n**{}**: {}.".format(NPC_ITEM_COST, itemCost, NPC_SELL_CONDITION, sellCondition)
-            
+
             embedInsertField(embedSelligListPage, sellingValue, sellingLabel, inline=False)
 
         # Send Message
@@ -512,7 +491,7 @@ async def npc(ctx, *args):
         # Changing page system via Discord reactions
         await embedSetReactions(bot, botMessage, npcPageList)
 
-    # If we don't have any sell items then just send general info       
+    # If we don't have any sell items then just send general info
     else:
         await ctx.send(file=embedImage, embed=embedGeneralInfoPage)
 
@@ -525,7 +504,7 @@ async def add_emojis(ctx, *args):
     if ctx.author == bot.user or not str(ctx.author.id) in ADMIN_LIST:
         await ctx.send("Permission Denied.")
         return
-    
+
     await ctx.send("Starting adding emojis. This may take a few moments...")
     emojiFilePath = EMOJI_DIR + EMOJI_NAME_FILE + JSON_EXT
     emojiList = {}
@@ -543,12 +522,12 @@ async def add_emojis(ctx, *args):
                     print("Emoji {} is NOT!!!! on server {}".format(emojiName, ctx.guild))
                     emoji = await ctx.guild.create_custom_emoji(image=b, name=emojiName)
                     emojiList[emojiName] = emoji.id
-                    emojiCount += 1     
+                    emojiCount += 1
                 else:
                     print("Emoji {} is already on server {}".format(emojiName, ctx.guild))
                     emojiList[emojiName] = emoji.id
-                    
-    
+
+
     SaveJSONFile(emojiFilePath, emojiList)
     await ctx.send("Done adding emojis. A total of {} emojis were added.".format(emojiCount))
 
@@ -559,7 +538,7 @@ async def remove_emojis(ctx, *args):
     if ctx.author == bot.user or not str(ctx.author.id) in ADMIN_LIST:
         await ctx.send("Permission Denied.")
         return
-    
+
     await ctx.send("Starting removing server emojis. This may take a few moments...")
     emojiFilePath = EMOJI_DIR + EMOJI_NAME_FILE + JSON_EXT
     emojiList = LoadJSONFile(emojiFilePath)
@@ -580,8 +559,8 @@ async def remove_emojis(ctx, *args):
                     await guildEmoji.delete()
                     if emojiName in emojiList.keys():
                         emojiList.pop(emojiName)
-                    emojiCount += 1     
-    
+                    emojiCount += 1
+
     SaveJSONFile(emojiFilePath, emojiList)
     await ctx.send("Done removing emojis. A total of {} emojis were removed.".format(emojiCount))
 

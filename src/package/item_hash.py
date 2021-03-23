@@ -1,4 +1,5 @@
 from .json_labels import *
+from typing import Union
 
 SUCCESS = 0
 NOT_FOUND = -1
@@ -11,7 +12,7 @@ NPC_HASH_SIZE = 1024
 SET_HASH_SIZE = 256
 
 class hashTable:
-    def __init__(self, tableSize, stringDictIndex, caseSensitive="no"):
+    def __init__(self, tableSize: int, stringDictIndex: str, caseSensitive="no"):
         self.sensitive = caseSensitive
         self.dictIndex = stringDictIndex
         self.size = tableSize
@@ -19,7 +20,7 @@ class hashTable:
         self.data = [None] * self.size
 
     # Private functions to hash/rehash (if needed) each string
-    def __hashFunction(self, stringData):
+    def __hashFunction(self, stringData: str) -> int:
         hashValue = 0
         counter = 1
         lowerString = stringData.lower()
@@ -30,11 +31,11 @@ class hashTable:
 
         return hashValue % self.size
 
-    def __rehashFunction(self, oldValue, rehashCounter):
+    def __rehashFunction(self, oldValue: int, rehashCounter: int) -> int:
         return (oldValue + (rehashCounter ** 2)) % self.size
 
     # Public function to add a dictionary in data list
-    def add(self, stringData, stringDict):
+    def add(self, stringData: str , stringDict) -> Union[int, None]:
         if self.inserted == self.size:
             print("Hash table is already full. Aborted.")
             return FULL_TABLE
@@ -58,7 +59,7 @@ class hashTable:
                 return SUCCESS
 
     # Public function to search a dictionary from a string
-    def search(self, stringData, dictIndexToReturn):
+    def search(self, stringData: str, dictIndexToReturn: str) -> Union[str, int, None]:
         if self.inserted == 0:
             print("Hash table is empty. Aborted.")
             return EMPTY_TABLE
@@ -82,7 +83,7 @@ class hashTable:
         else:
             return NOT_FOUND
 
-def initializeHashTable(hashTableStructure, infoList):
+def initializeHashTable(hashTableStructure: hashTable, infoList: list) -> hashTable:
     if isinstance(hashTableStructure, hashTable):
         for infoInstance in infoList:
             hashTableStructure.add(infoInstance[hashTableStructure.dictIndex], infoInstance)
