@@ -46,6 +46,10 @@ async def help(ctx, *args):
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user:
         return
+    if commandArgumentList == INVALID_FLAG:
+        await ctx.send(invalidFlagMessage)
+        return INVALID_FLAG
+        
     embedList = []
 
     # Main panel construction
@@ -68,7 +72,7 @@ async def help(ctx, *args):
     flagsPanel.set_footer(text=pageAlert.format('2','2'))
     embedList.append(flagsPanel)
 
-    await sendMessage(ctx, bot, embedList)
+    await sendMessage(ctx, bot, embedList, commandArgumentList=commandArgumentList)
 
 @bot.command()
 async def item(ctx, *args):
@@ -76,6 +80,9 @@ async def item(ctx, *args):
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
         return ARG_NOT_FOUND
+    if commandArgumentList == INVALID_FLAG:
+        await ctx.send(invalidFlagMessage)
+        return INVALID_FLAG
 
     # Hash search the current item
     print("User {} has requested a craft recipe for {}.".format(str(ctx.author), commandStringInput))
@@ -189,6 +196,9 @@ async def list(ctx, *args):
     #arg = " ".join(args)
     if ctx.author == bot.user or not commandStringInput:
         return
+    if commandArgumentList == INVALID_FLAG:
+        await ctx.send(invalidFlagMessage)
+        return INVALID_FLAG
 
     print("User {} has requested a craft recipe for {}.".format(str(ctx.author), commandStringInput))
     matchCounter = 0
@@ -230,6 +240,10 @@ async def craft(ctx, *args):
     #arg = " ".join(args)
     if ctx.author == bot.user or not commandStringInput:
         return
+    if commandArgumentList == INVALID_FLAG:
+        await ctx.send(invalidFlagMessage)
+        return INVALID_FLAG
+
     print("User {} has requested a craft recipe for {}.".format(str(ctx.author), commandStringInput))
 
     #Find input in hash table
@@ -279,6 +293,10 @@ async def set(ctx, *args):
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
         return
+    if commandArgumentList == INVALID_FLAG:
+        await ctx.send(invalidFlagMessage)
+        return INVALID_FLAG
+
     print("User {} has requested set information about {}.".format(str(ctx.author), commandStringInput))
 
     #Find input in hash table
@@ -319,10 +337,12 @@ async def set(ctx, *args):
 @bot.command()
 async def rarity(ctx, *args):
 
+    commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user:
         return
-
-    commandArgumentList, commandStringInput = getCommandArguments(args)
+    if commandArgumentList == INVALID_FLAG:
+        await ctx.send(invalidFlagMessage)
+        return INVALID_FLAG
 
     # If the user didn't type the rarity then the command shows every rarity tier information
     if not commandStringInput:
@@ -352,17 +372,17 @@ async def rarity(ctx, *args):
         # Send Message
         await sendMessage(ctx, bot, embedPageList, commandArgumentList=commandArgumentList)
     else:
-        commandString = " ".join(commandStringInput)
-        print("User '{}' has requested rarity information about '{}'.".format(str(ctx.author, commandString)))
+        print("User '{}' has requested rarity information about '{}'.".format(str(ctx.author), commandStringInput))
 
-        rarityDict = linearSearch(rarityList, LABEL_RARITY_TIER, commandString.lower())
+        rarityDict = linearSearch(rarityList, LABEL_RARITY_TIER, commandStringInput.lower())
         if rarityDict == NOT_FOUND:
-            rarityTitle = "Rarity Tier '{}' was not found in database.".format(commandString)
-            embedMessage = getSimilarStringEmbed(rarityTitle, commandString.lower(), rarityList, label=LABEL_RARITY_TIER)
-            await ctx.send(embedMessage)
+            rarityTitle = "Rarity Tier '{}' was not found in database.".format(commandStringInput)
+            print(rarityTitle)
+            embedMessage = getSimilarStringEmbed(rarityTitle, commandStringInput.lower(), rarityList, label=LABEL_RARITY_TIER)
+            await ctx.send(embed=embedMessage)
             return
 
-        rarityTitle = "Information about '{}' Rarity:".format(commandString)
+        rarityTitle = "Information about '{}' Rarity:".format(commandStringInput)
         rarityImagePath = GLOBAL_JSON_PATH + DIR_ID_REFERENCES + IMAGE_DIR_RARITY
         imageFileName = rarityDict[LABEL_RARITY_TIER].replace(" ", "_").lower() + STATIC_IMAGE_EXT
         embedImage = discord.File(rarityImagePath + imageFileName, filename="image.png")
@@ -380,12 +400,15 @@ async def rarity(ctx, *args):
 @bot.command()
 async def npc(ctx, *args):
 
+    commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user:
         return
-    elif not args:
+    if not commandStringInput:
         await ctx.send("{} you must type the name of npc you want to find information about.".format(ctx.author))
+    if commandArgumentList == INVALID_FLAG:
+        await ctx.send(invalidFlagMessage)
+        return INVALID_FLAG
         
-    commandArgumentList, commandStringInput = getCommandArguments(args)
     print("User {} has requested npc information about {}.".format(str(ctx.author), commandStringInput))
 
     #Find input in hash table

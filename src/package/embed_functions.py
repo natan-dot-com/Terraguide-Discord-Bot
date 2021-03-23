@@ -119,6 +119,7 @@ async def sendMessage(ctx, bot, embed, commandArgumentList=[], embedImage=None):
         if type(embed) is list:
             for embedInstance in embed:
                 embedImage = checkImageFile(embedImage)
+                embedInstance.set_footer()
                 await ctx.send(file=embedImage, embed=embedInstance)
         else:
             await ctx.send(file=embedImage, embed=embed)

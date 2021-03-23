@@ -6,6 +6,8 @@ ARG_NOT_FOUND = -1
 ITEM_NOT_FOUND = -2
 SET_NOT_FOUND = -3
 DATASET_INCONSISTENCE = -4
+INVALID_FLAG = -5
+EMOJI_NOT_FOUND = -6
 
 botDescription = 'A terraria bot.'
 botPrefix = 't.'
@@ -47,6 +49,11 @@ commandList = {
 sendDM = argumentPrefix + "p"
 sendLinear = argumentPrefix + "l"
 
+# Command flags list
+commandFlagList = [
+    sendDM, sendLinear
+]
+
 argumentsLabel = "Command flags:"
 argumentsDescriptionList = [
     "**" + sendDM + "** (private): Sends the current output as a private message to the author.",
@@ -57,6 +64,7 @@ pageSize = 12
 npcPageItemsCount = 5
 reactionTimeOut = 30.0
 pageAlert = "React to this message to switch between pages!\n" + "Page {}/{}"
+invalidFlagMessage = "Couldn't solve command flags. Type t.help to see how to use flags"
 
 #BotToken = "MjQ2NTExOTcxMDY5ODUzNjk3.WCVcKQ.quxR1uO0TUb6UQPhvLYzqoApHBI"
 BotToken = "Nzk2MDY1OTI0NzU1MDk1NTg0.X_SgKg.8UNAsVGPDnbS2nMc40LrpuoepTI"

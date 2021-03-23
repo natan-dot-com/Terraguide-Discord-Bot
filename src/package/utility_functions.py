@@ -4,15 +4,17 @@ from .bot_config import *
 from colorthief import ColorThief
 from colormap import rgb2hex
 
-EMOJI_NOT_FOUND = -1
-
 def getCommandArgumentList(commandArgument):
     commandArgumentList = []
     for argument in commandArgument[1:]:
-        if argument == sendDM[1]:
+        if argumentPrefix + argument in commandArgumentList:
+            return INVALID_FLAG
+        elif argument == sendDM[1]:
             commandArgumentList.append(sendDM)
         elif argument == sendLinear[1]:
             commandArgumentList.append(sendLinear)
+        elif not argumentPrefix + argument in commandFlagList:
+            return INVALID_FLAG
     return commandArgumentList
 
 def getCommandArguments(args):
