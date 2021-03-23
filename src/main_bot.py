@@ -40,17 +40,34 @@ async def on_ready():
     await bot.change_presence(activity=discord.Game(name=botPrefix + "help"))
 
 @bot.command()
-async def help(ctx):
-    
+async def help(ctx, *args):
+
+    commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user:
         return
+    
+    embedList = []
 
-    embed = discord.Embed(color=helpColor, title="Command List:")
-    embed.set_thumbnail(url=helpThumbNail)
+    # Main panel construction
+    mainPanel = discord.Embed(color=helpColor, title="Terraria Bot Help Documentation:")
+    helpIntroductionTitle = "Usage: [COMMAND] [FLAGS] [ARGUMENTS]"
+    helpIntroductionDesc = "Multiple flags should be written together of each other (e.g. -abcd). As an optional\
+    factor, flags can be ignored simply by putting none at the actual command."
+    embedInsertField(mainPanel, helpIntroductionDesc, helpIntroductionTitle, inline=False)
     for command, commandDescription in zip(commandList.keys(), commandList.values()):
-        embedInsertField(embed, commandDescription, command, inline=False)  
-    embedInsertField(embed, argumentsDescription, argumentsLabel, inline=False)
-    await ctx.send(embed=embed)
+        embedInsertField(mainPanel, commandDescription, command, inline=False)
+    mainPanel.set_footer(text=pageAlert.format('1','2'))
+    embedList.append(mainPanel)
+
+    # Flags panel construction
+    flagsPanel = discord.Embed(color=helpColor, title="Terraria Bot Help Documentation:")
+    argumentsDescription = "\n".join(argumentsDescriptionList)
+    embedInsertField(flagsPanel, argumentsDescription, argumentsLabel, inline=False)
+    flagsPanel.set_footer(text=pageAlert.format('2','2'))
+    embedList.append(flagsPanel)
+
+    await sendMessage(ctx, bot, embedList, commandArgumentList=commandArgumentList)
+    #await sendMessage(ctx, bot, embedList)
 
 @bot.command()
 async def item(ctx, *args):
@@ -58,7 +75,6 @@ async def item(ctx, *args):
 
     commandArgumentList, commandStringInput = getCommandArguments(args)
     # Checks empty argument
-    #arg = " ".join(args)
     if ctx.author == bot.user or not commandStringInput:
         return ARG_NOT_FOUND
     
@@ -78,8 +94,7 @@ async def item(ctx, *args):
         else:
             notFoundMessage = "Couldn't retrieve any suggestions from data base."
         errorEmbed.add_field(name=notFoundTitle, value=notFoundMessage)
-        #await ctx.send(embed = errorEmbed)
-        await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
+        await ctx.send(embed = errorEmbed)
 
         return ITEM_NOT_FOUND
 
@@ -190,12 +205,6 @@ async def item(ctx, *args):
         pageAlert = "React to this message to switch between pages!\n"
         mainPage.set_footer(text=pageAlert + "Page 1/" + str(1+len(nonEmptyLists)))
 
-    '''currentEmbed = 0
-    botMessage = await ctx.send(file=mainImage, embed=embedList[currentEmbed])
-
-    # Page system manager (if number of pages greater than one)
-    if len(embedList) > 1:
-        await embedSetReactions(bot, botMessage, embedList)'''
     await sendMessage(ctx, bot, embedList, embedImage=mainImage, commandArgumentList=commandArgumentList)
 
 
@@ -238,12 +247,6 @@ async def list(ctx, *args):
         embedSetFooter(newPage, "Page " + str(matchList.index(matchInstance) + 1) + "/" + str(len(matchList)))
         pageList.append(newPage)
 
-    '''#Send Message
-    botMessage = await ctx.send(embed = pageList[0])
-
-    # Changing page system via Discord reactions
-    if len(pageList) > 1:
-        await embedSetReactions(bot, botMessage, pageList)'''
     await sendMessage(ctx, bot, pageList, commandArgumentList=commandArgumentList)
 
 # Shows crafting information
@@ -259,7 +262,9 @@ async def craft(ctx, *args):
     #Find input in hash table
     itemID = itemHash.search(commandStringInput, LABEL_ID)
     if itemID == -1:
-        await ctx.send("Can't find item '{}' in data base.".format(commandStringInput))
+        craftTitle = "Can't find item '{}' in data base.".format(commandStringInput)
+        embedMessage = getSimilarStringEmbed(craftTitle, commandStringInput.lower(), itemList, label=LABEL_NAME)
+        await ctx.send(embed=embedMessage)
         return ITEM_NOT_FOUND
 
     itemType = itemList[int(itemID)-1][LABEL_TYPE]
@@ -292,7 +297,6 @@ async def craft(ctx, *args):
         embedInsertField(embedPage, outputMessage, outputDescription, inline=False)
 
     #Send Message
-    #await ctx.send(file=embedImage, embed=embedPage)
     await sendMessage(ctx, bot, embedPage, embedImage=embedImage, commandArgumentList=commandArgumentList)
 
 # Shows set information
@@ -300,7 +304,6 @@ async def craft(ctx, *args):
 async def set(ctx, *args):
 
     commandArgumentList, commandStringInput = getCommandArguments(args)
-    #arg = " ".join(args)
     if ctx.author == bot.user or not commandStringInput:
         return
     print("User {} has requested set information about {}.".format(str(ctx.author), commandStringInput))
@@ -308,7 +311,9 @@ async def set(ctx, *args):
     #Find input in hash table
     setID = setHash.search(commandStringInput, LABEL_ID)
     if setID == -1:
-        await ctx.send("Can't find set '{}' in data base.".format(commandStringInput))
+        setTitle = "Can't find set '{}' in data base.".format(commandStringInput)
+        embedMessage = getSimilarStringEmbed(setTitle, commandStringInput.lower(), setList, label=LABEL_SET_NAME)
+        await ctx.send(embed=embedMessage)
         return SET_NOT_FOUND
 
     setDict = setList[int(setID)-1]
@@ -336,7 +341,6 @@ async def set(ctx, *args):
         else:
             embedInsertField(embedPage, setDict[setCategory].replace(" / ", "\n"), setCategory, inline=False)
     #Send Message
-    #await ctx.send(file=embedImage, embed=embedPage)
     await sendMessage(ctx, bot, embedPage, commandArgumentList=commandArgumentList)
 
 @bot.command()
@@ -382,7 +386,7 @@ async def rarity(ctx, *args):
         if rarityDict == NOT_FOUND:
             rarityTitle = "Rarity Tier '{}' was not found in database.".format(commandString)
             embedMessage = getSimilarStringEmbed(rarityTitle, commandString.lower(), rarityList, label=LABEL_RARITY_TIER)
-            await sendMessage(ctx, bot, embedMessage, commandArgumentList=commandArgumentList)
+            await ctx.send(embedMessage)
             return
 
         rarityTitle = "Information about '{}' Rarity:".format(commandString)
@@ -408,14 +412,14 @@ async def npc(ctx, *args):
     elif not args:
         await ctx.send("{} you must type the name of npc you want to find information about.".format(ctx.author))
         
-    arg = " ".join(args)
-    print("User {} has requested npc information about {}.".format(str(ctx.author), arg))
+    commandArgumentList, commandStringInput = getCommandArguments(args)
+    print("User {} has requested npc information about {}.".format(str(ctx.author), commandStringInput))
 
     #Find input in hash table
-    npcID = npcHash.search(arg, NPC_ID)
+    npcID = npcHash.search(commandStringInput, NPC_ID)
     if npcID == -1:
-        npcTitle = "Can't find npc '{}' in data base.".format(arg)
-        embedMessage = getSimilarStringEmbed(npcTitle, arg.lower(), npcList, label=LABEL_NAME)
+        npcTitle = "Can't find npc '{}' in data base.".format(commandStringInput)
+        embedMessage = getSimilarStringEmbed(npcTitle, commandStringInput.lower(), npcList, label=LABEL_NAME)
         await ctx.send(embed=embedMessage)
         return SET_NOT_FOUND
     #Will be supported after enemy npcs drops update on dataset
@@ -494,14 +498,11 @@ async def npc(ctx, *args):
             embedInsertField(embedSelligListPage, sellingValue, sellingLabel, inline=False)
 
         # Send Message
-        botMessage = await ctx.send(file=embedImage, embed=npcPageList[0])
-
-        # Changing page system via Discord reactions
-        await embedSetReactions(bot, botMessage, npcPageList)
+        await sendMessage(ctx, bot, npcPageList, embedImage=embedImage, commandArgumentList=commandArgumentList)
 
     # If we don't have any sell items then just send general info       
     else:
-        await ctx.send(file=embedImage, embed=embedGeneralInfoPage)
+        await sendMessage(ctx, bot, embedGeneralInfoPage, embedImage=embedImage, commandArgumentList=commandArgumentList)
 
 # This functions works when it wants.
 # Useless now but i will maintain it for future code reference

@@ -92,6 +92,12 @@ async def embedSetReactions(bot, botMessage, pageList):
 
     await botMessage.clear_reactions()
 
+def checkImageFile(embedImage):
+    if embedImage:
+        if embedImage.fp.closed:
+            embedImage = discord.File(embedImage.fp.raw.name , filename=embedImage.filename)
+    return embedImage
+
 # Function to send message acording to parameters
 # If a list of embed is passed, it will add reactions to navigate between pages
 # If command arguments are passed, it will treat the message acording to the arguments
@@ -101,14 +107,21 @@ async def sendMessage(ctx, bot, embed, commandArgumentList=[], embedImage=None):
     if sendDM in commandArgumentList:
         if type(embed) is list:
             for embedInstance in embed:
-                if embedImage:
-                    if embedImage.fp.closed:
-                        embedImage = discord.File(embedImage.fp.raw.name , filename=embedImage.filename)
+                embedImage = checkImageFile(embedImage)
                 embedInstance.set_footer()
                 await ctx.author.send(file=embedImage, embed=embedInstance)        
         else:
             await ctx.author.send(file=embedImage, embed=embed)
         await ctx.message.add_reaction(whiteCheckMark)
+
+    # Message will be sent without pages on the server
+    elif sendLinear in commandArgumentList:
+        if type(embed) is list:
+            for embedInstance in embed:
+                embedImage = checkImageFile(embedImage)
+                await ctx.send(file=embedImage, embed=embedInstance)
+        else:
+            await ctx.send(file=embedImage, embed=embed)
 
     # Message will be sent normaly on server
     else:
