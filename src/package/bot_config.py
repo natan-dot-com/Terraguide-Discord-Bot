@@ -2,77 +2,75 @@ from .json_manager import *
 from .json_labels import *
 from .item_hash import *
 
-ARG_NOT_FOUND = -1
-ITEM_NOT_FOUND = -2
-SET_NOT_FOUND = -3
-DATASET_INCONSISTENCE = -4
-INVALID_FLAG = -5
-EMOJI_NOT_FOUND = -6
+# Error return values
+ERROR_ARG_NOT_FOUND = -1
+ERROR_ITEM_NOT_FOUND = -2
+ERROR_SET_NOT_FOUND = -3
+ERROR_DATASET_INCONSISTENCE = -4
+ERROR_INVALID_FLAG = -5
+ERROR_EMOJI_NOT_FOUND = -6
 
-botDescription = 'A terraria bot.'
-botPrefix = 't.'
-emojiPrefix = "t_"
-argumentPrefix = "-"
+# Bot general constants
+BOT_CONFIG_DESCRIPTION = 'A terraria bot.'
+BOT_CONFIG_PREFIX = 't.'
+BOT_CONFIG_EMOJI_PREFIX = "t_"
+BOT_CONFIG_FLAG_PREFIX = "-"
+#BOT_TOKEN = "MjQ2NTExOTcxMDY5ODUzNjk3.WCVcKQ.quxR1uO0TUb6UQPhvLYzqoApHBI"
+BOT_TOKEN = "Nzk2MDY1OTI0NzU1MDk1NTg0.X_SgKg.8UNAsVGPDnbS2nMc40LrpuoepTI"
 
-# Thumbnail for UI output commands
-helpThumbNail = 'https://img2.gratispng.com/20180326/ytq/kisspng-question-mark-clip-art-competition-5ab8be3d0288c7.3002224515220567650104.jpg'
+# Command related stuff
 
-# Color for UI output commands
-craftColor = 0x0a850e
-listColor = 0xe40101
-helpColor = 0x000000
-
-#Emojis
-whiteCheckMark = "✅"
-
-# Discord bot commands
-helpCommand = botPrefix + "help"
-craftCommand = botPrefix + "craft 'Item Name'"
-listCommand = botPrefix + "list 'Something to Search'"
-itemCommand = botPrefix + "item 'Item Name'"
-setCommand = botPrefix + "set 'Set Name'"
-rarityCommand = botPrefix + "rarity 'Rarity Name'"
+# Discord bot commands constants
+COMMAND_HELP = BOT_CONFIG_PREFIX + "help"
+COMMAND_CRAFT = BOT_CONFIG_PREFIX + "craft 'Item Name'"
+COMMAND_LIST = BOT_CONFIG_PREFIX + "list 'Something to Search'"
+COMMAND_ITEM = BOT_CONFIG_PREFIX + "item 'Item Name'"
+COMMAND_SET = BOT_CONFIG_PREFIX + "set 'Set Name'"
+COMMAND_RARITY = BOT_CONFIG_PREFIX + "rarity 'Rarity Name'"
 
 # Command List description
-commandList = {
-    helpCommand: "Opens the command help box.",
-    craftCommand: "Shows every crafting recipe for a given argument.",
-    listCommand: "Searches for all related items inside the dataset based on a given argument.",
-    itemCommand: "Points every information about a given item such as its crafting recipes, its general stats and where does\
+commandDict = {
+    COMMAND_HELP: "Opens the command help box.",
+    COMMAND_CRAFT: "Shows every crafting recipe for a given argument.",
+    COMMAND_LIST: "Searches for all related items inside the dataset based on a given argument.",
+    COMMAND_ITEM: "Points every information about a given item such as its crafting recipes, its general stats and where does\
  it can drop.",
-    setCommand: "Displays every information about a given armor set.",
-    rarityCommand: "Displays a brief description about the specified rarity tier. All tiers can be displayed by giving\
+    COMMAND_SET: "Displays every information about a given armor set.",
+    COMMAND_RARITY: "Displays a brief description about the specified rarity tier. All tiers can be displayed by giving\
  no arguments to the command."
 }
 
-# Command flags
-sendDM = argumentPrefix + "p"
-sendLinear = argumentPrefix + "l"
+# Command flags related stuff
+
+# Command flags definition
+FLAG_PRIVATE = BOT_CONFIG_FLAG_PREFIX + "p"
+FLAG_LINEAR = BOT_CONFIG_FLAG_PREFIX + "l"
+
+FLAG_TITLE_LABEL = "Command flags:"
+FLAG_ERROR_MESSAGE = "Couldn't solve specified flags. Review the previous command or enter t.help for\
+further information."
 
 # Command flags list
 commandFlagList = [
-    sendDM, sendLinear
+    FLAG_PRIVATE, FLAG_LINEAR
 ]
 
-argumentsLabel = "Command flags:"
-argumentsDescriptionList = [
-    "**" + sendDM + "** (private): Sends the current output as a private message to the author.",
-    "**" + sendLinear + "** (linear): Sends the current output as pageless (potential spam alert)."
+flagDescriptionList = [
+    "**" + FLAG_PRIVATE + "** (private): Sends the current output as a private message to the author.",
+    "**" + FLAG_LINEAR + "** (linear): Sends the current output as pageless (potential spam alert)."
 ]
 
-pageSize = 12
-npcPageItemsCount = 5
-reactionTimeOut = 30.0
-pageAlert = "React to this message to switch between pages!\n" + "Page {}/{}"
-invalidFlagMessage = "Couldn't solve command flags. Type t.help to see how to use flags"
+# Embed page related constants
+PAGE_DEFAULT_SIZE = 12
+PAGE_NPC_ITEMS_COUNT = 5
+PAGE_REACTION_TIMEOUT = 30.0
+PAGE_ALERT_MESSAGE = "React to this message to switch between pages!\n" + "Page {}/{}"
 
-#BotToken = "MjQ2NTExOTcxMDY5ODUzNjk3.WCVcKQ.quxR1uO0TUb6UQPhvLYzqoApHBI"
-BotToken = "Nzk2MDY1OTI0NzU1MDk1NTg0.X_SgKg.8UNAsVGPDnbS2nMc40LrpuoepTI"
+# Emojis related constants
+EMOJI_WHITE_CHECK_MARK = "✅"
 
-def loadDependencies(jsonList, hashSize=ITEMS_HASH_SIZE, label=LABEL_NAME):
+def loadDependencies(jsonList: list, hashSize=ITEMS_HASH_SIZE, label=LABEL_NAME) -> hashTable:
     itemFilePath = GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT
     itemHash = hashTable(hashSize, label)
     itemHash = initializeHashTable(itemHash, jsonList)
-
     return itemHash
-
