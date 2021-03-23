@@ -1,23 +1,32 @@
 from .json_labels import *
 from .json_manager import GLOBAL_IMAGE_PATH
+from .bot_config import *
 from colorthief import ColorThief
 from colormap import rgb2hex
 
 EMOJI_NOT_FOUND = -1
 
+def getCommandArgumentList(commandArgument):
+    commandArgumentList = []
+    for argument in commandArgument[1:]:
+        if argument == sendDM[1]:
+            commandArgumentList.append(sendDM)
+        elif argument == sendLinear[1]:
+            commandArgumentList.append(sendLinear)
+    return commandArgumentList
+
 def getCommandArguments(args):
     commandArgumentList = []
     commandStringInput = ""
     if args:
-        for arg in args:
-            if arg[0] == "-":
-                commandArgumentList.append(str(args[0]))
-            else:
-                commandStringInput = " ".join(args[args.index(arg):])
-                break
-    else:
-        return [], ""
-    
+        # If first argument given is flag
+        if args[0][0] == "-":
+            if len(args) > 1:
+                commandStringInput = " ".join(args[1:])
+            commandArgumentList = getCommandArgumentList(args[0])
+        else:
+            commandStringInput = " ".join(args)
+ 
     return commandArgumentList, commandStringInput
 
 def pickDominantColor(imageFilename, imagePath=GLOBAL_IMAGE_PATH):

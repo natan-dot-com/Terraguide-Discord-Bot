@@ -9,6 +9,8 @@ DATASET_INCONSISTENCE = -4
 
 botDescription = 'A terraria bot.'
 botPrefix = 't.'
+emojiPrefix = "t_"
+argumentPrefix = "-"
 
 # Thumbnail for UI output commands
 helpThumbNail = 'https://img2.gratispng.com/20180326/ytq/kisspng-question-mark-clip-art-competition-5ab8be3d0288c7.3002224515220567650104.jpg'
@@ -35,21 +37,21 @@ commandList = {
     craftCommand: "Shows every crafting recipe for a given argument.",
     listCommand: "Searches for all related items inside the dataset based on a given argument.",
     itemCommand: "Points every information about a given item such as its crafting recipes, its general stats and where does\
-    it can drop.",
+ it can drop.",
     setCommand: "Displays every information about a given armor set.",
     rarityCommand: "Displays a brief description about the specified rarity tier. All tiers can be displayed by giving\
-    no arguments to the command."
+ no arguments to the command."
 }
+
+# Command flags
+sendDM = argumentPrefix + "p"
+sendLinear = argumentPrefix + "l"
 
 argumentsLabel = "Command flags:"
-argumentsDescription = "**-p** (private): Sends the current output as a private message to the author."
-
-# Commands Arguments
-sendDM = "-p"
-
-argumentListDescription = {
-    sendDM: "Send a private message to de user"
-}
+argumentsDescriptionList = [
+    "**" + sendDM + "** (private): Sends the current output as a private message to the author.",
+    "**" + sendLinear + "** (linear): Sends the current output as pageless (potential spam alert)."
+]
 
 pageSize = 12
 npcPageItemsCount = 5
