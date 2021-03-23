@@ -1,6 +1,7 @@
 from os import chdir
 import os
 from platform import system
+from src.package.bot_config import HELP_EMBED_TITLE
 if system() == "Linux":
     chdir("../")
 
@@ -18,7 +19,7 @@ from package.embed_functions import *
 from package.permissions import *
 from package.string_similarity import *
 
-bot = commands.Bot(command_prefix=botPrefix, description=botDescription, help_command=None)
+bot = commands.Bot(command_prefix=BOT_CONFIG_PREFIX, description=BOT_CONFIG_DESCRIPTION, help_command=None)
 itemList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT)
 tableList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + TABLE_NAME_FILE + JSON_EXT)
 rarityList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + RARITY_NAME_FILE + JSON_EXT)
@@ -38,7 +39,7 @@ npcHash = loadDependencies(npcList, NPC_HASH_SIZE, LABEL_NAME)
 @bot.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(bot))
-    await bot.change_presence(activity=discord.Game(name=botPrefix + "help"))
+    await bot.change_presence(activity=discord.Game(name=BOT_CONFIG_PREFIX + "help"))
 
 @bot.command()
 async def help(ctx, *args):
@@ -46,30 +47,27 @@ async def help(ctx, *args):
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user:
         return
-    if commandArgumentList == INVALID_FLAG:
-        await ctx.send(invalidFlagMessage)
-        return INVALID_FLAG
+    if commandArgumentList == ERROR_INVALID_FLAG:
+        await ctx.send(FLAG_ERROR_MESSAGE)
+        return ERROR_INVALID_FLAG
         
     embedList = []
 
     # Main panel construction
-    mainPanel = discord.Embed(color=helpColor, title="Terraria Bot Help Documentation:")
-    helpIntroductionTitle = "Usage: [COMMAND] [FLAGS] [ARGUMENTS]"
-    helpIntroductionDesc = "Multiple flags should be written together of each other (e.g. -abcd). As an optional\
- factor, flags can be ignored simply by putting none at the current command."
-    embedInsertField(mainPanel, helpIntroductionDesc, helpIntroductionTitle, inline=False)
-    for command, commandDescription in zip(commandList.keys(), commandList.values()):
+    mainPanel = discord.Embed(color=EMBED_HELP_COLOR, title=HELP_EMBED_TITLE)
+    embedInsertField(mainPanel, HELP_INTRODUCTION_DESC, HELP_INTRODUCTION_TITLE, inline=False)
+    for command, commandDescription in zip(commandDict.keys(), commandDict.values()):
         embedInsertField(mainPanel, commandDescription, command, inline=False)
-    mainPanel.set_footer(text=pageAlert.format('1','2'))
+    mainPanel.set_footer(text=PAGE_ALERT_MESSAGE.format('1','2'))
     embedList.append(mainPanel)
 
     # Flags panel construction
-    flagsPanel = discord.Embed(color=helpColor, title="Terraria Bot Help Documentation:")
+    flagsPanel = discord.Embed(color=EMBED_HELP_COLOR, title=HELP_EMBED_TITLE)
     flagsDisplay = ""
-    for argumentsDescription in argumentsDescriptionList:
+    for argumentsDescription in flagDescriptionList:
         flagsDisplay += argumentsDescription + "\n"
-    embedInsertField(flagsPanel, flagsDisplay, argumentsLabel, inline=False)
-    flagsPanel.set_footer(text=pageAlert.format('2','2'))
+    embedInsertField(flagsPanel, flagsDisplay, FLAG_TITLE_LABEL, inline=False)
+    flagsPanel.set_footer(text=PAGE_ALERT_MESSAGE.format('2','2'))
     embedList.append(flagsPanel)
 
     await sendMessage(ctx, bot, embedList, commandArgumentList=commandArgumentList)
@@ -79,10 +77,10 @@ async def item(ctx, *args):
 
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
-        return ARG_NOT_FOUND
-    if commandArgumentList == INVALID_FLAG:
-        await ctx.send(invalidFlagMessage)
-        return INVALID_FLAG
+        return ERROR_ARG_NOT_FOUND
+    if commandArgumentList == ERROR_INVALID_FLAG:
+        await ctx.send(FLAG_ERROR_MESSAGE)
+        return ERROR_INVALID_FLAG
 
     # Hash search the current item
     print("User {} has requested a craft recipe for {}.".format(str(ctx.author), commandStringInput))
@@ -102,14 +100,14 @@ async def item(ctx, *args):
         errorEmbed.add_field(name=notFoundTitle, value=notFoundMessage)
         await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
 
-        return ITEM_NOT_FOUND
+        return ERROR_ITEM_NOT_FOUND
 
     # Gets respective item info dictionary
     itemType = itemList[int(itemID)-1][LABEL_TYPE]
     itemFilePath = GLOBAL_JSON_PATH + DIR_ITEMS_DATA + itemFileManager[itemType] + JSON_EXT
     itemDict = binarySearch(LoadJSONFile(itemFilePath), itemID)
     if itemDict == NOT_FOUND:
-        return ITEM_NOT_FOUND
+        return ERROR_ITEM_NOT_FOUND
 
     # Starts building each embed panel
     embedList = []
@@ -124,9 +122,7 @@ async def item(ctx, *args):
     mainImage = discord.File(GLOBAL_IMAGE_PATH + imageFilename, filename="image.png")
     mainPage.set_thumbnail(url="attachment://image.png")
 
-    exceptionLabels = [
-        LABEL_ITEM_ID
-    ]
+    exceptionLabels = [LABEL_ITEM_ID]
     for itemCategory in itemDict.keys():
         if itemCategory in exceptionLabels:
             continue
@@ -173,7 +169,7 @@ async def item(ctx, *args):
             elif existentCategory == SOURCE_GRAB_BAG:
                 titleMessage = "Showing bag drops from '" + itemName + "':"
                 newEmbed = discord.Embed(title=titleMessage, color=dominantImageColor)
-                createBagDropPanel(npcList, bagList, grabBagDropList, itemDict[LABEL_SOURCE][SOURCE_GRAB_BAG], newEmbed, itemName)
+                createBagDropPanel(npcList, grabBagList, grabBagDropList, itemDict[LABEL_SOURCE][SOURCE_GRAB_BAG], newEmbed, itemName)
 
             elif existentCategory == SOURCE_OTHER:
                 fieldTitle = "General availability"
@@ -181,11 +177,11 @@ async def item(ctx, *args):
 
             if newEmbed:
                 newEmbed.set_thumbnail(url="attachment://image.png")
-                newEmbed.set_footer(text=pageAlert.format(str(2+nonEmptyLists.index(existentCategory)),str(1+len(nonEmptyLists))))
+                newEmbed.set_footer(text=PAGE_ALERT_MESSAGE.format(str(2+nonEmptyLists.index(existentCategory)),str(1+len(nonEmptyLists))))
                 embedList.append(newEmbed)
 
     if len(embedList) > 1:
-        mainPage.set_footer(text=pageAlert.format('1', str(1+len(nonEmptyLists))))
+        mainPage.set_footer(text=PAGE_ALERT_MESSAGE.format('1', str(1+len(nonEmptyLists))))
     await sendMessage(ctx, bot, embedList, embedImage=mainImage, commandArgumentList=commandArgumentList)
 
 # Shows a list of  every item which starts with 'arg'
@@ -196,9 +192,9 @@ async def list(ctx, *args):
     #arg = " ".join(args)
     if ctx.author == bot.user or not commandStringInput:
         return
-    if commandArgumentList == INVALID_FLAG:
-        await ctx.send(invalidFlagMessage)
-        return INVALID_FLAG
+    if commandArgumentList == ERROR_INVALID_FLAG:
+        await ctx.send(FLAG_ERROR_MESSAGE)
+        return ERROR_INVALID_FLAG
 
     print("User {} has requested a craft recipe for {}.".format(str(ctx.author), commandStringInput))
     matchCounter = 0
@@ -207,7 +203,7 @@ async def list(ctx, *args):
     #Regex usage to find every match of the input
     for itemInstance in itemList:
         if re.search("^" + commandStringInput + "+", itemInstance[LABEL_NAME], re.IGNORECASE):
-            if len(matchList[len(matchList)-1]) >= pageSize:
+            if len(matchList[len(matchList)-1]) >= PAGE_DEFAULT_SIZE:
                 matchList.append([])
             matchList[len(matchList)-1].append(itemInstance[LABEL_NAME])
 
@@ -240,9 +236,9 @@ async def craft(ctx, *args):
     #arg = " ".join(args)
     if ctx.author == bot.user or not commandStringInput:
         return
-    if commandArgumentList == INVALID_FLAG:
-        await ctx.send(invalidFlagMessage)
-        return INVALID_FLAG
+    if commandArgumentList == ERROR_INVALID_FLAG:
+        await ctx.send(FLAG_ERROR_MESSAGE)
+        return ERROR_INVALID_FLAG
 
     print("User {} has requested a craft recipe for {}.".format(str(ctx.author), commandStringInput))
 
@@ -252,7 +248,7 @@ async def craft(ctx, *args):
         craftTitle = "Can't find item '{}' in data base.".format(commandStringInput)
         embedMessage = getSimilarStringEmbed(craftTitle, commandStringInput.lower(), itemList, label=LABEL_NAME)
         await ctx.send(embed=embedMessage)
-        return ITEM_NOT_FOUND
+        return ERROR_ITEM_NOT_FOUND
 
     itemType = itemList[int(itemID)-1][LABEL_TYPE]
     itemFilePath = GLOBAL_JSON_PATH + DIR_ITEMS_DATA + itemFileManager[itemType] + JSON_EXT
@@ -293,9 +289,9 @@ async def set(ctx, *args):
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
         return
-    if commandArgumentList == INVALID_FLAG:
-        await ctx.send(invalidFlagMessage)
-        return INVALID_FLAG
+    if commandArgumentList == ERROR_INVALID_FLAG:
+        await ctx.send(FLAG_ERROR_MESSAGE)
+        return ERROR_INVALID_FLAG
 
     print("User {} has requested set information about {}.".format(str(ctx.author), commandStringInput))
 
@@ -305,7 +301,7 @@ async def set(ctx, *args):
         setTitle = "Can't find set '{}' in data base.".format(commandStringInput)
         embedMessage = getSimilarStringEmbed(setTitle, commandStringInput.lower(), setList, label=LABEL_SET_NAME)
         await ctx.send(embed=embedMessage)
-        return SET_NOT_FOUND
+        return ERROR_SET_NOT_FOUND
 
     setDict = setList[int(setID)-1]
     setName = setDict[LABEL_SET_NAME]
@@ -340,9 +336,9 @@ async def rarity(ctx, *args):
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user:
         return
-    if commandArgumentList == INVALID_FLAG:
-        await ctx.send(invalidFlagMessage)
-        return INVALID_FLAG
+    if commandArgumentList == ERROR_INVALID_FLAG:
+        await ctx.send(FLAG_ERROR_MESSAGE)
+        return ERROR_INVALID_FLAG
 
     # If the user didn't type the rarity then the command shows every rarity tier information
     if not commandStringInput:
@@ -360,7 +356,7 @@ async def rarity(ctx, *args):
             if rarityModuleCounter == 0:
                 rarityPage += 1
                 embedPage = discord.Embed(color=0x0a850e, title=rarityTitle)
-                rarityPagealert = pageAlert.format(rarityPage, rarityTotalPages)
+                rarityPagealert = PAGE_ALERT_MESSAGE.format(rarityPage, rarityTotalPages)
                 embedPage.set_footer(text=rarityPagealert)
                 embedPageList.append(embedPage)
 
@@ -405,9 +401,9 @@ async def npc(ctx, *args):
         return
     if not commandStringInput:
         await ctx.send("{} you must type the name of npc you want to find information about.".format(ctx.author))
-    if commandArgumentList == INVALID_FLAG:
-        await ctx.send(invalidFlagMessage)
-        return INVALID_FLAG
+    if commandArgumentList == ERROR_INVALID_FLAG:
+        await ctx.send(FLAG_ERROR_MESSAGE)
+        return ERROR_INVALID_FLAG
         
     print("User {} has requested npc information about {}.".format(str(ctx.author), commandStringInput))
 
@@ -417,7 +413,7 @@ async def npc(ctx, *args):
         npcTitle = "Can't find npc '{}' in data base.".format(commandStringInput)
         embedMessage = getSimilarStringEmbed(npcTitle, commandStringInput.lower(), npcList, label=LABEL_NAME)
         await ctx.send(embed=embedMessage)
-        return SET_NOT_FOUND
+        return ERROR_SET_NOT_FOUND
     #Will be supported after enemy npcs drops update on dataset
     elif npcList[int(npcID)-1][LABEL_TYPE] != "Town NPC":
         await ctx.send("Npc type not supported yet.")
@@ -434,7 +430,7 @@ async def npc(ctx, *args):
         return NOT_FOUND
     if str(npcTownDict[NPC_ID]) != str(npcDict[NPC_ID]):
         print("Inconsistence on NPC id from {}".format(npcDict[LABEL_NAME]))
-        return DATASET_INCONSISTENCE
+        return ERROR_DATASET_INCONSISTENCE
 
     imageFilePath = GLOBAL_JSON_PATH + DIR_NPC_DATA + DIR_NPC_SPRITES
     imageFileName = npcName.replace(" ", "_").lower() + STATIC_IMAGE_EXT
@@ -460,8 +456,8 @@ async def npc(ctx, *args):
     if npcTownDict[NPC_SELLING_LIST]:
 
         # Put footer because there will be more than 1 page
-        npcTotalPages = math.ceil(len(npcTownDict[NPC_SELLING_LIST]) / npcPageItemsCount) + 1
-        embedSetFooter(embedGeneralInfoPage, pageAlert.format(1, npcTotalPages))
+        npcTotalPages = math.ceil(len(npcTownDict[NPC_SELLING_LIST]) / PAGE_NPC_ITEMS_COUNT) + 1
+        embedSetFooter(embedGeneralInfoPage, PAGE_ALERT_MESSAGE.format(1, npcTotalPages))
         npcPageList.append(embedGeneralInfoPage)
 
         npcPage = 1
@@ -469,14 +465,14 @@ async def npc(ctx, *args):
 
         for sellingID in npcTownDict[NPC_SELLING_LIST]:
             # Check Page counter variable
-            if npcModuleCounter == npcPageItemsCount:
+            if npcModuleCounter == PAGE_NPC_ITEMS_COUNT:
                 npcModuleCounter = 0
             if npcModuleCounter == 0:
                 npcPage += 1
                 # Second Page with selling info about the NPC
                 embedSelligListPage = discord.Embed(color=dominantImageColor, title=sellingListTitle)
                 embedSelligListPage.set_thumbnail(url="attachment://image.png")
-                embedSetFooter(embedSelligListPage, pageAlert.format(npcPage, npcTotalPages))
+                embedSetFooter(embedSelligListPage, PAGE_ALERT_MESSAGE.format(npcPage, npcTotalPages))
                 npcPageList.append(embedSelligListPage)
 
             npcModuleCounter += 1
@@ -518,12 +514,12 @@ async def add_emojis(ctx, *args):
     for filename in os.listdir(rarityFilePath):
         with open(rarityFilePath + filename, "rb") as image:
             emojiFileName, emojiFileFormat = os.path.splitext(filename)
-            emojiName = emojiPrefix + emojiFileName.lower()
+            emojiName = BOT_CONFIG_EMOJI_PREFIX + emojiFileName.lower()
             if emojiFileFormat != DYNAMIC_IMAGE_EXT:
                 f = image.read()
                 b = bytearray(f)
                 guildEmoji = getGuildEmojiByName(emojiName, ctx.guild.emojis)
-                if guildEmoji == EMOJI_NOT_FOUND:
+                if guildEmoji == ERROR_EMOJI_NOT_FOUND:
                     print("Emoji {} is NOT!!!! on server {}".format(emojiName, ctx.guild))
                     emoji = await ctx.guild.create_custom_emoji(image=b, name=emojiName)
                     emojiList[emojiName] = emoji.id
@@ -552,12 +548,12 @@ async def remove_emojis(ctx, *args):
     for filename in os.listdir(rarityFilePath):
         with open(rarityFilePath + filename, "rb") as image:
             emojiFileName, emojiFileFormat = os.path.splitext(filename)
-            emojiName = emojiPrefix + emojiFileName.lower()
+            emojiName = BOT_CONFIG_EMOJI_PREFIX + emojiFileName.lower()
             if emojiFileFormat != DYNAMIC_IMAGE_EXT:
                 f = image.read()
                 b = bytearray(f)
                 guildEmoji = getGuildEmojiByName(emojiName, ctx.guild.emojis)
-                if guildEmoji == EMOJI_NOT_FOUND:
+                if guildEmoji == ERROR_EMOJI_NOT_FOUND:
                     print("Emoji {} not found on server {}".format(emojiName, ctx.guild))
                 else:
                     print("Emoji {} found on server {}".format(emojiName, ctx.guild))
@@ -569,4 +565,4 @@ async def remove_emojis(ctx, *args):
     SaveJSONFile(emojiFilePath, emojiList)
     await ctx.send("Done removing emojis. A total of {} emojis were removed.".format(emojiCount))
 
-bot.run(BotToken)
+bot.run(BOT_TOKEN)

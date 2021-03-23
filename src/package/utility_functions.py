@@ -7,14 +7,14 @@ from colormap import rgb2hex
 def getCommandArgumentList(commandArgument):
     commandArgumentList = []
     for argument in commandArgument[1:]:
-        if argumentPrefix + argument in commandArgumentList:
-            return INVALID_FLAG
-        elif argument == sendDM[1]:
-            commandArgumentList.append(sendDM)
-        elif argument == sendLinear[1]:
-            commandArgumentList.append(sendLinear)
-        elif not argumentPrefix + argument in commandFlagList:
-            return INVALID_FLAG
+        if BOT_CONFIG_FLAG_PREFIX + argument in commandArgumentList:
+            return ERROR_INVALID_FLAG
+        elif argument == FLAG_PRIVATE[1]:
+            commandArgumentList.append(FLAG_PRIVATE)
+        elif argument == FLAG_LINEAR[1]:
+            commandArgumentList.append(FLAG_LINEAR)
+        elif not BOT_CONFIG_FLAG_PREFIX + argument in commandFlagList:
+            return ERROR_INVALID_FLAG
     return commandArgumentList
 
 def getCommandArguments(args):
@@ -40,4 +40,4 @@ def getGuildEmojiByName(emojiName, guildEmojis):
     for guildEmoji in guildEmojis:
         if emojiName == str(guildEmoji.name):
             return guildEmoji
-    return EMOJI_NOT_FOUND
+    return ERROR_EMOJI_NOT_FOUND

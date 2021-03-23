@@ -5,12 +5,17 @@ from discord.ext import commands
 from .json_labels import *
 from .bot_config import *
 
+# Constant values for colors related to UI output commands
+EMBED_CRAFTING_COLOR = 0x0a850e
+EMBED_LIST_COLOR = 0xe40101
+EMBED_HELP_COLOR = 0x000000
+
 # Not used because of discord UI emoji issues
 # Get emoji message format from emoji json
 def getRarityEmoji(rarityTier):
     emojiFilePath = EMOJI_DIR + EMOJI_NAME_FILE + JSON_EXT
     emojiList = LoadJSONFile(emojiFilePath)
-    emojiName = emojiPrefix + rarityTier.replace(" ", "_").lower()
+    emojiName = BOT_CONFIG_EMOJI_PREFIX + rarityTier.replace(" ", "_").lower()
     if emojiName in emojiList.keys():
         return "<:" + emojiName + ":" + str(emojiList[emojiName]) + ">"
     else:
@@ -85,7 +90,7 @@ async def embedSetReactions(bot, botMessage, pageList):
                 pageNumber = 0
                 await botMessage.edit(embed = pageList[pageNumber])
         try:
-            reaction, user = await bot.wait_for('reaction_add', timeout=reactionTimeOut, check=check)
+            reaction, user = await bot.wait_for('reaction_add', timeout=PAGE_REACTION_TIMEOUT, check=check)
             await botMessage.remove_reaction(reaction, user)
         except:
             break
@@ -104,7 +109,7 @@ def checkImageFile(embedImage):
 async def sendMessage(ctx, bot, embed, commandArgumentList=[], embedImage=None):
 
     # Message will be sent as private
-    if sendDM in commandArgumentList:
+    if FLAG_PRIVATE in commandArgumentList:
         if type(embed) is list:
             for embedInstance in embed:
                 embedImage = checkImageFile(embedImage)
@@ -112,10 +117,10 @@ async def sendMessage(ctx, bot, embed, commandArgumentList=[], embedImage=None):
                 await ctx.author.send(file=embedImage, embed=embedInstance)        
         else:
             await ctx.author.send(file=embedImage, embed=embed)
-        await ctx.message.add_reaction(whiteCheckMark)
+        await ctx.message.add_reaction(EMOJI_WHITE_CHECK_MARK)
 
     # Message will be sent without pages on the server
-    elif sendLinear in commandArgumentList:
+    elif FLAG_LINEAR in commandArgumentList:
         if type(embed) is list:
             for embedInstance in embed:
                 embedImage = checkImageFile(embedImage)
