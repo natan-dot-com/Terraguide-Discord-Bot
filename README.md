@@ -1,15 +1,15 @@
 # Discord Terraria Bot
 
-## Resumé
+## 1. Resumé
 As the name suggests, it's a bot created using [Discord's Python API](https://discord.com/developers/docs/intro) intented to be a Discord built-in information wiki for every Terraria player. Its content is based on general item/NPC information and its respective crafting recipes, grab bag drops, enemy drops and selling offers from NPCs, as well as having some extra commands about rarity tiers and Angler quests.
 
-## Authors
+## 2. Authors
 All the bot's source were made by [me](https://github.com/natan-dot-com) and [Andrei Alisson](https://github.com/AndreiAlisson).
 
-## Dependencies
+## 3. Dependencies
 Discord Terraria Bot uses some specific Python libraries to work. In order to proceed with the setup, you may need to install some of them. 
 
-### Linux
+### 3.1. Linux
 From the beggining, you may also need to install a Python package manager in order to proceed with the libraries installation if you don't have one already. Here we'll be using the awesomeness of ```pip```, which can be installed via
 ```
 sudo apt install python3-pip
@@ -22,7 +22,7 @@ pip install discord.py levenshtein colorthief colormap
 ```
 ---
 
-### Windows
+### 3.2. Windows
 Similar to Linux, Python needs a package manager in order to install each one of the libraries and we'll be using ```pip``` as well. In Windows, save [get-pip.py](https://bootstrap.pypa.io/get-pip.py) in any directory and run the script using ```python get-pip.py``` (assuming that you already have Python installed) on the Windows Powershell, from the directory that the file has been saved.
 
 The next one will be simple: We can use
@@ -31,10 +31,10 @@ pip install discord.py levenshtein colorthief colormap
 ```
 into the Windows Powershell to install the remaining dependencies.
 
-## Quick Setup
+## 4. Quick Setup
 After installing all dependencies, proceed to create a new API application on [Discord Developer Portal](https://discord.com/developers/applications) and set it up as its needed. The bot token can be inserted at ```package/bot_config.py```.
 
-## General Overview
+## 5. General Overview
 The entire list of possible commands and flags can be shown with ```t.help```. Some of them can be pointed here, such as:
 
 * ```t.item```: Shows every possible information of an item, such as its gerenal stats, crafting recipes and drop sources.
@@ -46,13 +46,13 @@ The entire list of possible commands and flags can be shown with ```t.help```. S
 
 And so on.
 
-## Motivation
+## 6. Motivation
 It was such a great experience working on this project aside with [Andrei](https://github.com/AndreiAlisson), from the data scrap to the bot development. As they say, practice makes perfect and I think we both are going further with our main goal as developers: being able to solve problems and work with creativity.
 
-## Shoutouts
+## 7. Acknowledgements
 * [Official Terraria Gamepedia Wiki](https://terraria.fandom.com/wiki/), where all those data files come from.
 * [Andrei Alisson](https://github.com/AndreiAlisson), my code mate.
 * [Noas](https://www.instagram.com/noas.z/) with his gorgeous drawing skills.
 
-## License
+## 8. License
 MIT.
