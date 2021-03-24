@@ -16,7 +16,7 @@ sudo apt install python3-pip
 ```
 in any Ubuntu-based distribution.
 
-All of the libraries can be installed using ```pip``` running the following command from any Linux-based terminal
+All the libraries can be installed using ```pip``` running the following command from any Linux-based terminal
 ```
 pip install discord.py levenshtein colorthief colormap
 ```
@@ -31,8 +31,20 @@ pip install discord.py levenshtein colorthief colormap
 ```
 into the Windows Powershell to install the remaining dependencies.
 
-## Introduction
-...
+## Quick Setup
+After installing all dependencies, proceed to create a new API application on [Discord Developer Portal](https://discord.com/developers/applications) and set it up as its needed. The bot token can be inserted at ```package/bot_config.py```.
+
+# General Overview
+The entire list of possible commands and flags can be shown with ```t.help```. Some of them can be pointed here, such as:
+
+* ```t.item```: Shows every possible information of an item, such as its gerenal stats, crafting recipes and drop sources.
+* ```t.list```: Points every possible item/NPC in data base starting with the command argument.
+* ```t.rarity```: Shows a description list about each item rarity tier in Terraria (it can also be specified by passing the rarity tier as argument!).
+* ```t.npc```: Shows every information about some specific in-game NPC, such as its conditions to spawn, its inventory and its drops.
+* ```t.quest```: Briefly describes about an Angler's quest for an specified quest fish.
+* ```t.craft```: Points each crafting recipe for the item given in the command argument.
+
+And so on.
 
 ## License
 MIT.
