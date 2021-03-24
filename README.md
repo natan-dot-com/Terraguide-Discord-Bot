@@ -17,12 +17,11 @@
 - [8. Acknowledgements](#8-acknowledgements)
 - [9. License](#9-license) 
 
-
 ## 1. Resumé
-As the name suggests, it's a bot created using [Discord's Python API](https://discord.com/developers/docs/intro) intented to be a Discord built-in information wiki for every Terraria player. Its content is based on general item/NPC information and its respective crafting recipes, grab bag drops, enemy drops and selling offers from NPCs, as well as having some extra commands about rarity tiers and Angler quests.
+Instead of opening the web browser to search about an item, why don't just type-and-search directly from Discord? As the name suggests, the bot created using [Discord's Python API](https://discord.com/developers/docs/intro) intend to be a Discord built-in information wiki for every Terraria player. Its content is based on general item/NPC information and its respective crafting recipes, grab bag drops, enemy drops and selling offers from NPCs, as well as having some extra commands about rarity tiers and Angler quests, supposing to have everything a Terraria player would like to know while playing.
 
 ## 2. Authors
-All the bot's source were made by [me](https://github.com/natan-dot-com) and [Andrei Alisson](https://github.com/AndreiAlisson).
+All the bot's source code were made by [me](https://github.com/natan-dot-com) and [Andrei Alisson](https://github.com/AndreiAlisson) as a personal project.
 
 ## 3. Dependencies
 Discord Terraria Bot uses some specific Python libraries to work. In order to proceed with the setup, you may need to install some of them. 
@@ -69,6 +68,8 @@ Changes and updates can be tracked from the [Changelog](changelog.md) file!
 
 ## 7. Motivation
 It was such a great experience working on this project aside with [Andrei](https://github.com/AndreiAlisson), from the data scrap to the bot development. As they say, practice makes perfect and I think we both are going further with our main goal as developers: being able to solve problems and work with creativity.
+
+It's also important to point how this project reflects my first footsteps inside the development of a bigger project. If you think knowledge is never a waste, so do I. :) 
 
 ## 8. Acknowledgements
 * [Official Terraria Gamepedia Wiki](https://terraria.fandom.com/wiki/), where all those data files come from.
