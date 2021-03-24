@@ -3,6 +3,8 @@
 ## Resumé
 As the name suggests, it's a bot created using [Discord's Python API](https://discord.com/developers/docs/intro) intented to be a Discord built-in information wiki for every Terraria player. Its content is based on general item/NPC information and its respective crafting recipes, grab bag drops, enemy drops and selling offers from NPCs, as well as having some extra commands about rarity tiers and Angler quests.
 
+## Authors
+
 ## Dependencies
 Discord Terraria Bot uses some specific Python libraries to work. In order to proceed with the setup, you may need to install some of them. 
 
@@ -19,7 +21,7 @@ pip install discord.py levenshtein colorthief colormap
 ```
 ---
 ### Windows
-Similar to Linux, Python needs a package manager in order to install each one of the libraries and we'll be using ```pip``` as well. In Windows, save [get-pip.py](https://bootstrap.pypa.io/get-pip.py) in any directory and run the script using ```python get-pip.py``` on the Windows Powershell, from the directory that the file has been saved.
+Similar to Linux, Python needs a package manager in order to install each one of the libraries and we'll be using ```pip``` as well. In Windows, save [get-pip.py](https://bootstrap.pypa.io/get-pip.py) in any directory and run the script using ```python get-pip.py``` (assuming that you already have Python installed) on the Windows Powershell, from the directory that the file has been saved.
 
 The next one will be simple: We can use
 ```
