@@ -32,6 +32,7 @@ pip install discord.py levenshtein colorthief colormap
 into the Windows Powershell to install the remaining dependencies.
 
 ## Introduction
+...
 
 ## License
 MIT.
