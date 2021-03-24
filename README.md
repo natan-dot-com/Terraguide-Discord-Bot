@@ -1,5 +1,19 @@
 # Discord Terraria Bot
 
+### Table of contents
+- [1. Resumé](#1-resumé)
+- [2. Authors](#2-authors)
+- [3. Dependencies](#3-dependencies)
+  * [3.1. Linux](#31-linux)
+  * [3.2. Windows](#32-windows)
+- [4. Quick Setup](#4-quick-setup)
+- [5. General Overview](#5-general-overview)
+- [6. Changelog](#6-changelog)
+- [7. Motivation](#7-motivation)
+- [8. Acknowledgements](#8-acknowledgements)
+- [9. License](#9-license) 
+
+
 ## 1. Resumé
 As the name suggests, it's a bot created using [Discord's Python API](https://discord.com/developers/docs/intro) intented to be a Discord built-in information wiki for every Terraria player. Its content is based on general item/NPC information and its respective crafting recipes, grab bag drops, enemy drops and selling offers from NPCs, as well as having some extra commands about rarity tiers and Angler quests.
 
@@ -46,13 +60,16 @@ The entire list of possible commands and flags can be shown with ```t.help```. S
 
 And so on.
 
-## 6. Motivation
+## 6. Changelog
+Changes and updates can be tracked from the [Changelog]() file!
+
+## 7. Motivation
 It was such a great experience working on this project aside with [Andrei](https://github.com/AndreiAlisson), from the data scrap to the bot development. As they say, practice makes perfect and I think we both are going further with our main goal as developers: being able to solve problems and work with creativity.
 
-## 7. Acknowledgements
+## 8. Acknowledgements
 * [Official Terraria Gamepedia Wiki](https://terraria.fandom.com/wiki/), where all those data files come from.
 * [Andrei Alisson](https://github.com/AndreiAlisson), my code mate.
 * [Noas](https://www.instagram.com/noas.z/) with his gorgeous drawing skills.
 
-## 8. License
+## 9. License
 MIT.
