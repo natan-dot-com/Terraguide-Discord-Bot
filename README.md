@@ -34,7 +34,7 @@ into the Windows Powershell to install the remaining dependencies.
 ## Quick Setup
 After installing all dependencies, proceed to create a new API application on [Discord Developer Portal](https://discord.com/developers/applications) and set it up as its needed. The bot token can be inserted at ```package/bot_config.py```.
 
-# General Overview
+## General Overview
 The entire list of possible commands and flags can be shown with ```t.help```. Some of them can be pointed here, such as:
 
 * ```t.item```: Shows every possible information of an item, such as its gerenal stats, crafting recipes and drop sources.
@@ -45,6 +45,14 @@ The entire list of possible commands and flags can be shown with ```t.help```. S
 * ```t.craft```: Points each crafting recipe for the item given in the command argument.
 
 And so on.
+
+## Motivation
+It was such a great experience working on this project aside with [Andrei](https://github.com/AndreiAlisson), from the data scrap to the bot development. As they say, practice makes perfect and I think we both are going further with our main goal as developers: being able to solve problems and work with creativity.
+
+## Shoutouts
+* [Official Terraria Gamepedia Wiki](https://terraria.fandom.com/wiki/), where all those data files come from.
+* [Andrei Alisson](https://github.com/AndreiAlisson), my code mate.
+* [Noas](https://www.instagram.com/noas.z/) with his gorgeous drawing skills.
 
 ## License
 MIT.
