@@ -1,5 +1,9 @@
 # Discord Terraria Bot
 
+<p align="center">
+<img src=https://img.shields.io/badge/Status-In%20Progress-yellow>&nbsp;&nbsp;&nbsp;<img src=https://img.shields.io/badge/Version-v0.1-lightgray>
+</p>
+
 ### Table of contents
 - [1. Resumé](#1-resumé)
 - [2. Authors](#2-authors)
