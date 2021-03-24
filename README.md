@@ -6,7 +6,7 @@ As the name suggests, it's a bot created using [Discord's Python API](https://di
 ## Dependencies
 Discord Terraria Bot uses some specific Python libraries to work. In order to proceed with the setup, you may need to install some of them. 
 
-#### Linux
+### Linux
 From the beggining, you may also need to install a Python package manager in order to proceed with the libraries installation if you don't have one already. Here we'll be using the awesomeness of ```pip```, which can be installed via
 ```
 sudo apt install python3-pip
@@ -17,8 +17,8 @@ All of the libraries can be installed using ```pip``` running the following comm
 ```
 pip install discord.py levenshtein colorthief colormap
 ```
-
-#### Windows
+---
+### Windows
 Similar to Linux, Python needs a package manager in order to install each one of the libraries and we'll be using ```pip``` as well. In Windows, save [get-pip.py](https://bootstrap.pypa.io/get-pip.py) in any directory and run the script using ```python get-pip.py``` on the Windows Powershell, from the directory that the file has been saved.
 
 The next one will be simple: We can use
