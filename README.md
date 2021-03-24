@@ -25,6 +25,6 @@ The next one will be simple: We can use
 ```
 pip install discord.py levenshtein colorthief colormap
 ```
-as well to install the remaining dependencies.
+into the Windows Powershell to install the remaining dependencies.
 
 ## Introduction
