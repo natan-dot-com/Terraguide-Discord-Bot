@@ -1,7 +1,6 @@
 from os import chdir
 import os
 from platform import system
-from src.package.bot_config import HELP_EMBED_TITLE
 if system() == "Linux":
     chdir("../")
 
