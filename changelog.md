@@ -1,0 +1,1 @@
+# Discord Terraria Bot Changelog

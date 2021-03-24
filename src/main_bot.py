@@ -213,7 +213,8 @@ async def list(ctx, *args):
         return NOT_FOUND
 
     listDescription = str(matchCounter) + " occurrencies found:\n"
-    # Pages creation with 12 lines each
+
+    # Pages creation within 12 lines each
     pageList = []
     for matchInstance in matchList:
         listMessage = ""
@@ -241,9 +242,9 @@ async def craft(ctx, *args):
 
     print("User {} has requested a craft recipe for {}.".format(str(ctx.author), commandStringInput))
 
-    #Find input in hash table
+    # Finds input in hash table
     itemID = itemHash.search(commandStringInput, LABEL_ID)
-    if itemID == -1:
+    if itemID == NOT_FOUND:
         craftTitle = "Can't find item '{}' in data base.".format(commandStringInput)
         embedMessage = getSimilarStringEmbed(craftTitle, commandStringInput.lower(), itemList, label=LABEL_NAME)
         await ctx.send(embed=embedMessage)
@@ -415,7 +416,7 @@ async def npc(ctx, *args):
         return ERROR_SET_NOT_FOUND
     #Will be supported after enemy npcs drops update on dataset
     elif npcList[int(npcID)-1][LABEL_TYPE] != "Town NPC":
-        await ctx.send("Npc type not supported yet.")
+        await ctx.send("NPC type not supported yet.")
         return
 
     npcPageList = []
@@ -425,10 +426,10 @@ async def npc(ctx, *args):
     # Temporary linear search until we improve our npc database
     npcTownDict = linearSearch(npcTownList, NPC_ID, str(npcID))
     if npcTownDict == NOT_FOUND:
-        print("NPC Town not found")
+        print("Town NPC not found")
         return NOT_FOUND
     if str(npcTownDict[NPC_ID]) != str(npcDict[NPC_ID]):
-        print("Inconsistence on NPC id from {}".format(npcDict[LABEL_NAME]))
+        print("Inconsistence on NPC ID from {}".format(npcDict[LABEL_NAME]))
         return ERROR_DATASET_INCONSISTENCE
 
     imageFilePath = GLOBAL_JSON_PATH + DIR_NPC_DATA + DIR_NPC_SPRITES

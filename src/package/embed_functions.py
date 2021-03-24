@@ -21,17 +21,17 @@ def getRarityEmoji(rarityTier):
     else:
         return rarityTier
 
-def embedInsertField(embedPage, dictValue, dictLabel, inline=False):
+def embedInsertField(embedPage: discord.Embed, dictValue: str, dictLabel: str, inline=False):
     embedPage.add_field(name=dictLabel, value=dictValue, inline=inline)
 
-def embedInsertRarityField(embedPage, rarityID, rarityList, inline=True):
+def embedInsertRarityField(embedPage: discord.Embed, rarityID: int, rarityList: list, inline=True):
     for rarityInstance in rarityList:
         if rarityInstance[LABEL_RARITY_ID] == rarityID:
             embedInsertField(embedPage, rarityInstance[LABEL_RARITY_TIER], LABEL_RARITY_TIER, inline=inline)
             return
 
 # Builds the recipe's panel UI inside a discord embed class
-def createRecipesPanel(itemList, tableList, recipesList, recipeDict, recipeEmbed):
+def createRecipesPanel(itemList: list, tableList: list, recipesList: list, recipeDict, recipeEmbed: discord.Embed):
     for recipeInstance in recipeDict:
         recipeInstance = int(recipeInstance)
         recipeInfo = recipesList[recipeInstance-1]
@@ -44,7 +44,7 @@ def createRecipesPanel(itemList, tableList, recipesList, recipeDict, recipeEmbed
         embedInsertField(recipeEmbed, fieldMessage, fieldName, inline=False)
 
 
-def createSellingPanel(npcList, sellingList, npcDict, newEmbed, itemName):
+def createSellingPanel(npcList: list, sellingList: list, npcDict, newEmbed: discord.Embed, itemName: str):
     for sellingInstance in npcDict:
         sellingInstance = int(sellingInstance)
         sellingInfo = sellingList[sellingInstance-1]
@@ -53,7 +53,7 @@ def createSellingPanel(npcList, sellingList, npcDict, newEmbed, itemName):
             " under the condition: " + sellingInfo[NPC_SELL_CONDITION].strip() + "."
         embedInsertField(newEmbed, fieldMessage, fieldName, inline=False)
 
-def createBagDropPanel(npcList, bagList, bagDropList, bagDropDict, newEmbed, itemName):
+def createBagDropPanel(npcList: list, bagList: list, bagDropList: list, bagDropDict, newEmbed: discord.Embed, itemName: str):
     for bagDropInstance in bagDropDict:
         bagDropInstance = int(bagDropInstance)
         bagDropInfo = bagDropList[bagDropInstance-1]
@@ -62,10 +62,10 @@ def createBagDropPanel(npcList, bagList, bagDropList, bagDropDict, newEmbed, ite
             ".\n It commonly drops " + bagDropInfo[BAG_DROP_QUANTITY] + " instance(s)."
         embedInsertField(newEmbed, fieldMessage, fieldName, inline=False)
 
-def embedSetFooter(embedPage, embedText):
+def embedSetFooter(embedPage: discord.Embed, embedText: str):
     embedPage.set_footer(text=embedText)
 
-async def embedSetReactions(bot, botMessage, pageList):
+async def embedSetReactions(bot: commands.Bot, botMessage, pageList: list):
     await botMessage.add_reaction('◀')
     await botMessage.add_reaction('▶')
 
@@ -97,7 +97,7 @@ async def embedSetReactions(bot, botMessage, pageList):
 
     await botMessage.clear_reactions()
 
-def checkImageFile(embedImage):
+def checkImageFile(embedImage: discord.File):
     if embedImage:
         if embedImage.fp.closed:
             embedImage = discord.File(embedImage.fp.raw.name , filename=embedImage.filename)
@@ -106,7 +106,7 @@ def checkImageFile(embedImage):
 # Function to send message acording to parameters
 # If a list of embed is passed, it will add reactions to navigate between pages
 # If command arguments are passed, it will treat the message acording to the arguments
-async def sendMessage(ctx, bot, embed, commandArgumentList=[], embedImage=None):
+async def sendMessage(ctx, bot: commands.Bot, embed: discord.Embed, commandArgumentList=[], embedImage=None):
 
     # Message will be sent as private
     if FLAG_PRIVATE in commandArgumentList:

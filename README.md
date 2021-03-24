@@ -65,7 +65,7 @@ The entire list of possible commands and flags can be shown with ```t.help```. S
 And so on.
 
 ## 6. Changelog
-Changes and updates can be tracked from the [Changelog]() file!
+Changes and updates can be tracked from the [Changelog](changelog.md) file!
 
 ## 7. Motivation
 It was such a great experience working on this project aside with [Andrei](https://github.com/AndreiAlisson), from the data scrap to the bot development. As they say, practice makes perfect and I think we both are going further with our main goal as developers: being able to solve problems and work with creativity.
