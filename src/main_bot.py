@@ -1,6 +1,8 @@
 from os import chdir
 import os
 from platform import system
+from package.bot_config import PAGE_DEFAULT_SIZE
+from package.json_labels import LABEL_NAME
 if system() == "Linux":
     chdir("../")
 
@@ -39,6 +41,17 @@ npcHash = loadDependencies(npcList, NPC_HASH_SIZE, LABEL_NAME)
 async def on_ready():
     print('We have logged in as {0.user}'.format(bot))
     await bot.change_presence(activity=discord.Game(name=BOT_CONFIG_PREFIX + "help"))
+
+@bot.command()
+async def quest(ctx, *args):
+
+    commandArgumentList, commandStringInput = getCommandArguments(args)
+    if ctx.author == bot.user:
+        return
+    if commandArgumentList == ERROR_INVALID_FLAG:
+        await ctx.send(FLAG_ERROR_MESSAGE)
+        return ERROR_INVALID_FLAG
+    pass
 
 @bot.command()
 async def help(ctx, *args):
@@ -204,10 +217,12 @@ async def list(ctx, *args):
         if re.search("^" + commandStringInput + "+", itemInstance[LABEL_NAME], re.IGNORECASE):
             if len(matchList[len(matchList)-1]) >= PAGE_DEFAULT_SIZE:
                 matchList.append([])
-            matchList[len(matchList)-1].append(itemInstance[LABEL_NAME])
+            matchCounter += 1
+            matchTuple = (str(matchCounter), itemInstance[LABEL_NAME])
+            matchList[len(matchList)-1].append(matchTuple)
 
-    for matchInstance in matchList:
-        matchCounter += len(matchInstance)
+    #for matchInstance in matchList:
+    #    matchCounter += len(matchInstance)
     if matchCounter == 0:
         await ctx.send("No items were found containing " + commandStringInput)
         return NOT_FOUND
@@ -219,14 +234,22 @@ async def list(ctx, *args):
     for matchInstance in matchList:
         listMessage = ""
         for subInstance in matchInstance:
-            listMessage += subInstance + "\n"
+            listMessage += "**" + subInstance[0] + ".** " + subInstance[1] + "\n"
 
-        newPage = discord.Embed(title ="Search Info about " + commandStringInput, colour=discord.Colour.green())
-        embedInsertField(newPage, listMessage, listDescription, inline=False)
+        newPage = discord.Embed(title ="Search Info about '" + commandStringInput + "'", colour=discord.Colour.green())
+        infoMessage = "Type the current match number to show all the information about it, guiding yourself by\
+ the number shown at left of each item's name. If none, type '0'.\n\n"
+        embedInsertField(newPage, infoMessage + listMessage, listDescription, inline=False)
         embedSetFooter(newPage, "Page " + str(matchList.index(matchInstance) + 1) + "/" + str(len(matchList)))
         pageList.append(newPage)
 
-    await sendMessage(ctx, bot, pageList, commandArgumentList=commandArgumentList)
+    botMessage, authorMessage = await sendMessage(ctx, bot, pageList, commandArgumentList=commandArgumentList)
+    if authorMessage == 0:
+        return
+
+    itemPage = int(int(authorMessage.content)/PAGE_DEFAULT_SIZE)
+    chosenItemName = matchList[itemPage][int(authorMessage.content)-itemPage*PAGE_DEFAULT_SIZE-1][1]
+    await ctx.invoke(bot.get_command('item'), chosenItemName)
 
 # Shows crafting information
 @bot.command()
