@@ -65,16 +65,22 @@ def createBagDropPanel(npcList: list, bagList: list, bagDropList: list, bagDropD
 def embedSetFooter(embedPage: discord.Embed, embedText: str):
     embedPage.set_footer(text=embedText)
 
-async def embedSetReactions(bot: commands.Bot, botMessage, pageList: list):
+async def embedSetReactions(ctx, bot: commands.Bot, botMessage, pageList: list):
     await botMessage.add_reaction('◀')
     await botMessage.add_reaction('▶')
 
-    def check(reaction, user):
+    def checkEmoji(reaction, user):
         return user != botMessage.author and reaction.message.id == botMessage.id
 
+    def messageCheck(author):
+        def innerCheck(message):
+            return author == message.author
+        return innerCheck
+
     pageNumber = 0
+    authorMessage = None
     reaction = None
-    while True:
+    while not (authorMessage := await bot.wait_for('message', check=messageCheck(ctx.author), timeout=PAGE_REACTION_TIMEOUT)):
         if str(reaction) == '◀':
             if pageNumber > 0:
                 pageNumber -= 1
@@ -90,12 +96,12 @@ async def embedSetReactions(bot: commands.Bot, botMessage, pageList: list):
                 pageNumber = 0
                 await botMessage.edit(embed = pageList[pageNumber])
         try:
-            reaction, user = await bot.wait_for('reaction_add', timeout=PAGE_REACTION_TIMEOUT, check=check)
+            reaction, user = await bot.wait_for('reaction_add', check=checkEmoji)
             await botMessage.remove_reaction(reaction, user)
         except:
             break
-
     await botMessage.clear_reactions()
+    return authorMessage
 
 def checkImageFile(embedImage: discord.File):
     if embedImage:
@@ -135,7 +141,9 @@ async def sendMessage(ctx, bot: commands.Bot, embed: discord.Embed, commandArgum
             botMessage = await ctx.send(file=embedImage, embed=embed[0])
 
             # Reactions to switch between pages
-            await embedSetReactions(bot, botMessage, embed)
+            if len(embed) > 1:
+                authorMessage = await embedSetReactions(ctx, bot, botMessage, embed)
+            return botMessage, authorMessage
         else:
-            await ctx.send(file=embedImage, embed=embed)
+            return await ctx.send(file=embedImage, embed=embed)
     
