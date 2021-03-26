@@ -1,5 +1,6 @@
 # Functions which are going to build the embed layout relative to the labels
 
+import sys
 import discord
 from discord.ext import commands
 from .json_labels import *
@@ -9,6 +10,8 @@ from .bot_config import *
 EMBED_CRAFTING_COLOR = 0x0a850e
 EMBED_LIST_COLOR = 0xe40101
 EMBED_HELP_COLOR = 0x000000
+
+task = None
 
 # Not used because of discord UI emoji issues
 # Get emoji message format from emoji json
@@ -65,22 +68,16 @@ def createBagDropPanel(npcList: list, bagList: list, bagDropList: list, bagDropD
 def embedSetFooter(embedPage: discord.Embed, embedText: str):
     embedPage.set_footer(text=embedText)
 
-async def embedSetReactions(ctx, bot: commands.Bot, botMessage, pageList: list):
+async def embedSetReactions(bot: commands.Bot, botMessage, pageList: list):
     await botMessage.add_reaction('◀')
     await botMessage.add_reaction('▶')
 
-    def checkEmoji(reaction, user):
+    def check(reaction, user):
         return user != botMessage.author and reaction.message.id == botMessage.id
 
-    def messageCheck(author):
-        def innerCheck(message):
-            return author == message.author
-        return innerCheck
-
     pageNumber = 0
-    authorMessage = None
     reaction = None
-    while not (authorMessage := await bot.wait_for('message', check=messageCheck(ctx.author), timeout=PAGE_REACTION_TIMEOUT)):
+    while True:
         if str(reaction) == '◀':
             if pageNumber > 0:
                 pageNumber -= 1
@@ -96,12 +93,12 @@ async def embedSetReactions(ctx, bot: commands.Bot, botMessage, pageList: list):
                 pageNumber = 0
                 await botMessage.edit(embed = pageList[pageNumber])
         try:
-            reaction, user = await bot.wait_for('reaction_add', check=checkEmoji)
+            reaction, user = await bot.wait_for('reaction_add', timeout=PAGE_REACTION_TIMEOUT, check=check)
             await botMessage.remove_reaction(reaction, user)
         except:
             break
+
     await botMessage.clear_reactions()
-    return authorMessage
 
 def checkImageFile(embedImage: discord.File):
     if embedImage:
@@ -140,10 +137,36 @@ async def sendMessage(ctx, bot: commands.Bot, embed: discord.Embed, commandArgum
         if type(embed) is list:
             botMessage = await ctx.send(file=embedImage, embed=embed[0])
 
+            def messageCheck(author):
+                def innerCheck(message):
+                    return author == message.author
+                return 
+
+            def RepresentsInt(s):
+                try: 
+                    int(s)
+                    return True
+                except ValueError:
+                    return False
+
+
             # Reactions to switch between pages
             if len(embed) > 1:
-                authorMessage = await embedSetReactions(ctx, bot, botMessage, embed)
-            return botMessage, authorMessage
+                global task
+                authorMessage = None
+                task = bot.loop.create_task(embedSetReactions(bot, botMessage, embed))
+
+                if sys._getframe().f_back.f_code.co_name == "list":
+                    embedSize = int(embed[0].fields[0].name.split(" ")[0])
+                    while True:
+                        authorMessage = await bot.wait_for('message', check=messageCheck(ctx.author), timeout=PAGE_REACTION_TIMEOUT)
+                        if RepresentsInt(authorMessage.content):
+                            if int(authorMessage.content) >= 0 and int(authorMessage.content) <= embedSize:
+                                task.cancel()
+                                task = None
+                                break
+                    return botMessage, authorMessage
+                else:
+                    await embedSetReactions(bot, botMessage, embed)
         else:
-            return await ctx.send(file=embedImage, embed=embed)
-    
+            await ctx.send(file=embedImage, embed=embed)
