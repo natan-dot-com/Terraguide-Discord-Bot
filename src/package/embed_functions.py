@@ -149,7 +149,6 @@ async def sendMessage(ctx, bot: commands.Bot, embed: discord.Embed, commandArgum
                 except ValueError:
                     return False
 
-
             # Reactions to switch between pages
             if len(embed) > 1:
                 global task

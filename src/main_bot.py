@@ -1,7 +1,6 @@
 from os import chdir
 import os
 from platform import system
-from package.bot_config import PAGE_DEFAULT_SIZE
 from package.json_labels import LABEL_NAME
 if system() == "Linux":
     chdir("../")
@@ -218,23 +217,27 @@ async def list(ctx, *args):
             if len(matchList[len(matchList)-1]) >= PAGE_DEFAULT_SIZE:
                 matchList.append([])
             matchCounter += 1
+
+            # matchTuple = (<Identifier>, <Item Name>)
             matchTuple = (str(matchCounter), itemInstance[LABEL_NAME])
             matchList[len(matchList)-1].append(matchTuple)
 
-    #for matchInstance in matchList:
-    #    matchCounter += len(matchInstance)
     if matchCounter == 0:
-        await ctx.send("No items were found containing " + commandStringInput)
+        await ctx.send("No items containing " + commandStringInput + " were found.")
         return NOT_FOUND
 
     listDescription = str(matchCounter) + " occurrencies found:\n"
+
+    # Tuple constants
+    ITEM_IDENTIFIER = 0
+    ITEM_NAME = 1
 
     # Pages creation within 12 lines each
     pageList = []
     for matchInstance in matchList:
         listMessage = ""
         for subInstance in matchInstance:
-            listMessage += "**" + subInstance[0] + ".** " + subInstance[1] + "\n"
+            listMessage += "**" + subInstance[ITEM_IDENTIFIER] + ".** " + subInstance[ITEM_NAME] + "\n"
 
         newPage = discord.Embed(title ="Search Info about '" + commandStringInput + "'", colour=discord.Colour.green())
         infoMessage = "Type the current match number to show all the information about it, guiding yourself by\
@@ -243,12 +246,16 @@ async def list(ctx, *args):
         embedSetFooter(newPage, "Page " + str(matchList.index(matchInstance) + 1) + "/" + str(len(matchList)))
         pageList.append(newPage)
 
+    # Wait until user's response
     botMessage, authorMessage = await sendMessage(ctx, bot, pageList, commandArgumentList=commandArgumentList)
-    if authorMessage == 0:
+    print(authorMessage)
+    if authorMessage.content == "0":
+        await authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
         return
 
+    # Invoke t.item based on the user's response
     itemPage = int(int(authorMessage.content)/PAGE_DEFAULT_SIZE)
-    chosenItemName = matchList[itemPage][int(authorMessage.content)-itemPage*PAGE_DEFAULT_SIZE-1][1]
+    chosenItemName = matchList[itemPage][int(authorMessage.content)-itemPage*PAGE_DEFAULT_SIZE-1][ITEM_NAME]
     await ctx.invoke(bot.get_command('item'), chosenItemName)
 
 # Shows crafting information
@@ -299,7 +306,7 @@ async def craft(ctx, *args):
             ingredientId = int(ingredients[ingredientIndex][INGREDIENT_NAME])
             ingredientQuantity = ingredients[ingredientIndex][INGREDIENT_QUANTITY]
             outputMessage += "{} ({})\n".format(itemList[ingredientId-1][LABEL_NAME], ingredientQuantity)
-        outputMessage += "Producing {} units.".format(resultQuantity)
+        outputMessage += "Producing {} unit(s).".format(resultQuantity)
         embedInsertField(embedPage, outputMessage, outputDescription, inline=False)
 
     #Send Message
