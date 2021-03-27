@@ -125,13 +125,13 @@ async def item(ctx, *args):
     embedList = []
 
     itemName = itemList[int(itemID)-1][LABEL_NAME]
-    imageFilename = itemName.replace(" ", "_") + STATIC_IMAGE_EXT
-    dominantImageColor = pickDominantColor(imageFilename)
+    imageFileName = itemName.replace(" ", "_").lower() + getImageExt(GLOBAL_IMAGE_PATH, itemName.replace(" ", "_").lower())
+    dominantImageColor = pickDominantColor(imageFileName)
     hasSource = False
 
     # Main info embed panel construction
     mainPage = discord.Embed(color=dominantImageColor, title="General informations about '" + itemName + "':")
-    mainImage = discord.File(GLOBAL_IMAGE_PATH + imageFilename, filename="image.png")
+    mainImage = discord.File(GLOBAL_IMAGE_PATH + imageFileName, filename="image.png")
     mainPage.set_thumbnail(url="attachment://image.png")
 
     exceptionLabels = [LABEL_ITEM_ID]
@@ -262,7 +262,6 @@ async def list(ctx, *args):
 async def craft(ctx, *args):
 
     commandArgumentList, commandStringInput = getCommandArguments(args)
-    #arg = " ".join(args)
     if ctx.author == bot.user or not commandStringInput:
         return
     if commandArgumentList == ERROR_INVALID_FLAG:
@@ -295,10 +294,10 @@ async def craft(ctx, *args):
     itemType = itemList[int(itemID)-1][LABEL_TYPE]
     itemFilePath = GLOBAL_JSON_PATH + DIR_ITEMS_DATA + itemFileManager[itemType] + JSON_EXT
     itemName = itemList[int(itemID)-1][LABEL_NAME]
-    imageFilename = itemName.replace(" ", "_").lower() + STATIC_IMAGE_EXT
-    dominantImageColor = pickDominantColor(imageFilename)
+    imageFileName = itemName.replace(" ", "_").lower() + getImageExt(GLOBAL_IMAGE_PATH, itemName.replace(" ", "_").lower())
+    dominantImageColor = pickDominantColor(imageFileName)
     craftTitle = "Craft information about '{}':".format(itemName)
-    embedImage = discord.File(GLOBAL_IMAGE_PATH + imageFilename, filename="image.png")
+    embedImage = discord.File(GLOBAL_IMAGE_PATH + imageFileName, filename="image.png")
     itemDict = binarySearch(LoadJSONFile(itemFilePath), itemID)
 
     embedPage = discord.Embed(color=dominantImageColor, title=craftTitle)
@@ -361,7 +360,7 @@ async def set(ctx, *args):
     setDict = setList[int(setID)-1]
     setName = setDict[LABEL_SET_NAME]
     setPieces = setDict[LABEL_SET_PIECES]
-    #imageFileName = setName.replace(" ", "_").lower() + STATIC_IMAGE_EXT
+    #imageFileName = setName.replace(" ", "_").lower() + getImageExt(GLOBAL_IMAGE_PATH, setName.replace(" ", "_").lower())
     #dominantImageColor = pickDominantColor(imageFileName)
     setTitle = "General Information about '{}' set:".format(setName)
 
@@ -448,19 +447,10 @@ async def rarity(ctx, *args):
             return
 
         rarityTitle = "Information about '{}' Rarity:".format(commandStringInput)
+        rarityName = rarityDict[LABEL_RARITY_TIER]
         rarityImagePath = GLOBAL_JSON_PATH + DIR_ID_REFERENCES + IMAGE_DIR_RARITY
-
-        testFile = None
-        try:
-            testFile = open(rarityImagePath + rarityDict[LABEL_RARITY_TIER].replace(" ", "_") + STATIC_IMAGE_EXT)
-            imageFileName = rarityDict[LABEL_RARITY_TIER].replace(" ", "_") + STATIC_IMAGE_EXT
-            imageExt = STATIC_IMAGE_EXT
-        except IOError:
-            testFile = open(rarityImagePath + rarityDict[LABEL_RARITY_TIER].replace(" ", "_") + DYNAMIC_IMAGE_EXT)
-            imageFileName = rarityDict[LABEL_RARITY_TIER].replace(" ", "_") + DYNAMIC_IMAGE_EXT
-            imageExt = DYNAMIC_IMAGE_EXT
-        finally:
-            testFile.close()
+        imageExt = getImageExt(rarityImagePath, rarityName.replace(" ", "_").lower())
+        imageFileName = rarityName.replace(" ", "_").lower() + imageExt
 
         embedImage = discord.File(rarityImagePath + imageFileName, filename="image" + imageExt)
         dominantImageColor = pickDominantColor(imageFileName, imagePath=rarityImagePath)
@@ -528,7 +518,7 @@ async def npc(ctx, *args):
         return ERROR_DATASET_INCONSISTENCE
 
     imageFilePath = GLOBAL_JSON_PATH + DIR_NPC_DATA + DIR_NPC_SPRITES
-    imageFileName = npcName.replace(" ", "_").lower() + STATIC_IMAGE_EXT
+    imageFileName = npcName.replace(" ", "_").lower() + getImageExt(imageFilePath, npcName.replace(" ", "_").lower())
     dominantImageColor = pickDominantColor(imageFileName, imagePath=imageFilePath)
     npcTitle = "General Information about '{}' NPC:".format(npcName)
     sellingListTitle = "Items sold by {}:".format(npcName)

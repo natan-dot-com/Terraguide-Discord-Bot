@@ -36,6 +36,19 @@ def pickDominantColor(imageFilename, imagePath=GLOBAL_IMAGE_PATH):
     hexcode = "0x" + rgb2hex(dominant_color[0], dominant_color[1], dominant_color[2])[1::]
     return int(hexcode, 16)
 
+def getImageExt(imageFilePath, imageFileName):
+    file = None
+    try:
+        file = open(imageFilePath + imageFileName + STATIC_IMAGE_EXT)
+        imageExt = STATIC_IMAGE_EXT
+    except IOError:
+        file = open(imageFilePath + imageFileName + DYNAMIC_IMAGE_EXT)
+        imageExt = DYNAMIC_IMAGE_EXT
+    finally:
+        file.close()
+        return imageExt
+    
+
 def getGuildEmojiByName(emojiName, guildEmojis):
     for guildEmoji in guildEmojis:
         if emojiName == str(guildEmoji.name):
