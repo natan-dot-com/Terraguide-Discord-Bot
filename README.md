@@ -33,7 +33,7 @@ sudo apt install python3-pip
 ```
 in any Ubuntu-based distribution.
 
-All the libraries can be installed using ```pip``` running the following command from any Linux-based terminal
+All the libraries can be installed using ```pip``` running the following command from any Linux-based shell
 ```
 pip install discord.py levenshtein colorthief colormap
 ```

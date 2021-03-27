@@ -1,6 +1,6 @@
 from .json_labels import *
-# Search algorithms
 
+# Search algorithms
 NOT_FOUND = -1
 
 def __binarySearching(searchList, searchValue, firstElement, lastElement, label=LABEL_ITEM_ID):

@@ -98,20 +98,22 @@ async def item(ctx, *args):
     itemID = itemHash.search(commandStringInput, LABEL_ID)
     if itemID == NOT_FOUND:
         titleMessage = "Couldn't find item '" + commandStringInput + "' in the data base."
-        errorEmbed = discord.Embed(title=titleMessage, color=0xFFFFFF)
-
-        notFoundTitle =  "Didn't you mean...?"
-        notFoundMessage = ""
-        similarStrings = getSimilarStrings(commandStringInput, itemList)
-        if similarStrings:
-            for string in similarStrings:
-                notFoundMessage += string + "\n"
-        else:
-            notFoundMessage = "Couldn't retrieve any suggestions from data base."
-        errorEmbed.add_field(name=notFoundTitle, value=notFoundMessage)
+        errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, itemList)
         await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
 
-        return ERROR_ITEM_NOT_FOUND
+        def check(author):
+            def innerCheck(message):
+                return author == message.author
+            return innerCheck
+
+        authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
+        if authorMessage.content == "0":
+            authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
+            return ERROR_ITEM_NOT_FOUND
+        
+        correctItem = similarStrings[int(authorMessage.content)-1][1]
+        await ctx.invoke(bot.get_command('item'), correctItem)
+        return
 
     # Gets respective item info dictionary
     itemType = itemList[int(itemID)-1][LABEL_TYPE]
@@ -200,7 +202,6 @@ async def item(ctx, *args):
 async def list(ctx, *args):
 
     commandArgumentList, commandStringInput = getCommandArguments(args)
-    #arg = " ".join(args)
     if ctx.author == bot.user or not commandStringInput:
         return
     if commandArgumentList == ERROR_INVALID_FLAG:
@@ -275,10 +276,23 @@ async def craft(ctx, *args):
     # Finds input in hash table
     itemID = itemHash.search(commandStringInput, LABEL_ID)
     if itemID == NOT_FOUND:
-        craftTitle = "Can't find item '{}' in data base.".format(commandStringInput)
-        embedMessage = getSimilarStringEmbed(craftTitle, commandStringInput.lower(), itemList, label=LABEL_NAME)
-        await ctx.send(embed=embedMessage)
-        return ERROR_ITEM_NOT_FOUND
+        titleMessage = "Couldn't find item '" + commandStringInput + "' in the data base."
+        errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, itemList)
+        await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
+
+        def check(author):
+            def innerCheck(message):
+                return author == message.author
+            return innerCheck
+
+        authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
+        if authorMessage.content == "0":
+            authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
+            return ERROR_ITEM_NOT_FOUND
+        
+        correctItem = similarStrings[int(authorMessage.content)-1][1]
+        await ctx.invoke(bot.get_command('item'), correctItem)
+        return
 
     itemType = itemList[int(itemID)-1][LABEL_TYPE]
     itemFilePath = GLOBAL_JSON_PATH + DIR_ITEMS_DATA + itemFileManager[itemType] + JSON_EXT
@@ -327,11 +341,24 @@ async def set(ctx, *args):
 
     #Find input in hash table
     setID = setHash.search(commandStringInput, LABEL_ID)
-    if setID == -1:
-        setTitle = "Can't find set '{}' in data base.".format(commandStringInput)
-        embedMessage = getSimilarStringEmbed(setTitle, commandStringInput.lower(), setList, label=LABEL_SET_NAME)
-        await ctx.send(embed=embedMessage)
-        return ERROR_SET_NOT_FOUND
+    if setID == NOT_FOUND:
+        titleMessage = "Couldn't find item '" + commandStringInput + "' in the data base."
+        errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, setList, label=LABEL_SET_NAME)
+        await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
+
+        def check(author):
+            def innerCheck(message):
+                return author == message.author
+            return innerCheck
+
+        authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
+        if authorMessage.content == "0":
+            authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
+            return ERROR_ITEM_NOT_FOUND
+        
+        correctSet = similarStrings[int(authorMessage.content)-1][1]
+        await ctx.invoke(bot.get_command('set'), correctSet)
+        return
 
     setDict = setList[int(setID)-1]
     setName = setDict[LABEL_SET_NAME]
@@ -397,20 +424,34 @@ async def rarity(ctx, *args):
 
         # Send Message
         await sendMessage(ctx, bot, embedPageList, commandArgumentList=commandArgumentList)
+
     else:
         print("User '{}' has requested rarity information about '{}'.".format(str(ctx.author), commandStringInput))
 
         rarityDict = linearSearch(rarityList, LABEL_RARITY_TIER, commandStringInput.lower())
         if rarityDict == NOT_FOUND:
-            rarityTitle = "Rarity Tier '{}' was not found in database.".format(commandStringInput)
-            print(rarityTitle)
-            embedMessage = getSimilarStringEmbed(rarityTitle, commandStringInput.lower(), rarityList, label=LABEL_RARITY_TIER)
-            await ctx.send(embed=embedMessage)
+            titleMessage = "Couldn't find rarity tier '" + commandStringInput + "' in the data base."
+            errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, rarityList, label=LABEL_RARITY_TIER)
+            print(similarStrings)
+            await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
+
+            def check(author):
+                def innerCheck(message):
+                    return author == message.author
+                return innerCheck
+
+            authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
+            if authorMessage.content == "0":
+                authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
+                return ERROR_ITEM_NOT_FOUND
+            
+            correctTier = similarStrings[int(authorMessage.content)-1][1]
+            await ctx.invoke(bot.get_command('rarity'), correctTier)
             return
 
         rarityTitle = "Information about '{}' Rarity:".format(commandStringInput)
         rarityImagePath = GLOBAL_JSON_PATH + DIR_ID_REFERENCES + IMAGE_DIR_RARITY
-        imageFileName = rarityDict[LABEL_RARITY_TIER].replace(" ", "_").lower() + STATIC_IMAGE_EXT
+        imageFileName = rarityDict[LABEL_RARITY_TIER].replace(" ", "_") + STATIC_IMAGE_EXT
         embedImage = discord.File(rarityImagePath + imageFileName, filename="image.png")
         dominantImageColor = pickDominantColor(imageFileName, imagePath=rarityImagePath)
         embedPage = discord.Embed(color=dominantImageColor, title=rarityTitle)
@@ -437,14 +478,28 @@ async def npc(ctx, *args):
         
     print("User {} has requested npc information about {}.".format(str(ctx.author), commandStringInput))
 
-    #Find input in hash table
+    # Find input in hash table
     npcID = npcHash.search(commandStringInput, NPC_ID)
-    if npcID == -1:
-        npcTitle = "Can't find npc '{}' in data base.".format(commandStringInput)
-        embedMessage = getSimilarStringEmbed(npcTitle, commandStringInput.lower(), npcList, label=LABEL_NAME)
-        await ctx.send(embed=embedMessage)
-        return ERROR_SET_NOT_FOUND
-    #Will be supported after enemy npcs drops update on dataset
+    if npcID == NOT_FOUND:
+        titleMessage = "Couldn't find NPC '" + commandStringInput + "' in the data base."
+        errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, npcList, label=LABEL_NAME)
+        await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
+
+        def check(author):
+            def innerCheck(message):
+                return author == message.author
+            return innerCheck
+
+        authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
+        if authorMessage.content == "0":
+            authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
+            return ERROR_ITEM_NOT_FOUND
+        
+        correctNPC = similarStrings[int(authorMessage.content)-1][1]
+        await ctx.invoke(bot.get_command('npc'), correctNPC)
+        return
+
+    # Will be supported after enemy npcs drops update on dataset
     elif npcList[int(npcID)-1][LABEL_TYPE] != "Town NPC":
         await ctx.send("NPC type not supported yet.")
         return
