@@ -24,14 +24,20 @@ def getRarityEmoji(rarityTier):
     else:
         return rarityTier
 
+# Insert a field info on embed variable
 def embedInsertField(embedPage: discord.Embed, dictValue: str, dictLabel: str, inline=False):
     embedPage.add_field(name=dictLabel, value=dictValue, inline=inline)
 
+# Insert the rarity tier of a given rarity ID on embed variable
 def embedInsertRarityField(embedPage: discord.Embed, rarityID: int, rarityList: list, inline=True):
     for rarityInstance in rarityList:
         if rarityInstance[LABEL_RARITY_ID] == rarityID:
             embedInsertField(embedPage, rarityInstance[LABEL_RARITY_TIER], LABEL_RARITY_TIER, inline=inline)
             return
+
+# Insert a footer on embed
+def embedSetFooter(embedPage: discord.Embed, embedText: str):
+    embedPage.set_footer(text=embedText)
 
 # Builds the recipe's panel UI inside a discord embed class
 def createRecipesPanel(itemList: list, tableList: list, recipesList: list, recipeDict, recipeEmbed: discord.Embed):
@@ -65,9 +71,7 @@ def createBagDropPanel(npcList: list, bagList: list, bagDropList: list, bagDropD
             ".\n It commonly drops " + bagDropInfo[BAG_DROP_QUANTITY] + " instance(s)."
         embedInsertField(newEmbed, fieldMessage, fieldName, inline=False)
 
-def embedSetFooter(embedPage: discord.Embed, embedText: str):
-    embedPage.set_footer(text=embedText)
-
+# Add reactions on embed message to let the user navigate between pages infos
 async def embedSetReactions(bot: commands.Bot, botMessage, pageList: list):
     await botMessage.add_reaction('◀')
     await botMessage.add_reaction('▶')
@@ -100,6 +104,7 @@ async def embedSetReactions(bot: commands.Bot, botMessage, pageList: list):
 
     await botMessage.clear_reactions()
 
+# Opens a embed file image if it is closed
 def checkImageFile(embedImage: discord.File):
     if embedImage:
         if embedImage.fp.closed:
@@ -111,7 +116,7 @@ def checkImageFile(embedImage: discord.File):
 # If command arguments are passed, it will treat the message acording to the arguments
 async def sendMessage(ctx, bot: commands.Bot, embed: discord.Embed, commandArgumentList=[], embedImage=None):
 
-    # Message will be sent as private
+    # FLAG_PRIVATE -> Message will be sent to user DM
     if FLAG_PRIVATE in commandArgumentList:
         if type(embed) is list:
             for embedInstance in embed:
@@ -122,7 +127,7 @@ async def sendMessage(ctx, bot: commands.Bot, embed: discord.Embed, commandArgum
             await ctx.author.send(file=embedImage, embed=embed)
         await ctx.message.add_reaction(EMOJI_WHITE_CHECK_MARK)
 
-    # Message will be sent without pages on the server
+    # FLAG_LINEAR -> Message will be sent without pages on the server
     elif FLAG_LINEAR in commandArgumentList:
         if type(embed) is list:
             for embedInstance in embed:
@@ -149,18 +154,24 @@ async def sendMessage(ctx, bot: commands.Bot, embed: discord.Embed, commandArgum
                 except ValueError:
                     return False
 
-            # Reactions to switch between pages
+            # Check if there are more than one page
             if len(embed) > 1:
                 global task
                 authorMessage = None
+                # Reactions to switch between pages
                 task = bot.loop.create_task(embedSetReactions(bot, botMessage, embed))
 
+                # Check if function's caller was 'list'
                 if sys._getframe().f_back.f_code.co_name == "list":
-                    embedSize = int(embed[0].fields[0].name.split(" ")[0])
+
+                    # Get number of items found
+                    listSize = int(embed[0].fields[0].name.split(" ")[0])
+
+                    # Wait for user's answer until they type a valid number
                     while True:
                         authorMessage = await bot.wait_for('message', check=messageCheck(ctx.author), timeout=PAGE_REACTION_TIMEOUT)
                         if RepresentsInt(authorMessage.content):
-                            if int(authorMessage.content) >= 0 and int(authorMessage.content) <= embedSize:
+                            if int(authorMessage.content) >= 0 and int(authorMessage.content) <= listSize:
                                 task.cancel()
                                 task = None
                                 break

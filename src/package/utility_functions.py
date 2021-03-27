@@ -4,6 +4,7 @@ from .bot_config import *
 from colorthief import ColorThief
 from colormap import rgb2hex
 
+# Get all input flags
 def getCommandArgumentList(commandArgument):
     commandArgumentList = []
     for argument in commandArgument[1:]:
@@ -17,6 +18,7 @@ def getCommandArgumentList(commandArgument):
             return ERROR_INVALID_FLAG
     return commandArgumentList
 
+# Returns a list of flags and the input string
 def getCommandArguments(args):
     commandArgumentList = []
     commandStringInput = ""
@@ -31,11 +33,13 @@ def getCommandArguments(args):
  
     return commandArgumentList, commandStringInput
 
+# Library function to get the dominant color of a given file
 def pickDominantColor(imageFilename, imagePath=GLOBAL_IMAGE_PATH):
     dominant_color = ColorThief(imagePath + imageFilename).get_color(quality=1)
     hexcode = "0x" + rgb2hex(dominant_color[0], dominant_color[1], dominant_color[2])[1::]
     return int(hexcode, 16)
 
+# Get the image extension of a given file
 def getImageExt(imageFilePath, imageFileName):
     file = None
     try:
@@ -48,7 +52,7 @@ def getImageExt(imageFilePath, imageFileName):
         file.close()
         return imageExt
     
-
+# Get an existent emoji on server by its name
 def getGuildEmojiByName(emojiName, guildEmojis):
     for guildEmoji in guildEmojis:
         if emojiName == str(guildEmoji.name):

@@ -208,10 +208,11 @@ async def item(ctx, *args):
         mainPage.set_footer(text=PAGE_ALERT_MESSAGE.format('1', str(1+len(nonEmptyLists))))
     await sendMessage(ctx, bot, embedList, embedImage=mainImage, commandArgumentList=commandArgumentList)
 
-# Shows a list of  every item which starts with 'arg'
+# Shows a list of  every item which starts with user input argument
 @bot.command()
 async def list(ctx, *args):
 
+    # Get arguments and flags
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
         await ctx.send("{} t.list's argument can't be empty.".format(ctx.author.mention))
@@ -220,11 +221,11 @@ async def list(ctx, *args):
         await ctx.send(FLAG_ERROR_MESSAGE)
         return ERROR_INVALID_FLAG
 
-    print("User {} has requested a craft recipe for {}.".format(str(ctx.author), commandStringInput))
+    print("User {} has requested a list of items starting with '{}'.".format(str(ctx.author), commandStringInput))
     matchCounter = 0
     matchList = [[]]
 
-    #Regex usage to find every match of the input
+    # Regex usage to find every match of the input
     for itemInstance in itemList:
         if re.search("^" + commandStringInput + "+", itemInstance[LABEL_NAME], re.IGNORECASE):
             if len(matchList[len(matchList)-1]) >= PAGE_DEFAULT_SIZE:
@@ -274,6 +275,7 @@ async def list(ctx, *args):
 @bot.command()
 async def craft(ctx, *args):
 
+    # Get arguments and flags
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
         await ctx.send("{} t.craft's argument can't be empty.".format(ctx.author.mention))
@@ -282,11 +284,12 @@ async def craft(ctx, *args):
         await ctx.send(FLAG_ERROR_MESSAGE)
         return ERROR_INVALID_FLAG
 
-    print("User {} has requested a craft recipe for {}.".format(str(ctx.author), commandStringInput))
+    print("User {} has requested a craft recipe for '{}'.".format(str(ctx.author), commandStringInput))
 
     # Finds input in hash table
     itemID = itemHash.search(commandStringInput, LABEL_ID)
     if itemID == NOT_FOUND:
+        # If not found, get similar item names
         titleMessage = "Couldn't find item '" + commandStringInput + "' in the data base."
         errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, itemList)
         await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
@@ -308,19 +311,19 @@ async def craft(ctx, *args):
     itemType = itemList[int(itemID)-1][LABEL_TYPE]
     itemFilePath = GLOBAL_JSON_PATH + DIR_ITEMS_DATA + itemFileManager[itemType] + JSON_EXT
     itemName = itemList[int(itemID)-1][LABEL_NAME]
+    itemDict = binarySearch(LoadJSONFile(itemFilePath), itemID)
 
     imageExt = getImageExt(GLOBAL_IMAGE_PATH, itemName.replace(" ", "_"))
     imageFileName = itemName.replace(" ", "_") + imageExt
-
     dominantImageColor = pickDominantColor(imageFileName)
     craftTitle = "Craft information about '{}':".format(itemName)
-    embedImage = discord.File(GLOBAL_IMAGE_PATH + imageFileName, filename="image." + imageExt)
-    itemDict = binarySearch(LoadJSONFile(itemFilePath), itemID)
 
+    embedImage = discord.File(GLOBAL_IMAGE_PATH + imageFileName, filename="image." + imageExt)
     embedPage = discord.Embed(color=dominantImageColor, title=craftTitle)
     embedPage.set_thumbnail(url="attachment://image." + imageExt)
 
     itemRecipes = itemDict[LABEL_SOURCE][SOURCE_RECIPES]
+    # Get crafting recipes
     for craftingRecipeIndex in range(len(itemRecipes)):
         ingredients = recipesList[int(itemRecipes[craftingRecipeIndex])-1][RECIPE_IDENTITY]
         resultQuantity = recipesList[int(itemRecipes[craftingRecipeIndex])-1][RECIPE_RESULT_QUANTITY]
@@ -329,7 +332,7 @@ async def craft(ctx, *args):
         outputDescription = "Made in {} using:".format(tableName)
         outputMessage = ""
 
-        #Get ingredients infos
+        # Get ingredients' infos
         for ingredientIndex in range(len(ingredients)):
             ingredientId = int(ingredients[ingredientIndex][INGREDIENT_NAME])
             ingredientQuantity = ingredients[ingredientIndex][INGREDIENT_QUANTITY]
@@ -344,6 +347,7 @@ async def craft(ctx, *args):
 @bot.command()
 async def set(ctx, *args):
 
+    # Get arguments and flags
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
         await ctx.send("{} t.set's argument can't be empty.".format(ctx.author.mention))
@@ -357,6 +361,7 @@ async def set(ctx, *args):
     #Find input in hash table
     setID = setHash.search(commandStringInput, LABEL_ID)
     if setID == NOT_FOUND:
+        # If not found, get similar set names
         titleMessage = "Couldn't find item '" + commandStringInput + "' in the data base."
         errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, setList, label=LABEL_SET_NAME)
         await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
@@ -366,6 +371,7 @@ async def set(ctx, *args):
                 return author == message.author
             return innerCheck
 
+        # Wait for user's answer to get the correct search result
         authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
         if authorMessage.content == "0":
             authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
@@ -386,8 +392,9 @@ async def set(ctx, *args):
 
     #embedImage = discord.File(GLOBAL_IMAGE_PATH + imageFileName, filename="image." + imageExt)
     embedPage = discord.Embed(color=0x0a850e, title=setTitle) #will be updated with dominantImageColor
-    embedPage.set_thumbnail(url="attachment://image." + imageExt)
+    #embedPage.set_thumbnail(url="attachment://image." + imageExt)
 
+    # Get fields containing informations about set
     for setCategory in setDict.keys():
         if setCategory == LABEL_RARITY:
             embedInsertRarityField(embedPage, setDict[setCategory], rarityList, inline=False)
@@ -407,6 +414,7 @@ async def set(ctx, *args):
 @bot.command()
 async def rarity(ctx, *args):
 
+    # Get arguments and flags
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user:
         return
@@ -425,6 +433,7 @@ async def rarity(ctx, *args):
         rarityTitle = "Information about all Terraria Rarity Tiers:"
         embedPageList = []
         for rarityInstance in rarityList:
+            # Check Page counter variable
             if rarityModuleCounter == rarityPageItemsCount:
                 rarityModuleCounter = 0
             if rarityModuleCounter == 0:
@@ -441,12 +450,14 @@ async def rarity(ctx, *args):
 
         # Send Message
         await sendMessage(ctx, bot, embedPageList, commandArgumentList=commandArgumentList)
-
+    # Get a specific rarity tier
     else:
         print("User '{}' has requested rarity information about '{}'.".format(str(ctx.author), commandStringInput))
 
+        # Search to find rarity tier
         rarityDict = linearSearch(rarityList, LABEL_RARITY_TIER, commandStringInput)
         if rarityDict == NOT_FOUND:
+            # If not found, get similar rarity tier names
             titleMessage = "Couldn't find rarity tier '" + commandStringInput + "' in the data base."
             errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, rarityList, label=LABEL_RARITY_TIER)
             print(similarStrings)
@@ -457,6 +468,7 @@ async def rarity(ctx, *args):
                     return author == message.author
                 return innerCheck
 
+            # Wait for user's answer to get the correct search result
             authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
             if authorMessage.content == "0":
                 authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
@@ -472,11 +484,11 @@ async def rarity(ctx, *args):
         imageExt = getImageExt(rarityImagePath, rarityName.replace(" ", "_"))
         imageFileName = rarityName.replace(" ", "_") + imageExt
 
+        # Embed variables
         embedImage = discord.File(rarityImagePath + imageFileName, filename="image" + imageExt)
         dominantImageColor = pickDominantColor(imageFileName, imagePath=rarityImagePath)
         embedPage = discord.Embed(color=dominantImageColor, title=rarityTitle)
         embedPage.set_thumbnail(url="attachment://image" + imageExt)
-
         rarityLabel = rarityDict[LABEL_RARITY_TIER]
         rarityValue = rarityDict[LABEL_RARITY_DESC]
         embedInsertField(embedPage, rarityValue, rarityLabel, inline=False)
@@ -487,6 +499,7 @@ async def rarity(ctx, *args):
 @bot.command()
 async def npc(ctx, *args):
 
+    # Get arguments and flags
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user:
         return
@@ -502,6 +515,7 @@ async def npc(ctx, *args):
     # Find input in hash table
     npcID = npcHash.search(commandStringInput, NPC_ID)
     if npcID == NOT_FOUND:
+        # If not found, get similar NPC names
         titleMessage = "Couldn't find NPC '" + commandStringInput + "' in the data base."
         errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, npcList, label=LABEL_NAME)
         await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
@@ -511,6 +525,7 @@ async def npc(ctx, *args):
                 return author == message.author
             return innerCheck
 
+        # Wait for user's answer to get the correct search result
         authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
         if authorMessage.content == "0":
             authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
@@ -546,12 +561,13 @@ async def npc(ctx, *args):
     npcTitle = "General Information about '{}' NPC:".format(npcName)
     sellingListTitle = "Items sold by {}:".format(npcName)
 
-    embedImage = discord.File(imageFilePath + imageFileName, filename="image." + imageExt)
 
     # First Page with general info about the NPC
+    embedImage = discord.File(imageFilePath + imageFileName, filename="image." + imageExt)
     embedGeneralInfoPage = discord.Embed(color=dominantImageColor, title=npcTitle)
     embedGeneralInfoPage.set_thumbnail(url="attachment://image." + imageExt)
 
+    # Get fields containing informations about NPC
     for npcCategory in npcTownDict.keys():
         if npcCategory == NPC_SELLING_LIST:
             break
@@ -563,7 +579,7 @@ async def npc(ctx, *args):
     # If has selling list then get infos
     if npcTownDict[NPC_SELLING_LIST]:
 
-        # Put footer because there will be more than 1 page
+        # Put footer because there will be more than one page
         npcTotalPages = math.ceil(len(npcTownDict[NPC_SELLING_LIST]) / PAGE_NPC_ITEMS_COUNT) + 1
         embedSetFooter(embedGeneralInfoPage, PAGE_ALERT_MESSAGE.format(1, npcTotalPages))
         npcPageList.append(embedGeneralInfoPage)
