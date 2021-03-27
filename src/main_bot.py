@@ -1,7 +1,6 @@
 from os import chdir
 import os
 from platform import system
-from package.json_labels import LABEL_NAME
 if system() == "Linux":
     chdir("../")
 
@@ -249,7 +248,6 @@ async def list(ctx, *args):
 
     # Wait until user's response
     botMessage, authorMessage = await sendMessage(ctx, bot, pageList, commandArgumentList=commandArgumentList)
-    print(authorMessage)
     if authorMessage.content == "0":
         await authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
         return
@@ -451,11 +449,23 @@ async def rarity(ctx, *args):
 
         rarityTitle = "Information about '{}' Rarity:".format(commandStringInput)
         rarityImagePath = GLOBAL_JSON_PATH + DIR_ID_REFERENCES + IMAGE_DIR_RARITY
-        imageFileName = rarityDict[LABEL_RARITY_TIER].replace(" ", "_") + STATIC_IMAGE_EXT
-        embedImage = discord.File(rarityImagePath + imageFileName, filename="image.png")
+
+        testFile = None
+        try:
+            testFile = open(rarityImagePath + rarityDict[LABEL_RARITY_TIER].replace(" ", "_") + STATIC_IMAGE_EXT)
+            imageFileName = rarityDict[LABEL_RARITY_TIER].replace(" ", "_") + STATIC_IMAGE_EXT
+            imageExt = STATIC_IMAGE_EXT
+        except IOError:
+            testFile = open(rarityImagePath + rarityDict[LABEL_RARITY_TIER].replace(" ", "_") + DYNAMIC_IMAGE_EXT)
+            imageFileName = rarityDict[LABEL_RARITY_TIER].replace(" ", "_") + DYNAMIC_IMAGE_EXT
+            imageExt = DYNAMIC_IMAGE_EXT
+        finally:
+            testFile.close()
+
+        embedImage = discord.File(rarityImagePath + imageFileName, filename="image" + imageExt)
         dominantImageColor = pickDominantColor(imageFileName, imagePath=rarityImagePath)
         embedPage = discord.Embed(color=dominantImageColor, title=rarityTitle)
-        embedPage.set_thumbnail(url="attachment://image.png")
+        embedPage.set_thumbnail(url="attachment://image" + imageExt)
 
         rarityLabel = rarityDict[LABEL_RARITY_TIER]
         rarityValue = rarityDict[LABEL_RARITY_DESC]
