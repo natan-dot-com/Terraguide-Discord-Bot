@@ -38,8 +38,17 @@ npcHash = loadDependencies(npcList, NPC_HASH_SIZE, LABEL_NAME)
 
 @bot.event
 async def on_ready():
+
     print('We have logged in as {0.user}'.format(bot))
     await bot.change_presence(activity=discord.Game(name=BOT_CONFIG_PREFIX + "help"))
+
+@bot.event
+async def on_command_error(ctx, error):
+
+    if isinstance(error, commands.CommandNotFound):
+        await ctx.send("**" + ctx.message.content + "**: Couldn't retrieve any command from the one given.")
+    else:
+        raise error
 
 @bot.command()
 async def quest(ctx, *args):
