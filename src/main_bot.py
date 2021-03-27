@@ -1,3 +1,4 @@
+from logging import ERROR
 from os import chdir
 import os
 from platform import system
@@ -87,6 +88,7 @@ async def item(ctx, *args):
 
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
+        await ctx.send("{} t.item's argument can't be empty.".format(ctx.author.mention))
         return ERROR_ARG_NOT_FOUND
     if commandArgumentList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
@@ -125,14 +127,15 @@ async def item(ctx, *args):
     embedList = []
 
     itemName = itemList[int(itemID)-1][LABEL_NAME]
-    imageFileName = itemName.replace(" ", "_").lower() + getImageExt(GLOBAL_IMAGE_PATH, itemName.replace(" ", "_").lower())
+    imageExt = getImageExt(GLOBAL_IMAGE_PATH, itemName.replace(" ", "_"))
+    imageFileName = itemName.replace(" ", "_") + imageExt
     dominantImageColor = pickDominantColor(imageFileName)
     hasSource = False
 
     # Main info embed panel construction
     mainPage = discord.Embed(color=dominantImageColor, title="General informations about '" + itemName + "':")
-    mainImage = discord.File(GLOBAL_IMAGE_PATH + imageFileName, filename="image.png")
-    mainPage.set_thumbnail(url="attachment://image.png")
+    mainImage = discord.File(GLOBAL_IMAGE_PATH + imageFileName, filename="image." + imageExt)
+    mainPage.set_thumbnail(url="attachment://image." + imageExt)
 
     exceptionLabels = [LABEL_ITEM_ID]
     for itemCategory in itemDict.keys():
@@ -188,7 +191,7 @@ async def item(ctx, *args):
                 embedInsertField(mainPage, itemDict[LABEL_SOURCE][SOURCE_OTHER], fieldTitle, inline=False)
 
             if newEmbed:
-                newEmbed.set_thumbnail(url="attachment://image.png")
+                newEmbed.set_thumbnail(url="attachment://image." + imageExt)
                 newEmbed.set_footer(text=PAGE_ALERT_MESSAGE.format(str(2+nonEmptyLists.index(existentCategory)),str(1+len(nonEmptyLists))))
                 embedList.append(newEmbed)
 
@@ -202,7 +205,8 @@ async def list(ctx, *args):
 
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
-        return
+        await ctx.send("{} t.list's argument can't be empty.".format(ctx.author.mention))
+        return ERROR_ARG_NOT_FOUND
     if commandArgumentList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
         return ERROR_INVALID_FLAG
@@ -263,7 +267,8 @@ async def craft(ctx, *args):
 
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
-        return
+        await ctx.send("{} t.craft's argument can't be empty.".format(ctx.author.mention))
+        return ERROR_ARG_NOT_FOUND
     if commandArgumentList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
         return ERROR_INVALID_FLAG
@@ -294,14 +299,17 @@ async def craft(ctx, *args):
     itemType = itemList[int(itemID)-1][LABEL_TYPE]
     itemFilePath = GLOBAL_JSON_PATH + DIR_ITEMS_DATA + itemFileManager[itemType] + JSON_EXT
     itemName = itemList[int(itemID)-1][LABEL_NAME]
-    imageFileName = itemName.replace(" ", "_").lower() + getImageExt(GLOBAL_IMAGE_PATH, itemName.replace(" ", "_").lower())
+
+    imageExt = getImageExt(GLOBAL_IMAGE_PATH, itemName.replace(" ", "_"))
+    imageFileName = itemName.replace(" ", "_") + imageExt
+
     dominantImageColor = pickDominantColor(imageFileName)
     craftTitle = "Craft information about '{}':".format(itemName)
-    embedImage = discord.File(GLOBAL_IMAGE_PATH + imageFileName, filename="image.png")
+    embedImage = discord.File(GLOBAL_IMAGE_PATH + imageFileName, filename="image." + imageExt)
     itemDict = binarySearch(LoadJSONFile(itemFilePath), itemID)
 
     embedPage = discord.Embed(color=dominantImageColor, title=craftTitle)
-    embedPage.set_thumbnail(url="attachment://image.png")
+    embedPage.set_thumbnail(url="attachment://image." + imageExt)
 
     itemRecipes = itemDict[LABEL_SOURCE][SOURCE_RECIPES]
     for craftingRecipeIndex in range(len(itemRecipes)):
@@ -329,7 +337,8 @@ async def set(ctx, *args):
 
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
-        return
+        await ctx.send("{} t.set's argument can't be empty.".format(ctx.author.mention))
+        return ERROR_ARG_NOT_FOUND
     if commandArgumentList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
         return ERROR_INVALID_FLAG
@@ -360,13 +369,15 @@ async def set(ctx, *args):
     setDict = setList[int(setID)-1]
     setName = setDict[LABEL_SET_NAME]
     setPieces = setDict[LABEL_SET_PIECES]
-    #imageFileName = setName.replace(" ", "_").lower() + getImageExt(GLOBAL_IMAGE_PATH, setName.replace(" ", "_").lower())
+
+    #imageExt = getImageExt(GLOBAL_IMAGE_PATH, setName.replace(" ", "_"))
+    #imageFileName = setName.replace(" ", "_") + imageExt
     #dominantImageColor = pickDominantColor(imageFileName)
     setTitle = "General Information about '{}' set:".format(setName)
 
-    #embedImage = discord.File(GLOBAL_IMAGE_PATH + imageFileName, filename="image.png")
+    #embedImage = discord.File(GLOBAL_IMAGE_PATH + imageFileName, filename="image." + imageExt)
     embedPage = discord.Embed(color=0x0a850e, title=setTitle) #will be updated with dominantImageColor
-    embedPage.set_thumbnail(url="attachment://image.png")
+    embedPage.set_thumbnail(url="attachment://image." + imageExt)
 
     for setCategory in setDict.keys():
         if setCategory == LABEL_RARITY:
@@ -425,7 +436,7 @@ async def rarity(ctx, *args):
     else:
         print("User '{}' has requested rarity information about '{}'.".format(str(ctx.author), commandStringInput))
 
-        rarityDict = linearSearch(rarityList, LABEL_RARITY_TIER, commandStringInput.lower())
+        rarityDict = linearSearch(rarityList, LABEL_RARITY_TIER, commandStringInput)
         if rarityDict == NOT_FOUND:
             titleMessage = "Couldn't find rarity tier '" + commandStringInput + "' in the data base."
             errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, rarityList, label=LABEL_RARITY_TIER)
@@ -449,8 +460,8 @@ async def rarity(ctx, *args):
         rarityTitle = "Information about '{}' Rarity:".format(commandStringInput)
         rarityName = rarityDict[LABEL_RARITY_TIER]
         rarityImagePath = GLOBAL_JSON_PATH + DIR_ID_REFERENCES + IMAGE_DIR_RARITY
-        imageExt = getImageExt(rarityImagePath, rarityName.replace(" ", "_").lower())
-        imageFileName = rarityName.replace(" ", "_").lower() + imageExt
+        imageExt = getImageExt(rarityImagePath, rarityName.replace(" ", "_"))
+        imageFileName = rarityName.replace(" ", "_") + imageExt
 
         embedImage = discord.File(rarityImagePath + imageFileName, filename="image" + imageExt)
         dominantImageColor = pickDominantColor(imageFileName, imagePath=rarityImagePath)
@@ -471,7 +482,8 @@ async def npc(ctx, *args):
     if ctx.author == bot.user:
         return
     if not commandStringInput:
-        await ctx.send("{} you must type the name of npc you want to find information about.".format(ctx.author))
+        await ctx.send("{} t.npc's argument can't be empty.".format(ctx.author.mention))
+        return ERROR_ARG_NOT_FOUND
     if commandArgumentList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
         return ERROR_INVALID_FLAG
@@ -518,16 +530,18 @@ async def npc(ctx, *args):
         return ERROR_DATASET_INCONSISTENCE
 
     imageFilePath = GLOBAL_JSON_PATH + DIR_NPC_DATA + DIR_NPC_SPRITES
-    imageFileName = npcName.replace(" ", "_").lower() + getImageExt(imageFilePath, npcName.replace(" ", "_").lower())
+    imageExt = getImageExt(imageFilePath, npcName.replace(" ", "_").lower())
+    imageFileName = npcName.replace(" ", "_").lower() + imageExt
+
     dominantImageColor = pickDominantColor(imageFileName, imagePath=imageFilePath)
     npcTitle = "General Information about '{}' NPC:".format(npcName)
     sellingListTitle = "Items sold by {}:".format(npcName)
 
-    embedImage = discord.File(imageFilePath + imageFileName, filename="image.png")
+    embedImage = discord.File(imageFilePath + imageFileName, filename="image." + imageExt)
 
     # First Page with general info about the NPC
     embedGeneralInfoPage = discord.Embed(color=dominantImageColor, title=npcTitle)
-    embedGeneralInfoPage.set_thumbnail(url="attachment://image.png")
+    embedGeneralInfoPage.set_thumbnail(url="attachment://image." + imageExt)
 
     for npcCategory in npcTownDict.keys():
         if npcCategory == NPC_SELLING_LIST:
@@ -556,7 +570,7 @@ async def npc(ctx, *args):
                 npcPage += 1
                 # Second Page with selling info about the NPC
                 embedSelligListPage = discord.Embed(color=dominantImageColor, title=sellingListTitle)
-                embedSelligListPage.set_thumbnail(url="attachment://image.png")
+                embedSelligListPage.set_thumbnail(url="attachment://image." + imageExt)
                 embedSetFooter(embedSelligListPage, PAGE_ALERT_MESSAGE.format(npcPage, npcTotalPages))
                 npcPageList.append(embedSelligListPage)
 
@@ -599,7 +613,7 @@ async def add_emojis(ctx, *args):
     for filename in os.listdir(rarityFilePath):
         with open(rarityFilePath + filename, "rb") as image:
             emojiFileName, emojiFileFormat = os.path.splitext(filename)
-            emojiName = BOT_CONFIG_EMOJI_PREFIX + emojiFileName.lower()
+            emojiName = BOT_CONFIG_EMOJI_PREFIX + emojiFileName
             if emojiFileFormat != DYNAMIC_IMAGE_EXT:
                 f = image.read()
                 b = bytearray(f)
@@ -633,7 +647,7 @@ async def remove_emojis(ctx, *args):
     for filename in os.listdir(rarityFilePath):
         with open(rarityFilePath + filename, "rb") as image:
             emojiFileName, emojiFileFormat = os.path.splitext(filename)
-            emojiName = BOT_CONFIG_EMOJI_PREFIX + emojiFileName.lower()
+            emojiName = BOT_CONFIG_EMOJI_PREFIX + emojiFileName
             if emojiFileFormat != DYNAMIC_IMAGE_EXT:
                 f = image.read()
                 b = bytearray(f)
