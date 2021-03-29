@@ -46,7 +46,7 @@ async def on_ready():
 async def on_command_error(ctx, error):
 
     if isinstance(error, commands.CommandNotFound):
-        await ctx.send("**" + ctx.message.content + "**: Couldn't retrieve any command from the one given.")
+        await ctx.send(COMMAND_NOT_FOUND_MESSAGE.format(ctx.message.content))
     else:
         raise error
 
@@ -97,7 +97,7 @@ async def item(ctx, *args):
 
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
-        await ctx.send("{} t.item's argument can't be empty.".format(ctx.author.mention))
+        await ctx.send(COMMAND_EMPTY_ERROR_MESSAGE.format(ctx.message.content, ctx.author.mention))
         return ERROR_ARG_NOT_FOUND
     if commandArgumentList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
@@ -116,7 +116,7 @@ async def item(ctx, *args):
                 return author == message.author
             return innerCheck
 
-        authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
+        authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=COMMAND_WAIT_MESSAGE_TIMEOUT)
         if authorMessage.content == "0":
             authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
             return ERROR_ITEM_NOT_FOUND
@@ -215,7 +215,7 @@ async def list(ctx, *args):
     # Get arguments and flags
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
-        await ctx.send("{} t.list's argument can't be empty.".format(ctx.author.mention))
+        await ctx.send(COMMAND_EMPTY_ERROR_MESSAGE.format(ctx.message.content, ctx.author.mention))
         return ERROR_ARG_NOT_FOUND
     if commandArgumentList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
@@ -278,7 +278,7 @@ async def craft(ctx, *args):
     # Get arguments and flags
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
-        await ctx.send("{} t.craft's argument can't be empty.".format(ctx.author.mention))
+        await ctx.send(COMMAND_EMPTY_ERROR_MESSAGE.format(ctx.message.content, ctx.author.mention))
         return ERROR_ARG_NOT_FOUND
     if commandArgumentList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
@@ -299,7 +299,7 @@ async def craft(ctx, *args):
                 return author == message.author
             return innerCheck
 
-        authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
+        authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=COMMAND_WAIT_MESSAGE_TIMEOUT)
         if authorMessage.content == "0":
             authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
             return ERROR_ITEM_NOT_FOUND
@@ -350,7 +350,7 @@ async def set(ctx, *args):
     # Get arguments and flags
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
-        await ctx.send("{} t.set's argument can't be empty.".format(ctx.author.mention))
+        await ctx.send(COMMAND_EMPTY_ERROR_MESSAGE.format(ctx.message.content, ctx.author.mention))
         return ERROR_ARG_NOT_FOUND
     if commandArgumentList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
@@ -372,7 +372,7 @@ async def set(ctx, *args):
             return innerCheck
 
         # Wait for user's answer to get the correct search result
-        authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
+        authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=COMMAND_WAIT_MESSAGE_TIMEOUT)
         if authorMessage.content == "0":
             authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
             return ERROR_ITEM_NOT_FOUND
@@ -469,7 +469,7 @@ async def rarity(ctx, *args):
                 return innerCheck
 
             # Wait for user's answer to get the correct search result
-            authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
+            authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=COMMAND_WAIT_MESSAGE_TIMEOUT)
             if authorMessage.content == "0":
                 authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
                 return ERROR_ITEM_NOT_FOUND
@@ -504,7 +504,7 @@ async def npc(ctx, *args):
     if ctx.author == bot.user:
         return
     if not commandStringInput:
-        await ctx.send("{} t.npc's argument can't be empty.".format(ctx.author.mention))
+        await ctx.send(COMMAND_EMPTY_ERROR_MESSAGE.format(ctx.message.content, ctx.author.mention))
         return ERROR_ARG_NOT_FOUND
     if commandArgumentList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
@@ -526,7 +526,7 @@ async def npc(ctx, *args):
             return innerCheck
 
         # Wait for user's answer to get the correct search result
-        authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
+        authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=COMMAND_WAIT_MESSAGE_TIMEOUT)
         if authorMessage.content == "0":
             authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
             return ERROR_ITEM_NOT_FOUND

@@ -71,6 +71,11 @@ flagDescriptionList = [
     "**" + FLAG_LINEAR + "** (linear): Sends the current output as pageless (potential spam alert)."
 ]
 
+COMMAND_WAIT_MESSAGE_TIMEOUT = 15.0
+
+COMMAND_SUBMESSAGE = "See ``t.help`` for further information."
+COMMAND_EMPTY_ERROR_MESSAGE = "**{}**: {}, please specify which instance is wanted to be searched.\n" + COMMAND_SUBMESSAGE
+COMMAND_NOT_FOUND_MESSAGE = "**{}**: Couldn't retrieve given command.\n" + COMMAND_SUBMESSAGE
 
 # Embed page related constants
 PAGE_DEFAULT_SIZE = 12
