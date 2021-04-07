@@ -52,10 +52,10 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def quest(ctx, *args):
 
-    commandArgumentList, commandStringInput = getCommandArguments(args)
+    commandFlagList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user:
         return
-    if commandArgumentList == ERROR_INVALID_FLAG:
+    if commandFlagList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
         return ERROR_INVALID_FLAG
     pass
@@ -63,10 +63,10 @@ async def quest(ctx, *args):
 @bot.command()
 async def help(ctx, *args):
 
-    commandArgumentList, commandStringInput = getCommandArguments(args)
+    commandFlagList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user:
         return
-    if commandArgumentList == ERROR_INVALID_FLAG:
+    if commandFlagList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
         return ERROR_INVALID_FLAG
         
@@ -89,16 +89,16 @@ async def help(ctx, *args):
     flagsPanel.set_footer(text=PAGE_ALERT_MESSAGE.format('2','2'))
     embedList.append(flagsPanel)
 
-    await sendMessage(ctx, bot, embedList, commandArgumentList=commandArgumentList)
+    await sendMessage(ctx, bot, embedList, commandFlagList=commandFlagList)
 
 @bot.command()
 async def item(ctx, *args):
 
-    commandArgumentList, commandStringInput = getCommandArguments(args)
+    commandFlagList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
         await ctx.send(COMMAND_EMPTY_ERROR_MESSAGE.format(ctx.message.content, ctx.author.mention))
         return ERROR_ARG_NOT_FOUND
-    if commandArgumentList == ERROR_INVALID_FLAG:
+    if commandFlagList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
         return ERROR_INVALID_FLAG
 
@@ -109,7 +109,7 @@ async def item(ctx, *args):
         titleMessage = "Couldn't find item '" + commandStringInput + "' in the data base."
         errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, itemList)
         await sendMessage(ctx, bot, errorEmbed)
-        await getUserResponse(ctx, bot, similarStrings, ITEM_FUNCTION)
+        await getUserResponse(ctx, bot, similarStrings, ITEM_FUNCTION, commandFlagList=commandFlagList)
         return
 
     # Gets respective item info dictionary
@@ -197,18 +197,18 @@ async def item(ctx, *args):
 
     if len(embedList) > 1:
         mainPage.set_footer(text=PAGE_ALERT_MESSAGE.format('1', str(1+len(nonEmptyLists))))
-    await sendMessage(ctx, bot, embedList, embedImage=mainImage, commandArgumentList=commandArgumentList)
+    await sendMessage(ctx, bot, embedList, embedImage=mainImage, commandFlagList=commandFlagList)
 
 # Shows a list of  every item which starts with user input argument
 @bot.command()
 async def list(ctx, *args):
 
     # Get arguments and flags
-    commandArgumentList, commandStringInput = getCommandArguments(args)
+    commandFlagList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
         await ctx.send(COMMAND_EMPTY_ERROR_MESSAGE.format(ctx.message.content, ctx.author.mention))
         return ERROR_ARG_NOT_FOUND
-    if commandArgumentList == ERROR_INVALID_FLAG:
+    if commandFlagList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
         return ERROR_INVALID_FLAG
 
@@ -252,7 +252,7 @@ async def list(ctx, *args):
         pageList.append(newPage)
 
     # Wait until user's response
-    botMessage, authorMessage = await sendMessage(ctx, bot, pageList, commandArgumentList=commandArgumentList)
+    botMessage, authorMessage = await sendMessage(ctx, bot, pageList, commandFlagList=commandFlagList)
     if authorMessage.content == "0":
         await authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
         return
@@ -267,11 +267,11 @@ async def list(ctx, *args):
 async def craft(ctx, *args):
 
     # Get arguments and flags
-    commandArgumentList, commandStringInput = getCommandArguments(args)
+    commandFlagList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
         await ctx.send(COMMAND_EMPTY_ERROR_MESSAGE.format(ctx.message.content, ctx.author.mention))
         return ERROR_ARG_NOT_FOUND
-    if commandArgumentList == ERROR_INVALID_FLAG:
+    if commandFlagList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
         return ERROR_INVALID_FLAG
 
@@ -284,7 +284,7 @@ async def craft(ctx, *args):
         titleMessage = "Couldn't find item '" + commandStringInput + "' in the data base."
         errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, itemList)
         await sendMessage(ctx, bot, errorEmbed)
-        await getUserResponse(ctx, bot, similarStrings, CRAFT_FUNCTION)
+        await getUserResponse(ctx, bot, similarStrings, CRAFT_FUNCTION, commandFlagList=commandFlagList)
         return
 
     itemType = itemList[int(itemID)-1][LABEL_TYPE]
@@ -320,18 +320,18 @@ async def craft(ctx, *args):
         embedInsertField(embedPage, outputMessage, outputDescription, inline=False)
 
     #Send Message
-    await sendMessage(ctx, bot, embedPage, embedImage=embedImage, commandArgumentList=commandArgumentList)
+    await sendMessage(ctx, bot, embedPage, embedImage=embedImage, commandFlagList=commandFlagList)
 
 # Shows set information
 @bot.command()
 async def set(ctx, *args):
 
     # Get arguments and flags
-    commandArgumentList, commandStringInput = getCommandArguments(args)
+    commandFlagList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
         await ctx.send(COMMAND_EMPTY_ERROR_MESSAGE.format(ctx.message.content, ctx.author.mention))
         return ERROR_ARG_NOT_FOUND
-    if commandArgumentList == ERROR_INVALID_FLAG:
+    if commandFlagList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
         return ERROR_INVALID_FLAG
 
@@ -344,7 +344,7 @@ async def set(ctx, *args):
         titleMessage = "Couldn't find item '" + commandStringInput + "' in the data base."
         errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, setList, label=LABEL_SET_NAME)
         await sendMessage(ctx, bot, errorEmbed)
-        await getUserResponse(ctx, bot, similarStrings, SET_FUNCTION)
+        await getUserResponse(ctx, bot, similarStrings, SET_FUNCTION, commandFlagList=commandFlagList)
         return
 
     setDict = setList[int(setID)-1]
@@ -375,16 +375,16 @@ async def set(ctx, *args):
         else:
             embedInsertField(embedPage, setDict[setCategory].replace(" / ", "\n"), setCategory, inline=False)
     #Send Message
-    await sendMessage(ctx, bot, embedPage, commandArgumentList=commandArgumentList)
+    await sendMessage(ctx, bot, embedPage, commandFlagList=commandFlagList)
 
 @bot.command()
 async def rarity(ctx, *args):
 
     # Get arguments and flags
-    commandArgumentList, commandStringInput = getCommandArguments(args)
+    commandFlagList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user:
         return
-    if commandArgumentList == ERROR_INVALID_FLAG:
+    if commandFlagList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
         return ERROR_INVALID_FLAG
 
@@ -415,7 +415,7 @@ async def rarity(ctx, *args):
             embedInsertField(embedPageList[len(embedPageList)-1], rarityValue, rarityLabel, inline=False)
 
         # Send Message
-        await sendMessage(ctx, bot, embedPageList, commandArgumentList=commandArgumentList)
+        await sendMessage(ctx, bot, embedPageList, commandFlagList=commandFlagList)
     # Get a specific rarity tier
     else:
         print("User '{}' has requested rarity information about '{}'.".format(str(ctx.author), commandStringInput))
@@ -427,7 +427,7 @@ async def rarity(ctx, *args):
             titleMessage = "Couldn't find rarity tier '" + commandStringInput + "' in the data base."
             errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, rarityList, label=LABEL_RARITY_TIER)
             await sendMessage(ctx, bot, errorEmbed)
-            await getUserResponse(ctx, bot, similarStrings, RARITY_FUNCTION)
+            await getUserResponse(ctx, bot, similarStrings, RARITY_FUNCTION, commandFlagList=commandFlagList)
             return
 
         rarityTitle = "Information about '{}' Rarity:".format(commandStringInput)
@@ -446,19 +446,19 @@ async def rarity(ctx, *args):
         embedInsertField(embedPage, rarityValue, rarityLabel, inline=False)
 
         #Send Message
-        await sendMessage(ctx, bot, embedPage, commandArgumentList=commandArgumentList, embedImage=embedImage)
+        await sendMessage(ctx, bot, embedPage, commandFlagList=commandFlagList, embedImage=embedImage)
 
 @bot.command()
 async def npc(ctx, *args):
 
     # Get arguments and flags
-    commandArgumentList, commandStringInput = getCommandArguments(args)
+    commandFlagList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user:
         return
     if not commandStringInput:
         await ctx.send(COMMAND_EMPTY_ERROR_MESSAGE.format(ctx.message.content, ctx.author.mention))
         return ERROR_ARG_NOT_FOUND
-    if commandArgumentList == ERROR_INVALID_FLAG:
+    if commandFlagList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
         return ERROR_INVALID_FLAG
         
@@ -471,7 +471,7 @@ async def npc(ctx, *args):
         titleMessage = "Couldn't find NPC '" + commandStringInput + "' in the data base."
         errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, npcList, label=LABEL_NAME)
         await sendMessage(ctx, bot, errorEmbed)
-        await getUserResponse(ctx, bot, similarStrings, NPC_FUNCTION)
+        await getUserResponse(ctx, bot, similarStrings, NPC_FUNCTION, commandFlagList=commandFlagList)
         return
 
     # Will be supported after enemy npcs drops update on dataset
@@ -553,10 +553,10 @@ async def npc(ctx, *args):
             embedInsertField(embedSelligListPage, sellingValue, sellingLabel, inline=False)
 
         # Send Message
-        await sendMessage(ctx, bot, npcPageList, embedImage=embedImage, commandArgumentList=commandArgumentList)
+        await sendMessage(ctx, bot, npcPageList, embedImage=embedImage, commandFlagList=commandFlagList)
 
     # If we don't have any sell items then just send general info
     else:
-        await sendMessage(ctx, bot, embedGeneralInfoPage, embedImage=embedImage, commandArgumentList=commandArgumentList)
+        await sendMessage(ctx, bot, embedGeneralInfoPage, embedImage=embedImage, commandFlagList=commandFlagList)
 
 bot.run(BOT_TOKEN)

@@ -100,7 +100,7 @@ def checkImageFile(embedImage: discord.File):
             embedImage = discord.File(embedImage.fp.raw.name , filename=embedImage.filename)
     return embedImage
 
-async def getUserResponse(ctx, bot: commands.Bot, similarStrings, invokeFunction):
+async def getUserResponse(ctx, bot: commands.Bot, similarStrings, invokeFunction, commandFlagList=[]):
 
     def check(author):
         def innerCheck(message):
@@ -114,6 +114,9 @@ async def getUserResponse(ctx, bot: commands.Bot, similarStrings, invokeFunction
         except ValueError:
             return False
 
+    if len(similarStrings) == 0:
+        return
+
     # Wait for user's answer until they type a valid number
     while True:
         authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
@@ -121,18 +124,27 @@ async def getUserResponse(ctx, bot: commands.Bot, similarStrings, invokeFunction
             if authorMessage.content == "0":
                 await authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
                 return ERROR_ITEM_NOT_FOUND      
-            elif len(similarStrings) > 0 and len(similarStrings) > int(authorMessage.content)-1:
+            elif len(similarStrings) > int(authorMessage.content)-1 and int(authorMessage.content) >= 0:
                 correctMessage = similarStrings[int(authorMessage.content)-1][1]
-                await ctx.invoke(bot.get_command(invokeFunction), correctMessage)
+
+                #await authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
+                # Get flags to invoke function
+                if commandFlagList:
+                    flags = "-"
+                    for flag in commandFlagList:
+                        flags += flag[-1]
+                    await ctx.invoke(bot.get_command(invokeFunction), flags, correctMessage)
+                else:
+                    await ctx.invoke(bot.get_command(invokeFunction), correctMessage)
                 break
 
 # Function to send message acording to parameters
 # If a list of embed is passed, it will add reactions to navigate between pages
 # If command arguments are passed, it will treat the message acording to the arguments
-async def sendMessage(ctx, bot: commands.Bot, embed: discord.Embed, commandArgumentList=[], embedImage=None):
+async def sendMessage(ctx, bot: commands.Bot, embed: discord.Embed, commandFlagList=[], embedImage=None):
 
     # FLAG_PRIVATE -> Message will be sent to user DM
-    if FLAG_PRIVATE in commandArgumentList:
+    if FLAG_PRIVATE in commandFlagList:
         if type(embed) is list:
             for embedInstance in embed:
                 embedImage = checkImageFile(embedImage)
@@ -143,7 +155,7 @@ async def sendMessage(ctx, bot: commands.Bot, embed: discord.Embed, commandArgum
         await ctx.message.add_reaction(EMOJI_WHITE_CHECK_MARK)
 
     # FLAG_LINEAR -> Message will be sent without pages on the server
-    elif FLAG_LINEAR in commandArgumentList:
+    elif FLAG_LINEAR in commandFlagList:
         if type(embed) is list:
             for embedInstance in embed:
                 embedImage = checkImageFile(embedImage)
