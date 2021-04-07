@@ -150,9 +150,13 @@ async def item(ctx, *args):
     for itemCategory in itemDict.keys():
         if itemCategory in exceptionLabels:
             continue
+
         if itemCategory == LABEL_SOURCE:
             hasSource = True
             break
+        elif type(itemDict[itemCategory]) is list:
+            for itemSubcategory in itemDict[itemCategory]:
+                embedInsertField(mainPage, itemSubcategory, itemCategory, inline=True)
         elif itemCategory == LABEL_SET_ID:
             embedInsertField(mainPage, setList[int(itemDict[itemCategory])-1][LABEL_SET_NAME], LABEL_SET_NAME, inline=True)
         elif itemCategory == LABEL_RARITY:

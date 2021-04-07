@@ -41,7 +41,7 @@ commandFlagList = [
 
 # Help messages
 HELP_EMBED_TITLE = "Terraria Bot Help Documentation:"
-HELP_INTRODUCTION_TITLE = "Usage: [COMMAND] [FLAGS] [ARGUMENTS]"
+HELP_INTRODUCTION_TITLE = "Usage: [COMMAND] [FLAGS (optional)] [ARGUMENTS]"
 HELP_INTRODUCTION_DESC = "Multiple flags should be written together of each other (e.g. -abcd). As an optional\
  factor, flags can be ignored simply by putting none at the current command."
 
