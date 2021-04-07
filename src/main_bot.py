@@ -45,7 +45,7 @@ async def on_ready():
 async def on_command_error(ctx, error):
 
     if isinstance(error, commands.CommandNotFound):
-        await ctx.send("**" + ctx.message.content + "**: Couldn't retrieve any command from the one given.")
+        await ctx.send(COMMAND_NOT_FOUND_MESSAGE.format(ctx.message.content))
     else:
         raise error
 
@@ -96,7 +96,7 @@ async def item(ctx, *args):
 
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
-        await ctx.send("{} t.item's argument can't be empty.".format(ctx.author.mention))
+        await ctx.send(COMMAND_EMPTY_ERROR_MESSAGE.format(ctx.message.content, ctx.author.mention))
         return ERROR_ARG_NOT_FOUND
     if commandArgumentList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
@@ -108,7 +108,7 @@ async def item(ctx, *args):
     if itemID == NOT_FOUND:
         titleMessage = "Couldn't find item '" + commandStringInput + "' in the data base."
         errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, itemList)
-        await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
+        await sendMessage(ctx, bot, errorEmbed)
         await getUserResponse(ctx, bot, similarStrings, ITEM_FUNCTION)
         return
 
@@ -137,9 +137,13 @@ async def item(ctx, *args):
     for itemCategory in itemDict.keys():
         if itemCategory in exceptionLabels:
             continue
+
         if itemCategory == LABEL_SOURCE:
             hasSource = True
             break
+        elif type(itemDict[itemCategory]) is list:
+            for itemSubcategory in itemDict[itemCategory]:
+                embedInsertField(mainPage, itemSubcategory, itemCategory, inline=True)
         elif itemCategory == LABEL_SET_ID:
             embedInsertField(mainPage, setList[int(itemDict[itemCategory])-1][LABEL_SET_NAME], LABEL_SET_NAME, inline=True)
         elif itemCategory == LABEL_RARITY:
@@ -202,7 +206,7 @@ async def list(ctx, *args):
     # Get arguments and flags
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
-        await ctx.send("{} t.list's argument can't be empty.".format(ctx.author.mention))
+        await ctx.send(COMMAND_EMPTY_ERROR_MESSAGE.format(ctx.message.content, ctx.author.mention))
         return ERROR_ARG_NOT_FOUND
     if commandArgumentList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
@@ -265,7 +269,7 @@ async def craft(ctx, *args):
     # Get arguments and flags
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
-        await ctx.send("{} t.craft's argument can't be empty.".format(ctx.author.mention))
+        await ctx.send(COMMAND_EMPTY_ERROR_MESSAGE.format(ctx.message.content, ctx.author.mention))
         return ERROR_ARG_NOT_FOUND
     if commandArgumentList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
@@ -279,7 +283,7 @@ async def craft(ctx, *args):
         # If not found, get similar item names
         titleMessage = "Couldn't find item '" + commandStringInput + "' in the data base."
         errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, itemList)
-        await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
+        await sendMessage(ctx, bot, errorEmbed)
         await getUserResponse(ctx, bot, similarStrings, CRAFT_FUNCTION)
         return
 
@@ -325,7 +329,7 @@ async def set(ctx, *args):
     # Get arguments and flags
     commandArgumentList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user or not commandStringInput:
-        await ctx.send("{} t.set's argument can't be empty.".format(ctx.author.mention))
+        await ctx.send(COMMAND_EMPTY_ERROR_MESSAGE.format(ctx.message.content, ctx.author.mention))
         return ERROR_ARG_NOT_FOUND
     if commandArgumentList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
@@ -339,7 +343,7 @@ async def set(ctx, *args):
         # If not found, get similar set names
         titleMessage = "Couldn't find item '" + commandStringInput + "' in the data base."
         errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, setList, label=LABEL_SET_NAME)
-        await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
+        await sendMessage(ctx, bot, errorEmbed)
         await getUserResponse(ctx, bot, similarStrings, SET_FUNCTION)
         return
 
@@ -422,7 +426,7 @@ async def rarity(ctx, *args):
             # If not found, get similar rarity tier names
             titleMessage = "Couldn't find rarity tier '" + commandStringInput + "' in the data base."
             errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, rarityList, label=LABEL_RARITY_TIER)
-            await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
+            await sendMessage(ctx, bot, errorEmbed)
             await getUserResponse(ctx, bot, similarStrings, RARITY_FUNCTION)
             return
 
@@ -452,7 +456,7 @@ async def npc(ctx, *args):
     if ctx.author == bot.user:
         return
     if not commandStringInput:
-        await ctx.send("{} t.npc's argument can't be empty.".format(ctx.author.mention))
+        await ctx.send(COMMAND_EMPTY_ERROR_MESSAGE.format(ctx.message.content, ctx.author.mention))
         return ERROR_ARG_NOT_FOUND
     if commandArgumentList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
@@ -466,7 +470,7 @@ async def npc(ctx, *args):
         # If not found, get similar NPC names
         titleMessage = "Couldn't find NPC '" + commandStringInput + "' in the data base."
         errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, npcList, label=LABEL_NAME)
-        await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
+        await sendMessage(ctx, bot, errorEmbed)
         await getUserResponse(ctx, bot, similarStrings, NPC_FUNCTION)
         return
 

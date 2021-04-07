@@ -40,7 +40,7 @@ commandFlagList = [
 
 # Help messages
 HELP_EMBED_TITLE = "Terraria Bot Help Documentation:"
-HELP_INTRODUCTION_TITLE = "Usage: [COMMAND] [FLAGS] [ARGUMENTS]"
+HELP_INTRODUCTION_TITLE = "Usage: [COMMAND] [FLAGS (optional)] [ARGUMENTS]"
 HELP_INTRODUCTION_DESC = "Multiple flags should be written together of each other (e.g. -abcd). As an optional\
  factor, flags can be ignored simply by putting none at the current command."
 
@@ -70,6 +70,11 @@ flagDescriptionList = [
     "**" + FLAG_LINEAR + "** (linear): Sends the current output as pageless (potential spam alert)."
 ]
 
+COMMAND_WAIT_MESSAGE_TIMEOUT = 15.0
+
+COMMAND_SUBMESSAGE = "See ``t.help`` for further information."
+COMMAND_EMPTY_ERROR_MESSAGE = "**{}**: {}, please specify which instance is wanted to be searched.\n" + COMMAND_SUBMESSAGE
+COMMAND_NOT_FOUND_MESSAGE = "**{}**: Couldn't retrieve given command.\n" + COMMAND_SUBMESSAGE
 
 # Embed page related constants
 PAGE_DEFAULT_SIZE = 12
