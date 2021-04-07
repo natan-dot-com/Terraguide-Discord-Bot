@@ -322,6 +322,129 @@ async def craft(ctx, *args):
     #Send Message
     await sendMessage(ctx, bot, embedPage, embedImage=embedImage, commandFlagList=commandFlagList)
 
+@bot.command()
+async def bagdrop(ctx, *args):
+
+    # Get arguments and flags
+    commandFlagList, commandStringInput = getCommandArguments(args)
+    if ctx.author == bot.user or not commandStringInput:
+        await ctx.send(COMMAND_EMPTY_ERROR_MESSAGE.format(ctx.message.content, ctx.author.mention))
+        return ERROR_ARG_NOT_FOUND
+    if commandFlagList == ERROR_INVALID_FLAG:
+        await ctx.send(FLAG_ERROR_MESSAGE)
+        return ERROR_INVALID_FLAG
+
+    print("User {} has requested drop information about '{}'.".format(str(ctx.author), commandStringInput))
+
+    itemID = itemHash.search(commandStringInput, LABEL_ID)
+    if itemID == NOT_FOUND:
+        titleMessage = "Couldn't find item '" + commandStringInput + "' in the data base."
+        errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, itemList)
+        await sendMessage(ctx, bot, errorEmbed)
+        await getUserResponse(ctx, bot, similarStrings, BAGDROP_FUNCTION, commandFlagList=commandFlagList)
+        return
+
+    # Gets respective item info dictionary
+    itemType = itemList[int(itemID)-1][LABEL_TYPE]
+    itemFilePath = GLOBAL_JSON_PATH + DIR_ITEMS_DATA + itemFileManager[itemType] + JSON_EXT
+    itemDict = binarySearch(LoadJSONFile(itemFilePath), itemID)
+    if itemDict == NOT_FOUND:
+        return ERROR_ITEM_NOT_FOUND
+
+
+    itemName = itemList[int(itemID)-1][LABEL_NAME]
+    imageExt = getImageExt(GLOBAL_IMAGE_PATH, itemName.replace(" ", "_"))
+    imageFileName = itemName.replace(" ", "_") + imageExt
+    dominantImageColor = pickDominantColor(imageFileName)
+    
+    # Check if there are bag drops for this item
+    hasBagDrop = True
+    if LABEL_SOURCE in itemDict.keys():
+        if SOURCE_GRAB_BAG in itemDict[LABEL_SOURCE].keys():
+            if len(itemDict[LABEL_SOURCE][SOURCE_GRAB_BAG]) == 0:
+                hasBagDrop = False
+        else:
+            hasBagDrop = False
+    else:
+        hasBagDrop = False
+
+    # Information embed construction
+    titleMessage = "Showing bag drops for '{}':".format(itemName)
+    embedPage = discord.Embed(color=dominantImageColor, title=titleMessage)
+    embedImage = discord.File(GLOBAL_IMAGE_PATH + imageFileName, filename="image." + imageExt)
+    embedPage.set_thumbnail(url="attachment://image." + imageExt)
+
+    if hasBagDrop:
+        createBagDropPanel(npcList, grabBagList, grabBagDropList, itemDict[LABEL_SOURCE][SOURCE_GRAB_BAG], embedPage, itemName)
+    else:
+        titleMessage = "Item '{}' has no bag drops.".format(itemName)
+        fieldMessage = "Couldn't retrieve any information from our database."
+        embedInsertField(embedPage, fieldMessage, titleMessage, inline=False)
+    
+    #Send Message
+    await sendMessage(ctx, bot, embedPage, embedImage=embedImage, commandFlagList=commandFlagList)
+
+@bot.command()
+async def sell(ctx, *args):
+
+    # Get arguments and flags
+    commandFlagList, commandStringInput = getCommandArguments(args)
+    if ctx.author == bot.user or not commandStringInput:
+        await ctx.send(COMMAND_EMPTY_ERROR_MESSAGE.format(ctx.message.content, ctx.author.mention))
+        return ERROR_ARG_NOT_FOUND
+    if commandFlagList == ERROR_INVALID_FLAG:
+        await ctx.send(FLAG_ERROR_MESSAGE)
+        return ERROR_INVALID_FLAG
+
+    print("User {} has requested selling offers for '{}'.".format(str(ctx.author), commandStringInput))
+
+    itemID = itemHash.search(commandStringInput, LABEL_ID)
+    if itemID == NOT_FOUND:
+        titleMessage = "Couldn't find item '" + commandStringInput + "' in the data base."
+        errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, itemList)
+        await sendMessage(ctx, bot, errorEmbed)
+        await getUserResponse(ctx, bot, similarStrings, SELL_FUNCTION, commandFlagList=commandFlagList)
+        return
+
+    # Gets respective item info dictionary
+    itemType = itemList[int(itemID)-1][LABEL_TYPE]
+    itemFilePath = GLOBAL_JSON_PATH + DIR_ITEMS_DATA + itemFileManager[itemType] + JSON_EXT
+    itemDict = binarySearch(LoadJSONFile(itemFilePath), itemID)
+    if itemDict == NOT_FOUND:
+        return ERROR_ITEM_NOT_FOUND
+
+    itemName = itemList[int(itemID)-1][LABEL_NAME]
+    imageExt = getImageExt(GLOBAL_IMAGE_PATH, itemName.replace(" ", "_"))
+    imageFileName = itemName.replace(" ", "_") + imageExt
+    dominantImageColor = pickDominantColor(imageFileName)
+    
+    # Check if there are NPCs selling this item
+    hasSellingOffers = True
+    if LABEL_SOURCE in itemDict.keys():
+        if SOURCE_NPC in itemDict[LABEL_SOURCE].keys():
+            if len(itemDict[LABEL_SOURCE][SOURCE_NPC]) == 0:
+                hasSellingOffers = False
+        else:
+            hasSellingOffers = False
+    else:
+        hasSellingOffers = False
+
+    # Information embed construction
+    titleMessage = "Showing selling offers for '{}':".format(itemName)
+    embedPage = discord.Embed(color=dominantImageColor, title=titleMessage)
+    embedImage = discord.File(GLOBAL_IMAGE_PATH + imageFileName, filename="image." + imageExt)
+    embedPage.set_thumbnail(url="attachment://image." + imageExt)
+
+    if hasSellingOffers:
+        createSellingPanel(npcList, sellingList, itemDict[LABEL_SOURCE][SOURCE_NPC], embedPage, itemName)
+    else:
+        titleMessage = "Item '{}' has no selling offers.".format(itemName)
+        fieldMessage = "Couldn't retrieve any information from our database."
+        embedInsertField(embedPage, fieldMessage, titleMessage, inline=False)
+    
+    #Send Message
+    await sendMessage(ctx, bot, embedPage, embedImage=embedImage, commandFlagList=commandFlagList)
+
 # Shows set information
 @bot.command()
 async def set(ctx, *args):

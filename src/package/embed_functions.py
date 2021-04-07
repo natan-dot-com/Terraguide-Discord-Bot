@@ -100,6 +100,8 @@ def checkImageFile(embedImage: discord.File):
             embedImage = discord.File(embedImage.fp.raw.name , filename=embedImage.filename)
     return embedImage
 
+
+# Expects the user to type a answer for a desired item
 async def getUserResponse(ctx, bot: commands.Bot, similarStrings, invokeFunction, commandFlagList=[]):
 
     def check(author):
@@ -114,6 +116,7 @@ async def getUserResponse(ctx, bot: commands.Bot, similarStrings, invokeFunction
         except ValueError:
             return False
 
+    # If there are no similar strings then returns
     if len(similarStrings) == 0:
         return
 
@@ -127,7 +130,6 @@ async def getUserResponse(ctx, bot: commands.Bot, similarStrings, invokeFunction
             elif len(similarStrings) > int(authorMessage.content)-1 and int(authorMessage.content) >= 0:
                 correctMessage = similarStrings[int(authorMessage.content)-1][1]
 
-                #await authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
                 # Get flags to invoke function
                 if commandFlagList:
                     flags = "-"
@@ -140,7 +142,7 @@ async def getUserResponse(ctx, bot: commands.Bot, similarStrings, invokeFunction
 
 # Function to send message acording to parameters
 # If a list of embed is passed, it will add reactions to navigate between pages
-# If command arguments are passed, it will treat the message acording to the arguments
+# If command flags are passed, it will treat the message acording to the flags
 async def sendMessage(ctx, bot: commands.Bot, embed: discord.Embed, commandFlagList=[], embedImage=None):
 
     # FLAG_PRIVATE -> Message will be sent to user DM

@@ -51,6 +51,8 @@ COMMAND_LIST = BOT_CONFIG_PREFIX + "list 'Something to Search'"
 COMMAND_ITEM = BOT_CONFIG_PREFIX + "item 'Item Name'"
 COMMAND_SET = BOT_CONFIG_PREFIX + "set 'Set Name'"
 COMMAND_RARITY = BOT_CONFIG_PREFIX + "rarity 'Rarity Name'"
+COMMAND_BAGDROP = BOT_CONFIG_PREFIX + "bagdrop 'Item Name'"
+COMMAND_SELL = BOT_CONFIG_PREFIX + "sell 'Item Name'"
 
 # Commands description
 commandDict = {
@@ -61,7 +63,9 @@ commandDict = {
  it can drop.",
     COMMAND_SET: "Displays every information about a given armor set.",
     COMMAND_RARITY: "Displays a brief description about the specified rarity tier. All tiers can be displayed by giving\
- no arguments to the command."
+ no arguments to the command.",
+    COMMAND_BAGDROP: "Displays every bag drop for a specific item",
+    COMMAND_SELL: "Displays every selling offer for a specific item"
 }
 
 # Command flags description
@@ -93,6 +97,8 @@ RARITY_FUNCTION = "rarity"
 ITEM_FUNCTION = "item"
 SET_FUNCTION = "set"
 CRAFT_FUNCTION = "craft"
+BAGDROP_FUNCTION = "bagdrop"
+SELL_FUNCTION = "sell"
 
 def loadDependencies(jsonList: list, hashSize=ITEMS_HASH_SIZE, label=LABEL_NAME) -> hashTable:
     itemFilePath = GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT
