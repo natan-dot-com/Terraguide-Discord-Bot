@@ -5,7 +5,7 @@ from colorthief import ColorThief
 from colormap import rgb2hex
 
 # Get all input flags
-def getCommandArgumentList(commandArgument):
+def getCommandFlagList(commandArgument):
     commandArgumentList = []
     for argument in commandArgument[1:]:
         if BOT_CONFIG_FLAG_PREFIX + argument in commandArgumentList:
@@ -27,7 +27,7 @@ def getCommandArguments(args):
         if args[0][0] == "-":
             if len(args) > 1:
                 commandStringInput = " ".join(args[1:])
-            commandArgumentList = getCommandArgumentList(args[0])
+            commandArgumentList = getCommandFlagList(args[0])
         else:
             commandStringInput = " ".join(args)
  

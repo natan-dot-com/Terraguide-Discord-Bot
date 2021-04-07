@@ -13,17 +13,6 @@ EMBED_HELP_COLOR = 0x000000
 
 task = None
 
-# Not used because of discord UI emoji issues
-# Get emoji message format from emoji json
-def getRarityEmoji(rarityTier):
-    emojiFilePath = EMOJI_DIR + EMOJI_NAME_FILE + JSON_EXT
-    emojiList = LoadJSONFile(emojiFilePath)
-    emojiName = BOT_CONFIG_EMOJI_PREFIX + rarityTier.replace(" ", "_").lower()
-    if emojiName in emojiList.keys():
-        return "<:" + emojiName + ":" + str(emojiList[emojiName]) + ">"
-    else:
-        return rarityTier
-
 # Insert a field info on embed variable
 def embedInsertField(embedPage: discord.Embed, dictValue: str, dictLabel: str, inline=False):
     embedPage.add_field(name=dictLabel, value=dictValue, inline=inline)
@@ -104,12 +93,38 @@ async def embedSetReactions(bot: commands.Bot, botMessage, pageList: list):
 
     await botMessage.clear_reactions()
 
-# Opens a embed file image if it is closed
+# Opens an embed file image if it is closed
 def checkImageFile(embedImage: discord.File):
     if embedImage:
         if embedImage.fp.closed:
             embedImage = discord.File(embedImage.fp.raw.name , filename=embedImage.filename)
     return embedImage
+
+async def getUserResponse(ctx, bot: commands.Bot, similarStrings, invokeFunction):
+
+    def check(author):
+        def innerCheck(message):
+            return author == message.author
+        return innerCheck
+
+    def RepresentsInt(s):
+        try: 
+            int(s)
+            return True
+        except ValueError:
+            return False
+
+    # Wait for user's answer until they type a valid number
+    while True:
+        authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
+        if RepresentsInt(authorMessage.content):
+            if authorMessage.content == "0":
+                await authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
+                return ERROR_ITEM_NOT_FOUND      
+            elif len(similarStrings) > 0 and len(similarStrings) > int(authorMessage.content)-1:
+                correctMessage = similarStrings[int(authorMessage.content)-1][1]
+                await ctx.invoke(bot.get_command(invokeFunction), correctMessage)
+                break
 
 # Function to send message acording to parameters
 # If a list of embed is passed, it will add reactions to navigate between pages
@@ -156,7 +171,6 @@ async def sendMessage(ctx, bot: commands.Bot, embed: discord.Embed, commandArgum
 
             # Check if there are more than one page
             if len(embed) > 1:
-                global task
                 authorMessage = None
                 # Reactions to switch between pages
                 task = bot.loop.create_task(embedSetReactions(bot, botMessage, embed))

@@ -21,7 +21,7 @@ def binarySearch(searchList, searchValue, label=LABEL_ITEM_ID):
 
 def linearSearch(searchList, searchIndex, searchValue):
     for searchItem in searchList:
-        if searchItem[searchIndex].lower() == searchValue:
+        if searchItem[searchIndex].lower() == searchValue.lower():
             return searchItem
     return NOT_FOUND
 

@@ -16,7 +16,6 @@ from package.search import *
 from package.utility_dictionaries import *
 from package.utility_functions import *
 from package.embed_functions import *
-from package.permissions import *
 from package.string_similarity import *
 
 bot = commands.Bot(command_prefix=BOT_CONFIG_PREFIX, description=BOT_CONFIG_DESCRIPTION, help_command=None)
@@ -110,19 +109,7 @@ async def item(ctx, *args):
         titleMessage = "Couldn't find item '" + commandStringInput + "' in the data base."
         errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, itemList)
         await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
-
-        def check(author):
-            def innerCheck(message):
-                return author == message.author
-            return innerCheck
-
-        authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
-        if authorMessage.content == "0":
-            authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
-            return ERROR_ITEM_NOT_FOUND
-        
-        correctItem = similarStrings[int(authorMessage.content)-1][1]
-        await ctx.invoke(bot.get_command('item'), correctItem)
+        await getUserResponse(ctx, bot, similarStrings, ITEM_FUNCTION)
         return
 
     # Gets respective item info dictionary
@@ -293,19 +280,7 @@ async def craft(ctx, *args):
         titleMessage = "Couldn't find item '" + commandStringInput + "' in the data base."
         errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, itemList)
         await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
-
-        def check(author):
-            def innerCheck(message):
-                return author == message.author
-            return innerCheck
-
-        authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
-        if authorMessage.content == "0":
-            authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
-            return ERROR_ITEM_NOT_FOUND
-        
-        correctItem = similarStrings[int(authorMessage.content)-1][1]
-        await ctx.invoke(bot.get_command('item'), correctItem)
+        await getUserResponse(ctx, bot, similarStrings, CRAFT_FUNCTION)
         return
 
     itemType = itemList[int(itemID)-1][LABEL_TYPE]
@@ -365,20 +340,7 @@ async def set(ctx, *args):
         titleMessage = "Couldn't find item '" + commandStringInput + "' in the data base."
         errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, setList, label=LABEL_SET_NAME)
         await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
-
-        def check(author):
-            def innerCheck(message):
-                return author == message.author
-            return innerCheck
-
-        # Wait for user's answer to get the correct search result
-        authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
-        if authorMessage.content == "0":
-            authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
-            return ERROR_ITEM_NOT_FOUND
-        
-        correctSet = similarStrings[int(authorMessage.content)-1][1]
-        await ctx.invoke(bot.get_command('set'), correctSet)
+        await getUserResponse(ctx, bot, similarStrings, SET_FUNCTION)
         return
 
     setDict = setList[int(setID)-1]
@@ -460,22 +422,8 @@ async def rarity(ctx, *args):
             # If not found, get similar rarity tier names
             titleMessage = "Couldn't find rarity tier '" + commandStringInput + "' in the data base."
             errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, rarityList, label=LABEL_RARITY_TIER)
-            print(similarStrings)
             await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
-
-            def check(author):
-                def innerCheck(message):
-                    return author == message.author
-                return innerCheck
-
-            # Wait for user's answer to get the correct search result
-            authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
-            if authorMessage.content == "0":
-                authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
-                return ERROR_ITEM_NOT_FOUND
-            
-            correctTier = similarStrings[int(authorMessage.content)-1][1]
-            await ctx.invoke(bot.get_command('rarity'), correctTier)
+            await getUserResponse(ctx, bot, similarStrings, RARITY_FUNCTION)
             return
 
         rarityTitle = "Information about '{}' Rarity:".format(commandStringInput)
@@ -519,20 +467,7 @@ async def npc(ctx, *args):
         titleMessage = "Couldn't find NPC '" + commandStringInput + "' in the data base."
         errorEmbed, similarStrings = getSimilarStringEmbed(titleMessage, commandStringInput, npcList, label=LABEL_NAME)
         await sendMessage(ctx, bot, errorEmbed, commandArgumentList=commandArgumentList)
-
-        def check(author):
-            def innerCheck(message):
-                return author == message.author
-            return innerCheck
-
-        # Wait for user's answer to get the correct search result
-        authorMessage = await bot.wait_for('message', check=check(ctx.author), timeout=15.0)
-        if authorMessage.content == "0":
-            authorMessage.add_reaction(EMOJI_WHITE_CHECK_MARK)
-            return ERROR_ITEM_NOT_FOUND
-        
-        correctNPC = similarStrings[int(authorMessage.content)-1][1]
-        await ctx.invoke(bot.get_command('npc'), correctNPC)
+        await getUserResponse(ctx, bot, similarStrings, NPC_FUNCTION)
         return
 
     # Will be supported after enemy npcs drops update on dataset
@@ -619,74 +554,5 @@ async def npc(ctx, *args):
     # If we don't have any sell items then just send general info
     else:
         await sendMessage(ctx, bot, embedGeneralInfoPage, embedImage=embedImage, commandArgumentList=commandArgumentList)
-
-# This functions works when it wants.
-# Useless now but i will maintain it for future code reference
-# Add emojis to bot server
-@bot.command()
-async def add_emojis(ctx, *args):
-
-    if ctx.author == bot.user or not str(ctx.author.id) in ADMIN_LIST:
-        await ctx.send("Permission Denied.")
-        return
-
-    await ctx.send("Starting adding emojis. This may take a few moments...")
-    emojiFilePath = EMOJI_DIR + EMOJI_NAME_FILE + JSON_EXT
-    emojiList = {}
-    emojiCount = 0
-    rarityFilePath = GLOBAL_JSON_PATH + DIR_ID_REFERENCES + IMAGE_DIR_RARITY
-    for filename in os.listdir(rarityFilePath):
-        with open(rarityFilePath + filename, "rb") as image:
-            emojiFileName, emojiFileFormat = os.path.splitext(filename)
-            emojiName = BOT_CONFIG_EMOJI_PREFIX + emojiFileName
-            if emojiFileFormat != DYNAMIC_IMAGE_EXT:
-                f = image.read()
-                b = bytearray(f)
-                guildEmoji = getGuildEmojiByName(emojiName, ctx.guild.emojis)
-                if guildEmoji == ERROR_EMOJI_NOT_FOUND:
-                    print("Emoji {} is NOT!!!! on server {}".format(emojiName, ctx.guild))
-                    emoji = await ctx.guild.create_custom_emoji(image=b, name=emojiName)
-                    emojiList[emojiName] = emoji.id
-                    emojiCount += 1
-                else:
-                    print("Emoji {} is already on server {}".format(emojiName, ctx.guild))
-                    emojiList[emojiName] = emoji.id
-
-
-    SaveJSONFile(emojiFilePath, emojiList)
-    await ctx.send("Done adding emojis. A total of {} emojis were added.".format(emojiCount))
-
-# Delete emojis from bot server
-@bot.command()
-async def remove_emojis(ctx, *args):
-
-    if ctx.author == bot.user or not str(ctx.author.id) in ADMIN_LIST:
-        await ctx.send("Permission Denied.")
-        return
-
-    await ctx.send("Starting removing server emojis. This may take a few moments...")
-    emojiFilePath = EMOJI_DIR + EMOJI_NAME_FILE + JSON_EXT
-    emojiList = LoadJSONFile(emojiFilePath)
-    emojiCount = 0
-    rarityFilePath = GLOBAL_JSON_PATH + DIR_ID_REFERENCES + IMAGE_DIR_RARITY
-    for filename in os.listdir(rarityFilePath):
-        with open(rarityFilePath + filename, "rb") as image:
-            emojiFileName, emojiFileFormat = os.path.splitext(filename)
-            emojiName = BOT_CONFIG_EMOJI_PREFIX + emojiFileName
-            if emojiFileFormat != DYNAMIC_IMAGE_EXT:
-                f = image.read()
-                b = bytearray(f)
-                guildEmoji = getGuildEmojiByName(emojiName, ctx.guild.emojis)
-                if guildEmoji == ERROR_EMOJI_NOT_FOUND:
-                    print("Emoji {} not found on server {}".format(emojiName, ctx.guild))
-                else:
-                    print("Emoji {} found on server {}".format(emojiName, ctx.guild))
-                    await guildEmoji.delete()
-                    if emojiName in emojiList.keys():
-                        emojiList.pop(emojiName)
-                    emojiCount += 1
-
-    SaveJSONFile(emojiFilePath, emojiList)
-    await ctx.send("Done removing emojis. A total of {} emojis were removed.".format(emojiCount))
 
 bot.run(BOT_TOKEN)

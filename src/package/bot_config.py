@@ -14,7 +14,6 @@ ERROR_EMOJI_NOT_FOUND = -6
 # Bot general constants
 BOT_CONFIG_DESCRIPTION = 'A terraria bot.'
 BOT_CONFIG_PREFIX = 't.'
-BOT_CONFIG_EMOJI_PREFIX = "t_"
 BOT_CONFIG_FLAG_PREFIX = "-"
 #BOT_TOKEN = "MjQ2NTExOTcxMDY5ODUzNjk3.WCVcKQ.quxR1uO0TUb6UQPhvLYzqoApHBI"
 BOT_TOKEN = "Nzk2MDY1OTI0NzU1MDk1NTg0.X_SgKg.8UNAsVGPDnbS2nMc40LrpuoepTI"
@@ -81,6 +80,14 @@ PAGE_ALERT_MESSAGE = "React to this message to switch between pages!\n" + "Page 
 
 # Emojis related constants
 EMOJI_WHITE_CHECK_MARK = "✅"
+
+# Function names constants
+
+NPC_FUNCTION = "npc"
+RARITY_FUNCTION = "rarity"
+ITEM_FUNCTION = "item"
+SET_FUNCTION = "set"
+CRAFT_FUNCTION = "craft"
 
 def loadDependencies(jsonList: list, hashSize=ITEMS_HASH_SIZE, label=LABEL_NAME) -> hashTable:
     itemFilePath = GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT
