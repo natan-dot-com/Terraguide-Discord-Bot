@@ -52,8 +52,8 @@ into the Windows Powershell to install the remaining dependencies.
 The bot's main instance is already hosted 24/7 and can be added to any Discord server with [this](PLACEHOLDER) invite link.
 
 Everything that the bot uses to work can be found here. The main bot token was obviously taken away to prevent
-further problems with the main bot instance. If you wish the bot to host in your personal machine for any reason, 
-take a look inside ``package/bot_config.py``.
+further problems with the main bot instance (and the old token was refreshed of course). If you wish to host 
+the bot in your personal machine for any reason, take a look inside ``package/bot_config.py``.
 
 ## 5. General Overview
 The entire list of possible commands and flags can be shown with ``t.help``. Some of them can be pointed here, such as:
