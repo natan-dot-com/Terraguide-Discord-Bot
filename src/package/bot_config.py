@@ -15,8 +15,8 @@ ERROR_EMOJI_NOT_FOUND = -6
 BOT_CONFIG_DESCRIPTION = 'A terraria bot.'
 BOT_CONFIG_PREFIX = 't.'
 BOT_CONFIG_FLAG_PREFIX = "-"
-#BOT_TOKEN = "MjQ2NTExOTcxMDY5ODUzNjk3.WCVcKQ.quxR1uO0TUb6UQPhvLYzqoApHBI"
-BOT_TOKEN = "Nzk2MDY1OTI0NzU1MDk1NTg0.X_SgKg.8UNAsVGPDnbS2nMc40LrpuoepTI"
+#Uncomment and complete the line below if the bot will be hosted in your personal machine.
+#BOT_TOKEN = "(YOUR BOT TOKEN HERE)"
 
 
 # Command flags related stuff

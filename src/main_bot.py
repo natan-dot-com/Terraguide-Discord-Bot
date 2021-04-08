@@ -18,6 +18,12 @@ from package.utility_functions import *
 from package.embed_functions import *
 from package.string_similarity import *
 
+# Main bot token import (if you're hosting in your own machine, just skip it)
+try:
+    from package.bot_token import BOT_TOKEN
+except ModuleNotFoundError:
+    pass
+
 bot = commands.Bot(command_prefix=BOT_CONFIG_PREFIX, description=BOT_CONFIG_DESCRIPTION, help_command=None)
 itemList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT)
 tableList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + TABLE_NAME_FILE + JSON_EXT)
