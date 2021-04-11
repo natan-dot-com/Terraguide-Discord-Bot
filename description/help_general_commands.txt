@@ -1,0 +1,23 @@
+#General commands
+All the parameters surrounded with curly brackets '{}' are optional.
+All the parameters surrounded with brackets '[]' are obrigatory.
+Some commands with general functionalities can be pointed out, such as:
+
+#t.help
+Opens the command help box.
+
+#t.item [ITEM NAME]
+Points every information about a given item such as its crafting recipes, its general stats and where does it can drop.
+
+#t.list [ITEM NAME]
+Searches for all related items inside the dataset based on a given argument.
+
+#t.set [SET NAME]
+Displays every information about a given armor set.
+
+#t.rarity {RARITY TITLE}
+Displays a brief description about the specified rarity tier. All tiers will be displayed by giving no arguments to the command.
+
+#t.npc [NPC NAME]
+Displays every information about an given NPC.
+

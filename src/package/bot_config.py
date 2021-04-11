@@ -12,7 +12,7 @@ ERROR_EMOJI_NOT_FOUND = -6
 
 
 # Bot general constants
-BOT_CONFIG_DESCRIPTION = 'A terraria bot.'
+BOT_CONFIG_DESCRIPTION = ''
 BOT_CONFIG_PREFIX = 't.'
 BOT_CONFIG_FLAG_PREFIX = "-"
 #Uncomment and complete the line below if the bot will be hosted in your personal machine.
@@ -39,34 +39,7 @@ commandFlagList = [
 # t.help command related stuff
 
 # Help messages
-HELP_EMBED_TITLE = "Terraria Bot Help Documentation:"
-HELP_INTRODUCTION_TITLE = "Usage: [COMMAND] [FLAGS (optional)] [ARGUMENTS]"
-HELP_INTRODUCTION_DESC = "Multiple flags should be written together of each other (e.g. -abcd). As an optional\
- factor, flags can be ignored simply by putting none at the current command."
-
-# Discord bot commands constants
-COMMAND_HELP = BOT_CONFIG_PREFIX + "help"
-COMMAND_CRAFT = BOT_CONFIG_PREFIX + "craft 'Item Name'"
-COMMAND_LIST = BOT_CONFIG_PREFIX + "list 'Something to Search'"
-COMMAND_ITEM = BOT_CONFIG_PREFIX + "item 'Item Name'"
-COMMAND_SET = BOT_CONFIG_PREFIX + "set 'Set Name'"
-COMMAND_RARITY = BOT_CONFIG_PREFIX + "rarity 'Rarity Name'"
-COMMAND_BAGDROP = BOT_CONFIG_PREFIX + "bagdrop 'Item Name'"
-COMMAND_SELL = BOT_CONFIG_PREFIX + "sell 'Item Name'"
-
-# Commands description
-commandDict = {
-    COMMAND_HELP: "Opens the command help box.",
-    COMMAND_CRAFT: "Shows every crafting recipe for a given argument.",
-    COMMAND_LIST: "Searches for all related items inside the dataset based on a given argument.",
-    COMMAND_ITEM: "Points every information about a given item such as its crafting recipes, its general stats and where does\
- it can drop.",
-    COMMAND_SET: "Displays every information about a given armor set.",
-    COMMAND_RARITY: "Displays a brief description about the specified rarity tier. All tiers can be displayed by giving\
- no arguments to the command.",
-    COMMAND_BAGDROP: "Displays every bag drop for a specific item",
-    COMMAND_SELL: "Displays every selling offer for a specific item"
-}
+HELP_EMBED_TITLE = "Terraguide Help Documentation:"
 
 # Command flags description
 flagDescriptionList = [

@@ -3,6 +3,7 @@ from .json_manager import GLOBAL_IMAGE_PATH
 from .bot_config import *
 from colorthief import ColorThief
 from colormap import rgb2hex
+import re
 
 # Get all input flags
 def getCommandFlagList(commandArgument):
@@ -58,3 +59,26 @@ def getGuildEmojiByName(emojiName, guildEmojis):
         if emojiName == str(guildEmoji.name):
             return guildEmoji
     return ERROR_EMOJI_NOT_FOUND
+
+def parseDescriptionFile(fileName, fileExtension=".txt"):
+    with open(fileName + fileExtension) as inputFile:
+        fileLines = inputFile.readlines()
+        tupleList = []
+        mainString = ""
+        for line in fileLines:
+            if fileLines.index(line) == len(fileLines)-1:
+                mainString += line
+                newTuple = (titleName, mainString)
+                tupleList.append(newTuple)
+            if re.search("^#", line):
+                if fileLines.index(line) == 0:
+                    titleName = line[1::].strip()
+                    continue
+                newTuple = (titleName, mainString)
+                tupleList.append(newTuple)
+
+                mainString = ""
+                titleName = line[1::].strip()
+            else:
+                mainString += line
+    return tupleList

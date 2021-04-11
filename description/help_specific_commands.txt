@@ -1,0 +1,11 @@
+#t.item segmentation commands 
+As an extension to the **t.item** command, I have specific commands to show just one topic of which **t.item** would print out.
+
+#t.craft [ITEM NAME]
+Displays every crafting recipe for a given argument.
+
+#t.bagdrop [ITEM NAME]
+Displays every bag drop for a specific item.
+
+#t.sell [ITEM NAME]
+Displays every selling offer for a specific item.

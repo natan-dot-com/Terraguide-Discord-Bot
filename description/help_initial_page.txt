@@ -1,0 +1,4 @@
+#Introduction
+Hello there, and welcome your best terrarian friend!
+I'm a Discord bot which can help you search any Terraria-related stuff with just some key presses of distance!
+The main reason I exist as a bot is to provide you with the best informations about items and NPCs, from crafting recipes to selling offers. In the next pages, you'll learn how to use my built-in tools to help you in your journey as a Terraria freshman or, if you're actually a veteran, I hope I could still be useful. :)

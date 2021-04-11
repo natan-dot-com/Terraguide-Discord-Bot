@@ -56,18 +56,10 @@ async def on_command_error(ctx, error):
         raise error
 
 @bot.command()
-async def quest(ctx, *args):
-
-    commandFlagList, commandStringInput = getCommandArguments(args)
-    if ctx.author == bot.user:
-        return
-    if commandFlagList == ERROR_INVALID_FLAG:
-        await ctx.send(FLAG_ERROR_MESSAGE)
-        return ERROR_INVALID_FLAG
-    pass
-
-@bot.command()
 async def help(ctx, *args):
+    HELP_DESCRIPTION_FILES = ["help_initial_page", "help_first_steps", "help_general_commands",
+                            "help_specific_commands"]
+    DESCRIPTION_FILES_DIRECTORY = "description/"
 
     commandFlagList, commandStringInput = getCommandArguments(args)
     if ctx.author == bot.user:
@@ -75,25 +67,15 @@ async def help(ctx, *args):
     if commandFlagList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
         return ERROR_INVALID_FLAG
-        
+    
     embedList = []
-
-    # Main panel construction
-    mainPanel = discord.Embed(color=EMBED_HELP_COLOR, title=HELP_EMBED_TITLE)
-    embedInsertField(mainPanel, HELP_INTRODUCTION_DESC, HELP_INTRODUCTION_TITLE, inline=False)
-    for command, commandDescription in zip(commandDict.keys(), commandDict.values()):
-        embedInsertField(mainPanel, commandDescription, command, inline=False)
-    mainPanel.set_footer(text=PAGE_ALERT_MESSAGE.format('1','2'))
-    embedList.append(mainPanel)
-
-    # Flags panel construction
-    flagsPanel = discord.Embed(color=EMBED_HELP_COLOR, title=HELP_EMBED_TITLE)
-    flagsDisplay = ""
-    for argumentsDescription in flagDescriptionList:
-        flagsDisplay += argumentsDescription + "\n"
-    embedInsertField(flagsPanel, flagsDisplay, FLAG_TITLE_LABEL, inline=False)
-    flagsPanel.set_footer(text=PAGE_ALERT_MESSAGE.format('2','2'))
-    embedList.append(flagsPanel)
+    for descFile in HELP_DESCRIPTION_FILES:
+        fieldTuples = parseDescriptionFile(DESCRIPTION_FILES_DIRECTORY + descFile)
+        newEmbed = discord.Embed(color=EMBED_HELP_COLOR, title=HELP_EMBED_TITLE)
+        for descTuple in fieldTuples:
+            embedInsertField(newEmbed, descTuple[1], descTuple[0], inline=False)
+        newEmbed.set_footer(text=PAGE_ALERT_MESSAGE.format(HELP_DESCRIPTION_FILES.index(descFile)+1, len(HELP_DESCRIPTION_FILES)))
+        embedList.append(newEmbed)
 
     await sendMessage(ctx, bot, embedList, commandFlagList=commandFlagList)
 

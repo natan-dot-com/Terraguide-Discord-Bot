@@ -1,0 +1,16 @@
+#First steps
+All my work flow is based on several commands, in which I'll teach you how to use in a clean way.
+
+#Prefix
+Every command I own is preceded with the prefix **t.** and succeeded with a name that represents its caracteristic functionality. For example, the one you entered a few seconds ago was **t.help** which, as it says by itself, has the function to provide an help documentation to the user.
+
+#Flags
+I also have a pretty interesting thing: flags! A flag is an __optional__ operator you can pass together with the command that will change the way how it works, and they're all preceded with the prefix **-**. For example, if you type **t.help -p** I'll send you this message as private. Take a look! Try it!
+Also, I shall tell you that multiple flags can also be used without the need of multiple prefixes (e.g. -abcd). They need to be always before the command parameters, which is the next one we are going to see.
+
+#Parameters
+After all these stuff, some commands support another field I'll call 'parameter'. For example, in a situation I would like to know how the item 'Wood' can be crafted, I would need to specify to the command which item I'm searching for; that's where the 'parameter' field come in!
+
+#General command structure
+Putting all together, a command can be structured in the following way: 
+**[PREFIX][COMMAND NAME] [FLAGS] [PARAMETER]**
