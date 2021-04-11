@@ -2,21 +2,21 @@ from logging import ERROR
 from os import chdir
 import os
 from platform import system
-if system() == "Linux":
-    chdir("../")
+#if system() == "Linux":
+#    chdir("../")
 
 import math
 import discord
 import re
 from discord.ext import commands
-from package.json_manager import *
-from package.item_hash import *
-from package.bot_config import *
-from package.search import *
-from package.utility_dictionaries import *
-from package.utility_functions import *
-from package.embed_functions import *
-from package.string_similarity import *
+from src.package.json_manager import *
+from src.package.item_hash import *
+from src.package.bot_config import *
+from src.package.search import *
+from src.package.utility_dictionaries import *
+from src.package.utility_functions import *
+from src.package.embed_functions import *
+from src.package.string_similarity import *
 
 # Main bot token import (if you're hosting in your own machine, just skip it)
 try:
