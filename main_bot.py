@@ -24,6 +24,8 @@ try:
 except ModuleNotFoundError:
     pass
 
+BOT_TOKEN = "Nzk2MDY1OTI0NzU1MDk1NTg0.X_SgKg.xtGCeFX3HFnVVsGzmgj8mohpVfE"
+
 bot = commands.Bot(command_prefix=BOT_CONFIG_PREFIX, description=BOT_CONFIG_DESCRIPTION, help_command=None)
 itemList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT)
 tableList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + TABLE_NAME_FILE + JSON_EXT)
