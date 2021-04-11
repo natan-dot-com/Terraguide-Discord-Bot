@@ -1,5 +1,4 @@
 import discord
-import numpy as np
 import Levenshtein as lev
 from .json_labels import LABEL_NAME
 from .embed_functions import embedSetFooter, embedInsertField
