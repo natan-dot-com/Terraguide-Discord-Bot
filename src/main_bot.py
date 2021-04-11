@@ -66,7 +66,7 @@ async def help(ctx, *args):
     if commandFlagList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
         return ERROR_INVALID_FLAG
-    
+
     embedList = []
     for descFile in HELP_DESCRIPTION_FILES:
         fieldTuples = parseDescriptionFile(DESCRIPTION_FILES_DIRECTORY + descFile)
@@ -75,7 +75,7 @@ async def help(ctx, *args):
             embedInsertField(newEmbed, descTuple[1], descTuple[0], inline=False)
         newEmbed.set_footer(text=PAGE_ALERT_MESSAGE.format(HELP_DESCRIPTION_FILES.index(descFile)+1, len(HELP_DESCRIPTION_FILES)))
         embedList.append(newEmbed)
-
+    
     await sendMessage(ctx, bot, embedList, commandFlagList=commandFlagList)
 
 @bot.command()
@@ -348,7 +348,7 @@ async def bagdrop(ctx, *args):
     imageExt = getImageExt(GLOBAL_IMAGE_PATH, itemName.replace(" ", "_"))
     imageFileName = itemName.replace(" ", "_") + imageExt
     dominantImageColor = pickDominantColor(imageFileName)
-    
+
     # Check if there are bag drops for this item
     hasBagDrop = True
     if LABEL_SOURCE in itemDict.keys():
@@ -372,7 +372,7 @@ async def bagdrop(ctx, *args):
         titleMessage = "Item '{}' has no bag drops.".format(itemName)
         fieldMessage = "Couldn't retrieve any information from our database."
         embedInsertField(embedPage, fieldMessage, titleMessage, inline=False)
-    
+
     #Send Message
     await sendMessage(ctx, bot, embedPage, embedImage=embedImage, commandFlagList=commandFlagList)
 
@@ -409,7 +409,7 @@ async def sell(ctx, *args):
     imageExt = getImageExt(GLOBAL_IMAGE_PATH, itemName.replace(" ", "_"))
     imageFileName = itemName.replace(" ", "_") + imageExt
     dominantImageColor = pickDominantColor(imageFileName)
-    
+
     # Check if there are NPCs selling this item
     hasSellingOffers = True
     if LABEL_SOURCE in itemDict.keys():
@@ -433,7 +433,7 @@ async def sell(ctx, *args):
         titleMessage = "Item '{}' has no selling offers.".format(itemName)
         fieldMessage = "Couldn't retrieve any information from our database."
         embedInsertField(embedPage, fieldMessage, titleMessage, inline=False)
-    
+
     #Send Message
     await sendMessage(ctx, bot, embedPage, embedImage=embedImage, commandFlagList=commandFlagList)
 
@@ -576,7 +576,7 @@ async def npc(ctx, *args):
     if commandFlagList == ERROR_INVALID_FLAG:
         await ctx.send(FLAG_ERROR_MESSAGE)
         return ERROR_INVALID_FLAG
-        
+    
     print("User {} has requested npc information about {}.".format(str(ctx.author), commandStringInput))
 
     # Find input in hash table
