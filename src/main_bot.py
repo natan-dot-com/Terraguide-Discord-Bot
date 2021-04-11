@@ -147,11 +147,16 @@ async def item(ctx, *args):
         if itemCategory == LABEL_SOURCE:
             hasSource = True
             break
-        elif type(itemDict[itemCategory]) is list:
+
+        elif type(itemDict[itemCategory]) is type([]):
+            mainString = ""
             for itemSubcategory in itemDict[itemCategory]:
-                embedInsertField(mainPage, itemSubcategory, itemCategory, inline=True)
+                mainString += "- " + itemSubcategory + "\n"
+            embedInsertField(mainPage, mainString, itemCategory, inline=True)
+
         elif itemCategory == LABEL_SET_ID:
             embedInsertField(mainPage, setList[int(itemDict[itemCategory])-1][LABEL_SET_NAME], LABEL_SET_NAME, inline=True)
+
         elif itemCategory == LABEL_RARITY:
             embedInsertRarityField(mainPage, itemDict[itemCategory], rarityList)
         else:
