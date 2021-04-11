@@ -20,7 +20,7 @@ from src.package.string_similarity import *
 
 # Main bot token import (if you're hosting in your own machine, just skip it)
 try:
-    from package.bot_token import BOT_TOKEN
+    from src.package.bot_token import BOT_TOKEN
 except ModuleNotFoundError:
     pass
 
