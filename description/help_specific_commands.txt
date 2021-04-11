@@ -1,4 +1,5 @@
-#t.item segmentation commands 
+#'t.item' Segmentation Commands 
+All the arguments surrounded with brackets '[]' are obrigatory.
 As an extension to the **t.item** command, I have specific commands to show just one topic of which **t.item** would print out.
 
 #t.craft [ITEM NAME]

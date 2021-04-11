@@ -57,8 +57,7 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def help(ctx, *args):
-    HELP_DESCRIPTION_FILES = ["help_initial_page", "help_first_steps", "help_general_commands",
-                            "help_specific_commands"]
+    HELP_DESCRIPTION_FILES = ["help_initial_page", "help_general_commands", "help_specific_commands"]
     DESCRIPTION_FILES_DIRECTORY = "description/"
 
     commandFlagList, commandStringInput = getCommandArguments(args)

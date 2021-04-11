@@ -1,6 +1,6 @@
 #General commands
-All the parameters surrounded with curly brackets '{}' are optional.
-All the parameters surrounded with brackets '[]' are obrigatory.
+All the arguments surrounded with curly brackets '{}' are optional.
+All the arguments surrounded with brackets '[]' are obrigatory.
 Some commands with general functionalities can be pointed out, such as:
 
 #t.help
@@ -20,4 +20,3 @@ Displays a brief description about the specified rarity tier. All tiers will be 
 
 #t.npc [NPC NAME]
 Displays every information about an given NPC.
-
