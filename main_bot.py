@@ -2,8 +2,8 @@ from logging import ERROR
 from os import chdir
 import os
 from platform import system
-#if system() == "Linux":
-#    chdir("../")
+if system() == "Linux":
+    chdir("../")
 
 import math
 import discord
@@ -18,13 +18,14 @@ from src.package.utility_functions import *
 from src.package.embed_functions import *
 from src.package.string_similarity import *
 
-# Main bot token import (if you're hosting in your own machine, just skip it)
+# Main bot token import (if you're hosting in your own machine, create your own bot_token.py inside 'src/package/'
+# directory with your auth token)
 try:
+    # Running it from local
     from src.package.bot_token import BOT_TOKEN
 except ModuleNotFoundError:
-    pass
-
-BOT_TOKEN = os.environ["BOT_TOKEN"]
+    # Running it from remote
+    BOT_TOKEN = os.environ["BOT_TOKEN"]
 
 bot = commands.Bot(command_prefix=BOT_CONFIG_PREFIX, description=BOT_CONFIG_DESCRIPTION, help_command=None)
 itemList = LoadJSONFile(GLOBAL_JSON_PATH + DIR_ID_REFERENCES + MAIN_NAME_FILE + JSON_EXT)
