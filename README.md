@@ -49,7 +49,7 @@ pip install discord.py levenshtein colorthief colormap
 into the Windows Powershell to install the remaining dependencies.
 
 ## 4. Quick Setup
-The bot's main instance is already hosted 24/7 and can be added to any Discord server with [this](PLACEHOLDER) invite link.
+The bot's main instance is already hosted 24/7 and can be added to any Discord server with [this](https://discord.com/oauth2/authorize?client_id=796065924755095584&scope=bot) invite link.
 
 Everything that the bot uses to work can be found here. The main bot token was obviously taken away to prevent
 further problems with the main bot instance (and the old token was refreshed of course). If you wish to host 
