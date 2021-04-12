@@ -15,8 +15,6 @@ ERROR_EMOJI_NOT_FOUND = -6
 BOT_CONFIG_DESCRIPTION = ''
 BOT_CONFIG_PREFIX = 't.'
 BOT_CONFIG_FLAG_PREFIX = "-"
-#Uncomment and complete the line below if the bot will be hosted in your personal machine.
-#BOT_TOKEN = "(YOUR BOT TOKEN HERE)"
 
 
 # Command flags related stuff
