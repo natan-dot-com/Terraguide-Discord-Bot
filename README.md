@@ -78,6 +78,7 @@ It's also important to point how this project reflects my first footsteps inside
 * [Official Terraria Gamepedia Wiki](https://terraria.fandom.com/wiki/), where all those data files come from.
 * [Andrei Alisson](https://github.com/AndreiAlisson), my code mate.
 * [Noas](https://www.instagram.com/noas.z/) with his gorgeous drawing skills.
+* [Heroku](https://www.heroku.com/), the web hoster we're using to keep it up 24/7.
 
 ## 9. License
 MIT.
